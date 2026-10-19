@@ -29,6 +29,7 @@ for release in manifest['datasets']:
    assert (URIRef(edge['property']),RDFS.range,URIRef(edge['target'])) in union
   else:assert (URIRef(edge['source']),RDFS.subClassOf,URIRef(edge['target'])) in union
 group_data=json.loads((ROOT/'data/niyoj-modules.json').read_text());niyoj=json.loads((ROOT/'data/niyoj.json').read_text());grouped=[c for m in group_data['groups'] for c in m['classes']];assert len(grouped)==len(set(grouped))==111;assert set(grouped)=={t['local'] for t in niyoj['terms'] if t['kind']=='Class'}
+expanded=json.loads((ROOT/'data/expanded.json').read_text());eg=json.loads((ROOT/'data/expanded-modules.json').read_text())['groups'];members=[(m['id'],c) for m in eg for c in m['classes']];assert len(eg)==21 and len(members)==len(set(members))==138;assert set(members)=={(t['module'],t['local']) for t in expanded['terms'] if t['kind']=='Class'}
 source=json.loads((ROOT/'schema/niyoj/source.json').read_text())
 for filename,sha in source['files'].items():assert hashlib.sha256((ROOT/'schema/niyoj'/filename).read_bytes()).hexdigest()==sha
 # All four editorial journeys use exact declared object-property chains.
