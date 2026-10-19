@@ -1,0 +1,407 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/IproK/billing#BillState> a owl:Class ;
+    rdfs:label "Bill State" ;
+    dcterms:isPartOf <https://w3id.org/IproK/billing> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/BillState> ;
+    rdfs:comment "Lifecycle state of a <https://w3id.org/IproK/billing#RABill>. Four individuals: BillDraft (initial, editable), BillSubmitted (sent for approval), BillApproved (departmental approval given), BillFinalised (payment authorised, immutable)." .
+
+<https://w3id.org/IproK/billing#Deviation> a owl:Class ;
+    rdfs:label "Deviation" ;
+    dcterms:isPartOf <https://w3id.org/IproK/billing> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/Deviation> ;
+    rdfs:comment "A BOQ quantity deviation: measured quantity exceeds tendered quantity by >25%. Triggers approval routing before bill submission. Defined in S3.7." ;
+    rdfs:subClassOf prov:Entity .
+
+<https://w3id.org/IproK/billing#JMStatus> a owl:Class ;
+    rdfs:label "Joint Measurement Status" ;
+    dcterms:isPartOf <https://w3id.org/IproK/billing> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/JMStatus> ;
+    rdfs:comment "State of a <https://w3id.org/IproK/billing#JointMeasurement>. Four individuals: JMPendingContractor (initial, awaiting contractor OTP), JMPendingDepartmental (contractor signed, awaiting JE/AE), JMComplete (both signed, legally binding), JMRejected (either party rejected)." .
+
+<https://w3id.org/IproK/billing#JointMeasurement> a owl:Class ;
+    rdfs:label "Joint Measurement" ;
+    dcterms:isPartOf <https://w3id.org/IproK/billing> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/JointMeasurement> ;
+    rdfs:comment "A legally-binding dual-signed measurement record. The contractor signatory and departmental JE/AE each authenticate via OTP before the JM reaches JMComplete status. This is the first software implementation of the Indian PWD joint measurement requirement as a native knowledge-graph workflow. Defined in S3.5." ;
+    rdfs:subClassOf prov:Activity .
+
+<https://w3id.org/IproK/billing#Payment> a owl:Class ;
+    rdfs:label "Payment" ;
+    dcterms:isPartOf <https://w3id.org/IproK/billing> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/Payment> ;
+    rdfs:comment "A payment made by the client against a certified RA Bill, imported from Tally ERP XML exports. Each payment corresponds to one Tally voucher." ;
+    rdfs:subClassOf prov:Entity .
+
+<https://w3id.org/IproK/billing#RABill> a owl:Class ;
+    rdfs:label "Running Account Bill" ;
+    dcterms:isPartOf <https://w3id.org/IproK/billing> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/RABill> ;
+    rdfs:comment "A Running Account Bill (RA Bill) — the payment instrument in Indian government and PSU construction contracts. Aggregates all approved measurements for a billing period, applies BOQ rates, deducts previous payments and recoveries, and produces the net payable amount. This is the first software implementation of the RA Bill as a native knowledge-graph workflow — the numbers are always live and traceable to source measurements. Defined in S3.6." ;
+    rdfs:subClassOf prov:Entity,
+        <https://w3id.org/IproK/document#Document> .
+
+<https://w3id.org/IproK/billing#Recovery> a owl:Class ;
+    rdfs:label "Recovery" ;
+    dcterms:isPartOf <https://w3id.org/IproK/billing> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/Recovery> ;
+    rdfs:comment "A single statutory deduction line item within a <https://w3id.org/IproK/billing#RABill>. Each recovery has a type (TDS-IT, GST-TDS, LabourCess, SecurityDeposit, AdvanceRecovery, WaterElectricity, Royalty, Other), a rate (percentage), and a computed amount. Defined in S3.6." ;
+    rdfs:subClassOf prov:Entity .
+
+<https://w3id.org/IproK/billing#amount> a owl:DatatypeProperty ;
+    rdfs:label "amount" ;
+    dcterms:isPartOf <https://w3id.org/IproK/billing> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/amount> ;
+    rdfs:comment "Contract amount = tenderedQty × quotedRate, server-computed. Mandatory. Domain unspecified." ;
+    rdfs:range xsd:decimal .
+
+<https://w3id.org/IproK/billing#billDate> a owl:DatatypeProperty ;
+    rdfs:label "bill date" ;
+    dcterms:isPartOf <https://w3id.org/IproK/billing> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/billDate> ;
+    rdfs:comment "Date the bill was prepared. Mandatory. Domain unspecified." ;
+    rdfs:range xsd:date .
+
+<https://w3id.org/IproK/billing#billNo> a owl:DatatypeProperty ;
+    rdfs:label "bill number" ;
+    dcterms:isPartOf <https://w3id.org/IproK/billing> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/billNo> ;
+    rdfs:comment "Auto-numbered RA Bill identifier (e.g. RA-1, RA-2). Mandatory. Domain unspecified." ;
+    rdfs:range xsd:string .
+
+<https://w3id.org/IproK/billing#billState> a owl:ObjectProperty ;
+    rdfs:label "bill state" ;
+    dcterms:isPartOf <https://w3id.org/IproK/billing> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/billState> ;
+    rdfs:comment "Points at one of the four <https://w3id.org/IproK/billing#BillState> individuals. Mandatory. Domain unspecified (antipattern #8)." .
+
+<https://w3id.org/IproK/billing#billingPeriodEnd> a owl:DatatypeProperty ;
+    rdfs:label "billing period end" ;
+    dcterms:isPartOf <https://w3id.org/IproK/billing> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/billingPeriodEnd> ;
+    rdfs:comment "End date of the billing period (inclusive). Measurements up to this date are included. Mandatory. Domain unspecified." ;
+    rdfs:range xsd:date .
+
+<https://w3id.org/IproK/billing#billingPeriodStart> a owl:DatatypeProperty ;
+    rdfs:label "billing period start" ;
+    dcterms:isPartOf <https://w3id.org/IproK/billing> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/billingPeriodStart> ;
+    rdfs:comment "Start date of the billing period (inclusive). Mandatory. Domain unspecified." ;
+    rdfs:range xsd:date .
+
+<https://w3id.org/IproK/billing#boqItemNo> a owl:DatatypeProperty ;
+    rdfs:label "BOQ item number" ;
+    dcterms:isPartOf <https://w3id.org/IproK/billing> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/boqItemNo> ;
+    rdfs:comment "The hierarchical item number as it appears in the BOQ, e.g. '1.1', '2.3.4'. Mandatory. Domain unspecified." ;
+    rdfs:range xsd:string .
+
+<https://w3id.org/IproK/billing#breadth> a owl:DatatypeProperty ;
+    rdfs:label "breadth" ;
+    dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/billing> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/breadth> ;
+    rdfs:comment "The breadth property in the integrated project information model. Its declared domain is Measurement and its declared range is decimal."@en ;
+    rdfs:domain <https://w3id.org/IproK/billing#Measurement> ;
+    rdfs:range xsd:decimal .
+
+<https://w3id.org/IproK/billing#contractorSignatory> a owl:ObjectProperty ;
+    rdfs:label "contractor signatory" ;
+    dcterms:isPartOf <https://w3id.org/IproK/billing> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/contractorSignatory> ;
+    rdfs:comment "Points at the <https://w3id.org/IproK#User> who represents the contractor. Mandatory. Domain unspecified." .
+
+<https://w3id.org/IproK/billing#contractorSignedAt> a owl:DatatypeProperty ;
+    rdfs:label "contractor signed at" ;
+    dcterms:isPartOf <https://w3id.org/IproK/billing> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/contractorSignedAt> ;
+    rdfs:comment "Timestamp of contractor OTP verification. Set when jmStatus transitions from JMPendingContractor to JMPendingDepartmental. Domain unspecified." ;
+    rdfs:range xsd:dateTime .
+
+<https://w3id.org/IproK/billing#cumulativeGross> a owl:DatatypeProperty ;
+    rdfs:label "cumulative gross" ;
+    dcterms:isPartOf <https://w3id.org/IproK/billing> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/cumulativeGross> ;
+    rdfs:comment "Sum of all approved measurements to period end × BOQ rates (INR). Mandatory. Domain unspecified." ;
+    rdfs:range xsd:decimal .
+
+<https://w3id.org/IproK/billing#currentGross> a owl:DatatypeProperty ;
+    rdfs:label "current gross" ;
+    dcterms:isPartOf <https://w3id.org/IproK/billing> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/currentGross> ;
+    rdfs:comment "cumulativeGross minus previousBillAmount (INR). The gross value for this billing period. Mandatory. Domain unspecified." ;
+    rdfs:range xsd:decimal .
+
+<https://w3id.org/IproK/billing#departmentalSignatory> a owl:ObjectProperty ;
+    rdfs:label "departmental signatory" ;
+    dcterms:isPartOf <https://w3id.org/IproK/billing> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/departmentalSignatory> ;
+    rdfs:comment "Points at the <https://w3id.org/IproK#User> (JE/AE) who counter-signs on behalf of the department. Mandatory. Domain unspecified." .
+
+<https://w3id.org/IproK/billing#departmentalSignedAt> a owl:DatatypeProperty ;
+    rdfs:label "departmental signed at" ;
+    dcterms:isPartOf <https://w3id.org/IproK/billing> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/departmentalSignedAt> ;
+    rdfs:comment "Timestamp of departmental JE/AE OTP verification. Set when jmStatus transitions to JMComplete. Domain unspecified." ;
+    rdfs:range xsd:dateTime .
+
+<https://w3id.org/IproK/billing#depth> a owl:DatatypeProperty ;
+    rdfs:label "depth" ;
+    dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/billing> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/depth> ;
+    rdfs:comment "The depth property in the integrated project information model. Its declared domain is Measurement and its declared range is decimal."@en ;
+    rdfs:domain <https://w3id.org/IproK/billing#Measurement> ;
+    rdfs:range xsd:decimal .
+
+<https://w3id.org/IproK/billing#description> a owl:DatatypeProperty ;
+    rdfs:label "description" ;
+    dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/billing> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/description> ;
+    rdfs:comment "The description property in the integrated project information model."@en ;
+    rdfs:range xsd:string .
+
+<https://w3id.org/IproK/billing#deviationPct> a owl:DatatypeProperty ;
+    rdfs:label "deviation percentage" ;
+    dcterms:isPartOf <https://w3id.org/IproK/billing> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/deviationPct> ;
+    rdfs:comment "Deviation as a percentage of tendered quantity: (measured - tendered) / tendered × 100. Mandatory. Domain unspecified." ;
+    rdfs:range xsd:decimal .
+
+<https://w3id.org/IproK/billing#deviationState> a owl:DatatypeProperty ;
+    rdfs:label "deviation state" ;
+    dcterms:isPartOf <https://w3id.org/IproK/billing> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/deviationState> ;
+    rdfs:comment "Workflow state. One of: Pending | ApprovedEE | ApprovedSE | ApprovedCE | Rejected. Domain unspecified." ;
+    rdfs:range xsd:string .
+
+<https://w3id.org/IproK/billing#forBill> a owl:ObjectProperty ;
+    rdfs:label "for bill" ;
+    dcterms:isPartOf <https://w3id.org/IproK/billing> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/forBill> ;
+    rdfs:comment "Links a <https://w3id.org/IproK/billing#Recovery> to its parent <https://w3id.org/IproK/billing#RABill>. Mandatory. Domain unspecified (antipattern #8)." .
+
+<https://w3id.org/IproK/billing#isStarRate> a owl:DatatypeProperty ;
+    rdfs:label "is star rate" ;
+    dcterms:isPartOf <https://w3id.org/IproK/billing> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/isStarRate> ;
+    rdfs:comment "True when this BOQ item has no SOR match (star-rate / DSR-deviation item). Mandatory. Domain unspecified." ;
+    rdfs:range xsd:boolean .
+
+<https://w3id.org/IproK/billing#jmId> a owl:DatatypeProperty ;
+    rdfs:label "JM ID" ;
+    dcterms:isPartOf <https://w3id.org/IproK/billing> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/jmId> ;
+    rdfs:comment "Auto-numbered JM identifier, e.g. JM-0001. Mandatory. Domain unspecified." ;
+    rdfs:range xsd:string .
+
+<https://w3id.org/IproK/billing#jmStatus> a owl:ObjectProperty ;
+    rdfs:label "JM status" ;
+    dcterms:isPartOf <https://w3id.org/IproK/billing> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/jmStatus> ;
+    rdfs:comment "Points at one of the four <https://w3id.org/IproK/billing#JMStatus> individuals. Mandatory. Domain unspecified." .
+
+<https://w3id.org/IproK/billing#jointSignatureRequired> a owl:DatatypeProperty ;
+    rdfs:label "joint signature required" ;
+    dcterms:isPartOf <https://w3id.org/IproK/billing> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/jointSignatureRequired> ;
+    rdfs:comment "Computed server-side: true when the cumulative amount for this BOQ item (sum of measurement quantities × quoted rate) exceeds the project's joint_measurement_threshold. A true flag primes the SE to get the JE/AE co-sign in S3.5. Domain unspecified (antipattern #8)." ;
+    rdfs:range xsd:boolean .
+
+<https://w3id.org/IproK/billing#length> a owl:DatatypeProperty ;
+    rdfs:label "length" ;
+    dcterms:isPartOf <https://w3id.org/IproK/billing> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/length> ;
+    rdfs:comment "Length in metres. Optional — direct-quantity entries skip the L×B×D fields." ;
+    rdfs:domain <https://w3id.org/IproK/billing#Measurement> ;
+    rdfs:range xsd:decimal .
+
+<https://w3id.org/IproK/billing#linkedElement> a owl:DatatypeProperty ;
+    rdfs:label "linked element" ;
+    dcterms:isPartOf <https://w3id.org/IproK/billing> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/linkedElement> ;
+    rdfs:comment "Optional — an IFC GlobalId (GUID) the markup points at. The cross-domain join to the model." ;
+    rdfs:range xsd:string .
+
+<https://w3id.org/IproK/billing#locationRef> a owl:DatatypeProperty ;
+    rdfs:label "location reference" ;
+    dcterms:isPartOf <https://w3id.org/IproK/billing> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/locationRef> ;
+    rdfs:comment "Free-text location label (e.g. 'Col C-12, Floor 2'). Distinct from <https://w3id.org/IproK/reporting#locationWkt> (GPS) and <https://w3id.org/IproK/integrated#zone> (auto-inferred from GPS)." ;
+    rdfs:domain <https://w3id.org/IproK/billing#Measurement> ;
+    rdfs:range xsd:string .
+
+<https://w3id.org/IproK/billing#mbPageRef> a owl:DatatypeProperty ;
+    rdfs:label "MB page reference" ;
+    dcterms:isPartOf <https://w3id.org/IproK/billing> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/mbPageRef> ;
+    rdfs:comment "Optional free-text reference to the physical Measurement Book page, e.g. 'Page 42, Item 7'. Written by the mobile entry form. Domain unspecified (antipattern #8)." ;
+    rdfs:range xsd:string .
+
+<https://w3id.org/IproK/billing#measuredAt> a owl:DatatypeProperty ;
+    rdfs:label "measured at" ;
+    dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/billing> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/measuredAt> ;
+    rdfs:comment "The measured at property in the integrated project information model. Its declared domain is Measurement and its declared range is dateTime."@en ;
+    rdfs:domain <https://w3id.org/IproK/billing#Measurement> ;
+    rdfs:range xsd:dateTime .
+
+<https://w3id.org/IproK/billing#measuredBy> a owl:ObjectProperty ;
+    rdfs:label "measured by" ;
+    dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/billing> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/measuredBy> ;
+    rdfs:comment "The measured by property in the integrated project information model."@en ;
+    rdfs:range <https://w3id.org/IproK#User> .
+
+<https://w3id.org/IproK/billing#measuredItem> a owl:ObjectProperty ;
+    rdfs:label "measured item" ;
+    dcterms:isPartOf <https://w3id.org/IproK/billing> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/measuredItem> ;
+    rdfs:comment "Polymorphic — links either a <https://w3id.org/IproK/billing#Measurement> or <https://w3id.org/IproK/billing#JointMeasurement> to the <https://w3id.org/IproK/billing#BOQItem> it covers. Domain intentionally left unspecified (antipattern #8): declaring rdfs:domain <https://w3id.org/IproK/billing#Measurement> would cause RDFS inference to classify every <https://w3id.org/IproK/billing#JointMeasurement> that carries this predicate as also a <https://w3id.org/IproK/billing#Measurement>, tripping MeasurementShape." ;
+    rdfs:range <https://w3id.org/IproK/billing#BOQItem> .
+
+<https://w3id.org/IproK/billing#measuredQty> a owl:DatatypeProperty ;
+    rdfs:label "measured quantity" ;
+    dcterms:isPartOf <https://w3id.org/IproK/billing> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/measuredQty> ;
+    rdfs:comment "Cumulative measured quantity at the time of the bill computation. Mandatory on Deviation. Domain unspecified." ;
+    rdfs:range xsd:decimal .
+
+<https://w3id.org/IproK/billing#measurementNo> a owl:DatatypeProperty ;
+    rdfs:label "measurement number" ;
+    dcterms:isPartOf <https://w3id.org/IproK/billing> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/measurementNo> ;
+    rdfs:comment "Sequential entry number within a single BOQ item (1, 2, 3, …). Auto-assigned server-side via SPARQL MAX(?n)+1; the mobile UI does not pick this." ;
+    rdfs:domain <https://w3id.org/IproK/billing#Measurement> ;
+    rdfs:range xsd:integer .
+
+<https://w3id.org/IproK/billing#netPayable> a owl:DatatypeProperty ;
+    rdfs:label "net payable" ;
+    dcterms:isPartOf <https://w3id.org/IproK/billing> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/netPayable> ;
+    rdfs:comment "currentGross minus totalRecoveries (INR). The actual payment due to the contractor. Mandatory. SHACL arithmetic invariant: netPayable = currentGross − totalRecoveries (tolerance ±₹0.01). Domain unspecified." ;
+    rdfs:range xsd:decimal .
+
+<https://w3id.org/IproK/billing#paymentAmount> a owl:DatatypeProperty ;
+    rdfs:label "payment amount" ;
+    dcterms:isPartOf <https://w3id.org/IproK/billing> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/paymentAmount> ;
+    rdfs:comment "INR amount of the payment (absolute value — Tally stores as negative). Mandatory." ;
+    rdfs:range xsd:decimal .
+
+<https://w3id.org/IproK/billing#paymentDate> a owl:DatatypeProperty ;
+    rdfs:label "payment date" ;
+    dcterms:isPartOf <https://w3id.org/IproK/billing> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/paymentDate> ;
+    rdfs:comment "Date the payment was made (from Tally voucher DATE tag). Mandatory." ;
+    rdfs:range xsd:date .
+
+<https://w3id.org/IproK/billing#paymentId> a owl:DatatypeProperty ;
+    rdfs:label "payment ID" ;
+    dcterms:isPartOf <https://w3id.org/IproK/billing> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/paymentId> ;
+    rdfs:comment "Tally voucher number. Mandatory. Used as idempotency key on re-import." ;
+    rdfs:range xsd:string .
+
+<https://w3id.org/IproK/billing#preparedBy> a owl:ObjectProperty ;
+    rdfs:label "prepared by" ;
+    dcterms:isPartOf <https://w3id.org/IproK/billing> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/preparedBy> ;
+    rdfs:comment "Points at the <https://w3id.org/IproK#User> (PM/Admin) who prepared the bill. Mandatory. Domain unspecified (antipattern #8)." .
+
+<https://w3id.org/IproK/billing#previousBillAmount> a owl:DatatypeProperty ;
+    rdfs:label "previous bill amount" ;
+    dcterms:isPartOf <https://w3id.org/IproK/billing> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/previousBillAmount> ;
+    rdfs:comment "Value of work done up to the immediately preceding RA Bill: that bill's cumulativeGross (INR), as CPWD Form 26 deducts it. NOT its netPayable — recoveries are payments made on the contractor's behalf, not unbilled work. Zero for the first bill. Mandatory. Domain unspecified." ;
+    rdfs:range xsd:decimal .
+
+<https://w3id.org/IproK/billing#quantity> a owl:DatatypeProperty ;
+    rdfs:label "quantity" ;
+    dcterms:isPartOf <https://w3id.org/IproK/billing> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/quantity> ;
+    rdfs:comment "Final quantity for this measurement entry. If L+B+D were supplied, the server computes L×B×D and stores the result here — never the client-side calc. Direct-quantity entries store the user-entered value." ;
+    rdfs:domain <https://w3id.org/IproK/billing#Measurement> ;
+    rdfs:range xsd:decimal .
+
+<https://w3id.org/IproK/billing#rateFromAnalysis> a owl:ObjectProperty ;
+    rdfs:label "rate From Analysis"@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/billing> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/rateFromAnalysis> ;
+    rdfs:comment "On a BOQ line: the analysis version whose rate was applied to it. No rdfs:domain." .
+
+<https://w3id.org/IproK/billing#recoveryAmount> a owl:DatatypeProperty ;
+    rdfs:label "recovery amount" ;
+    dcterms:isPartOf <https://w3id.org/IproK/billing> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/recoveryAmount> ;
+    rdfs:comment "Computed recovery amount in INR (rate × base amount). Mandatory. Domain unspecified." ;
+    rdfs:range xsd:decimal .
+
+<https://w3id.org/IproK/billing#recoveryBase> a owl:DatatypeProperty ;
+    rdfs:label "recovery base" ;
+    dcterms:isPartOf <https://w3id.org/IproK/billing> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/recoveryBase> ;
+    rdfs:comment "What the rate applies to: GrossAmount | LabourComponent | MaterialComponent. Domain unspecified." ;
+    rdfs:range xsd:string .
+
+<https://w3id.org/IproK/billing#recoveryRate> a owl:DatatypeProperty ;
+    rdfs:label "recovery rate" ;
+    dcterms:isPartOf <https://w3id.org/IproK/billing> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/recoveryRate> ;
+    rdfs:comment "Percentage rate applied to the recovery base (e.g. 0.02 for 2%). Mandatory. Domain unspecified." ;
+    rdfs:range xsd:decimal .
+
+<https://w3id.org/IproK/billing#recoveryType> a owl:DatatypeProperty ;
+    rdfs:label "recovery type" ;
+    dcterms:isPartOf <https://w3id.org/IproK/billing> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/recoveryType> ;
+    rdfs:comment "Statutory deduction type. One of: TDS-IT, GST-TDS, LabourCess, SecurityDeposit, AdvanceRecovery, WaterElectricity, Royalty, Other. Domain unspecified." ;
+    rdfs:range xsd:string .
+
+<https://w3id.org/IproK/billing#rejectedBy> a owl:ObjectProperty ;
+    rdfs:label "rejected by" ;
+    dcterms:isPartOf <https://w3id.org/IproK/billing> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/rejectedBy> ;
+    rdfs:comment "Points at the <https://w3id.org/IproK#User> who rejected the JointMeasurement. Set when jmStatus = JMRejected. Domain unspecified." .
+
+<https://w3id.org/IproK/billing#rejectionReason> a owl:DatatypeProperty ;
+    rdfs:label "rejection reason" ;
+    dcterms:isPartOf <https://w3id.org/IproK/billing> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/rejectionReason> ;
+    rdfs:comment "Free-text reason provided when rejecting a JointMeasurement. Domain unspecified." ;
+    rdfs:range xsd:string .
+
+<https://w3id.org/IproK/billing#tenderedQty> a owl:DatatypeProperty ;
+    rdfs:label "tendered quantity" ;
+    dcterms:isPartOf <https://w3id.org/IproK/billing> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/tenderedQty> ;
+    rdfs:comment "Quantity the BOQ line was awarded for. Polymorphic — used by BOQItem and Deviation; rdfs:domain unspecified (antipattern #8)." ;
+    rdfs:range xsd:decimal .
+
+<https://w3id.org/IproK/billing#totalRecoveries> a owl:DatatypeProperty ;
+    rdfs:label "total recoveries" ;
+    dcterms:isPartOf <https://w3id.org/IproK/billing> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/totalRecoveries> ;
+    rdfs:comment "Sum of all recovery deductions (TDS-IT, GST-TDS, LabourCess, SecurityDeposit, AdvanceRecovery, etc.) in INR. Mandatory. Domain unspecified." ;
+    rdfs:range xsd:decimal .
+
+<https://w3id.org/IproK/billing#BOQItem> a owl:Class ;
+    rdfs:label "BOQ item" ;
+    dcterms:isPartOf <https://w3id.org/IproK/billing> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/BOQItem> ;
+    rdfs:comment "One line in the project's Bill of Quantities. Catalogue node — measurements reference it via <https://w3id.org/IproK/billing#measuredItem>." .
+
+<https://w3id.org/IproK/billing#Measurement> a owl:Class ;
+    rdfs:label "Measurement" ;
+    dcterms:isPartOf <https://w3id.org/IproK/billing> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/Measurement> ;
+    rdfs:comment "One MB entry: dimensions or direct quantity for one BOQ item, captured by a Site Engineer / QC. Joint OTP signature is M3 — V0.29 just records the measurement." ;
+    rdfs:subClassOf prov:Activity .
+

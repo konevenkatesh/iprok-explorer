@@ -1,0 +1,56 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/IproK/prediction#ActivityPrediction> a owl:Class ;
+    rdfs:label "Activity prediction (GAT-derived)" ;
+    dcterms:isPartOf <https://w3id.org/IproK/prediction> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/ActivityPrediction> ;
+    rdfs:comment "One GAT inference output per activity. PROV-O supersession on re-run." ;
+    rdfs:subClassOf prov:Entity .
+
+<https://w3id.org/IproK/prediction#confidenceScore> a owl:DatatypeProperty ;
+    rdfs:label "model confidence (0–1)" ;
+    dcterms:isPartOf <https://w3id.org/IproK/prediction> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/confidenceScore> ;
+    rdfs:comment "Model's self-reported confidence in this prediction (1 − attention entropy, normalised)." ;
+    rdfs:range xsd:decimal .
+
+<https://w3id.org/IproK/prediction#costOverrunRisk> a owl:DatatypeProperty ;
+    rdfs:label "cost overrun risk (0–1)" ;
+    dcterms:isPartOf <https://w3id.org/IproK/prediction> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/costOverrunRisk> ;
+    rdfs:comment "Probability the activity's BOQ-linked cost will overrun by >10%. Sigmoid output of the GAT cost head." ;
+    rdfs:range xsd:decimal .
+
+<https://w3id.org/IproK/prediction#delayRisk> a owl:DatatypeProperty ;
+    rdfs:label "delay risk (0–1)" ;
+    dcterms:isPartOf <https://w3id.org/IproK/prediction> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/delayRisk> ;
+    rdfs:comment "Probability the activity will be delayed by more than 7 days. Sigmoid output of the GAT delay head." ;
+    rdfs:range xsd:decimal .
+
+<https://w3id.org/IproK/prediction#modelVersion> a owl:DatatypeProperty ;
+    rdfs:label "model version" ;
+    dcterms:isPartOf <https://w3id.org/IproK/prediction> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/modelVersion> ;
+    rdfs:comment "Model identifier like 'gat-v1'. Lets the UI flag stale predictions when the model is retrained." ;
+    rdfs:range xsd:string .
+
+<https://w3id.org/IproK/prediction#predictedAt> a owl:DatatypeProperty ;
+    rdfs:label "predicted at" ;
+    dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/prediction> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/predictedAt> ;
+    rdfs:comment "The predicted at property in the integrated project information model."@en ;
+    rdfs:range xsd:dateTime .
+
+<https://w3id.org/IproK/prediction#predictedFloatChange> a owl:DatatypeProperty ;
+    rdfs:label "predicted float change (days)" ;
+    dcterms:isPartOf <https://w3id.org/IproK/prediction> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/predictedFloatChange> ;
+    rdfs:comment "tanh-bounded change in totalFloat. Negative = float will shrink. Range [-30, +30]." ;
+    rdfs:range xsd:decimal .
+

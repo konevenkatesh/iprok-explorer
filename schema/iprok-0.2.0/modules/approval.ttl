@@ -1,0 +1,48 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/IproK/approval#Approval> a owl:Class ;
+    rdfs:label "Statutory approval" ;
+    dcterms:isPartOf <https://w3id.org/IproK/approval> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/Approval> ;
+    rdfs:comment "A statutory approval, NOC, registration or certificate the project must obtain. Status transitions are PROV-O supersessions; the record is append-only." ;
+    rdfs:subClassOf prov:Entity .
+
+<https://w3id.org/IproK/approval#applicationRef> a owl:DatatypeProperty ;
+    rdfs:label "application reference" ;
+    dcterms:isPartOf <https://w3id.org/IproK/approval> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/applicationRef> ;
+    rdfs:comment "The authority's application / file number once submitted. Domain unspecified (antipattern #8)." ;
+    rdfs:range xsd:string .
+
+<https://w3id.org/IproK/approval#approvalId> a owl:DatatypeProperty ;
+    rdfs:label "approval id" ;
+    dcterms:isPartOf <https://w3id.org/IproK/approval> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/approvalId> ;
+    rdfs:comment "Stable id within the project, e.g. APR-0003. Domain unspecified (antipattern #8)." ;
+    rdfs:range xsd:string .
+
+<https://w3id.org/IproK/approval#approvalStatus> a owl:DatatypeProperty ;
+    rdfs:label "approval status" ;
+    dcterms:isPartOf <https://w3id.org/IproK/approval> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/approvalStatus> ;
+    rdfs:comment "NotStarted / Preparing / Submitted / QueryRound / Approved / Rejected. Domain unspecified (antipattern #8)." ;
+    rdfs:range xsd:string .
+
+<https://w3id.org/IproK/approval#approvalType> a owl:DatatypeProperty ;
+    rdfs:label "approval type" ;
+    dcterms:isPartOf <https://w3id.org/IproK/approval> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/approvalType> ;
+    rdfs:comment "One of the ApprovalShape sh:in set (PlanSanction / CommencementCertificate / NALAConversion / FireNOC / …). Domain unspecified (antipattern #8)." ;
+    rdfs:range xsd:string .
+
+<https://w3id.org/IproK/approval#slaDays> a owl:DatatypeProperty ;
+    rdfs:label "SLA / deemed-approval days" ;
+    dcterms:isPartOf <https://w3id.org/IproK/approval> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/slaDays> ;
+    rdfs:comment "Statutory or practical service-level clock in days from submission (TG-bPASS style deemed approvals). 0 = no clock. Domain unspecified (antipattern #8)." ;
+    rdfs:range xsd:integer .
+

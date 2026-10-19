@@ -2,6 +2,10 @@
 
 An independent, static website for understanding the Integrated Project Knowledge ontology. Network diagrams are generated from retained RDF declarations, with labelled editorial explanations and source inspection.
 
+## Expanded IproK draft
+
+The default view is the proposed **IproK 0.2.0** extension: **21 namespace modules, 138 classes, 127 object properties and 679 data properties**. It rewrites the platform schema into IproK module identifiers while preserving the published release separately. A full mapping, migrated SHACL constraints, four RDF formats and module partitions are available in `schema/iprok-0.2.0/`. Three containment-as-subclass errors are explicitly corrected in the draft. See its [specification](schema/iprok-0.2.0/README.md).
+
 ## Explore
 
 - **Network atlas:** drag nodes, pan and zoom, focus a module or a concept, follow its neighbours and inspect assertions. Module clusters, connected network, radial and class hierarchy arrangements use the same schema.
@@ -24,8 +28,10 @@ Open `http://localhost:8873/`. Fetching the schema requires HTTP rather than `fi
 
 ```sh
 python3 -m pip install -r requirements.txt
+python3 scripts/extend_iprok.py
 python3 scripts/build_schema.py
 python3 scripts/verify_schema.py
+python3 scripts/verify_extended.py
 node --check assets/explorer.js
 ```
 

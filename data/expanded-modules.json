@@ -1,0 +1,290 @@
+{
+  "basis": "Namespace modules in the proposed expanded IproK schema. Explicit domain/range cross-module links only.",
+  "groups": [
+    {
+      "id": "IproK",
+      "name": "Foundation & governance",
+      "classes": [
+        "Actor",
+        "Calendar",
+        "Constraint",
+        "Decision",
+        "IdSequence",
+        "IproKThing",
+        "MastersAdoption",
+        "Organisation",
+        "OrganisationMasters",
+        "PilotStatus",
+        "ProjectMembership",
+        "SignatureEvent",
+        "User"
+      ],
+      "colour": "#54776b"
+    },
+    {
+      "id": "approval",
+      "name": "Statutory approvals",
+      "classes": [
+        "Approval"
+      ],
+      "colour": "#37785e"
+    },
+    {
+      "id": "billing",
+      "name": "Measurement & billing",
+      "classes": [
+        "BillState",
+        "BOQItem",
+        "Deviation",
+        "JointMeasurement",
+        "JMStatus",
+        "Measurement",
+        "Payment",
+        "Recovery",
+        "RABill"
+      ],
+      "colour": "#6c63a0"
+    },
+    {
+      "id": "building",
+      "name": "Building models",
+      "classes": [
+        "ElementCopiesRecorded",
+        "ElementDuplicatesRetired",
+        "Element",
+        "IfcModel",
+        "MemberIdentity",
+        "ModelComment",
+        "ModelHealthCheck"
+      ],
+      "colour": "#b17b36"
+    },
+    {
+      "id": "coordination",
+      "name": "Coordination & risk",
+      "classes": [
+        "ClashBatch",
+        "Event",
+        "Issue",
+        "Risk"
+      ],
+      "colour": "#a46e42"
+    },
+    {
+      "id": "cost",
+      "name": "Cost & rate analysis",
+      "classes": [
+        "AnalysisAddition",
+        "AnalysisLine",
+        "CostResource",
+        "CostCategory",
+        "CostItem",
+        "CostType",
+        "DesignOption",
+        "EquipmentCost",
+        "ExpenseItem",
+        "LaborCost",
+        "MaterialCost",
+        "ProjectResourcePrice",
+        "RateAnalysis",
+        "ResourceMapping"
+      ],
+      "colour": "#7e8e41"
+    },
+    {
+      "id": "document",
+      "name": "Documents & RFIs",
+      "classes": [
+        "Annotation",
+        "Document",
+        "Drawing",
+        "DrawingChange",
+        "DrawingState",
+        "RFI",
+        "RFIState",
+        "Transmittal"
+      ],
+      "colour": "#4a799c"
+    },
+    {
+      "id": "finance",
+      "name": "Collections & escrow",
+      "classes": [
+        "CollectionReceipt",
+        "DemandNote",
+        "EscrowAccount",
+        "EscrowWithdrawal",
+        "PaymentMilestone"
+      ],
+      "colour": "#347f8b"
+    },
+    {
+      "id": "handover",
+      "name": "Handover & defects",
+      "classes": [
+        "DLPDefect",
+        "HandoverPackage",
+        "SnagItem",
+        "WarrantyRecord"
+      ],
+      "colour": "#9c687d"
+    },
+    {
+      "id": "integrated",
+      "name": "Integration",
+      "classes": [
+        "ResourceAllocation"
+      ],
+      "colour": "#5a8c79"
+    },
+    {
+      "id": "prediction",
+      "name": "Activity prediction",
+      "classes": [
+        "ActivityPrediction"
+      ],
+      "colour": "#bd704f"
+    },
+    {
+      "id": "procurement",
+      "name": "Procurement & stores",
+      "classes": [
+        "GoodsReceipt",
+        "MaterialIssue",
+        "ProductOffer",
+        "PurchaseOrder",
+        "Vendor"
+      ],
+      "colour": "#887445"
+    },
+    {
+      "id": "property",
+      "name": "Property inventory",
+      "classes": [
+        "Tower",
+        "Unit",
+        "UnitType"
+      ],
+      "colour": "#718e9d"
+    },
+    {
+      "id": "quality",
+      "name": "Quality & hold points",
+      "classes": [
+        "ChecklistItem",
+        "HoldPoint",
+        "Inspection",
+        "NCRStatus",
+        "NCR",
+        "RecurrenceAlert"
+      ],
+      "colour": "#4e9582"
+    },
+    {
+      "id": "reporting",
+      "name": "Field reporting & queries",
+      "classes": [
+        "DPREntry",
+        "Photo",
+        "SavedQuery"
+      ],
+      "colour": "#8b7caa"
+    },
+    {
+      "id": "resource",
+      "name": "Resources & productivity",
+      "classes": [
+        "CrewComposition",
+        "CrewType",
+        "EquipmentResource",
+        "LaborResource",
+        "MaterialResource",
+        "ProductivityContribution",
+        "ProductivityNorm",
+        "ProductivityObservation",
+        "ProductivityRecompute",
+        "Resource",
+        "ResourceConstraint",
+        "ResourceType",
+        "SkillCertification",
+        "TrackingTag",
+        "Units",
+        "UserDefinedResource",
+        "Worker"
+      ],
+      "colour": "#847ba7"
+    },
+    {
+      "id": "safety",
+      "name": "Safety",
+      "classes": [
+        "IncidentType",
+        "Incident"
+      ],
+      "colour": "#a58b42"
+    },
+    {
+      "id": "schedule",
+      "name": "Schedule & control",
+      "classes": [
+        "Activity",
+        "ActivityDurationEstimate",
+        "BaselineEntry",
+        "EVMSnapshot",
+        "Milestone",
+        "Project",
+        "ScheduleBaseline",
+        "ScheduleLink",
+        "Task",
+        "TaskDependency",
+        "TaskTime",
+        "WBSNode",
+        "WBS_Element",
+        "WorkConstraint",
+        "WorkPackage"
+      ],
+      "colour": "#7f9063"
+    },
+    {
+      "id": "signal",
+      "name": "External signals",
+      "classes": [
+        "ExternalSignal",
+        "HistoricalWeatherProfile",
+        "HistoricalWeatherWeek",
+        "LabourSignal",
+        "MaterialPriceSignal",
+        "WeatherSignal"
+      ],
+      "colour": "#718aa0"
+    },
+    {
+      "id": "site",
+      "name": "Site intelligence",
+      "classes": [
+        "SiteClimate",
+        "SiteHydrology",
+        "SiteIntelligence",
+        "SiteLabour",
+        "SiteLogistics",
+        "SiteUtilities",
+        "SiteWorkerSafety"
+      ],
+      "colour": "#8a688e"
+    },
+    {
+      "id": "tender",
+      "name": "Tender intelligence",
+      "classes": [
+        "BidRecommendation",
+        "ComparableProject",
+        "ExtractionStatus",
+        "SORItem",
+        "SORLibrary",
+        "Tender",
+        "TenderBOQItem"
+      ],
+      "colour": "#5a938d"
+    }
+  ]
+}

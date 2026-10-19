@@ -57,6 +57,18 @@ for name,fmt in [('ontology.nt','nt'),('ontology.owl','xml'),('ontology.jsonld',
   g.serialize(ROOT/name,format=fmt)
  assert isomorphic(g,Graph().parse(ROOT/name,format=fmt)),name
 outputs=[iprok]
+if (ROOT/'schema/iprok-0.2.0/ontology.ttl').exists():
+ expanded,eg=build('expanded',['schema/iprok-0.2.0/ontology.ttl'],'IproK · expanded 0.2.0 draft','Proposed IproK extension: original published identifiers plus migrated platform schema. Created 19 October 2026; engineering verification is separate from historical thesis results.')
+ es=Graph().parse(ROOT/'schema/iprok-0.2.0/shapes.ttl',format='turtle')
+ expanded['audit']['shaclTriples']=len(es)
+ expanded['audit']['nodeShapes']=len(set(es.subjects(RDF.type,SH.NodeShape)))
+ expanded['shapes']=[{'id':str(n),'targets':[str(x) for x in es.objects(n,SH.targetClass)],'properties':[{'path':str(es.value(b,SH.path)),'constraints':[{'predicate':str(k),'value':str(v)} for k,v in es.predicate_objects(b)]} for b in es.objects(n,SH.property)]} for n in sorted(set(es.subjects(RDF.type,SH.NodeShape)),key=str)]
+ (ROOT/'data/expanded.json').write_text(json.dumps(expanded,ensure_ascii=False,indent=2)+'\n')
+ names={'IproK':'Foundation & governance','schedule':'Schedule & control','resource':'Resources & productivity','cost':'Cost & rate analysis','integrated':'Integration','billing':'Measurement & billing','procurement':'Procurement & stores','document':'Documents & RFIs','building':'Building models','coordination':'Coordination & risk','quality':'Quality & hold points','safety':'Safety','tender':'Tender intelligence','signal':'External signals','site':'Site intelligence','approval':'Statutory approvals','property':'Property inventory','finance':'Collections & escrow','handover':'Handover & defects','reporting':'Field reporting & queries','prediction':'Activity prediction'}
+ palette=['#54776b','#37785e','#6c63a0','#b17b36','#a46e42','#7e8e41','#4a799c','#347f8b','#9c687d','#5a8c79','#bd704f','#887445','#718e9d','#4e9582','#8b7caa','#847ba7','#a58b42','#7f9063','#718aa0','#8a688e','#5a938d']
+ mods=sorted(set(t['module'] for t in expanded['terms'] if t['kind']=='Class'))
+ (ROOT/'data/expanded-modules.json').write_text(json.dumps({'basis':'Namespace modules in the proposed expanded IproK schema. Explicit domain/range cross-module links only.','groups':[{'id':mod,'name':names.get(mod,mod),'classes':[t['local'] for t in expanded['terms'] if t['kind']=='Class' and t['module']==mod],'colour':palette[i%len(palette)]} for i,mod in enumerate(mods)]},indent=2)+'\n')
+ outputs.append(expanded)
 p=ROOT/'schema/niyoj/source.json'
 if p.exists():
  source=json.loads(p.read_text())

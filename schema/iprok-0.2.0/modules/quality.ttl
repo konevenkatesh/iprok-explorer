@@ -1,0 +1,267 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/IproK/quality#HoldPoint> a owl:Class ;
+    rdfs:label "Hold Point"@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/quality> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/HoldPoint> ;
+    rdfs:comment "One inspection/witness point from the ITP, bound to a schedule activity." ;
+    rdfs:subClassOf prov:Entity .
+
+<https://w3id.org/IproK/quality#alertedActivity> a owl:ObjectProperty ;
+    rdfs:label "alerted activity" ;
+    dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/quality> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/alertedActivity> ;
+    rdfs:comment "The alerted activity property in the integrated project information model. Its declared domain is RecurrenceAlert and its declared range is Activity."@en ;
+    rdfs:domain <https://w3id.org/IproK/quality#RecurrenceAlert> ;
+    rdfs:range <https://w3id.org/IproK/schedule#Activity> .
+
+<https://w3id.org/IproK/quality#closedAt> a owl:DatatypeProperty ;
+    rdfs:label "closed at" ;
+    dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/quality> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/closedAt> ;
+    rdfs:comment "The closed at property in the integrated project information model. Its declared domain is NCR and its declared range is dateTime."@en ;
+    rdfs:domain <https://w3id.org/IproK/quality#NCR> ;
+    rdfs:range xsd:dateTime .
+
+<https://w3id.org/IproK/quality#closedBy> a owl:ObjectProperty ;
+    rdfs:label "closed by" ;
+    dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/quality> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/closedBy> ;
+    rdfs:comment "The closed by property in the integrated project information model. Its declared domain is NCR and its declared range is User."@en ;
+    rdfs:domain <https://w3id.org/IproK/quality#NCR> ;
+    rdfs:range <https://w3id.org/IproK#User> .
+
+<https://w3id.org/IproK/quality#closurePhoto> a owl:DatatypeProperty ;
+    rdfs:label "closure photo URI" ;
+    dcterms:isPartOf <https://w3id.org/IproK/quality> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/closurePhoto> ;
+    rdfs:comment "s3:// URI of the evidence photo uploaded with the closure (optional)." ;
+    rdfs:domain <https://w3id.org/IproK/quality#NCR> ;
+    rdfs:range xsd:anyURI .
+
+<https://w3id.org/IproK/quality#failureNote> a owl:DatatypeProperty ;
+    rdfs:label "failure note" ;
+    dcterms:isPartOf <https://w3id.org/IproK/quality> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/failureNote> ;
+    rdfs:comment "Free-text explanation of a quality failure. Used on both <https://w3id.org/IproK/quality#ChecklistItem> (where SHACL requires it iff itemResult='fail') and <https://w3id.org/IproK/quality#NCR> (where it's copied from the failed item). Domain intentionally left unspecified — adding `rdfs:domain <https://w3id.org/IproK/quality#ChecklistItem>` would make every NCR get RDFS-inferred as a ChecklistItem and trip ChecklistItemShape." ;
+    rdfs:range xsd:string .
+
+<https://w3id.org/IproK/quality#firstSeenAt> a owl:DatatypeProperty ;
+    rdfs:label "first seen at" ;
+    dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/quality> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/firstSeenAt> ;
+    rdfs:comment "The first seen at property in the integrated project information model. Its declared domain is RecurrenceAlert and its declared range is dateTime."@en ;
+    rdfs:domain <https://w3id.org/IproK/quality#RecurrenceAlert> ;
+    rdfs:range xsd:dateTime .
+
+<https://w3id.org/IproK/quality#hasItem> a owl:ObjectProperty ;
+    rdfs:label "has item" ;
+    dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/quality> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/hasItem> ;
+    rdfs:comment "The has item property in the integrated project information model. Its declared domain is Inspection and its declared range is ChecklistItem."@en ;
+    rdfs:domain <https://w3id.org/IproK/quality#Inspection> ;
+    rdfs:range <https://w3id.org/IproK/quality#ChecklistItem> .
+
+<https://w3id.org/IproK/quality#holdDescription> a owl:DatatypeProperty ;
+    rdfs:label "hold Description"@en ;
+    dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/quality> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/holdDescription> ;
+    rdfs:comment "The hold description property in the integrated project information model."@en ;
+    rdfs:range xsd:string .
+
+<https://w3id.org/IproK/quality#holdPointId> a owl:DatatypeProperty ;
+    rdfs:label "hold Point Id"@en ;
+    dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/quality> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/holdPointId> ;
+    rdfs:comment "The hold point id property in the integrated project information model."@en ;
+    rdfs:range xsd:string .
+
+<https://w3id.org/IproK/quality#holdPointType> a owl:DatatypeProperty ;
+    rdfs:label "hold Point Type"@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/quality> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/holdPointType> ;
+    rdfs:comment "Hold (blocks downstream work) | Witness (notifies only)." ;
+    rdfs:range xsd:string .
+
+<https://w3id.org/IproK/quality#holdStatus> a owl:DatatypeProperty ;
+    rdfs:label "hold Status"@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/quality> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/holdStatus> ;
+    rdfs:comment "Pending | OfferedForInspection | Released | Waived." ;
+    rdfs:range xsd:string .
+
+<https://w3id.org/IproK/quality#inspectedActivity> a owl:ObjectProperty ;
+    rdfs:label "inspected activity" ;
+    dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/quality> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/inspectedActivity> ;
+    rdfs:comment "The inspected activity property in the integrated project information model. Its declared domain is Inspection and its declared range is Activity."@en ;
+    rdfs:domain <https://w3id.org/IproK/quality#Inspection> ;
+    rdfs:range <https://w3id.org/IproK/schedule#Activity> .
+
+<https://w3id.org/IproK/quality#inspectedAt> a owl:DatatypeProperty ;
+    rdfs:label "inspected at" ;
+    dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/quality> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/inspectedAt> ;
+    rdfs:comment "The inspected at property in the integrated project information model. Its declared domain is Inspection and its declared range is dateTime."@en ;
+    rdfs:domain <https://w3id.org/IproK/quality#Inspection> ;
+    rdfs:range xsd:dateTime .
+
+<https://w3id.org/IproK/quality#inspectionCategory> a owl:DatatypeProperty ;
+    rdfs:label "inspection category" ;
+    dcterms:isPartOf <https://w3id.org/IproK/quality> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/inspectionCategory> ;
+    rdfs:comment "Either 'quality' (IS-456 concrete pour, IS-1786 reinforcement, etc.) or 'safety' (IS 7969 site / MoRTH highway / confined-space). Mandatory on every <https://w3id.org/IproK/quality#Inspection> from V0.27 onwards. Pre-V0.27 inspections default to 'quality' on read." ;
+    rdfs:range xsd:string .
+
+<https://w3id.org/IproK/quality#itemDescription> a owl:DatatypeProperty ;
+    rdfs:label "item description" ;
+    dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/quality> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/itemDescription> ;
+    rdfs:comment "The item description property in the integrated project information model. Its declared domain is ChecklistItem and its declared range is string."@en ;
+    rdfs:domain <https://w3id.org/IproK/quality#ChecklistItem> ;
+    rdfs:range xsd:string .
+
+<https://w3id.org/IproK/quality#itemResult> a owl:DatatypeProperty ;
+    rdfs:label "item result" ;
+    dcterms:isPartOf <https://w3id.org/IproK/quality> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/itemResult> ;
+    rdfs:comment "Either 'pass' or 'fail'." ;
+    rdfs:domain <https://w3id.org/IproK/quality#ChecklistItem> ;
+    rdfs:range xsd:string .
+
+<https://w3id.org/IproK/quality#lastSeenAt> a owl:DatatypeProperty ;
+    rdfs:label "last seen at" ;
+    dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/quality> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/lastSeenAt> ;
+    rdfs:comment "The last seen at property in the integrated project information model. Its declared domain is RecurrenceAlert and its declared range is dateTime."@en ;
+    rdfs:domain <https://w3id.org/IproK/quality#RecurrenceAlert> ;
+    rdfs:range xsd:dateTime .
+
+<https://w3id.org/IproK/quality#ncrStatus> a owl:DatatypeProperty ;
+    rdfs:label "NCR status" ;
+    dcterms:isPartOf <https://w3id.org/IproK/quality> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/ncrStatus> ;
+    rdfs:comment "'Open' or 'Closed'. v0 only writes 'Open'; closure flow is V0.19." ;
+    rdfs:domain <https://w3id.org/IproK/quality#NCR> ;
+    rdfs:range xsd:string .
+
+<https://w3id.org/IproK/quality#occurrenceCount> a owl:DatatypeProperty ;
+    rdfs:label "occurrence count" ;
+    dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/quality> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/occurrenceCount> ;
+    rdfs:comment "The occurrence count property in the integrated project information model. Its declared domain is RecurrenceAlert and its declared range is integer."@en ;
+    rdfs:domain <https://w3id.org/IproK/quality#RecurrenceAlert> ;
+    rdfs:range xsd:integer .
+
+<https://w3id.org/IproK/quality#overallResult> a owl:DatatypeProperty ;
+    rdfs:label "overall result" ;
+    dcterms:isPartOf <https://w3id.org/IproK/quality> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/overallResult> ;
+    rdfs:comment "Either 'pass' (every item passed) or 'fail' (at least one item failed)." ;
+    rdfs:domain <https://w3id.org/IproK/quality#Inspection> ;
+    rdfs:range xsd:string .
+
+<https://w3id.org/IproK/quality#relatedActivity> a owl:ObjectProperty ;
+    rdfs:label "related activity" ;
+    dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/quality> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/relatedActivity> ;
+    rdfs:comment "The related activity property in the integrated project information model. Its declared domain is NCR and its declared range is Activity."@en ;
+    rdfs:domain <https://w3id.org/IproK/quality#NCR> ;
+    rdfs:range <https://w3id.org/IproK/schedule#Activity> .
+
+<https://w3id.org/IproK/quality#relatedInspection> a owl:ObjectProperty ;
+    rdfs:label "related inspection" ;
+    dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/quality> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/relatedInspection> ;
+    rdfs:comment "The related inspection property in the integrated project information model. Its declared domain is NCR and its declared range is Inspection."@en ;
+    rdfs:domain <https://w3id.org/IproK/quality#NCR> ;
+    rdfs:range <https://w3id.org/IproK/quality#Inspection> .
+
+<https://w3id.org/IproK/quality#relatedItem> a owl:ObjectProperty ;
+    rdfs:label "related checklist item" ;
+    dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/quality> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/relatedItem> ;
+    rdfs:comment "The related item property in the integrated project information model. Its declared domain is NCR and its declared range is ChecklistItem."@en ;
+    rdfs:domain <https://w3id.org/IproK/quality#NCR> ;
+    rdfs:range <https://w3id.org/IproK/quality#ChecklistItem> .
+
+<https://w3id.org/IproK/quality#releaseOTPRef> a owl:DatatypeProperty ;
+    rdfs:label "release OTPRef"@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/quality> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/releaseOTPRef> ;
+    rdfs:comment "OTP transaction reference of the release signature (S3.5 service)." ;
+    rdfs:range xsd:string .
+
+<https://w3id.org/IproK/quality#releasedAt> a owl:DatatypeProperty ;
+    rdfs:label "released At"@en ;
+    dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/quality> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/releasedAt> ;
+    rdfs:comment "The released at property in the integrated project information model."@en ;
+    rdfs:range xsd:dateTime .
+
+<https://w3id.org/IproK/quality#releasedBy> a owl:DatatypeProperty ;
+    rdfs:label "released By"@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/quality> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/releasedBy> ;
+    rdfs:comment "Name/designation of the releasing client or consultant authority." ;
+    rdfs:range xsd:string .
+
+<https://w3id.org/IproK/quality#status> a owl:ObjectProperty ;
+    rdfs:label "status" ;
+    dcterms:isPartOf <https://w3id.org/IproK/quality> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/status> ;
+    rdfs:comment "Polymorphic lifecycle status. Domain intentionally left unspecified — adding `rdfs:domain <https://w3id.org/IproK/quality#NCR>` would mark every node carrying <https://w3id.org/IproK/quality#status> as an NCR (the same RDFS-domain trap that bit V0.17's <https://w3id.org/IproK/quality#failureNote>, see CLAUDE.md antipattern #8). v0 uses <https://w3id.org/IproK/quality#status> only on <https://w3id.org/IproK/quality#NCR>; SHACL constrains it via NCRShape." ;
+    rdfs:range <https://w3id.org/IproK/quality#NCRStatus> .
+
+<https://w3id.org/IproK/quality#NCRStatus> a owl:Class ;
+    rdfs:label "NCR Status" ;
+    dcterms:isPartOf <https://w3id.org/IproK/quality> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/NCRStatus> ;
+    rdfs:comment "Enum of possible NCR lifecycle states." .
+
+<https://w3id.org/IproK/quality#ChecklistItem> a owl:Class ;
+    rdfs:label "Checklist item" ;
+    dcterms:isPartOf <https://w3id.org/IproK/quality> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/ChecklistItem> ;
+    rdfs:comment "One row of an inspection checklist with a pass/fail outcome and an optional failure note." .
+
+<https://w3id.org/IproK/quality#RecurrenceAlert> a owl:Class ;
+    rdfs:label "Recurrence alert" ;
+    dcterms:isPartOf <https://w3id.org/IproK/quality> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/RecurrenceAlert> ;
+    rdfs:comment "A repeated defect on the same activity, surfaced from grouping failed checklist items by (activity, normalised failure note). Status uses the <https://w3id.org/IproK/quality#NCRStatus> IRIs (<https://w3id.org/IproK/integrated#Open> / <https://w3id.org/IproK/integrated#Acknowledged> at V0.28; UnderReview/Closed/Rejected reserved for later)." ;
+    rdfs:subClassOf prov:Entity .
+
+<https://w3id.org/IproK/quality#Inspection> a owl:Class ;
+    rdfs:label "Inspection" ;
+    dcterms:isPartOf <https://w3id.org/IproK/quality> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/Inspection> ;
+    rdfs:comment "A quality-checklist run against a single <https://w3id.org/IproK/schedule#Activity>." ;
+    rdfs:subClassOf prov:Activity .
+
+<https://w3id.org/IproK/quality#NCR> a owl:Class ;
+    rdfs:label "Non-Conformance Report" ;
+    dcterms:isPartOf <https://w3id.org/IproK/quality> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/NCR> ;
+    rdfs:comment "Raised automatically when a checklist item fails. Status starts Open; closure flow added in V0.19." .
+

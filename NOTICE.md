@@ -11,3 +11,6 @@ Changes made on 19 October 2026: new interactive website, source-derived indexes
 Explanations marked as editorial are derived reading aids and do not add axioms to either source ontology. Illustrative record names are constructed examples. This website contains no actual project records, Niyoj photographs or screenshots, credentials, model weights or historical experimental findings.
 
 No equivalence mapping between historical IproK and the BIMSaarthi namespace is asserted. Niyoj's source header still says “M1 subset / 0.1.0”, despite broader implemented coverage. This site identifies the source by commit rather than inventing a new ontology release.
+
+
+The user subsequently requested rewriting and extending IproK to include the later modules, and explicitly approved public disclosure of the full source schema. `schema/iprok-0.2.0/` is the new proposed derivative: 138 classes, 21 namespaces, a traceable mapping, migrated SHACL and equivalent RDF distributions. It preserves 401 original non-header assertions and corrects three documented hierarchy errors. This is newly dated development, not a historical release. Source namespaces in `dct:source` identify provenance, not equivalence.

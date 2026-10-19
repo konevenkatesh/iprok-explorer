@@ -1,0 +1,163 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/IproK/handover#DLPDefect> a owl:Class ;
+    rdfs:label "DLPDefect"@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/handover> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/DLPDefect> ;
+    rdfs:comment "A post-handover defect inside the liability period — RERA S.14(3): rectify within 30 days." ;
+    rdfs:subClassOf prov:Entity .
+
+<https://w3id.org/IproK/handover#HandoverPackage> a owl:Class ;
+    rdfs:label "Handover Package"@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/handover> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/HandoverPackage> ;
+    rdfs:comment "The project's digital handover record: readiness, transfer, and the defect-liability window." ;
+    rdfs:subClassOf prov:Entity .
+
+<https://w3id.org/IproK/handover#SnagItem> a owl:Class ;
+    rdfs:label "Snag Item"@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/handover> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/SnagItem> ;
+    rdfs:comment "One punch-list item found during handover inspection. Open Critical snags block transfer." ;
+    rdfs:subClassOf prov:Entity .
+
+<https://w3id.org/IproK/handover#WarrantyRecord> a owl:Class ;
+    rdfs:label "Warranty Record"@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/handover> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/WarrantyRecord> ;
+    rdfs:comment "One asset/system warranty (vendor, start, duration) handed to operations." ;
+    rdfs:subClassOf prov:Entity .
+
+<https://w3id.org/IproK/handover#committedHandoverDate> a owl:DatatypeProperty ;
+    rdfs:label "committed Handover Date"@en ;
+    dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/handover> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/committedHandoverDate> ;
+    rdfs:comment "The committed handover date property in the integrated project information model."@en ;
+    rdfs:range xsd:date .
+
+<https://w3id.org/IproK/handover#defectId> a owl:DatatypeProperty ;
+    rdfs:label "defect Id"@en ;
+    dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/handover> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/defectId> ;
+    rdfs:comment "The defect id property in the integrated project information model."@en ;
+    rdfs:range xsd:string .
+
+<https://w3id.org/IproK/handover#defectStatus> a owl:DatatypeProperty ;
+    rdfs:label "defect Status"@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/handover> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/defectStatus> ;
+    rdfs:comment "Reported | InRepair | Rectified | Disputed." ;
+    rdfs:range xsd:string .
+
+<https://w3id.org/IproK/handover#dlpMonths> a owl:DatatypeProperty ;
+    rdfs:label "DLP (months)" ;
+    dcterms:isPartOf <https://w3id.org/IproK/handover> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/dlpMonths> ;
+    rdfs:comment "Defect-liability window in months. RERA default 60 (5 years from possession)." ;
+    rdfs:range xsd:integer .
+
+<https://w3id.org/IproK/handover#handoverStatus> a owl:DatatypeProperty ;
+    rdfs:label "handover Status"@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/handover> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/handoverStatus> ;
+    rdfs:comment "Preparing | Transferred." ;
+    rdfs:range xsd:string .
+
+<https://w3id.org/IproK/handover#rectifiedAt> a owl:DatatypeProperty ;
+    rdfs:label "rectified At"@en ;
+    dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/handover> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/rectifiedAt> ;
+    rdfs:comment "The rectified at property in the integrated project information model."@en ;
+    rdfs:range xsd:dateTime .
+
+<https://w3id.org/IproK/handover#snagDescription> a owl:DatatypeProperty ;
+    rdfs:label "snag Description"@en ;
+    dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/handover> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/snagDescription> ;
+    rdfs:comment "The snag description property in the integrated project information model."@en ;
+    rdfs:range xsd:string .
+
+<https://w3id.org/IproK/handover#snagId> a owl:DatatypeProperty ;
+    rdfs:label "snag Id"@en ;
+    dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/handover> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/snagId> ;
+    rdfs:comment "The snag id property in the integrated project information model."@en ;
+    rdfs:range xsd:string .
+
+<https://w3id.org/IproK/handover#snagSeverity> a owl:DatatypeProperty ;
+    rdfs:label "snag Severity"@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/handover> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/snagSeverity> ;
+    rdfs:comment "Minor | Major | Critical." ;
+    rdfs:range xsd:string .
+
+<https://w3id.org/IproK/handover#snagStatus> a owl:DatatypeProperty ;
+    rdfs:label "snag Status"@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/handover> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/snagStatus> ;
+    rdfs:comment "Open | Fixed | Verified | Deferred." ;
+    rdfs:range xsd:string .
+
+<https://w3id.org/IproK/handover#transferredAt> a owl:DatatypeProperty ;
+    rdfs:label "transferred At"@en ;
+    dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/handover> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/transferredAt> ;
+    rdfs:comment "The transferred at property in the integrated project information model."@en ;
+    rdfs:range xsd:dateTime .
+
+<https://w3id.org/IproK/handover#transferredTo> a owl:DatatypeProperty ;
+    rdfs:label "transferred To"@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/handover> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/transferredTo> ;
+    rdfs:comment "Receiving party — owner, RWA, or facility team." ;
+    rdfs:range xsd:string .
+
+<https://w3id.org/IproK/handover#warrantyAsset> a owl:DatatypeProperty ;
+    rdfs:label "warranty Asset"@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/handover> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/warrantyAsset> ;
+    rdfs:comment "Asset/system covered — lifts, DG set, waterproofing, STP…" ;
+    rdfs:range xsd:string .
+
+<https://w3id.org/IproK/handover#warrantyId> a owl:DatatypeProperty ;
+    rdfs:label "warranty Id"@en ;
+    dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/handover> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/warrantyId> ;
+    rdfs:comment "The warranty id property in the integrated project information model."@en ;
+    rdfs:range xsd:string .
+
+<https://w3id.org/IproK/handover#warrantyMonths> a owl:DatatypeProperty ;
+    rdfs:label "warranty Months"@en ;
+    dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/handover> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/warrantyMonths> ;
+    rdfs:comment "The warranty months property in the integrated project information model."@en ;
+    rdfs:range xsd:integer .
+
+<https://w3id.org/IproK/handover#warrantyStartDate> a owl:DatatypeProperty ;
+    rdfs:label "warranty Start Date"@en ;
+    dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/handover> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/warrantyStartDate> ;
+    rdfs:comment "The warranty start date property in the integrated project information model."@en ;
+    rdfs:range xsd:date .
+
+<https://w3id.org/IproK/handover#warrantyVendor> a owl:DatatypeProperty ;
+    rdfs:label "warranty Vendor"@en ;
+    dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/handover> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/warrantyVendor> ;
+    rdfs:comment "The warranty vendor property in the integrated project information model."@en ;
+    rdfs:range xsd:string .
+

@@ -1,0 +1,192 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/IproK/signal#HistoricalWeatherProfile> a owl:Class ;
+    rdfs:label "historical weather profile" ;
+    dcterms:isPartOf <https://w3id.org/IproK/signal> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/HistoricalWeatherProfile> ;
+    rdfs:comment "10-year climatology snapshot at a project's GPS — 52 weekly buckets, each with avg rainfall + rain probability + extreme-heat probability. Source: NASA POWER (power.larc.nasa.gov), free climatology API, no auth required. Fetched once at project geocoding; treated as static climate context (re-fetch only if site GPS changes)." ;
+    rdfs:subClassOf <https://w3id.org/IproK/signal#ExternalSignal> .
+
+<https://w3id.org/IproK/signal#HistoricalWeatherWeek> a owl:Class ;
+    rdfs:label "historical weather week" ;
+    dcterms:isPartOf <https://w3id.org/IproK/signal> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/HistoricalWeatherWeek> ;
+    rdfs:comment "One ISO week-of-year bucket (1..53) of the climatology profile. 52 instances per HistoricalWeatherProfile; the GNN reads three scalars from the week-bucket whose ISO week matches an activity's planned-start." .
+
+<https://w3id.org/IproK/signal#LabourSignal> a owl:Class ;
+    rdfs:label "labour signal" ;
+    dcterms:isPartOf <https://w3id.org/IproK/signal> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/LabourSignal> ;
+    rdfs:comment "Per-week per-state labour availability score (0-1, where 0 = peak festival/harvest absence). Reason field carries the cause: Diwali / Pongal / Kharif harvest / Normal. Source: calendarific.com API + ICAR crop calendar." ;
+    rdfs:subClassOf <https://w3id.org/IproK/signal#ExternalSignal> .
+
+<https://w3id.org/IproK/signal#MaterialPriceSignal> a owl:Class ;
+    rdfs:label "material price signal" ;
+    dcterms:isPartOf <https://w3id.org/IproK/signal> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/MaterialPriceSignal> ;
+    rdfs:comment "Weekly market price for a material (Steel-TMT, Cement, Bitumen, etc.) with 30-day rolling volatility and percent-deviation vs the BOQ quoted rate. Sources: SAIL website scrape (steel), RBI WPI index (cement)." ;
+    rdfs:subClassOf <https://w3id.org/IproK/signal#ExternalSignal> .
+
+<https://w3id.org/IproK/signal#WeatherSignal> a owl:Class ;
+    rdfs:label "weather signal" ;
+    dcterms:isPartOf <https://w3id.org/IproK/signal> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/WeatherSignal> ;
+    rdfs:comment "Daily weather snapshot at a project's GPS — rainfall, max temp, working-day-loss-risk. Source: IMD via indianapi.in (free tier) with OpenWeatherMap fallback." ;
+    rdfs:subClassOf <https://w3id.org/IproK/signal#ExternalSignal> .
+
+<https://w3id.org/IproK/signal#availabilityScore> a owl:DatatypeProperty ;
+    rdfs:label "labour availability score" ;
+    dcterms:isPartOf <https://w3id.org/IproK/signal> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/availabilityScore> ;
+    rdfs:comment "Score in [0, 1]. 0 = peak festival absence (Diwali week, Pongal week, Kharif harvest); 1 = normal availability. <0.5 triggers the festival_labour_shortage auto-risk." ;
+    rdfs:range xsd:decimal .
+
+<https://w3id.org/IproK/signal#avgRainfallMM> a owl:DatatypeProperty ;
+    rdfs:label "average rainfall (mm)" ;
+    dcterms:isPartOf <https://w3id.org/IproK/signal> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/avgRainfallMM> ;
+    rdfs:comment "10-year mean of weekly rainfall (mm) for this calendar week at this site. Drives the historical_rain_mm_avg_this_week GNN feature." ;
+    rdfs:range xsd:decimal .
+
+<https://w3id.org/IproK/signal#fetchedAt> a owl:DatatypeProperty ;
+    rdfs:label "profile fetched at" ;
+    dcterms:isPartOf <https://w3id.org/IproK/signal> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/fetchedAt> ;
+    rdfs:comment "When the NASA POWER fetch ran. The Celery worker re-fetches only when this is > 1 year old." ;
+    rdfs:range xsd:dateTime .
+
+<https://w3id.org/IproK/signal#heatProbability> a owl:DatatypeProperty ;
+    rdfs:label "extreme heat probability" ;
+    dcterms:isPartOf <https://w3id.org/IproK/signal> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/heatProbability> ;
+    rdfs:comment "Empirical probability [0, 1] that this calendar week sees at least one day with max temp > 40°C, computed across the 10 years of the climatology window. Indian-summer concrete-pour productivity drops sharply above 40°C." ;
+    rdfs:range xsd:decimal .
+
+<https://w3id.org/IproK/signal#isMonsoonPeriod> a owl:DatatypeProperty ;
+    rdfs:label "monsoon period flag" ;
+    dcterms:isPartOf <https://w3id.org/IproK/signal> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/isMonsoonPeriod> ;
+    rdfs:comment "True when the signal date falls inside the regional monsoon window (SW: Jun–Sep all India; NE: Oct–Dec for Tamil Nadu/Andhra)." ;
+    rdfs:range xsd:boolean .
+
+<https://w3id.org/IproK/signal#maxTempC> a owl:DatatypeProperty ;
+    rdfs:label "max temperature (°C)" ;
+    dcterms:isPartOf <https://w3id.org/IproK/signal> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/maxTempC> ;
+    rdfs:comment "Daily maximum temperature in degrees Celsius. >42°C correlates with reduced productivity in north India." ;
+    rdfs:range xsd:decimal .
+
+<https://w3id.org/IproK/signal#priceDate> a owl:DatatypeProperty ;
+    rdfs:label "price observation date" ;
+    dcterms:isPartOf <https://w3id.org/IproK/signal> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/priceDate> ;
+    rdfs:comment "Date of the price snapshot — typically the Saturday of the week the price was sampled." ;
+    rdfs:range xsd:date .
+
+<https://w3id.org/IproK/signal#pricePerUnit> a owl:DatatypeProperty ;
+    rdfs:label "market price per unit (INR)" ;
+    dcterms:isPartOf <https://w3id.org/IproK/signal> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/pricePerUnit> ;
+    rdfs:comment "Current market price in INR per the material's UOM (Steel: per MT; Cement: per bag; Bitumen: per MT)." ;
+    rdfs:range xsd:decimal .
+
+<https://w3id.org/IproK/signal#profileLat> a owl:DatatypeProperty ;
+    rdfs:label "profile latitude" ;
+    dcterms:isPartOf <https://w3id.org/IproK/signal> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/profileLat> ;
+    rdfs:comment "Site latitude (degrees, WGS84) the profile was fetched for. Stored on the profile so a later GPS edit can compare + decide whether to refetch." ;
+    rdfs:range xsd:decimal .
+
+<https://w3id.org/IproK/signal#profileLng> a owl:DatatypeProperty ;
+    rdfs:label "profile longitude" ;
+    dcterms:isPartOf <https://w3id.org/IproK/signal> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/profileLng> ;
+    rdfs:comment "Site longitude (degrees, WGS84) the profile was fetched for." ;
+    rdfs:range xsd:decimal .
+
+<https://w3id.org/IproK/signal#rainProbability> a owl:DatatypeProperty ;
+    rdfs:label "rain probability" ;
+    dcterms:isPartOf <https://w3id.org/IproK/signal> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/rainProbability> ;
+    rdfs:comment "Empirical probability [0, 1] that this calendar week sees > 25mm total rainfall, computed across the 10 years of the climatology window. Activities planned in high-rain-prob weeks should learn a delay bias." ;
+    rdfs:range xsd:decimal .
+
+<https://w3id.org/IproK/signal#rainfallMM> a owl:DatatypeProperty ;
+    rdfs:label "rainfall (mm)" ;
+    dcterms:isPartOf <https://w3id.org/IproK/signal> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/rainfallMM> ;
+    rdfs:comment "Daily rainfall in millimetres at the project's GPS coordinates. Used by the auto-risk engine to gate monsoon triggers." ;
+    rdfs:range xsd:decimal .
+
+<https://w3id.org/IproK/signal#reason> a owl:DatatypeProperty ;
+    rdfs:label "labour availability reason" ;
+    dcterms:isPartOf <https://w3id.org/IproK/signal> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/reason> ;
+    rdfs:comment "Free-text reason: 'Diwali' | 'Pongal' | 'Kharif harvest' | 'Rabi harvest' | 'Holi' | 'Normal'. Surfaced on the UI alongside the score." ;
+    rdfs:range xsd:string .
+
+<https://w3id.org/IproK/signal#signalDate> a owl:DatatypeProperty ;
+    rdfs:label "signal date" ;
+    dcterms:isPartOf <https://w3id.org/IproK/signal> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/signalDate> ;
+    rdfs:comment "Calendar date the signal value pertains to (weather: that day; material price: that week's settlement; labour: week start). Domain-free." ;
+    rdfs:range xsd:date .
+
+<https://w3id.org/IproK/signal#signalWeek> a owl:DatatypeProperty ;
+    rdfs:label "signal week" ;
+    dcterms:isPartOf <https://w3id.org/IproK/signal> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/signalWeek> ;
+    rdfs:comment "ISO week the labour signal pertains to (gYearMonth gives month granularity; combined with a state code identifies the week)." ;
+    rdfs:range xsd:gYearMonth .
+
+<https://w3id.org/IproK/signal#sourceYears> a owl:DatatypeProperty ;
+    rdfs:label "source years" ;
+    dcterms:isPartOf <https://w3id.org/IproK/signal> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/sourceYears> ;
+    rdfs:comment "Length of the climatology window in years (NASA POWER default: 10)." ;
+    rdfs:range xsd:integer .
+
+<https://w3id.org/IproK/signal#stateCode> a owl:DatatypeProperty ;
+    rdfs:label "Indian state ISO code" ;
+    dcterms:isPartOf <https://w3id.org/IproK/signal> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/stateCode> ;
+    rdfs:comment "Two-letter state code (KA / TN / MH / TG / AP / UP). Labour signals are state-specific because the festival calendar differs by region." ;
+    rdfs:range xsd:string .
+
+<https://w3id.org/IproK/signal#volatility30d> a owl:DatatypeProperty ;
+    rdfs:label "30-day rolling volatility" ;
+    dcterms:isPartOf <https://w3id.org/IproK/signal> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/volatility30d> ;
+    rdfs:comment "Coefficient of variation (stddev / mean) of the price over the trailing 30 days. >0.05 flags 'volatile' for the auto-risk engine." ;
+    rdfs:range xsd:decimal .
+
+<https://w3id.org/IproK/signal#vsQuotedRate> a owl:DatatypeProperty ;
+    rdfs:label "deviation vs BOQ quoted rate" ;
+    dcterms:isPartOf <https://w3id.org/IproK/signal> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/vsQuotedRate> ;
+    rdfs:comment "Fractional deviation: (current_price - boq_quoted_rate) / boq_quoted_rate. Positive = market is above quoted; +0.15 (15%) is the steel-escalation trigger." ;
+    rdfs:range xsd:decimal .
+
+<https://w3id.org/IproK/signal#weekOfYear> a owl:DatatypeProperty ;
+    rdfs:label "week of year" ;
+    dcterms:isPartOf <https://w3id.org/IproK/signal> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/weekOfYear> ;
+    rdfs:comment "ISO week number 1..53. Activities query historical features by computing ISO week from their planned_start date." ;
+    rdfs:range xsd:integer .
+
+<https://w3id.org/IproK/signal#workingDayLossRisk> a owl:DatatypeProperty ;
+    rdfs:label "working day loss risk" ;
+    dcterms:isPartOf <https://w3id.org/IproK/signal> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/workingDayLossRisk> ;
+    rdfs:comment "Probability [0, 1] that this calendar day will be lost to weather (rain > 25mm, extreme heat, cyclone). Computed from the underlying numbers — the GNN consumes this scalar directly." ;
+    rdfs:range xsd:decimal .
+
+<https://w3id.org/IproK/signal#ExternalSignal> a owl:Class ;
+    rdfs:label "external signal" ;
+    dcterms:isPartOf <https://w3id.org/IproK/signal> ;
+    dcterms:source <https://bimsaarthi.com/ontology/v0/ExternalSignal> ;
+    rdfs:comment "Abstract parent — concrete subclasses (WeatherSignal, MaterialPriceSignal, LabourSignal) carry the data. Domain-free; signal triples are written to data/external/signals/{type}." .
+

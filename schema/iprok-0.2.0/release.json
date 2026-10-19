@@ -1,0 +1,166 @@
+{
+  "status": "0.2.0-draft; proposed expansion created 19 October 2026",
+  "triples": 6072,
+  "classes": 138,
+  "objectProperties": 127,
+  "dataProperties": 679,
+  "shapeTriples": 4769,
+  "mappedIdentifiers": 1000,
+  "modules": [
+    {
+      "module": "core",
+      "namespace": "https://w3id.org/IproK#",
+      "triples": 441,
+      "classes": 13
+    },
+    {
+      "module": "approval",
+      "namespace": "https://w3id.org/IproK/approval#",
+      "triples": 36,
+      "classes": 1
+    },
+    {
+      "module": "billing",
+      "namespace": "https://w3id.org/IproK/billing#",
+      "triples": 344,
+      "classes": 9
+    },
+    {
+      "module": "building",
+      "namespace": "https://w3id.org/IproK/building#",
+      "triples": 229,
+      "classes": 7
+    },
+    {
+      "module": "coordination",
+      "namespace": "https://w3id.org/IproK/coordination#",
+      "triples": 141,
+      "classes": 4
+    },
+    {
+      "module": "cost",
+      "namespace": "https://w3id.org/IproK/cost#",
+      "triples": 425,
+      "classes": 14
+    },
+    {
+      "module": "document",
+      "namespace": "https://w3id.org/IproK/document#",
+      "triples": 249,
+      "classes": 8
+    },
+    {
+      "module": "finance",
+      "namespace": "https://w3id.org/IproK/finance#",
+      "triples": 212,
+      "classes": 5
+    },
+    {
+      "module": "handover",
+      "namespace": "https://w3id.org/IproK/handover#",
+      "triples": 136,
+      "classes": 4
+    },
+    {
+      "module": "integrated",
+      "namespace": "https://w3id.org/IproK/integrated#",
+      "triples": 1162,
+      "classes": 1
+    },
+    {
+      "module": "prediction",
+      "namespace": "https://w3id.org/IproK/prediction#",
+      "triples": 43,
+      "classes": 1
+    },
+    {
+      "module": "procurement",
+      "namespace": "https://w3id.org/IproK/procurement#",
+      "triples": 167,
+      "classes": 5
+    },
+    {
+      "module": "property",
+      "namespace": "https://w3id.org/IproK/property#",
+      "triples": 80,
+      "classes": 3
+    },
+    {
+      "module": "quality",
+      "namespace": "https://w3id.org/IproK/quality#",
+      "triples": 228,
+      "classes": 6
+    },
+    {
+      "module": "reporting",
+      "namespace": "https://w3id.org/IproK/reporting#",
+      "triples": 107,
+      "classes": 3
+    },
+    {
+      "module": "resource",
+      "namespace": "https://w3id.org/IproK/resource#",
+      "triples": 384,
+      "classes": 17
+    },
+    {
+      "module": "safety",
+      "namespace": "https://w3id.org/IproK/safety#",
+      "triples": 57,
+      "classes": 2
+    },
+    {
+      "module": "schedule",
+      "namespace": "https://w3id.org/IproK/schedule#",
+      "triples": 675,
+      "classes": 15
+    },
+    {
+      "module": "signal",
+      "namespace": "https://w3id.org/IproK/signal#",
+      "triples": 160,
+      "classes": 6
+    },
+    {
+      "module": "site",
+      "namespace": "https://w3id.org/IproK/site#",
+      "triples": 418,
+      "classes": 7
+    },
+    {
+      "module": "tender",
+      "namespace": "https://w3id.org/IproK/tender#",
+      "triples": 332,
+      "classes": 7
+    }
+  ],
+  "preservedPublishedAssertions": 401,
+  "correctedHierarchy": [
+    {
+      "removed": "schedule:Task rdfs:subClassOf schedule:WBS_Element",
+      "added": "schedule:Task rdfs:subClassOf iprok:IproKThing"
+    },
+    {
+      "removed": "schedule:WorkPackage rdfs:subClassOf schedule:WBS_Element",
+      "added": "schedule:WorkPackage rdfs:subClassOf iprok:IproKThing"
+    },
+    {
+      "removed": "schedule:WBS_Element rdfs:subClassOf schedule:Project",
+      "added": "schedule:WBS_Element rdfs:subClassOf iprok:IproKThing"
+    }
+  ],
+  "newCompatibilityAxioms": [
+    "schedule:Activity rdfs:subClassOf schedule:Task",
+    "schedule:WorkConstraint rdfs:subClassOf iprok:Constraint"
+  ],
+  "files": {
+    "ontology.jsonld": "dfbfb5451aceb4f9a787b48824ea2987c368a2b94cd51d9b2ffe4a1907d14efc",
+    "shapes.ttl": "6b2d01cb4139cde36e31cf754eff2f6475ab51b14709949b859eb7c61fab4491",
+    "ontology.nt": "d0ee102f9a690ba104eda3860d46b06cdb1796087f6c09d1b0ba8ef915570c98",
+    "README.md": "13d6dc1b8c3d2d6f1f4861935d8944b50bbbc10cb3dfc14fd56a8e62144cff6c",
+    "mapping.json": "62ce3561930da51755f99db0d9018e905d5cb22c3e2728715b40275edbdfcf28",
+    "ontology.owl": "fe3c9816af031f8d651c7898be4f66588bec320f50133d03d8e004731ff86648",
+    "ontology.ttl": "a06c2f73b84b1f710d066e404c29415746b18cafed00a5af3d1fbd376f042bcc",
+    "validation.json": "4190a14d0ee10d570035bd7a4a849c2f99897cc5ddba3b8ee9f7c94ddd1f98ed"
+  }
+}

@@ -30,7 +30,8 @@
     "Forward and inverse paths and disconnected concepts",
     "Schema cards, table and graph",
     "Desktop and narrow-screen rendering; no whole-page horizontal overflow",
-    "JavaScript console checked without errors during tested interactions"
+    "JavaScript console checked without errors during tested interactions",
+    "Expanded IproK 21-module default view and source comparison selectors"
   ],
   "limitations": [
     "No OWL reasoner consistency check or import closure validation",
@@ -39,5 +40,49 @@
     "No accepted equivalence mapping between historical IproK and Niyoj",
     "Archival documentation and OOPS reports are preserved source material, not current validation"
   ],
-  "publicationScope": "Separate explanatory website; existing IprokDoc and w3id redirects unchanged"
+  "publicationScope": "Separate explanatory website; existing IprokDoc and w3id redirects unchanged",
+  "expandedIprok": {
+    "checkedOn": "2026-10-19",
+    "status": "Engineering regression checks passed; proposed release remains a draft",
+    "niyojSourceCommit": "59bb8c2ae61228cd21778cc6beae523331f4529a",
+    "schema": {
+      "classes": 138,
+      "objectProperties": 127,
+      "dataProperties": 679,
+      "namespaceModules": 21,
+      "mappedIdentifiers": 1000,
+      "originalNonHeaderAssertionsRetained": 401,
+      "originalHierarchyAssertionsCorrected": 3,
+      "fourSerialisationsIsomorphic": true,
+      "originalVersionFilesPreserved": true
+    },
+    "conformance": {
+      "expectedOutcomesMatched": 193,
+      "failures": 0,
+      "fixtureOrigin": "Retained platform valid/invalid corpus at the source commit; all schema identifiers migrated with mapping.json",
+      "runner": "Retained official shacl_conformance.py with RDFS inference and advanced=True",
+      "pyshacl": "0.31.0",
+      "scope": "Migrated core ontology and SHACL regression fixtures; no project dataset or historical research result"
+    },
+    "correctionReview": {
+      "initialMigrationRegressions": 8,
+      "diagnosis": "Published Task \u2192 WBS_Element \u2192 Project inheritance caused activity nodes to receive project-only SHACL constraints",
+      "correction": "Replace Task/WorkPackage/WBS_Element containment-as-subclass axioms with IproKThing parents; retain containment object properties",
+      "retest": "All 193 final fixtures matched expected outcomes"
+    },
+    "limits": [
+      "No complete OWL consistency proof or external import-closure reasoning",
+      "No historical experimental validation or production deployment claim",
+      "Domain-free source predicates remain domain-free; no missing domains manufactured",
+      "New IproK module IRIs have not been registered in the persistent redirect service"
+    ],
+    "filesChecked": {
+      "ontology.ttl": "a06c2f73b84b1f710d066e404c29415746b18cafed00a5af3d1fbd376f042bcc",
+      "ontology.owl": "fe3c9816af031f8d651c7898be4f66588bec320f50133d03d8e004731ff86648",
+      "ontology.nt": "d0ee102f9a690ba104eda3860d46b06cdb1796087f6c09d1b0ba8ef915570c98",
+      "ontology.jsonld": "dfbfb5451aceb4f9a787b48824ea2987c368a2b94cd51d9b2ffe4a1907d14efc",
+      "shapes.ttl": "6b2d01cb4139cde36e31cf754eff2f6475ab51b14709949b859eb7c61fab4491",
+      "mapping.json": "62ce3561930da51755f99db0d9018e905d5cb22c3e2728715b40275edbdfcf28"
+    }
+  }
 }
