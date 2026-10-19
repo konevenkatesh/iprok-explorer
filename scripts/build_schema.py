@@ -31,7 +31,8 @@ def build(key, files, name, note):
    return {'value':str(o),'type':'iri' if isinstance(o,URIRef) else 'literal','language':getattr(o,'language',None),'datatype':str(o.datatype) if isinstance(o,Literal) and o.datatype else None}
   for p,o in sorted(g.predicate_objects(s),key=lambda t:(str(t[0]),str(t[1]))): statements.append({'predicate':str(p),**value(o)})
   module=uri.split('#')[0].rstrip('/').rsplit('/',1)[-1]
-  if not uri.startswith(('https://w3id.org/IproK','https://bimsaarthi.com/ontology/v0/')): module='External metadata'
+  if uri.startswith('https://bimsaarthi.com/ontology/v0/'): module='BIMSaarthi v0'
+  elif not uri.startswith('https://w3id.org/IproK'): module='External metadata'
   terms.append({'id':uri,'local':short(uri),'label':labels[0] if labels else re.sub(r'(?<=[a-z])(?=[A-Z])',' ',short(uri)).replace('_',' '),'declaredLabel':bool(labels),'kind':kind,'module':module,'description':' '.join(str(x) for x in g.objects(s,RDFS.comment)), 'domain':[str(x) for x in g.objects(s,RDFS.domain)],'range':[str(x) for x in g.objects(s,RDFS.range)],'parents':[str(x) for x in g.objects(s,RDFS.subClassOf) if isinstance(x,URIRef)],'statements':statements,'sourceFiles':[f for f in files if s in file_subjects[f]]})
  priority={'Class':0,'Object property':1,'Data property':2,'Property':3,'Annotation property':4}
  terms.sort(key=lambda t:(priority[t['kind']],t['module'],t['label'].lower()))
