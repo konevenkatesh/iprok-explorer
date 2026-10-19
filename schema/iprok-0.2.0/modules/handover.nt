@@ -1,0 +1,136 @@
+<https://w3id.org/iprok/handover#SnagItem> <http://www.w3.org/2000/01/rdf-schema#comment> "One punch-list item found during handover inspection. Open Critical snags block transfer." .
+<https://w3id.org/iprok/handover#warrantyMonths> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/handover#snagDescription> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/snagDescription> .
+<https://w3id.org/iprok/handover#snagSeverity> <http://www.w3.org/2000/01/rdf-schema#comment> "Minor | Major | Critical." .
+<https://w3id.org/iprok/handover#DLPDefect> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iprok/handover#transferredAt> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/handover#warrantyVendor> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/handover#warrantyAsset> <http://www.w3.org/2000/01/rdf-schema#comment> "Asset/system covered — lifts, DG set, waterproofing, STP…" .
+<https://w3id.org/iprok/handover#committedHandoverDate> <http://www.w3.org/2000/01/rdf-schema#comment> "The committed handover date property in the integrated project information model."@en .
+<https://w3id.org/iprok/handover#snagStatus> <http://www.w3.org/2000/01/rdf-schema#label> "snag Status"@en .
+<https://w3id.org/iprok/handover#snagDescription> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/handover> .
+<https://w3id.org/iprok/handover#warrantyStartDate> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/warrantyStartDate> .
+<https://w3id.org/iprok/handover#warrantyVendor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/handover#transferredTo> <http://www.w3.org/2000/01/rdf-schema#label> "transferred To"@en .
+<https://w3id.org/iprok/handover#defectStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/handover#transferredAt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/handover#transferredTo> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/handover#rectifiedAt> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/handover#dlpMonths> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<https://w3id.org/iprok/handover#WarrantyRecord> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Entity> .
+<https://w3id.org/iprok/handover#snagId> <http://www.w3.org/2000/01/rdf-schema#label> "snag Id"@en .
+<https://w3id.org/iprok/handover#warrantyMonths> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/handover> .
+<https://w3id.org/iprok/handover#HandoverPackage> <http://www.w3.org/2000/01/rdf-schema#label> "Handover Package"@en .
+<https://w3id.org/iprok/handover#rectifiedAt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/handover#warrantyId> <http://www.w3.org/2000/01/rdf-schema#label> "warranty Id"@en .
+<https://w3id.org/iprok/handover#snagId> <http://www.w3.org/2000/01/rdf-schema#comment> "The snag id property in the integrated project information model."@en .
+<https://w3id.org/iprok/handover#HandoverPackage> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/handover> .
+<https://w3id.org/iprok/handover#snagDescription> <http://www.w3.org/2000/01/rdf-schema#label> "snag Description"@en .
+<https://w3id.org/iprok/handover#warrantyVendor> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/warrantyVendor> .
+<https://w3id.org/iprok/handover#warrantyVendor> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/handover> .
+<https://w3id.org/iprok/handover#WarrantyRecord> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iprok/handover#committedHandoverDate> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/handover#SnagItem> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/handover> .
+<https://w3id.org/iprok/handover#committedHandoverDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/iprok/handover#defectStatus> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/handover> .
+<https://w3id.org/iprok/handover#snagId> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/handover#transferredAt> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/handover> .
+<https://w3id.org/iprok/handover#warrantyId> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/warrantyId> .
+<https://w3id.org/iprok/handover#warrantyId> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/handover#rectifiedAt> <http://www.w3.org/2000/01/rdf-schema#comment> "The rectified at property in the integrated project information model."@en .
+<https://w3id.org/iprok/handover#snagSeverity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/handover#defectId> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/handover#snagId> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/snagId> .
+<https://w3id.org/iprok/handover#defectId> <http://www.w3.org/2000/01/rdf-schema#label> "defect Id"@en .
+<https://w3id.org/iprok/handover#transferredTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/handover#SnagItem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iprok/handover#defectStatus> <http://www.w3.org/2000/01/rdf-schema#comment> "Reported | InRepair | Rectified | Disputed." .
+<https://w3id.org/iprok/handover#defectId> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/defectId> .
+<https://w3id.org/iprok/handover#transferredAt> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/transferredAt> .
+<https://w3id.org/iprok/handover#snagStatus> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/handover#defectStatus> <http://www.w3.org/2000/01/rdf-schema#label> "defect Status"@en .
+<https://w3id.org/iprok/handover#warrantyVendor> <http://www.w3.org/2000/01/rdf-schema#comment> "The warranty vendor property in the integrated project information model."@en .
+<https://w3id.org/iprok/handover#SnagItem> <http://www.w3.org/2000/01/rdf-schema#label> "Snag Item"@en .
+<https://w3id.org/iprok/handover#snagDescription> <http://www.w3.org/2000/01/rdf-schema#comment> "The snag description property in the integrated project information model."@en .
+<https://w3id.org/iprok/handover#committedHandoverDate> <http://www.w3.org/2000/01/rdf-schema#label> "committed Handover Date"@en .
+<https://w3id.org/iprok/handover#snagStatus> <http://www.w3.org/2000/01/rdf-schema#comment> "Open | Fixed | Verified | Deferred." .
+<https://w3id.org/iprok/handover#warrantyStartDate> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/handover#snagStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/handover#warrantyAsset> <http://www.w3.org/2000/01/rdf-schema#label> "warranty Asset"@en .
+<https://w3id.org/iprok/handover#snagId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/handover#handoverStatus> <http://www.w3.org/2000/01/rdf-schema#comment> "Preparing | Transferred." .
+<https://w3id.org/iprok/handover#handoverStatus> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/handoverStatus> .
+<https://w3id.org/iprok/handover#warrantyStartDate> <http://www.w3.org/2000/01/rdf-schema#comment> "The warranty start date property in the integrated project information model."@en .
+<https://w3id.org/iprok/handover#defectId> <http://www.w3.org/2000/01/rdf-schema#comment> "The defect id property in the integrated project information model."@en .
+<https://w3id.org/iprok/handover#HandoverPackage> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Entity> .
+<https://w3id.org/iprok/handover#dlpMonths> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/dlpMonths> .
+<https://w3id.org/iprok/handover#dlpMonths> <http://www.w3.org/2000/01/rdf-schema#label> "DLP (months)" .
+<https://w3id.org/iprok/handover#SnagItem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Entity> .
+<https://w3id.org/iprok/handover#snagSeverity> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/handover#warrantyId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/handover#warrantyId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/handover#transferredTo> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/handover> .
+<https://w3id.org/iprok/handover#WarrantyRecord> <http://www.w3.org/2000/01/rdf-schema#label> "Warranty Record"@en .
+<https://w3id.org/iprok/handover#defectId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/handover#defectId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/handover#transferredAt> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://w3id.org/iprok/handover#dlpMonths> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/handover#rectifiedAt> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/rectifiedAt> .
+<https://w3id.org/iprok/handover#warrantyMonths> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<https://w3id.org/iprok/handover#HandoverPackage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iprok/handover#rectifiedAt> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/handover> .
+<https://w3id.org/iprok/handover#snagDescription> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/handover#DLPDefect> <http://www.w3.org/2000/01/rdf-schema#label> "DLPDefect"@en .
+<https://w3id.org/iprok/handover#DLPDefect> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/handover> .
+<https://w3id.org/iprok/handover#warrantyAsset> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/handover#rectifiedAt> <http://www.w3.org/2000/01/rdf-schema#label> "rectified At"@en .
+<https://w3id.org/iprok/handover#snagDescription> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/handover#snagStatus> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/handover> .
+<https://w3id.org/iprok/handover#transferredAt> <http://www.w3.org/2000/01/rdf-schema#comment> "The transferred at property in the integrated project information model."@en .
+<https://w3id.org/iprok/handover#committedHandoverDate> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/handover> .
+<https://w3id.org/iprok/handover#snagId> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/handover> .
+<https://w3id.org/iprok/handover#handoverStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/handover#defectStatus> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/defectStatus> .
+<https://w3id.org/iprok/handover#warrantyAsset> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/warrantyAsset> .
+<https://w3id.org/iprok/handover#transferredTo> <http://www.w3.org/2000/01/rdf-schema#comment> "Receiving party — owner, RWA, or facility team." .
+<https://w3id.org/iprok/handover#WarrantyRecord> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/WarrantyRecord> .
+<https://w3id.org/iprok/handover#warrantyId> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/handover> .
+<https://w3id.org/iprok/handover#warrantyAsset> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/handover#warrantyStartDate> <http://www.w3.org/2000/01/rdf-schema#label> "warranty Start Date"@en .
+<https://w3id.org/iprok/handover#transferredAt> <http://www.w3.org/2000/01/rdf-schema#label> "transferred At"@en .
+<https://w3id.org/iprok/handover#rectifiedAt> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://w3id.org/iprok/handover#HandoverPackage> <http://www.w3.org/2000/01/rdf-schema#comment> "The project's digital handover record: readiness, transfer, and the defect-liability window." .
+<https://w3id.org/iprok/handover#warrantyStartDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/handover#defectId> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/handover> .
+<https://w3id.org/iprok/handover#warrantyMonths> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/handover#dlpMonths> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/handover> .
+<https://w3id.org/iprok/handover#dlpMonths> <http://www.w3.org/2000/01/rdf-schema#comment> "Defect-liability window in months. RERA default 60 (5 years from possession)." .
+<https://w3id.org/iprok/handover#snagSeverity> <http://www.w3.org/2000/01/rdf-schema#label> "snag Severity"@en .
+<https://w3id.org/iprok/handover#committedHandoverDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/handover#snagSeverity> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/handover> .
+<https://w3id.org/iprok/handover#snagId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/handover#warrantyMonths> <http://www.w3.org/2000/01/rdf-schema#comment> "The warranty months property in the integrated project information model."@en .
+<https://w3id.org/iprok/handover#defectStatus> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/handover#DLPDefect> <http://www.w3.org/2000/01/rdf-schema#comment> "A post-handover defect inside the liability period; RERA S.14(3): rectify within 30 days." .
+<https://w3id.org/iprok/handover#warrantyMonths> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/warrantyMonths> .
+<https://w3id.org/iprok/handover#WarrantyRecord> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/handover> .
+<https://w3id.org/iprok/handover#warrantyVendor> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/handover#DLPDefect> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/DLPDefect> .
+<https://w3id.org/iprok/handover#handoverStatus> <http://www.w3.org/2000/01/rdf-schema#label> "handover Status"@en .
+<https://w3id.org/iprok/handover#transferredTo> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/transferredTo> .
+<https://w3id.org/iprok/handover#handoverStatus> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/handover> .
+<https://w3id.org/iprok/handover#SnagItem> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/SnagItem> .
+<https://w3id.org/iprok/handover#warrantyAsset> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/handover> .
+<https://w3id.org/iprok/handover#warrantyVendor> <http://www.w3.org/2000/01/rdf-schema#label> "warranty Vendor"@en .
+<https://w3id.org/iprok/handover#handoverStatus> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/handover#warrantyStartDate> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/handover> .
+<https://w3id.org/iprok/handover#snagDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/handover#WarrantyRecord> <http://www.w3.org/2000/01/rdf-schema#comment> "One asset/system warranty (vendor, start, duration) handed to operations." .
+<https://w3id.org/iprok/handover#warrantyMonths> <http://www.w3.org/2000/01/rdf-schema#label> "warranty Months"@en .
+<https://w3id.org/iprok/handover#snagStatus> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/snagStatus> .
+<https://w3id.org/iprok/handover#warrantyId> <http://www.w3.org/2000/01/rdf-schema#comment> "The warranty id property in the integrated project information model."@en .
+<https://w3id.org/iprok/handover#HandoverPackage> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/HandoverPackage> .
+<https://w3id.org/iprok/handover#warrantyStartDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/iprok/handover#DLPDefect> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Entity> .
+<https://w3id.org/iprok/handover#snagSeverity> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/snagSeverity> .
+<https://w3id.org/iprok/handover#committedHandoverDate> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/committedHandoverDate> .

@@ -4,788 +4,788 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://w3id.org/IproK/schedule#ActivityDurationEstimate> a owl:Class ;
+<https://w3id.org/iprok/schedule#ActivityDurationEstimate> a owl:Class ;
     rdfs:label "Activity Duration Estimate"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/schedule> ;
+    dcterms:isPartOf <https://w3id.org/iprok/schedule> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/ActivityDurationEstimate> ;
     rdfs:comment "How a planned activity's duration was reached: quantity, crew, rate and its source, allowances. Superseded, never overwritten." ;
     rdfs:subClassOf prov:Entity .
 
-<https://w3id.org/IproK/schedule#BaselineEntry> a owl:Class ;
+<https://w3id.org/iprok/schedule#BaselineEntry> a owl:Class ;
     rdfs:label "Baseline Entry"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/schedule> ;
+    dcterms:isPartOf <https://w3id.org/iprok/schedule> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/BaselineEntry> ;
     rdfs:comment "One activity as a baseline froze it: its start, last day and budget then." ;
     rdfs:subClassOf prov:Entity .
 
-<https://w3id.org/IproK/schedule#EVMSnapshot> a owl:Class ;
+<https://w3id.org/iprok/schedule#EVMSnapshot> a owl:Class ;
     rdfs:label "EVM snapshot" ;
-    dcterms:isPartOf <https://w3id.org/IproK/schedule> ;
+    dcterms:isPartOf <https://w3id.org/iprok/schedule> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/EVMSnapshot> ;
     rdfs:comment "One computation of PV/EV/AC and derived metrics for a project at a status date." ;
     rdfs:subClassOf prov:Entity .
 
-<https://w3id.org/IproK/schedule#Milestone> a owl:Class ;
+<https://w3id.org/iprok/schedule#Milestone> a owl:Class ;
     rdfs:label "Milestone" ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
     rdfs:comment "A task representing a significant scheduled event or control point."@en ;
-    rdfs:subClassOf <https://w3id.org/IproK/schedule#Task> .
+    rdfs:subClassOf <https://w3id.org/iprok/schedule#Task> .
 
-<https://w3id.org/IproK/schedule#ScheduleBaseline> a owl:Class ;
+<https://w3id.org/iprok/schedule#ScheduleBaseline> a owl:Class ;
     rdfs:label "Schedule Baseline"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/schedule> ;
+    dcterms:isPartOf <https://w3id.org/iprok/schedule> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/ScheduleBaseline> ;
     rdfs:comment "A frozen copy of the programme. Baseline 0 is the approved programme (Clause 5.1); later ones are revised programmes (Clause 5.4), each with its basis, reason and approver. Never changed or removed; the newest is the active baseline that variance and planned value are measured against." ;
     rdfs:subClassOf prov:Entity .
 
-<https://w3id.org/IproK/schedule#ScheduleLink> a owl:Class ;
+<https://w3id.org/iprok/schedule#ScheduleLink> a owl:Class ;
     rdfs:label "Schedule link" ;
-    dcterms:isPartOf <https://w3id.org/IproK/schedule> ;
+    dcterms:isPartOf <https://w3id.org/iprok/schedule> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/ScheduleLink> ;
     rdfs:comment "A reified predecessor edge: which activity precedes which, the P6 relationship type (FS/SS/FF/SF) and the lag in days." .
 
-<https://w3id.org/IproK/schedule#WorkConstraint> a owl:Class ;
+<https://w3id.org/iprok/schedule#WorkConstraint> a owl:Class ;
     rdfs:label "Work Constraint"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK> ;
+    dcterms:isPartOf <https://w3id.org/iprok> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/Constraint> ;
     rdfs:comment "Something that must be cleared, by a named person and date, before planned work can proceed." ;
     rdfs:subClassOf prov:Entity,
-        <https://w3id.org/IproK#Constraint> .
+        <https://w3id.org/iprok#Constraint> .
 
-<https://w3id.org/IproK/schedule#ac> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/schedule#ac> a owl:DatatypeProperty ;
     rdfs:label "Actual Cost (ACWP)" ;
-    dcterms:isPartOf <https://w3id.org/IproK/schedule> ;
+    dcterms:isPartOf <https://w3id.org/iprok/schedule> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/ac> ;
-    rdfs:comment "Sum of approved/finalised RA Bill netPayable by statusDate. INR. Mandatory on <https://w3id.org/IproK/schedule#EVMSnapshot>. Domain unspecified." ;
+    rdfs:comment "Sum of approved/finalised RA Bill netPayable by statusDate. INR. Mandatory on <https://w3id.org/iprok/schedule#EVMSnapshot>. Domain unspecified." ;
     rdfs:range xsd:decimal .
 
-<https://w3id.org/IproK/schedule#activityId> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/schedule#activityId> a owl:DatatypeProperty ;
     rdfs:label "activity id" ;
-    dcterms:isPartOf <https://w3id.org/IproK/schedule> ;
+    dcterms:isPartOf <https://w3id.org/iprok/schedule> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/activityId> ;
     rdfs:comment "Source-schedule unique id (P6 task_code / MSP UID / sheet key). Stable across re-imports so revisions supersede rather than duplicate." ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK/schedule#activityName> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/schedule#activityName> a owl:DatatypeProperty ;
     rdfs:label "activity name" ;
-    dcterms:isPartOf <https://w3id.org/IproK/schedule> ;
+    dcterms:isPartOf <https://w3id.org/iprok/schedule> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/activityName> ;
     rdfs:comment "Domain intentionally unspecified — antipattern #8. ActivityShape constrains format." ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK/schedule#activityPlannedFinishDate> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/schedule#activityPlannedFinishDate> a owl:DatatypeProperty ;
     rdfs:label "planned finish (datetime)" ;
-    dcterms:isPartOf <https://w3id.org/IproK/schedule> ;
+    dcterms:isPartOf <https://w3id.org/iprok/schedule> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/plannedFinishDate> ;
     rdfs:comment "Mirrors iprok:plannedFinishDate. Domain unspecified (antipattern #8)." ;
     rdfs:range xsd:dateTime .
 
-<https://w3id.org/IproK/schedule#activityPlannedStartDate> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/schedule#activityPlannedStartDate> a owl:DatatypeProperty ;
     rdfs:label "planned start (datetime)" ;
-    dcterms:isPartOf <https://w3id.org/IproK/schedule> ;
+    dcterms:isPartOf <https://w3id.org/iprok/schedule> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/plannedStartDate> ;
-    rdfs:comment "Mirrors iprok:plannedStartDate. Domain unspecified (antipattern #8). Distinct from the V0.22 Project <https://w3id.org/IproK#plannedStart>." ;
+    rdfs:comment "Mirrors iprok:plannedStartDate. Domain unspecified (antipattern #8). Distinct from the V0.22 Project <https://w3id.org/iprok#plannedStart>." ;
     rdfs:range xsd:dateTime .
 
-<https://w3id.org/IproK/schedule#actualDuration> a owl:DatatypeProperty,
+<https://w3id.org/iprok/schedule#actualDuration> a owl:DatatypeProperty,
         owl:FunctionalProperty ;
     rdfs:label "actualDuration"@en ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
     rdfs:comment "The actual duration property in the integrated project information model. Its declared domain is TaskTime and its declared range is decimal."@en ;
-    rdfs:domain <https://w3id.org/IproK/schedule#TaskTime> ;
+    rdfs:domain <https://w3id.org/iprok/schedule#TaskTime> ;
     rdfs:range xsd:decimal .
 
-<https://w3id.org/IproK/schedule#actualFinishDate> a owl:DatatypeProperty,
+<https://w3id.org/iprok/schedule#actualFinishDate> a owl:DatatypeProperty,
         owl:FunctionalProperty ;
     rdfs:label "actualFinishDate"@en ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
     rdfs:comment "The actual finish date property in the integrated project information model. Its declared domain is TaskTime and its declared range is dateTime."@en ;
-    rdfs:domain <https://w3id.org/IproK/schedule#TaskTime> ;
+    rdfs:domain <https://w3id.org/iprok/schedule#TaskTime> ;
     rdfs:range xsd:dateTime .
 
-<https://w3id.org/IproK/schedule#actualStartDate> a owl:DatatypeProperty,
+<https://w3id.org/iprok/schedule#actualStartDate> a owl:DatatypeProperty,
         owl:FunctionalProperty ;
     rdfs:label "actualStartDate"@en ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
     rdfs:comment "The actual start date property in the integrated project information model. Its declared domain is TaskTime and its declared range is dateTime."@en ;
-    rdfs:domain <https://w3id.org/IproK/schedule#TaskTime> ;
+    rdfs:domain <https://w3id.org/iprok/schedule#TaskTime> ;
     rdfs:range xsd:dateTime .
 
-<https://w3id.org/IproK/schedule#approvedAt> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/schedule#approvedAt> a owl:DatatypeProperty ;
     rdfs:label "approved at" ;
-    dcterms:isPartOf <https://w3id.org/IproK/schedule> ;
+    dcterms:isPartOf <https://w3id.org/iprok/schedule> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/approvedAt> ;
     rdfs:comment "Timestamp when the deviation was approved or rejected. Domain unspecified." ;
     rdfs:range xsd:dateTime .
 
-<https://w3id.org/IproK/schedule#approvedBy> a owl:ObjectProperty ;
+<https://w3id.org/iprok/schedule#approvedBy> a owl:ObjectProperty ;
     rdfs:label "approved by" ;
-    dcterms:isPartOf <https://w3id.org/IproK/schedule> ;
+    dcterms:isPartOf <https://w3id.org/iprok/schedule> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/approvedBy> ;
     rdfs:comment "IRI of the user who approved or rejected the deviation. Domain unspecified." .
 
-<https://w3id.org/IproK/schedule#assignedTo> a owl:ObjectProperty ;
+<https://w3id.org/iprok/schedule#assignedTo> a owl:ObjectProperty ;
     rdfs:label "assignedTo" ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
     rdfs:comment "The assigned to property in the integrated project information model. Its declared domain is Task and its declared range is Actor."@en ;
-    rdfs:domain <https://w3id.org/IproK/schedule#Task> ;
-    rdfs:range <https://w3id.org/IproK#Actor> .
+    rdfs:domain <https://w3id.org/iprok/schedule#Task> ;
+    rdfs:range <https://w3id.org/iprok#Actor> .
 
-<https://w3id.org/IproK/schedule#atCompleteDuration> a owl:DatatypeProperty,
+<https://w3id.org/iprok/schedule#atCompleteDuration> a owl:DatatypeProperty,
         owl:FunctionalProperty ;
     rdfs:label "atCompleteDuration"@en ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
     rdfs:comment "The at complete duration property in the integrated project information model. Its declared domain is TaskTime and its declared range is decimal."@en ;
-    rdfs:domain <https://w3id.org/IproK/schedule#TaskTime> ;
+    rdfs:domain <https://w3id.org/iprok/schedule#TaskTime> ;
     rdfs:range xsd:decimal .
 
-<https://w3id.org/IproK/schedule#bac> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/schedule#bac> a owl:DatatypeProperty ;
     rdfs:label "Budget at Completion (BAC)" ;
-    dcterms:isPartOf <https://w3id.org/IproK/schedule> ;
+    dcterms:isPartOf <https://w3id.org/iprok/schedule> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/bac> ;
-    rdfs:comment "Total contract budget = sum of every BOQItem (tenderedQty × quotedRate). INR. Mandatory on <https://w3id.org/IproK/schedule#EVMSnapshot>." ;
+    rdfs:comment "Total contract budget = sum of every BOQItem (tenderedQty × quotedRate). INR. Mandatory on <https://w3id.org/iprok/schedule#EVMSnapshot>." ;
     rdfs:range xsd:decimal .
 
-<https://w3id.org/IproK/schedule#baseDays> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/schedule#baseDays> a owl:DatatypeProperty ;
     rdfs:label "base Days"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/schedule> ;
+    dcterms:isPartOf <https://w3id.org/iprok/schedule> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/baseDays> ;
     rdfs:comment "Working days before allowances: quantity ÷ (daily output × crews). No rdfs:domain." ;
     rdfs:range xsd:integer .
 
-<https://w3id.org/IproK/schedule#baselineActivityId> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/schedule#baselineActivityId> a owl:DatatypeProperty ;
     rdfs:label "baseline Activity Id"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/schedule> ;
+    dcterms:isPartOf <https://w3id.org/iprok/schedule> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/baselineActivityId> ;
     rdfs:comment "The activity's id when frozen. No rdfs:domain." ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK/schedule#baselineActivityName> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/schedule#baselineActivityName> a owl:DatatypeProperty ;
     rdfs:label "baseline Activity Name"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/schedule> ;
+    dcterms:isPartOf <https://w3id.org/iprok/schedule> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/baselineActivityName> ;
     rdfs:comment "The activity's name when frozen. No rdfs:domain." ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK/schedule#baselineBasis> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/schedule#baselineBasis> a owl:DatatypeProperty ;
     rdfs:label "baseline Basis"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/schedule> ;
+    dcterms:isPartOf <https://w3id.org/iprok/schedule> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/baselineBasis> ;
     rdfs:comment "ApprovedProgramme (Clause 5.1) | AgreedAmendment (the programme amended by agreement, 5.1) | ExtensionOfTime (5.2 / 5.3: extension granted, milestones rescheduled). No rdfs:domain." ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK/schedule#baselineCost> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/schedule#baselineCost> a owl:DatatypeProperty ;
     rdfs:label "baseline Cost"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/schedule> ;
+    dcterms:isPartOf <https://w3id.org/iprok/schedule> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/baselineCost> ;
     rdfs:comment "The activity's budget when frozen, in rupees. No rdfs:domain." ;
     rdfs:range xsd:decimal .
 
-<https://w3id.org/IproK/schedule#baselineDurationDays> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/schedule#baselineDurationDays> a owl:DatatypeProperty ;
     rdfs:label "baseline Duration Days"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/schedule> ;
+    dcterms:isPartOf <https://w3id.org/iprok/schedule> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/baselineDurationDays> ;
     rdfs:comment "Calendar days, first to last inclusive. No rdfs:domain." ;
     rdfs:range xsd:integer .
 
-<https://w3id.org/IproK/schedule#baselineFinishDate> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/schedule#baselineFinishDate> a owl:DatatypeProperty ;
     rdfs:label "baseline Finish Date"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/schedule> ;
+    dcterms:isPartOf <https://w3id.org/iprok/schedule> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/baselineFinishDate> ;
     rdfs:comment "The baseline's last planned day — its completion date. No rdfs:domain." ;
     rdfs:range xsd:date .
 
-<https://w3id.org/IproK/schedule#baselineLabel> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/schedule#baselineLabel> a owl:DatatypeProperty ;
     rdfs:label "baseline Label"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/schedule> ;
+    dcterms:isPartOf <https://w3id.org/iprok/schedule> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/baselineLabel> ;
     rdfs:comment "A human name, e.g. \"Approved programme\", \"Revised programme 1\". No rdfs:domain." ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK/schedule#baselineLastDay> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/schedule#baselineLastDay> a owl:DatatypeProperty ;
     rdfs:label "baseline Last Day"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/schedule> ;
+    dcterms:isPartOf <https://w3id.org/iprok/schedule> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/baselineLastDay> ;
     rdfs:comment "The activity's last day in the baseline (inclusive). No rdfs:domain." ;
     rdfs:range xsd:date .
 
-<https://w3id.org/IproK/schedule#baselineNo> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/schedule#baselineNo> a owl:DatatypeProperty ;
     rdfs:label "baseline No"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/schedule> ;
+    dcterms:isPartOf <https://w3id.org/iprok/schedule> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/baselineNo> ;
     rdfs:comment "0 for the approved programme; 1, 2 … for revisions. No rdfs:domain." ;
     rdfs:range xsd:integer .
 
-<https://w3id.org/IproK/schedule#baselineOf> a owl:ObjectProperty ;
+<https://w3id.org/iprok/schedule#baselineOf> a owl:ObjectProperty ;
     rdfs:label "baseline Of"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/schedule> ;
+    dcterms:isPartOf <https://w3id.org/iprok/schedule> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/baselineOf> ;
     rdfs:comment "The live activity an entry froze. No rdfs:domain." .
 
-<https://w3id.org/IproK/schedule#baselineReason> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/schedule#baselineReason> a owl:DatatypeProperty ;
     rdfs:label "baseline Reason"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/schedule> ;
+    dcterms:isPartOf <https://w3id.org/iprok/schedule> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/baselineReason> ;
     rdfs:comment "Why the programme was revised. No rdfs:domain." ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK/schedule#baselineStart> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/schedule#baselineStart> a owl:DatatypeProperty ;
     rdfs:label "baseline Start"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/schedule> ;
+    dcterms:isPartOf <https://w3id.org/iprok/schedule> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/baselineStart> ;
     rdfs:comment "The activity's first day in the baseline. No rdfs:domain." ;
     rdfs:range xsd:date .
 
-<https://w3id.org/IproK/schedule#baselineStartDate> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/schedule#baselineStartDate> a owl:DatatypeProperty ;
     rdfs:label "baseline Start Date"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/schedule> ;
+    dcterms:isPartOf <https://w3id.org/iprok/schedule> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/baselineStartDate> ;
     rdfs:comment "The baseline's first planned day. No rdfs:domain." ;
     rdfs:range xsd:date .
 
-<https://w3id.org/IproK/schedule#boqShareOf> a owl:ObjectProperty ;
+<https://w3id.org/iprok/schedule#boqShareOf> a owl:ObjectProperty ;
     rdfs:label "boq Share Of"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/schedule> ;
+    dcterms:isPartOf <https://w3id.org/iprok/schedule> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/boqShareOf> ;
-    rdfs:comment "The BOQ line this activity delivers a share of. EVM does NOT sum the line's amount through this link — the activity's own <https://w3id.org/IproK/schedule#budgetedCost> is its budget. No rdfs:domain / rdfs:range (antipattern #8)." .
+    rdfs:comment "The BOQ line this activity delivers a share of. EVM does NOT sum the line's amount through this link — the activity's own <https://w3id.org/iprok/schedule#budgetedCost> is its budget. No rdfs:domain / rdfs:range (antipattern #8)." .
 
-<https://w3id.org/IproK/schedule#budgetedCost> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/schedule#budgetedCost> a owl:DatatypeProperty ;
     rdfs:label "budgeted Cost"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/schedule> ;
+    dcterms:isPartOf <https://w3id.org/iprok/schedule> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/budgetedCost> ;
     rdfs:comment "The activity's share of its BOQ line's amount (₹), by quantity. The shares of one line sum to the line's amount exactly. No rdfs:domain." ;
     rdfs:range xsd:decimal .
 
-<https://w3id.org/IproK/schedule#budgetedQuantity> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/schedule#budgetedQuantity> a owl:DatatypeProperty ;
     rdfs:label "budgeted Quantity"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/schedule> ;
+    dcterms:isPartOf <https://w3id.org/iprok/schedule> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/budgetedQuantity> ;
     rdfs:comment "The quantity the activity delivers, in its BOQ line's unit — the denominator of its percent complete in EVM. No rdfs:domain." ;
     rdfs:range xsd:decimal .
 
-<https://w3id.org/IproK/schedule#constraintDate> a owl:DatatypeProperty,
+<https://w3id.org/iprok/schedule#constraintDate> a owl:DatatypeProperty,
         owl:FunctionalProperty ;
     rdfs:label "constraintDate"@en ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
     rdfs:comment "The constraint date property in the integrated project information model. Its declared domain is Constraint and its declared range is dateTime."@en ;
-    rdfs:domain <https://w3id.org/IproK#Constraint> ;
+    rdfs:domain <https://w3id.org/iprok#Constraint> ;
     rdfs:range xsd:dateTime .
 
-<https://w3id.org/IproK/schedule#constraintType> a owl:DatatypeProperty,
+<https://w3id.org/iprok/schedule#constraintType> a owl:DatatypeProperty,
         owl:FunctionalProperty ;
     rdfs:label "constraintType"@en ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
     rdfs:comment "The constraint type property in the integrated project information model. Its declared domain is Constraint and its declared range is string."@en ;
-    rdfs:domain <https://w3id.org/IproK#Constraint> ;
+    rdfs:domain <https://w3id.org/iprok#Constraint> ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK/schedule#cpi> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/schedule#cpi> a owl:DatatypeProperty ;
     rdfs:label "Cost Performance Index" ;
-    dcterms:isPartOf <https://w3id.org/IproK/schedule> ;
+    dcterms:isPartOf <https://w3id.org/iprok/schedule> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/cpi> ;
     rdfs:comment "EV / AC. >1.0 under budget, <1.0 over budget. Optional — undefined (omitted) when AC=0." ;
     rdfs:range xsd:decimal .
 
-<https://w3id.org/IproK/schedule#crewCount> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/schedule#crewCount> a owl:DatatypeProperty ;
     rdfs:label "crew Count"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/schedule> ;
+    dcterms:isPartOf <https://w3id.org/iprok/schedule> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/crewCount> ;
     rdfs:comment "Parallel crews assumed. No rdfs:domain." ;
     rdfs:range xsd:integer .
 
-<https://w3id.org/IproK/schedule#crewDescription> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/schedule#crewDescription> a owl:DatatypeProperty ;
     rdfs:label "crew Description"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/schedule> ;
+    dcterms:isPartOf <https://w3id.org/iprok/schedule> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/crewDescription> ;
     rdfs:comment "The standard crew the rate refers to, e.g. '1 mason gang (12)'. No rdfs:domain." ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK/schedule#cv> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/schedule#cv> a owl:DatatypeProperty ;
     rdfs:label "Cost Variance" ;
-    dcterms:isPartOf <https://w3id.org/IproK/schedule> ;
+    dcterms:isPartOf <https://w3id.org/iprok/schedule> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/cv> ;
-    rdfs:comment "EV − AC. Positive = under budget. INR. Mandatory on <https://w3id.org/IproK/schedule#EVMSnapshot>." ;
+    rdfs:comment "EV − AC. Positive = under budget. INR. Mandatory on <https://w3id.org/iprok/schedule#EVMSnapshot>." ;
     rdfs:range xsd:decimal .
 
-<https://w3id.org/IproK/schedule#dailyOutput> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/schedule#dailyOutput> a owl:DatatypeProperty ;
     rdfs:label "daily Output"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/schedule> ;
+    dcterms:isPartOf <https://w3id.org/iprok/schedule> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/dailyOutput> ;
-    rdfs:comment "Output of ONE standard crew per working day, in <https://w3id.org/IproK/integrated#unit> — the rate the duration used. No rdfs:domain." ;
+    rdfs:comment "Output of ONE standard crew per working day, in <https://w3id.org/iprok/integrated#unit> — the rate the duration used. No rdfs:domain." ;
     rdfs:range xsd:decimal .
 
-<https://w3id.org/IproK/schedule#dataDate> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/schedule#dataDate> a owl:DatatypeProperty ;
     rdfs:label "data Date"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/schedule> ;
+    dcterms:isPartOf <https://w3id.org/iprok/schedule> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/dataDate> ;
     rdfs:comment "The day a programme was taken as of: the progress it reflects. No rdfs:domain." ;
     rdfs:range xsd:date .
 
-<https://w3id.org/IproK/schedule#durationBasis> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/schedule#durationBasis> a owl:DatatypeProperty ;
     rdfs:label "duration Basis"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/schedule> ;
+    dcterms:isPartOf <https://w3id.org/iprok/schedule> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/durationBasis> ;
     rdfs:comment "The plain-language reason for the duration, as the planner explained it. No rdfs:domain." ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK/schedule#eac> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/schedule#eac> a owl:DatatypeProperty ;
     rdfs:label "Estimate at Completion" ;
-    dcterms:isPartOf <https://w3id.org/IproK/schedule> ;
+    dcterms:isPartOf <https://w3id.org/iprok/schedule> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/eac> ;
-    rdfs:comment "BAC / CPI when CPI>0, else BAC. INR. Mandatory on <https://w3id.org/IproK/schedule#EVMSnapshot>." ;
+    rdfs:comment "BAC / CPI when CPI>0, else BAC. INR. Mandatory on <https://w3id.org/iprok/schedule#EVMSnapshot>." ;
     rdfs:range xsd:decimal .
 
-<https://w3id.org/IproK/schedule#entryCount> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/schedule#entryCount> a owl:DatatypeProperty ;
     rdfs:label "entry Count"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/schedule> ;
+    dcterms:isPartOf <https://w3id.org/iprok/schedule> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/entryCount> ;
     rdfs:comment "How many activities a baseline froze. No rdfs:domain." ;
     rdfs:range xsd:integer .
 
-<https://w3id.org/IproK/schedule#eotClause> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/schedule#eotClause> a owl:DatatypeProperty ;
     rdfs:label "eot Clause"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/schedule> ;
+    dcterms:isPartOf <https://w3id.org/iprok/schedule> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/eotClause> ;
     rdfs:comment "The Clause 5 sub-clause an extension of time was granted under: 5.2 (beyond the contractor's control) or 5.3 (hindrance by the department). No rdfs:domain." ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK/schedule#estimateId> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/schedule#estimateId> a owl:DatatypeProperty ;
     rdfs:label "estimate Id"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/schedule> ;
+    dcterms:isPartOf <https://w3id.org/iprok/schedule> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/estimateId> ;
     rdfs:comment "Human-facing id, DE-<activity id>. Polymorphic — no rdfs:domain (antipattern #8)." ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK/schedule#estimatedAt> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/schedule#estimatedAt> a owl:DatatypeProperty ;
     rdfs:label "estimated At"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/schedule> ;
+    dcterms:isPartOf <https://w3id.org/iprok/schedule> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/estimatedAt> ;
     rdfs:comment "When the estimate was made. No rdfs:domain." ;
     rdfs:range xsd:dateTime .
 
-<https://w3id.org/IproK/schedule#etc> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/schedule#etc> a owl:DatatypeProperty ;
     rdfs:label "Estimate to Complete" ;
-    dcterms:isPartOf <https://w3id.org/IproK/schedule> ;
+    dcterms:isPartOf <https://w3id.org/iprok/schedule> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/etc> ;
-    rdfs:comment "EAC − AC, the remaining cost forecast. INR. Mandatory on <https://w3id.org/IproK/schedule#EVMSnapshot>." ;
+    rdfs:comment "EAC − AC, the remaining cost forecast. INR. Mandatory on <https://w3id.org/iprok/schedule#EVMSnapshot>." ;
     rdfs:range xsd:decimal .
 
-<https://w3id.org/IproK/schedule#ev> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/schedule#ev> a owl:DatatypeProperty ;
     rdfs:label "Earned Value (BCWP)" ;
-    dcterms:isPartOf <https://w3id.org/IproK/schedule> ;
+    dcterms:isPartOf <https://w3id.org/iprok/schedule> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/ev> ;
-    rdfs:comment "Budgeted cost of work actually performed by statusDate. INR. Mandatory on <https://w3id.org/IproK/schedule#EVMSnapshot>. Domain unspecified." ;
+    rdfs:comment "Budgeted cost of work actually performed by statusDate. INR. Mandatory on <https://w3id.org/iprok/schedule#EVMSnapshot>. Domain unspecified." ;
     rdfs:range xsd:decimal .
 
-<https://w3id.org/IproK/schedule#extensionDays> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/schedule#extensionDays> a owl:DatatypeProperty ;
     rdfs:label "extension Days"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/schedule> ;
+    dcterms:isPartOf <https://w3id.org/iprok/schedule> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/extensionDays> ;
     rdfs:comment "Days of extension granted. No rdfs:domain." ;
     rdfs:range xsd:integer .
 
-<https://w3id.org/IproK/schedule#finalDays> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/schedule#finalDays> a owl:DatatypeProperty ;
     rdfs:label "final Days"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/schedule> ;
+    dcterms:isPartOf <https://w3id.org/iprok/schedule> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/finalDays> ;
     rdfs:comment "Planned duration after allowances. No rdfs:domain." ;
     rdfs:range xsd:integer .
 
-<https://w3id.org/IproK/schedule#hasConstraint> a owl:ObjectProperty ;
+<https://w3id.org/iprok/schedule#hasConstraint> a owl:ObjectProperty ;
     rdfs:label "hasConstraint" ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
     rdfs:comment "The has constraint property in the integrated project information model. Its declared domain is Task and its declared range is Constraint."@en ;
-    rdfs:domain <https://w3id.org/IproK/schedule#Task> ;
-    rdfs:range <https://w3id.org/IproK#Constraint> .
+    rdfs:domain <https://w3id.org/iprok/schedule#Task> ;
+    rdfs:range <https://w3id.org/iprok#Constraint> .
 
-<https://w3id.org/IproK/schedule#hasPredecessorDependency> a owl:ObjectProperty ;
+<https://w3id.org/iprok/schedule#hasPredecessorDependency> a owl:ObjectProperty ;
     rdfs:label "hasPredecessorDependency" ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
     rdfs:comment "The has predecessor dependency property in the integrated project information model. Its declared domain is Task and its declared range is TaskDependency."@en ;
-    rdfs:domain <https://w3id.org/IproK/schedule#Task> ;
-    rdfs:range <https://w3id.org/IproK/schedule#TaskDependency> .
+    rdfs:domain <https://w3id.org/iprok/schedule#Task> ;
+    rdfs:range <https://w3id.org/iprok/schedule#TaskDependency> .
 
-<https://w3id.org/IproK/schedule#hasSubTask> a owl:ObjectProperty ;
+<https://w3id.org/iprok/schedule#hasSubTask> a owl:ObjectProperty ;
     rdfs:label "hasSubTask" ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
     rdfs:comment "The has sub task property in the integrated project information model. Its declared domain is Task and its declared range is Task."@en ;
-    rdfs:domain <https://w3id.org/IproK/schedule#Task> ;
-    rdfs:range <https://w3id.org/IproK/schedule#Task> .
+    rdfs:domain <https://w3id.org/iprok/schedule#Task> ;
+    rdfs:range <https://w3id.org/iprok/schedule#Task> .
 
-<https://w3id.org/IproK/schedule#hasSuccessorDependency> a owl:ObjectProperty ;
+<https://w3id.org/iprok/schedule#hasSuccessorDependency> a owl:ObjectProperty ;
     rdfs:label "hasSuccessorDependency" ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
     rdfs:comment "The has successor dependency property in the integrated project information model. Its declared domain is Task and its declared range is TaskDependency."@en ;
-    rdfs:domain <https://w3id.org/IproK/schedule#Task> ;
-    rdfs:range <https://w3id.org/IproK/schedule#TaskDependency> .
+    rdfs:domain <https://w3id.org/iprok/schedule#Task> ;
+    rdfs:range <https://w3id.org/iprok/schedule#TaskDependency> .
 
-<https://w3id.org/IproK/schedule#hasTask> a owl:ObjectProperty ;
+<https://w3id.org/iprok/schedule#hasTask> a owl:ObjectProperty ;
     rdfs:label "hasTask" ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
     rdfs:comment "The has task property in the integrated project information model. Its declared domain is WBS_Element and its declared range is Task."@en ;
-    rdfs:domain <https://w3id.org/IproK/schedule#WBS_Element> ;
-    rdfs:range <https://w3id.org/IproK/schedule#Task> .
+    rdfs:domain <https://w3id.org/iprok/schedule#WBS_Element> ;
+    rdfs:range <https://w3id.org/iprok/schedule#Task> .
 
-<https://w3id.org/IproK/schedule#hasTaskTime> a owl:FunctionalProperty,
+<https://w3id.org/iprok/schedule#hasTaskTime> a owl:FunctionalProperty,
         owl:ObjectProperty ;
     rdfs:label "hasTaskTime" ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
     rdfs:comment "The has task time property in the integrated project information model. Its declared domain is Task and its declared range is TaskTime."@en ;
-    rdfs:domain <https://w3id.org/IproK/schedule#Task> ;
-    rdfs:range <https://w3id.org/IproK/schedule#TaskTime> .
+    rdfs:domain <https://w3id.org/iprok/schedule#Task> ;
+    rdfs:range <https://w3id.org/iprok/schedule#TaskTime> .
 
-<https://w3id.org/IproK/schedule#hasWBS> a owl:ObjectProperty ;
+<https://w3id.org/iprok/schedule#hasWBS> a owl:ObjectProperty ;
     rdfs:label "hasWBS" ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
     rdfs:comment "The has wbs property in the integrated project information model. Its declared domain is WorkPackage and its declared range is WBS_Element."@en ;
-    rdfs:domain <https://w3id.org/IproK/schedule#WorkPackage> ;
-    rdfs:range <https://w3id.org/IproK/schedule#WBS_Element> .
+    rdfs:domain <https://w3id.org/iprok/schedule#WorkPackage> ;
+    rdfs:range <https://w3id.org/iprok/schedule#WBS_Element> .
 
-<https://w3id.org/IproK/schedule#hasWorkPackage> a owl:ObjectProperty ;
+<https://w3id.org/iprok/schedule#hasWorkPackage> a owl:ObjectProperty ;
     rdfs:label "hasWorkPackage" ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
     rdfs:comment "The has work package property in the integrated project information model. Its declared domain is Project and its declared range is WorkPackage."@en ;
-    rdfs:domain <https://w3id.org/IproK/schedule#Project> ;
-    rdfs:range <https://w3id.org/IproK/schedule#WorkPackage> .
+    rdfs:domain <https://w3id.org/iprok/schedule#Project> ;
+    rdfs:range <https://w3id.org/iprok/schedule#WorkPackage> .
 
-<https://w3id.org/IproK/schedule#inBaseline> a owl:ObjectProperty ;
+<https://w3id.org/iprok/schedule#inBaseline> a owl:ObjectProperty ;
     rdfs:label "in Baseline"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/schedule> ;
+    dcterms:isPartOf <https://w3id.org/iprok/schedule> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/inBaseline> ;
     rdfs:comment "The baseline an entry belongs to. No rdfs:domain." .
 
-<https://w3id.org/IproK/schedule#isCritical> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/schedule#isCritical> a owl:DatatypeProperty ;
     rdfs:label "is on the critical path" ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/schedule> ;
+    dcterms:isPartOf <https://w3id.org/iprok/schedule> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/isCritical> ;
     rdfs:comment "The is critical property in the integrated project information model."@en ;
     rdfs:range xsd:boolean .
 
-<https://w3id.org/IproK/schedule#isCriticalTask> a owl:DatatypeProperty,
+<https://w3id.org/iprok/schedule#isCriticalTask> a owl:DatatypeProperty,
         owl:FunctionalProperty ;
     rdfs:label "isCriticalTask"@en ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
     rdfs:comment "The is critical task property in the integrated project information model. Its declared domain is Task and its declared range is boolean."@en ;
-    rdfs:domain <https://w3id.org/IproK/schedule#Task> ;
+    rdfs:domain <https://w3id.org/iprok/schedule#Task> ;
     rdfs:range xsd:boolean .
 
-<https://w3id.org/IproK/schedule#isMilestone> a owl:DatatypeProperty,
+<https://w3id.org/iprok/schedule#isMilestone> a owl:DatatypeProperty,
         owl:FunctionalProperty ;
     rdfs:label "isMilestone"@en ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
     rdfs:comment "The is milestone property in the integrated project information model. Its declared domain is Task and its declared range is boolean."@en ;
-    rdfs:domain <https://w3id.org/IproK/schedule#Task> ;
+    rdfs:domain <https://w3id.org/iprok/schedule#Task> ;
     rdfs:range xsd:boolean .
 
-<https://w3id.org/IproK/schedule#isWorkPackage> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/schedule#isWorkPackage> a owl:DatatypeProperty ;
     rdfs:label "is work package" ;
-    dcterms:isPartOf <https://w3id.org/IproK/schedule> ;
+    dcterms:isPartOf <https://w3id.org/iprok/schedule> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/isWorkPackage> ;
     rdfs:comment "True when this is a leaf work package — the unit of planning + control that governs BOQ / IFC / Activity. Domain unspecified (antipattern #8)." ;
     rdfs:range xsd:boolean .
 
-<https://w3id.org/IproK/schedule#labourPadPct> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/schedule#labourPadPct> a owl:DatatypeProperty ;
     rdfs:label "labour Pad Pct"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/schedule> ;
+    dcterms:isPartOf <https://w3id.org/iprok/schedule> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/labourPadPct> ;
     rdfs:comment "Festival/harvest labour allowance as a fraction of base days. No rdfs:domain." ;
     rdfs:range xsd:decimal .
 
-<https://w3id.org/IproK/schedule#lagTime> a owl:DatatypeProperty,
+<https://w3id.org/iprok/schedule#lagTime> a owl:DatatypeProperty,
         owl:FunctionalProperty ;
     rdfs:label "lagTime"@en ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
     rdfs:comment "The lag time property in the integrated project information model. Its declared domain is TaskDependency and its declared range is decimal."@en ;
-    rdfs:domain <https://w3id.org/IproK/schedule#TaskDependency> ;
+    rdfs:domain <https://w3id.org/iprok/schedule#TaskDependency> ;
     rdfs:range xsd:decimal .
 
-<https://w3id.org/IproK/schedule#linkLag> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/schedule#linkLag> a owl:DatatypeProperty ;
     rdfs:label "lag (days)" ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/schedule> ;
+    dcterms:isPartOf <https://w3id.org/iprok/schedule> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/linkLag> ;
     rdfs:comment "The link lag property in the integrated project information model."@en ;
     rdfs:range xsd:decimal .
 
-<https://w3id.org/IproK/schedule#linkSource> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/schedule#linkSource> a owl:DatatypeProperty ;
     rdfs:label "predecessor activity id" ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/schedule> ;
+    dcterms:isPartOf <https://w3id.org/iprok/schedule> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/linkSource> ;
     rdfs:comment "The link source property in the integrated project information model."@en ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK/schedule#linkType> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/schedule#linkType> a owl:DatatypeProperty ;
     rdfs:label "relationship type" ;
-    dcterms:isPartOf <https://w3id.org/IproK/schedule> ;
+    dcterms:isPartOf <https://w3id.org/iprok/schedule> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/linkType> ;
     rdfs:comment "One of FS / SS / FF / SF (P6 convention)." ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK/schedule#linksToPredecessorTask> a owl:FunctionalProperty,
+<https://w3id.org/iprok/schedule#linksToPredecessorTask> a owl:FunctionalProperty,
         owl:ObjectProperty ;
     rdfs:label "linksToPredecessorTask" ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
     rdfs:comment "The links to predecessor task property in the integrated project information model. Its declared domain is TaskDependency and its declared range is Task."@en ;
-    rdfs:domain <https://w3id.org/IproK/schedule#TaskDependency> ;
-    rdfs:range <https://w3id.org/IproK/schedule#Task> .
+    rdfs:domain <https://w3id.org/iprok/schedule#TaskDependency> ;
+    rdfs:range <https://w3id.org/iprok/schedule#Task> .
 
-<https://w3id.org/IproK/schedule#linksToSuccessorTask> a owl:FunctionalProperty,
+<https://w3id.org/iprok/schedule#linksToSuccessorTask> a owl:FunctionalProperty,
         owl:ObjectProperty ;
     rdfs:label "linksToSuccessorTask" ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
     rdfs:comment "The links to successor task property in the integrated project information model. Its declared domain is TaskDependency and its declared range is Task."@en ;
-    rdfs:domain <https://w3id.org/IproK/schedule#TaskDependency> ;
-    rdfs:range <https://w3id.org/IproK/schedule#Task> .
+    rdfs:domain <https://w3id.org/iprok/schedule#TaskDependency> ;
+    rdfs:range <https://w3id.org/iprok/schedule#Task> .
 
-<https://w3id.org/IproK/schedule#parentWBS> a owl:ObjectProperty ;
+<https://w3id.org/iprok/schedule#parentWBS> a owl:ObjectProperty ;
     rdfs:label "parent WBS node" ;
-    dcterms:isPartOf <https://w3id.org/IproK/schedule> ;
+    dcterms:isPartOf <https://w3id.org/iprok/schedule> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/parentWBS> ;
-    rdfs:comment "Self-referential link to the parent <https://w3id.org/IproK/schedule#WBSNode>. Absent on the project-root node. Domain unspecified (antipattern #8)." ;
-    rdfs:range <https://w3id.org/IproK/schedule#WBSNode> .
+    rdfs:comment "Self-referential link to the parent <https://w3id.org/iprok/schedule#WBSNode>. Absent on the project-root node. Domain unspecified (antipattern #8)." ;
+    rdfs:range <https://w3id.org/iprok/schedule#WBSNode> .
 
-<https://w3id.org/IproK/schedule#partOfProject> a owl:ObjectProperty ;
+<https://w3id.org/iprok/schedule#partOfProject> a owl:ObjectProperty ;
     rdfs:label "part of project" ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/schedule> ;
+    dcterms:isPartOf <https://w3id.org/iprok/schedule> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/partOfProject> ;
     rdfs:comment "The part of project property in the integrated project information model. Its declared domain is Activity and its declared range is Project."@en ;
-    rdfs:domain <https://w3id.org/IproK/schedule#Activity> ;
-    rdfs:range <https://w3id.org/IproK/schedule#Project> .
+    rdfs:domain <https://w3id.org/iprok/schedule#Activity> ;
+    rdfs:range <https://w3id.org/iprok/schedule#Project> .
 
-<https://w3id.org/IproK/schedule#percentComplete> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/schedule#percentComplete> a owl:DatatypeProperty ;
     rdfs:label "percent complete (0-100)" ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/schedule> ;
+    dcterms:isPartOf <https://w3id.org/iprok/schedule> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/percentComplete> ;
     rdfs:comment "The percent complete property in the integrated project information model."@en ;
     rdfs:range xsd:decimal .
 
-<https://w3id.org/IproK/schedule#plannedFinishDate> a owl:DatatypeProperty,
+<https://w3id.org/iprok/schedule#plannedFinishDate> a owl:DatatypeProperty,
         owl:FunctionalProperty ;
     rdfs:label "plannedFinishDate"@en ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
     rdfs:comment "The planned finish date property in the integrated project information model. Its declared domain is TaskTime and its declared range is dateTime."@en ;
-    rdfs:domain <https://w3id.org/IproK/schedule#TaskTime> ;
+    rdfs:domain <https://w3id.org/iprok/schedule#TaskTime> ;
     rdfs:range xsd:dateTime .
 
-<https://w3id.org/IproK/schedule#plannedQuantity> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/schedule#plannedQuantity> a owl:DatatypeProperty ;
     rdfs:label "planned Quantity"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/schedule> ;
+    dcterms:isPartOf <https://w3id.org/iprok/schedule> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/plannedQuantity> ;
-    rdfs:comment "The quantity the activity is planned to deliver, in <https://w3id.org/IproK/integrated#unit>. Distinct from <https://w3id.org/IproK/billing#quantity> (a measurement). No rdfs:domain." ;
+    rdfs:comment "The quantity the activity is planned to deliver, in <https://w3id.org/iprok/integrated#unit>. Distinct from <https://w3id.org/iprok/billing#quantity> (a measurement). No rdfs:domain." ;
     rdfs:range xsd:decimal .
 
-<https://w3id.org/IproK/schedule#plannedStartDate> a owl:DatatypeProperty,
+<https://w3id.org/iprok/schedule#plannedStartDate> a owl:DatatypeProperty,
         owl:FunctionalProperty ;
     rdfs:label "plannedFinishDate"@en ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
     rdfs:comment "The planned start date property in the integrated project information model. Its declared domain is TaskTime and its declared range is dateTime."@en ;
-    rdfs:domain <https://w3id.org/IproK/schedule#TaskTime> ;
+    rdfs:domain <https://w3id.org/iprok/schedule#TaskTime> ;
     rdfs:range xsd:dateTime .
 
-<https://w3id.org/IproK/schedule#projectAddress> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/schedule#projectAddress> a owl:DatatypeProperty ;
     rdfs:label "projectAddress"@en ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
     rdfs:comment "The project address property in the integrated project information model. Its declared domain is Project and its declared range is string."@en ;
-    rdfs:domain <https://w3id.org/IproK/schedule#Project> ;
+    rdfs:domain <https://w3id.org/iprok/schedule#Project> ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK/schedule#projectCategory> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/schedule#projectCategory> a owl:DatatypeProperty ;
     rdfs:label "projectCategory"@en ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
     rdfs:comment "The project category property in the integrated project information model. Its declared domain is Project and its declared range is string."@en ;
-    rdfs:domain <https://w3id.org/IproK/schedule#Project> ;
+    rdfs:domain <https://w3id.org/iprok/schedule#Project> ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK/schedule#projectOwner> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/schedule#projectOwner> a owl:DatatypeProperty ;
     rdfs:label "projectOwner"@en ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
     rdfs:comment "The project owner property in the integrated project information model. Its declared domain is Project and its declared range is string."@en ;
-    rdfs:domain <https://w3id.org/IproK/schedule#Project> ;
+    rdfs:domain <https://w3id.org/iprok/schedule#Project> ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK/schedule#pv> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/schedule#pv> a owl:DatatypeProperty ;
     rdfs:label "Planned Value (BCWS)" ;
-    dcterms:isPartOf <https://w3id.org/IproK/schedule> ;
+    dcterms:isPartOf <https://w3id.org/iprok/schedule> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/pv> ;
-    rdfs:comment "Time-phased budget that should have been earned by statusDate. INR. Mandatory on <https://w3id.org/IproK/schedule#EVMSnapshot>. Domain unspecified." ;
+    rdfs:comment "Time-phased budget that should have been earned by statusDate. INR. Mandatory on <https://w3id.org/iprok/schedule#EVMSnapshot>. Domain unspecified." ;
     rdfs:range xsd:decimal .
 
-<https://w3id.org/IproK/schedule#remainingDuration> a owl:DatatypeProperty,
+<https://w3id.org/iprok/schedule#remainingDuration> a owl:DatatypeProperty,
         owl:FunctionalProperty ;
     rdfs:label "remainingDuration"@en ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
     rdfs:comment "The remaining duration property in the integrated project information model. Its declared domain is TaskTime and its declared range is decimal."@en ;
-    rdfs:domain <https://w3id.org/IproK/schedule#TaskTime> ;
+    rdfs:domain <https://w3id.org/iprok/schedule#TaskTime> ;
     rdfs:range xsd:decimal .
 
-<https://w3id.org/IproK/schedule#scheduleDuration> a owl:DatatypeProperty,
+<https://w3id.org/iprok/schedule#scheduleDuration> a owl:DatatypeProperty,
         owl:FunctionalProperty ;
     rdfs:label "scheduleDuration"@en ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
     rdfs:comment "The schedule duration property in the integrated project information model. Its declared domain is TaskTime and its declared range is decimal."@en ;
-    rdfs:domain <https://w3id.org/IproK/schedule#TaskTime> ;
+    rdfs:domain <https://w3id.org/iprok/schedule#TaskTime> ;
     rdfs:range xsd:decimal .
 
-<https://w3id.org/IproK/schedule#scheduleRevision> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/schedule#scheduleRevision> a owl:DatatypeProperty ;
     rdfs:label "schedule revision id" ;
-    dcterms:isPartOf <https://w3id.org/IproK/schedule> ;
+    dcterms:isPartOf <https://w3id.org/iprok/schedule> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/scheduleRevision> ;
-    rdfs:comment "UUID stamped on every <https://w3id.org/IproK/schedule#Activity> written by one POST /schedule/ingest/{id}/confirm. Lets a re-import supersede the prior revision (PROV-O) and the UI list revision history." ;
+    rdfs:comment "UUID stamped on every <https://w3id.org/iprok/schedule#Activity> written by one POST /schedule/ingest/{id}/confirm. Lets a re-import supersede the prior revision (PROV-O) and the UI list revision history." ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK/schedule#seededDailyOutput> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/schedule#seededDailyOutput> a owl:DatatypeProperty ;
     rdfs:label "seeded Daily Output"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/schedule> ;
+    dcterms:isPartOf <https://w3id.org/iprok/schedule> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/seededDailyOutput> ;
     rdfs:comment "The default (CPWD-style) crew-day output, kept beside a measured rate so the difference stays visible. No rdfs:domain." ;
     rdfs:range xsd:decimal .
 
-<https://w3id.org/IproK/schedule#spi> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/schedule#spi> a owl:DatatypeProperty ;
     rdfs:label "Schedule Performance Index" ;
-    dcterms:isPartOf <https://w3id.org/IproK/schedule> ;
+    dcterms:isPartOf <https://w3id.org/iprok/schedule> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/spi> ;
     rdfs:comment "EV / PV. >1.0 ahead of schedule, <1.0 behind. Optional — undefined (omitted) when PV=0." ;
     rdfs:range xsd:decimal .
 
-<https://w3id.org/IproK/schedule#statusDate> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/schedule#statusDate> a owl:DatatypeProperty ;
     rdfs:label "EVM status date" ;
-    dcterms:isPartOf <https://w3id.org/IproK/schedule> ;
+    dcterms:isPartOf <https://w3id.org/iprok/schedule> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/statusDate> ;
-    rdfs:comment "The data-date of the EVM snapshot — every activity and bill is rolled up as of this calendar day. Mandatory on <https://w3id.org/IproK/schedule#EVMSnapshot>. Domain unspecified (antipattern #8)." ;
+    rdfs:comment "The data-date of the EVM snapshot — every activity and bill is rolled up as of this calendar day. Mandatory on <https://w3id.org/iprok/schedule#EVMSnapshot>. Domain unspecified (antipattern #8)." ;
     rdfs:range xsd:date .
 
-<https://w3id.org/IproK/schedule#stipulatedFinishDate> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/schedule#stipulatedFinishDate> a owl:DatatypeProperty ;
     rdfs:label "stipulated Finish Date"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/schedule> ;
+    dcterms:isPartOf <https://w3id.org/iprok/schedule> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/stipulatedFinishDate> ;
     rdfs:comment "The completion date the contract stipulates while this baseline is in force: the approved programme's last day plus every extension of time granted (CPWD Clause 5.2/5.3). Clause 5.4's 10% is of the period to this date. An agreed amendment does not move it. No rdfs:domain." ;
     rdfs:range xsd:date .
 
-<https://w3id.org/IproK/schedule#sv> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/schedule#sv> a owl:DatatypeProperty ;
     rdfs:label "Schedule Variance" ;
-    dcterms:isPartOf <https://w3id.org/IproK/schedule> ;
+    dcterms:isPartOf <https://w3id.org/iprok/schedule> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/sv> ;
-    rdfs:comment "EV − PV. Positive = ahead of schedule. INR-equivalent. Mandatory on <https://w3id.org/IproK/schedule#EVMSnapshot>." ;
+    rdfs:comment "EV − PV. Positive = ahead of schedule. INR-equivalent. Mandatory on <https://w3id.org/iprok/schedule#EVMSnapshot>." ;
     rdfs:range xsd:decimal .
 
-<https://w3id.org/IproK/schedule#taskPriority> a owl:DatatypeProperty,
+<https://w3id.org/iprok/schedule#taskPriority> a owl:DatatypeProperty,
         owl:FunctionalProperty ;
     rdfs:label "taskPriority"@en ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
     rdfs:comment "The task priority property in the integrated project information model. Its declared domain is Task and its declared range is integer."@en ;
-    rdfs:domain <https://w3id.org/IproK/schedule#Task> ;
+    rdfs:domain <https://w3id.org/iprok/schedule#Task> ;
     rdfs:range xsd:integer .
 
-<https://w3id.org/IproK/schedule#taskRelationshipType> a owl:DatatypeProperty,
+<https://w3id.org/iprok/schedule#taskRelationshipType> a owl:DatatypeProperty,
         owl:FunctionalProperty ;
     rdfs:label "taskRelationshipType"@en ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
     rdfs:comment "The task relationship type property in the integrated project information model. Its declared domain is TaskDependency and its declared range is string."@en ;
-    rdfs:domain <https://w3id.org/IproK/schedule#TaskDependency> ;
+    rdfs:domain <https://w3id.org/iprok/schedule#TaskDependency> ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK/schedule#totalFloat> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/schedule#totalFloat> a owl:DatatypeProperty ;
     rdfs:label "total float (days)" ;
-    dcterms:isPartOf <https://w3id.org/IproK/schedule> ;
+    dcterms:isPartOf <https://w3id.org/iprok/schedule> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/totalFloat> ;
     rdfs:comment "Mirrors iprok:totalFloat. Days; may be negative on a behind-schedule critical path." ;
     rdfs:range xsd:decimal .
 
-<https://w3id.org/IproK/schedule#vac> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/schedule#vac> a owl:DatatypeProperty ;
     rdfs:label "Variance at Completion" ;
-    dcterms:isPartOf <https://w3id.org/IproK/schedule> ;
+    dcterms:isPartOf <https://w3id.org/iprok/schedule> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/vac> ;
-    rdfs:comment "BAC − EAC. INR. Mandatory on <https://w3id.org/IproK/schedule#EVMSnapshot>." ;
+    rdfs:comment "BAC − EAC. INR. Mandatory on <https://w3id.org/iprok/schedule#EVMSnapshot>." ;
     rdfs:range xsd:decimal .
 
-<https://w3id.org/IproK/schedule#wbsCode> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/schedule#wbsCode> a owl:DatatypeProperty ;
     rdfs:label "WBS code" ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/schedule> ;
+    dcterms:isPartOf <https://w3id.org/iprok/schedule> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/wbsCode> ;
     rdfs:comment "The wbs code property in the integrated project information model."@en ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK/schedule#wbsLevel> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/schedule#wbsLevel> a owl:DatatypeProperty ;
     rdfs:label "WBS level" ;
-    dcterms:isPartOf <https://w3id.org/IproK/schedule> ;
+    dcterms:isPartOf <https://w3id.org/iprok/schedule> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/wbsLevel> ;
     rdfs:comment "Depth in the tree: 1 = project root, 2 = block/zone, 3 = system, deeper = work packages. Server-assigned from parent depth." ;
     rdfs:range xsd:integer .
 
-<https://w3id.org/IproK/schedule#wbsName> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/schedule#wbsName> a owl:DatatypeProperty ;
     rdfs:label "WBS node name" ;
-    dcterms:isPartOf <https://w3id.org/IproK/schedule> ;
+    dcterms:isPartOf <https://w3id.org/iprok/schedule> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/wbsName> ;
     rdfs:comment "Human-readable name of the WBS node (e.g. 'Block A', 'Substructure', 'Footing RCC'). Domain unspecified (antipattern #8)." ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK/schedule#wbsPlannedCost> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/schedule#wbsPlannedCost> a owl:DatatypeProperty ;
     rdfs:label "WBS planned cost (rollup)" ;
-    dcterms:isPartOf <https://w3id.org/IproK/schedule> ;
+    dcterms:isPartOf <https://w3id.org/iprok/schedule> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/wbsPlannedCost> ;
-    rdfs:comment "Rollup: sum of governed <https://w3id.org/IproK/billing#BOQItem> amounts at a work package, rolled up the tree to the root. In Slice 1 this is COMPUTED ON READ in list_wbs_nodes (never persisted) — always-correct and it sidesteps a Fuseki/TDB2 quirk deleting xsd:decimal triples. The property + optional SHACL stanza are reserved for a future slice that may persist a snapshot." ;
+    rdfs:comment "Rollup: sum of governed <https://w3id.org/iprok/billing#BOQItem> amounts at a work package, rolled up the tree to the root. In Slice 1 this is COMPUTED ON READ in list_wbs_nodes (never persisted) — always-correct and it sidesteps a Fuseki/TDB2 quirk deleting xsd:decimal triples. The property + optional SHACL stanza are reserved for a future slice that may persist a snapshot." ;
     rdfs:range xsd:decimal .
 
-<https://w3id.org/IproK/schedule#weatherPadPct> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/schedule#weatherPadPct> a owl:DatatypeProperty ;
     rdfs:label "weather Pad Pct"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/schedule> ;
+    dcterms:isPartOf <https://w3id.org/iprok/schedule> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/weatherPadPct> ;
     rdfs:comment "Monsoon/heat allowance as a fraction of base days, for the window the activity actually occupies. No rdfs:domain." ;
     rdfs:range xsd:decimal .
 
-<https://w3id.org/IproK/schedule#Activity> a owl:Class ;
+<https://w3id.org/iprok/schedule#Activity> a owl:Class ;
     rdfs:label "Activity" ;
-    dcterms:isPartOf <https://w3id.org/IproK/schedule> ;
+    dcterms:isPartOf <https://w3id.org/iprok/schedule> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/Activity> ;
     rdfs:comment "A schedule activity. In v0, manually entered; in v1 ingested from P6." ;
-    rdfs:subClassOf <https://w3id.org/IproK/schedule#Task> .
+    rdfs:subClassOf <https://w3id.org/iprok/schedule#Task> .
 
-<https://w3id.org/IproK/schedule#WBSNode> a owl:Class ;
+<https://w3id.org/iprok/schedule#WBSNode> a owl:Class ;
     rdfs:label "WBS node" ;
-    dcterms:isPartOf <https://w3id.org/IproK/schedule> ;
+    dcterms:isPartOf <https://w3id.org/iprok/schedule> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/WBSNode> ;
-    rdfs:comment "One node in the project work-breakdown structure. Recursive via <https://w3id.org/IproK/schedule#parentWBS>; a leaf (<https://w3id.org/IproK/schedule#isWorkPackage> true) is a work package." ;
+    rdfs:comment "One node in the project work-breakdown structure. Recursive via <https://w3id.org/iprok/schedule#parentWBS>; a leaf (<https://w3id.org/iprok/schedule#isWorkPackage> true) is a work package." ;
     rdfs:subClassOf prov:Entity .
 
-<https://w3id.org/IproK/schedule#WBS_Element> a owl:Class ;
+<https://w3id.org/iprok/schedule#WBS_Element> a owl:Class ;
     rdfs:label "WBS_Element" ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
     rdfs:comment "An element of the work breakdown structure used to organise tasks."@en ;
-    rdfs:subClassOf <https://w3id.org/IproK#IproKThing> .
+    rdfs:subClassOf <https://w3id.org/iprok#IproKThing> .
 
-<https://w3id.org/IproK/schedule#WorkPackage> a owl:Class ;
+<https://w3id.org/iprok/schedule#WorkPackage> a owl:Class ;
     rdfs:label "WorkPackage" ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
     rdfs:comment "A grouping of project work represented in the work breakdown structure."@en ;
-    rdfs:subClassOf <https://w3id.org/IproK#IproKThing> .
+    rdfs:subClassOf <https://w3id.org/iprok#IproKThing> .
 
-<https://w3id.org/IproK/schedule#Project> a owl:Class ;
+<https://w3id.org/iprok/schedule#Project> a owl:Class ;
     rdfs:label "Project" ;
-    dcterms:isPartOf <https://w3id.org/IproK> ;
+    dcterms:isPartOf <https://w3id.org/iprok> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/Project> ;
     rdfs:comment "The construction-project context in which work, records and control decisions are organised."@en ;
-    rdfs:subClassOf <https://w3id.org/IproK#IproKThing> .
+    rdfs:subClassOf <https://w3id.org/iprok#IproKThing> .
 
-<https://w3id.org/IproK/schedule#TaskDependency> a owl:Class ;
+<https://w3id.org/iprok/schedule#TaskDependency> a owl:Class ;
     rdfs:label "TaskDependency" ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
     rdfs:comment "A relationship record describing precedence between scheduled tasks."@en ;
-    rdfs:subClassOf <https://w3id.org/IproK#IproKThing> .
+    rdfs:subClassOf <https://w3id.org/iprok#IproKThing> .
 
-<https://w3id.org/IproK/schedule#TaskTime> a owl:Class ;
+<https://w3id.org/iprok/schedule#TaskTime> a owl:Class ;
     rdfs:label "TaskTime" ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
     rdfs:comment "A time record associated with a scheduled task."@en ;
-    rdfs:subClassOf <https://w3id.org/IproK#IproKThing> .
+    rdfs:subClassOf <https://w3id.org/iprok#IproKThing> .
 
-<https://w3id.org/IproK/schedule#Task> a owl:Class ;
+<https://w3id.org/iprok/schedule#Task> a owl:Class ;
     rdfs:label "Task" ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
     rdfs:comment "A unit of scheduled work within a project."@en ;
-    rdfs:subClassOf <https://w3id.org/IproK#IproKThing> .
+    rdfs:subClassOf <https://w3id.org/iprok#IproKThing> .
 

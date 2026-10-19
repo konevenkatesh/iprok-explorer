@@ -4,293 +4,293 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://w3id.org/IproK/document#Annotation> a owl:Class ;
+<https://w3id.org/iprok/document#Annotation> a owl:Class ;
     rdfs:label "Annotation" ;
-    dcterms:isPartOf <https://w3id.org/IproK/document> ;
+    dcterms:isPartOf <https://w3id.org/iprok/document> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/Annotation> ;
-    rdfs:comment "One SVG markup on a drawing (revision cloud / callout / text / dimension / stamp). Append-only: a deleted markup is prov:invalidated, never removed. Modelled like <https://w3id.org/IproK/quality#RecurrenceAlert> (prov:Entity subclass)." ;
+    rdfs:comment "One SVG markup on a drawing (revision cloud / callout / text / dimension / stamp). Append-only: a deleted markup is prov:invalidated, never removed. Modelled like <https://w3id.org/iprok/quality#RecurrenceAlert> (prov:Entity subclass)." ;
     rdfs:subClassOf prov:Entity .
 
-<https://w3id.org/IproK/document#DrawingChange> a owl:Class ;
+<https://w3id.org/iprok/document#DrawingChange> a owl:Class ;
     rdfs:label "Drawing change" ;
-    dcterms:isPartOf <https://w3id.org/IproK/document> ;
+    dcterms:isPartOf <https://w3id.org/iprok/document> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/DrawingChange> ;
     rdfs:comment "One AI-detected change between two drawing revisions (added / removed / modified element, dimension, annotation, or spec). Produced by the compare_revisions task; never hand-authored." .
 
-<https://w3id.org/IproK/document#RFI> a owl:Class ;
+<https://w3id.org/iprok/document#RFI> a owl:Class ;
     rdfs:label "RFI" ;
-    dcterms:isPartOf <https://w3id.org/IproK/document> ;
+    dcterms:isPartOf <https://w3id.org/iprok/document> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/RFI> ;
     rdfs:comment "Request For Information; the core Indian-EPC document workflow, modelled as a graph node with a 6-state machine and SLA tracking, linked to the drawing / markup / activity that raised it." ;
     rdfs:subClassOf prov:Entity,
-        <https://w3id.org/IproK/document#Document> .
+        <https://w3id.org/iprok/document#Document> .
 
-<https://w3id.org/IproK/document#Transmittal> a owl:Class ;
+<https://w3id.org/iprok/document#Transmittal> a owl:Class ;
     rdfs:label "Transmittal" ;
-    dcterms:isPartOf <https://w3id.org/IproK/document> ;
+    dcterms:isPartOf <https://w3id.org/iprok/document> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/Transmittal> ;
     rdfs:comment "ISO-19650 transmittal record. Auto-numbered T-NNNN, auto-PDF, append-only; one per drawing state transition + ad-hoc batches via POST /transmittals." ;
     rdfs:subClassOf prov:Activity .
 
-<https://w3id.org/IproK/document#annotatedAt> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/document#annotatedAt> a owl:DatatypeProperty ;
     rdfs:label "annotated at" ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/document> ;
+    dcterms:isPartOf <https://w3id.org/iprok/document> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/annotatedAt> ;
     rdfs:comment "The annotated at property in the integrated project information model."@en ;
     rdfs:range xsd:dateTime .
 
-<https://w3id.org/IproK/document#annotatedBy> a owl:ObjectProperty ;
+<https://w3id.org/iprok/document#annotatedBy> a owl:ObjectProperty ;
     rdfs:label "annotated by" ;
-    dcterms:isPartOf <https://w3id.org/IproK/document> ;
+    dcterms:isPartOf <https://w3id.org/iprok/document> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/annotatedBy> ;
-    rdfs:comment "The <https://w3id.org/IproK#User> (or, for AI suggestions, the model agent IRI) that made the markup. Domain unspecified (antipattern #8)." ;
+    rdfs:comment "The <https://w3id.org/iprok#User> (or, for AI suggestions, the model agent IRI) that made the markup. Domain unspecified (antipattern #8)." ;
     rdfs:range prov:Agent .
 
-<https://w3id.org/IproK/document#annotationText> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/document#annotationText> a owl:DatatypeProperty ;
     rdfs:label "annotation text" ;
-    dcterms:isPartOf <https://w3id.org/IproK/document> ;
+    dcterms:isPartOf <https://w3id.org/iprok/document> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/annotationText> ;
     rdfs:comment "Optional — the callout / text-box content." ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK/document#annotationType> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/document#annotationType> a owl:DatatypeProperty ;
     rdfs:label "annotation type" ;
-    dcterms:isPartOf <https://w3id.org/IproK/document> ;
+    dcterms:isPartOf <https://w3id.org/iprok/document> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/annotationType> ;
     rdfs:comment "RevisionCloud / Callout / Text / Dimension / Stamp. SHACL constrains via sh:in (string literal, no sh:class)." ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK/document#answeredBy> a owl:ObjectProperty ;
+<https://w3id.org/iprok/document#answeredBy> a owl:ObjectProperty ;
     rdfs:label "answered by" ;
-    dcterms:isPartOf <https://w3id.org/IproK/document> ;
+    dcterms:isPartOf <https://w3id.org/iprok/document> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/answeredBy> ;
-    rdfs:comment "The <https://w3id.org/IproK#User> who answered. Mandatory once state = RFIAnswered (RFIShape sh:or rule). Domain unspecified (antipattern #8)." ;
+    rdfs:comment "The <https://w3id.org/iprok#User> who answered. Mandatory once state = RFIAnswered (RFIShape sh:or rule). Domain unspecified (antipattern #8)." ;
     rdfs:range prov:Agent .
 
-<https://w3id.org/IproK/document#changeDescription> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/document#changeDescription> a owl:DatatypeProperty ;
     rdfs:label "change description" ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/document> ;
+    dcterms:isPartOf <https://w3id.org/iprok/document> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/changeDescription> ;
     rdfs:comment "The change description property in the integrated project information model."@en ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK/document#changeType> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/document#changeType> a owl:DatatypeProperty ;
     rdfs:label "change type" ;
-    dcterms:isPartOf <https://w3id.org/IproK/document> ;
+    dcterms:isPartOf <https://w3id.org/iprok/document> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/changeType> ;
-    rdfs:comment "Added / Removed / Modified. SHACL constrains via sh:in (string literal — same idiom as <https://w3id.org/IproK/schedule#linkType>)." ;
+    rdfs:comment "Added / Removed / Modified. SHACL constrains via sh:in (string literal — same idiom as <https://w3id.org/iprok/schedule#linkType>)." ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK/document#colour> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/document#colour> a owl:DatatypeProperty ;
     rdfs:label "colour" ;
-    dcterms:isPartOf <https://w3id.org/IproK/document> ;
+    dcterms:isPartOf <https://w3id.org/iprok/document> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/colour> ;
     rdfs:comment "Hex stroke/fill colour, e.g. \"#1d4ed8\". Domain unspecified (antipattern #8)." ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK/document#comparedWith> a owl:ObjectProperty ;
+<https://w3id.org/iprok/document#comparedWith> a owl:ObjectProperty ;
     rdfs:label "compared with" ;
-    dcterms:isPartOf <https://w3id.org/IproK/document> ;
+    dcterms:isPartOf <https://w3id.org/iprok/document> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/comparedWith> ;
-    rdfs:comment "The prior <https://w3id.org/IproK/document#Drawing> revision the new one was diffed against. Domain unspecified (antipattern #8)." ;
-    rdfs:range <https://w3id.org/IproK/document#Drawing> .
+    rdfs:comment "The prior <https://w3id.org/iprok/document#Drawing> revision the new one was diffed against. Domain unspecified (antipattern #8)." ;
+    rdfs:range <https://w3id.org/iprok/document#Drawing> .
 
-<https://w3id.org/IproK/document#detectedAt> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/document#detectedAt> a owl:DatatypeProperty ;
     rdfs:label "detected at" ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/document> ;
+    dcterms:isPartOf <https://w3id.org/iprok/document> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/detectedAt> ;
     rdfs:comment "The detected at property in the integrated project information model."@en ;
     rdfs:range xsd:dateTime .
 
-<https://w3id.org/IproK/document#detectedBy> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/document#detectedBy> a owl:DatatypeProperty ;
     rdfs:label "detected by" ;
-    dcterms:isPartOf <https://w3id.org/IproK/document> ;
+    dcterms:isPartOf <https://w3id.org/iprok/document> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/detectedBy> ;
     rdfs:comment "Model identifier, e.g. \"gemini-2.0-flash\". A literal, not an agent IRI — this is machine-detected, the PROV-O wrap still records the triggering user." ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK/document#discipline> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/document#discipline> a owl:DatatypeProperty ;
     rdfs:label "discipline" ;
-    dcterms:isPartOf <https://w3id.org/IproK/document> ;
+    dcterms:isPartOf <https://w3id.org/iprok/document> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/discipline> ;
     rdfs:comment "Structural / Architectural / MEP / Civil / Electrical / Plumbing." ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK/document#drawingId> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/document#drawingId> a owl:DatatypeProperty ;
     rdfs:label "drawing id" ;
-    dcterms:isPartOf <https://w3id.org/IproK/document> ;
+    dcterms:isPartOf <https://w3id.org/iprok/document> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/drawingId> ;
     rdfs:comment "Project-unique sheet number, e.g. \"S-101\". Domain unspecified (antipattern #8)." ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK/document#drawingTitle> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/document#drawingTitle> a owl:DatatypeProperty ;
     rdfs:label "drawing title" ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/document> ;
+    dcterms:isPartOf <https://w3id.org/iprok/document> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/drawingTitle> ;
     rdfs:comment "The drawing title property in the integrated project information model."@en ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK/document#fileRef> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/document#fileRef> a owl:DatatypeProperty ;
     rdfs:label "file ref" ;
-    dcterms:isPartOf <https://w3id.org/IproK/document> ;
+    dcterms:isPartOf <https://w3id.org/iprok/document> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/fileRef> ;
     rdfs:comment "Canonical s3:// URI of the stored original. Domain unspecified (antipattern #8 — M2 reuse)." ;
     rdfs:range xsd:anyURI .
 
-<https://w3id.org/IproK/document#geometry> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/document#geometry> a owl:DatatypeProperty ;
     rdfs:label "geometry" ;
-    dcterms:isPartOf <https://w3id.org/IproK/document> ;
+    dcterms:isPartOf <https://w3id.org/iprok/document> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/geometry> ;
     rdfs:comment "SVG path data or a coordinate-JSON string. Page-normalised so it survives zoom. Domain unspecified (antipattern #8)." ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK/document#inDrawing> a owl:ObjectProperty ;
+<https://w3id.org/iprok/document#inDrawing> a owl:ObjectProperty ;
     rdfs:label "in drawing" ;
-    dcterms:isPartOf <https://w3id.org/IproK/document> ;
+    dcterms:isPartOf <https://w3id.org/iprok/document> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/inDrawing> ;
-    rdfs:comment "The (new) <https://w3id.org/IproK/document#Drawing> this change was detected on. Domain unspecified (antipattern #8)." ;
-    rdfs:range <https://w3id.org/IproK/document#Drawing> .
+    rdfs:comment "The (new) <https://w3id.org/iprok/document#Drawing> this change was detected on. Domain unspecified (antipattern #8)." ;
+    rdfs:range <https://w3id.org/iprok/document#Drawing> .
 
-<https://w3id.org/IproK/document#includesDrawings> a owl:ObjectProperty ;
+<https://w3id.org/iprok/document#includesDrawings> a owl:ObjectProperty ;
     rdfs:label "includes drawings" ;
-    dcterms:isPartOf <https://w3id.org/IproK/document> ;
+    dcterms:isPartOf <https://w3id.org/iprok/document> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/includesDrawings> ;
     rdfs:comment "Repeatable. SHACL requires sh:minCount 1 — a transmittal with no drawings is meaningless. Domain unspecified (antipattern #8)." ;
-    rdfs:range <https://w3id.org/IproK/document#Drawing> .
+    rdfs:range <https://w3id.org/iprok/document#Drawing> .
 
-<https://w3id.org/IproK/document#issuedBy> a owl:ObjectProperty ;
+<https://w3id.org/iprok/document#issuedBy> a owl:ObjectProperty ;
     rdfs:label "issued by" ;
-    dcterms:isPartOf <https://w3id.org/IproK/document> ;
+    dcterms:isPartOf <https://w3id.org/iprok/document> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/issuedBy> ;
-    rdfs:comment "The <https://w3id.org/IproK#User> who issued the transmittal. Domain unspecified (antipattern #8)." ;
+    rdfs:comment "The <https://w3id.org/iprok#User> who issued the transmittal. Domain unspecified (antipattern #8)." ;
     rdfs:range prov:Agent .
 
-<https://w3id.org/IproK/document#issuedTo> a owl:ObjectProperty ;
+<https://w3id.org/iprok/document#issuedTo> a owl:ObjectProperty ;
     rdfs:label "issued to" ;
-    dcterms:isPartOf <https://w3id.org/IproK/document> ;
+    dcterms:isPartOf <https://w3id.org/iprok/document> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/issuedTo> ;
-    rdfs:comment "Repeatable — the <https://w3id.org/IproK#User>(s) the transmittal is addressed to. SHACL requires sh:minCount 1. Domain unspecified (antipattern #8)." ;
+    rdfs:comment "Repeatable — the <https://w3id.org/iprok#User>(s) the transmittal is addressed to. SHACL requires sh:minCount 1. Domain unspecified (antipattern #8)." ;
     rdfs:range prov:Agent .
 
-<https://w3id.org/IproK/document#lifecycleState> a owl:ObjectProperty ;
+<https://w3id.org/iprok/document#lifecycleState> a owl:ObjectProperty ;
     rdfs:label "lifecycle state" ;
-    dcterms:isPartOf <https://w3id.org/IproK/document> ;
+    dcterms:isPartOf <https://w3id.org/iprok/document> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/lifecycleState> ;
-    rdfs:comment "Points at one <https://w3id.org/IproK/document#DrawingState> individual. Domain unspecified (antipattern #8); SHACL DrawingShape constrains the value via sh:in (sh:in ONLY, no sh:class — the API validates a node's turtle in isolation with no ontology import, per the V0.37 cross-graph-validation caveat)." ;
-    rdfs:range <https://w3id.org/IproK/document#DrawingState> .
+    rdfs:comment "Points at one <https://w3id.org/iprok/document#DrawingState> individual. Domain unspecified (antipattern #8); SHACL DrawingShape constrains the value via sh:in (sh:in ONLY, no sh:class — the API validates a node's turtle in isolation with no ontology import, per the V0.37 cross-graph-validation caveat)." ;
+    rdfs:range <https://w3id.org/iprok/document#DrawingState> .
 
-<https://w3id.org/IproK/document#locationHint> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/document#locationHint> a owl:DatatypeProperty ;
     rdfs:label "location hint" ;
-    dcterms:isPartOf <https://w3id.org/IproK/document> ;
+    dcterms:isPartOf <https://w3id.org/iprok/document> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/locationHint> ;
     rdfs:comment "Optional free-text where-on-the-sheet hint from the vision model (e.g. \"grid C-4, near the stair core\")." ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK/document#onDrawing> a owl:ObjectProperty ;
+<https://w3id.org/iprok/document#onDrawing> a owl:ObjectProperty ;
     rdfs:label "on drawing" ;
-    dcterms:isPartOf <https://w3id.org/IproK/document> ;
+    dcterms:isPartOf <https://w3id.org/iprok/document> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/onDrawing> ;
-    rdfs:comment "The <https://w3id.org/IproK/document#Drawing> this annotation marks up. Domain unspecified (antipattern #8)." ;
-    rdfs:range <https://w3id.org/IproK/document#Drawing> .
+    rdfs:comment "The <https://w3id.org/iprok/document#Drawing> this annotation marks up. Domain unspecified (antipattern #8)." ;
+    rdfs:range <https://w3id.org/iprok/document#Drawing> .
 
-<https://w3id.org/IproK/document#pageNumber> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/document#pageNumber> a owl:DatatypeProperty ;
     rdfs:label "page number" ;
-    dcterms:isPartOf <https://w3id.org/IproK/document> ;
+    dcterms:isPartOf <https://w3id.org/iprok/document> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/pageNumber> ;
     rdfs:comment "1-based PDF page the markup sits on. Domain unspecified (antipattern #8)." ;
     rdfs:range xsd:integer .
 
-<https://w3id.org/IproK/document#purpose> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/document#purpose> a owl:DatatypeProperty ;
     rdfs:label "purpose" ;
-    dcterms:isPartOf <https://w3id.org/IproK/document> ;
+    dcterms:isPartOf <https://w3id.org/iprok/document> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/purpose> ;
     rdfs:comment "ForConstruction / ForReview / ForApproval / ForInformation / AsBuilt / Superseded. SHACL constrains via sh:in (string literal, no sh:class — same idiom as DrawingChangeShape). Domain unspecified (antipattern #8)." ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK/document#rfiAnswer> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/document#rfiAnswer> a owl:DatatypeProperty ;
     rdfs:label "RFI answer" ;
-    dcterms:isPartOf <https://w3id.org/IproK/document> ;
+    dcterms:isPartOf <https://w3id.org/iprok/document> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/rfiAnswer> ;
     rdfs:comment "The answer text. Mandatory once state = RFIAnswered." ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK/document#rfiBody> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/document#rfiBody> a owl:DatatypeProperty ;
     rdfs:label "RFI body" ;
-    dcterms:isPartOf <https://w3id.org/IproK/document> ;
+    dcterms:isPartOf <https://w3id.org/iprok/document> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/rfiBody> ;
     rdfs:comment "The question being asked." ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK/document#rfiId> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/document#rfiId> a owl:DatatypeProperty ;
     rdfs:label "RFI id" ;
-    dcterms:isPartOf <https://w3id.org/IproK/document> ;
+    dcterms:isPartOf <https://w3id.org/iprok/document> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/rfiId> ;
     rdfs:comment "Project-unique, zero-padded, e.g. \"RFI-0042\". Sequential per project (SPARQL MAX+1, same proven pattern as V0.29 measurementNo — FusekiRepo is Fuseki-only per the Layering rule, so no Redis client in the SPARQL layer). Domain unspecified (antipattern #8)." ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK/document#rfiState> a owl:ObjectProperty ;
+<https://w3id.org/iprok/document#rfiState> a owl:ObjectProperty ;
     rdfs:label "RFI state" ;
-    dcterms:isPartOf <https://w3id.org/IproK/document> ;
+    dcterms:isPartOf <https://w3id.org/iprok/document> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/rfiState> ;
-    rdfs:comment "Points at one <https://w3id.org/IproK/document#RFIState> individual. SHACL constrains via sh:in (sh:in ONLY, no sh:class — the API validates a node's turtle in isolation, per the V0.37 cross-graph caveat). Domain unspecified (antipattern #8)." ;
-    rdfs:range <https://w3id.org/IproK/document#RFIState> .
+    rdfs:comment "Points at one <https://w3id.org/iprok/document#RFIState> individual. SHACL constrains via sh:in (sh:in ONLY, no sh:class — the API validates a node's turtle in isolation, per the V0.37 cross-graph caveat). Domain unspecified (antipattern #8)." ;
+    rdfs:range <https://w3id.org/iprok/document#RFIState> .
 
-<https://w3id.org/IproK/document#rfiSubject> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/document#rfiSubject> a owl:DatatypeProperty ;
     rdfs:label "RFI subject" ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/document> ;
+    dcterms:isPartOf <https://w3id.org/iprok/document> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/rfiSubject> ;
     rdfs:comment "The rfi subject property in the integrated project information model."@en ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK/document#stampType> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/document#stampType> a owl:DatatypeProperty ;
     rdfs:label "stamp type" ;
-    dcterms:isPartOf <https://w3id.org/IproK/document> ;
+    dcterms:isPartOf <https://w3id.org/iprok/document> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/stampType> ;
     rdfs:comment "Optional — APPROVED / FOR CONSTRUCTION / FOR REVIEW / SUPERSEDED / NOT FOR CONSTRUCTION (only on Stamp annotations)." ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK/document#transmittalDate> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/document#transmittalDate> a owl:DatatypeProperty ;
     rdfs:label "transmittal date" ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/document> ;
+    dcterms:isPartOf <https://w3id.org/iprok/document> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/transmittalDate> ;
     rdfs:comment "The transmittal date property in the integrated project information model."@en ;
     rdfs:range xsd:dateTime .
 
-<https://w3id.org/IproK/document#transmittalId> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/document#transmittalId> a owl:DatatypeProperty ;
     rdfs:label "transmittal id" ;
-    dcterms:isPartOf <https://w3id.org/IproK/document> ;
+    dcterms:isPartOf <https://w3id.org/iprok/document> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/transmittalId> ;
     rdfs:comment "Project-unique zero-padded short id, e.g. \"T-0042\". SPARQL MAX+1 (V0.29 measurementNo posture, same as RFI-NNNN). Domain unspecified (antipattern #8)." ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK/document#DrawingState> a owl:Class ;
+<https://w3id.org/iprok/document#DrawingState> a owl:Class ;
     rdfs:label "Drawing state" ;
-    dcterms:isPartOf <https://w3id.org/IproK/document> ;
+    dcterms:isPartOf <https://w3id.org/iprok/document> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/DrawingState> ;
-    rdfs:comment "ISO 19650 information-container lifecycle state. Transitions: WIP->Shared->Published->Archived; any->Superseded on a newer published revision. Modelled like <https://w3id.org/IproK/quality#NCRStatus> / <https://w3id.org/IproK/safety#IncidentType>." .
+    rdfs:comment "ISO 19650 information-container lifecycle state. Transitions: WIP->Shared->Published->Archived; any->Superseded on a newer published revision. Modelled like <https://w3id.org/iprok/quality#NCRStatus> / <https://w3id.org/iprok/safety#IncidentType>." .
 
-<https://w3id.org/IproK/document#RFIState> a owl:Class ;
+<https://w3id.org/iprok/document#RFIState> a owl:Class ;
     rdfs:label "RFI state" ;
-    dcterms:isPartOf <https://w3id.org/IproK/document> ;
+    dcterms:isPartOf <https://w3id.org/iprok/document> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/RFIState> ;
-    rdfs:comment "RFI lifecycle. Transitions (enforced in the API): Draft->Submitted (raiser); Submitted->UnderReview (assignee/PM); UnderReview->Answered (assignee); Answered->Closed (raiser confirms); Answered->UnderReview (raiser rejects); any->Cancelled (PM/Admin). Modelled like <https://w3id.org/IproK/document#DrawingState> / <https://w3id.org/IproK/quality#NCRStatus>." .
+    rdfs:comment "RFI lifecycle. Transitions (enforced in the API): Draft->Submitted (raiser); Submitted->UnderReview (assignee/PM); UnderReview->Answered (assignee); Answered->Closed (raiser confirms); Answered->UnderReview (raiser rejects); any->Cancelled (PM/Admin). Modelled like <https://w3id.org/iprok/document#DrawingState> / <https://w3id.org/iprok/quality#NCRStatus>." .
 
-<https://w3id.org/IproK/document#Document> a owl:Class ;
+<https://w3id.org/iprok/document#Document> a owl:Class ;
     rdfs:label "Document" ;
-    dcterms:isPartOf <https://w3id.org/IproK/document> ;
+    dcterms:isPartOf <https://w3id.org/iprok/document> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/Document> ;
     rdfs:comment "A controlled project document / drawing artefact (ISO 19650 information container)." .
 
-<https://w3id.org/IproK/document#Drawing> a owl:Class ;
+<https://w3id.org/iprok/document#Drawing> a owl:Class ;
     rdfs:label "Drawing" ;
-    dcterms:isPartOf <https://w3id.org/IproK/document> ;
+    dcterms:isPartOf <https://w3id.org/iprok/document> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/Drawing> ;
-    rdfs:comment "A construction drawing (GA / Detail / Section / Elevation / Layout / Schematic). One node per (drawingId, revision); <https://w3id.org/IproK/integrated#supersedes> links a new revision to the one it replaces (S2.1)." ;
-    rdfs:subClassOf <https://w3id.org/IproK/document#Document> .
+    rdfs:comment "A construction drawing (GA / Detail / Section / Elevation / Layout / Schematic). One node per (drawingId, revision); <https://w3id.org/iprok/integrated#supersedes> links a new revision to the one it replaces (S2.1)." ;
+    rdfs:subClassOf <https://w3id.org/iprok/document#Document> .
 

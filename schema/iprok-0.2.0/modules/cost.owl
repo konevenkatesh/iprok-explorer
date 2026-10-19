@@ -1,0 +1,574 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:dcterms="http://purl.org/dc/terms/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+>
+  <rdf:Description rdf:about="https://w3id.org/iprok/cost#actualCostAmount">
+    <rdfs:domain rdf:resource="https://w3id.org/iprok/cost#CostItem"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:comment>this is actual cost amount</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:label xml:lang="en">actualCostAmount</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/cost#importedEdition">
+    <rdfs:comment>The source edition, e.g. cpwd-dar-2023. No rdfs:domain.</rdfs:comment>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/cost"/>
+    <rdfs:label xml:lang="en">imported Edition</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/importedEdition"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/cost#remainingCostAmount">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="https://w3id.org/iprok/cost#CostItem"/>
+    <rdfs:label xml:lang="en">remainingCostAmount</rdfs:label>
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+    <rdfs:comment xml:lang="en">The remaining cost amount property in the integrated project information model. Its declared domain is CostItem and its declared range is decimal.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/cost#analysedQuantity">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment>The quantity the details of cost are for (a CPWD analysis is often for 10 m² or 1 quintal); the rate per unit is the total divided by it. No rdfs:domain.</rdfs:comment>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/analysedQuantity"/>
+    <rdfs:label xml:lang="en">analysed Quantity</rdfs:label>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/cost"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/cost#CostType">
+    <rdfs:subClassOf rdf:resource="https://w3id.org/iprok#IproKThing"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>CostType</rdfs:label>
+    <rdfs:comment xml:lang="en">A classification of expenditure by the kind of resource or expense involved.</rdfs:comment>
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/cost#analysisVersion">
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/cost"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="en">analysis Version</rdfs:label>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/analysisVersion"/>
+    <rdfs:comment>Version number of an analysis, from 1. No rdfs:domain.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/cost#importedReviewState">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/importedReviewState"/>
+    <rdfs:comment>The source's review state at import: proposed (machine-extracted, not approved by an engineer) or approved. No rdfs:domain.</rdfs:comment>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/cost"/>
+    <rdfs:label xml:lang="en">imported Review State</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/cost#ResourceMapping">
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/ResourceMapping"/>
+    <rdfs:label xml:lang="en">Resource Mapping</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/cost"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+    <rdfs:comment>Which of the organisation's resources a code of an outside source stands for (a CPWD DAR resource code, a cited CPWD item). Chosen by a person, never guessed; a change supersedes the old mapping.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/cost#basicRate">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:comment>The organisation's current rate per unit, in rupees. Absent = not priced yet (never read as zero). No rdfs:domain.</rdfs:comment>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/cost"/>
+    <rdfs:label xml:lang="en">basic Rate</rdfs:label>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/basicRate"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/cost#ProjectResourcePrice">
+    <rdfs:comment>The one rate a project uses for a resource. Copied from the organisation's basic rates when first used; changed only by a person, and every change is recorded.</rdfs:comment>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/ProjectResourcePrice"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/cost"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+    <rdfs:label xml:lang="en">Project Resource Price</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/cost#LaborCost">
+    <rdfs:subClassOf rdf:resource="https://w3id.org/iprok/cost#CostType"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>LaborCost</rdfs:label>
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+    <rdfs:comment xml:lang="en">A cost-type classification for labour-related expenditure.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/cost#excludesGroup">
+    <rdfs:label xml:lang="en">excludes Group</rdfs:label>
+    <rdfs:comment>On an addition with a Cost or Running base: a line group left out of the base, as CPWD writes 'Add 15% CPOH on Y-A'. Repeatable. No rdfs:domain.</rdfs:comment>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/cost"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/excludesGroup"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/cost#maintainabilityRating">
+    <rdfs:comment xml:lang="en">The maintainability rating property in the integrated project information model.</rdfs:comment>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/cost"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+    <rdfs:label xml:lang="en">maintainability Rating</rdfs:label>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/maintainabilityRating"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/cost#lineKind">
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/lineKind"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="en">line Kind</rdfs:label>
+    <rdfs:comment>gang: the quantity is how many of the resource are in the gang (per unit = count × analysed quantity ÷ gang output); perUnit: the quantity is per analysed quantity. No rdfs:domain.</rdfs:comment>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/cost"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/cost#analysisNote">
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/cost"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/analysisNote"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="en">analysis Note</rdfs:label>
+    <rdfs:comment>Why this version was saved. No rdfs:domain.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/cost#RateAnalysis">
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/RateAnalysis"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+    <rdfs:label xml:lang="en">Rate Analysis</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/cost"/>
+    <rdfs:comment>One version of an analysis of rates: a library analysis the organisation keeps, or the analysis behind one BOQ line of a project. A save writes a new version and supersedes the old one.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/cost#analysisSource">
+    <rdfs:comment>Where the coefficients come from, e.g. a published analysis of rates or the organisation's own; never blank, so a figure can be traced. No rdfs:domain.</rdfs:comment>
+    <rdfs:label xml:lang="en">analysis Source</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/analysisSource"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/cost"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/cost#CostCategory">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/iprok#IproKThing"/>
+    <rdfs:comment xml:lang="en">A classification grouping cost items by their purpose or accounting category.</rdfs:comment>
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+    <rdfs:label>CostCategory</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/cost#priceAsOf">
+    <rdfs:label xml:lang="en">price As Of</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/cost"/>
+    <rdfs:comment>The date the project's rate was set. No rdfs:domain.</rdfs:comment>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/priceAsOf"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/cost#inAnalysis">
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/cost"/>
+    <rdfs:label xml:lang="en">in Analysis</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment>The analysis version a line or addition belongs to. No rdfs:domain.</rdfs:comment>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/inAnalysis"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/cost#sourceCitation">
+    <rdfs:comment>Document, edition, volume, page and item of the printed source, in words a quantity surveyor can look up. No rdfs:domain.</rdfs:comment>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/cost"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/sourceCitation"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="en">source Citation</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/cost#rateSource">
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/cost"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/rateSource"/>
+    <rdfs:label xml:lang="en">rate Source</rdfs:label>
+    <rdfs:comment>Where a rate came from: a supplier quote, a purchase order, a published schedule. No rdfs:domain.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/cost#optionTitle">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:comment xml:lang="en">The option title property in the integrated project information model.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/optionTitle"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/cost"/>
+    <rdfs:label xml:lang="en">option Title</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/cost#additionLabel">
+    <rdfs:comment>What the addition is for. No rdfs:domain.</rdfs:comment>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/additionLabel"/>
+    <rdfs:label xml:lang="en">addition Label</rdfs:label>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/cost"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/cost#flexibilityRating">
+    <rdfs:comment xml:lang="en">The flexibility rating property in the integrated project information model.</rdfs:comment>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/flexibilityRating"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/cost"/>
+    <rdfs:label xml:lang="en">flexibility Rating</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/cost#resourceName">
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/cost"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/resourceName"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="en">resource Name</rdfs:label>
+    <rdfs:comment>What the resource is, e.g. 'Cement OPC 53 grade, 50 kg bag'. No rdfs:domain.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/cost#lineQuantity">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:comment>The gang count or the quantity per analysed quantity, by &lt;https://w3id.org/iprok/cost#lineKind&gt;. No rdfs:domain.</rdfs:comment>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/cost"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/lineQuantity"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="en">line Quantity</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/cost#EquipmentCost">
+    <rdfs:subClassOf rdf:resource="https://w3id.org/iprok/cost#CostType"/>
+    <rdfs:comment xml:lang="en">A cost-type classification for equipment-related expenditure.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>EquipmentCost</rdfs:label>
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/cost#importedItemCode">
+    <rdfs:comment>The source's own code: the CPWD item number of an analysis, the DAR resource code of a resource. No rdfs:domain.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="en">imported Item Code</rdfs:label>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/importedItemCode"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/cost"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/cost#hasCostCategory">
+    <rdfs:comment xml:lang="en">The has cost category property in the integrated project information model. Its declared domain is CostItem and its declared range is CostCategory.</rdfs:comment>
+    <rdfs:label>hasCostCategory</rdfs:label>
+    <rdfs:domain rdf:resource="https://w3id.org/iprok/cost#CostItem"/>
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="https://w3id.org/iprok/cost#CostCategory"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/cost#priceSource">
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/cost"/>
+    <rdfs:label xml:lang="en">price Source</rdfs:label>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/priceSource"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment>Where the project's rate came from. No rdfs:domain.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/cost#hasCostType">
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="https://w3id.org/iprok/cost#CostType"/>
+    <rdfs:comment xml:lang="en">The has cost type property in the integrated project information model. Its declared domain is CostItem and its declared range is CostType.</rdfs:comment>
+    <rdfs:label>hasCostType</rdfs:label>
+    <rdfs:domain rdf:resource="https://w3id.org/iprok/cost#CostItem"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/cost#outputSource">
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/cost"/>
+    <rdfs:label xml:lang="en">output Source</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/outputSource"/>
+    <rdfs:comment>typed | measured | library — where the gang output came from; measured means the organisation's own site productivity (P2A). No rdfs:domain.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/cost#CostResource">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+    <rdfs:comment>An entry in an organisation's book of basic rates: a trade, material, plant item or other cost with its unit and current rate.</rdfs:comment>
+    <rdfs:label xml:lang="en">Cost Resource</rdfs:label>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/CostResource"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/cost"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/cost#AnalysisLine">
+    <rdfs:comment>One resource line of an analysis version.</rdfs:comment>
+    <rdfs:label xml:lang="en">Analysis Line</rdfs:label>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/AnalysisLine"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/cost"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/cost#analysisId">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="en">analysis Id</rdfs:label>
+    <rdfs:comment>Human-facing id: RL-NNNN in the organisation library, RA-NNNN in a project. Shared by every version. No rdfs:domain.</rdfs:comment>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/cost"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/analysisId"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/cost#userValueRating">
+    <rdfs:label xml:lang="en">user Value Rating</rdfs:label>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/cost"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/userValueRating"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:comment xml:lang="en">The user value rating property in the integrated project information model.</rdfs:comment>
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/cost#additionPercent">
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/cost"/>
+    <rdfs:label xml:lang="en">addition Percent</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment>The percentage, 0 to 100. No rdfs:domain.</rdfs:comment>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/additionPercent"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/cost#budgetedCostAmount">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:comment xml:lang="en">The budgeted cost amount property in the integrated project information model. Its declared domain is CostItem and its declared range is decimal.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://w3id.org/iprok/cost#CostItem"/>
+    <rdfs:label xml:lang="en">budgetedCostAmount</rdfs:label>
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/cost#externalScheme">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/externalScheme"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="en">external Scheme</rdfs:label>
+    <rdfs:comment>The code list an external code belongs to, e.g. cpwd-dar-resource. No rdfs:domain.</rdfs:comment>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/cost"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/cost#rateAsOf">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/cost"/>
+    <rdfs:label xml:lang="en">rate As Of</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/rateAsOf"/>
+    <rdfs:comment>The date a rate was last confirmed. No rdfs:domain.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/cost#optionId">
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/cost"/>
+    <rdfs:comment>Stable id within the project (DO-0001). Domain unspecified (antipattern #8).</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/optionId"/>
+    <rdfs:label xml:lang="en">option Id</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/cost#vendorName">
+    <rdfs:label xml:lang="en">vendorName</rdfs:label>
+    <rdfs:comment xml:lang="en">The vendor name property in the integrated project information model. Its declared domain is CostItem and its declared range is string.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://w3id.org/iprok/cost#CostItem"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/cost#additionBase">
+    <rdfs:label xml:lang="en">addition Base</rdfs:label>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/cost"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/additionBase"/>
+    <rdfs:comment>Labour | Material | Plant | Cost (all lines) | Running (all lines and every earlier addition). No rdfs:domain.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/cost#AnalysisAddition">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+    <rdfs:comment>A percentage added to an analysis in order, on a stated base; water charges on cost, contractor's profit and overheads on the running total.</rdfs:comment>
+    <rdfs:label xml:lang="en">Analysis Addition</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/cost"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/AnalysisAddition"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/cost#analysisScope">
+    <rdfs:comment>library | project. No rdfs:domain.</rdfs:comment>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/analysisScope"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/cost"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="en">analysis Scope</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/cost#analysisTitle">
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/cost"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/analysisTitle"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="en">analysis Title</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment>The work the analysis prices, in plain words. No rdfs:domain.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/cost#optionStatus">
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/cost"/>
+    <rdfs:comment>Proposed / Approved / Rejected / Superseded. Domain unspecified (antipattern #8).</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/optionStatus"/>
+    <rdfs:label xml:lang="en">option Status</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/cost#resourceKind">
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/resourceKind"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/cost"/>
+    <rdfs:label xml:lang="en">resource Kind</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:comment>Labour | Material | Plant | Carriage | Other. No rdfs:domain.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/cost#outputObservations">
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/cost"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/outputObservations"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:comment>How many measured site days stand behind a measured output. No rdfs:domain.</rdfs:comment>
+    <rdfs:label xml:lang="en">output Observations</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/cost#importedCheckStatus">
+    <rdfs:comment>The source's arithmetic check at import: reconciled, reconciled_with_unchecked or flagged. No rdfs:domain.</rdfs:comment>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/importedCheckStatus"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/cost"/>
+    <rdfs:label xml:lang="en">imported Check Status</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/cost#resourceCode">
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/cost"/>
+    <rdfs:comment>The organisation's code for a cost resource, e.g. MAT-CEMENT-OPC53. Lines and project prices refer to it. No rdfs:domain.</rdfs:comment>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/resourceCode"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="en">resource Code</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/cost#ExpenseItem">
+    <rdfs:label>ExpenseItem</rdfs:label>
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+    <rdfs:comment xml:lang="en">A cost-type classification for other project expenses.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/iprok/cost#CostType"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/cost#lineGroup">
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/cost"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/lineGroup"/>
+    <rdfs:comment>A group letter on an analysis line (CPWD marks lines that use another item's rate with 'A'), so an addition can leave the group out. No rdfs:domain.</rdfs:comment>
+    <rdfs:label xml:lang="en">line Group</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/cost#atCompleteCostAmount">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:label xml:lang="en">atCompleteCostAmount</rdfs:label>
+    <rdfs:domain rdf:resource="https://w3id.org/iprok/cost#CostItem"/>
+    <rdfs:comment xml:lang="en">The at complete cost amount property in the integrated project information model. Its declared domain is CostItem and its declared range is decimal.</rdfs:comment>
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/cost#MaterialCost">
+    <rdfs:subClassOf rdf:resource="https://w3id.org/iprok/cost#CostType"/>
+    <rdfs:label>MaterialCost</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+    <rdfs:comment xml:lang="en">A cost-type classification for material-related expenditure.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/cost#gangOutput">
+    <rdfs:label xml:lang="en">gang Output</rdfs:label>
+    <rdfs:comment>What one gang produces in a day, in the analysis unit. Labour and plant per unit = gang size ÷ this. No rdfs:domain.</rdfs:comment>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/gangOutput"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/cost"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/cost#lineOrder">
+    <rdfs:comment>Position of a line or addition within its analysis, from 1. No rdfs:domain.</rdfs:comment>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/cost"/>
+    <rdfs:label xml:lang="en">line Order</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/lineOrder"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/cost#priceRate">
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/cost"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:comment>The project's rate per unit, in rupees. No rdfs:domain.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/priceRate"/>
+    <rdfs:label xml:lang="en">price Rate</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/cost#lineNote">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="en">line Note</rdfs:label>
+    <rdfs:comment>What the source printed for a line, when it differs from the resource's name (or several source lines merged into one). No rdfs:domain.</rdfs:comment>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/cost"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/lineNote"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/cost#optionDiscipline">
+    <rdfs:label xml:lang="en">option Discipline</rdfs:label>
+    <rdfs:comment>Architecture / Structure / MEP / Finishes. Domain unspecified (antipattern #8).</rdfs:comment>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/optionDiscipline"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/cost"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/cost#DesignOption">
+    <rdfs:label>Design option</rdfs:label>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/DesignOption"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/cost"/>
+    <rdfs:comment>A priced design decision under consideration or decided. Decisions are PROV-O supersessions; Approved options move the working estimate.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/cost#qualityRating">
+    <rdfs:label xml:lang="en">quality Rating</rdfs:label>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/qualityRating"/>
+    <rdfs:comment>Design quality / performance grade 1–5.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/cost"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/cost#importedRecordVersion">
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/cost"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/importedRecordVersion"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment>The outside record's content version at import, e.g. sha256:… — the key for 'already imported, unchanged'. No rdfs:domain.</rdfs:comment>
+    <rdfs:label xml:lang="en">imported Record Version</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/cost#costDeltaAmount">
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/costDeltaAmount"/>
+    <rdfs:label xml:lang="en">cost Delta Amount</rdfs:label>
+    <rdfs:comment>Signed cost impact in ₹ against the working estimate.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/cost"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/cost#externalCode">
+    <rdfs:label xml:lang="en">external Code</rdfs:label>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/cost"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/externalCode"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:comment>A code of an outside source, e.g. the DAR resource code 0114. No rdfs:domain.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/cost#CostItem">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/iprok#IproKThing"/>
+    <rdfs:label>CostItem</rdfs:label>
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+    <rdfs:comment xml:lang="en">A cost record associated with scheduled work or a resource allocation.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/cost#executionReadinessRating">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/executionReadinessRating"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:comment>How buildable this option is with the resources at hand, 1–5.</rdfs:comment>
+    <rdfs:label xml:lang="en">execution Readiness Rating</rdfs:label>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/cost"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/cost#timeDeltaDays">
+    <rdfs:label xml:lang="en">time Delta Days</rdfs:label>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/cost"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/timeDeltaDays"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment>Signed schedule impact in days.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/cost#fromLibraryAnalysis">
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/cost"/>
+    <rdfs:comment>The library analysis version a project analysis was copied from. No rdfs:domain.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/fromLibraryAnalysis"/>
+    <rdfs:label xml:lang="en">from Library Analysis</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/cost#importedFrom">
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/cost"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/importedFrom"/>
+    <rdfs:comment>The outside record (a VIDHI rate-analysis or basic-rate record IRI) an analysis version or a resource was imported from. No rdfs:domain.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">imported From</rdfs:label>
+  </rdf:Description>
+</rdf:RDF>

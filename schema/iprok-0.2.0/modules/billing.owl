@@ -1,0 +1,465 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:dcterms="http://purl.org/dc/terms/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+>
+  <rdf:Description rdf:about="https://w3id.org/iprok/billing#forBill">
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/forBill"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>for bill</rdfs:label>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/billing"/>
+    <rdfs:comment>Links a &lt;https://w3id.org/iprok/billing#Recovery&gt; to its parent &lt;https://w3id.org/iprok/billing#RABill&gt;. Mandatory. Domain unspecified (antipattern #8).</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/billing#rateFromAnalysis">
+    <rdfs:label xml:lang="en">rate From Analysis</rdfs:label>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/billing"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment>On a BOQ line: the analysis version whose rate was applied to it. No rdfs:domain.</rdfs:comment>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/rateFromAnalysis"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/billing#description">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/billing"/>
+    <rdfs:label>description</rdfs:label>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/description"/>
+    <rdfs:comment xml:lang="en">The description property in the integrated project information model.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/billing#Payment">
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/billing"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/Payment"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+    <rdfs:label>Payment</rdfs:label>
+    <rdfs:comment>A payment made by the client against a certified RA Bill, imported from Tally ERP XML exports. Each payment corresponds to one Tally voucher.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/billing#contractorSignedAt">
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/billing"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    <rdfs:label>contractor signed at</rdfs:label>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/contractorSignedAt"/>
+    <rdfs:comment>Timestamp of contractor OTP verification. Set when jmStatus transitions from JMPendingContractor to JMPendingDepartmental. Domain unspecified.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/billing#paymentAmount">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/billing"/>
+    <rdfs:comment>INR amount of the payment (absolute value — Tally stores as negative). Mandatory.</rdfs:comment>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/paymentAmount"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:label>payment amount</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/billing#recoveryBase">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/billing"/>
+    <rdfs:comment>What the rate applies to: GrossAmount | LabourComponent | MaterialComponent. Domain unspecified.</rdfs:comment>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/recoveryBase"/>
+    <rdfs:label>recovery base</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/billing#previousBillAmount">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:label>previous bill amount</rdfs:label>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/previousBillAmount"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment>Value of work done up to the immediately preceding RA Bill: that bill's cumulativeGross (INR), as CPWD Form 26 deducts it. NOT its netPayable — recoveries are payments made on the contractor's behalf, not unbilled work. Zero for the first bill. Mandatory. Domain unspecified.</rdfs:comment>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/billing"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/billing#RABill">
+    <rdfs:subClassOf rdf:resource="https://w3id.org/iprok/document#Document"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/RABill"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/billing"/>
+    <rdfs:comment>A Running Account Bill (RA Bill); the payment instrument in Indian government and PSU construction contracts. Aggregates all approved measurements for a billing period, applies BOQ rates, deducts previous payments and recoveries, and produces the net payable amount.</rdfs:comment>
+    <rdfs:label>Running Account Bill</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/billing#linkedElement">
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/linkedElement"/>
+    <rdfs:comment>Optional — an IFC GlobalId (GUID) the markup points at. The cross-domain join to the model.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/billing"/>
+    <rdfs:label>linked element</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/billing#paymentId">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/billing"/>
+    <rdfs:comment>Tally voucher number. Mandatory. Used as idempotency key on re-import.</rdfs:comment>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/paymentId"/>
+    <rdfs:label>payment ID</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/billing#measurementNo">
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/measurementNo"/>
+    <rdfs:label>measurement number</rdfs:label>
+    <rdfs:comment>Sequential entry number within a single BOQ item (1, 2, 3, …). Auto-assigned server-side via SPARQL MAX(?n)+1; the mobile UI does not pick this.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/billing"/>
+    <rdfs:domain rdf:resource="https://w3id.org/iprok/billing#Measurement"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/billing#billNo">
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/billing"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/billNo"/>
+    <rdfs:label>bill number</rdfs:label>
+    <rdfs:comment>Auto-numbered RA Bill identifier (e.g. RA-1, RA-2). Mandatory. Domain unspecified.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/billing#departmentalSignatory">
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/billing"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/departmentalSignatory"/>
+    <rdfs:comment>Points at the &lt;https://w3id.org/iprok#User&gt; (JE/AE) who counter-signs on behalf of the department. Mandatory. Domain unspecified.</rdfs:comment>
+    <rdfs:label>departmental signatory</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/billing#BillState">
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/billing"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/BillState"/>
+    <rdfs:label>Bill State</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment>Lifecycle state of a &lt;https://w3id.org/iprok/billing#RABill&gt;. Four individuals: BillDraft (initial, editable), BillSubmitted (sent for approval), BillApproved (departmental approval given), BillFinalised (payment authorised, immutable).</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/billing#tenderedQty">
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/tenderedQty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:label>tendered quantity</rdfs:label>
+    <rdfs:comment>Quantity the BOQ line was awarded for. Polymorphic — used by BOQItem and Deviation; rdfs:domain unspecified (antipattern #8).</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/billing"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/billing#jointSignatureRequired">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/billing"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <rdfs:comment>Computed server-side: true when the cumulative amount for this BOQ item (sum of measurement quantities × quoted rate) exceeds the project's joint_measurement_threshold. A true flag primes the SE to get the JE/AE co-sign in S3.5. Domain unspecified (antipattern #8).</rdfs:comment>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/jointSignatureRequired"/>
+    <rdfs:label>joint signature required</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/billing#Deviation">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/billing"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/Deviation"/>
+    <rdfs:comment>A BOQ quantity deviation: measured quantity exceeds tendered quantity by &gt;25%. Triggers approval routing before bill submission. Defined in S3.7.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Deviation</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/billing#rejectedBy">
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/billing"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>rejected by</rdfs:label>
+    <rdfs:comment>Points at the &lt;https://w3id.org/iprok#User&gt; who rejected the JointMeasurement. Set when jmStatus = JMRejected. Domain unspecified.</rdfs:comment>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/rejectedBy"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/billing#measuredAt">
+    <rdfs:comment xml:lang="en">The measured at property in the integrated project information model. Its declared domain is Measurement and its declared range is dateTime.</rdfs:comment>
+    <rdfs:label>measured at</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/billing"/>
+    <rdfs:domain rdf:resource="https://w3id.org/iprok/billing#Measurement"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/measuredAt"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/billing#paymentDate">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/billing"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/paymentDate"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    <rdfs:comment>Date the payment was made (from Tally voucher DATE tag). Mandatory.</rdfs:comment>
+    <rdfs:label>payment date</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/billing#departmentalSignedAt">
+    <rdfs:comment>Timestamp of departmental JE/AE OTP verification. Set when jmStatus transitions to JMComplete. Domain unspecified.</rdfs:comment>
+    <rdfs:label>departmental signed at</rdfs:label>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/departmentalSignedAt"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/billing"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/billing#billState">
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/billState"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/billing"/>
+    <rdfs:comment>Points at one of the four &lt;https://w3id.org/iprok/billing#BillState&gt; individuals. Mandatory. Domain unspecified (antipattern #8).</rdfs:comment>
+    <rdfs:label>bill state</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/billing#measuredBy">
+    <rdfs:comment xml:lang="en">The measured by property in the integrated project information model.</rdfs:comment>
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/measuredBy"/>
+    <rdfs:range rdf:resource="https://w3id.org/iprok#User"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/billing"/>
+    <rdfs:label>measured by</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/billing#breadth">
+    <rdfs:comment xml:lang="en">The breadth property in the integrated project information model. Its declared domain is Measurement and its declared range is decimal.</rdfs:comment>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/billing"/>
+    <rdfs:domain rdf:resource="https://w3id.org/iprok/billing#Measurement"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/breadth"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+    <rdfs:label>breadth</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/billing#totalRecoveries">
+    <rdfs:comment>Sum of all recovery deductions (TDS-IT, GST-TDS, LabourCess, SecurityDeposit, AdvanceRecovery, etc.) in INR. Mandatory. Domain unspecified.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label>total recoveries</rdfs:label>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/totalRecoveries"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/billing"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/billing#billDate">
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/billDate"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment>Date the bill was prepared. Mandatory. Domain unspecified.</rdfs:comment>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/billing"/>
+    <rdfs:label>bill date</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/billing#cumulativeGross">
+    <rdfs:label>cumulative gross</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/cumulativeGross"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment>Sum of all approved measurements to period end × BOQ rates (INR). Mandatory. Domain unspecified.</rdfs:comment>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/billing"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/billing#boqItemNo">
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/billing"/>
+    <rdfs:label>BOQ item number</rdfs:label>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/boqItemNo"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment>The hierarchical item number as it appears in the BOQ, e.g. '1.1', '2.3.4'. Mandatory. Domain unspecified.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/billing#currentGross">
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/currentGross"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:comment>cumulativeGross minus previousBillAmount (INR). The gross value for this billing period. Mandatory. Domain unspecified.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label>current gross</rdfs:label>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/billing"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/billing#rejectionReason">
+    <rdfs:comment>Free-text reason provided when rejecting a JointMeasurement. Domain unspecified.</rdfs:comment>
+    <rdfs:label>rejection reason</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/rejectionReason"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/billing"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/billing#amount">
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/amount"/>
+    <rdfs:label>amount</rdfs:label>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/billing"/>
+    <rdfs:comment>Contract amount = tenderedQty × quotedRate, server-computed. Mandatory. Domain unspecified.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/billing#depth">
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/billing"/>
+    <rdfs:label>depth</rdfs:label>
+    <rdfs:domain rdf:resource="https://w3id.org/iprok/billing#Measurement"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:comment xml:lang="en">The depth property in the integrated project information model. Its declared domain is Measurement and its declared range is decimal.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/depth"/>
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/billing#BOQItem">
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/BOQItem"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>BOQ item</rdfs:label>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/billing"/>
+    <rdfs:comment>One line in the project's Bill of Quantities. Catalogue node; measurements reference it via &lt;https://w3id.org/iprok/billing#measuredItem&gt;.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/billing#preparedBy">
+    <rdfs:label>prepared by</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/billing"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/preparedBy"/>
+    <rdfs:comment>Points at the &lt;https://w3id.org/iprok#User&gt; (PM/Admin) who prepared the bill. Mandatory. Domain unspecified (antipattern #8).</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/billing#recoveryRate">
+    <rdfs:comment>Percentage rate applied to the recovery base (e.g. 0.02 for 2%). Mandatory. Domain unspecified.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/recoveryRate"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label>recovery rate</rdfs:label>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/billing"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/billing#netPayable">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/netPayable"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/billing"/>
+    <rdfs:label>net payable</rdfs:label>
+    <rdfs:comment>currentGross minus totalRecoveries (INR). The actual payment due to the contractor. Mandatory. SHACL arithmetic invariant: netPayable = currentGross − totalRecoveries (tolerance ±₹0.01). Domain unspecified.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/billing#contractorSignatory">
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/contractorSignatory"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/billing"/>
+    <rdfs:label>contractor signatory</rdfs:label>
+    <rdfs:comment>Points at the &lt;https://w3id.org/iprok#User&gt; who represents the contractor. Mandatory. Domain unspecified.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/billing#measuredItem">
+    <rdfs:label>measured item</rdfs:label>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/measuredItem"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/billing"/>
+    <rdfs:comment>Polymorphic — links either a &lt;https://w3id.org/iprok/billing#Measurement&gt; or &lt;https://w3id.org/iprok/billing#JointMeasurement&gt; to the &lt;https://w3id.org/iprok/billing#BOQItem&gt; it covers. Domain intentionally left unspecified (antipattern #8): declaring rdfs:domain &lt;https://w3id.org/iprok/billing#Measurement&gt; would cause RDFS inference to classify every &lt;https://w3id.org/iprok/billing#JointMeasurement&gt; that carries this predicate as also a &lt;https://w3id.org/iprok/billing#Measurement&gt;, tripping MeasurementShape.</rdfs:comment>
+    <rdfs:range rdf:resource="https://w3id.org/iprok/billing#BOQItem"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/billing#quantity">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:label>quantity</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/billing"/>
+    <rdfs:comment>Final quantity for this measurement entry. If L+B+D were supplied, the server computes L×B×D and stores the result here — never the client-side calc. Direct-quantity entries store the user-entered value.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://w3id.org/iprok/billing#Measurement"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/quantity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/billing#isStarRate">
+    <rdfs:comment>True when this BOQ item has no SOR match (star-rate / DSR-deviation item). Mandatory. Domain unspecified.</rdfs:comment>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/isStarRate"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/billing"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <rdfs:label>is star rate</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/billing#recoveryType">
+    <rdfs:comment>Statutory deduction type. One of: TDS-IT, GST-TDS, LabourCess, SecurityDeposit, AdvanceRecovery, WaterElectricity, Royalty, Other. Domain unspecified.</rdfs:comment>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/recoveryType"/>
+    <rdfs:label>recovery type</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/billing"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/billing#locationRef">
+    <rdfs:comment>Free-text location label (e.g. 'Col C-12, Floor 2'). Distinct from &lt;https://w3id.org/iprok/reporting#locationWkt&gt; (GPS) and &lt;https://w3id.org/iprok/integrated#zone&gt; (auto-inferred from GPS).</rdfs:comment>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/locationRef"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/billing"/>
+    <rdfs:domain rdf:resource="https://w3id.org/iprok/billing#Measurement"/>
+    <rdfs:label>location reference</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/billing#jmId">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/billing"/>
+    <rdfs:comment>Auto-numbered JM identifier, e.g. JM-0001. Mandatory. Domain unspecified.</rdfs:comment>
+    <rdfs:label>JM ID</rdfs:label>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/jmId"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/billing#measuredQty">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:comment>Cumulative measured quantity at the time of the bill computation. Mandatory on Deviation. Domain unspecified.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/billing"/>
+    <rdfs:label>measured quantity</rdfs:label>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/measuredQty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/billing#recoveryAmount">
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/billing"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/recoveryAmount"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:label>recovery amount</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment>Computed recovery amount in INR (rate × base amount). Mandatory. Domain unspecified.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/billing#deviationState">
+    <rdfs:label>deviation state</rdfs:label>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/deviationState"/>
+    <rdfs:comment>Workflow state. One of: Pending | ApprovedEE | ApprovedSE | ApprovedCE | Rejected. Domain unspecified.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/billing"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/billing#JointMeasurement">
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/billing"/>
+    <rdfs:label>Joint Measurement</rdfs:label>
+    <rdfs:comment>A joint measurement record supporting separate contractor and departmental sign-off roles.</rdfs:comment>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/JointMeasurement"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Activity"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/billing#jmStatus">
+    <rdfs:comment>Points at one of the four &lt;https://w3id.org/iprok/billing#JMStatus&gt; individuals. Mandatory. Domain unspecified.</rdfs:comment>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/jmStatus"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/billing"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>JM status</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/billing#mbPageRef">
+    <rdfs:comment>Optional free-text reference to the physical Measurement Book page, e.g. 'Page 42, Item 7'. Written by the mobile entry form. Domain unspecified (antipattern #8).</rdfs:comment>
+    <rdfs:label>MB page reference</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/mbPageRef"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/billing"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/billing#Recovery">
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/Recovery"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+    <rdfs:label>Recovery</rdfs:label>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/billing"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment>A single statutory deduction line item within a &lt;https://w3id.org/iprok/billing#RABill&gt;. Each recovery has a type (TDS-IT, GST-TDS, LabourCess, SecurityDeposit, AdvanceRecovery, WaterElectricity, Royalty, Other), a rate (percentage), and a computed amount. Defined in S3.6.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/billing#deviationPct">
+    <rdfs:comment>Deviation as a percentage of tendered quantity: (measured - tendered) / tendered × 100. Mandatory. Domain unspecified.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/billing"/>
+    <rdfs:label>deviation percentage</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/deviationPct"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/billing#Measurement">
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/billing"/>
+    <rdfs:label>Measurement</rdfs:label>
+    <rdfs:comment>One MB entry: dimensions or direct quantity for one BOQ item, captured by a Site Engineer / QC. Joint OTP signature is M3; V0.29 just records the measurement.</rdfs:comment>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/Measurement"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Activity"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/billing#billingPeriodEnd">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/billingPeriodEnd"/>
+    <rdfs:label>billing period end</rdfs:label>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/billing"/>
+    <rdfs:comment>End date of the billing period (inclusive). Measurements up to this date are included. Mandatory. Domain unspecified.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/billing#billingPeriodStart">
+    <rdfs:comment>Start date of the billing period (inclusive). Mandatory. Domain unspecified.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/billingPeriodStart"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/billing"/>
+    <rdfs:label>billing period start</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/billing#length">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/billing"/>
+    <rdfs:comment>Length in metres. Optional — direct-quantity entries skip the L×B×D fields.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://w3id.org/iprok/billing#Measurement"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:label>length</rdfs:label>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/length"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/billing#JMStatus">
+    <rdfs:comment>State of a &lt;https://w3id.org/iprok/billing#JointMeasurement&gt;. Four individuals: JMPendingContractor (initial, awaiting contractor OTP), JMPendingDepartmental (contractor signed, awaiting JE/AE), JMComplete (both signed, legally binding), JMRejected (either party rejected).</rdfs:comment>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/JMStatus"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Joint Measurement Status</rdfs:label>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/billing"/>
+  </rdf:Description>
+</rdf:RDF>

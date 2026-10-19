@@ -4,513 +4,513 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://w3id.org/IproK#Actor> a owl:Class ;
+<https://w3id.org/iprok#Actor> a owl:Class ;
     rdfs:label "Actor" ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
     rdfs:comment "A person or organisational actor to whom scheduled work can be assigned."@en ;
-    rdfs:subClassOf <https://w3id.org/IproK#IproKThing> .
+    rdfs:subClassOf <https://w3id.org/iprok#IproKThing> .
 
-<https://w3id.org/IproK#Calendar> a owl:Class ;
+<https://w3id.org/iprok#Calendar> a owl:Class ;
     rdfs:label "Calendar" ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
     rdfs:comment "A definition of working and non-working periods used to interpret scheduled work."@en ;
-    rdfs:subClassOf <https://w3id.org/IproK#IproKThing> .
+    rdfs:subClassOf <https://w3id.org/iprok#IproKThing> .
 
-<https://w3id.org/IproK#Constraint> a owl:Class ;
+<https://w3id.org/iprok#Constraint> a owl:Class ;
     rdfs:label "Constraint" ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
     rdfs:comment "A condition restricting the execution or organisation of project work."@en ;
-    rdfs:subClassOf <https://w3id.org/IproK#IproKThing> .
+    rdfs:subClassOf <https://w3id.org/iprok#IproKThing> .
 
-<https://w3id.org/IproK#Decision> a owl:Class ;
+<https://w3id.org/iprok#Decision> a owl:Class ;
     rdfs:label "Decision"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK> ;
+    dcterms:isPartOf <https://w3id.org/iprok> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/Decision> ;
     rdfs:comment "A question about the project and the answer a named person gave to it." ;
     rdfs:subClassOf prov:Entity .
 
-<https://w3id.org/IproK#IdSequence> a owl:Class ;
+<https://w3id.org/iprok#IdSequence> a owl:Class ;
     rdfs:label "Id Sequence"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK> ;
+    dcterms:isPartOf <https://w3id.org/iprok> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/IdSequence> ;
     rdfs:comment "The last number issued for one kind of register id in one project." .
 
-<https://w3id.org/IproK#MastersAdoption> a owl:Class ;
+<https://w3id.org/iprok#MastersAdoption> a owl:Class ;
     rdfs:label "Masters adoption" ;
-    dcterms:isPartOf <https://w3id.org/IproK> ;
+    dcterms:isPartOf <https://w3id.org/iprok> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/MastersAdoption> ;
     rdfs:comment "A project taking a version of its organisation's masters; at creation or when its PM adopts a newer one." ;
     rdfs:subClassOf prov:Entity .
 
-<https://w3id.org/IproK#OrganisationMasters> a owl:Class ;
+<https://w3id.org/iprok#OrganisationMasters> a owl:Class ;
     rdfs:label "Organisation masters" ;
-    dcterms:isPartOf <https://w3id.org/IproK> ;
+    dcterms:isPartOf <https://w3id.org/iprok> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/OrganisationMasters> ;
     rdfs:comment "One version of an organisation's defaults: contract deductions, deviation routing, financial year and legal identity." ;
     rdfs:subClassOf prov:Entity .
 
-<https://w3id.org/IproK#SignatureEvent> a owl:Class ;
+<https://w3id.org/iprok#SignatureEvent> a owl:Class ;
     rdfs:label "Signature Event" ;
-    dcterms:isPartOf <https://w3id.org/IproK> ;
+    dcterms:isPartOf <https://w3id.org/iprok> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/SignatureEvent> ;
     rdfs:comment "A single act of signing a platform document via an e-signature provider. Carries who signed, when, the provider, purpose, and a reference to the signed document." ;
     rdfs:subClassOf prov:Activity .
 
-<https://w3id.org/IproK#adoptedAt> a owl:DatatypeProperty ;
+<https://w3id.org/iprok#adoptedAt> a owl:DatatypeProperty ;
     rdfs:label "adopted At"@en ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
-    dcterms:isPartOf <https://w3id.org/IproK> ;
+    dcterms:isPartOf <https://w3id.org/iprok> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/adoptedAt> ;
     rdfs:comment "The adopted at property in the integrated project information model."@en ;
     rdfs:range xsd:dateTime .
 
-<https://w3id.org/IproK#adoptedMastersVersion> a owl:DatatypeProperty ;
+<https://w3id.org/iprok#adoptedMastersVersion> a owl:DatatypeProperty ;
     rdfs:label "adopted Masters Version"@en ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
-    dcterms:isPartOf <https://w3id.org/IproK> ;
+    dcterms:isPartOf <https://w3id.org/iprok> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/adoptedMastersVersion> ;
     rdfs:comment "The adopted masters version property in the integrated project information model."@en ;
     rdfs:range xsd:integer .
 
-<https://w3id.org/IproK#affectsActivity> a owl:ObjectProperty ;
+<https://w3id.org/iprok#affectsActivity> a owl:ObjectProperty ;
     rdfs:label "affects Activity"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK> ;
+    dcterms:isPartOf <https://w3id.org/iprok> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/affectsActivity> ;
     rdfs:comment "An activity the decision changes. Repeatable. No rdfs:domain / rdfs:range." .
 
-<https://w3id.org/IproK#approvalLevel1Label> a owl:DatatypeProperty ;
+<https://w3id.org/iprok#approvalLevel1Label> a owl:DatatypeProperty ;
     rdfs:label "approval Level1Label"@en ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
-    dcterms:isPartOf <https://w3id.org/IproK> ;
+    dcterms:isPartOf <https://w3id.org/iprok> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/approvalLevel1Label> ;
     rdfs:comment "The approval level1label property in the integrated project information model."@en ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK#approvalLevel1Limit> a owl:DatatypeProperty ;
+<https://w3id.org/iprok#approvalLevel1Limit> a owl:DatatypeProperty ;
     rdfs:label "approval Level1Limit"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK> ;
+    dcterms:isPartOf <https://w3id.org/iprok> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/approvalLevel1Limit> ;
     rdfs:comment "Deviation value (INR) up to which level 1 approves." ;
     rdfs:range xsd:decimal .
 
-<https://w3id.org/IproK#approvalLevel2Label> a owl:DatatypeProperty ;
+<https://w3id.org/iprok#approvalLevel2Label> a owl:DatatypeProperty ;
     rdfs:label "approval Level2Label"@en ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
-    dcterms:isPartOf <https://w3id.org/IproK> ;
+    dcterms:isPartOf <https://w3id.org/iprok> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/approvalLevel2Label> ;
     rdfs:comment "The approval level2label property in the integrated project information model."@en ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK#approvalLevel2Limit> a owl:DatatypeProperty ;
+<https://w3id.org/iprok#approvalLevel2Limit> a owl:DatatypeProperty ;
     rdfs:label "approval Level2Limit"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK> ;
+    dcterms:isPartOf <https://w3id.org/iprok> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/approvalLevel2Limit> ;
     rdfs:comment "Deviation value (INR) up to which level 2 approves; above it, level 3." ;
     rdfs:range xsd:decimal .
 
-<https://w3id.org/IproK#approvalLevel3Label> a owl:DatatypeProperty ;
+<https://w3id.org/iprok#approvalLevel3Label> a owl:DatatypeProperty ;
     rdfs:label "approval Level3Label"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK> ;
+    dcterms:isPartOf <https://w3id.org/iprok> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/approvalLevel3Label> ;
     rdfs:comment "Display names only. The stored deviation states stay ApprovedEE / ApprovedSE / ApprovedCE, so a renamed level never orphans an approval." ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK#cin> a owl:DatatypeProperty ;
+<https://w3id.org/iprok#cin> a owl:DatatypeProperty ;
     rdfs:label "cin"@en ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
-    dcterms:isPartOf <https://w3id.org/IproK> ;
+    dcterms:isPartOf <https://w3id.org/iprok> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/cin> ;
     rdfs:comment "The cin property in the integrated project information model."@en ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK#constraintFlow> a owl:DatatypeProperty ;
+<https://w3id.org/iprok#constraintFlow> a owl:DatatypeProperty ;
     rdfs:label "constraint Flow"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK> ;
+    dcterms:isPartOf <https://w3id.org/iprok> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/constraintFlow> ;
     rdfs:comment "PrerequisiteWork | Information | Materials | Labour | Equipment | Space | External. No rdfs:domain." ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK#constraintId> a owl:DatatypeProperty ;
+<https://w3id.org/iprok#constraintId> a owl:DatatypeProperty ;
     rdfs:label "constraint Id"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK> ;
+    dcterms:isPartOf <https://w3id.org/iprok> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/constraintId> ;
     rdfs:comment "Human-facing id, CON-NNNN. No rdfs:domain." ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK#constraintStatus> a owl:DatatypeProperty ;
+<https://w3id.org/iprok#constraintStatus> a owl:DatatypeProperty ;
     rdfs:label "constraint Status"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK> ;
+    dcterms:isPartOf <https://w3id.org/iprok> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/constraintStatus> ;
     rdfs:comment "Open | Cleared | Withdrawn. No rdfs:domain." ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK#constraintText> a owl:DatatypeProperty ;
+<https://w3id.org/iprok#constraintText> a owl:DatatypeProperty ;
     rdfs:label "constraint Text"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK> ;
+    dcterms:isPartOf <https://w3id.org/iprok> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/constraintText> ;
     rdfs:comment "What must be cleared, in plain language. No rdfs:domain." ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK#decidedAt> a owl:DatatypeProperty ;
+<https://w3id.org/iprok#decidedAt> a owl:DatatypeProperty ;
     rdfs:label "decided At"@en ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
-    dcterms:isPartOf <https://w3id.org/IproK> ;
+    dcterms:isPartOf <https://w3id.org/iprok> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/decidedAt> ;
     rdfs:comment "The decided at property in the integrated project information model."@en ;
     rdfs:range xsd:dateTime .
 
-<https://w3id.org/IproK#decidedBy> a owl:ObjectProperty ;
+<https://w3id.org/iprok#decidedBy> a owl:ObjectProperty ;
     rdfs:label "decided By"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK> ;
+    dcterms:isPartOf <https://w3id.org/iprok> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/decidedBy> ;
     rdfs:comment "The person who took the decision. No rdfs:domain / rdfs:range (antipattern #8)." .
 
-<https://w3id.org/IproK#decisionBasis> a owl:DatatypeProperty ;
+<https://w3id.org/iprok#decisionBasis> a owl:DatatypeProperty ;
     rdfs:label "decision Basis"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK> ;
+    dcterms:isPartOf <https://w3id.org/iprok> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/decisionBasis> ;
     rdfs:comment "Why — the rule or evidence the decision rests on. No rdfs:domain." ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK#decisionId> a owl:DatatypeProperty ;
+<https://w3id.org/iprok#decisionId> a owl:DatatypeProperty ;
     rdfs:label "decision Id"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK> ;
+    dcterms:isPartOf <https://w3id.org/iprok> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/decisionId> ;
     rdfs:comment "Human-facing id, DEC-NNNN. No rdfs:domain." ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK#decisionOptions> a owl:DatatypeProperty ;
+<https://w3id.org/iprok#decisionOptions> a owl:DatatypeProperty ;
     rdfs:label "decision Options"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK> ;
+    dcterms:isPartOf <https://w3id.org/iprok> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/decisionOptions> ;
     rdfs:comment "The options considered, in plain language. No rdfs:domain." ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK#decisionQuestion> a owl:DatatypeProperty ;
+<https://w3id.org/iprok#decisionQuestion> a owl:DatatypeProperty ;
     rdfs:label "decision Question"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK> ;
+    dcterms:isPartOf <https://w3id.org/iprok> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/decisionQuestion> ;
     rdfs:comment "What had to be decided, in plain language. No rdfs:domain." ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK#decisionSource> a owl:DatatypeProperty ;
+<https://w3id.org/iprok#decisionSource> a owl:DatatypeProperty ;
     rdfs:label "decision Source"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK> ;
+    dcterms:isPartOf <https://w3id.org/iprok> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/decisionSource> ;
     rdfs:comment "Where the question came from, e.g. plan-check. No rdfs:domain." ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK#decisionStatus> a owl:DatatypeProperty ;
+<https://w3id.org/iprok#decisionStatus> a owl:DatatypeProperty ;
     rdfs:label "decision Status"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK> ;
+    dcterms:isPartOf <https://w3id.org/iprok> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/decisionStatus> ;
     rdfs:comment "Open | Decided | Superseded | Withdrawn. No rdfs:domain." ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK#decisionText> a owl:DatatypeProperty ;
+<https://w3id.org/iprok#decisionText> a owl:DatatypeProperty ;
     rdfs:label "decision Text"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK> ;
+    dcterms:isPartOf <https://w3id.org/iprok> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/decisionText> ;
     rdfs:comment "What was decided. No rdfs:domain." ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK#deviationThresholdPct> a owl:DatatypeProperty ;
+<https://w3id.org/iprok#deviationThresholdPct> a owl:DatatypeProperty ;
     rdfs:label "deviation Threshold Pct"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK> ;
+    dcterms:isPartOf <https://w3id.org/iprok> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/deviationThresholdPct> ;
     rdfs:comment "Measured quantity above tendered by more than this percent raises a deviation for approval." ;
     rdfs:range xsd:decimal .
 
-<https://w3id.org/IproK#dueDate> a owl:DatatypeProperty ;
+<https://w3id.org/iprok#dueDate> a owl:DatatypeProperty ;
     rdfs:label "due date" ;
-    dcterms:isPartOf <https://w3id.org/IproK> ;
+    dcterms:isPartOf <https://w3id.org/iprok> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/dueDate> ;
     rdfs:comment "Optional SLA target date. Domain unspecified (antipattern #8)." ;
     rdfs:range xsd:date .
 
-<https://w3id.org/IproK#fyStartMonth> a owl:DatatypeProperty ;
+<https://w3id.org/iprok#fyStartMonth> a owl:DatatypeProperty ;
     rdfs:label "fy Start Month"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK> ;
+    dcterms:isPartOf <https://w3id.org/iprok> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/fyStartMonth> ;
     rdfs:comment "Month the financial year begins, 1–12 (India: 4)." ;
     rdfs:range xsd:integer .
 
-<https://w3id.org/IproK#gstTdsApplicable> a owl:DatatypeProperty ;
+<https://w3id.org/iprok#gstTdsApplicable> a owl:DatatypeProperty ;
     rdfs:label "gst Tds Applicable"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK> ;
+    dcterms:isPartOf <https://w3id.org/iprok> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/gstTdsApplicable> ;
     rdfs:comment "Whether CGST s.51 TDS applies to this organisation (government bodies and notified persons only)." ;
     rdfs:range xsd:boolean .
 
-<https://w3id.org/IproK#gstin> a owl:DatatypeProperty ;
+<https://w3id.org/iprok#gstin> a owl:DatatypeProperty ;
     rdfs:label "gstin"@en ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
-    dcterms:isPartOf <https://w3id.org/IproK> ;
+    dcterms:isPartOf <https://w3id.org/iprok> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/gstin> ;
     rdfs:comment "The gstin property in the integrated project information model."@en ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK#hasDescription> a owl:DatatypeProperty ;
+<https://w3id.org/iprok#hasDescription> a owl:DatatypeProperty ;
     rdfs:label "hasDescription"@en ;
     rdfs:comment "A textual description of the entity." ;
-    rdfs:domain <https://w3id.org/IproK#IproKThing> ;
+    rdfs:domain <https://w3id.org/iprok#IproKThing> ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK#hasGlobalId> a owl:DatatypeProperty,
+<https://w3id.org/iprok#hasGlobalId> a owl:DatatypeProperty,
         owl:FunctionalProperty ;
     rdfs:label "hasGlobalId"@en ;
     rdfs:comment "A globally unique identifier." ;
-    rdfs:domain <https://w3id.org/IproK#IproKThing> ;
+    rdfs:domain <https://w3id.org/iprok#IproKThing> ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK#hasId> a owl:DatatypeProperty,
+<https://w3id.org/iprok#hasId> a owl:DatatypeProperty,
         owl:FunctionalProperty ;
     rdfs:label "hasId"@en ;
     rdfs:comment "A local or project-specific identifier." ;
-    rdfs:domain <https://w3id.org/IproK#IproKThing> ;
+    rdfs:domain <https://w3id.org/iprok#IproKThing> ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK#hasMember> a owl:ObjectProperty ;
+<https://w3id.org/iprok#hasMember> a owl:ObjectProperty ;
     rdfs:label "has member" ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
-    dcterms:isPartOf <https://w3id.org/IproK> ;
+    dcterms:isPartOf <https://w3id.org/iprok> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/hasMember> ;
     rdfs:comment "The has member property in the integrated project information model. Its declared domain is Project and its declared range is ProjectMembership."@en ;
-    rdfs:domain <https://w3id.org/IproK/schedule#Project> ;
-    rdfs:range <https://w3id.org/IproK#ProjectMembership> .
+    rdfs:domain <https://w3id.org/iprok/schedule#Project> ;
+    rdfs:range <https://w3id.org/iprok#ProjectMembership> .
 
-<https://w3id.org/IproK#hasName> a owl:DatatypeProperty,
+<https://w3id.org/iprok#hasName> a owl:DatatypeProperty,
         owl:FunctionalProperty ;
     rdfs:label "hasName"@en ;
     rdfs:comment "The common name of the entity." ;
-    rdfs:domain <https://w3id.org/IproK#IproKThing> ;
+    rdfs:domain <https://w3id.org/iprok#IproKThing> ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK#joinedAt> a owl:DatatypeProperty ;
+<https://w3id.org/iprok#joinedAt> a owl:DatatypeProperty ;
     rdfs:label "joined at" ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
-    dcterms:isPartOf <https://w3id.org/IproK> ;
+    dcterms:isPartOf <https://w3id.org/iprok> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/joinedAt> ;
     rdfs:comment "The joined at property in the integrated project information model. Its declared domain is ProjectMembership and its declared range is dateTime."@en ;
-    rdfs:domain <https://w3id.org/IproK#ProjectMembership> ;
+    rdfs:domain <https://w3id.org/iprok#ProjectMembership> ;
     rdfs:range xsd:dateTime .
 
-<https://w3id.org/IproK#labourCessApplicable> a owl:DatatypeProperty ;
+<https://w3id.org/iprok#labourCessApplicable> a owl:DatatypeProperty ;
     rdfs:label "labour Cess Applicable"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK> ;
+    dcterms:isPartOf <https://w3id.org/iprok> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/labourCessApplicable> ;
     rdfs:comment "Whether BOCW cess is deducted from contractor bills (rather than paid at plan approval)." ;
     rdfs:range xsd:boolean .
 
-<https://w3id.org/IproK#legalName> a owl:DatatypeProperty ;
+<https://w3id.org/iprok#legalName> a owl:DatatypeProperty ;
     rdfs:label "legal Name"@en ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
-    dcterms:isPartOf <https://w3id.org/IproK> ;
+    dcterms:isPartOf <https://w3id.org/iprok> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/legalName> ;
     rdfs:comment "The legal name property in the integrated project information model."@en ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK#legallyBinding> a owl:DatatypeProperty ;
+<https://w3id.org/iprok#legallyBinding> a owl:DatatypeProperty ;
     rdfs:label "legally binding" ;
-    dcterms:isPartOf <https://w3id.org/IproK> ;
+    dcterms:isPartOf <https://w3id.org/iprok> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/legallyBinding> ;
     rdfs:comment "xsd:boolean. True for real eMudhra/DigiLocker signatures; False for Stub mode. Allows queries to filter compliance-grade from development signatures." ;
     rdfs:range xsd:boolean .
 
-<https://w3id.org/IproK#mastersNote> a owl:DatatypeProperty ;
+<https://w3id.org/iprok#mastersNote> a owl:DatatypeProperty ;
     rdfs:label "masters Note"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK> ;
+    dcterms:isPartOf <https://w3id.org/iprok> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/mastersNote> ;
     rdfs:comment "Why this version was made — shown in the history." ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK#mastersSetAt> a owl:DatatypeProperty ;
+<https://w3id.org/iprok#mastersSetAt> a owl:DatatypeProperty ;
     rdfs:label "masters Set At"@en ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
-    dcterms:isPartOf <https://w3id.org/IproK> ;
+    dcterms:isPartOf <https://w3id.org/iprok> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/mastersSetAt> ;
     rdfs:comment "The masters set at property in the integrated project information model."@en ;
     rdfs:range xsd:dateTime .
 
-<https://w3id.org/IproK#mastersVersion> a owl:DatatypeProperty ;
+<https://w3id.org/iprok#mastersVersion> a owl:DatatypeProperty ;
     rdfs:label "masters Version"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK> ;
+    dcterms:isPartOf <https://w3id.org/iprok> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/mastersVersion> ;
     rdfs:comment "1, 2, 3 … per organisation. Version 0 means the platform defaults (never stored)." ;
     rdfs:range xsd:integer .
 
-<https://w3id.org/IproK#ofUser> a owl:ObjectProperty ;
+<https://w3id.org/iprok#ofUser> a owl:ObjectProperty ;
     rdfs:label "of user" ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
-    dcterms:isPartOf <https://w3id.org/IproK> ;
+    dcterms:isPartOf <https://w3id.org/iprok> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/ofUser> ;
     rdfs:comment "The of user property in the integrated project information model. Its declared domain is ProjectMembership and its declared range is User."@en ;
-    rdfs:domain <https://w3id.org/IproK#ProjectMembership> ;
-    rdfs:range <https://w3id.org/IproK#User> .
+    rdfs:domain <https://w3id.org/iprok#ProjectMembership> ;
+    rdfs:range <https://w3id.org/iprok#User> .
 
-<https://w3id.org/IproK#orgName> a owl:DatatypeProperty ;
+<https://w3id.org/iprok#orgName> a owl:DatatypeProperty ;
     rdfs:label "organisation name" ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
-    dcterms:isPartOf <https://w3id.org/IproK> ;
+    dcterms:isPartOf <https://w3id.org/iprok> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/orgName> ;
     rdfs:comment "The org name property in the integrated project information model. Its declared domain is Organisation and its declared range is string."@en ;
-    rdfs:domain <https://w3id.org/IproK#Organisation> ;
+    rdfs:domain <https://w3id.org/iprok#Organisation> ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK#orgPlan> a owl:DatatypeProperty ;
+<https://w3id.org/iprok#orgPlan> a owl:DatatypeProperty ;
     rdfs:label "organisation plan" ;
-    dcterms:isPartOf <https://w3id.org/IproK> ;
+    dcterms:isPartOf <https://w3id.org/iprok> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/orgPlan> ;
     rdfs:comment "Subscription tier. One of pilot / project / enterprise / sovereign." ;
-    rdfs:domain <https://w3id.org/IproK#Organisation> ;
+    rdfs:domain <https://w3id.org/iprok#Organisation> ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK#orgSlug> a owl:DatatypeProperty ;
+<https://w3id.org/iprok#orgSlug> a owl:DatatypeProperty ;
     rdfs:label "organisation slug" ;
-    dcterms:isPartOf <https://w3id.org/IproK> ;
+    dcterms:isPartOf <https://w3id.org/iprok> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/orgSlug> ;
     rdfs:comment "URL-safe short identifier; unique across the platform." ;
-    rdfs:domain <https://w3id.org/IproK#Organisation> ;
+    rdfs:domain <https://w3id.org/iprok#Organisation> ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK#owner> a owl:ObjectProperty ;
+<https://w3id.org/iprok#owner> a owl:ObjectProperty ;
     rdfs:label "owner" ;
-    dcterms:isPartOf <https://w3id.org/IproK> ;
+    dcterms:isPartOf <https://w3id.org/iprok> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/owner> ;
-    rdfs:comment "User responsible for managing a graph node (S4.5: <https://w3id.org/IproK/coordination#Risk>). Domain unspecified (antipattern #8)." .
+    rdfs:comment "User responsible for managing a graph node (S4.5: <https://w3id.org/iprok/coordination#Risk>). Domain unspecified (antipattern #8)." .
 
-<https://w3id.org/IproK#pan> a owl:DatatypeProperty ;
+<https://w3id.org/iprok#pan> a owl:DatatypeProperty ;
     rdfs:label "pan"@en ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
-    dcterms:isPartOf <https://w3id.org/IproK> ;
+    dcterms:isPartOf <https://w3id.org/iprok> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/pan> ;
     rdfs:comment "The pan property in the integrated project information model."@en ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK#phoneNumber> a owl:DatatypeProperty ;
+<https://w3id.org/iprok#phoneNumber> a owl:DatatypeProperty ;
     rdfs:label "phone number" ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
-    dcterms:isPartOf <https://w3id.org/IproK> ;
+    dcterms:isPartOf <https://w3id.org/iprok> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/phoneNumber> ;
     rdfs:comment "The phone number property in the integrated project information model. Its declared domain is User and its declared range is string."@en ;
-    rdfs:domain <https://w3id.org/IproK#User> ;
+    rdfs:domain <https://w3id.org/iprok#User> ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK#pilotStatus> a owl:ObjectProperty ;
+<https://w3id.org/iprok#pilotStatus> a owl:ObjectProperty ;
     rdfs:label "pilot status" ;
-    dcterms:isPartOf <https://w3id.org/IproK> ;
+    dcterms:isPartOf <https://w3id.org/iprok> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/pilotStatus> ;
-    rdfs:comment "An Organisation's pilot-lifecycle state. Domain intentionally unspecified (polymorphic-predicate discipline, antipattern #8) even though v0 uses it only on <https://w3id.org/IproK#Organisation>; OrgShape constrains the allowed individuals." ;
-    rdfs:range <https://w3id.org/IproK#PilotStatus> .
+    rdfs:comment "An Organisation's pilot-lifecycle state. Domain intentionally unspecified (polymorphic-predicate discipline, antipattern #8) even though v0 uses it only on <https://w3id.org/iprok#Organisation>; OrgShape constrains the allowed individuals." ;
+    rdfs:range <https://w3id.org/iprok#PilotStatus> .
 
-<https://w3id.org/IproK#plannedEnd> a owl:DatatypeProperty ;
+<https://w3id.org/iprok#plannedEnd> a owl:DatatypeProperty ;
     rdfs:label "planned end date" ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
-    dcterms:isPartOf <https://w3id.org/IproK> ;
+    dcterms:isPartOf <https://w3id.org/iprok> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/plannedEnd> ;
     rdfs:comment "The planned end property in the integrated project information model. Its declared domain is Project and its declared range is date."@en ;
-    rdfs:domain <https://w3id.org/IproK/schedule#Project> ;
+    rdfs:domain <https://w3id.org/iprok/schedule#Project> ;
     rdfs:range xsd:date .
 
-<https://w3id.org/IproK#plannedStart> a owl:DatatypeProperty ;
+<https://w3id.org/iprok#plannedStart> a owl:DatatypeProperty ;
     rdfs:label "planned start date" ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
-    dcterms:isPartOf <https://w3id.org/IproK> ;
+    dcterms:isPartOf <https://w3id.org/iprok> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/plannedStart> ;
     rdfs:comment "The planned start property in the integrated project information model. Its declared domain is Project and its declared range is date."@en ;
-    rdfs:domain <https://w3id.org/IproK/schedule#Project> ;
+    rdfs:domain <https://w3id.org/iprok/schedule#Project> ;
     rdfs:range xsd:date .
 
-<https://w3id.org/IproK#securityDepositPct> a owl:DatatypeProperty ;
+<https://w3id.org/iprok#securityDepositPct> a owl:DatatypeProperty ;
     rdfs:label "security Deposit Pct"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK> ;
+    dcterms:isPartOf <https://w3id.org/iprok> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/securityDepositPct> ;
     rdfs:comment "Retention deducted from each contractor bill, in percent." ;
     rdfs:range xsd:decimal .
 
-<https://w3id.org/IproK#signatureId> a owl:DatatypeProperty ;
+<https://w3id.org/iprok#signatureId> a owl:DatatypeProperty ;
     rdfs:label "signature ID" ;
-    dcterms:isPartOf <https://w3id.org/IproK> ;
+    dcterms:isPartOf <https://w3id.org/iprok> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/signatureId> ;
     rdfs:comment "Platform-generated or provider-issued unique identifier for this signing event." ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK#signatureProvider> a owl:DatatypeProperty ;
+<https://w3id.org/iprok#signatureProvider> a owl:DatatypeProperty ;
     rdfs:label "signature provider" ;
-    dcterms:isPartOf <https://w3id.org/IproK> ;
+    dcterms:isPartOf <https://w3id.org/iprok> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/signatureProvider> ;
     rdfs:comment "Name of the e-signature service used: 'eMudhra', 'DigiLocker', or 'Stub'. sh:in constraint in SignatureEventShape." ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK#signaturePurpose> a owl:DatatypeProperty ;
+<https://w3id.org/iprok#signaturePurpose> a owl:DatatypeProperty ;
     rdfs:label "signature purpose" ;
-    dcterms:isPartOf <https://w3id.org/IproK> ;
+    dcterms:isPartOf <https://w3id.org/iprok> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/signaturePurpose> ;
     rdfs:comment "Why the document was signed. One of: DrawingApproval, RFIConfirmation, TransmittalApproval, JointMeasurement. sh:in in SignatureEventShape." ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK#signedAt> a owl:DatatypeProperty ;
+<https://w3id.org/iprok#signedAt> a owl:DatatypeProperty ;
     rdfs:label "signed at" ;
-    dcterms:isPartOf <https://w3id.org/IproK> ;
+    dcterms:isPartOf <https://w3id.org/iprok> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/signedAt> ;
     rdfs:comment "ISO-8601 datetime when the signature was applied (server-stamped for stub; provider-returned for real modes)." ;
     rdfs:range xsd:dateTime .
 
-<https://w3id.org/IproK#signedBy> a owl:ObjectProperty ;
+<https://w3id.org/iprok#signedBy> a owl:ObjectProperty ;
     rdfs:label "signed by" ;
-    dcterms:isPartOf <https://w3id.org/IproK> ;
+    dcterms:isPartOf <https://w3id.org/iprok> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/signedBy> ;
-    rdfs:comment "IRI of the <https://w3id.org/IproK#User> who performed the signing action. Polymorphic — also used on <https://w3id.org/IproK/billing#JointMeasurement> (M3)." .
+    rdfs:comment "IRI of the <https://w3id.org/iprok#User> who performed the signing action. Polymorphic — also used on <https://w3id.org/iprok/billing#JointMeasurement> (M3)." .
 
-<https://w3id.org/IproK#signedDocument> a owl:ObjectProperty ;
+<https://w3id.org/iprok#signedDocument> a owl:ObjectProperty ;
     rdfs:label "signed document" ;
-    dcterms:isPartOf <https://w3id.org/IproK> ;
+    dcterms:isPartOf <https://w3id.org/iprok> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/signedDocument> ;
-    rdfs:comment "IRI of the <https://w3id.org/IproK/document#Drawing>, <https://w3id.org/IproK/document#RFI>, <https://w3id.org/IproK/document#Transmittal>, or <https://w3id.org/IproK/billing#Measurement> that was signed. Mandatory." .
+    rdfs:comment "IRI of the <https://w3id.org/iprok/document#Drawing>, <https://w3id.org/iprok/document#RFI>, <https://w3id.org/iprok/document#Transmittal>, or <https://w3id.org/iprok/billing#Measurement> that was signed. Mandatory." .
 
-<https://w3id.org/IproK#userRole> a owl:DatatypeProperty ;
+<https://w3id.org/iprok#userRole> a owl:DatatypeProperty ;
     rdfs:label "user role" ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
-    dcterms:isPartOf <https://w3id.org/IproK> ;
+    dcterms:isPartOf <https://w3id.org/iprok> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/userRole> ;
     rdfs:comment "The user role property in the integrated project information model. Its declared domain is User and its declared range is string."@en ;
-    rdfs:domain <https://w3id.org/IproK#User> ;
+    rdfs:domain <https://w3id.org/iprok#User> ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK#zoneConfig> a owl:DatatypeProperty ;
+<https://w3id.org/iprok#zoneConfig> a owl:DatatypeProperty ;
     rdfs:label "zone config (JSON)" ;
-    dcterms:isPartOf <https://w3id.org/IproK> ;
+    dcterms:isPartOf <https://w3id.org/iprok> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/zoneConfig> ;
     rdfs:comment "JSON array of {name, lat, lng, radius_m} dicts. v0 hack — gets a proper schema (and SHACL shape) when polygon zones land." ;
-    rdfs:domain <https://w3id.org/IproK/schedule#Project> ;
+    rdfs:domain <https://w3id.org/iprok/schedule#Project> ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK#PilotStatus> a owl:Class ;
+<https://w3id.org/iprok#PilotStatus> a owl:Class ;
     rdfs:label "Pilot Status" ;
-    dcterms:isPartOf <https://w3id.org/IproK> ;
+    dcterms:isPartOf <https://w3id.org/iprok> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/PilotStatus> ;
     rdfs:comment "Enum of organisation pilot-lifecycle states." .
 
-<https://w3id.org/IproK#Organisation> a owl:Class ;
+<https://w3id.org/iprok#Organisation> a owl:Class ;
     rdfs:label "Organisation" ;
-    dcterms:isPartOf <https://w3id.org/IproK> ;
+    dcterms:isPartOf <https://w3id.org/iprok> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/Organisation> ;
     rdfs:comment "An organisation owning project records and defining a tenant boundary." .
 
-<https://w3id.org/IproK#ProjectMembership> a owl:Class ;
+<https://w3id.org/iprok#ProjectMembership> a owl:Class ;
     rdfs:label "Project membership" ;
-    dcterms:isPartOf <https://w3id.org/IproK> ;
+    dcterms:isPartOf <https://w3id.org/iprok> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/ProjectMembership> ;
     rdfs:comment "An (project, user) edge with a joinedAt timestamp." .
 
-<https://w3id.org/IproK#User> a owl:Class ;
+<https://w3id.org/iprok#User> a owl:Class ;
     rdfs:label "User" ;
-    dcterms:isPartOf <https://w3id.org/IproK> ;
+    dcterms:isPartOf <https://w3id.org/iprok> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/User> ;
     rdfs:comment "An authenticated platform user, such as a site engineer, quality controller or project manager." ;
     rdfs:subClassOf prov:Agent .
 
-<https://w3id.org/IproK#IproKThing> a owl:Class ;
+<https://w3id.org/iprok#IproKThing> a owl:Class ;
     rdfs:label "IproKThing" ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
     rdfs:comment "The common parent class for the published IproK project-information concepts."@en ;

@@ -1,0 +1,80 @@
+<https://w3id.org/iprok/property#Tower> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/Tower> .
+<https://w3id.org/iprok/property#unitTypeId> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/unitTypeId> .
+<https://w3id.org/iprok/property#floorNo> <http://www.w3.org/2000/01/rdf-schema#comment> "The floor no property in the integrated project information model."@en .
+<https://w3id.org/iprok/property#unitTypeName> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/property#UnitType> <http://www.w3.org/2000/01/rdf-schema#label> "Unit type" .
+<https://w3id.org/iprok/property#UnitType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iprok/property#ofUnitType> <http://www.w3.org/2000/01/rdf-schema#comment> "Unit → its archetype. Domain unspecified (antipattern #8)." .
+<https://w3id.org/iprok/property#carpetAreaSqft> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/iprok/property#ofUnitType> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/ofUnitType> .
+<https://w3id.org/iprok/property#unitTypeName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/property#Unit> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Entity> .
+<https://w3id.org/iprok/property#unitId> <http://www.w3.org/2000/01/rdf-schema#label> "unit Id"@en .
+<https://w3id.org/iprok/property#unitId> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/unitId> .
+<https://w3id.org/iprok/property#unitStatus> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/property#unitStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/property#unitStatus> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/property> .
+<https://w3id.org/iprok/property#towerId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/property#unitTypeId> <http://www.w3.org/2000/01/rdf-schema#comment> "Stable id within the project (UT1 …). Domain unspecified (antipattern #8)." .
+<https://w3id.org/iprok/property#unitTypeId> <http://www.w3.org/2000/01/rdf-schema#label> "unit Type Id"@en .
+<https://w3id.org/iprok/property#carpetAreaSqft> <http://www.w3.org/2000/01/rdf-schema#comment> "RERA carpet area, sqft. Domain unspecified (antipattern #8)." .
+<https://w3id.org/iprok/property#ofTower> <http://www.w3.org/2000/01/rdf-schema#comment> "Unit → its tower. Domain unspecified (antipattern #8)." .
+<https://w3id.org/iprok/property#ofUnitType> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/iprok/property#UnitType> .
+<https://w3id.org/iprok/property#UnitType> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Entity> .
+<https://w3id.org/iprok/property#carpetAreaSqft> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/property#ofTower> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/ofTower> .
+<https://w3id.org/iprok/property#carpetAreaSqft> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/property> .
+<https://w3id.org/iprok/property#Tower> <http://www.w3.org/2000/01/rdf-schema#comment> "A tower, wing or block of the project." .
+<https://w3id.org/iprok/property#Tower> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Entity> .
+<https://w3id.org/iprok/property#towerId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/property#towerId> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/property> .
+<https://w3id.org/iprok/property#floorNo> <http://www.w3.org/2000/01/rdf-schema#label> "floor No"@en .
+<https://w3id.org/iprok/property#UnitType> <http://www.w3.org/2000/01/rdf-schema#comment> "A sellable unit archetype (2BHK / 3BHK …) with its area set and base rate." .
+<https://w3id.org/iprok/property#unitTypeName> <http://www.w3.org/2000/01/rdf-schema#label> "unit Type Name"@en .
+<https://w3id.org/iprok/property#carpetAreaSqft> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/carpetAreaSqft> .
+<https://w3id.org/iprok/property#unitNo> <http://www.w3.org/2000/01/rdf-schema#label> "unit No"@en .
+<https://w3id.org/iprok/property#carpetAreaSqft> <http://www.w3.org/2000/01/rdf-schema#label> "carpet Area Sqft"@en .
+<https://w3id.org/iprok/property#ofUnitType> <http://www.w3.org/2000/01/rdf-schema#label> "of Unit Type"@en .
+<https://w3id.org/iprok/property#ofTower> <http://www.w3.org/2000/01/rdf-schema#label> "of Tower"@en .
+<https://w3id.org/iprok/property#Tower> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/property> .
+<https://w3id.org/iprok/property#Unit> <http://www.w3.org/2000/01/rdf-schema#label> "Unit" .
+<https://w3id.org/iprok/property#floorNo> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<https://w3id.org/iprok/property#towerId> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/towerId> .
+<https://w3id.org/iprok/property#unitStatus> <http://www.w3.org/2000/01/rdf-schema#label> "unit Status"@en .
+<https://w3id.org/iprok/property#unitNo> <http://www.w3.org/2000/01/rdf-schema#comment> "Door number on the floor (1, 2, 3 …)." .
+<https://w3id.org/iprok/property#unitTypeName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/property#unitTypeName> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/property> .
+<https://w3id.org/iprok/property#towerId> <http://www.w3.org/2000/01/rdf-schema#comment> "Stable id within the project (T1, T2 …). Domain unspecified (antipattern #8)." .
+<https://w3id.org/iprok/property#towerId> <http://www.w3.org/2000/01/rdf-schema#label> "tower Id"@en .
+<https://w3id.org/iprok/property#Tower> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iprok/property#UnitType> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/UnitType> .
+<https://w3id.org/iprok/property#unitTypeName> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/unitTypeName> .
+<https://w3id.org/iprok/property#ofUnitType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/iprok/property#Unit> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/Unit> .
+<https://w3id.org/iprok/property#Unit> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/property> .
+<https://w3id.org/iprok/property#unitStatus> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/unitStatus> .
+<https://w3id.org/iprok/property#unitNo> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<https://w3id.org/iprok/property#Tower> <http://www.w3.org/2000/01/rdf-schema#label> "Tower / wing" .
+<https://w3id.org/iprok/property#unitStatus> <http://www.w3.org/2000/01/rdf-schema#comment> "Available / Blocked / Booked / Agreement / Registered / Possession. Domain unspecified (antipattern #8)." .
+<https://w3id.org/iprok/property#unitId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/property#floorNo> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/floorNo> .
+<https://w3id.org/iprok/property#ofUnitType> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/property> .
+<https://w3id.org/iprok/property#floorNo> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/property#unitNo> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/unitNo> .
+<https://w3id.org/iprok/property#unitId> <http://www.w3.org/2000/01/rdf-schema#comment> "Stable id within the project, e.g. T1-0503 (tower-floor-unit). Domain unspecified (antipattern #8)." .
+<https://w3id.org/iprok/property#unitTypeId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/property#ofTower> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/iprok/property#Unit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iprok/property#floorNo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/property#floorNo> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/property> .
+<https://w3id.org/iprok/property#UnitType> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/property> .
+<https://w3id.org/iprok/property#unitId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/property#unitId> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/property> .
+<https://w3id.org/iprok/property#ofTower> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/iprok/property#Tower> .
+<https://w3id.org/iprok/property#unitNo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/property#unitNo> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/property> .
+<https://w3id.org/iprok/property#ofTower> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/property> .
+<https://w3id.org/iprok/property#unitTypeId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/property#unitTypeId> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/property> .
+<https://w3id.org/iprok/property#unitTypeName> <http://www.w3.org/2000/01/rdf-schema#comment> "The unit type name property in the integrated project information model."@en .
+<https://w3id.org/iprok/property#Unit> <http://www.w3.org/2000/01/rdf-schema#comment> "One sellable unit. Status transitions are PROV-O supersessions." .

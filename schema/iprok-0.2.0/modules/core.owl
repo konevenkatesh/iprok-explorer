@@ -1,0 +1,590 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:dcterms="http://purl.org/dc/terms/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+>
+  <rdf:Description rdf:about="https://w3id.org/iprok#OrganisationMasters">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Organisation masters</rdfs:label>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/OrganisationMasters"/>
+    <rdfs:comment>One version of an organisation's defaults: contract deductions, deviation routing, financial year and legal identity.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok#User">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Agent"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok"/>
+    <rdfs:label>User</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/User"/>
+    <rdfs:comment>An authenticated platform user, such as a site engineer, quality controller or project manager.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok#legallyBinding">
+    <rdfs:comment>xsd:boolean. True for real eMudhra/DigiLocker signatures; False for Stub mode. Allows queries to filter compliance-grade from development signatures.</rdfs:comment>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok"/>
+    <rdfs:label>legally binding</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/legallyBinding"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok#plannedEnd">
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok"/>
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+    <rdfs:domain rdf:resource="https://w3id.org/iprok/schedule#Project"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    <rdfs:comment xml:lang="en">The planned end property in the integrated project information model. Its declared domain is Project and its declared range is date.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/plannedEnd"/>
+    <rdfs:label>planned end date</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok#mastersSetAt">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/mastersSetAt"/>
+    <rdfs:label xml:lang="en">masters Set At</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+    <rdfs:comment xml:lang="en">The masters set at property in the integrated project information model.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok#owner">
+    <rdfs:comment>User responsible for managing a graph node (S4.5: &lt;https://w3id.org/iprok/coordination#Risk&gt;). Domain unspecified (antipattern #8).</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok"/>
+    <rdfs:label>owner</rdfs:label>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/owner"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok#pan">
+    <rdfs:comment xml:lang="en">The pan property in the integrated project information model.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+    <rdfs:label xml:lang="en">pan</rdfs:label>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/pan"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok#hasMember">
+    <rdfs:comment xml:lang="en">The has member property in the integrated project information model. Its declared domain is Project and its declared range is ProjectMembership.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok"/>
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+    <rdfs:domain rdf:resource="https://w3id.org/iprok/schedule#Project"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/hasMember"/>
+    <rdfs:label>has member</rdfs:label>
+    <rdfs:range rdf:resource="https://w3id.org/iprok#ProjectMembership"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok#legalName">
+    <rdfs:label xml:lang="en">legal Name</rdfs:label>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/legalName"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="en">The legal name property in the integrated project information model.</rdfs:comment>
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok#plannedStart">
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/plannedStart"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    <rdfs:domain rdf:resource="https://w3id.org/iprok/schedule#Project"/>
+    <rdfs:comment xml:lang="en">The planned start property in the integrated project information model. Its declared domain is Project and its declared range is date.</rdfs:comment>
+    <rdfs:label>planned start date</rdfs:label>
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok#labourCessApplicable">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok"/>
+    <rdfs:label xml:lang="en">labour Cess Applicable</rdfs:label>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/labourCessApplicable"/>
+    <rdfs:comment>Whether BOCW cess is deducted from contractor bills (rather than paid at plan approval).</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok#decisionOptions">
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok"/>
+    <rdfs:label xml:lang="en">decision Options</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/decisionOptions"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:comment>The options considered, in plain language. No rdfs:domain.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok#cin">
+    <rdfs:comment xml:lang="en">The cin property in the integrated project information model.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/cin"/>
+    <rdfs:label xml:lang="en">cin</rdfs:label>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok#phoneNumber">
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/phoneNumber"/>
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok"/>
+    <rdfs:comment xml:lang="en">The phone number property in the integrated project information model. Its declared domain is User and its declared range is string.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://w3id.org/iprok#User"/>
+    <rdfs:label>phone number</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok#deviationThresholdPct">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment>Measured quantity above tendered by more than this percent raises a deviation for approval.</rdfs:comment>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok"/>
+    <rdfs:label xml:lang="en">deviation Threshold Pct</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/deviationThresholdPct"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok#decidedBy">
+    <rdfs:label xml:lang="en">decided By</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok"/>
+    <rdfs:comment>The person who took the decision. No rdfs:domain / rdfs:range (antipattern #8).</rdfs:comment>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/decidedBy"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok#constraintStatus">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/constraintStatus"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="en">constraint Status</rdfs:label>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok"/>
+    <rdfs:comment>Open | Cleared | Withdrawn. No rdfs:domain.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok#SignatureEvent">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment>A single act of signing a platform document via an e-signature provider. Carries who signed, when, the provider, purpose, and a reference to the signed document.</rdfs:comment>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok"/>
+    <rdfs:label>Signature Event</rdfs:label>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/SignatureEvent"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Activity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok#IproKThing">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">The common parent class for the published IproK project-information concepts.</rdfs:comment>
+    <rdfs:label>IproKThing</rdfs:label>
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok#approvalLevel3Label">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:comment>Display names only. The stored deviation states stay ApprovedEE / ApprovedSE / ApprovedCE, so a renamed level never orphans an approval.</rdfs:comment>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/approvalLevel3Label"/>
+    <rdfs:label xml:lang="en">approval Level3Label</rdfs:label>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok#userRole">
+    <rdfs:domain rdf:resource="https://w3id.org/iprok#User"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/userRole"/>
+    <rdfs:comment xml:lang="en">The user role property in the integrated project information model. Its declared domain is User and its declared range is string.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+    <rdfs:label>user role</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok#constraintText">
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok"/>
+    <rdfs:comment>What must be cleared, in plain language. No rdfs:domain.</rdfs:comment>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/constraintText"/>
+    <rdfs:label xml:lang="en">constraint Text</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok#constraintId">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:comment>Human-facing id, CON-NNNN. No rdfs:domain.</rdfs:comment>
+    <rdfs:label xml:lang="en">constraint Id</rdfs:label>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/constraintId"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok#approvalLevel2Limit">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="en">approval Level2Limit</rdfs:label>
+    <rdfs:comment>Deviation value (INR) up to which level 2 approves; above it, level 3.</rdfs:comment>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/approvalLevel2Limit"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok#decisionQuestion">
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok"/>
+    <rdfs:comment>What had to be decided, in plain language. No rdfs:domain.</rdfs:comment>
+    <rdfs:label xml:lang="en">decision Question</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/decisionQuestion"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok#securityDepositPct">
+    <rdfs:label xml:lang="en">security Deposit Pct</rdfs:label>
+    <rdfs:comment>Retention deducted from each contractor bill, in percent.</rdfs:comment>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/securityDepositPct"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok#orgName">
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/orgName"/>
+    <rdfs:label>organisation name</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok"/>
+    <rdfs:domain rdf:resource="https://w3id.org/iprok#Organisation"/>
+    <rdfs:comment xml:lang="en">The org name property in the integrated project information model. Its declared domain is Organisation and its declared range is string.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok#mastersNote">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/mastersNote"/>
+    <rdfs:comment>Why this version was made — shown in the history.</rdfs:comment>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok"/>
+    <rdfs:label xml:lang="en">masters Note</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok#Actor">
+    <rdfs:subClassOf rdf:resource="https://w3id.org/iprok#IproKThing"/>
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+    <rdfs:comment xml:lang="en">A person or organisational actor to whom scheduled work can be assigned.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Actor</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok#ProjectMembership">
+    <rdfs:comment>An (project, user) edge with a joinedAt timestamp.</rdfs:comment>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/ProjectMembership"/>
+    <rdfs:label>Project membership</rdfs:label>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok#zoneConfig">
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/zoneConfig"/>
+    <rdfs:domain rdf:resource="https://w3id.org/iprok/schedule#Project"/>
+    <rdfs:label>zone config (JSON)</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment>JSON array of {name, lat, lng, radius_m} dicts. v0 hack — gets a proper schema (and SHACL shape) when polygon zones land.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok#signedAt">
+    <rdfs:comment>ISO-8601 datetime when the signature was applied (server-stamped for stub; provider-returned for real modes).</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/signedAt"/>
+    <rdfs:label>signed at</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok#Decision">
+    <rdfs:comment>A question about the project and the answer a named person gave to it.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/Decision"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+    <rdfs:label xml:lang="en">Decision</rdfs:label>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok#joinedAt">
+    <rdfs:domain rdf:resource="https://w3id.org/iprok#ProjectMembership"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/joinedAt"/>
+    <rdfs:label>joined at</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+    <rdfs:comment xml:lang="en">The joined at property in the integrated project information model. Its declared domain is ProjectMembership and its declared range is dateTime.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok#signatureId">
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok"/>
+    <rdfs:comment>Platform-generated or provider-issued unique identifier for this signing event.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/signatureId"/>
+    <rdfs:label>signature ID</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok#signatureProvider">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label>signature provider</rdfs:label>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok"/>
+    <rdfs:comment>Name of the e-signature service used: 'eMudhra', 'DigiLocker', or 'Stub'. sh:in constraint in SignatureEventShape.</rdfs:comment>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/signatureProvider"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok#pilotStatus">
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/pilotStatus"/>
+    <rdfs:label>pilot status</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:range rdf:resource="https://w3id.org/iprok#PilotStatus"/>
+    <rdfs:comment>An Organisation's pilot-lifecycle state. Domain intentionally unspecified (polymorphic-predicate discipline, antipattern #8) even though v0 uses it only on &lt;https://w3id.org/iprok#Organisation&gt;; OrgShape constrains the allowed individuals.</rdfs:comment>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok#gstTdsApplicable">
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <rdfs:label xml:lang="en">gst Tds Applicable</rdfs:label>
+    <rdfs:comment>Whether CGST s.51 TDS applies to this organisation (government bodies and notified persons only).</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/gstTdsApplicable"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok#decidedAt">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+    <rdfs:comment xml:lang="en">The decided at property in the integrated project information model.</rdfs:comment>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/decidedAt"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok"/>
+    <rdfs:label xml:lang="en">decided At</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok#Constraint">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/iprok#IproKThing"/>
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+    <rdfs:label>Constraint</rdfs:label>
+    <rdfs:comment xml:lang="en">A condition restricting the execution or organisation of project work.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok#adoptedAt">
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok"/>
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/adoptedAt"/>
+    <rdfs:label xml:lang="en">adopted At</rdfs:label>
+    <rdfs:comment xml:lang="en">The adopted at property in the integrated project information model.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok#dueDate">
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/dueDate"/>
+    <rdfs:label>due date</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    <rdfs:comment>Optional SLA target date. Domain unspecified (antipattern #8).</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok#MastersAdoption">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+    <rdfs:comment>A project taking a version of its organisation's masters; at creation or when its PM adopts a newer one.</rdfs:comment>
+    <rdfs:label>Masters adoption</rdfs:label>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/MastersAdoption"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok#decisionSource">
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok"/>
+    <rdfs:comment>Where the question came from, e.g. plan-check. No rdfs:domain.</rdfs:comment>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/decisionSource"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="en">decision Source</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok#Calendar">
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+    <rdfs:label>Calendar</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">A definition of working and non-working periods used to interpret scheduled work.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/iprok#IproKThing"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok#mastersVersion">
+    <rdfs:label xml:lang="en">masters Version</rdfs:label>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok"/>
+    <rdfs:comment>1, 2, 3 … per organisation. Version 0 means the platform defaults (never stored).</rdfs:comment>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/mastersVersion"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok#fyStartMonth">
+    <rdfs:label xml:lang="en">fy Start Month</rdfs:label>
+    <rdfs:comment>Month the financial year begins, 1–12 (India: 4).</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/fyStartMonth"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok#approvalLevel1Limit">
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/approvalLevel1Limit"/>
+    <rdfs:label xml:lang="en">approval Level1Limit</rdfs:label>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok"/>
+    <rdfs:comment>Deviation value (INR) up to which level 1 approves.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok#decisionText">
+    <rdfs:label xml:lang="en">decision Text</rdfs:label>
+    <rdfs:comment>What was decided. No rdfs:domain.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/decisionText"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok#constraintFlow">
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok"/>
+    <rdfs:label xml:lang="en">constraint Flow</rdfs:label>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/constraintFlow"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment>PrerequisiteWork | Information | Materials | Labour | Equipment | Space | External. No rdfs:domain.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok#hasDescription">
+    <rdfs:label xml:lang="en">hasDescription</rdfs:label>
+    <rdfs:comment>A textual description of the entity.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="https://w3id.org/iprok#IproKThing"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok#gstin">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="en">gstin</rdfs:label>
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/gstin"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok"/>
+    <rdfs:comment xml:lang="en">The gstin property in the integrated project information model.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok#decisionId">
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/decisionId"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok"/>
+    <rdfs:comment>Human-facing id, DEC-NNNN. No rdfs:domain.</rdfs:comment>
+    <rdfs:label xml:lang="en">decision Id</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok#ofUser">
+    <rdfs:label>of user</rdfs:label>
+    <rdfs:range rdf:resource="https://w3id.org/iprok#User"/>
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/ofUser"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="https://w3id.org/iprok#ProjectMembership"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok"/>
+    <rdfs:comment xml:lang="en">The of user property in the integrated project information model. Its declared domain is ProjectMembership and its declared range is User.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok#Organisation">
+    <rdfs:comment>An organisation owning project records and defining a tenant boundary.</rdfs:comment>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok"/>
+    <rdfs:label>Organisation</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/Organisation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok#adoptedMastersVersion">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/adoptedMastersVersion"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok"/>
+    <rdfs:label xml:lang="en">adopted Masters Version</rdfs:label>
+    <rdfs:comment xml:lang="en">The adopted masters version property in the integrated project information model.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok#hasName">
+    <rdfs:domain rdf:resource="https://w3id.org/iprok#IproKThing"/>
+    <rdfs:comment>The common name of the entity.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="en">hasName</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok#orgSlug">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="https://w3id.org/iprok#Organisation"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:comment>URL-safe short identifier; unique across the platform.</rdfs:comment>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok"/>
+    <rdfs:label>organisation slug</rdfs:label>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/orgSlug"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok#IdSequence">
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/IdSequence"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok"/>
+    <rdfs:comment>The last number issued for one kind of register id in one project.</rdfs:comment>
+    <rdfs:label xml:lang="en">Id Sequence</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok#decisionStatus">
+    <rdfs:label xml:lang="en">decision Status</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/decisionStatus"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok"/>
+    <rdfs:comment>Open | Decided | Superseded | Withdrawn. No rdfs:domain.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok#hasId">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:comment>A local or project-specific identifier.</rdfs:comment>
+    <rdfs:label xml:lang="en">hasId</rdfs:label>
+    <rdfs:domain rdf:resource="https://w3id.org/iprok#IproKThing"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok#approvalLevel2Label">
+    <rdfs:label xml:lang="en">approval Level2Label</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/approvalLevel2Label"/>
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok"/>
+    <rdfs:comment xml:lang="en">The approval level2label property in the integrated project information model.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok#approvalLevel1Label">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/approvalLevel1Label"/>
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok"/>
+    <rdfs:label xml:lang="en">approval Level1Label</rdfs:label>
+    <rdfs:comment xml:lang="en">The approval level1label property in the integrated project information model.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok#PilotStatus">
+    <rdfs:comment>Enum of organisation pilot-lifecycle states.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/PilotStatus"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok"/>
+    <rdfs:label>Pilot Status</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok#decisionBasis">
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/decisionBasis"/>
+    <rdfs:comment>Why — the rule or evidence the decision rests on. No rdfs:domain.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="en">decision Basis</rdfs:label>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok#affectsActivity">
+    <rdfs:comment>An activity the decision changes. Repeatable. No rdfs:domain / rdfs:range.</rdfs:comment>
+    <rdfs:label xml:lang="en">affects Activity</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/affectsActivity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok#hasGlobalId">
+    <rdfs:domain rdf:resource="https://w3id.org/iprok#IproKThing"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment>A globally unique identifier.</rdfs:comment>
+    <rdfs:label xml:lang="en">hasGlobalId</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok#orgPlan">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/orgPlan"/>
+    <rdfs:domain rdf:resource="https://w3id.org/iprok#Organisation"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok"/>
+    <rdfs:label>organisation plan</rdfs:label>
+    <rdfs:comment>Subscription tier. One of pilot / project / enterprise / sovereign.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok#signedDocument">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>signed document</rdfs:label>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/signedDocument"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok"/>
+    <rdfs:comment>IRI of the &lt;https://w3id.org/iprok/document#Drawing&gt;, &lt;https://w3id.org/iprok/document#RFI&gt;, &lt;https://w3id.org/iprok/document#Transmittal&gt;, or &lt;https://w3id.org/iprok/billing#Measurement&gt; that was signed. Mandatory.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok#signaturePurpose">
+    <rdfs:label>signature purpose</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/signaturePurpose"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok"/>
+    <rdfs:comment>Why the document was signed. One of: DrawingApproval, RFIConfirmation, TransmittalApproval, JointMeasurement. sh:in in SignatureEventShape.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok#signedBy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>signed by</rdfs:label>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok"/>
+    <rdfs:comment>IRI of the &lt;https://w3id.org/iprok#User&gt; who performed the signing action. Polymorphic — also used on &lt;https://w3id.org/iprok/billing#JointMeasurement&gt; (M3).</rdfs:comment>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/signedBy"/>
+  </rdf:Description>
+</rdf:RDF>

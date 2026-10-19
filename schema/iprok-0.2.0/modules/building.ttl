@@ -4,270 +4,270 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://w3id.org/IproK/building#Element> a owl:Class ;
+<https://w3id.org/iprok/building#Element> a owl:Class ;
     rdfs:label "IFC Element" ;
-    dcterms:isPartOf <https://w3id.org/IproK/building> ;
+    dcterms:isPartOf <https://w3id.org/iprok/building> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/Element> ;
-    rdfs:comment "One parseable IFC entity (wall / column / beam / slab / door / MEP fixture) extracted from an uploaded IFC model and persisted as triples for cross-domain joins. The single most important predicate is <https://w3id.org/IproK/building#ifcGuid>; every Issue / Annotation / future cost+schedule attribution that already carries an ifcGuid lights up automatically." ;
+    rdfs:comment "One parseable IFC entity (wall / column / beam / slab / door / MEP fixture) extracted from an uploaded IFC model and persisted as triples for cross-domain joins. The single most important predicate is <https://w3id.org/iprok/building#ifcGuid>; every Issue / Annotation / future cost+schedule attribution that already carries an ifcGuid lights up automatically." ;
     rdfs:subClassOf prov:Entity .
 
-<https://w3id.org/IproK/building#ElementCopiesRecorded> a owl:Class ;
+<https://w3id.org/iprok/building#ElementCopiesRecorded> a owl:Class ;
     rdfs:label "element copies recorded" ;
-    dcterms:isPartOf <https://w3id.org/IproK/building> ;
+    dcterms:isPartOf <https://w3id.org/iprok/building> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/ElementCopiesRecorded> ;
     rdfs:comment "N41.1; the act of keeping, on each copy, which model's element the take-off counted it as. Carries the person, the time, the take-off it came from (rdfs:comment) and how many elements changed; each changed element points back at it (prov:wasInfluencedBy)." ;
     rdfs:subClassOf prov:Activity .
 
-<https://w3id.org/IproK/building#ElementDuplicatesRetired> a owl:Class ;
+<https://w3id.org/iprok/building#ElementDuplicatesRetired> a owl:Class ;
     rdfs:label "element duplicates retired" ;
-    dcterms:isPartOf <https://w3id.org/IproK/building> ;
+    dcterms:isPartOf <https://w3id.org/iprok/building> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/ElementDuplicatesRetired> ;
-    rdfs:comment "N41.2; the startup migration retiring, in one project graph, the extra element nodes the pre-N41.2 parser wrote. Carries when it started and ended, how many nodes it retired, and (<https://w3id.org/IproK/integrated#hadChange>) each model element count it corrected from the duplicated count to the number of distinct elements." ;
+    rdfs:comment "N41.2; the startup migration retiring, in one project graph, the extra element nodes the pre-N41.2 parser wrote. Carries when it started and ended, how many nodes it retired, and (<https://w3id.org/iprok/integrated#hadChange>) each model element count it corrected from the duplicated count to the number of distinct elements." ;
     rdfs:subClassOf prov:Activity .
 
-<https://w3id.org/IproK/building#IfcModel> a owl:Class ;
+<https://w3id.org/iprok/building#IfcModel> a owl:Class ;
     rdfs:label "IFC Model" ;
-    dcterms:isPartOf <https://w3id.org/IproK/building> ;
+    dcterms:isPartOf <https://w3id.org/iprok/building> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/IfcModel> ;
-    rdfs:comment "One uploaded IFC model revision. Carries fileRef, fileFormat ('IFC'), uploadedAt, modelRevision, elementCount, ofProject. Element-level detail lives in <https://w3id.org/IproK/building#Element> triples." ;
-    rdfs:subClassOf <https://w3id.org/IproK/document#Document> .
+    rdfs:comment "One uploaded IFC model revision. Carries fileRef, fileFormat ('IFC'), uploadedAt, modelRevision, elementCount, ofProject. Element-level detail lives in <https://w3id.org/iprok/building#Element> triples." ;
+    rdfs:subClassOf <https://w3id.org/iprok/document#Document> .
 
-<https://w3id.org/IproK/building#MemberIdentity> a owl:Class ;
+<https://w3id.org/iprok/building#MemberIdentity> a owl:Class ;
     rdfs:label "Member Identity"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/building> ;
+    dcterms:isPartOf <https://w3id.org/iprok/building> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/MemberIdentity> ;
     rdfs:comment "VIDHI's IS-code identity of the steel members of one model that project information interface described identically." ;
     rdfs:subClassOf prov:Entity .
 
-<https://w3id.org/IproK/building#ModelComment> a owl:Class ;
+<https://w3id.org/iprok/building#ModelComment> a owl:Class ;
     rdfs:label "Model Comment"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/building> ;
+    dcterms:isPartOf <https://w3id.org/iprok/building> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/ModelComment> ;
     rdfs:comment "One recorded design-review comment on an IFC model view; the graph-native markup that Bluebeam/BIMcollab keep in opaque files." ;
     rdfs:subClassOf prov:Entity .
 
-<https://w3id.org/IproK/building#ModelHealthCheck> a owl:Class ;
+<https://w3id.org/iprok/building#ModelHealthCheck> a owl:Class ;
     rdfs:label "Model Health Check"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/building> ;
+    dcterms:isPartOf <https://w3id.org/iprok/building> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/ModelHealthCheck> ;
     rdfs:comment "One health audit of one IFC model at a point in time." ;
     rdfs:subClassOf prov:Entity .
 
-<https://w3id.org/IproK/building#checkedAt> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/building#checkedAt> a owl:DatatypeProperty ;
     rdfs:label "checked At"@en ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/building> ;
+    dcterms:isPartOf <https://w3id.org/iprok/building> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/checkedAt> ;
     rdfs:comment "The checked at property in the integrated project information model."@en ;
     rdfs:range xsd:dateTime .
 
-<https://w3id.org/IproK/building#checklistJson> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/building#checklistJson> a owl:DatatypeProperty ;
     rdfs:label "checklist Json"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/building> ;
+    dcterms:isPartOf <https://w3id.org/iprok/building> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/checklistJson> ;
     rdfs:comment "JSON array of actionable modelling gaps, worst first." ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK/building#commentId> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/building#commentId> a owl:DatatypeProperty ;
     rdfs:label "comment Id"@en ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/building> ;
+    dcterms:isPartOf <https://w3id.org/iprok/building> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/commentId> ;
     rdfs:comment "The comment id property in the integrated project information model."@en ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK/building#commentStatus> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/building#commentStatus> a owl:DatatypeProperty ;
     rdfs:label "comment Status"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/building> ;
+    dcterms:isPartOf <https://w3id.org/iprok/building> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/commentStatus> ;
     rdfs:comment "Open | Resolved." ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK/building#commentText> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/building#commentText> a owl:DatatypeProperty ;
     rdfs:label "comment Text"@en ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/building> ;
+    dcterms:isPartOf <https://w3id.org/iprok/building> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/commentText> ;
     rdfs:comment "The comment text property in the integrated project information model."@en ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK/building#contentVersion> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/building#contentVersion> a owl:DatatypeProperty ;
     rdfs:label "content Version"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/building> ;
+    dcterms:isPartOf <https://w3id.org/iprok/building> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/contentVersion> ;
     rdfs:comment "VIDHI's content version of an answer (sha256:…); it excludes the review state, so a review changes the label, not the version. No rdfs:domain." ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK/building#elementType> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/building#elementType> a owl:DatatypeProperty ;
     rdfs:label "element type" ;
-    dcterms:isPartOf <https://w3id.org/IproK/building> ;
+    dcterms:isPartOf <https://w3id.org/iprok/building> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/elementType> ;
     rdfs:comment "IFC class name verbatim, e.g. 'IfcWall', 'IfcColumn', 'IfcBeam', 'IfcSlab', 'IfcDoor'. Polymorphic — domain unspecified (antipattern #8) so other classes can carry it in future without RDFS contamination." ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK/building#elementsAudited> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/building#elementsAudited> a owl:DatatypeProperty ;
     rdfs:label "elements Audited"@en ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/building> ;
+    dcterms:isPartOf <https://w3id.org/iprok/building> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/elementsAudited> ;
     rdfs:comment "The elements audited property in the integrated project information model."@en ;
     rdfs:range xsd:integer .
 
-<https://w3id.org/IproK/building#elementsRetired> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/building#elementsRetired> a owl:DatatypeProperty ;
     rdfs:label "elements Retired"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/building> ;
+    dcterms:isPartOf <https://w3id.org/iprok/building> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/elementsRetired> ;
     rdfs:comment "How many element nodes an ElementDuplicatesRetired activity retired. No rdfs:domain." ;
     rdfs:range xsd:integer .
 
-<https://w3id.org/IproK/building#enrichedFileRef> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/building#enrichedFileRef> a owl:DatatypeProperty ;
     rdfs:label "enriched File Ref"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/building> ;
+    dcterms:isPartOf <https://w3id.org/iprok/building> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/enrichedFileRef> ;
     rdfs:comment "Object-store key of the enriched IFC, when enrichment produced one. The source model is never modified in place." ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK/building#forModel> a owl:ObjectProperty ;
+<https://w3id.org/iprok/building#forModel> a owl:ObjectProperty ;
     rdfs:label "for Model"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/building> ;
+    dcterms:isPartOf <https://w3id.org/iprok/building> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/forModel> ;
-    rdfs:comment "The <https://w3id.org/IproK/building#IfcModel> this audit measured." .
+    rdfs:comment "The <https://w3id.org/iprok/building#IfcModel> this audit measured." .
 
-<https://w3id.org/IproK/building#gradeStatus> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/building#gradeStatus> a owl:DatatypeProperty ;
     rdfs:label "grade Status"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/building> ;
+    dcterms:isPartOf <https://w3id.org/iprok/building> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/gradeStatus> ;
     rdfs:comment "is2062 | foreign_stated | stated_strength | assumed | not_stated | unrecognised; absent when VIDHI refused the member whole. No rdfs:domain." ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK/building#healthCheckId> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/building#healthCheckId> a owl:DatatypeProperty ;
     rdfs:label "health Check Id"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/building> ;
+    dcterms:isPartOf <https://w3id.org/iprok/building> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/healthCheckId> ;
     rdfs:comment "Human-facing id, MH-NNNN." ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK/building#identifiedAt> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/building#identifiedAt> a owl:DatatypeProperty ;
     rdfs:label "identified At"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/building> ;
+    dcterms:isPartOf <https://w3id.org/iprok/building> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/identifiedAt> ;
     rdfs:comment "When project information interface asked VIDHI. No rdfs:domain." ;
     rdfs:range xsd:dateTime .
 
-<https://w3id.org/IproK/building#identityJson> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/building#identityJson> a owl:DatatypeProperty ;
     rdfs:label "identity Json"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/building> ;
+    dcterms:isPartOf <https://w3id.org/iprok/building> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/identityJson> ;
     rdfs:comment "VIDHI's answer as JSON, less every value marked may_store:false. No rdfs:domain." ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK/building#ifcGuid> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/building#ifcGuid> a owl:DatatypeProperty ;
     rdfs:label "IFC GUID" ;
-    dcterms:isPartOf <https://w3id.org/IproK/building> ;
+    dcterms:isPartOf <https://w3id.org/iprok/building> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/ifcGuid> ;
     rdfs:comment "IfcGloballyUniqueId of the element the issue is on. The single most important field for cross-domain joins (Clash on IFC element → Drawing → Activity)." ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK/building#inputSha256> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/building#inputSha256> a owl:DatatypeProperty ;
     rdfs:label "input Sha256"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/building> ;
+    dcterms:isPartOf <https://w3id.org/iprok/building> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/inputSha256> ;
     rdfs:comment "VIDHI's hash of the question it answered (sha256:…). No rdfs:domain." ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK/building#markupJson> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/building#markupJson> a owl:DatatypeProperty ;
     rdfs:label "markup Json"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/building> ;
+    dcterms:isPartOf <https://w3id.org/iprok/building> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/markupJson> ;
     rdfs:comment "Drawn markup strokes (pen / arrow / rect / text) in view-normalised 0–1 coordinates, as a JSON literal." ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK/building#memberSignature> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/building#memberSignature> a owl:DatatypeProperty ;
     rdfs:label "member Signature"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/building> ;
+    dcterms:isPartOf <https://w3id.org/iprok/building> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/memberSignature> ;
     rdfs:comment "project information interface's hash of the member description it sent (sha256:…): identical descriptions are asked once. No rdfs:domain." ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK/building#onModel> a owl:ObjectProperty ;
+<https://w3id.org/iprok/building#onModel> a owl:ObjectProperty ;
     rdfs:label "on Model"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/building> ;
+    dcterms:isPartOf <https://w3id.org/iprok/building> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/onModel> ;
-    rdfs:comment "The <https://w3id.org/IproK/building#IfcModel> upload/revision this comment was recorded against. Range undeclared (antipattern #8)." .
+    rdfs:comment "The <https://w3id.org/iprok/building#IfcModel> upload/revision this comment was recorded against. Range undeclared (antipattern #8)." .
 
-<https://w3id.org/IproK/building#overallScore> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/building#overallScore> a owl:DatatypeProperty ;
     rdfs:label "overall Score"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/building> ;
+    dcterms:isPartOf <https://w3id.org/iprok/building> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/overallScore> ;
     rdfs:comment "Mean readiness across the uses that bear on this model, 0-100. Uses with no applicable element are skipped, never scored zero." ;
     rdfs:range xsd:decimal .
 
-<https://w3id.org/IproK/building#quantitiesWritten> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/building#quantitiesWritten> a owl:DatatypeProperty ;
     rdfs:label "quantities Written"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/building> ;
+    dcterms:isPartOf <https://w3id.org/iprok/building> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/quantitiesWritten> ;
     rdfs:comment "Quantities project information interface computed and wrote back on the enrichment pass, if one ran." ;
     rdfs:range xsd:integer .
 
-<https://w3id.org/IproK/building#readinessJson> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/building#readinessJson> a owl:DatatypeProperty ;
     rdfs:label "readiness Json"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/building> ;
+    dcterms:isPartOf <https://w3id.org/iprok/building> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/readinessJson> ;
-    rdfs:comment "JSON array of {use, score, verdict, fields[]} — caller-defined requirement set, so JSON-as-TEXT (the <https://w3id.org/IproK#zoneConfig> precedent)." ;
+    rdfs:comment "JSON array of {use, score, verdict, fields[]} — caller-defined requirement set, so JSON-as-TEXT (the <https://w3id.org/iprok#zoneConfig> precedent)." ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK/building#replyTo> a owl:ObjectProperty ;
+<https://w3id.org/iprok/building#replyTo> a owl:ObjectProperty ;
     rdfs:label "reply To"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/building> ;
+    dcterms:isPartOf <https://w3id.org/iprok/building> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/replyTo> ;
-    rdfs:comment "Optional thread parent — another <https://w3id.org/IproK/building#ModelComment>. Range undeclared (antipattern #8)." .
+    rdfs:comment "Optional thread parent — another <https://w3id.org/iprok/building#ModelComment>. Range undeclared (antipattern #8)." .
 
-<https://w3id.org/IproK/building#reviewLabel> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/building#reviewLabel> a owl:DatatypeProperty ;
     rdfs:label "review Label"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/building> ;
+    dcterms:isPartOf <https://w3id.org/iprok/building> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/reviewLabel> ;
     rdfs:comment "The label shown wherever the answer is shown or used (e.g. 'proposed, not approved by a reviewer'). No rdfs:domain." ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK/building#reviewState> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/building#reviewState> a owl:DatatypeProperty ;
     rdfs:label "review State"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/building> ;
+    dcterms:isPartOf <https://w3id.org/iprok/building> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/reviewState> ;
     rdfs:comment "VIDHI's review state of an answer: proposed or approved. No rdfs:domain." ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK/building#sectionDesignation> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/building#sectionDesignation> a owl:DatatypeProperty ;
     rdfs:label "section Designation"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/building> ;
+    dcterms:isPartOf <https://w3id.org/iprok/building> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/sectionDesignation> ;
     rdfs:comment "The IS 808 designation VIDHI named, on an exact fit only. No rdfs:domain." ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK/building#sectionStatus> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/building#sectionStatus> a owl:DatatypeProperty ;
     rdfs:label "section Status"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/building> ;
+    dcterms:isPartOf <https://w3id.org/iprok/building> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/sectionStatus> ;
     rdfs:comment "is808_exact | is808_ambiguous | measurement_too_uncertain | foreign | unidentified | inconsistent | not_in_catalogue; absent when VIDHI refused the member whole. No rdfs:domain." ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK/building#vidhiContract> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/building#vidhiContract> a owl:DatatypeProperty ;
     rdfs:label "vidhi Contract"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/building> ;
+    dcterms:isPartOf <https://w3id.org/iprok/building> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/vidhiContract> ;
     rdfs:comment "The VIDHI contract an answer was given under (vidhi.element-identity/1). No rdfs:domain." ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK/building#viewName> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/building#viewName> a owl:DatatypeProperty ;
     rdfs:label "view Name"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/building> ;
+    dcterms:isPartOf <https://w3id.org/iprok/building> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/viewName> ;
     rdfs:comment "Which generated view the comment was made in — '3D', a storey plan name, or an elevation name." ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK/building#viewpointJson> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/building#viewpointJson> a owl:DatatypeProperty ;
     rdfs:label "viewpoint Json"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/building> ;
+    dcterms:isPartOf <https://w3id.org/iprok/building> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/viewpointJson> ;
-    rdfs:comment "BCF-style camera state (position / target / projection / open view) as a JSON literal — the JSON-as-TEXT precedent (<https://w3id.org/IproK#zoneConfig>)." ;
+    rdfs:comment "BCF-style camera state (position / target / projection / open view) as a JSON literal — the JSON-as-TEXT precedent (<https://w3id.org/iprok#zoneConfig>)." ;
     rdfs:range xsd:string .
 

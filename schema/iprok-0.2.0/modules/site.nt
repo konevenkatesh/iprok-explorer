@@ -1,0 +1,418 @@
+<https://w3id.org/iprok/site#hospitalType> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/iprok/site#SiteWorkerSafety> .
+<https://w3id.org/iprok/site#SiteHydrology> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iprok/site#dewateringRequired> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/site#gridSubstationDistanceKm> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/gridSubstationDistanceKm> .
+<https://w3id.org/iprok/site#SiteHydrology> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/iprok/site#SiteIntelligence> .
+<https://w3id.org/iprok/site#rmc1Name> <http://www.w3.org/2000/01/rdf-schema#comment> "The rmc1name property in the integrated project information model. Its declared domain is SiteLogistics and its declared range is string."@en .
+<https://w3id.org/iprok/site#heavyVehicleAccess> <http://www.w3.org/2000/01/rdf-schema#label> "heavy vehicle access" .
+<https://w3id.org/iprok/site#peakHeatMonth> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/site> .
+<https://w3id.org/iprok/site#rmc2DistanceKm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/site#peakMonsoonWeek> <http://www.w3.org/2000/01/rdf-schema#label> "peak monsoon ISO week" .
+<https://w3id.org/iprok/site#monsoonWithdrawalWeek> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/monsoonWithdrawalWeek> .
+<https://w3id.org/iprok/site#railwayGoodsYardName> <http://www.w3.org/2000/01/rdf-schema#comment> "The railway goods yard name property in the integrated project information model. Its declared domain is SiteLogistics and its declared range is string."@en .
+<https://w3id.org/iprok/site#peakHeatMonth> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/peakHeatMonth> .
+<https://w3id.org/iprok/site#labourAccommodationNeeded> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/site#dataVersion> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/iprok/site#SiteIntelligence> .
+<https://w3id.org/iprok/site#heatWaveDaysPerYear> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/site#hospitalName> <http://www.w3.org/2000/01/rdf-schema#comment> "The hospital name property in the integrated project information model. Its declared domain is SiteWorkerSafety and its declared range is string."@en .
+<https://w3id.org/iprok/site#SiteWorkerSafety> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iprok/site#groundwaterDepthPreMonsoonM> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/groundwaterDepthPreMonsoonM> .
+<https://w3id.org/iprok/site#gridSubstationDistanceKm> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/site> .
+<https://w3id.org/iprok/site#monsoonWithdrawalWeek> <http://www.w3.org/2000/01/rdf-schema#label> "monsoon withdrawal ISO week" .
+<https://w3id.org/iprok/site#SiteWorkerSafety> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/iprok/site#SiteIntelligence> .
+<https://w3id.org/iprok/site#hospitalDistanceKm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/site#rmc2Name> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/site> .
+<https://w3id.org/iprok/site#peakMonsoonWeek> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/peakMonsoonWeek> .
+<https://w3id.org/iprok/site#peakMonsoonWeek> <http://www.w3.org/2000/01/rdf-schema#comment> "The peak monsoon week property in the integrated project information model. Its declared domain is SiteClimate and its declared range is integer."@en .
+<https://w3id.org/iprok/site#publicTransportType> <http://www.w3.org/2000/01/rdf-schema#label> "public transport type" .
+<https://w3id.org/iprok/site#dustRiskMonths> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/iprok/site#SiteWorkerSafety> .
+<https://w3id.org/iprok/site#monsoonActiveWeeks> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/iprok/site#SiteClimate> .
+<https://w3id.org/iprok/site#railwayGoodsYardName> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/railwayGoodsYardName> .
+<https://w3id.org/iprok/site#aggregateQuarryKm> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/iprok/site#waterSourceDistanceKm> <http://www.w3.org/2000/01/rdf-schema#label> "water source distance (km)" .
+<https://w3id.org/iprok/site#publicTransportDistanceM> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/iprok/site#SiteLabour> .
+<https://w3id.org/iprok/site#SiteIntelligence> <http://www.w3.org/2000/01/rdf-schema#comment> "Auto-generated site context report at project GPS setup. Holds six typed sub-domains (Hydrology / Logistics / Worker Safety / Utilities / Labour / Climate). Six threshold-based auto-risks (v2.0 §3.2) seeded at initiation from this report." .
+<https://w3id.org/iprok/site#SiteLogistics> <http://www.w3.org/2000/01/rdf-schema#label> "Site Logistics" .
+<https://w3id.org/iprok/site#roadAccessClass> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/roadAccessClass> .
+<https://w3id.org/iprok/site#SiteHydrology> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/site> .
+<https://w3id.org/iprok/site#rmc2DistanceKm> <http://www.w3.org/2000/01/rdf-schema#label> "RMC plant 2 distance (km)" .
+<https://w3id.org/iprok/site#rmc1Name> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/rmc1Name> .
+<https://w3id.org/iprok/site#annualRainfallMM> <http://www.w3.org/2000/01/rdf-schema#comment> "The annual rainfall mm property in the integrated project information model. Its declared domain is SiteClimate and its declared range is decimal."@en .
+<https://w3id.org/iprok/site#publicTransportType> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/site> .
+<https://w3id.org/iprok/site#aqiZone> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/site#siteAmbientAQI> <http://www.w3.org/2000/01/rdf-schema#comment> "The site ambient aqi property in the integrated project information model. Its declared domain is SiteWorkerSafety and its declared range is integer."@en .
+<https://w3id.org/iprok/site#labourAccommodationNeeded> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/iprok/site#SiteLabour> .
+<https://w3id.org/iprok/site#gridVoltageKV> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/gridVoltageKV> .
+<https://w3id.org/iprok/site#gridSubstationName> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/iprok/site#SiteUtilities> .
+<https://w3id.org/iprok/site#rmc1DistanceKm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/site#waterSourceDistanceKm> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/site#monsoonActiveWeeks> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/site#labourColonyDistanceKm> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/iprok/site#aggregateQuarryKm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/site#railwayGoodsYardName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/site#cementStockistKm> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/site#publicTransportDistanceM> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/site> .
+<https://w3id.org/iprok/site#rmc2DistanceKm> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/iprok/site#cgwbBlockCategory> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/site#dustRiskMonths> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/site#peakHeatMonthWBGT> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/site> .
+<https://w3id.org/iprok/site#heatWaveDaysPerYear> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/iprok/site#SiteClimate> .
+<https://w3id.org/iprok/site#gridVoltageKV> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/site#rmc1DistanceKm> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/rmc1DistanceKm> .
+<https://w3id.org/iprok/site#siteAmbientAQI> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/site> .
+<https://w3id.org/iprok/site#groundwaterDepthPostMonsoonM> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/iprok/site#labourColonyDistanceKm> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/site> .
+<https://w3id.org/iprok/site#undergroundUtilityRisk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/site#SiteLogistics> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/iprok/site#SiteIntelligence> .
+<https://w3id.org/iprok/site#nearestWaterSourceName> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/nearestWaterSourceName> .
+<https://w3id.org/iprok/site#aggregateQuarryKm> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/aggregateQuarryKm> .
+<https://w3id.org/iprok/site#aggregateQuarryKm> <http://www.w3.org/2000/01/rdf-schema#label> "aggregate quarry distance (km)" .
+<https://w3id.org/iprok/site#hospitalName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/site#dataVersion> <http://www.w3.org/2000/01/rdf-schema#label> "data version" .
+<https://w3id.org/iprok/site#rmc2Name> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/iprok/site#SiteLogistics> .
+<https://w3id.org/iprok/site#heatWaveDaysPerYear> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/site#SiteIntelligence> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/site> .
+<https://w3id.org/iprok/site#gridVoltageKV> <http://www.w3.org/2000/01/rdf-schema#label> "grid voltage (kV)" .
+<https://w3id.org/iprok/site#undergroundUtilityNotes> <http://www.w3.org/2000/01/rdf-schema#comment> "The underground utility notes property in the integrated project information model. Its declared domain is SiteUtilities and its declared range is string."@en .
+<https://w3id.org/iprok/site#groundwaterDepthPostMonsoonM> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/site> .
+<https://w3id.org/iprok/site#SiteLabour> <http://www.w3.org/2000/01/rdf-schema#label> "Site Labour" .
+<https://w3id.org/iprok/site#stateAgriCalendarJson> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/site> .
+<https://w3id.org/iprok/site#undergroundUtilityNotes> <http://www.w3.org/2000/01/rdf-schema#label> "underground Utility Notes"@en .
+<https://w3id.org/iprok/site#nearestAirportKm> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/site#SiteClimate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iprok/site#cementStockistKm> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/cementStockistKm> .
+<https://w3id.org/iprok/site#SiteClimate> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/iprok/site#SiteIntelligence> .
+<https://w3id.org/iprok/site#historicalWeeklyRainJson> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/iprok/site#SiteClimate> .
+<https://w3id.org/iprok/site#rmc1Name> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/iprok/site#SiteLogistics> .
+<https://w3id.org/iprok/site#railwayGoodsYardKm> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/site#monsoonWithdrawalWeek> <http://www.w3.org/2000/01/rdf-schema#comment> "The monsoon withdrawal week property in the integrated project information model. Its declared domain is SiteClimate and its declared range is integer."@en .
+<https://w3id.org/iprok/site#peakHeatMonthWBGT> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/iprok/site#gridSubstationDistanceKm> <http://www.w3.org/2000/01/rdf-schema#label> "grid substation distance (km)" .
+<https://w3id.org/iprok/site#dataVersion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/site#overheadHTLineDistanceM> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/site#rmc1DistanceKm> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/iprok/site#undergroundUtilityNotes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/site#SiteUtilities> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/site> .
+<https://w3id.org/iprok/site#siteAmbientAQI> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<https://w3id.org/iprok/site#heatStressMonths> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/site#railwayGoodsYardKm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/site#dewateringRequired> <http://www.w3.org/2000/01/rdf-schema#label> "dewatering required" .
+<https://w3id.org/iprok/site#SiteHydrology> <http://www.w3.org/2000/01/rdf-schema#label> "Site Hydrology" .
+<https://w3id.org/iprok/site#peakHeatMonth> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/iprok/site#SiteWorkerSafety> .
+<https://w3id.org/iprok/site#steelDepotName> <http://www.w3.org/2000/01/rdf-schema#comment> "The steel depot name property in the integrated project information model. Its declared domain is SiteLogistics and its declared range is string."@en .
+<https://w3id.org/iprok/site#rmc2DistanceKm> <http://www.w3.org/2000/01/rdf-schema#comment> "The rmc2distance km property in the integrated project information model. Its declared domain is SiteLogistics and its declared range is decimal."@en .
+<https://w3id.org/iprok/site#steelDepotName> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/site> .
+<https://w3id.org/iprok/site#steelDepotDistanceKm> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/iprok/site#SiteLogistics> .
+<https://w3id.org/iprok/site#roadAccessClass> <http://www.w3.org/2000/01/rdf-schema#comment> "NH | SH | MDR | ODR | VR (per OSM highway tag)." .
+<https://w3id.org/iprok/site#siteAmbientAQI> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/iprok/site#SiteWorkerSafety> .
+<https://w3id.org/iprok/site#heavyVehicleAccess> <http://www.w3.org/2000/01/rdf-schema#comment> "False triggers an auto-risk (cement/steel can't reach site at scale)." .
+<https://w3id.org/iprok/site#seasonalFluctuationM> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/site#waterSourceDistanceKm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/site#cgwbBlockCategory> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/cgwbBlockCategory> .
+<https://w3id.org/iprok/site#nearestWaterSourceName> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/site> .
+<https://w3id.org/iprok/site#cementStockistKm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/site#seasonalFluctuationM> <http://www.w3.org/2000/01/rdf-schema#label> "seasonal fluctuation (m)" .
+<https://w3id.org/iprok/site#SiteClimate> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/site> .
+<https://w3id.org/iprok/site#heatStressMonths> <http://www.w3.org/2000/01/rdf-schema#label> "heat stress months" .
+<https://w3id.org/iprok/site#monsoonActiveWeeks> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/monsoonActiveWeeks> .
+<https://w3id.org/iprok/site#waterSourceDistanceKm> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/waterSourceDistanceKm> .
+<https://w3id.org/iprok/site#hospitalType> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/hospitalType> .
+<https://w3id.org/iprok/site#railwayGoodsYardKm> <http://www.w3.org/2000/01/rdf-schema#comment> "The railway goods yard km property in the integrated project information model. Its declared domain is SiteLogistics and its declared range is decimal."@en .
+<https://w3id.org/iprok/site#publicTransportType> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/publicTransportType> .
+<https://w3id.org/iprok/site#dewateringRequired> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/dewateringRequired> .
+<https://w3id.org/iprok/site#heatWaveDaysPerYear> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/iprok/site#stateAgriCalendarJson> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/site#steelDepotDistanceKm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/site#peakHeatMonth> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/site#railwayGoodsYardKm> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/iprok/site#seasonalFluctuationM> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/seasonalFluctuationM> .
+<https://w3id.org/iprok/site#cgwbBlockCategory> <http://www.w3.org/2000/01/rdf-schema#comment> "Safe | Semi-Critical | Critical | Over-exploited (per CGWB block-level groundwater assessment)." .
+<https://w3id.org/iprok/site#overheadHTLineDistanceM> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/iprok/site#gridSubstationName> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/site#roadAccessClass> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/iprok/site#SiteLogistics> .
+<https://w3id.org/iprok/site#gridSubstationName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/site#groundwaterDepthPreMonsoonM> <http://www.w3.org/2000/01/rdf-schema#label> "groundwater depth pre-monsoon (m)" .
+<https://w3id.org/iprok/site#publicTransportType> <http://www.w3.org/2000/01/rdf-schema#comment> "Bus Stop | Metro | Suburban Rail | Auto Stand | None." .
+<https://w3id.org/iprok/site#SiteWorkerSafety> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/SiteWorkerSafety> .
+<https://w3id.org/iprok/site#nearestAirportKm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/site#dewateringRequired> <http://www.w3.org/2000/01/rdf-schema#comment> "True when groundwaterDepthPreMonsoonM < 3.0 — i.e. excavation will hit water table." .
+<https://w3id.org/iprok/site#gridSubstationName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/site#SiteIntelligence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iprok/site#seasonalFluctuationM> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/iprok/site#steelDepotName> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/iprok/site#SiteLogistics> .
+<https://w3id.org/iprok/site#dataVersion> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/dataVersion> .
+<https://w3id.org/iprok/site#overheadHTLineDistanceM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/site#waterSourceDistanceKm> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/iprok/site#SiteLabour> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iprok/site#monsoonActiveWeeks> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/site#nearestWaterSourceName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/site#annualRainfallMM> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/site> .
+<https://w3id.org/iprok/site#labourAccommodationNeeded> <http://www.w3.org/2000/01/rdf-schema#label> "labour accommodation needed" .
+<https://w3id.org/iprok/site#monsoonActiveWeeks> <http://www.w3.org/2000/01/rdf-schema#comment> "The monsoon active weeks property in the integrated project information model. Its declared domain is SiteClimate and its declared range is integer."@en .
+<https://w3id.org/iprok/site#cementStockistKm> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/iprok/site#SiteLabour> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/SiteLabour> .
+<https://w3id.org/iprok/site#peakMonsoonWeek> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/site#publicTransportType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/site#publicTransportDistanceM> <http://www.w3.org/2000/01/rdf-schema#label> "public transport distance (m)" .
+<https://w3id.org/iprok/site#stateAgriCalendarJson> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/iprok/site#SiteLabour> .
+<https://w3id.org/iprok/site#roadAccessClass> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/site#heavyVehicleAccess> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/site> .
+<https://w3id.org/iprok/site#seasonalFluctuationM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/site#overheadHTLineDistanceM> <http://www.w3.org/2000/01/rdf-schema#comment> "The overhead htline distance m property in the integrated project information model. Its declared domain is SiteUtilities and its declared range is decimal."@en .
+<https://w3id.org/iprok/site#groundwaterDepthPostMonsoonM> <http://www.w3.org/2000/01/rdf-schema#comment> "The groundwater depth post monsoon m property in the integrated project information model. Its declared domain is SiteHydrology and its declared range is decimal."@en .
+<https://w3id.org/iprok/site#dewateringRequired> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/site> .
+<https://w3id.org/iprok/site#hospitalDistanceKm> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/hospitalDistanceKm> .
+<https://w3id.org/iprok/site#monsoonOnsetWeek> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/iprok/site#SiteClimate> .
+<https://w3id.org/iprok/site#heatStressMonths> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/iprok/site#SiteWorkerSafety> .
+<https://w3id.org/iprok/site#dustRiskMonths> <http://www.w3.org/2000/01/rdf-schema#label> "dust risk months" .
+<https://w3id.org/iprok/site#rmc2DistanceKm> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/site> .
+<https://w3id.org/iprok/site#publicTransportDistanceM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/site#undergroundUtilityRisk> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/site#stateAgriCalendarJson> <http://www.w3.org/2000/01/rdf-schema#label> "state agricultural calendar (JSON)" .
+<https://w3id.org/iprok/site#rmc2Name> <http://www.w3.org/2000/01/rdf-schema#comment> "The rmc2name property in the integrated project information model. Its declared domain is SiteLogistics and its declared range is string."@en .
+<https://w3id.org/iprok/site#labourAccommodationNeeded> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/site> .
+<https://w3id.org/iprok/site#hospitalDistanceKm> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/site#siteAmbientAQI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/site#steelDepotName> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/steelDepotName> .
+<https://w3id.org/iprok/site#steelDepotDistanceKm> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/steelDepotDistanceKm> .
+<https://w3id.org/iprok/site#SiteLabour> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/site> .
+<https://w3id.org/iprok/site#nearestAirportKm> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/iprok/site#overheadHTLineDistanceM> <http://www.w3.org/2000/01/rdf-schema#label> "overhead HT line distance (m)" .
+<https://w3id.org/iprok/site#steelDepotDistanceKm> <http://www.w3.org/2000/01/rdf-schema#label> "steel depot distance (km)" .
+<https://w3id.org/iprok/site#aqiZone> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/iprok/site#SiteWorkerSafety> .
+<https://w3id.org/iprok/site#hospitalDistanceKm> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/site> .
+<https://w3id.org/iprok/site#cgwbBlockCategory> <http://www.w3.org/2000/01/rdf-schema#label> "CGWB block category" .
+<https://w3id.org/iprok/site#aggregateQuarryKm> <http://www.w3.org/2000/01/rdf-schema#comment> "The aggregate quarry km property in the integrated project information model. Its declared domain is SiteLogistics and its declared range is decimal."@en .
+<https://w3id.org/iprok/site#rmc2Name> <http://www.w3.org/2000/01/rdf-schema#label> "rmc2Name"@en .
+<https://w3id.org/iprok/site#rmc1DistanceKm> <http://www.w3.org/2000/01/rdf-schema#label> "RMC plant 1 distance (km)" .
+<https://w3id.org/iprok/site#monsoonOnsetWeek> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/site#overheadHTLineDistanceM> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/overheadHTLineDistanceM> .
+<https://w3id.org/iprok/site#gridSubstationDistanceKm> <http://www.w3.org/2000/01/rdf-schema#comment> "The grid substation distance km property in the integrated project information model. Its declared domain is SiteUtilities and its declared range is decimal."@en .
+<https://w3id.org/iprok/site#roadAccessClass> <http://www.w3.org/2000/01/rdf-schema#label> "road access class" .
+<https://w3id.org/iprok/site#monsoonWithdrawalWeek> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/site#stateAgriCalendarJson> <http://www.w3.org/2000/01/rdf-schema#comment> "ICAR state×crop×month JSON. Kharif/Rabi harvest weeks and labour impact score. The P2B Planning Module reads this to reduce crew availability 20-35% on harvest weeks." .
+<https://w3id.org/iprok/site#heatStressMonths> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/heatStressMonths> .
+<https://w3id.org/iprok/site#SiteLabour> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/iprok/site#SiteIntelligence> .
+<https://w3id.org/iprok/site#waterSourceDistanceKm> <http://www.w3.org/2000/01/rdf-schema#comment> "The water source distance km property in the integrated project information model. Its declared domain is SiteHydrology and its declared range is decimal."@en .
+<https://w3id.org/iprok/site#gridVoltageKV> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/iprok/site#groundwaterDepthPreMonsoonM> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/site#heatWaveDaysPerYear> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/heatWaveDaysPerYear> .
+<https://w3id.org/iprok/site#nearestAirportKm> <http://www.w3.org/2000/01/rdf-schema#comment> "The nearest airport km property in the integrated project information model. Its declared domain is SiteLogistics and its declared range is decimal."@en .
+<https://w3id.org/iprok/site#railwayGoodsYardName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/site#rmc1DistanceKm> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/site> .
+<https://w3id.org/iprok/site#dustRiskMonths> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/dustRiskMonths> .
+<https://w3id.org/iprok/site#aggregateQuarryKm> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/site> .
+<https://w3id.org/iprok/site#railwayGoodsYardName> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/site> .
+<https://w3id.org/iprok/site#SiteUtilities> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/iprok/site#SiteIntelligence> .
+<https://w3id.org/iprok/site#SiteUtilities> <http://www.w3.org/2000/01/rdf-schema#comment> "OSM grid substation + overhead HT line detection within 200m. The overhead-HT-line-present case is safety-critical and auto-creates a Score 16 risk." .
+<https://w3id.org/iprok/site#peakMonsoonWeek> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/site#dustRiskMonths> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/site#SiteUtilities> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/SiteUtilities> .
+<https://w3id.org/iprok/site#dustRiskMonths> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/site> .
+<https://w3id.org/iprok/site#labourColonyDistanceKm> <http://www.w3.org/2000/01/rdf-schema#label> "labour colony distance (km)" .
+<https://w3id.org/iprok/site#hospitalDistanceKm> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/iprok/site#gridVoltageKV> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/site> .
+<https://w3id.org/iprok/site#cgwbBlockCategory> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/site> .
+<https://w3id.org/iprok/site#hospitalName> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/site#cementStockistKm> <http://www.w3.org/2000/01/rdf-schema#label> "cement stockist distance (km)" .
+<https://w3id.org/iprok/site#cementStockistKm> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/site> .
+<https://w3id.org/iprok/site#dewateringRequired> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<https://w3id.org/iprok/site#undergroundUtilityRisk> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/site> .
+<https://w3id.org/iprok/site#siteAmbientAQI> <http://www.w3.org/2000/01/rdf-schema#label> "site ambient AQI" .
+<https://w3id.org/iprok/site#peakHeatMonth> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/site#overheadHTLinePresent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/site#gridSubstationName> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/gridSubstationName> .
+<https://w3id.org/iprok/site#monsoonWithdrawalWeek> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/iprok/site#SiteClimate> .
+<https://w3id.org/iprok/site#heatWaveDaysPerYear> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/site> .
+<https://w3id.org/iprok/site#rmc2Name> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/rmc2Name> .
+<https://w3id.org/iprok/site#groundwaterDepthPreMonsoonM> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/iprok/site#SiteHydrology> .
+<https://w3id.org/iprok/site#hospitalType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/site#peakMonsoonWeek> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/iprok/site#SiteClimate> .
+<https://w3id.org/iprok/site#undergroundUtilityNotes> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/site#SiteClimate> <http://www.w3.org/2000/01/rdf-schema#comment> "NASA POWER 10-year climatology: monsoon onset/withdrawal ISO weeks + annual rainfall + heat-wave days/year. Companion to the S6.6+ <https://w3id.org/iprok/signal#HistoricalWeatherProfile> (which holds the 52-week probability profile)." .
+<https://w3id.org/iprok/site#gridSubstationDistanceKm> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/site#rmc1Name> <http://www.w3.org/2000/01/rdf-schema#label> "rmc1Name"@en .
+<https://w3id.org/iprok/site#monsoonOnsetWeek> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/site#undergroundUtilityRisk> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/iprok/site#SiteUtilities> .
+<https://w3id.org/iprok/site#monsoonOnsetWeek> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/monsoonOnsetWeek> .
+<https://w3id.org/iprok/site#dataVersion> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/site#rmc2Name> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/site#cementStockistKm> <http://www.w3.org/2000/01/rdf-schema#comment> "The cement stockist km property in the integrated project information model. Its declared domain is SiteLogistics and its declared range is decimal."@en .
+<https://w3id.org/iprok/site#publicTransportType> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/iprok/site#SiteLabour> .
+<https://w3id.org/iprok/site#nearestWaterSourceName> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/iprok/site#SiteHydrology> .
+<https://w3id.org/iprok/site#cgwbBlockCategory> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/iprok/site#SiteHydrology> .
+<https://w3id.org/iprok/site#heavyVehicleAccess> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/iprok/site#SiteLogistics> .
+<https://w3id.org/iprok/site#annualRainfallMM> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/iprok/site#SiteClimate> .
+<https://w3id.org/iprok/site#railwayGoodsYardName> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/iprok/site#SiteLogistics> .
+<https://w3id.org/iprok/site#monsoonWithdrawalWeek> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/site#monsoonOnsetWeek> <http://www.w3.org/2000/01/rdf-schema#comment> "The monsoon onset week property in the integrated project information model. Its declared domain is SiteClimate and its declared range is integer."@en .
+<https://w3id.org/iprok/site#peakHeatMonthWBGT> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/peakHeatMonthWBGT> .
+<https://w3id.org/iprok/site#nearestAirportKm> <http://www.w3.org/2000/01/rdf-schema#label> "nearest airport distance (km)" .
+<https://w3id.org/iprok/site#dewateringRequired> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/iprok/site#SiteHydrology> .
+<https://w3id.org/iprok/site#railwayGoodsYardKm> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/site> .
+<https://w3id.org/iprok/site#aqiZone> <http://www.w3.org/2000/01/rdf-schema#label> "AQI zone" .
+<https://w3id.org/iprok/site#aqiZone> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/site#steelDepotDistanceKm> <http://www.w3.org/2000/01/rdf-schema#comment> "The steel depot distance km property in the integrated project information model. Its declared domain is SiteLogistics and its declared range is decimal."@en .
+<https://w3id.org/iprok/site#groundwaterDepthPreMonsoonM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/site#rmc2DistanceKm> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/iprok/site#SiteLogistics> .
+<https://w3id.org/iprok/site#rmc1Name> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/site#waterSourceDistanceKm> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/site> .
+<https://w3id.org/iprok/site#historicalWeeklyRainJson> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/site#undergroundUtilityRisk> <http://www.w3.org/2000/01/rdf-schema#label> "underground utility risk" .
+<https://w3id.org/iprok/site#SiteIntelligence> <http://www.w3.org/2000/01/rdf-schema#label> "Site Intelligence Report" .
+<https://w3id.org/iprok/site#heavyVehicleAccess> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<https://w3id.org/iprok/site#steelDepotName> <http://www.w3.org/2000/01/rdf-schema#label> "steel Depot Name"@en .
+<https://w3id.org/iprok/site#rmc1Name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/site#annualRainfallMM> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/annualRainfallMM> .
+<https://w3id.org/iprok/site#undergroundUtilityNotes> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/undergroundUtilityNotes> .
+<https://w3id.org/iprok/site#hospitalName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/site#hospitalName> <http://www.w3.org/2000/01/rdf-schema#label> "hospital Name"@en .
+<https://w3id.org/iprok/site#publicTransportDistanceM> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/site#hospitalType> <http://www.w3.org/2000/01/rdf-schema#comment> "Trauma Centre | Multi-speciality | Government | Primary Health Centre | Other." .
+<https://w3id.org/iprok/site#rmc2DistanceKm> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/rmc2DistanceKm> .
+<https://w3id.org/iprok/site#steelDepotDistanceKm> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/site#groundwaterDepthPostMonsoonM> <http://www.w3.org/2000/01/rdf-schema#label> "groundwater depth post-monsoon (m)" .
+<https://w3id.org/iprok/site#SiteLogistics> <http://www.w3.org/2000/01/rdf-schema#comment> "OSM-derived road / RMC / steel depot / rail / air. Drives the no-heavy-vehicle-access auto-risk." .
+<https://w3id.org/iprok/site#peakHeatMonth> <http://www.w3.org/2000/01/rdf-schema#label> "peak heat month" .
+<https://w3id.org/iprok/site#siteAmbientAQI> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/site#peakHeatMonth> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/site#labourColonyDistanceKm> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/site#gridSubstationDistanceKm> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/iprok/site#steelDepotDistanceKm> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/site> .
+<https://w3id.org/iprok/site#railwayGoodsYardKm> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/iprok/site#SiteLogistics> .
+<https://w3id.org/iprok/site#SiteHydrology> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/SiteHydrology> .
+<https://w3id.org/iprok/site#aqiZone> <http://www.w3.org/2000/01/rdf-schema#comment> "CPCB AQI band — Good | Satisfactory | Moderate | Poor | Very Poor | Severe." .
+<https://w3id.org/iprok/site#aqiZone> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/aqiZone> .
+<https://w3id.org/iprok/site#SiteLogistics> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iprok/site#nearestAirportKm> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/site> .
+<https://w3id.org/iprok/site#rmc1DistanceKm> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/iprok/site#SiteLogistics> .
+<https://w3id.org/iprok/site#groundwaterDepthPostMonsoonM> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/site#heatStressMonths> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/site#gridSubstationName> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/site> .
+<https://w3id.org/iprok/site#SiteWorkerSafety> <http://www.w3.org/2000/01/rdf-schema#label> "Site Worker Safety" .
+<https://w3id.org/iprok/site#aggregateQuarryKm> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/iprok/site#SiteLogistics> .
+<https://w3id.org/iprok/site#gridSubstationDistanceKm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/site#rmc2Name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/site#SiteIntelligence> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/SiteIntelligence> .
+<https://w3id.org/iprok/site#overheadHTLineDistanceM> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/site> .
+<https://w3id.org/iprok/site#historicalWeeklyRainJson> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/historicalWeeklyRainJson> .
+<https://w3id.org/iprok/site#dataVersion> <http://www.w3.org/2000/01/rdf-schema#comment> "Semantic version of the site-intel fetcher schema. Bump on any breaking change to a sub-domain's property set so old reports can be re-fetched." .
+<https://w3id.org/iprok/site#peakHeatMonthWBGT> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/iprok/site#SiteWorkerSafety> .
+<https://w3id.org/iprok/site#overheadHTLinePresent> <http://www.w3.org/2000/01/rdf-schema#label> "overhead HT line present (within 200m)" .
+<https://w3id.org/iprok/site#cementStockistKm> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/iprok/site#SiteLogistics> .
+<https://w3id.org/iprok/site#undergroundUtilityNotes> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/site> .
+<https://w3id.org/iprok/site#overheadHTLinePresent> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/overheadHTLinePresent> .
+<https://w3id.org/iprok/site#gridSubstationName> <http://www.w3.org/2000/01/rdf-schema#label> "grid Substation Name"@en .
+<https://w3id.org/iprok/site#steelDepotDistanceKm> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/iprok/site#roadAccessClass> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/site> .
+<https://w3id.org/iprok/site#SiteClimate> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/SiteClimate> .
+<https://w3id.org/iprok/site#peakHeatMonthWBGT> <http://www.w3.org/2000/01/rdf-schema#comment> "The peak heat month wbgt property in the integrated project information model. Its declared domain is SiteWorkerSafety and its declared range is decimal."@en .
+<https://w3id.org/iprok/site#seasonalFluctuationM> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/site> .
+<https://w3id.org/iprok/site#steelDepotName> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/site#historicalWeeklyRainJson> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/site#gridSubstationName> <http://www.w3.org/2000/01/rdf-schema#comment> "The grid substation name property in the integrated project information model. Its declared domain is SiteUtilities and its declared range is string."@en .
+<https://w3id.org/iprok/site#peakHeatMonthWBGT> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/site#SiteLogistics> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/site> .
+<https://w3id.org/iprok/site#historicalWeeklyRainJson> <http://www.w3.org/2000/01/rdf-schema#comment> "52-week array of {week, rain_mm} from NASA POWER 10-year mean. Cross-reference: <https://w3id.org/iprok/signal#HistoricalWeatherProfile> (S6.6+) holds the probabilistic version." .
+<https://w3id.org/iprok/site#peakHeatMonthWBGT> <http://www.w3.org/2000/01/rdf-schema#label> "peak heat month WBGT (°C)" .
+<https://w3id.org/iprok/site#monsoonActiveWeeks> <http://www.w3.org/2000/01/rdf-schema#label> "monsoon active weeks" .
+<https://w3id.org/iprok/site#SiteWorkerSafety> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/site> .
+<https://w3id.org/iprok/site#peakHeatMonthWBGT> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/site#labourAccommodationNeeded> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<https://w3id.org/iprok/site#railwayGoodsYardName> <http://www.w3.org/2000/01/rdf-schema#label> "railway Goods Yard Name"@en .
+<https://w3id.org/iprok/site#cgwbBlockCategory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/site#nearestWaterSourceName> <http://www.w3.org/2000/01/rdf-schema#label> "nearest water source name" .
+<https://w3id.org/iprok/site#undergroundUtilityRisk> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/undergroundUtilityRisk> .
+<https://w3id.org/iprok/site#labourColonyDistanceKm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/site#nearestAirportKm> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/iprok/site#SiteLogistics> .
+<https://w3id.org/iprok/site#peakMonsoonWeek> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<https://w3id.org/iprok/site#publicTransportDistanceM> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/publicTransportDistanceM> .
+<https://w3id.org/iprok/site#heatWaveDaysPerYear> <http://www.w3.org/2000/01/rdf-schema#comment> "The heat wave days per year property in the integrated project information model. Its declared domain is SiteClimate and its declared range is decimal."@en .
+<https://w3id.org/iprok/site#labourAccommodationNeeded> <http://www.w3.org/2000/01/rdf-schema#comment> "True when labourColonyDistanceKm > 5 AND publicTransportDistanceM > 500." .
+<https://w3id.org/iprok/site#gridVoltageKV> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/iprok/site#SiteUtilities> .
+<https://w3id.org/iprok/site#undergroundUtilityRisk> <http://www.w3.org/2000/01/rdf-schema#comment> "Low | Medium | High — based on OSM presence of buried gas / water / fibre lines within 50m." .
+<https://w3id.org/iprok/site#groundwaterDepthPostMonsoonM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/site#railwayGoodsYardKm> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/railwayGoodsYardKm> .
+<https://w3id.org/iprok/site#stateAgriCalendarJson> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/site#undergroundUtilityNotes> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/site#monsoonOnsetWeek> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/site> .
+<https://w3id.org/iprok/site#waterSourceDistanceKm> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/iprok/site#SiteHydrology> .
+<https://w3id.org/iprok/site#overheadHTLinePresent> <http://www.w3.org/2000/01/rdf-schema#comment> "True triggers a Critical Score-16 auto-risk per IS 5613 safety clearance norms." .
+<https://w3id.org/iprok/site#rmc2Name> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/site#hospitalDistanceKm> <http://www.w3.org/2000/01/rdf-schema#comment> "The hospital distance km property in the integrated project information model. Its declared domain is SiteWorkerSafety and its declared range is decimal."@en .
+<https://w3id.org/iprok/site#monsoonActiveWeeks> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/site> .
+<https://w3id.org/iprok/site#overheadHTLinePresent> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/iprok/site#SiteUtilities> .
+<https://w3id.org/iprok/site#historicalWeeklyRainJson> <http://www.w3.org/2000/01/rdf-schema#label> "historical weekly rain (JSON)" .
+<https://w3id.org/iprok/site#stateAgriCalendarJson> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/stateAgriCalendarJson> .
+<https://w3id.org/iprok/site#peakMonsoonWeek> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/site> .
+<https://w3id.org/iprok/site#steelDepotName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/site#hospitalDistanceKm> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/iprok/site#SiteWorkerSafety> .
+<https://w3id.org/iprok/site#annualRainfallMM> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/site#nearestAirportKm> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/nearestAirportKm> .
+<https://w3id.org/iprok/site#publicTransportType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/site#publicTransportDistanceM> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/iprok/site#nearestWaterSourceName> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/site#nearestWaterSourceName> <http://www.w3.org/2000/01/rdf-schema#comment> "The nearest water source name property in the integrated project information model. Its declared domain is SiteHydrology and its declared range is string."@en .
+<https://w3id.org/iprok/site#rmc1Name> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/site#monsoonOnsetWeek> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<https://w3id.org/iprok/site#steelDepotName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/site#roadAccessClass> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/site#hospitalDistanceKm> <http://www.w3.org/2000/01/rdf-schema#label> "nearest emergency hospital distance (km)" .
+<https://w3id.org/iprok/site#groundwaterDepthPreMonsoonM> <http://www.w3.org/2000/01/rdf-schema#comment> "The groundwater depth pre monsoon m property in the integrated project information model. Its declared domain is SiteHydrology and its declared range is decimal."@en .
+<https://w3id.org/iprok/site#dustRiskMonths> <http://www.w3.org/2000/01/rdf-schema#comment> "Comma-separated month abbreviations where PM10 > 250 µg/m³ typical." .
+<https://w3id.org/iprok/site#overheadHTLineDistanceM> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/iprok/site#SiteUtilities> .
+<https://w3id.org/iprok/site#groundwaterDepthPostMonsoonM> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/iprok/site#SiteHydrology> .
+<https://w3id.org/iprok/site#SiteLogistics> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/SiteLogistics> .
+<https://w3id.org/iprok/site#monsoonOnsetWeek> <http://www.w3.org/2000/01/rdf-schema#label> "monsoon onset ISO week" .
+<https://w3id.org/iprok/site#monsoonWithdrawalWeek> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<https://w3id.org/iprok/site#nearestWaterSourceName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/site#annualRainfallMM> <http://www.w3.org/2000/01/rdf-schema#label> "annual rainfall (mm)" .
+<https://w3id.org/iprok/site#railwayGoodsYardKm> <http://www.w3.org/2000/01/rdf-schema#label> "railway goods yard distance (km)" .
+<https://w3id.org/iprok/site#groundwaterDepthPostMonsoonM> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/groundwaterDepthPostMonsoonM> .
+<https://w3id.org/iprok/site#rmc2DistanceKm> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/site#hospitalName> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/site> .
+<https://w3id.org/iprok/site#overheadHTLinePresent> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<https://w3id.org/iprok/site#overheadHTLinePresent> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/site> .
+<https://w3id.org/iprok/site#hospitalType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/site#hospitalType> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/site> .
+<https://w3id.org/iprok/site#monsoonActiveWeeks> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<https://w3id.org/iprok/site#peakHeatMonth> <http://www.w3.org/2000/01/rdf-schema#comment> "The peak heat month property in the integrated project information model. Its declared domain is SiteWorkerSafety and its declared range is string."@en .
+<https://w3id.org/iprok/site#gridVoltageKV> <http://www.w3.org/2000/01/rdf-schema#comment> "The grid voltage kv property in the integrated project information model. Its declared domain is SiteUtilities and its declared range is decimal."@en .
+<https://w3id.org/iprok/site#rmc1DistanceKm> <http://www.w3.org/2000/01/rdf-schema#comment> "The rmc1distance km property in the integrated project information model. Its declared domain is SiteLogistics and its declared range is decimal."@en .
+<https://w3id.org/iprok/site#groundwaterDepthPreMonsoonM> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/iprok/site#seasonalFluctuationM> <http://www.w3.org/2000/01/rdf-schema#comment> "The seasonal fluctuation m property in the integrated project information model. Its declared domain is SiteHydrology and its declared range is decimal."@en .
+<https://w3id.org/iprok/site#SiteLabour> <http://www.w3.org/2000/01/rdf-schema#comment> "OSM labour colony + public transport + ICAR state agri calendar. Feeds the labour-availability adjustment in P2B planning." .
+<https://w3id.org/iprok/site#heatWaveDaysPerYear> <http://www.w3.org/2000/01/rdf-schema#label> "heat wave days per year" .
+<https://w3id.org/iprok/site#dataVersion> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/site> .
+<https://w3id.org/iprok/site#hospitalName> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/hospitalName> .
+<https://w3id.org/iprok/site#heavyVehicleAccess> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/heavyVehicleAccess> .
+<https://w3id.org/iprok/site#monsoonWithdrawalWeek> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/site> .
+<https://w3id.org/iprok/site#annualRainfallMM> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/iprok/site#seasonalFluctuationM> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/iprok/site#SiteHydrology> .
+<https://w3id.org/iprok/site#heatStressMonths> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/site> .
+<https://w3id.org/iprok/site#hospitalName> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/iprok/site#SiteWorkerSafety> .
+<https://w3id.org/iprok/site#hospitalType> <http://www.w3.org/2000/01/rdf-schema#label> "hospital type" .
+<https://w3id.org/iprok/site#aqiZone> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/site> .
+<https://w3id.org/iprok/site#groundwaterDepthPreMonsoonM> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/site> .
+<https://w3id.org/iprok/site#siteAmbientAQI> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/siteAmbientAQI> .
+<https://w3id.org/iprok/site#labourColonyDistanceKm> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/labourColonyDistanceKm> .
+<https://w3id.org/iprok/site#historicalWeeklyRainJson> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/site> .
+<https://w3id.org/iprok/site#SiteHydrology> <http://www.w3.org/2000/01/rdf-schema#comment> "CGWB groundwater + nearest water source. Drives the groundwater < 3m and CGWB over-exploited block auto-risks." .
+<https://w3id.org/iprok/site#SiteUtilities> <http://www.w3.org/2000/01/rdf-schema#label> "Site Utilities" .
+<https://w3id.org/iprok/site#rmc1DistanceKm> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/site#heatStressMonths> <http://www.w3.org/2000/01/rdf-schema#comment> "Comma-separated month abbreviations where WBGT > 32°C per IS 3786 (e.g. 'Apr,May,Jun')." .
+<https://w3id.org/iprok/site#aggregateQuarryKm> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/site#railwayGoodsYardName> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/site#labourColonyDistanceKm> <http://www.w3.org/2000/01/rdf-schema#comment> "The labour colony distance km property in the integrated project information model. Its declared domain is SiteLabour and its declared range is decimal."@en .
+<https://w3id.org/iprok/site#annualRainfallMM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/site#labourAccommodationNeeded> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/labourAccommodationNeeded> .
+<https://w3id.org/iprok/site#rmc1Name> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/site> .
+<https://w3id.org/iprok/site#labourColonyDistanceKm> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/iprok/site#SiteLabour> .
+<https://w3id.org/iprok/site#SiteWorkerSafety> <http://www.w3.org/2000/01/rdf-schema#comment> "NASA POWER heat stress (WBGT > 32°C per IS 3786) + nearest hospital + AQI. Drives the hospital > 15km auto-risk." .
+<https://w3id.org/iprok/site#undergroundUtilityNotes> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/iprok/site#SiteUtilities> .
+<https://w3id.org/iprok/site#publicTransportDistanceM> <http://www.w3.org/2000/01/rdf-schema#comment> "The public transport distance m property in the integrated project information model. Its declared domain is SiteLabour and its declared range is decimal."@en .
+<https://w3id.org/iprok/site#gridSubstationDistanceKm> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/iprok/site#SiteUtilities> .
+<https://w3id.org/iprok/site#SiteUtilities> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iprok/site#SiteClimate> <http://www.w3.org/2000/01/rdf-schema#label> "Site Climate" .
+<https://w3id.org/iprok/site#heavyVehicleAccess> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/site#gridVoltageKV> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .

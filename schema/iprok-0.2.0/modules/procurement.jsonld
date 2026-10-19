@@ -1,0 +1,900 @@
+[
+  {
+    "@id": "https://w3id.org/iprok/procurement#qualityGrade",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://purl.org/dc/terms/isPartOf": [
+      {
+        "@id": "https://w3id.org/iprok/procurement"
+      }
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://bimsaarthi.com/ontology/v0/qualityGrade"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "1 (basic) … 5 (premium) — the estimator's grade for compare dashboards."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "quality Grade"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#integer"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/iprok/procurement#offerId",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://purl.org/dc/terms/description": [
+      {
+        "@language": "en",
+        "@value": "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."
+      }
+    ],
+    "http://purl.org/dc/terms/isPartOf": [
+      {
+        "@id": "https://w3id.org/iprok/procurement"
+      }
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://bimsaarthi.com/ontology/v0/offerId"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The offer id property in the integrated project information model."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "offer Id"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/iprok/procurement#vendorName",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://purl.org/dc/terms/description": [
+      {
+        "@language": "en",
+        "@value": "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."
+      }
+    ],
+    "http://purl.org/dc/terms/isPartOf": [
+      {
+        "@id": "https://w3id.org/iprok/procurement"
+      }
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://bimsaarthi.com/ontology/v0/vendorName"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The vendor name property in the integrated project information model."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "vendor Name"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/iprok/procurement#offerProduct",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://purl.org/dc/terms/isPartOf": [
+      {
+        "@id": "https://w3id.org/iprok/procurement"
+      }
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://bimsaarthi.com/ontology/v0/offerProduct"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Product/spec offered — e.g. 'Wall-hung WC, Brand X model Y'."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "offer Product"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/iprok/procurement#grnDate",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://purl.org/dc/terms/description": [
+      {
+        "@language": "en",
+        "@value": "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."
+      }
+    ],
+    "http://purl.org/dc/terms/isPartOf": [
+      {
+        "@id": "https://w3id.org/iprok/procurement"
+      }
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://bimsaarthi.com/ontology/v0/grnDate"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The grn date property in the integrated project information model."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "GRN posting date (BUDAT)"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#date"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/iprok/procurement#vendor",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://purl.org/dc/terms/description": [
+      {
+        "@language": "en",
+        "@value": "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."
+      }
+    ],
+    "http://purl.org/dc/terms/isPartOf": [
+      {
+        "@id": "https://w3id.org/iprok/procurement"
+      }
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://bimsaarthi.com/ontology/v0/vendor"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The vendor property in the integrated project information model."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "vendor name / SAP vendor code (LIFNR)"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/iprok/procurement#forPO",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://purl.org/dc/terms/isPartOf": [
+      {
+        "@id": "https://w3id.org/iprok/procurement"
+      }
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://bimsaarthi.com/ontology/v0/forPO"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Link from a <https://w3id.org/iprok/procurement#GoodsReceipt> to its <https://w3id.org/iprok/procurement#PurchaseOrder>. Domain unspecified (antipattern #8)."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "for purchase order"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/iprok/procurement#GoodsReceipt",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://purl.org/dc/terms/isPartOf": [
+      {
+        "@id": "https://w3id.org/iprok/procurement"
+      }
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://bimsaarthi.com/ontology/v0/GoodsReceipt"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "One SAP material-document line (MIGO MIGO_GR). Links back to its <https://w3id.org/iprok/procurement#PurchaseOrder> via <https://w3id.org/iprok/procurement#forPO>."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Goods receipt (SAP)"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://www.w3.org/ns/prov#Entity"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/iprok/procurement#vendorCategory",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://purl.org/dc/terms/isPartOf": [
+      {
+        "@id": "https://w3id.org/iprok/procurement"
+      }
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://bimsaarthi.com/ontology/v0/vendorCategory"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Material | Equipment | Labour | Services | Fixtures | Other."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "vendor Category"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/iprok/procurement#PurchaseOrder",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://purl.org/dc/terms/isPartOf": [
+      {
+        "@id": "https://w3id.org/iprok/procurement"
+      }
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://bimsaarthi.com/ontology/v0/PurchaseOrder"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "One SAP PO header. linkedBOQItem connects procurement back to the contract chain so the gap-report engine can compute committed vs certified per BOQ row."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Purchase order (SAP)"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://www.w3.org/ns/prov#Entity"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/iprok/procurement#quantityIssued",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://purl.org/dc/terms/isPartOf": [
+      {
+        "@id": "https://w3id.org/iprok/procurement"
+      }
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://bimsaarthi.com/ontology/v0/quantityIssued"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Quantity of material issued. Mandatory. Domain unspecified."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "quantity issued"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/iprok/procurement#issueDate",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://purl.org/dc/terms/isPartOf": [
+      {
+        "@id": "https://w3id.org/iprok/procurement"
+      }
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://bimsaarthi.com/ontology/v0/issueDate"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Date the material was issued from the site store. Mandatory. Domain unspecified."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "issue date"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#date"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/iprok/procurement#leadTimeDays",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://purl.org/dc/terms/description": [
+      {
+        "@language": "en",
+        "@value": "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."
+      }
+    ],
+    "http://purl.org/dc/terms/isPartOf": [
+      {
+        "@id": "https://w3id.org/iprok/procurement"
+      }
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://bimsaarthi.com/ontology/v0/leadTimeDays"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The lead time days property in the integrated project information model."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "lead Time Days"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#integer"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/iprok/procurement#Vendor",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://purl.org/dc/terms/isPartOf": [
+      {
+        "@id": "https://w3id.org/iprok/procurement"
+      }
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://bimsaarthi.com/ontology/v0/Vendor"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "One supplier/subcontractor in the org's vendor database."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Vendor"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://www.w3.org/ns/prov#Entity"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/iprok/procurement#poNumber",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://purl.org/dc/terms/description": [
+      {
+        "@language": "en",
+        "@value": "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."
+      }
+    ],
+    "http://purl.org/dc/terms/isPartOf": [
+      {
+        "@id": "https://w3id.org/iprok/procurement"
+      }
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://bimsaarthi.com/ontology/v0/poNumber"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The po number property in the integrated project information model."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "SAP PO number (EBELN)"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/iprok/procurement#byVendor",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://purl.org/dc/terms/isPartOf": [
+      {
+        "@id": "https://w3id.org/iprok/procurement"
+      }
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://bimsaarthi.com/ontology/v0/byVendor"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "The <https://w3id.org/iprok/procurement#Vendor> making this offer. Range undeclared (antipattern #8)."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "by Vendor"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/iprok/procurement#grnNumber",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://purl.org/dc/terms/description": [
+      {
+        "@language": "en",
+        "@value": "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."
+      }
+    ],
+    "http://purl.org/dc/terms/isPartOf": [
+      {
+        "@id": "https://w3id.org/iprok/procurement"
+      }
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://bimsaarthi.com/ontology/v0/grnNumber"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The grn number property in the integrated project information model."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "SAP GRN / material-document number (MBLNR)"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/iprok/procurement#MaterialIssue",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://purl.org/dc/terms/isPartOf": [
+      {
+        "@id": "https://w3id.org/iprok/procurement"
+      }
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://bimsaarthi.com/ontology/v0/MaterialIssue"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "A site store issue of construction material (cement, steel, etc.) against a project activity. Used for IS-coefficient-based consumption reconciliation."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Material Issue"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://www.w3.org/ns/prov#Entity"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/iprok/procurement#receivedQty",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://purl.org/dc/terms/description": [
+      {
+        "@language": "en",
+        "@value": "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."
+      }
+    ],
+    "http://purl.org/dc/terms/isPartOf": [
+      {
+        "@id": "https://w3id.org/iprok/procurement"
+      }
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://bimsaarthi.com/ontology/v0/receivedQty"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The received qty property in the integrated project information model."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "received quantity"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/iprok/procurement#unitRate",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://purl.org/dc/terms/description": [
+      {
+        "@language": "en",
+        "@value": "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."
+      }
+    ],
+    "http://purl.org/dc/terms/isPartOf": [
+      {
+        "@id": "https://w3id.org/iprok/procurement"
+      }
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://bimsaarthi.com/ontology/v0/unitRate"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The unit rate property in the integrated project information model."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "unit Rate"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/iprok/procurement#vendorId",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://purl.org/dc/terms/description": [
+      {
+        "@language": "en",
+        "@value": "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."
+      }
+    ],
+    "http://purl.org/dc/terms/isPartOf": [
+      {
+        "@id": "https://w3id.org/iprok/procurement"
+      }
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://bimsaarthi.com/ontology/v0/vendorId"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The vendor id property in the integrated project information model."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "vendor Id"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/iprok/procurement#receivedAmount",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://purl.org/dc/terms/description": [
+      {
+        "@language": "en",
+        "@value": "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."
+      }
+    ],
+    "http://purl.org/dc/terms/isPartOf": [
+      {
+        "@id": "https://w3id.org/iprok/procurement"
+      }
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://bimsaarthi.com/ontology/v0/receivedAmount"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The received amount property in the integrated project information model."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "received amount (INR)"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/iprok/procurement#poStatus",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://purl.org/dc/terms/isPartOf": [
+      {
+        "@id": "https://w3id.org/iprok/procurement"
+      }
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://bimsaarthi.com/ontology/v0/poStatus"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Open / PartiallyDelivered / FullyDelivered / Cancelled. Mirrors SAP EKKO.STATU but flattened to the four states a IproK framework PM actually cares about."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "PO status"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/iprok/procurement#poDate",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://purl.org/dc/terms/description": [
+      {
+        "@language": "en",
+        "@value": "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."
+      }
+    ],
+    "http://purl.org/dc/terms/isPartOf": [
+      {
+        "@id": "https://w3id.org/iprok/procurement"
+      }
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://bimsaarthi.com/ontology/v0/poDate"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The po date property in the integrated project information model."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "PO date (BEDAT)"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#date"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/iprok/procurement#poAmount",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://purl.org/dc/terms/description": [
+      {
+        "@language": "en",
+        "@value": "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."
+      }
+    ],
+    "http://purl.org/dc/terms/isPartOf": [
+      {
+        "@id": "https://w3id.org/iprok/procurement"
+      }
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://bimsaarthi.com/ontology/v0/poAmount"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The po amount property in the integrated project information model."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "PO net value (NETWR), INR"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/iprok/procurement#ProductOffer",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://purl.org/dc/terms/isPartOf": [
+      {
+        "@id": "https://w3id.org/iprok/procurement"
+      }
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://bimsaarthi.com/ontology/v0/ProductOffer"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "One vendor's offer for a product/spec: rate, lead time, quality, warranty."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Product Offer"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://www.w3.org/ns/prov#Entity"
+      }
+    ]
+  }
+]

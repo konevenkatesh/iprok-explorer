@@ -13,7 +13,8 @@
     "fourSerialisationsIsomorphic": true,
     "originalVersionFilesPreserved": true,
     "newTypedRelationships": 144,
-    "typedIntegrationShapes": 75
+    "typedIntegrationShapes": 75,
+    "assertionRetentionScope": "After explicit namespace normalisation; source archive remains unchanged"
   },
   "conformance": {
     "expectedOutcomesMatched": 193,
@@ -21,7 +22,7 @@
     "fixtureOrigin": "Retained platform valid/invalid corpus at the source commit; all schema identifiers migrated with mapping.json",
     "runner": "Retained official shacl_conformance.py with RDFS inference and advanced=True",
     "pyshacl": "0.31.0",
-    "scope": "Complete final connected ontology and SHACL against all 193 consistently migrated retained fixtures"
+    "scope": "Complete lowercase ontology and SHACL against 193 fixtures migrated with the explicit namespace/platform maps"
   },
   "correctionReview": {
     "initialMigrationRegressions": 8,
@@ -36,12 +37,12 @@
     "New IproK module IRIs have not been registered in the persistent redirect service"
   ],
   "filesChecked": {
-    "ontology.ttl": "0756c2d943952ca329e235f05aeebdb5fb153cafe18ededb77de23d56f75b19e",
-    "ontology.owl": "7ff5773d60b1932e11634e509ad1a6474aeb055f3a0be66ec89f283b411cfae4",
-    "ontology.nt": "29a0f861bd9a36601844c7bf549b4451b0891381bffb2e3af8e118eae4ae11c7",
-    "ontology.jsonld": "1fe64687749798922cbcb580fed0df53c0bb1ea06e7e9915d4c3e112cfbd6e8e",
-    "shapes.ttl": "09b8c3b5942ed47fb0bca87f4b2c777ba8afda494007624d3f20e818767aad1c",
-    "mapping.json": "62ce3561930da51755f99db0d9018e905d5cb22c3e2728715b40275edbdfcf28"
+    "ontology.ttl": "5d637c092295fbdab8a2f3e26ab971d2e0e448083938044fa94124a7bbc2fa5f",
+    "ontology.owl": "2c48b504c4b385daf475814883b4bb0c42bc80cc577661838ae4c5c858df403e",
+    "ontology.nt": "f873aaf1cb1940d5951698a55af1c9d5ce34b2029bfa58cd601792d114080fd3",
+    "ontology.jsonld": "bd9f413e32bfb3120e9034ad376724a463ba33714e5b51bf77eda4bd37bf53cb",
+    "shapes.ttl": "b5330af04105e8eaef9d3fc999af564bc0c74a91e1a88cc574b7956f19989812",
+    "mapping.json": "4c293bfd26ba88b25d0eb937ed61b73a03126b602105337d2c57cfec9292c7e8"
   },
   "relationshipDiagnostics": {
     "checkedOn": "2026-10-19",
@@ -57,5 +58,8 @@
     "crossModuleQueryExamples": 4,
     "scope": "Integration shapes only for constructed examples; the separate retained-corpus run checks the combined schema and shapes"
   },
-  "annotationReview": "Removed promotional implementation wording and improved class reading guides after the conformance run. Non-comment ontology triples are isomorphic and the full SHACL graph is unchanged; conformance result inherited for this annotation-only correction."
+  "annotationReview": "Current definitions and lowercase schema were included in this conformance run.",
+  "canonicalNamespace": "https://w3id.org/iprok",
+  "versionIRI": "https://w3id.org/iprok/draft/0.2.0",
+  "namespaceMigrationIdentifiers": 1330
 }

@@ -1,0 +1,675 @@
+<https://w3id.org/iprok/schedule#linksToPredecessorTask> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/schedule#wbsCode> <http://www.w3.org/2000/01/rdf-schema#label> "WBS code" .
+<https://w3id.org/iprok/schedule#eac> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/iprok/schedule#totalFloat> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/totalFloat> .
+<https://w3id.org/iprok/schedule#cpi> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/schedule> .
+<https://w3id.org/iprok/schedule#BaselineEntry> <http://www.w3.org/2000/01/rdf-schema#label> "Baseline Entry"@en .
+<https://w3id.org/iprok/schedule#scheduleRevision> <http://www.w3.org/2000/01/rdf-schema#label> "schedule revision id" .
+<https://w3id.org/iprok/schedule#Milestone> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/iprok/schedule#Task> .
+<https://w3id.org/iprok/schedule#percentComplete> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/schedule#taskPriority> <http://www.w3.org/2000/01/rdf-schema#label> "taskPriority"@en .
+<https://w3id.org/iprok/schedule#ScheduleLink> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iprok/schedule#baselineNo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/schedule#hasTask> <http://www.w3.org/2000/01/rdf-schema#label> "hasTask" .
+<https://w3id.org/iprok/schedule#baselineBasis> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/schedule> .
+<https://w3id.org/iprok/schedule#actualFinishDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/iprok/schedule#scheduleRevision> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/scheduleRevision> .
+<https://w3id.org/iprok/schedule#baselineStart> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/schedule#statusDate> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/statusDate> .
+<https://w3id.org/iprok/schedule#hasWorkPackage> <http://www.w3.org/2000/01/rdf-schema#comment> "The has work package property in the integrated project information model. Its declared domain is Project and its declared range is WorkPackage."@en .
+<https://w3id.org/iprok/schedule#baselineOf> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/baselineOf> .
+<https://w3id.org/iprok/schedule#hasSuccessorDependency> <http://www.w3.org/2000/01/rdf-schema#comment> "The has successor dependency property in the integrated project information model. Its declared domain is Task and its declared range is TaskDependency."@en .
+<https://w3id.org/iprok/schedule#wbsName> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/schedule> .
+<https://w3id.org/iprok/schedule#isCriticalTask> <http://www.w3.org/2000/01/rdf-schema#comment> "The is critical task property in the integrated project information model. Its declared domain is Task and its declared range is boolean."@en .
+<https://w3id.org/iprok/schedule#ScheduleBaseline> <http://www.w3.org/2000/01/rdf-schema#comment> "A frozen copy of the programme. Baseline 0 is the approved programme (Clause 5.1); later ones are revised programmes (Clause 5.4), each with its basis, reason and approver. Never changed or removed; the newest is the active baseline that variance and planned value are measured against." .
+<https://w3id.org/iprok/schedule#constraintType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/iprok/schedule#activityPlannedStartDate> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/plannedStartDate> .
+<https://w3id.org/iprok/schedule#taskRelationshipType> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/schedule#ActivityDurationEstimate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iprok/schedule#labourPadPct> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/schedule> .
+<https://w3id.org/iprok/schedule#actualStartDate> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/iprok/schedule#TaskTime> .
+<https://w3id.org/iprok/schedule#pv> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/schedule#crewCount> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/schedule> .
+<https://w3id.org/iprok/schedule#Activity> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/Activity> .
+<https://w3id.org/iprok/schedule#assignedTo> <http://www.w3.org/2000/01/rdf-schema#label> "assignedTo" .
+<https://w3id.org/iprok/schedule#hasTask> <http://www.w3.org/2000/01/rdf-schema#comment> "The has task property in the integrated project information model. Its declared domain is WBS_Element and its declared range is Task."@en .
+<https://w3id.org/iprok/schedule#constraintDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://w3id.org/iprok/schedule#constraintDate> <http://www.w3.org/2000/01/rdf-schema#label> "constraintDate"@en .
+<https://w3id.org/iprok/schedule#weatherPadPct> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/weatherPadPct> .
+<https://w3id.org/iprok/schedule#taskRelationshipType> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/iprok/schedule#TaskDependency> .
+<https://w3id.org/iprok/schedule#atCompleteDuration> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/iprok/schedule#activityName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/schedule#taskPriority> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<https://w3id.org/iprok/schedule#hasSubTask> <http://www.w3.org/2000/01/rdf-schema#label> "hasSubTask" .
+<https://w3id.org/iprok/schedule#baselineLastDay> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/schedule> .
+<https://w3id.org/iprok/schedule#baselineStartDate> <http://www.w3.org/2000/01/rdf-schema#label> "baseline Start Date"@en .
+<https://w3id.org/iprok/schedule#baselineNo> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/schedule> .
+<https://w3id.org/iprok/schedule#crewDescription> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/crewDescription> .
+<https://w3id.org/iprok/schedule#Activity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/iprok/schedule#Task> .
+<https://w3id.org/iprok/schedule#scheduleRevision> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/schedule#hasTaskTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/iprok/schedule#isWorkPackage> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/isWorkPackage> .
+<https://w3id.org/iprok/schedule#ActivityDurationEstimate> <http://www.w3.org/2000/01/rdf-schema#label> "Activity Duration Estimate"@en .
+<https://w3id.org/iprok/schedule#wbsCode> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/schedule#budgetedQuantity> <http://www.w3.org/2000/01/rdf-schema#comment> "The quantity the activity delivers, in its BOQ line's unit — the denominator of its percent complete in EVM. No rdfs:domain." .
+<https://w3id.org/iprok/schedule#sv> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/schedule> .
+<https://w3id.org/iprok/schedule#assignedTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/iprok/schedule#hasSuccessorDependency> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/iprok/schedule#TaskDependency> .
+<https://w3id.org/iprok/schedule#isCritical> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/isCritical> .
+<https://w3id.org/iprok/schedule#baselineStart> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/baselineStart> .
+<https://w3id.org/iprok/schedule#seededDailyOutput> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/iprok/schedule#EVMSnapshot> <http://www.w3.org/2000/01/rdf-schema#comment> "One computation of PV/EV/AC and derived metrics for a project at a status date." .
+<https://w3id.org/iprok/schedule#cpi> <http://www.w3.org/2000/01/rdf-schema#comment> "EV / AC. >1.0 under budget, <1.0 over budget. Optional — undefined (omitted) when AC=0." .
+<https://w3id.org/iprok/schedule#baselineLastDay> <http://www.w3.org/2000/01/rdf-schema#label> "baseline Last Day"@en .
+<https://w3id.org/iprok/schedule#WorkConstraint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/iprok#Constraint> .
+<https://w3id.org/iprok/schedule#wbsLevel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/schedule#hasTaskTime> <http://www.w3.org/2000/01/rdf-schema#comment> "The has task time property in the integrated project information model. Its declared domain is Task and its declared range is TaskTime."@en .
+<https://w3id.org/iprok/schedule#linksToSuccessorTask> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/iprok/schedule#linksToPredecessorTask> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/iprok/schedule#TaskDependency> .
+<https://w3id.org/iprok/schedule#hasPredecessorDependency> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/schedule#baselineOf> <http://www.w3.org/2000/01/rdf-schema#comment> "The live activity an entry froze. No rdfs:domain." .
+<https://w3id.org/iprok/schedule#Project> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iprok/schedule#taskRelationshipType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/schedule#isCritical> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/schedule#budgetedCost> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/iprok/schedule#crewCount> <http://www.w3.org/2000/01/rdf-schema#label> "crew Count"@en .
+<https://w3id.org/iprok/schedule#inBaseline> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/schedule> .
+<https://w3id.org/iprok/schedule#stipulatedFinishDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/schedule#partOfProject> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/iprok/schedule#Activity> .
+<https://w3id.org/iprok/schedule#baselineLabel> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/schedule> .
+<https://w3id.org/iprok/schedule#baselineLabel> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/schedule#taskRelationshipType> <http://www.w3.org/2000/01/rdf-schema#label> "taskRelationshipType"@en .
+<https://w3id.org/iprok/schedule#WBS_Element> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iprok/schedule#actualStartDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/iprok/schedule#durationBasis> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/schedule#durationBasis> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/schedule#plannedFinishDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/iprok/schedule#atCompleteDuration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/iprok/schedule#wbsCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/schedule#ScheduleBaseline> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/schedule> .
+<https://w3id.org/iprok/schedule#baseDays> <http://www.w3.org/2000/01/rdf-schema#comment> "Working days before allowances: quantity ÷ (daily output × crews). No rdfs:domain." .
+<https://w3id.org/iprok/schedule#TaskTime> <http://www.w3.org/2000/01/rdf-schema#comment> "A time record associated with a scheduled task."@en .
+<https://w3id.org/iprok/schedule#WBSNode> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/schedule> .
+<https://w3id.org/iprok/schedule#baselineLabel> <http://www.w3.org/2000/01/rdf-schema#label> "baseline Label"@en .
+<https://w3id.org/iprok/schedule#dailyOutput> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/iprok/schedule#entryCount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/schedule#projectAddress> <http://www.w3.org/2000/01/rdf-schema#comment> "The project address property in the integrated project information model. Its declared domain is Project and its declared range is string."@en .
+<https://w3id.org/iprok/schedule#parentWBS> <http://www.w3.org/2000/01/rdf-schema#label> "parent WBS node" .
+<https://w3id.org/iprok/schedule#ev> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/iprok/schedule#isMilestone> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<https://w3id.org/iprok/schedule#WBSNode> <http://www.w3.org/2000/01/rdf-schema#label> "WBS node" .
+<https://w3id.org/iprok/schedule#isWorkPackage> <http://www.w3.org/2000/01/rdf-schema#label> "is work package" .
+<https://w3id.org/iprok/schedule#linkLag> <http://www.w3.org/2000/01/rdf-schema#label> "lag (days)" .
+<https://w3id.org/iprok/schedule#approvedAt> <http://www.w3.org/2000/01/rdf-schema#comment> "Timestamp when the deviation was approved or rejected. Domain unspecified." .
+<https://w3id.org/iprok/schedule#constraintDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/iprok/schedule#spi> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/iprok/schedule#hasTask> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/iprok/schedule#Task> .
+<https://w3id.org/iprok/schedule#plannedStartDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://w3id.org/iprok/schedule#actualFinishDate> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/iprok/schedule#TaskTime> .
+<https://w3id.org/iprok/schedule#percentComplete> <http://www.w3.org/2000/01/rdf-schema#label> "percent complete (0-100)" .
+<https://w3id.org/iprok/schedule#WorkConstraint> <http://www.w3.org/2000/01/rdf-schema#label> "Work Constraint"@en .
+<https://w3id.org/iprok/schedule#plannedQuantity> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/iprok/schedule#eac> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/schedule> .
+<https://w3id.org/iprok/schedule#hasSuccessorDependency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/iprok/schedule#ac> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/ac> .
+<https://w3id.org/iprok/schedule#durationBasis> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/schedule> .
+<https://w3id.org/iprok/schedule#linkSource> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/schedule#hasWBS> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/iprok/schedule#WBS_Element> .
+<https://w3id.org/iprok/schedule#vac> <http://www.w3.org/2000/01/rdf-schema#label> "Variance at Completion" .
+<https://w3id.org/iprok/schedule#partOfProject> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/partOfProject> .
+<https://w3id.org/iprok/schedule#dailyOutput> <http://www.w3.org/2000/01/rdf-schema#comment> "Output of ONE standard crew per working day, in <https://w3id.org/iprok/integrated#unit> — the rate the duration used. No rdfs:domain." .
+<https://w3id.org/iprok/schedule#linkType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/schedule#activityPlannedFinishDate> <http://www.w3.org/2000/01/rdf-schema#label> "planned finish (datetime)" .
+<https://w3id.org/iprok/schedule#hasWorkPackage> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/iprok/schedule#WorkPackage> .
+<https://w3id.org/iprok/schedule#dataDate> <http://www.w3.org/2000/01/rdf-schema#comment> "The day a programme was taken as of: the progress it reflects. No rdfs:domain." .
+<https://w3id.org/iprok/schedule#seededDailyOutput> <http://www.w3.org/2000/01/rdf-schema#comment> "The default (CPWD-style) crew-day output, kept beside a measured rate so the difference stays visible. No rdfs:domain." .
+<https://w3id.org/iprok/schedule#pv> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/iprok/schedule#Milestone> <http://www.w3.org/2000/01/rdf-schema#comment> "A task representing a significant scheduled event or control point."@en .
+<https://w3id.org/iprok/schedule#scheduleDuration> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/schedule#hasTask> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/iprok/schedule#WBS_Element> .
+<https://w3id.org/iprok/schedule#remainingDuration> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/schedule#weatherPadPct> <http://www.w3.org/2000/01/rdf-schema#label> "weather Pad Pct"@en .
+<https://w3id.org/iprok/schedule#wbsCode> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/wbsCode> .
+<https://w3id.org/iprok/schedule#isCritical> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/schedule> .
+<https://w3id.org/iprok/schedule#sv> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/sv> .
+<https://w3id.org/iprok/schedule#Project> <http://www.w3.org/2000/01/rdf-schema#comment> "The construction-project context in which work, records and control decisions are organised."@en .
+<https://w3id.org/iprok/schedule#vac> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/iprok/schedule#baselineStart> <http://www.w3.org/2000/01/rdf-schema#label> "baseline Start"@en .
+<https://w3id.org/iprok/schedule#eac> <http://www.w3.org/2000/01/rdf-schema#label> "Estimate at Completion" .
+<https://w3id.org/iprok/schedule#linksToSuccessorTask> <http://www.w3.org/2000/01/rdf-schema#label> "linksToSuccessorTask" .
+<https://w3id.org/iprok/schedule#linksToPredecessorTask> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/iprok/schedule#Task> .
+<https://w3id.org/iprok/schedule#TaskDependency> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/iprok#IproKThing> .
+<https://w3id.org/iprok/schedule#plannedStartDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/iprok/schedule#baselineDurationDays> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/schedule#cv> <http://www.w3.org/2000/01/rdf-schema#comment> "EV − AC. Positive = under budget. INR. Mandatory on <https://w3id.org/iprok/schedule#EVMSnapshot>." .
+<https://w3id.org/iprok/schedule#baseDays> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/baseDays> .
+<https://w3id.org/iprok/schedule#WorkConstraint> <http://www.w3.org/2000/01/rdf-schema#comment> "Something that must be cleared, by a named person and date, before planned work can proceed." .
+<https://w3id.org/iprok/schedule#isMilestone> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/iprok/schedule#Task> .
+<https://w3id.org/iprok/schedule#baselineActivityId> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/baselineActivityId> .
+<https://w3id.org/iprok/schedule#assignedTo> <http://www.w3.org/2000/01/rdf-schema#comment> "The assigned to property in the integrated project information model. Its declared domain is Task and its declared range is Actor."@en .
+<https://w3id.org/iprok/schedule#ScheduleLink> <http://www.w3.org/2000/01/rdf-schema#comment> "A reified predecessor edge: which activity precedes which, the P6 relationship type (FS/SS/FF/SF) and the lag in days." .
+<https://w3id.org/iprok/schedule#entryCount> <http://www.w3.org/2000/01/rdf-schema#label> "entry Count"@en .
+<https://w3id.org/iprok/schedule#Task> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/iprok#IproKThing> .
+<https://w3id.org/iprok/schedule#baselineActivityName> <http://www.w3.org/2000/01/rdf-schema#label> "baseline Activity Name"@en .
+<https://w3id.org/iprok/schedule#baseDays> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<https://w3id.org/iprok/schedule#isMilestone> <http://www.w3.org/2000/01/rdf-schema#comment> "The is milestone property in the integrated project information model. Its declared domain is Task and its declared range is boolean."@en .
+<https://w3id.org/iprok/schedule#totalFloat> <http://www.w3.org/2000/01/rdf-schema#comment> "Mirrors iprok:totalFloat. Days; may be negative on a behind-schedule critical path." .
+<https://w3id.org/iprok/schedule#hasConstraint> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/schedule#statusDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/iprok/schedule#hasConstraint> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/iprok/schedule#Task> .
+<https://w3id.org/iprok/schedule#projectCategory> <http://www.w3.org/2000/01/rdf-schema#label> "projectCategory"@en .
+<https://w3id.org/iprok/schedule#linkType> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/linkType> .
+<https://w3id.org/iprok/schedule#crewCount> <http://www.w3.org/2000/01/rdf-schema#comment> "Parallel crews assumed. No rdfs:domain." .
+<https://w3id.org/iprok/schedule#linkType> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/schedule> .
+<https://w3id.org/iprok/schedule#baseDays> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/schedule> .
+<https://w3id.org/iprok/schedule#linkSource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/schedule#spi> <http://www.w3.org/2000/01/rdf-schema#label> "Schedule Performance Index" .
+<https://w3id.org/iprok/schedule#WBSNode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iprok/schedule#isCriticalTask> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/iprok/schedule#Task> .
+<https://w3id.org/iprok/schedule#actualDuration> <http://www.w3.org/2000/01/rdf-schema#label> "actualDuration"@en .
+<https://w3id.org/iprok/schedule#hasWBS> <http://www.w3.org/2000/01/rdf-schema#label> "hasWBS" .
+<https://w3id.org/iprok/schedule#baselineNo> <http://www.w3.org/2000/01/rdf-schema#comment> "0 for the approved programme; 1, 2 … for revisions. No rdfs:domain." .
+<https://w3id.org/iprok/schedule#etc> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/schedule> .
+<https://w3id.org/iprok/schedule#constraintDate> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/iprok#Constraint> .
+<https://w3id.org/iprok/schedule#WorkPackage> <http://www.w3.org/2000/01/rdf-schema#comment> "A grouping of project work represented in the work breakdown structure."@en .
+<https://w3id.org/iprok/schedule#baselineLastDay> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/iprok/schedule#baselineDurationDays> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/schedule> .
+<https://w3id.org/iprok/schedule#extensionDays> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/schedule#linkLag> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/iprok/schedule#lagTime> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/iprok/schedule#hasWBS> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/iprok/schedule#WorkPackage> .
+<https://w3id.org/iprok/schedule#scheduleDuration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/schedule#remainingDuration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/schedule#pv> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/pv> .
+<https://w3id.org/iprok/schedule#cpi> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/schedule#projectOwner> <http://www.w3.org/2000/01/rdf-schema#comment> "The project owner property in the integrated project information model. Its declared domain is Project and its declared range is string."@en .
+<https://w3id.org/iprok/schedule#EVMSnapshot> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iprok/schedule#inBaseline> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/inBaseline> .
+<https://w3id.org/iprok/schedule#crewDescription> <http://www.w3.org/2000/01/rdf-schema#label> "crew Description"@en .
+<https://w3id.org/iprok/schedule#parentWBS> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/parentWBS> .
+<https://w3id.org/iprok/schedule#baselineBasis> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/schedule#plannedFinishDate> <http://www.w3.org/2000/01/rdf-schema#label> "plannedFinishDate"@en .
+<https://w3id.org/iprok/schedule#weatherPadPct> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/schedule> .
+<https://w3id.org/iprok/schedule#activityId> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/schedule> .
+<https://w3id.org/iprok/schedule#projectAddress> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/iprok/schedule#Project> .
+<https://w3id.org/iprok/schedule#hasTask> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/iprok/schedule#inBaseline> <http://www.w3.org/2000/01/rdf-schema#label> "in Baseline"@en .
+<https://w3id.org/iprok/schedule#activityId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/schedule#wbsPlannedCost> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/iprok/schedule#baselineCost> <http://www.w3.org/2000/01/rdf-schema#label> "baseline Cost"@en .
+<https://w3id.org/iprok/schedule#wbsName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/schedule#actualDuration> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/iprok/schedule#actualFinishDate> <http://www.w3.org/2000/01/rdf-schema#label> "actualFinishDate"@en .
+<https://w3id.org/iprok/schedule#labourPadPct> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/schedule#hasSubTask> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/iprok/schedule#Task> .
+<https://w3id.org/iprok/schedule#baselineStartDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/iprok/schedule#crewCount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/schedule#ac> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/iprok/schedule#linksToPredecessorTask> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/iprok/schedule#hasWorkPackage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/iprok/schedule#activityName> <http://www.w3.org/2000/01/rdf-schema#label> "activity name" .
+<https://w3id.org/iprok/schedule#baselineLastDay> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/schedule#hasTaskTime> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/schedule#TaskTime> <http://www.w3.org/2000/01/rdf-schema#label> "TaskTime" .
+<https://w3id.org/iprok/schedule#taskPriority> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/schedule#activityId> <http://www.w3.org/2000/01/rdf-schema#label> "activity id" .
+<https://w3id.org/iprok/schedule#estimateId> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/estimateId> .
+<https://w3id.org/iprok/schedule#taskRelationshipType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/iprok/schedule#isCritical> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<https://w3id.org/iprok/schedule#cv> <http://www.w3.org/2000/01/rdf-schema#label> "Cost Variance" .
+<https://w3id.org/iprok/schedule#sv> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/schedule#linksToSuccessorTask> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/schedule#wbsPlannedCost> <http://www.w3.org/2000/01/rdf-schema#comment> "Rollup: sum of governed <https://w3id.org/iprok/billing#BOQItem> amounts at a work package, rolled up the tree to the root. In Slice 1 this is COMPUTED ON READ in list_wbs_nodes (never persisted) — always-correct and it sidesteps a Fuseki/TDB2 quirk deleting xsd:decimal triples. The property + optional SHACL stanza are reserved for a future slice that may persist a snapshot." .
+<https://w3id.org/iprok/schedule#totalFloat> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/iprok/schedule#constraintDate> <http://www.w3.org/2000/01/rdf-schema#comment> "The constraint date property in the integrated project information model. Its declared domain is Constraint and its declared range is dateTime."@en .
+<https://w3id.org/iprok/schedule#lagTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/iprok/schedule#ScheduleLink> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/ScheduleLink> .
+<https://w3id.org/iprok/schedule#Activity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iprok/schedule#eotClause> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/eotClause> .
+<https://w3id.org/iprok/schedule#hasSuccessorDependency> <http://www.w3.org/2000/01/rdf-schema#label> "hasSuccessorDependency" .
+<https://w3id.org/iprok/schedule#sv> <http://www.w3.org/2000/01/rdf-schema#comment> "EV − PV. Positive = ahead of schedule. INR-equivalent. Mandatory on <https://w3id.org/iprok/schedule#EVMSnapshot>." .
+<https://w3id.org/iprok/schedule#baselineDurationDays> <http://www.w3.org/2000/01/rdf-schema#comment> "Calendar days, first to last inclusive. No rdfs:domain." .
+<https://w3id.org/iprok/schedule#linksToPredecessorTask> <http://www.w3.org/2000/01/rdf-schema#label> "linksToPredecessorTask" .
+<https://w3id.org/iprok/schedule#baselineDurationDays> <http://www.w3.org/2000/01/rdf-schema#label> "baseline Duration Days"@en .
+<https://w3id.org/iprok/schedule#vac> <http://www.w3.org/2000/01/rdf-schema#comment> "BAC − EAC. INR. Mandatory on <https://w3id.org/iprok/schedule#EVMSnapshot>." .
+<https://w3id.org/iprok/schedule#statusDate> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/schedule> .
+<https://w3id.org/iprok/schedule#linksToSuccessorTask> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/iprok/schedule#TaskDependency> .
+<https://w3id.org/iprok/schedule#cv> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/iprok/schedule#actualDuration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/iprok/schedule#dailyOutput> <http://www.w3.org/2000/01/rdf-schema#label> "daily Output"@en .
+<https://w3id.org/iprok/schedule#baselineLabel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/schedule#activityPlannedStartDate> <http://www.w3.org/2000/01/rdf-schema#label> "planned start (datetime)" .
+<https://w3id.org/iprok/schedule#pv> <http://www.w3.org/2000/01/rdf-schema#comment> "Time-phased budget that should have been earned by statusDate. INR. Mandatory on <https://w3id.org/iprok/schedule#EVMSnapshot>. Domain unspecified." .
+<https://w3id.org/iprok/schedule#finalDays> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<https://w3id.org/iprok/schedule#TaskTime> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/iprok#IproKThing> .
+<https://w3id.org/iprok/schedule#Project> <http://www.w3.org/2000/01/rdf-schema#label> "Project" .
+<https://w3id.org/iprok/schedule#estimatedAt> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/schedule> .
+<https://w3id.org/iprok/schedule#WorkPackage> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/iprok#IproKThing> .
+<https://w3id.org/iprok/schedule#constraintType> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/schedule#TaskDependency> <http://www.w3.org/2000/01/rdf-schema#label> "TaskDependency" .
+<https://w3id.org/iprok/schedule#linkSource> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/linkSource> .
+<https://w3id.org/iprok/schedule#ev> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/schedule> .
+<https://w3id.org/iprok/schedule#hasTaskTime> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/iprok/schedule#TaskTime> .
+<https://w3id.org/iprok/schedule#actualStartDate> <http://www.w3.org/2000/01/rdf-schema#label> "actualStartDate"@en .
+<https://w3id.org/iprok/schedule#hasPredecessorDependency> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/iprok/schedule#Task> .
+<https://w3id.org/iprok/schedule#bac> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/iprok/schedule#wbsName> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/wbsName> .
+<https://w3id.org/iprok/schedule#stipulatedFinishDate> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/stipulatedFinishDate> .
+<https://w3id.org/iprok/schedule#atCompleteDuration> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/iprok/schedule#TaskTime> .
+<https://w3id.org/iprok/schedule#baselineStartDate> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/baselineStartDate> .
+<https://w3id.org/iprok/schedule#linksToPredecessorTask> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/iprok/schedule#bac> <http://www.w3.org/2000/01/rdf-schema#comment> "Total contract budget = sum of every BOQItem (tenderedQty × quotedRate). INR. Mandatory on <https://w3id.org/iprok/schedule#EVMSnapshot>." .
+<https://w3id.org/iprok/schedule#ac> <http://www.w3.org/2000/01/rdf-schema#label> "Actual Cost (ACWP)" .
+<https://w3id.org/iprok/schedule#bac> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/bac> .
+<https://w3id.org/iprok/schedule#crewDescription> <http://www.w3.org/2000/01/rdf-schema#comment> "The standard crew the rate refers to, e.g. '1 mason gang (12)'. No rdfs:domain." .
+<https://w3id.org/iprok/schedule#projectAddress> <http://www.w3.org/2000/01/rdf-schema#label> "projectAddress"@en .
+<https://w3id.org/iprok/schedule#plannedQuantity> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/schedule> .
+<https://w3id.org/iprok/schedule#TaskDependency> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/schedule#eotClause> <http://www.w3.org/2000/01/rdf-schema#label> "eot Clause"@en .
+<https://w3id.org/iprok/schedule#remainingDuration> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/iprok/schedule#hasSuccessorDependency> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/schedule#Task> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/schedule#baselineActivityName> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/baselineActivityName> .
+<https://w3id.org/iprok/schedule#partOfProject> <http://www.w3.org/2000/01/rdf-schema#comment> "The part of project property in the integrated project information model. Its declared domain is Activity and its declared range is Project."@en .
+<https://w3id.org/iprok/schedule#eac> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/schedule#projectAddress> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/schedule#baselineActivityName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/schedule#TaskDependency> <http://www.w3.org/2000/01/rdf-schema#comment> "A relationship record describing precedence between scheduled tasks."@en .
+<https://w3id.org/iprok/schedule#constraintType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/schedule#partOfProject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/iprok/schedule#baselineLabel> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/baselineLabel> .
+<https://w3id.org/iprok/schedule#constraintType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/schedule#estimateId> <http://www.w3.org/2000/01/rdf-schema#label> "estimate Id"@en .
+<https://w3id.org/iprok/schedule#wbsPlannedCost> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/schedule> .
+<https://w3id.org/iprok/schedule#percentComplete> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/percentComplete> .
+<https://w3id.org/iprok/schedule#Task> <http://www.w3.org/2000/01/rdf-schema#comment> "A unit of scheduled work within a project."@en .
+<https://w3id.org/iprok/schedule#finalDays> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/schedule> .
+<https://w3id.org/iprok/schedule#BaselineEntry> <http://www.w3.org/2000/01/rdf-schema#comment> "One activity as a baseline froze it: its start, last day and budget then." .
+<https://w3id.org/iprok/schedule#isCritical> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/schedule#partOfProject> <http://www.w3.org/2000/01/rdf-schema#label> "part of project" .
+<https://w3id.org/iprok/schedule#approvedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "IRI of the user who approved or rejected the deviation. Domain unspecified." .
+<https://w3id.org/iprok/schedule#baselineStartDate> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/schedule> .
+<https://w3id.org/iprok/schedule#approvedBy> <http://www.w3.org/2000/01/rdf-schema#label> "approved by" .
+<https://w3id.org/iprok/schedule#ScheduleBaseline> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iprok/schedule#hasWorkPackage> <http://www.w3.org/2000/01/rdf-schema#label> "hasWorkPackage" .
+<https://w3id.org/iprok/schedule#percentComplete> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/iprok/schedule#baselineActivityId> <http://www.w3.org/2000/01/rdf-schema#label> "baseline Activity Id"@en .
+<https://w3id.org/iprok/schedule#extensionDays> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/extensionDays> .
+<https://w3id.org/iprok/schedule#actualStartDate> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/schedule#plannedStartDate> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/iprok/schedule#TaskTime> .
+<https://w3id.org/iprok/schedule#BaselineEntry> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/BaselineEntry> .
+<https://w3id.org/iprok/schedule#ActivityDurationEstimate> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Entity> .
+<https://w3id.org/iprok/schedule#budgetedQuantity> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/schedule> .
+<https://w3id.org/iprok/schedule#baselineLastDay> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/baselineLastDay> .
+<https://w3id.org/iprok/schedule#plannedFinishDate> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/schedule#baselineActivityName> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/schedule> .
+<https://w3id.org/iprok/schedule#atCompleteDuration> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/schedule#isCriticalTask> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/iprok/schedule#sv> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/iprok/schedule#wbsName> <http://www.w3.org/2000/01/rdf-schema#label> "WBS node name" .
+<https://w3id.org/iprok/schedule#linkType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/schedule#baseDays> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/schedule#projectAddress> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/schedule#baselineCost> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/schedule#partOfProject> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/schedule> .
+<https://w3id.org/iprok/schedule#hasSubTask> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/iprok/schedule#Task> .
+<https://w3id.org/iprok/schedule#BaselineEntry> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Entity> .
+<https://w3id.org/iprok/schedule#labourPadPct> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/iprok/schedule#remainingDuration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/iprok/schedule#baselineFinishDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/iprok/schedule#etc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/schedule#durationBasis> <http://www.w3.org/2000/01/rdf-schema#comment> "The plain-language reason for the duration, as the planner explained it. No rdfs:domain." .
+<https://w3id.org/iprok/schedule#approvedBy> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/approvedBy> .
+<https://w3id.org/iprok/schedule#isMilestone> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/iprok/schedule#actualStartDate> <http://www.w3.org/2000/01/rdf-schema#comment> "The actual start date property in the integrated project information model. Its declared domain is TaskTime and its declared range is dateTime."@en .
+<https://w3id.org/iprok/schedule#constraintType> <http://www.w3.org/2000/01/rdf-schema#label> "constraintType"@en .
+<https://w3id.org/iprok/schedule#baselineActivityName> <http://www.w3.org/2000/01/rdf-schema#comment> "The activity's name when frozen. No rdfs:domain." .
+<https://w3id.org/iprok/schedule#statusDate> <http://www.w3.org/2000/01/rdf-schema#comment> "The data-date of the EVM snapshot — every activity and bill is rolled up as of this calendar day. Mandatory on <https://w3id.org/iprok/schedule#EVMSnapshot>. Domain unspecified (antipattern #8)." .
+<https://w3id.org/iprok/schedule#durationBasis> <http://www.w3.org/2000/01/rdf-schema#label> "duration Basis"@en .
+<https://w3id.org/iprok/schedule#activityPlannedStartDate> <http://www.w3.org/2000/01/rdf-schema#comment> "Mirrors iprok:plannedStartDate. Domain unspecified (antipattern #8). Distinct from the V0.22 Project <https://w3id.org/iprok#plannedStart>." .
+<https://w3id.org/iprok/schedule#hasTask> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/schedule#weatherPadPct> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/schedule#actualStartDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/schedule#baselineCost> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/schedule> .
+<https://w3id.org/iprok/schedule#activityId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/schedule#crewCount> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/crewCount> .
+<https://w3id.org/iprok/schedule#actualFinishDate> <http://www.w3.org/2000/01/rdf-schema#comment> "The actual finish date property in the integrated project information model. Its declared domain is TaskTime and its declared range is dateTime."@en .
+<https://w3id.org/iprok/schedule#remainingDuration> <http://www.w3.org/2000/01/rdf-schema#comment> "The remaining duration property in the integrated project information model. Its declared domain is TaskTime and its declared range is decimal."@en .
+<https://w3id.org/iprok/schedule#plannedFinishDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/schedule#WorkPackage> <http://www.w3.org/2000/01/rdf-schema#label> "WorkPackage" .
+<https://w3id.org/iprok/schedule#stipulatedFinishDate> <http://www.w3.org/2000/01/rdf-schema#label> "stipulated Finish Date"@en .
+<https://w3id.org/iprok/schedule#isMilestone> <http://www.w3.org/2000/01/rdf-schema#label> "isMilestone"@en .
+<https://w3id.org/iprok/schedule#hasTaskTime> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/iprok/schedule#Task> .
+<https://w3id.org/iprok/schedule#baselineReason> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/schedule#projectAddress> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/schedule#baselineReason> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/schedule#spi> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/spi> .
+<https://w3id.org/iprok/schedule#hasTaskTime> <http://www.w3.org/2000/01/rdf-schema#label> "hasTaskTime" .
+<https://w3id.org/iprok/schedule#baselineOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/iprok/schedule#bac> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/schedule> .
+<https://w3id.org/iprok/schedule#entryCount> <http://www.w3.org/2000/01/rdf-schema#comment> "How many activities a baseline froze. No rdfs:domain." .
+<https://w3id.org/iprok/schedule#parentWBS> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/iprok/schedule#ScheduleLink> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/schedule> .
+<https://w3id.org/iprok/schedule#isWorkPackage> <http://www.w3.org/2000/01/rdf-schema#comment> "True when this is a leaf work package — the unit of planning + control that governs BOQ / IFC / Activity. Domain unspecified (antipattern #8)." .
+<https://w3id.org/iprok/schedule#totalFloat> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/schedule> .
+<https://w3id.org/iprok/schedule#taskRelationshipType> <http://www.w3.org/2000/01/rdf-schema#comment> "The task relationship type property in the integrated project information model. Its declared domain is TaskDependency and its declared range is string."@en .
+<https://w3id.org/iprok/schedule#linkSource> <http://www.w3.org/2000/01/rdf-schema#comment> "The link source property in the integrated project information model."@en .
+<https://w3id.org/iprok/schedule#seededDailyOutput> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/schedule#activityPlannedStartDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/schedule#TaskTime> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/schedule#estimatedAt> <http://www.w3.org/2000/01/rdf-schema#label> "estimated At"@en .
+<https://w3id.org/iprok/schedule#WorkPackage> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/schedule#estimateId> <http://www.w3.org/2000/01/rdf-schema#comment> "Human-facing id, DE-<activity id>. Polymorphic — no rdfs:domain (antipattern #8)." .
+<https://w3id.org/iprok/schedule#ac> <http://www.w3.org/2000/01/rdf-schema#comment> "Sum of approved/finalised RA Bill netPayable by statusDate. INR. Mandatory on <https://w3id.org/iprok/schedule#EVMSnapshot>. Domain unspecified." .
+<https://w3id.org/iprok/schedule#actualDuration> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/iprok/schedule#TaskTime> .
+<https://w3id.org/iprok/schedule#ev> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/ev> .
+<https://w3id.org/iprok/schedule#cv> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/cv> .
+<https://w3id.org/iprok/schedule#budgetedCost> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/schedule> .
+<https://w3id.org/iprok/schedule#projectCategory> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/schedule#ActivityDurationEstimate> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/schedule> .
+<https://w3id.org/iprok/schedule#budgetedQuantity> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/budgetedQuantity> .
+<https://w3id.org/iprok/schedule#finalDays> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/finalDays> .
+<https://w3id.org/iprok/schedule#WorkConstraint> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/Constraint> .
+<https://w3id.org/iprok/schedule#actualStartDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://w3id.org/iprok/schedule#cpi> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/cpi> .
+<https://w3id.org/iprok/schedule#extensionDays> <http://www.w3.org/2000/01/rdf-schema#comment> "Days of extension granted. No rdfs:domain." .
+<https://w3id.org/iprok/schedule#activityId> <http://www.w3.org/2000/01/rdf-schema#comment> "Source-schedule unique id (P6 task_code / MSP UID / sheet key). Stable across re-imports so revisions supersede rather than duplicate." .
+<https://w3id.org/iprok/schedule#baselineReason> <http://www.w3.org/2000/01/rdf-schema#comment> "Why the programme was revised. No rdfs:domain." .
+<https://w3id.org/iprok/schedule#dataDate> <http://www.w3.org/2000/01/rdf-schema#label> "data Date"@en .
+<https://w3id.org/iprok/schedule#baselineReason> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/schedule> .
+<https://w3id.org/iprok/schedule#baselineOf> <http://www.w3.org/2000/01/rdf-schema#label> "baseline Of"@en .
+<https://w3id.org/iprok/schedule#isWorkPackage> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/schedule> .
+<https://w3id.org/iprok/schedule#scheduleDuration> <http://www.w3.org/2000/01/rdf-schema#label> "scheduleDuration"@en .
+<https://w3id.org/iprok/schedule#hasPredecessorDependency> <http://www.w3.org/2000/01/rdf-schema#label> "hasPredecessorDependency" .
+<https://w3id.org/iprok/schedule#plannedFinishDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://w3id.org/iprok/schedule#statusDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/schedule#TaskDependency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iprok/schedule#EVMSnapshot> <http://www.w3.org/2000/01/rdf-schema#label> "EVM snapshot" .
+<https://w3id.org/iprok/schedule#projectCategory> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/iprok/schedule#Project> .
+<https://w3id.org/iprok/schedule#etc> <http://www.w3.org/2000/01/rdf-schema#label> "Estimate to Complete" .
+<https://w3id.org/iprok/schedule#baselineOf> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/schedule> .
+<https://w3id.org/iprok/schedule#activityPlannedStartDate> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/schedule> .
+<https://w3id.org/iprok/schedule#seededDailyOutput> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/schedule> .
+<https://w3id.org/iprok/schedule#lagTime> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/schedule#finalDays> <http://www.w3.org/2000/01/rdf-schema#label> "final Days"@en .
+<https://w3id.org/iprok/schedule#extensionDays> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<https://w3id.org/iprok/schedule#vac> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/schedule> .
+<https://w3id.org/iprok/schedule#Task> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iprok/schedule#baselineBasis> <http://www.w3.org/2000/01/rdf-schema#comment> "ApprovedProgramme (Clause 5.1) | AgreedAmendment (the programme amended by agreement, 5.1) | ExtensionOfTime (5.2 / 5.3: extension granted, milestones rescheduled). No rdfs:domain." .
+<https://w3id.org/iprok/schedule#hasConstraint> <http://www.w3.org/2000/01/rdf-schema#comment> "The has constraint property in the integrated project information model. Its declared domain is Task and its declared range is Constraint."@en .
+<https://w3id.org/iprok/schedule#taskPriority> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/iprok/schedule#Task> .
+<https://w3id.org/iprok/schedule#baselineNo> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<https://w3id.org/iprok/schedule#estimatedAt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/schedule#hasWBS> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/iprok/schedule#Project> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/Project> .
+<https://w3id.org/iprok/schedule#baselineStart> <http://www.w3.org/2000/01/rdf-schema#comment> "The activity's first day in the baseline. No rdfs:domain." .
+<https://w3id.org/iprok/schedule#taskPriority> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/schedule#dailyOutput> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/schedule#WBS_Element> <http://www.w3.org/2000/01/rdf-schema#comment> "An element of the work breakdown structure used to organise tasks."@en .
+<https://w3id.org/iprok/schedule#hasSubTask> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/iprok/schedule#hasWBS> <http://www.w3.org/2000/01/rdf-schema#comment> "The has wbs property in the integrated project information model. Its declared domain is WorkPackage and its declared range is WBS_Element."@en .
+<https://w3id.org/iprok/schedule#baselineActivityId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/schedule#scheduleDuration> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/iprok/schedule#TaskTime> .
+<https://w3id.org/iprok/schedule#finalDays> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/schedule#plannedQuantity> <http://www.w3.org/2000/01/rdf-schema#comment> "The quantity the activity is planned to deliver, in <https://w3id.org/iprok/integrated#unit>. Distinct from <https://w3id.org/iprok/billing#quantity> (a measurement). No rdfs:domain." .
+<https://w3id.org/iprok/schedule#ev> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/schedule#estimateId> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/schedule> .
+<https://w3id.org/iprok/schedule#crewDescription> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/schedule> .
+<https://w3id.org/iprok/schedule#estimateId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/schedule#parentWBS> <http://www.w3.org/2000/01/rdf-schema#comment> "Self-referential link to the parent <https://w3id.org/iprok/schedule#WBSNode>. Absent on the project-root node. Domain unspecified (antipattern #8)." .
+<https://w3id.org/iprok/schedule#boqShareOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/iprok/schedule#baselineNo> <http://www.w3.org/2000/01/rdf-schema#label> "baseline No"@en .
+<https://w3id.org/iprok/schedule#crewDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/schedule#wbsPlannedCost> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/wbsPlannedCost> .
+<https://w3id.org/iprok/schedule#lagTime> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/iprok/schedule#TaskDependency> .
+<https://w3id.org/iprok/schedule#linkType> <http://www.w3.org/2000/01/rdf-schema#label> "relationship type" .
+<https://w3id.org/iprok/schedule#wbsLevel> <http://www.w3.org/2000/01/rdf-schema#comment> "Depth in the tree: 1 = project root, 2 = block/zone, 3 = system, deeper = work packages. Server-assigned from parent depth." .
+<https://w3id.org/iprok/schedule#EVMSnapshot> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Entity> .
+<https://w3id.org/iprok/schedule#wbsCode> <http://www.w3.org/2000/01/rdf-schema#comment> "The wbs code property in the integrated project information model."@en .
+<https://w3id.org/iprok/schedule#etc> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/iprok/schedule#WorkConstraint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Entity> .
+<https://w3id.org/iprok/schedule#eotClause> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/schedule#BaselineEntry> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/schedule> .
+<https://w3id.org/iprok/schedule#plannedQuantity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/schedule#inBaseline> <http://www.w3.org/2000/01/rdf-schema#comment> "The baseline an entry belongs to. No rdfs:domain." .
+<https://w3id.org/iprok/schedule#Task> <http://www.w3.org/2000/01/rdf-schema#label> "Task" .
+<https://w3id.org/iprok/schedule#actualFinishDate> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/schedule#WBS_Element> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/iprok#IproKThing> .
+<https://w3id.org/iprok/schedule#seededDailyOutput> <http://www.w3.org/2000/01/rdf-schema#label> "seeded Daily Output"@en .
+<https://w3id.org/iprok/schedule#baseDays> <http://www.w3.org/2000/01/rdf-schema#label> "base Days"@en .
+<https://w3id.org/iprok/schedule#baselineFinishDate> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/schedule> .
+<https://w3id.org/iprok/schedule#pv> <http://www.w3.org/2000/01/rdf-schema#label> "Planned Value (BCWS)" .
+<https://w3id.org/iprok/schedule#assignedTo> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/schedule#approvedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/iprok/schedule#labourPadPct> <http://www.w3.org/2000/01/rdf-schema#label> "labour Pad Pct"@en .
+<https://w3id.org/iprok/schedule#ActivityDurationEstimate> <http://www.w3.org/2000/01/rdf-schema#comment> "How a planned activity's duration was reached: quantity, crew, rate and its source, allowances. Superseded, never overwritten." .
+<https://w3id.org/iprok/schedule#assignedTo> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/iprok/schedule#Task> .
+<https://w3id.org/iprok/schedule#crewCount> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<https://w3id.org/iprok/schedule#lagTime> <http://www.w3.org/2000/01/rdf-schema#label> "lagTime"@en .
+<https://w3id.org/iprok/schedule#dailyOutput> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/schedule> .
+<https://w3id.org/iprok/schedule#bac> <http://www.w3.org/2000/01/rdf-schema#label> "Budget at Completion (BAC)" .
+<https://w3id.org/iprok/schedule#linkLag> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/schedule#linksToSuccessorTask> <http://www.w3.org/2000/01/rdf-schema#comment> "The links to successor task property in the integrated project information model. Its declared domain is TaskDependency and its declared range is Task."@en .
+<https://w3id.org/iprok/schedule#linkSource> <http://www.w3.org/2000/01/rdf-schema#label> "predecessor activity id" .
+<https://w3id.org/iprok/schedule#partOfProject> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/schedule#baselineActivityId> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/schedule> .
+<https://w3id.org/iprok/schedule#weatherPadPct> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/iprok/schedule#activityName> <http://www.w3.org/2000/01/rdf-schema#comment> "Domain intentionally unspecified — antipattern #8. ActivityShape constrains format." .
+<https://w3id.org/iprok/schedule#spi> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/schedule> .
+<https://w3id.org/iprok/schedule#baselineDurationDays> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/baselineDurationDays> .
+<https://w3id.org/iprok/schedule#boqShareOf> <http://www.w3.org/2000/01/rdf-schema#comment> "The BOQ line this activity delivers a share of. EVM does NOT sum the line's amount through this link — the activity's own <https://w3id.org/iprok/schedule#budgetedCost> is its budget. No rdfs:domain / rdfs:range (antipattern #8)." .
+<https://w3id.org/iprok/schedule#Activity> <http://www.w3.org/2000/01/rdf-schema#comment> "A schedule activity. In v0, manually entered; in v1 ingested from P6." .
+<https://w3id.org/iprok/schedule#Project> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/iprok#IproKThing> .
+<https://w3id.org/iprok/schedule#activityName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/schedule#estimatedAt> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://w3id.org/iprok/schedule#baselineReason> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/baselineReason> .
+<https://w3id.org/iprok/schedule#hasPredecessorDependency> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/iprok/schedule#TaskDependency> .
+<https://w3id.org/iprok/schedule#stipulatedFinishDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/iprok/schedule#boqShareOf> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/schedule> .
+<https://w3id.org/iprok/schedule#plannedQuantity> <http://www.w3.org/2000/01/rdf-schema#label> "planned Quantity"@en .
+<https://w3id.org/iprok/schedule#isCritical> <http://www.w3.org/2000/01/rdf-schema#comment> "The is critical property in the integrated project information model."@en .
+<https://w3id.org/iprok/schedule#eotClause> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/schedule> .
+<https://w3id.org/iprok/schedule#WBS_Element> <http://www.w3.org/2000/01/rdf-schema#label> "WBS_Element" .
+<https://w3id.org/iprok/schedule#percentComplete> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/schedule> .
+<https://w3id.org/iprok/schedule#activityId> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/activityId> .
+<https://w3id.org/iprok/schedule#activityName> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/activityName> .
+<https://w3id.org/iprok/schedule#activityPlannedStartDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://w3id.org/iprok/schedule#inBaseline> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/iprok/schedule#wbsPlannedCost> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/schedule#dataDate> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/dataDate> .
+<https://w3id.org/iprok/schedule#remainingDuration> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/iprok/schedule#TaskTime> .
+<https://w3id.org/iprok/schedule#isCriticalTask> <http://www.w3.org/2000/01/rdf-schema#label> "isCriticalTask"@en .
+<https://w3id.org/iprok/schedule#eotClause> <http://www.w3.org/2000/01/rdf-schema#comment> "The Clause 5 sub-clause an extension of time was granted under: 5.2 (beyond the contractor's control) or 5.3 (hindrance by the department). No rdfs:domain." .
+<https://w3id.org/iprok/schedule#baselineStart> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/schedule> .
+<https://w3id.org/iprok/schedule#dataDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/iprok/schedule#scheduleDuration> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/iprok/schedule#extensionDays> <http://www.w3.org/2000/01/rdf-schema#label> "extension Days"@en .
+<https://w3id.org/iprok/schedule#crewDescription> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/schedule#scheduleRevision> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/schedule#WorkConstraint> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok> .
+<https://w3id.org/iprok/schedule#linksToPredecessorTask> <http://www.w3.org/2000/01/rdf-schema#comment> "The links to predecessor task property in the integrated project information model. Its declared domain is TaskDependency and its declared range is Task."@en .
+<https://w3id.org/iprok/schedule#actualDuration> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/schedule#durationBasis> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/durationBasis> .
+<https://w3id.org/iprok/schedule#ac> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/schedule#baselineStartDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/schedule#cpi> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/iprok/schedule#hasSuccessorDependency> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/iprok/schedule#Task> .
+<https://w3id.org/iprok/schedule#eotClause> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/schedule#scheduleDuration> <http://www.w3.org/2000/01/rdf-schema#comment> "The schedule duration property in the integrated project information model. Its declared domain is TaskTime and its declared range is decimal."@en .
+<https://w3id.org/iprok/schedule#eac> <http://www.w3.org/2000/01/rdf-schema#comment> "BAC / CPI when CPI>0, else BAC. INR. Mandatory on <https://w3id.org/iprok/schedule#EVMSnapshot>." .
+<https://w3id.org/iprok/schedule#stipulatedFinishDate> <http://www.w3.org/2000/01/rdf-schema#comment> "The completion date the contract stipulates while this baseline is in force: the approved programme's last day plus every extension of time granted (CPWD Clause 5.2/5.3). Clause 5.4's 10% is of the period to this date. An agreed amendment does not move it. No rdfs:domain." .
+<https://w3id.org/iprok/schedule#approvedBy> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/schedule> .
+<https://w3id.org/iprok/schedule#pv> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/schedule> .
+<https://w3id.org/iprok/schedule#actualFinishDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/schedule#baselineFinishDate> <http://www.w3.org/2000/01/rdf-schema#comment> "The baseline's last planned day — its completion date. No rdfs:domain." .
+<https://w3id.org/iprok/schedule#budgetedQuantity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/schedule#isWorkPackage> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<https://w3id.org/iprok/schedule#Milestone> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/schedule#etc> <http://www.w3.org/2000/01/rdf-schema#comment> "EAC − AC, the remaining cost forecast. INR. Mandatory on <https://w3id.org/iprok/schedule#EVMSnapshot>." .
+<https://w3id.org/iprok/schedule#taskRelationshipType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/schedule#baselineActivityName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/schedule#activityPlannedFinishDate> <http://www.w3.org/2000/01/rdf-schema#comment> "Mirrors iprok:plannedFinishDate. Domain unspecified (antipattern #8)." .
+<https://w3id.org/iprok/schedule#ev> <http://www.w3.org/2000/01/rdf-schema#label> "Earned Value (BCWP)" .
+<https://w3id.org/iprok/schedule#partOfProject> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/iprok/schedule#Project> .
+<https://w3id.org/iprok/schedule#baselineStartDate> <http://www.w3.org/2000/01/rdf-schema#comment> "The baseline's first planned day. No rdfs:domain." .
+<https://w3id.org/iprok/schedule#activityName> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/schedule> .
+<https://w3id.org/iprok/schedule#linkLag> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/schedule#projectOwner> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/schedule#isCritical> <http://www.w3.org/2000/01/rdf-schema#label> "is on the critical path" .
+<https://w3id.org/iprok/schedule#lagTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/schedule#spi> <http://www.w3.org/2000/01/rdf-schema#comment> "EV / PV. >1.0 ahead of schedule, <1.0 behind. Optional — undefined (omitted) when PV=0." .
+<https://w3id.org/iprok/schedule#BaselineEntry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iprok/schedule#hasWorkPackage> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/iprok/schedule#Project> .
+<https://w3id.org/iprok/schedule#baselineFinishDate> <http://www.w3.org/2000/01/rdf-schema#label> "baseline Finish Date"@en .
+<https://w3id.org/iprok/schedule#labourPadPct> <http://www.w3.org/2000/01/rdf-schema#comment> "Festival/harvest labour allowance as a fraction of base days. No rdfs:domain." .
+<https://w3id.org/iprok/schedule#parentWBS> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/iprok/schedule#WBSNode> .
+<https://w3id.org/iprok/schedule#entryCount> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<https://w3id.org/iprok/schedule#scheduleRevision> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/schedule> .
+<https://w3id.org/iprok/schedule#projectCategory> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/schedule#ac> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/schedule> .
+<https://w3id.org/iprok/schedule#budgetedCost> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/budgetedCost> .
+<https://w3id.org/iprok/schedule#atCompleteDuration> <http://www.w3.org/2000/01/rdf-schema#comment> "The at complete duration property in the integrated project information model. Its declared domain is TaskTime and its declared range is decimal."@en .
+<https://w3id.org/iprok/schedule#wbsLevel> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/wbsLevel> .
+<https://w3id.org/iprok/schedule#baselineFinishDate> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/baselineFinishDate> .
+<https://w3id.org/iprok/schedule#activityPlannedFinishDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/schedule#plannedStartDate> <http://www.w3.org/2000/01/rdf-schema#label> "plannedFinishDate"@en .
+<https://w3id.org/iprok/schedule#projectCategory> <http://www.w3.org/2000/01/rdf-schema#comment> "The project category property in the integrated project information model. Its declared domain is Project and its declared range is string."@en .
+<https://w3id.org/iprok/schedule#actualDuration> <http://www.w3.org/2000/01/rdf-schema#comment> "The actual duration property in the integrated project information model. Its declared domain is TaskTime and its declared range is decimal."@en .
+<https://w3id.org/iprok/schedule#ev> <http://www.w3.org/2000/01/rdf-schema#comment> "Budgeted cost of work actually performed by statusDate. INR. Mandatory on <https://w3id.org/iprok/schedule#EVMSnapshot>. Domain unspecified." .
+<https://w3id.org/iprok/schedule#TaskTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iprok/schedule#constraintType> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/iprok#Constraint> .
+<https://w3id.org/iprok/schedule#budgetedCost> <http://www.w3.org/2000/01/rdf-schema#label> "budgeted Cost"@en .
+<https://w3id.org/iprok/schedule#WorkPackage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iprok/schedule#wbsLevel> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/schedule> .
+<https://w3id.org/iprok/schedule#eac> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/eac> .
+<https://w3id.org/iprok/schedule#actualDuration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/schedule#WBSNode> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/WBSNode> .
+<https://w3id.org/iprok/schedule#wbsCode> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/schedule#totalFloat> <http://www.w3.org/2000/01/rdf-schema#label> "total float (days)" .
+<https://w3id.org/iprok/schedule#approvedAt> <http://www.w3.org/2000/01/rdf-schema#label> "approved at" .
+<https://w3id.org/iprok/schedule#baselineActivityId> <http://www.w3.org/2000/01/rdf-schema#comment> "The activity's id when frozen. No rdfs:domain." .
+<https://w3id.org/iprok/schedule#linkLag> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/schedule> .
+<https://w3id.org/iprok/schedule#hasPredecessorDependency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/iprok/schedule#actualFinishDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://w3id.org/iprok/schedule#estimatedAt> <http://www.w3.org/2000/01/rdf-schema#comment> "When the estimate was made. No rdfs:domain." .
+<https://w3id.org/iprok/schedule#scheduleDuration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/iprok/schedule#baselineLabel> <http://www.w3.org/2000/01/rdf-schema#comment> "A human name, e.g. \"Approved programme\", \"Revised programme 1\". No rdfs:domain." .
+<https://w3id.org/iprok/schedule#cpi> <http://www.w3.org/2000/01/rdf-schema#label> "Cost Performance Index" .
+<https://w3id.org/iprok/schedule#constraintDate> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/schedule#stipulatedFinishDate> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/schedule> .
+<https://w3id.org/iprok/schedule#constraintType> <http://www.w3.org/2000/01/rdf-schema#comment> "The constraint type property in the integrated project information model. Its declared domain is Constraint and its declared range is string."@en .
+<https://w3id.org/iprok/schedule#dailyOutput> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/dailyOutput> .
+<https://w3id.org/iprok/schedule#projectOwner> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/schedule#statusDate> <http://www.w3.org/2000/01/rdf-schema#label> "EVM status date" .
+<https://w3id.org/iprok/schedule#approvedAt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/schedule#boqShareOf> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/boqShareOf> .
+<https://w3id.org/iprok/schedule#activityPlannedFinishDate> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/schedule> .
+<https://w3id.org/iprok/schedule#wbsLevel> <http://www.w3.org/2000/01/rdf-schema#label> "WBS level" .
+<https://w3id.org/iprok/schedule#wbsPlannedCost> <http://www.w3.org/2000/01/rdf-schema#label> "WBS planned cost (rollup)" .
+<https://w3id.org/iprok/schedule#labourPadPct> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/labourPadPct> .
+<https://w3id.org/iprok/schedule#bac> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/schedule#isCriticalTask> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<https://w3id.org/iprok/schedule#EVMSnapshot> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/schedule> .
+<https://w3id.org/iprok/schedule#wbsLevel> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<https://w3id.org/iprok/schedule#Milestone> <http://www.w3.org/2000/01/rdf-schema#label> "Milestone" .
+<https://w3id.org/iprok/schedule#projectCategory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/schedule#baselineBasis> <http://www.w3.org/2000/01/rdf-schema#label> "baseline Basis"@en .
+<https://w3id.org/iprok/schedule#totalFloat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/schedule#wbsCode> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/schedule> .
+<https://w3id.org/iprok/schedule#hasConstraint> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/iprok#Constraint> .
+<https://w3id.org/iprok/schedule#ScheduleBaseline> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/ScheduleBaseline> .
+<https://w3id.org/iprok/schedule#hasPredecessorDependency> <http://www.w3.org/2000/01/rdf-schema#comment> "The has predecessor dependency property in the integrated project information model. Its declared domain is Task and its declared range is TaskDependency."@en .
+<https://w3id.org/iprok/schedule#vac> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/vac> .
+<https://w3id.org/iprok/schedule#entryCount> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/schedule> .
+<https://w3id.org/iprok/schedule#weatherPadPct> <http://www.w3.org/2000/01/rdf-schema#comment> "Monsoon/heat allowance as a fraction of base days, for the window the activity actually occupies. No rdfs:domain." .
+<https://w3id.org/iprok/schedule#lagTime> <http://www.w3.org/2000/01/rdf-schema#comment> "The lag time property in the integrated project information model. Its declared domain is TaskDependency and its declared range is decimal."@en .
+<https://w3id.org/iprok/schedule#Project> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok> .
+<https://w3id.org/iprok/schedule#baselineLastDay> <http://www.w3.org/2000/01/rdf-schema#comment> "The activity's last day in the baseline (inclusive). No rdfs:domain." .
+<https://w3id.org/iprok/schedule#budgetedCost> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/schedule#linksToSuccessorTask> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/iprok/schedule#Task> .
+<https://w3id.org/iprok/schedule#dataDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/schedule#atCompleteDuration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/schedule#budgetedCost> <http://www.w3.org/2000/01/rdf-schema#comment> "The activity's share of its BOQ line's amount (₹), by quantity. The shares of one line sum to the line's amount exactly. No rdfs:domain." .
+<https://w3id.org/iprok/schedule#plannedQuantity> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/plannedQuantity> .
+<https://w3id.org/iprok/schedule#wbsName> <http://www.w3.org/2000/01/rdf-schema#comment> "Human-readable name of the WBS node (e.g. 'Block A', 'Substructure', 'Footing RCC'). Domain unspecified (antipattern #8)." .
+<https://w3id.org/iprok/schedule#baselineNo> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/baselineNo> .
+<https://w3id.org/iprok/schedule#plannedStartDate> <http://www.w3.org/2000/01/rdf-schema#comment> "The planned start date property in the integrated project information model. Its declared domain is TaskTime and its declared range is dateTime."@en .
+<https://w3id.org/iprok/schedule#approvedAt> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/schedule> .
+<https://w3id.org/iprok/schedule#cv> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/schedule#isWorkPackage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/schedule#isMilestone> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/schedule#constraintDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/schedule#plannedFinishDate> <http://www.w3.org/2000/01/rdf-schema#comment> "The planned finish date property in the integrated project information model. Its declared domain is TaskTime and its declared range is dateTime."@en .
+<https://w3id.org/iprok/schedule#baselineBasis> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/baselineBasis> .
+<https://w3id.org/iprok/schedule#WBS_Element> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/schedule#projectOwner> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/schedule#boqShareOf> <http://www.w3.org/2000/01/rdf-schema#label> "boq Share Of"@en .
+<https://w3id.org/iprok/schedule#EVMSnapshot> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/EVMSnapshot> .
+<https://w3id.org/iprok/schedule#approvedAt> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://w3id.org/iprok/schedule#taskPriority> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/iprok/schedule#vac> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/schedule#hasConstraint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/iprok/schedule#linkSource> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/schedule#hasWBS> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/schedule#baselineReason> <http://www.w3.org/2000/01/rdf-schema#label> "baseline Reason"@en .
+<https://w3id.org/iprok/schedule#remainingDuration> <http://www.w3.org/2000/01/rdf-schema#label> "remainingDuration"@en .
+<https://w3id.org/iprok/schedule#linkLag> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/linkLag> .
+<https://w3id.org/iprok/schedule#assignedTo> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/iprok#Actor> .
+<https://w3id.org/iprok/schedule#dataDate> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/schedule> .
+<https://w3id.org/iprok/schedule#isCriticalTask> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/schedule#taskPriority> <http://www.w3.org/2000/01/rdf-schema#comment> "The task priority property in the integrated project information model. Its declared domain is Task and its declared range is integer."@en .
+<https://w3id.org/iprok/schedule#activityPlannedFinishDate> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/plannedFinishDate> .
+<https://w3id.org/iprok/schedule#scheduleRevision> <http://www.w3.org/2000/01/rdf-schema#comment> "UUID stamped on every <https://w3id.org/iprok/schedule#Activity> written by one POST /schedule/ingest/{id}/confirm. Lets a re-import supersede the prior revision (PROV-O) and the UI list revision history." .
+<https://w3id.org/iprok/schedule#baselineDurationDays> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<https://w3id.org/iprok/schedule#Activity> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/schedule> .
+<https://w3id.org/iprok/schedule#isCriticalTask> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/schedule#projectOwner> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/iprok/schedule#Project> .
+<https://w3id.org/iprok/schedule#WBSNode> <http://www.w3.org/2000/01/rdf-schema#comment> "One node in the project work-breakdown structure. Recursive via <https://w3id.org/iprok/schedule#parentWBS>; a leaf (<https://w3id.org/iprok/schedule#isWorkPackage> true) is a work package." .
+<https://w3id.org/iprok/schedule#etc> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/etc> .
+<https://w3id.org/iprok/schedule#percentComplete> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/schedule#estimateId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/schedule#activityPlannedFinishDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://w3id.org/iprok/schedule#cv> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/schedule> .
+<https://w3id.org/iprok/schedule#baselineCost> <http://www.w3.org/2000/01/rdf-schema#comment> "The activity's budget when frozen, in rupees. No rdfs:domain." .
+<https://w3id.org/iprok/schedule#percentComplete> <http://www.w3.org/2000/01/rdf-schema#comment> "The percent complete property in the integrated project information model."@en .
+<https://w3id.org/iprok/schedule#entryCount> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/entryCount> .
+<https://w3id.org/iprok/schedule#hasWorkPackage> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/schedule#hasSubTask> <http://www.w3.org/2000/01/rdf-schema#comment> "The has sub task property in the integrated project information model. Its declared domain is Task and its declared range is Task."@en .
+<https://w3id.org/iprok/schedule#baselineStart> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/iprok/schedule#ScheduleBaseline> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Entity> .
+<https://w3id.org/iprok/schedule#baselineCost> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/baselineCost> .
+<https://w3id.org/iprok/schedule#plannedStartDate> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/schedule#hasTaskTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/iprok/schedule#ActivityDurationEstimate> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/ActivityDurationEstimate> .
+<https://w3id.org/iprok/schedule#baselineBasis> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/schedule#WorkConstraint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iprok/schedule#parentWBS> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/schedule> .
+<https://w3id.org/iprok/schedule#plannedStartDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/schedule#hasConstraint> <http://www.w3.org/2000/01/rdf-schema#label> "hasConstraint" .
+<https://w3id.org/iprok/schedule#seededDailyOutput> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/seededDailyOutput> .
+<https://w3id.org/iprok/schedule#isMilestone> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/schedule#atCompleteDuration> <http://www.w3.org/2000/01/rdf-schema#label> "atCompleteDuration"@en .
+<https://w3id.org/iprok/schedule#plannedFinishDate> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/iprok/schedule#TaskTime> .
+<https://w3id.org/iprok/schedule#Activity> <http://www.w3.org/2000/01/rdf-schema#label> "Activity" .
+<https://w3id.org/iprok/schedule#wbsName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/schedule#estimatedAt> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/estimatedAt> .
+<https://w3id.org/iprok/schedule#linkSource> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/schedule> .
+<https://w3id.org/iprok/schedule#WBSNode> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Entity> .
+<https://w3id.org/iprok/schedule#baselineFinishDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/schedule#linksToSuccessorTask> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/iprok/schedule#linkLag> <http://www.w3.org/2000/01/rdf-schema#comment> "The link lag property in the integrated project information model."@en .
+<https://w3id.org/iprok/schedule#linkType> <http://www.w3.org/2000/01/rdf-schema#comment> "One of FS / SS / FF / SF (P6 convention)." .
+<https://w3id.org/iprok/schedule#ScheduleLink> <http://www.w3.org/2000/01/rdf-schema#label> "Schedule link" .
+<https://w3id.org/iprok/schedule#approvedAt> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/approvedAt> .
+<https://w3id.org/iprok/schedule#sv> <http://www.w3.org/2000/01/rdf-schema#label> "Schedule Variance" .
+<https://w3id.org/iprok/schedule#hasSubTask> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/schedule#Milestone> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iprok/schedule#budgetedQuantity> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/iprok/schedule#baselineActivityId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/schedule#extensionDays> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/schedule> .
+<https://w3id.org/iprok/schedule#spi> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/schedule#budgetedQuantity> <http://www.w3.org/2000/01/rdf-schema#label> "budgeted Quantity"@en .
+<https://w3id.org/iprok/schedule#baselineCost> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/iprok/schedule#projectOwner> <http://www.w3.org/2000/01/rdf-schema#label> "projectOwner"@en .
+<https://w3id.org/iprok/schedule#ScheduleBaseline> <http://www.w3.org/2000/01/rdf-schema#label> "Schedule Baseline"@en .
+<https://w3id.org/iprok/schedule#finalDays> <http://www.w3.org/2000/01/rdf-schema#comment> "Planned duration after allowances. No rdfs:domain." .

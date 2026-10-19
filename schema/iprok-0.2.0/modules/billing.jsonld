@@ -1,0 +1,1788 @@
+[
+  {
+    "@id": "https://w3id.org/iprok/billing#breadth",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://purl.org/dc/terms/description": [
+      {
+        "@language": "en",
+        "@value": "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."
+      }
+    ],
+    "http://purl.org/dc/terms/isPartOf": [
+      {
+        "@id": "https://w3id.org/iprok/billing"
+      }
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://bimsaarthi.com/ontology/v0/breadth"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The breadth property in the integrated project information model. Its declared domain is Measurement and its declared range is decimal."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/iprok/billing#Measurement"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "breadth"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/iprok/billing#billingPeriodEnd",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://purl.org/dc/terms/isPartOf": [
+      {
+        "@id": "https://w3id.org/iprok/billing"
+      }
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://bimsaarthi.com/ontology/v0/billingPeriodEnd"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "End date of the billing period (inclusive). Measurements up to this date are included. Mandatory. Domain unspecified."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "billing period end"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#date"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/iprok/billing#rateFromAnalysis",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://purl.org/dc/terms/isPartOf": [
+      {
+        "@id": "https://w3id.org/iprok/billing"
+      }
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://bimsaarthi.com/ontology/v0/rateFromAnalysis"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "On a BOQ line: the analysis version whose rate was applied to it. No rdfs:domain."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "rate From Analysis"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/iprok/billing#mbPageRef",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://purl.org/dc/terms/isPartOf": [
+      {
+        "@id": "https://w3id.org/iprok/billing"
+      }
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://bimsaarthi.com/ontology/v0/mbPageRef"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Optional free-text reference to the physical Measurement Book page, e.g. 'Page 42, Item 7'. Written by the mobile entry form. Domain unspecified (antipattern #8)."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "MB page reference"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/iprok/billing#quantity",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://purl.org/dc/terms/isPartOf": [
+      {
+        "@id": "https://w3id.org/iprok/billing"
+      }
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://bimsaarthi.com/ontology/v0/quantity"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Final quantity for this measurement entry. If L+B+D were supplied, the server computes L×B×D and stores the result here — never the client-side calc. Direct-quantity entries store the user-entered value."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/iprok/billing#Measurement"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "quantity"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/iprok/billing#contractorSignedAt",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://purl.org/dc/terms/isPartOf": [
+      {
+        "@id": "https://w3id.org/iprok/billing"
+      }
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://bimsaarthi.com/ontology/v0/contractorSignedAt"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Timestamp of contractor OTP verification. Set when jmStatus transitions from JMPendingContractor to JMPendingDepartmental. Domain unspecified."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "contractor signed at"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#dateTime"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/iprok/billing#deviationPct",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://purl.org/dc/terms/isPartOf": [
+      {
+        "@id": "https://w3id.org/iprok/billing"
+      }
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://bimsaarthi.com/ontology/v0/deviationPct"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Deviation as a percentage of tendered quantity: (measured - tendered) / tendered × 100. Mandatory. Domain unspecified."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "deviation percentage"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/iprok/billing#BOQItem",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://purl.org/dc/terms/isPartOf": [
+      {
+        "@id": "https://w3id.org/iprok/billing"
+      }
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://bimsaarthi.com/ontology/v0/BOQItem"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "One line in the project's Bill of Quantities. Catalogue node; measurements reference it via <https://w3id.org/iprok/billing#measuredItem>."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "BOQ item"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/iprok/billing#recoveryRate",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://purl.org/dc/terms/isPartOf": [
+      {
+        "@id": "https://w3id.org/iprok/billing"
+      }
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://bimsaarthi.com/ontology/v0/recoveryRate"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Percentage rate applied to the recovery base (e.g. 0.02 for 2%). Mandatory. Domain unspecified."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "recovery rate"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/iprok/billing#preparedBy",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://purl.org/dc/terms/isPartOf": [
+      {
+        "@id": "https://w3id.org/iprok/billing"
+      }
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://bimsaarthi.com/ontology/v0/preparedBy"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Points at the <https://w3id.org/iprok#User> (PM/Admin) who prepared the bill. Mandatory. Domain unspecified (antipattern #8)."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "prepared by"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/iprok/billing#Deviation",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://purl.org/dc/terms/isPartOf": [
+      {
+        "@id": "https://w3id.org/iprok/billing"
+      }
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://bimsaarthi.com/ontology/v0/Deviation"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "A BOQ quantity deviation: measured quantity exceeds tendered quantity by >25%. Triggers approval routing before bill submission. Defined in S3.7."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Deviation"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://www.w3.org/ns/prov#Entity"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/iprok/billing#jmStatus",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://purl.org/dc/terms/isPartOf": [
+      {
+        "@id": "https://w3id.org/iprok/billing"
+      }
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://bimsaarthi.com/ontology/v0/jmStatus"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Points at one of the four <https://w3id.org/iprok/billing#JMStatus> individuals. Mandatory. Domain unspecified."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "JM status"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/iprok/billing#boqItemNo",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://purl.org/dc/terms/isPartOf": [
+      {
+        "@id": "https://w3id.org/iprok/billing"
+      }
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://bimsaarthi.com/ontology/v0/boqItemNo"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "The hierarchical item number as it appears in the BOQ, e.g. '1.1', '2.3.4'. Mandatory. Domain unspecified."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "BOQ item number"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/iprok/billing#forBill",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://purl.org/dc/terms/isPartOf": [
+      {
+        "@id": "https://w3id.org/iprok/billing"
+      }
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://bimsaarthi.com/ontology/v0/forBill"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Links a <https://w3id.org/iprok/billing#Recovery> to its parent <https://w3id.org/iprok/billing#RABill>. Mandatory. Domain unspecified (antipattern #8)."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "for bill"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/iprok/billing#recoveryAmount",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://purl.org/dc/terms/isPartOf": [
+      {
+        "@id": "https://w3id.org/iprok/billing"
+      }
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://bimsaarthi.com/ontology/v0/recoveryAmount"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Computed recovery amount in INR (rate × base amount). Mandatory. Domain unspecified."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "recovery amount"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/iprok/billing#contractorSignatory",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://purl.org/dc/terms/isPartOf": [
+      {
+        "@id": "https://w3id.org/iprok/billing"
+      }
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://bimsaarthi.com/ontology/v0/contractorSignatory"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Points at the <https://w3id.org/iprok#User> who represents the contractor. Mandatory. Domain unspecified."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "contractor signatory"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/iprok/billing#cumulativeGross",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://purl.org/dc/terms/isPartOf": [
+      {
+        "@id": "https://w3id.org/iprok/billing"
+      }
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://bimsaarthi.com/ontology/v0/cumulativeGross"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Sum of all approved measurements to period end × BOQ rates (INR). Mandatory. Domain unspecified."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "cumulative gross"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/iprok/billing#paymentDate",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://purl.org/dc/terms/isPartOf": [
+      {
+        "@id": "https://w3id.org/iprok/billing"
+      }
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://bimsaarthi.com/ontology/v0/paymentDate"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Date the payment was made (from Tally voucher DATE tag). Mandatory."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "payment date"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#date"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/iprok/billing#locationRef",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://purl.org/dc/terms/isPartOf": [
+      {
+        "@id": "https://w3id.org/iprok/billing"
+      }
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://bimsaarthi.com/ontology/v0/locationRef"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Free-text location label (e.g. 'Col C-12, Floor 2'). Distinct from <https://w3id.org/iprok/reporting#locationWkt> (GPS) and <https://w3id.org/iprok/integrated#zone> (auto-inferred from GPS)."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/iprok/billing#Measurement"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "location reference"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/iprok/billing#rejectionReason",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://purl.org/dc/terms/isPartOf": [
+      {
+        "@id": "https://w3id.org/iprok/billing"
+      }
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://bimsaarthi.com/ontology/v0/rejectionReason"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Free-text reason provided when rejecting a JointMeasurement. Domain unspecified."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "rejection reason"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/iprok/billing#measuredQty",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://purl.org/dc/terms/isPartOf": [
+      {
+        "@id": "https://w3id.org/iprok/billing"
+      }
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://bimsaarthi.com/ontology/v0/measuredQty"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Cumulative measured quantity at the time of the bill computation. Mandatory on Deviation. Domain unspecified."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "measured quantity"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/iprok/billing#billingPeriodStart",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://purl.org/dc/terms/isPartOf": [
+      {
+        "@id": "https://w3id.org/iprok/billing"
+      }
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://bimsaarthi.com/ontology/v0/billingPeriodStart"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Start date of the billing period (inclusive). Mandatory. Domain unspecified."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "billing period start"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#date"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/iprok/billing#length",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://purl.org/dc/terms/isPartOf": [
+      {
+        "@id": "https://w3id.org/iprok/billing"
+      }
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://bimsaarthi.com/ontology/v0/length"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Length in metres. Optional — direct-quantity entries skip the L×B×D fields."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/iprok/billing#Measurement"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "length"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/iprok/billing#billDate",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://purl.org/dc/terms/isPartOf": [
+      {
+        "@id": "https://w3id.org/iprok/billing"
+      }
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://bimsaarthi.com/ontology/v0/billDate"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Date the bill was prepared. Mandatory. Domain unspecified."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "bill date"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#date"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/iprok/billing#measuredItem",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://purl.org/dc/terms/isPartOf": [
+      {
+        "@id": "https://w3id.org/iprok/billing"
+      }
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://bimsaarthi.com/ontology/v0/measuredItem"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Polymorphic — links either a <https://w3id.org/iprok/billing#Measurement> or <https://w3id.org/iprok/billing#JointMeasurement> to the <https://w3id.org/iprok/billing#BOQItem> it covers. Domain intentionally left unspecified (antipattern #8): declaring rdfs:domain <https://w3id.org/iprok/billing#Measurement> would cause RDFS inference to classify every <https://w3id.org/iprok/billing#JointMeasurement> that carries this predicate as also a <https://w3id.org/iprok/billing#Measurement>, tripping MeasurementShape."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "measured item"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/iprok/billing#BOQItem"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/iprok/billing#BillState",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://purl.org/dc/terms/isPartOf": [
+      {
+        "@id": "https://w3id.org/iprok/billing"
+      }
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://bimsaarthi.com/ontology/v0/BillState"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Lifecycle state of a <https://w3id.org/iprok/billing#RABill>. Four individuals: BillDraft (initial, editable), BillSubmitted (sent for approval), BillApproved (departmental approval given), BillFinalised (payment authorised, immutable)."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Bill State"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/iprok/billing#amount",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://purl.org/dc/terms/isPartOf": [
+      {
+        "@id": "https://w3id.org/iprok/billing"
+      }
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://bimsaarthi.com/ontology/v0/amount"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Contract amount = tenderedQty × quotedRate, server-computed. Mandatory. Domain unspecified."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "amount"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/iprok/billing#jmId",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://purl.org/dc/terms/isPartOf": [
+      {
+        "@id": "https://w3id.org/iprok/billing"
+      }
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://bimsaarthi.com/ontology/v0/jmId"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Auto-numbered JM identifier, e.g. JM-0001. Mandatory. Domain unspecified."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "JM ID"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/iprok/billing#measuredBy",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://purl.org/dc/terms/description": [
+      {
+        "@language": "en",
+        "@value": "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."
+      }
+    ],
+    "http://purl.org/dc/terms/isPartOf": [
+      {
+        "@id": "https://w3id.org/iprok/billing"
+      }
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://bimsaarthi.com/ontology/v0/measuredBy"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The measured by property in the integrated project information model."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "measured by"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/iprok#User"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/iprok/billing#Measurement",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://purl.org/dc/terms/isPartOf": [
+      {
+        "@id": "https://w3id.org/iprok/billing"
+      }
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://bimsaarthi.com/ontology/v0/Measurement"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "One MB entry: dimensions or direct quantity for one BOQ item, captured by a Site Engineer / QC. Joint OTP signature is M3; V0.29 just records the measurement."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Measurement"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://www.w3.org/ns/prov#Activity"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/iprok/billing#linkedElement",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://purl.org/dc/terms/isPartOf": [
+      {
+        "@id": "https://w3id.org/iprok/billing"
+      }
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://bimsaarthi.com/ontology/v0/linkedElement"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Optional — an IFC GlobalId (GUID) the markup points at. The cross-domain join to the model."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "linked element"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/iprok/billing#jointSignatureRequired",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://purl.org/dc/terms/isPartOf": [
+      {
+        "@id": "https://w3id.org/iprok/billing"
+      }
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://bimsaarthi.com/ontology/v0/jointSignatureRequired"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Computed server-side: true when the cumulative amount for this BOQ item (sum of measurement quantities × quoted rate) exceeds the project's joint_measurement_threshold. A true flag primes the SE to get the JE/AE co-sign in S3.5. Domain unspecified (antipattern #8)."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "joint signature required"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#boolean"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/iprok/billing#Payment",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://purl.org/dc/terms/isPartOf": [
+      {
+        "@id": "https://w3id.org/iprok/billing"
+      }
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://bimsaarthi.com/ontology/v0/Payment"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "A payment made by the client against a certified RA Bill, imported from Tally ERP XML exports. Each payment corresponds to one Tally voucher."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Payment"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://www.w3.org/ns/prov#Entity"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/iprok/billing#RABill",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://purl.org/dc/terms/isPartOf": [
+      {
+        "@id": "https://w3id.org/iprok/billing"
+      }
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://bimsaarthi.com/ontology/v0/RABill"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "A Running Account Bill (RA Bill); the payment instrument in Indian government and PSU construction contracts. Aggregates all approved measurements for a billing period, applies BOQ rates, deducts previous payments and recoveries, and produces the net payable amount."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Running Account Bill"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/iprok/document#Document"
+      },
+      {
+        "@id": "http://www.w3.org/ns/prov#Entity"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/iprok/billing#rejectedBy",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://purl.org/dc/terms/isPartOf": [
+      {
+        "@id": "https://w3id.org/iprok/billing"
+      }
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://bimsaarthi.com/ontology/v0/rejectedBy"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Points at the <https://w3id.org/iprok#User> who rejected the JointMeasurement. Set when jmStatus = JMRejected. Domain unspecified."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "rejected by"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/iprok/billing#measuredAt",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://purl.org/dc/terms/description": [
+      {
+        "@language": "en",
+        "@value": "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."
+      }
+    ],
+    "http://purl.org/dc/terms/isPartOf": [
+      {
+        "@id": "https://w3id.org/iprok/billing"
+      }
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://bimsaarthi.com/ontology/v0/measuredAt"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The measured at property in the integrated project information model. Its declared domain is Measurement and its declared range is dateTime."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/iprok/billing#Measurement"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "measured at"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#dateTime"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/iprok/billing#previousBillAmount",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://purl.org/dc/terms/isPartOf": [
+      {
+        "@id": "https://w3id.org/iprok/billing"
+      }
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://bimsaarthi.com/ontology/v0/previousBillAmount"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Value of work done up to the immediately preceding RA Bill: that bill's cumulativeGross (INR), as CPWD Form 26 deducts it. NOT its netPayable — recoveries are payments made on the contractor's behalf, not unbilled work. Zero for the first bill. Mandatory. Domain unspecified."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "previous bill amount"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/iprok/billing#measurementNo",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://purl.org/dc/terms/isPartOf": [
+      {
+        "@id": "https://w3id.org/iprok/billing"
+      }
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://bimsaarthi.com/ontology/v0/measurementNo"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Sequential entry number within a single BOQ item (1, 2, 3, …). Auto-assigned server-side via SPARQL MAX(?n)+1; the mobile UI does not pick this."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/iprok/billing#Measurement"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "measurement number"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#integer"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/iprok/billing#departmentalSignedAt",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://purl.org/dc/terms/isPartOf": [
+      {
+        "@id": "https://w3id.org/iprok/billing"
+      }
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://bimsaarthi.com/ontology/v0/departmentalSignedAt"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Timestamp of departmental JE/AE OTP verification. Set when jmStatus transitions to JMComplete. Domain unspecified."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "departmental signed at"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#dateTime"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/iprok/billing#netPayable",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://purl.org/dc/terms/isPartOf": [
+      {
+        "@id": "https://w3id.org/iprok/billing"
+      }
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://bimsaarthi.com/ontology/v0/netPayable"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "currentGross minus totalRecoveries (INR). The actual payment due to the contractor. Mandatory. SHACL arithmetic invariant: netPayable = currentGross − totalRecoveries (tolerance ±₹0.01). Domain unspecified."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "net payable"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/iprok/billing#billNo",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://purl.org/dc/terms/isPartOf": [
+      {
+        "@id": "https://w3id.org/iprok/billing"
+      }
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://bimsaarthi.com/ontology/v0/billNo"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Auto-numbered RA Bill identifier (e.g. RA-1, RA-2). Mandatory. Domain unspecified."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "bill number"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/iprok/billing#totalRecoveries",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://purl.org/dc/terms/isPartOf": [
+      {
+        "@id": "https://w3id.org/iprok/billing"
+      }
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://bimsaarthi.com/ontology/v0/totalRecoveries"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Sum of all recovery deductions (TDS-IT, GST-TDS, LabourCess, SecurityDeposit, AdvanceRecovery, etc.) in INR. Mandatory. Domain unspecified."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "total recoveries"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/iprok/billing#paymentAmount",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://purl.org/dc/terms/isPartOf": [
+      {
+        "@id": "https://w3id.org/iprok/billing"
+      }
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://bimsaarthi.com/ontology/v0/paymentAmount"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "INR amount of the payment (absolute value — Tally stores as negative). Mandatory."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "payment amount"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/iprok/billing#deviationState",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://purl.org/dc/terms/isPartOf": [
+      {
+        "@id": "https://w3id.org/iprok/billing"
+      }
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://bimsaarthi.com/ontology/v0/deviationState"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Workflow state. One of: Pending | ApprovedEE | ApprovedSE | ApprovedCE | Rejected. Domain unspecified."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "deviation state"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/iprok/billing#tenderedQty",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://purl.org/dc/terms/isPartOf": [
+      {
+        "@id": "https://w3id.org/iprok/billing"
+      }
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://bimsaarthi.com/ontology/v0/tenderedQty"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Quantity the BOQ line was awarded for. Polymorphic — used by BOQItem and Deviation; rdfs:domain unspecified (antipattern #8)."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "tendered quantity"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/iprok/billing#paymentId",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://purl.org/dc/terms/isPartOf": [
+      {
+        "@id": "https://w3id.org/iprok/billing"
+      }
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://bimsaarthi.com/ontology/v0/paymentId"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Tally voucher number. Mandatory. Used as idempotency key on re-import."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "payment ID"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/iprok/billing#depth",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://purl.org/dc/terms/description": [
+      {
+        "@language": "en",
+        "@value": "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."
+      }
+    ],
+    "http://purl.org/dc/terms/isPartOf": [
+      {
+        "@id": "https://w3id.org/iprok/billing"
+      }
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://bimsaarthi.com/ontology/v0/depth"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The depth property in the integrated project information model. Its declared domain is Measurement and its declared range is decimal."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/iprok/billing#Measurement"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "depth"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/iprok/billing#description",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://purl.org/dc/terms/description": [
+      {
+        "@language": "en",
+        "@value": "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."
+      }
+    ],
+    "http://purl.org/dc/terms/isPartOf": [
+      {
+        "@id": "https://w3id.org/iprok/billing"
+      }
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://bimsaarthi.com/ontology/v0/description"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The description property in the integrated project information model."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "description"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/iprok/billing#recoveryBase",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://purl.org/dc/terms/isPartOf": [
+      {
+        "@id": "https://w3id.org/iprok/billing"
+      }
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://bimsaarthi.com/ontology/v0/recoveryBase"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "What the rate applies to: GrossAmount | LabourComponent | MaterialComponent. Domain unspecified."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "recovery base"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/iprok/billing#JMStatus",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://purl.org/dc/terms/isPartOf": [
+      {
+        "@id": "https://w3id.org/iprok/billing"
+      }
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://bimsaarthi.com/ontology/v0/JMStatus"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "State of a <https://w3id.org/iprok/billing#JointMeasurement>. Four individuals: JMPendingContractor (initial, awaiting contractor OTP), JMPendingDepartmental (contractor signed, awaiting JE/AE), JMComplete (both signed, legally binding), JMRejected (either party rejected)."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Joint Measurement Status"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/iprok/billing#recoveryType",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://purl.org/dc/terms/isPartOf": [
+      {
+        "@id": "https://w3id.org/iprok/billing"
+      }
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://bimsaarthi.com/ontology/v0/recoveryType"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Statutory deduction type. One of: TDS-IT, GST-TDS, LabourCess, SecurityDeposit, AdvanceRecovery, WaterElectricity, Royalty, Other. Domain unspecified."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "recovery type"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/iprok/billing#JointMeasurement",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://purl.org/dc/terms/isPartOf": [
+      {
+        "@id": "https://w3id.org/iprok/billing"
+      }
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://bimsaarthi.com/ontology/v0/JointMeasurement"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "A joint measurement record supporting separate contractor and departmental sign-off roles."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Joint Measurement"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://www.w3.org/ns/prov#Activity"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/iprok/billing#billState",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://purl.org/dc/terms/isPartOf": [
+      {
+        "@id": "https://w3id.org/iprok/billing"
+      }
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://bimsaarthi.com/ontology/v0/billState"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Points at one of the four <https://w3id.org/iprok/billing#BillState> individuals. Mandatory. Domain unspecified (antipattern #8)."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "bill state"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/iprok/billing#Recovery",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://purl.org/dc/terms/isPartOf": [
+      {
+        "@id": "https://w3id.org/iprok/billing"
+      }
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://bimsaarthi.com/ontology/v0/Recovery"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "A single statutory deduction line item within a <https://w3id.org/iprok/billing#RABill>. Each recovery has a type (TDS-IT, GST-TDS, LabourCess, SecurityDeposit, AdvanceRecovery, WaterElectricity, Royalty, Other), a rate (percentage), and a computed amount. Defined in S3.6."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Recovery"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://www.w3.org/ns/prov#Entity"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/iprok/billing#currentGross",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://purl.org/dc/terms/isPartOf": [
+      {
+        "@id": "https://w3id.org/iprok/billing"
+      }
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://bimsaarthi.com/ontology/v0/currentGross"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "cumulativeGross minus previousBillAmount (INR). The gross value for this billing period. Mandatory. Domain unspecified."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "current gross"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/iprok/billing#departmentalSignatory",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://purl.org/dc/terms/isPartOf": [
+      {
+        "@id": "https://w3id.org/iprok/billing"
+      }
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://bimsaarthi.com/ontology/v0/departmentalSignatory"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Points at the <https://w3id.org/iprok#User> (JE/AE) who counter-signs on behalf of the department. Mandatory. Domain unspecified."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "departmental signatory"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/iprok/billing#isStarRate",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://purl.org/dc/terms/isPartOf": [
+      {
+        "@id": "https://w3id.org/iprok/billing"
+      }
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://bimsaarthi.com/ontology/v0/isStarRate"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "True when this BOQ item has no SOR match (star-rate / DSR-deviation item). Mandatory. Domain unspecified."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "is star rate"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#boolean"
+      }
+    ]
+  }
+]

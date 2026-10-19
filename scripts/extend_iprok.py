@@ -97,8 +97,8 @@ for s,p,o in list(new):
  if isinstance(o,Literal) and p in [RDFS.comment,RDFS.label]:
   text=str(o).replace('NIYOJ','project information interface').replace('Niyoj','project information interface').replace('BIMSaarthi','IproK framework')
   if text!=str(o):new.remove((s,p,o));new.add((s,p,Literal(text,lang=o.language,datatype=o.datatype)))
-root=URIRef(IP);version=URIRef(IP+'/0.2.0')
-for triple in [(root,RDF.type,OWL.Ontology),(root,DCT.title,Literal('Integrated Project Knowledge (IproK) ontology: expanded project-control schema',lang='en')),(root,OWL.versionIRI,version),(root,OWL.versionInfo,Literal('0.2.0-draft')),(root,DCT.created,Literal('2026-10-19',datatype=XSD.date)),(root,DCT.creator,Literal('Venkatesh Kone')),(root,DCT.contributor,Literal('Prof. Gangadhar Mahesh')),(root,DCT.license,URIRef('https://creativecommons.org/licenses/by/4.0/')),(root,DCT.description,Literal('Proposed expansion of the published IproK ontology using retained platform schema declarations. Original identifiers are preserved. Schema validation is dated engineering verification, not historical thesis evidence.',lang='en')),(root,DCT.source,URIRef('https://github.com/konevenkatesh/IprokDoc/tree/ee4cf206af08a47db3363fa4404ac51cce1868de')),(root,VANN.preferredNamespacePrefix,Literal('iprok')),(root,VANN.preferredNamespaceUri,Literal(IP+'#'))]:new.add(triple)
+root=URIRef(IP);version=URIRef(IP+'/draft/0.2.0')
+for triple in [(root,RDF.type,OWL.Ontology),(root,DCT.title,Literal('Integrated Project Knowledge (IproK) ontology: expanded project-control schema',lang='en')),(root,OWL.versionIRI,version),(root,OWL.versionInfo,Literal('0.2.0-draft')),(root,DCT.created,Literal('2026-10-19',datatype=XSD.date)),(root,DCT.creator,Literal('Venkatesh Kone')),(root,DCT.contributor,Literal('Prof. Gangadhar Mahesh')),(root,DCT.license,URIRef('https://creativecommons.org/licenses/by/4.0/')),(root,DCT.description,Literal('Proposed expansion of the published IproK ontology using retained platform schema declarations. Historical sources are preserved; expanded identifiers are explicitly migrated to the registered lowercase namespace. Schema validation is dated engineering verification, not historical thesis evidence.',lang='en')),(root,DCT.source,URIRef('https://github.com/konevenkatesh/IprokDoc/tree/ee4cf206af08a47db3363fa4404ac51cce1868de')),(root,VANN.preferredNamespacePrefix,Literal('iprok')),(root,VANN.preferredNamespaceUri,Literal(IP+'#'))]:new.add(triple)
 for imp in [URIRef('http://www.w3.org/ns/prov'),URIRef('http://www.w3.org/2006/time'),URIRef('http://www.opengis.net/ont/geosparql')]:new.add((root,OWL.imports,imp))
 # Correct containment modelled as inheritance; existing object properties retain containment.
 corrected_hierarchy=[('Task','WBS_Element'),('WorkPackage','WBS_Element'),('WBS_Element','Project')]
@@ -117,7 +117,7 @@ contract_path=OUT/'relationship-contract.json'
 proposed_relations=json.loads(contract_path.read_text())['relations'] if contract_path.exists() else []
 relation_shapes={}
 for relation in proposed_relations:
- prop=URIRef(relation['property']);domain=URIRef(relation['source']);range_=URIRef(relation['target'])
+ prop=URIRef(relation['property'].replace('https://w3id.org/iprok',IP));domain=URIRef(relation['source'].replace('https://w3id.org/iprok',IP));range_=URIRef(relation['target'].replace('https://w3id.org/iprok',IP))
  assert not list(new.predicate_objects(prop)), 'New integration predicate collides with an existing declaration: '+str(prop)
  assert (domain,RDF.type,OWL.Class) in new and (range_,RDF.type,OWL.Class) in new
  for t in [(prop,RDF.type,OWL.ObjectProperty),(prop,RDFS.domain,domain),(prop,RDFS.range,range_),(prop,RDFS.label,Literal(re.sub(r'(?<=[a-z])(?=[A-Z])',' ',relation['label']),lang='en')),(prop,RDFS.comment,Literal(relation['definition'],lang='en')),(prop,DCT.description,Literal(relation['status']+'. '+relation['basis'],lang='en')),(prop,DCT.created,Literal('2026-10-19',datatype=XSD.date)),(prop,RDFS.isDefinedBy,version),(prop,DCT.isPartOf,URIRef(IP+'/integrated'))]:new.add(t)
@@ -126,9 +126,30 @@ for relation in proposed_relations:
   shape=URIRef(IP+'/shapes#Integration'+str(domain).rsplit('#',1)[-1]+'Shape');relation_shapes[domain]=shape
   newsh.add((shape,RDF.type,SH.NodeShape));newsh.add((shape,SH.targetClass,domain))
  shape=relation_shapes[domain];ps=BNode();newsh.add((shape,SH.property,ps));newsh.add((ps,SH.path,prop));newsh.add((ps,SH.nodeKind,SH.IRI));newsh.add((ps,SH['class'],range_));newsh.add((ps,SH.message,Literal('Proposed integration link must reference an IRI typed as '+str(range_).rsplit('#',1)[-1]+'.',lang='en')))
+# Canonical publication namespace: identifiers are case-sensitive. Preserve archival sources,
+# but migrate this expanded draft consistently to the existing lowercase w3id identifier.
+LEGACY_IP=IP
+CANONICAL_IP='https://w3id.org/iprok'
+def canonical(value):
+ if isinstance(value,URIRef) and (str(value)==LEGACY_IP or str(value).startswith((LEGACY_IP+'#',LEGACY_IP+'/'))):return URIRef(CANONICAL_IP+str(value)[len(LEGACY_IP):])
+ if isinstance(value,Literal) and LEGACY_IP in str(value):return Literal(str(value).replace(LEGACY_IP,CANONICAL_IP),lang=value.language,datatype=value.datatype)
+ return value
+namespace_iris=sorted({str(x) for graph in [new,newsh,base] for triple in graph for x in triple if isinstance(x,URIRef) and (str(x)==LEGACY_IP or str(x).startswith((LEGACY_IP+'#',LEGACY_IP+'/')))})
+namespace_mappings=[{'previous':old,'canonical':str(canonical(URIRef(old)))} for old in namespace_iris]
+namespace_mappings.append({'previous':LEGACY_IP+'/0.2.0','canonical':CANONICAL_IP+'/draft/0.2.0'})
+(OUT/'namespace-migration.json').write_text(json.dumps({'authorisedOn':'2026-10-19','previousNamespace':LEGACY_IP,'canonicalNamespace':CANONICAL_IP,'status':'Explicit identifier migration, not an owl:equivalentClass/equivalentProperty assertion','originalSourceFiles':'Published 0.1.0 and Niyoj source snapshots remain byte-preserved; thesis historical quotations retain their original identifiers.','identifiers':namespace_mappings},indent=2)+'\n')
+for graph in [new,newsh]:
+ converted=Graph()
+ for triple in graph:converted.add(tuple(canonical(x) for x in triple))
+ graph.remove((None,None,None));graph+=converted
+IP=CANONICAL_IP
+mapping={old:str(canonical(URIRef(destination))) for old,destination in mapping.items()}
+normalised_base=Graph()
+for triple in base:normalised_base.add(tuple(canonical(x) for x in triple))
 for graph in [new,newsh]:
  graph.bind('iprok',IP+'#');graph.bind('schedule',IP+'/schedule#');graph.bind('resource',IP+'/resource#');graph.bind('cost',IP+'/cost#');graph.bind('integrated',IP+'/integrated#');graph.bind('sh',SH);graph.bind('dct',DCT)
 new.serialize(OUT/'ontology.ttl',format='turtle');new.serialize(OUT/'ontology.owl',format='xml');new.serialize(OUT/'ontology.jsonld',format='json-ld');new.serialize(OUT/'ontology.nt',format='nt');newsh.serialize(OUT/'shapes.ttl',format='turtle')
+for suffix,fmt in [('owl','xml'),('jsonld','json-ld'),('nt','nt')]:newsh.serialize(OUT/('shapes.'+suffix),format=fmt)
 # Partition the integrated graph by subject namespace; blank-node expressions follow their subject.
 modules_dir=OUT/'modules';modules_dir.mkdir(exist_ok=True)
 module_stats=[]
@@ -141,8 +162,10 @@ for prefix in sorted({str(s).split('#')[0] for s in new.subjects() if isinstance
   for p,o in new.predicate_objects(s):
    subset.add((s,p,o))
    if isinstance(o,BNode):queue.append(o)
- name=prefix.rsplit('/',1)[-1] if prefix!=IP else 'core';subset.serialize(modules_dir/(name+'.ttl'),format='turtle');module_stats.append({'module':name,'namespace':prefix+'#','triples':len(subset),'classes':len(set(subset.subjects(RDF.type,OWL.Class)))})
+ name=prefix.rsplit('/',1)[-1] if prefix!=IP else 'core';subset.serialize(modules_dir/(name+'.ttl'),format='turtle')
+ for suffix,fmt in [('owl','xml'),('jsonld','json-ld'),('nt','nt')]:subset.serialize(modules_dir/(name+'.'+suffix),format=fmt)
+ module_stats.append({'module':name,'namespace':prefix+'#','triples':len(subset),'classes':len(set(subset.subjects(RDF.type,OWL.Class)))})
 records=[{'source':old,'iprok':mapping[old],'owner':ownership[old],'basis':reasons[old]} for old in sorted(mapping)]
-(OUT/'mapping.json').write_text(json.dumps({'status':'Proposed namespace migration, not an owl:equivalentClass/equivalentProperty alignment','sourceCommit':'59bb8c2ae61228cd21778cc6beae523331f4529a','rules':['Published IproK identifiers preserved','Project deliberately reused','Activity added as a subclass of published Task','WorkConstraint kept distinct and added as a subclass of generic Constraint','No new property domains inferred from usage or SHACL','Source SPARQL IRIs rewritten consistently with the explicit map','Corrected Task/WorkPackage/WBS containment-as-subclass assertions to IproKThing; containment remains expressed by object properties'],'terms':records},indent=2)+'\n')
-summary={'status':'0.2.0-draft; proposed expansion created 19 October 2026','triples':len(new),'classes':len(set(new.subjects(RDF.type,OWL.Class))),'objectProperties':len(set(new.subjects(RDF.type,OWL.ObjectProperty))),'dataProperties':len(set(new.subjects(RDF.type,OWL.DatatypeProperty))),'proposedTypedLinks':len(proposed_relations),'integrationShapes':len(relation_shapes),'shapeTriples':len(newsh),'mappedIdentifiers':len(mapping),'modules':module_stats,'preservedPublishedAssertions':sum(1 for t in base if t[0]!=URIRef(IP) and t in new),'correctedHierarchy':[{'removed':f'schedule:{a} rdfs:subClassOf schedule:{b}','added':f'schedule:{a} rdfs:subClassOf iprok:IproKThing'} for a,b in corrected_hierarchy],'newCompatibilityAxioms':['schedule:Activity rdfs:subClassOf schedule:Task','schedule:WorkConstraint rdfs:subClassOf iprok:Constraint'],'files':{f.name:hashlib.sha256(f.read_bytes()).hexdigest() for f in OUT.iterdir() if f.is_file() and f.name!='release.json'}}
+(OUT/'mapping.json').write_text(json.dumps({'status':'Proposed namespace migration, not an owl:equivalentClass/equivalentProperty alignment','sourceCommit':'59bb8c2ae61228cd21778cc6beae523331f4529a','rules':['Original published files preserved; expanded identifiers normalised to lowercase https://w3id.org/iprok with namespace-migration.json','Project deliberately reused','Activity added as a subclass of published Task','WorkConstraint kept distinct and added as a subclass of generic Constraint','No new property domains inferred from usage or SHACL','Source SPARQL IRIs rewritten consistently with the explicit map','Corrected Task/WorkPackage/WBS containment-as-subclass assertions to IproKThing; containment remains expressed by object properties'],'terms':records},indent=2)+'\n')
+summary={'status':'0.2.0-draft; proposed expansion created 19 October 2026','triples':len(new),'classes':len(set(new.subjects(RDF.type,OWL.Class))),'objectProperties':len(set(new.subjects(RDF.type,OWL.ObjectProperty))),'dataProperties':len(set(new.subjects(RDF.type,OWL.DatatypeProperty))),'proposedTypedLinks':len(proposed_relations),'integrationShapes':len(relation_shapes),'shapeTriples':len(newsh),'mappedIdentifiers':len(mapping),'modules':module_stats,'normalisedPublishedAssertionsRetained':sum(1 for t in normalised_base if t[0]!=URIRef(IP) and t in new),'canonicalNamespace':IP,'versionIRI':IP+'/draft/0.2.0','namespaceMigrationIdentifiers':len(namespace_mappings),'correctedHierarchy':[{'removed':f'schedule:{a} rdfs:subClassOf schedule:{b}','added':f'schedule:{a} rdfs:subClassOf iprok:IproKThing'} for a,b in corrected_hierarchy],'newCompatibilityAxioms':['schedule:Activity rdfs:subClassOf schedule:Task','schedule:WorkConstraint rdfs:subClassOf iprok:Constraint'],'files':{f.name:hashlib.sha256(f.read_bytes()).hexdigest() for f in OUT.iterdir() if f.is_file() and f.name!='release.json'}}
 (OUT/'release.json').write_text(json.dumps(summary,indent=2)+'\n');print(json.dumps({k:v for k,v in summary.items() if k not in ['files','modules']},indent=2))

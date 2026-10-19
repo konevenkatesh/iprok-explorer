@@ -4,126 +4,126 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://w3id.org/IproK/reporting#SavedQuery> a owl:Class ;
+<https://w3id.org/iprok/reporting#SavedQuery> a owl:Class ;
     rdfs:label "Saved SPARQL query (dashboard widget)" ;
-    dcterms:isPartOf <https://w3id.org/IproK/reporting> ;
+    dcterms:isPartOf <https://w3id.org/iprok/reporting> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/SavedQuery> ;
     rdfs:comment "A persisted, named SPARQL query attached to a project. Renders as a dashboard widget per its visualType." ;
     rdfs:subClassOf prov:Entity .
 
-<https://w3id.org/IproK/reporting#clientId> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/reporting#clientId> a owl:DatatypeProperty ;
     rdfs:label "client id (idempotency key)" ;
-    dcterms:isPartOf <https://w3id.org/IproK/reporting> ;
+    dcterms:isPartOf <https://w3id.org/iprok/reporting> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/clientId> ;
     rdfs:comment "UUID assigned by the submitting client. Server treats repeated values within the same project graph as the same submission." ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK/reporting#createdBy> a owl:ObjectProperty ;
+<https://w3id.org/iprok/reporting#createdBy> a owl:ObjectProperty ;
     rdfs:label "created by" ;
-    dcterms:isPartOf <https://w3id.org/IproK/reporting> ;
+    dcterms:isPartOf <https://w3id.org/iprok/reporting> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/createdBy> ;
-    rdfs:comment "User who authored a graph node (S4.6: <https://w3id.org/IproK/reporting#SavedQuery>). Domain unspecified (antipattern #8)." .
+    rdfs:comment "User who authored a graph node (S4.6: <https://w3id.org/iprok/reporting#SavedQuery>). Domain unspecified (antipattern #8)." .
 
-<https://w3id.org/IproK/reporting#displayOrder> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/reporting#displayOrder> a owl:DatatypeProperty ;
     rdfs:label "display order on the dashboard" ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/reporting> ;
+    dcterms:isPartOf <https://w3id.org/iprok/reporting> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/displayOrder> ;
     rdfs:comment "The display order property in the integrated project information model."@en ;
     rdfs:range xsd:integer .
 
-<https://w3id.org/IproK/reporting#isPinned> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/reporting#isPinned> a owl:DatatypeProperty ;
     rdfs:label "pinned to project home?" ;
-    dcterms:isPartOf <https://w3id.org/IproK/reporting> ;
+    dcterms:isPartOf <https://w3id.org/iprok/reporting> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/isPinned> ;
     rdfs:comment "Pinned widgets appear on the project home below the V0.23 SummaryBar." ;
     rdfs:range xsd:boolean .
 
-<https://w3id.org/IproK/reporting#locationWkt> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/reporting#locationWkt> a owl:DatatypeProperty ;
     rdfs:label "location (WKT)" ;
-    dcterms:isPartOf <https://w3id.org/IproK/reporting> ;
+    dcterms:isPartOf <https://w3id.org/iprok/reporting> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/locationWkt> ;
     rdfs:comment "Inline WKT POINT(lng lat) literal. Used on DPREntry and Photo." ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK/reporting#photoUri> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/reporting#photoUri> a owl:DatatypeProperty ;
     rdfs:label "photo URI" ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/reporting> ;
+    dcterms:isPartOf <https://w3id.org/iprok/reporting> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/photoUri> ;
     rdfs:comment "The photo uri property in the integrated project information model. Its declared domain is Photo and its declared range is anyURI."@en ;
-    rdfs:domain <https://w3id.org/IproK/reporting#Photo> ;
+    rdfs:domain <https://w3id.org/iprok/reporting#Photo> ;
     rdfs:range xsd:anyURI .
 
-<https://w3id.org/IproK/reporting#queryName> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/reporting#queryName> a owl:DatatypeProperty ;
     rdfs:label "query name" ;
-    dcterms:isPartOf <https://w3id.org/IproK/reporting> ;
+    dcterms:isPartOf <https://w3id.org/iprok/reporting> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/queryName> ;
     rdfs:comment "Display title for the dashboard widget. Unique per project — enforced in the route layer." ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK/reporting#queryRole> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/reporting#queryRole> a owl:DatatypeProperty ;
     rdfs:label "minimum role to view this widget" ;
-    dcterms:isPartOf <https://w3id.org/IproK/reporting> ;
+    dcterms:isPartOf <https://w3id.org/iprok/reporting> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/queryRole> ;
     rdfs:comment "One of Any / PM / Director / Auditor. Enforced in the route layer with a role-rank comparison." ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK/reporting#reportedAgainst> a owl:ObjectProperty ;
+<https://w3id.org/iprok/reporting#reportedAgainst> a owl:ObjectProperty ;
     rdfs:label "reported against" ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/reporting> ;
+    dcterms:isPartOf <https://w3id.org/iprok/reporting> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/reportedAgainst> ;
     rdfs:comment "The reported against property in the integrated project information model. Its declared domain is DPREntry and its declared range is Activity."@en ;
-    rdfs:domain <https://w3id.org/IproK/reporting#DPREntry> ;
-    rdfs:range <https://w3id.org/IproK/schedule#Activity> .
+    rdfs:domain <https://w3id.org/iprok/reporting#DPREntry> ;
+    rdfs:range <https://w3id.org/iprok/schedule#Activity> .
 
-<https://w3id.org/IproK/reporting#reportedQuantity> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/reporting#reportedQuantity> a owl:DatatypeProperty ;
     rdfs:label "reported quantity" ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/reporting> ;
+    dcterms:isPartOf <https://w3id.org/iprok/reporting> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/reportedQuantity> ;
     rdfs:comment "The reported quantity property in the integrated project information model. Its declared domain is DPREntry and its declared range is decimal."@en ;
-    rdfs:domain <https://w3id.org/IproK/reporting#DPREntry> ;
+    rdfs:domain <https://w3id.org/iprok/reporting#DPREntry> ;
     rdfs:range xsd:decimal .
 
-<https://w3id.org/IproK/reporting#sparqlText> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/reporting#sparqlText> a owl:DatatypeProperty ;
     rdfs:label "SPARQL source text" ;
-    dcterms:isPartOf <https://w3id.org/IproK/reporting> ;
+    dcterms:isPartOf <https://w3id.org/iprok/reporting> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/sparqlText> ;
-    rdfs:comment "Raw SPARQL as the user saved it (before the firewall rewrite). Mandatory on <https://w3id.org/IproK/reporting#SavedQuery>." ;
+    rdfs:comment "Raw SPARQL as the user saved it (before the firewall rewrite). Mandatory on <https://w3id.org/iprok/reporting#SavedQuery>." ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK/reporting#visualType> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/reporting#visualType> a owl:DatatypeProperty ;
     rdfs:label "visualisation type" ;
-    dcterms:isPartOf <https://w3id.org/IproK/reporting> ;
+    dcterms:isPartOf <https://w3id.org/iprok/reporting> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/visualType> ;
     rdfs:comment "One of table / number / bar / line / pie. Drives client-side rendering." ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK/reporting#weatherCondition> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/reporting#weatherCondition> a owl:DatatypeProperty ;
     rdfs:label "weather Condition"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/reporting> ;
+    dcterms:isPartOf <https://w3id.org/iprok/reporting> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/weatherCondition> ;
     rdfs:comment "The weather on site for this report: Fair | Cloudy | LightRain | HeavyRain | Waterlogged | ExtremeHeat | HighWind. Polymorphic — antipattern #8." ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK/reporting#weatherHoursLost> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/reporting#weatherHoursLost> a owl:DatatypeProperty ;
     rdfs:label "weather Hours Lost"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/reporting> ;
+    dcterms:isPartOf <https://w3id.org/iprok/reporting> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/weatherHoursLost> ;
     rdfs:comment "Working hours of this work lost to the weather that day (0–12). Needs a weatherCondition. Polymorphic — antipattern #8." ;
     rdfs:range xsd:decimal .
 
-<https://w3id.org/IproK/reporting#Photo> a owl:Class ;
+<https://w3id.org/iprok/reporting#Photo> a owl:Class ;
     rdfs:label "Photo" ;
-    dcterms:isPartOf <https://w3id.org/IproK/reporting> ;
+    dcterms:isPartOf <https://w3id.org/iprok/reporting> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/Photo> ;
     rdfs:comment "A geo-tagged site photo, stored in MinIO and linked to the entity it documents." .
 
-<https://w3id.org/IproK/reporting#DPREntry> a owl:Class ;
+<https://w3id.org/iprok/reporting#DPREntry> a owl:Class ;
     rdfs:label "Daily Progress Report Entry" ;
-    dcterms:isPartOf <https://w3id.org/IproK/reporting> ;
+    dcterms:isPartOf <https://w3id.org/iprok/reporting> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/DPREntry> ;
     rdfs:comment "A single field-reported progress entry against an Activity." ;
     rdfs:subClassOf prov:Activity .

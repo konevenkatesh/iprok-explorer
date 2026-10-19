@@ -1,0 +1,107 @@
+<https://w3id.org/iprok/reporting#reportedQuantity> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/iprok/reporting#DPREntry> .
+<https://w3id.org/iprok/reporting#clientId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/reporting#displayOrder> <http://www.w3.org/2000/01/rdf-schema#comment> "The display order property in the integrated project information model."@en .
+<https://w3id.org/iprok/reporting#isPinned> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<https://w3id.org/iprok/reporting#photoUri> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/photoUri> .
+<https://w3id.org/iprok/reporting#clientId> <http://www.w3.org/2000/01/rdf-schema#comment> "UUID assigned by the submitting client. Server treats repeated values within the same project graph as the same submission." .
+<https://w3id.org/iprok/reporting#queryRole> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/reporting> .
+<https://w3id.org/iprok/reporting#photoUri> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/reporting#locationWkt> <http://www.w3.org/2000/01/rdf-schema#comment> "Inline WKT POINT(lng lat) literal. Used on DPREntry and Photo." .
+<https://w3id.org/iprok/reporting#reportedAgainst> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/reportedAgainst> .
+<https://w3id.org/iprok/reporting#SavedQuery> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/SavedQuery> .
+<https://w3id.org/iprok/reporting#reportedQuantity> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/reporting> .
+<https://w3id.org/iprok/reporting#reportedQuantity> <http://www.w3.org/2000/01/rdf-schema#comment> "The reported quantity property in the integrated project information model. Its declared domain is DPREntry and its declared range is decimal."@en .
+<https://w3id.org/iprok/reporting#reportedQuantity> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/iprok/reporting#createdBy> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/reporting> .
+<https://w3id.org/iprok/reporting#isPinned> <http://www.w3.org/2000/01/rdf-schema#comment> "Pinned widgets appear on the project home below the V0.23 SummaryBar." .
+<https://w3id.org/iprok/reporting#displayOrder> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/reporting> .
+<https://w3id.org/iprok/reporting#isPinned> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/reporting#queryName> <http://www.w3.org/2000/01/rdf-schema#comment> "Display title for the dashboard widget. Unique per project — enforced in the route layer." .
+<https://w3id.org/iprok/reporting#queryRole> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/queryRole> .
+<https://w3id.org/iprok/reporting#sparqlText> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/reporting#DPREntry> <http://www.w3.org/2000/01/rdf-schema#label> "Daily Progress Report Entry" .
+<https://w3id.org/iprok/reporting#clientId> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/clientId> .
+<https://w3id.org/iprok/reporting#createdBy> <http://www.w3.org/2000/01/rdf-schema#label> "created by" .
+<https://w3id.org/iprok/reporting#DPREntry> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Activity> .
+<https://w3id.org/iprok/reporting#sparqlText> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/sparqlText> .
+<https://w3id.org/iprok/reporting#queryName> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/queryName> .
+<https://w3id.org/iprok/reporting#reportedQuantity> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/reporting#weatherHoursLost> <http://www.w3.org/2000/01/rdf-schema#comment> "Working hours of this work lost to the weather that day (0–12). Needs a weatherCondition. Polymorphic — antipattern #8." .
+<https://w3id.org/iprok/reporting#queryRole> <http://www.w3.org/2000/01/rdf-schema#label> "minimum role to view this widget" .
+<https://w3id.org/iprok/reporting#reportedAgainst> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/iprok/reporting#locationWkt> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/reporting#visualType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/reporting#DPREntry> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/DPREntry> .
+<https://w3id.org/iprok/reporting#displayOrder> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/reporting#weatherHoursLost> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/weatherHoursLost> .
+<https://w3id.org/iprok/reporting#weatherHoursLost> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/reporting> .
+<https://w3id.org/iprok/reporting#weatherHoursLost> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/iprok/reporting#sparqlText> <http://www.w3.org/2000/01/rdf-schema#label> "SPARQL source text" .
+<https://w3id.org/iprok/reporting#reportedAgainst> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/iprok/schedule#Activity> .
+<https://w3id.org/iprok/reporting#Photo> <http://www.w3.org/2000/01/rdf-schema#label> "Photo" .
+<https://w3id.org/iprok/reporting#reportedQuantity> <http://www.w3.org/2000/01/rdf-schema#label> "reported quantity" .
+<https://w3id.org/iprok/reporting#weatherHoursLost> <http://www.w3.org/2000/01/rdf-schema#label> "weather Hours Lost"@en .
+<https://w3id.org/iprok/reporting#photoUri> <http://www.w3.org/2000/01/rdf-schema#comment> "The photo uri property in the integrated project information model. Its declared domain is Photo and its declared range is anyURI."@en .
+<https://w3id.org/iprok/reporting#locationWkt> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/locationWkt> .
+<https://w3id.org/iprok/reporting#reportedAgainst> <http://www.w3.org/2000/01/rdf-schema#comment> "The reported against property in the integrated project information model. Its declared domain is DPREntry and its declared range is Activity."@en .
+<https://w3id.org/iprok/reporting#isPinned> <http://www.w3.org/2000/01/rdf-schema#label> "pinned to project home?" .
+<https://w3id.org/iprok/reporting#locationWkt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/reporting#photoUri> <http://www.w3.org/2000/01/rdf-schema#label> "photo URI" .
+<https://w3id.org/iprok/reporting#isPinned> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/reporting> .
+<https://w3id.org/iprok/reporting#photoUri> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/iprok/reporting#Photo> .
+<https://w3id.org/iprok/reporting#queryRole> <http://www.w3.org/2000/01/rdf-schema#comment> "One of Any / PM / Director / Auditor. Enforced in the route layer with a role-rank comparison." .
+<https://w3id.org/iprok/reporting#queryName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/reporting#sparqlText> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/reporting> .
+<https://w3id.org/iprok/reporting#weatherCondition> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/weatherCondition> .
+<https://w3id.org/iprok/reporting#visualType> <http://www.w3.org/2000/01/rdf-schema#comment> "One of table / number / bar / line / pie. Drives client-side rendering." .
+<https://w3id.org/iprok/reporting#visualType> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/visualType> .
+<https://w3id.org/iprok/reporting#locationWkt> <http://www.w3.org/2000/01/rdf-schema#label> "location (WKT)" .
+<https://w3id.org/iprok/reporting#Photo> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/Photo> .
+<https://w3id.org/iprok/reporting#SavedQuery> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/reporting> .
+<https://w3id.org/iprok/reporting#DPREntry> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/reporting> .
+<https://w3id.org/iprok/reporting#Photo> <http://www.w3.org/2000/01/rdf-schema#comment> "A geo-tagged site photo, stored in MinIO and linked to the entity it documents." .
+<https://w3id.org/iprok/reporting#clientId> <http://www.w3.org/2000/01/rdf-schema#label> "client id (idempotency key)" .
+<https://w3id.org/iprok/reporting#sparqlText> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/reporting#displayOrder> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<https://w3id.org/iprok/reporting#visualType> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/reporting> .
+<https://w3id.org/iprok/reporting#photoUri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/reporting#queryName> <http://www.w3.org/2000/01/rdf-schema#label> "query name" .
+<https://w3id.org/iprok/reporting#clientId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/reporting#queryRole> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/reporting#reportedAgainst> <http://www.w3.org/2000/01/rdf-schema#label> "reported against" .
+<https://w3id.org/iprok/reporting#SavedQuery> <http://www.w3.org/2000/01/rdf-schema#comment> "A persisted, named SPARQL query attached to a project. Renders as a dashboard widget per its visualType." .
+<https://w3id.org/iprok/reporting#reportedAgainst> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/iprok/reporting#DPREntry> .
+<https://w3id.org/iprok/reporting#weatherCondition> <http://www.w3.org/2000/01/rdf-schema#comment> "The weather on site for this report: Fair | Cloudy | LightRain | HeavyRain | Waterlogged | ExtremeHeat | HighWind. Polymorphic — antipattern #8." .
+<https://w3id.org/iprok/reporting#reportedQuantity> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/reportedQuantity> .
+<https://w3id.org/iprok/reporting#createdBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/iprok/reporting#SavedQuery> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Entity> .
+<https://w3id.org/iprok/reporting#reportedAgainst> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/reporting> .
+<https://w3id.org/iprok/reporting#visualType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/reporting#locationWkt> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/reporting> .
+<https://w3id.org/iprok/reporting#queryRole> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/reporting#queryName> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/reporting> .
+<https://w3id.org/iprok/reporting#weatherCondition> <http://www.w3.org/2000/01/rdf-schema#label> "weather Condition"@en .
+<https://w3id.org/iprok/reporting#reportedQuantity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/reporting#createdBy> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/createdBy> .
+<https://w3id.org/iprok/reporting#Photo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iprok/reporting#weatherCondition> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/reporting> .
+<https://w3id.org/iprok/reporting#displayOrder> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/reporting#isPinned> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/isPinned> .
+<https://w3id.org/iprok/reporting#SavedQuery> <http://www.w3.org/2000/01/rdf-schema#label> "Saved SPARQL query (dashboard widget)" .
+<https://w3id.org/iprok/reporting#reportedAgainst> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/reporting#SavedQuery> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iprok/reporting#DPREntry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iprok/reporting#DPREntry> <http://www.w3.org/2000/01/rdf-schema#comment> "A single field-reported progress entry against an Activity." .
+<https://w3id.org/iprok/reporting#photoUri> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/reporting> .
+<https://w3id.org/iprok/reporting#weatherCondition> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/reporting#displayOrder> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/displayOrder> .
+<https://w3id.org/iprok/reporting#queryName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/reporting#displayOrder> <http://www.w3.org/2000/01/rdf-schema#label> "display order on the dashboard" .
+<https://w3id.org/iprok/reporting#Photo> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/reporting> .
+<https://w3id.org/iprok/reporting#sparqlText> <http://www.w3.org/2000/01/rdf-schema#comment> "Raw SPARQL as the user saved it (before the firewall rewrite). Mandatory on <https://w3id.org/iprok/reporting#SavedQuery>." .
+<https://w3id.org/iprok/reporting#clientId> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/reporting> .
+<https://w3id.org/iprok/reporting#weatherCondition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/reporting#photoUri> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+<https://w3id.org/iprok/reporting#weatherHoursLost> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/reporting#createdBy> <http://www.w3.org/2000/01/rdf-schema#comment> "User who authored a graph node (S4.6: <https://w3id.org/iprok/reporting#SavedQuery>). Domain unspecified (antipattern #8)." .
+<https://w3id.org/iprok/reporting#visualType> <http://www.w3.org/2000/01/rdf-schema#label> "visualisation type" .

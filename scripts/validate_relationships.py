@@ -8,7 +8,7 @@ from collections import defaultdict
 from rdflib import Graph,URIRef,BNode,Literal,RDF,RDFS,OWL,Namespace
 from rdflib.plugins.sparql.parser import parseQuery
 from pyshacl import validate
-R=Path(__file__).resolve().parents[1];P=R/'schema/iprok-0.2.0';SH=Namespace('http://www.w3.org/ns/shacl#');IP='https://w3id.org/IproK'
+R=Path(__file__).resolve().parents[1];P=R/'schema/iprok-0.2.0';SH=Namespace('http://www.w3.org/ns/shacl#');IP='https://w3id.org/iprok'
 contract=json.loads((P/'relationship-contract.json').read_text())['relations'];full=Graph().parse(P/'shapes.ttl');schema=Graph().parse(P/'ontology.ttl');shapes=Graph()
 # Isolate the new integration shapes so examples do not impersonate complete project records.
 for node in full.subjects(RDF.type,SH.NodeShape):

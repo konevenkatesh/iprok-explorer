@@ -1,0 +1,425 @@
+<https://w3id.org/iprok/cost#actualCostAmount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/iprok/cost#importedEdition> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/cost> .
+<https://w3id.org/iprok/cost#remainingCostAmount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/cost#analysedQuantity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/cost#CostType> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/cost#analysisVersion> <http://www.w3.org/2000/01/rdf-schema#comment> "Version number of an analysis, from 1. No rdfs:domain." .
+<https://w3id.org/iprok/cost#importedReviewState> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/cost#ResourceMapping> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/cost> .
+<https://w3id.org/iprok/cost#basicRate> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/cost> .
+<https://w3id.org/iprok/cost#ProjectResourcePrice> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/ProjectResourcePrice> .
+<https://w3id.org/iprok/cost#LaborCost> <http://www.w3.org/2000/01/rdf-schema#label> "LaborCost" .
+<https://w3id.org/iprok/cost#excludesGroup> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/excludesGroup> .
+<https://w3id.org/iprok/cost#maintainabilityRating> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/cost#lineKind> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/lineKind> .
+<https://w3id.org/iprok/cost#analysisNote> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/cost> .
+<https://w3id.org/iprok/cost#RateAnalysis> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/RateAnalysis> .
+<https://w3id.org/iprok/cost#analysisSource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/cost#CostCategory> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/cost#priceAsOf> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/cost> .
+<https://w3id.org/iprok/cost#analysisNote> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/analysisNote> .
+<https://w3id.org/iprok/cost#inAnalysis> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/inAnalysis> .
+<https://w3id.org/iprok/cost#actualCostAmount> <http://www.w3.org/2000/01/rdf-schema#comment> "this is actual cost amount" .
+<https://w3id.org/iprok/cost#lineKind> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/cost#CostType> <http://www.w3.org/2000/01/rdf-schema#label> "CostType" .
+<https://w3id.org/iprok/cost#RateAnalysis> <http://www.w3.org/2000/01/rdf-schema#label> "Rate Analysis"@en .
+<https://w3id.org/iprok/cost#sourceCitation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/cost#rateSource> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/rateSource> .
+<https://w3id.org/iprok/cost#optionTitle> <http://www.w3.org/2000/01/rdf-schema#comment> "The option title property in the integrated project information model."@en .
+<https://w3id.org/iprok/cost#additionLabel> <http://www.w3.org/2000/01/rdf-schema#label> "addition Label"@en .
+<https://w3id.org/iprok/cost#flexibilityRating> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<https://w3id.org/iprok/cost#resourceName> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/cost> .
+<https://w3id.org/iprok/cost#lineQuantity> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/lineQuantity> .
+<https://w3id.org/iprok/cost#EquipmentCost> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iprok/cost#importedItemCode> <http://www.w3.org/2000/01/rdf-schema#comment> "The source's own code: the CPWD item number of an analysis, the DAR resource code of a resource. No rdfs:domain." .
+<https://w3id.org/iprok/cost#maintainabilityRating> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/maintainabilityRating> .
+<https://w3id.org/iprok/cost#hasCostCategory> <http://www.w3.org/2000/01/rdf-schema#comment> "The has cost category property in the integrated project information model. Its declared domain is CostItem and its declared range is CostCategory."@en .
+<https://w3id.org/iprok/cost#priceSource> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/cost> .
+<https://w3id.org/iprok/cost#hasCostType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/iprok/cost#excludesGroup> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/cost> .
+<https://w3id.org/iprok/cost#analysisNote> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/cost#outputSource> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/cost> .
+<https://w3id.org/iprok/cost#hasCostType> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/iprok/cost#CostType> .
+<https://w3id.org/iprok/cost#CostResource> <http://www.w3.org/2000/01/rdf-schema#comment> "An entry in an organisation's book of basic rates: a trade, material, plant item or other cost with its unit and current rate." .
+<https://w3id.org/iprok/cost#AnalysisLine> <http://www.w3.org/2000/01/rdf-schema#comment> "One resource line of an analysis version." .
+<https://w3id.org/iprok/cost#analysisId> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/cost> .
+<https://w3id.org/iprok/cost#userValueRating> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<https://w3id.org/iprok/cost#AnalysisLine> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/AnalysisLine> .
+<https://w3id.org/iprok/cost#additionPercent> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/cost> .
+<https://w3id.org/iprok/cost#budgetedCostAmount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/iprok/cost#externalScheme> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/cost> .
+<https://w3id.org/iprok/cost#budgetedCostAmount> <http://www.w3.org/2000/01/rdf-schema#label> "budgetedCostAmount"@en .
+<https://w3id.org/iprok/cost#remainingCostAmount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/iprok/cost#rateAsOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/cost#hasCostCategory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/iprok/cost#optionId> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/optionId> .
+<https://w3id.org/iprok/cost#vendorName> <http://www.w3.org/2000/01/rdf-schema#comment> "The vendor name property in the integrated project information model. Its declared domain is CostItem and its declared range is string."@en .
+<https://w3id.org/iprok/cost#additionBase> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/cost#AnalysisAddition> <http://www.w3.org/2000/01/rdf-schema#label> "Analysis Addition"@en .
+<https://w3id.org/iprok/cost#ProjectResourcePrice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iprok/cost#analysisScope> <http://www.w3.org/2000/01/rdf-schema#comment> "library | project. No rdfs:domain." .
+<https://w3id.org/iprok/cost#rateSource> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/cost#optionId> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/cost> .
+<https://w3id.org/iprok/cost#analysisTitle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/cost#importedItemCode> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/importedItemCode> .
+<https://w3id.org/iprok/cost#AnalysisLine> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Entity> .
+<https://w3id.org/iprok/cost#optionStatus> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/cost#analysisVersion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/cost#analysisSource> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/cost#resourceKind> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/cost> .
+<https://w3id.org/iprok/cost#outputObservations> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/outputObservations> .
+<https://w3id.org/iprok/cost#importedCheckStatus> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/cost> .
+<https://w3id.org/iprok/cost#resourceCode> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/cost> .
+<https://w3id.org/iprok/cost#analysisId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/cost#resourceName> <http://www.w3.org/2000/01/rdf-schema#label> "resource Name"@en .
+<https://w3id.org/iprok/cost#ExpenseItem> <http://www.w3.org/2000/01/rdf-schema#comment> "A cost-type classification for other project expenses."@en .
+<https://w3id.org/iprok/cost#ResourceMapping> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/ResourceMapping> .
+<https://w3id.org/iprok/cost#additionPercent> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/additionPercent> .
+<https://w3id.org/iprok/cost#lineGroup> <http://www.w3.org/2000/01/rdf-schema#comment> "A group letter on an analysis line (CPWD marks lines that use another item's rate with 'A'), so an addition can leave the group out. No rdfs:domain." .
+<https://w3id.org/iprok/cost#priceSource> <http://www.w3.org/2000/01/rdf-schema#label> "price Source"@en .
+<https://w3id.org/iprok/cost#atCompleteCostAmount> <http://www.w3.org/2000/01/rdf-schema#label> "atCompleteCostAmount"@en .
+<https://w3id.org/iprok/cost#resourceKind> <http://www.w3.org/2000/01/rdf-schema#comment> "Labour | Material | Plant | Carriage | Other. No rdfs:domain." .
+<https://w3id.org/iprok/cost#resourceCode> <http://www.w3.org/2000/01/rdf-schema#label> "resource Code"@en .
+<https://w3id.org/iprok/cost#importedEdition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/cost#optionId> <http://www.w3.org/2000/01/rdf-schema#comment> "Stable id within the project (DO-0001). Domain unspecified (antipattern #8)." .
+<https://w3id.org/iprok/cost#lineQuantity> <http://www.w3.org/2000/01/rdf-schema#comment> "The gang count or the quantity per analysed quantity, by <https://w3id.org/iprok/cost#lineKind>. No rdfs:domain." .
+<https://w3id.org/iprok/cost#remainingCostAmount> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/iprok/cost#userValueRating> <http://www.w3.org/2000/01/rdf-schema#comment> "The user value rating property in the integrated project information model."@en .
+<https://w3id.org/iprok/cost#AnalysisAddition> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Entity> .
+<https://w3id.org/iprok/cost#analysedQuantity> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/iprok/cost#CostType> <http://www.w3.org/2000/01/rdf-schema#comment> "A classification of expenditure by the kind of resource or expense involved."@en .
+<https://w3id.org/iprok/cost#lineQuantity> <http://www.w3.org/2000/01/rdf-schema#label> "line Quantity"@en .
+<https://w3id.org/iprok/cost#EquipmentCost> <http://www.w3.org/2000/01/rdf-schema#label> "EquipmentCost" .
+<https://w3id.org/iprok/cost#MaterialCost> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iprok/cost#inAnalysis> <http://www.w3.org/2000/01/rdf-schema#label> "in Analysis"@en .
+<https://w3id.org/iprok/cost#optionId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/cost#remainingCostAmount> <http://www.w3.org/2000/01/rdf-schema#comment> "The remaining cost amount property in the integrated project information model. Its declared domain is CostItem and its declared range is decimal."@en .
+<https://w3id.org/iprok/cost#analysisSource> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/analysisSource> .
+<https://w3id.org/iprok/cost#gangOutput> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/iprok/cost#lineGroup> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/cost> .
+<https://w3id.org/iprok/cost#rateAsOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/iprok/cost#basicRate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/cost#lineOrder> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/cost> .
+<https://w3id.org/iprok/cost#priceRate> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/cost> .
+<https://w3id.org/iprok/cost#userValueRating> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/cost> .
+<https://w3id.org/iprok/cost#lineNote> <http://www.w3.org/2000/01/rdf-schema#comment> "What the source printed for a line, when it differs from the resource's name (or several source lines merged into one). No rdfs:domain." .
+<https://w3id.org/iprok/cost#priceAsOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/cost#optionDiscipline> <http://www.w3.org/2000/01/rdf-schema#comment> "Architecture / Structure / MEP / Finishes. Domain unspecified (antipattern #8)." .
+<https://w3id.org/iprok/cost#importedItemCode> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/cost#DesignOption> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iprok/cost#additionLabel> <http://www.w3.org/2000/01/rdf-schema#comment> "What the addition is for. No rdfs:domain." .
+<https://w3id.org/iprok/cost#inAnalysis> <http://www.w3.org/2000/01/rdf-schema#comment> "The analysis version a line or addition belongs to. No rdfs:domain." .
+<https://w3id.org/iprok/cost#optionDiscipline> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/optionDiscipline> .
+<https://w3id.org/iprok/cost#qualityRating> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/qualityRating> .
+<https://w3id.org/iprok/cost#analysisScope> <http://www.w3.org/2000/01/rdf-schema#label> "analysis Scope"@en .
+<https://w3id.org/iprok/cost#lineKind> <http://www.w3.org/2000/01/rdf-schema#comment> "gang: the quantity is how many of the resource are in the gang (per unit = count × analysed quantity ÷ gang output); perUnit: the quantity is per analysed quantity. No rdfs:domain." .
+<https://w3id.org/iprok/cost#vendorName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/cost#resourceName> <http://www.w3.org/2000/01/rdf-schema#comment> "What the resource is, e.g. 'Cement OPC 53 grade, 50 kg bag'. No rdfs:domain." .
+<https://w3id.org/iprok/cost#gangOutput> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/cost#importedItemCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/cost#importedRecordVersion> <http://www.w3.org/2000/01/rdf-schema#comment> "The outside record's content version at import, e.g. sha256:… — the key for 'already imported, unchanged'. No rdfs:domain." .
+<https://w3id.org/iprok/cost#sourceCitation> <http://www.w3.org/2000/01/rdf-schema#comment> "Document, edition, volume, page and item of the printed source, in words a quantity surveyor can look up. No rdfs:domain." .
+<https://w3id.org/iprok/cost#optionStatus> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/optionStatus> .
+<https://w3id.org/iprok/cost#importedReviewState> <http://www.w3.org/2000/01/rdf-schema#comment> "The source's review state at import: proposed (machine-extracted, not approved by an engineer) or approved. No rdfs:domain." .
+<https://w3id.org/iprok/cost#additionBase> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/cost#resourceName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/cost#ProjectResourcePrice> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/cost> .
+<https://w3id.org/iprok/cost#costDeltaAmount> <http://www.w3.org/2000/01/rdf-schema#label> "cost Delta Amount"@en .
+<https://w3id.org/iprok/cost#outputSource> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/outputSource> .
+<https://w3id.org/iprok/cost#analysedQuantity> <http://www.w3.org/2000/01/rdf-schema#comment> "The quantity the details of cost are for (a CPWD analysis is often for 10 m² or 1 quintal); the rate per unit is the total divided by it. No rdfs:domain." .
+<https://w3id.org/iprok/cost#optionTitle> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/cost> .
+<https://w3id.org/iprok/cost#gangOutput> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/gangOutput> .
+<https://w3id.org/iprok/cost#hasCostCategory> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/cost#importedRecordVersion> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/cost#lineNote> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/lineNote> .
+<https://w3id.org/iprok/cost#priceSource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/cost#analysisScope> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/cost#importedEdition> <http://www.w3.org/2000/01/rdf-schema#label> "imported Edition"@en .
+<https://w3id.org/iprok/cost#excludesGroup> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/cost#externalCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/cost#outputSource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/cost#hasCostType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/iprok/cost#analysisId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/cost#excludesGroup> <http://www.w3.org/2000/01/rdf-schema#label> "excludes Group"@en .
+<https://w3id.org/iprok/cost#userValueRating> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/cost#externalCode> <http://www.w3.org/2000/01/rdf-schema#label> "external Code"@en .
+<https://w3id.org/iprok/cost#basicRate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/iprok/cost#additionPercent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/cost#costDeltaAmount> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/costDeltaAmount> .
+<https://w3id.org/iprok/cost#atCompleteCostAmount> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/iprok/cost#CostItem> .
+<https://w3id.org/iprok/cost#externalScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/cost#EquipmentCost> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/iprok/cost#CostType> .
+<https://w3id.org/iprok/cost#ResourceMapping> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Entity> .
+<https://w3id.org/iprok/cost#AnalysisLine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iprok/cost#costDeltaAmount> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/cost> .
+<https://w3id.org/iprok/cost#basicRate> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/basicRate> .
+<https://w3id.org/iprok/cost#hasCostCategory> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/iprok/cost#CostItem> .
+<https://w3id.org/iprok/cost#priceAsOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/iprok/cost#resourceCode> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/resourceCode> .
+<https://w3id.org/iprok/cost#remainingCostAmount> <http://www.w3.org/2000/01/rdf-schema#label> "remainingCostAmount"@en .
+<https://w3id.org/iprok/cost#ExpenseItem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iprok/cost#optionTitle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/cost#lineNote> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/cost#lineKind> <http://www.w3.org/2000/01/rdf-schema#label> "line Kind"@en .
+<https://w3id.org/iprok/cost#resourceCode> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/cost#outputObservations> <http://www.w3.org/2000/01/rdf-schema#label> "output Observations"@en .
+<https://w3id.org/iprok/cost#priceAsOf> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/priceAsOf> .
+<https://w3id.org/iprok/cost#resourceKind> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/cost#optionDiscipline> <http://www.w3.org/2000/01/rdf-schema#label> "option Discipline"@en .
+<https://w3id.org/iprok/cost#costDeltaAmount> <http://www.w3.org/2000/01/rdf-schema#comment> "Signed cost impact in ₹ against the working estimate." .
+<https://w3id.org/iprok/cost#importedCheckStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/cost#resourceCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/cost#lineQuantity> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/cost> .
+<https://w3id.org/iprok/cost#AnalysisAddition> <http://www.w3.org/2000/01/rdf-schema#comment> "A percentage added to an analysis in order, on a stated base; water charges on cost, contractor's profit and overheads on the running total." .
+<https://w3id.org/iprok/cost#analysisVersion> <http://www.w3.org/2000/01/rdf-schema#label> "analysis Version"@en .
+<https://w3id.org/iprok/cost#hasCostType> <http://www.w3.org/2000/01/rdf-schema#label> "hasCostType" .
+<https://w3id.org/iprok/cost#additionLabel> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/cost> .
+<https://w3id.org/iprok/cost#optionDiscipline> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/cost#lineNote> <http://www.w3.org/2000/01/rdf-schema#label> "line Note"@en .
+<https://w3id.org/iprok/cost#CostItem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iprok/cost#resourceKind> <http://www.w3.org/2000/01/rdf-schema#label> "resource Kind"@en .
+<https://w3id.org/iprok/cost#atCompleteCostAmount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/cost#hasCostType> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/iprok/cost#CostItem> .
+<https://w3id.org/iprok/cost#EquipmentCost> <http://www.w3.org/2000/01/rdf-schema#comment> "A cost-type classification for equipment-related expenditure."@en .
+<https://w3id.org/iprok/cost#RateAnalysis> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iprok/cost#sourceCitation> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/cost#analysisVersion> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/analysisVersion> .
+<https://w3id.org/iprok/cost#actualCostAmount> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/iprok/cost#CostItem> .
+<https://w3id.org/iprok/cost#priceAsOf> <http://www.w3.org/2000/01/rdf-schema#label> "price As Of"@en .
+<https://w3id.org/iprok/cost#flexibilityRating> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/cost> .
+<https://w3id.org/iprok/cost#vendorName> <http://www.w3.org/2000/01/rdf-schema#label> "vendorName"@en .
+<https://w3id.org/iprok/cost#excludesGroup> <http://www.w3.org/2000/01/rdf-schema#comment> "On an addition with a Cost or Running base: a line group left out of the base, as CPWD writes 'Add 15% CPOH on Y-A'. Repeatable. No rdfs:domain." .
+<https://w3id.org/iprok/cost#CostType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iprok/cost#priceSource> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/cost#executionReadinessRating> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<https://w3id.org/iprok/cost#CostResource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iprok/cost#timeDeltaDays> <http://www.w3.org/2000/01/rdf-schema#label> "time Delta Days"@en .
+<https://w3id.org/iprok/cost#budgetedCostAmount> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/iprok/cost#CostItem> .
+<https://w3id.org/iprok/cost#importedEdition> <http://www.w3.org/2000/01/rdf-schema#comment> "The source edition, e.g. cpwd-dar-2023. No rdfs:domain." .
+<https://w3id.org/iprok/cost#excludesGroup> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/cost#lineOrder> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/cost#timeDeltaDays> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/cost#gangOutput> <http://www.w3.org/2000/01/rdf-schema#label> "gang Output"@en .
+<https://w3id.org/iprok/cost#userValueRating> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/cost#optionTitle> <http://www.w3.org/2000/01/rdf-schema#label> "option Title"@en .
+<https://w3id.org/iprok/cost#maintainabilityRating> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/cost> .
+<https://w3id.org/iprok/cost#executionReadinessRating> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/cost> .
+<https://w3id.org/iprok/cost#LaborCost> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/cost#CostCategory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iprok/cost#fromLibraryAnalysis> <http://www.w3.org/2000/01/rdf-schema#label> "from Library Analysis"@en .
+<https://w3id.org/iprok/cost#maintainabilityRating> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<https://w3id.org/iprok/cost#rateAsOf> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/rateAsOf> .
+<https://w3id.org/iprok/cost#externalScheme> <http://www.w3.org/2000/01/rdf-schema#label> "external Scheme"@en .
+<https://w3id.org/iprok/cost#importedReviewState> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/cost#importedFrom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/iprok/cost#qualityRating> <http://www.w3.org/2000/01/rdf-schema#comment> "Design quality / performance grade 1–5." .
+<https://w3id.org/iprok/cost#externalScheme> <http://www.w3.org/2000/01/rdf-schema#comment> "The code list an external code belongs to, e.g. cpwd-dar-resource. No rdfs:domain." .
+<https://w3id.org/iprok/cost#actualCostAmount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/cost#flexibilityRating> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/cost#AnalysisAddition> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/AnalysisAddition> .
+<https://w3id.org/iprok/cost#additionBase> <http://www.w3.org/2000/01/rdf-schema#comment> "Labour | Material | Plant | Cost (all lines) | Running (all lines and every earlier addition). No rdfs:domain." .
+<https://w3id.org/iprok/cost#costDeltaAmount> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/iprok/cost#resourceCode> <http://www.w3.org/2000/01/rdf-schema#comment> "The organisation's code for a cost resource, e.g. MAT-CEMENT-OPC53. Lines and project prices refer to it. No rdfs:domain." .
+<https://w3id.org/iprok/cost#additionPercent> <http://www.w3.org/2000/01/rdf-schema#comment> "The percentage, 0 to 100. No rdfs:domain." .
+<https://w3id.org/iprok/cost#rateAsOf> <http://www.w3.org/2000/01/rdf-schema#label> "rate As Of"@en .
+<https://w3id.org/iprok/cost#CostCategory> <http://www.w3.org/2000/01/rdf-schema#label> "CostCategory" .
+<https://w3id.org/iprok/cost#optionDiscipline> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/cost#priceRate> <http://www.w3.org/2000/01/rdf-schema#comment> "The project's rate per unit, in rupees. No rdfs:domain." .
+<https://w3id.org/iprok/cost#DesignOption> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/DesignOption> .
+<https://w3id.org/iprok/cost#basicRate> <http://www.w3.org/2000/01/rdf-schema#label> "basic Rate"@en .
+<https://w3id.org/iprok/cost#priceRate> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/priceRate> .
+<https://w3id.org/iprok/cost#RateAnalysis> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/cost> .
+<https://w3id.org/iprok/cost#costDeltaAmount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/cost#remainingCostAmount> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/iprok/cost#CostItem> .
+<https://w3id.org/iprok/cost#lineNote> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/cost> .
+<https://w3id.org/iprok/cost#CostItem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/iprok#IproKThing> .
+<https://w3id.org/iprok/cost#actualCostAmount> <http://www.w3.org/2000/01/rdf-schema#label> "actualCostAmount"@en .
+<https://w3id.org/iprok/cost#outputObservations> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<https://w3id.org/iprok/cost#analysedQuantity> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/cost> .
+<https://w3id.org/iprok/cost#importedFrom> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/importedFrom> .
+<https://w3id.org/iprok/cost#fromLibraryAnalysis> <http://www.w3.org/2000/01/rdf-schema#comment> "The library analysis version a project analysis was copied from. No rdfs:domain." .
+<https://w3id.org/iprok/cost#qualityRating> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<https://w3id.org/iprok/cost#additionBase> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/cost> .
+<https://w3id.org/iprok/cost#additionBase> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/additionBase> .
+<https://w3id.org/iprok/cost#maintainabilityRating> <http://www.w3.org/2000/01/rdf-schema#label> "maintainability Rating"@en .
+<https://w3id.org/iprok/cost#analysisId> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/analysisId> .
+<https://w3id.org/iprok/cost#rateSource> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/cost> .
+<https://w3id.org/iprok/cost#qualityRating> <http://www.w3.org/2000/01/rdf-schema#label> "quality Rating"@en .
+<https://w3id.org/iprok/cost#lineQuantity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/cost#outputSource> <http://www.w3.org/2000/01/rdf-schema#comment> "typed | measured | library — where the gang output came from; measured means the organisation's own site productivity (P2A). No rdfs:domain." .
+<https://w3id.org/iprok/cost#actualCostAmount> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/iprok/cost#DesignOption> <http://www.w3.org/2000/01/rdf-schema#label> "Design option" .
+<https://w3id.org/iprok/cost#executionReadinessRating> <http://www.w3.org/2000/01/rdf-schema#comment> "How buildable this option is with the resources at hand, 1–5." .
+<https://w3id.org/iprok/cost#analysisNote> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/cost#additionLabel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/cost#lineOrder> <http://www.w3.org/2000/01/rdf-schema#comment> "Position of a line or addition within its analysis, from 1. No rdfs:domain." .
+<https://w3id.org/iprok/cost#ExpenseItem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/iprok/cost#CostType> .
+<https://w3id.org/iprok/cost#optionStatus> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/cost> .
+<https://w3id.org/iprok/cost#LaborCost> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/iprok/cost#CostType> .
+<https://w3id.org/iprok/cost#ProjectResourcePrice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Entity> .
+<https://w3id.org/iprok/cost#budgetedCostAmount> <http://www.w3.org/2000/01/rdf-schema#comment> "The budgeted cost amount property in the integrated project information model. Its declared domain is CostItem and its declared range is decimal."@en .
+<https://w3id.org/iprok/cost#CostResource> <http://www.w3.org/2000/01/rdf-schema#label> "Cost Resource"@en .
+<https://w3id.org/iprok/cost#importedRecordVersion> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/cost> .
+<https://w3id.org/iprok/cost#rateSource> <http://www.w3.org/2000/01/rdf-schema#label> "rate Source"@en .
+<https://w3id.org/iprok/cost#ResourceMapping> <http://www.w3.org/2000/01/rdf-schema#label> "Resource Mapping"@en .
+<https://w3id.org/iprok/cost#MaterialCost> <http://www.w3.org/2000/01/rdf-schema#label> "MaterialCost" .
+<https://w3id.org/iprok/cost#CostCategory> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/iprok#IproKThing> .
+<https://w3id.org/iprok/cost#flexibilityRating> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/cost#analysisNote> <http://www.w3.org/2000/01/rdf-schema#comment> "Why this version was saved. No rdfs:domain." .
+<https://w3id.org/iprok/cost#importedFrom> <http://www.w3.org/2000/01/rdf-schema#comment> "The outside record (a VIDHI rate-analysis or basic-rate record IRI) an analysis version or a resource was imported from. No rdfs:domain." .
+<https://w3id.org/iprok/cost#RateAnalysis> <http://www.w3.org/2000/01/rdf-schema#comment> "One version of an analysis of rates: a library analysis the organisation keeps, or the analysis behind one BOQ line of a project. A save writes a new version and supersedes the old one." .
+<https://w3id.org/iprok/cost#analysedQuantity> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/analysedQuantity> .
+<https://w3id.org/iprok/cost#importedItemCode> <http://www.w3.org/2000/01/rdf-schema#label> "imported Item Code"@en .
+<https://w3id.org/iprok/cost#analysisSource> <http://www.w3.org/2000/01/rdf-schema#comment> "Where the coefficients come from, e.g. a published analysis of rates or the organisation's own; never blank, so a figure can be traced. No rdfs:domain." .
+<https://w3id.org/iprok/cost#resourceName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/cost#userValueRating> <http://www.w3.org/2000/01/rdf-schema#label> "user Value Rating"@en .
+<https://w3id.org/iprok/cost#analysisTitle> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/analysisTitle> .
+<https://w3id.org/iprok/cost#AnalysisAddition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iprok/cost#rateSource> <http://www.w3.org/2000/01/rdf-schema#comment> "Where a rate came from: a supplier quote, a purchase order, a published schedule. No rdfs:domain." .
+<https://w3id.org/iprok/cost#ProjectResourcePrice> <http://www.w3.org/2000/01/rdf-schema#comment> "The one rate a project uses for a resource. Copied from the organisation's basic rates when first used; changed only by a person, and every change is recorded." .
+<https://w3id.org/iprok/cost#additionPercent> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/iprok/cost#fromLibraryAnalysis> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/iprok/cost#EquipmentCost> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/cost#analysisTitle> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/cost#executionReadinessRating> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/cost#importedEdition> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/cost#optionStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/cost#outputSource> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/cost#priceRate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/cost#fromLibraryAnalysis> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/fromLibraryAnalysis> .
+<https://w3id.org/iprok/cost#sourceCitation> <http://www.w3.org/2000/01/rdf-schema#label> "source Citation"@en .
+<https://w3id.org/iprok/cost#importedRecordVersion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/cost#importedCheckStatus> <http://www.w3.org/2000/01/rdf-schema#comment> "The source's arithmetic check at import: reconciled, reconciled_with_unchecked or flagged. No rdfs:domain." .
+<https://w3id.org/iprok/cost#gangOutput> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/cost> .
+<https://w3id.org/iprok/cost#outputObservations> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/cost> .
+<https://w3id.org/iprok/cost#executionReadinessRating> <http://www.w3.org/2000/01/rdf-schema#label> "execution Readiness Rating"@en .
+<https://w3id.org/iprok/cost#externalScheme> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/externalScheme> .
+<https://w3id.org/iprok/cost#importedItemCode> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/cost> .
+<https://w3id.org/iprok/cost#analysisTitle> <http://www.w3.org/2000/01/rdf-schema#label> "analysis Title"@en .
+<https://w3id.org/iprok/cost#atCompleteCostAmount> <http://www.w3.org/2000/01/rdf-schema#comment> "The at complete cost amount property in the integrated project information model. Its declared domain is CostItem and its declared range is decimal."@en .
+<https://w3id.org/iprok/cost#flexibilityRating> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/flexibilityRating> .
+<https://w3id.org/iprok/cost#qualityRating> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/cost> .
+<https://w3id.org/iprok/cost#optionStatus> <http://www.w3.org/2000/01/rdf-schema#comment> "Proposed / Approved / Rejected / Superseded. Domain unspecified (antipattern #8)." .
+<https://w3id.org/iprok/cost#optionTitle> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/cost#analysedQuantity> <http://www.w3.org/2000/01/rdf-schema#label> "analysed Quantity"@en .
+<https://w3id.org/iprok/cost#DesignOption> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Entity> .
+<https://w3id.org/iprok/cost#lineKind> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/cost> .
+<https://w3id.org/iprok/cost#vendorName> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/iprok/cost#CostItem> .
+<https://w3id.org/iprok/cost#CostCategory> <http://www.w3.org/2000/01/rdf-schema#comment> "A classification grouping cost items by their purpose or accounting category."@en .
+<https://w3id.org/iprok/cost#optionId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/cost#CostType> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/iprok#IproKThing> .
+<https://w3id.org/iprok/cost#priceAsOf> <http://www.w3.org/2000/01/rdf-schema#comment> "The date the project's rate was set. No rdfs:domain." .
+<https://w3id.org/iprok/cost#fromLibraryAnalysis> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/cost> .
+<https://w3id.org/iprok/cost#externalCode> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/cost> .
+<https://w3id.org/iprok/cost#analysisScope> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/cost> .
+<https://w3id.org/iprok/cost#lineOrder> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<https://w3id.org/iprok/cost#resourceKind> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/cost#ExpenseItem> <http://www.w3.org/2000/01/rdf-schema#label> "ExpenseItem" .
+<https://w3id.org/iprok/cost#inAnalysis> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/iprok/cost#timeDeltaDays> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<https://w3id.org/iprok/cost#atCompleteCostAmount> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/cost#DesignOption> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/cost> .
+<https://w3id.org/iprok/cost#CostItem> <http://www.w3.org/2000/01/rdf-schema#comment> "A cost record associated with scheduled work or a resource allocation."@en .
+<https://w3id.org/iprok/cost#hasCostCategory> <http://www.w3.org/2000/01/rdf-schema#label> "hasCostCategory" .
+<https://w3id.org/iprok/cost#analysisSource> <http://www.w3.org/2000/01/rdf-schema#label> "analysis Source"@en .
+<https://w3id.org/iprok/cost#lineNote> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/cost#ResourceMapping> <http://www.w3.org/2000/01/rdf-schema#comment> "Which of the organisation's resources a code of an outside source stands for (a CPWD DAR resource code, a cited CPWD item). Chosen by a person, never guessed; a change supersedes the old mapping." .
+<https://w3id.org/iprok/cost#importedReviewState> <http://www.w3.org/2000/01/rdf-schema#label> "imported Review State"@en .
+<https://w3id.org/iprok/cost#flexibilityRating> <http://www.w3.org/2000/01/rdf-schema#label> "flexibility Rating"@en .
+<https://w3id.org/iprok/cost#vendorName> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/cost#externalCode> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/cost#importedCheckStatus> <http://www.w3.org/2000/01/rdf-schema#label> "imported Check Status"@en .
+<https://w3id.org/iprok/cost#importedRecordVersion> <http://www.w3.org/2000/01/rdf-schema#label> "imported Record Version"@en .
+<https://w3id.org/iprok/cost#AnalysisAddition> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/cost> .
+<https://w3id.org/iprok/cost#lineGroup> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/cost#MaterialCost> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/cost#lineGroup> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/cost#rateSource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/cost#additionLabel> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/additionLabel> .
+<https://w3id.org/iprok/cost#userValueRating> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/userValueRating> .
+<https://w3id.org/iprok/cost#externalCode> <http://www.w3.org/2000/01/rdf-schema#comment> "A code of an outside source, e.g. the DAR resource code 0114. No rdfs:domain." .
+<https://w3id.org/iprok/cost#CostResource> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/CostResource> .
+<https://w3id.org/iprok/cost#importedReviewState> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/cost> .
+<https://w3id.org/iprok/cost#importedReviewState> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/importedReviewState> .
+<https://w3id.org/iprok/cost#inAnalysis> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/cost> .
+<https://w3id.org/iprok/cost#analysisId> <http://www.w3.org/2000/01/rdf-schema#comment> "Human-facing id: RL-NNNN in the organisation library, RA-NNNN in a project. Shared by every version. No rdfs:domain." .
+<https://w3id.org/iprok/cost#executionReadinessRating> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/executionReadinessRating> .
+<https://w3id.org/iprok/cost#analysisId> <http://www.w3.org/2000/01/rdf-schema#label> "analysis Id"@en .
+<https://w3id.org/iprok/cost#hasCostType> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/cost#analysisSource> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/cost> .
+<https://w3id.org/iprok/cost#MaterialCost> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/iprok/cost#CostType> .
+<https://w3id.org/iprok/cost#priceSource> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/priceSource> .
+<https://w3id.org/iprok/cost#MaterialCost> <http://www.w3.org/2000/01/rdf-schema#comment> "A cost-type classification for material-related expenditure."@en .
+<https://w3id.org/iprok/cost#AnalysisLine> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/cost> .
+<https://w3id.org/iprok/cost#lineGroup> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/lineGroup> .
+<https://w3id.org/iprok/cost#sourceCitation> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/cost> .
+<https://w3id.org/iprok/cost#optionTitle> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/cost#basicRate> <http://www.w3.org/2000/01/rdf-schema#comment> "The organisation's current rate per unit, in rupees. Absent = not priced yet (never read as zero). No rdfs:domain." .
+<https://w3id.org/iprok/cost#budgetedCostAmount> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/cost#maintainabilityRating> <http://www.w3.org/2000/01/rdf-schema#comment> "The maintainability rating property in the integrated project information model."@en .
+<https://w3id.org/iprok/cost#ProjectResourcePrice> <http://www.w3.org/2000/01/rdf-schema#label> "Project Resource Price"@en .
+<https://w3id.org/iprok/cost#timeDeltaDays> <http://www.w3.org/2000/01/rdf-schema#comment> "Signed schedule impact in days." .
+<https://w3id.org/iprok/cost#timeDeltaDays> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/cost> .
+<https://w3id.org/iprok/cost#LaborCost> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iprok/cost#AnalysisLine> <http://www.w3.org/2000/01/rdf-schema#label> "Analysis Line"@en .
+<https://w3id.org/iprok/cost#priceRate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/iprok/cost#ResourceMapping> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iprok/cost#importedCheckStatus> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/cost#outputSource> <http://www.w3.org/2000/01/rdf-schema#label> "output Source"@en .
+<https://w3id.org/iprok/cost#CostResource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Entity> .
+<https://w3id.org/iprok/cost#lineOrder> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/lineOrder> .
+<https://w3id.org/iprok/cost#outputObservations> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/cost#analysisScope> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/analysisScope> .
+<https://w3id.org/iprok/cost#LaborCost> <http://www.w3.org/2000/01/rdf-schema#comment> "A cost-type classification for labour-related expenditure."@en .
+<https://w3id.org/iprok/cost#maintainabilityRating> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/cost#CostItem> <http://www.w3.org/2000/01/rdf-schema#label> "CostItem" .
+<https://w3id.org/iprok/cost#vendorName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/cost#qualityRating> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/cost#sourceCitation> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/sourceCitation> .
+<https://w3id.org/iprok/cost#importedRecordVersion> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/importedRecordVersion> .
+<https://w3id.org/iprok/cost#atCompleteCostAmount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/iprok/cost#lineOrder> <http://www.w3.org/2000/01/rdf-schema#label> "line Order"@en .
+<https://w3id.org/iprok/cost#additionPercent> <http://www.w3.org/2000/01/rdf-schema#label> "addition Percent"@en .
+<https://w3id.org/iprok/cost#gangOutput> <http://www.w3.org/2000/01/rdf-schema#comment> "What one gang produces in a day, in the analysis unit. Labour and plant per unit = gang size ÷ this. No rdfs:domain." .
+<https://w3id.org/iprok/cost#hasCostCategory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/iprok/cost#rateAsOf> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/cost> .
+<https://w3id.org/iprok/cost#lineQuantity> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/iprok/cost#lineKind> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/cost#optionTitle> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/optionTitle> .
+<https://w3id.org/iprok/cost#ExpenseItem> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/cost#analysisTitle> <http://www.w3.org/2000/01/rdf-schema#comment> "The work the analysis prices, in plain words. No rdfs:domain." .
+<https://w3id.org/iprok/cost#importedFrom> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/cost> .
+<https://w3id.org/iprok/cost#lineGroup> <http://www.w3.org/2000/01/rdf-schema#label> "line Group"@en .
+<https://w3id.org/iprok/cost#CostResource> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/cost> .
+<https://w3id.org/iprok/cost#additionBase> <http://www.w3.org/2000/01/rdf-schema#label> "addition Base"@en .
+<https://w3id.org/iprok/cost#externalScheme> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/cost#importedCheckStatus> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/importedCheckStatus> .
+<https://w3id.org/iprok/cost#analysisScope> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/cost#hasCostCategory> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/iprok/cost#CostCategory> .
+<https://w3id.org/iprok/cost#DesignOption> <http://www.w3.org/2000/01/rdf-schema#comment> "A priced design decision under consideration or decided. Decisions are PROV-O supersessions; Approved options move the working estimate." .
+<https://w3id.org/iprok/cost#rateAsOf> <http://www.w3.org/2000/01/rdf-schema#comment> "The date a rate was last confirmed. No rdfs:domain." .
+<https://w3id.org/iprok/cost#hasCostType> <http://www.w3.org/2000/01/rdf-schema#comment> "The has cost type property in the integrated project information model. Its declared domain is CostItem and its declared range is CostType."@en .
+<https://w3id.org/iprok/cost#importedFrom> <http://www.w3.org/2000/01/rdf-schema#label> "imported From"@en .
+<https://w3id.org/iprok/cost#budgetedCostAmount> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/iprok/cost#flexibilityRating> <http://www.w3.org/2000/01/rdf-schema#comment> "The flexibility rating property in the integrated project information model."@en .
+<https://w3id.org/iprok/cost#analysisTitle> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/cost> .
+<https://w3id.org/iprok/cost#additionLabel> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/cost#outputObservations> <http://www.w3.org/2000/01/rdf-schema#comment> "How many measured site days stand behind a measured output. No rdfs:domain." .
+<https://w3id.org/iprok/cost#optionDiscipline> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/cost> .
+<https://w3id.org/iprok/cost#analysisVersion> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/cost> .
+<https://w3id.org/iprok/cost#optionId> <http://www.w3.org/2000/01/rdf-schema#label> "option Id"@en .
+<https://w3id.org/iprok/cost#remainingCostAmount> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/cost#analysisNote> <http://www.w3.org/2000/01/rdf-schema#label> "analysis Note"@en .
+<https://w3id.org/iprok/cost#RateAnalysis> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Entity> .
+<https://w3id.org/iprok/cost#CostItem> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/cost#priceSource> <http://www.w3.org/2000/01/rdf-schema#comment> "Where the project's rate came from. No rdfs:domain." .
+<https://w3id.org/iprok/cost#resourceName> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/resourceName> .
+<https://w3id.org/iprok/cost#analysisVersion> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<https://w3id.org/iprok/cost#timeDeltaDays> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/timeDeltaDays> .
+<https://w3id.org/iprok/cost#optionStatus> <http://www.w3.org/2000/01/rdf-schema#label> "option Status"@en .
+<https://w3id.org/iprok/cost#priceRate> <http://www.w3.org/2000/01/rdf-schema#label> "price Rate"@en .
+<https://w3id.org/iprok/cost#externalCode> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/externalCode> .
+<https://w3id.org/iprok/cost#atCompleteCostAmount> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/iprok/cost#resourceKind> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/resourceKind> .
+<https://w3id.org/iprok/cost#importedEdition> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/importedEdition> .
+<https://w3id.org/iprok/cost#budgetedCostAmount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .

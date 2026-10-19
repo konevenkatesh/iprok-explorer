@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:dcterms="http://purl.org/dc/terms/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+>
+  <rdf:Description rdf:about="https://w3id.org/iprok/procurement#vendorName">
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+    <rdfs:label xml:lang="en">vendor Name</rdfs:label>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/procurement"/>
+    <rdfs:comment xml:lang="en">The vendor name property in the integrated project information model.</rdfs:comment>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/vendorName"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/procurement#vendorCategory">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="en">vendor Category</rdfs:label>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/vendorCategory"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/procurement"/>
+    <rdfs:comment>Material | Equipment | Labour | Services | Fixtures | Other.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/procurement#GoodsReceipt">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+    <rdfs:comment>One SAP material-document line (MIGO MIGO_GR). Links back to its &lt;https://w3id.org/iprok/procurement#PurchaseOrder&gt; via &lt;https://w3id.org/iprok/procurement#forPO&gt;.</rdfs:comment>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/GoodsReceipt"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/procurement"/>
+    <rdfs:label>Goods receipt (SAP)</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/procurement#offerId">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+    <rdfs:comment xml:lang="en">The offer id property in the integrated project information model.</rdfs:comment>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/procurement"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/offerId"/>
+    <rdfs:label xml:lang="en">offer Id</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/procurement#quantityIssued">
+    <rdfs:label>quantity issued</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/quantityIssued"/>
+    <rdfs:comment>Quantity of material issued. Mandatory. Domain unspecified.</rdfs:comment>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/procurement"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/procurement#vendorId">
+    <rdfs:comment xml:lang="en">The vendor id property in the integrated project information model.</rdfs:comment>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/vendorId"/>
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/procurement"/>
+    <rdfs:label xml:lang="en">vendor Id</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/procurement#receivedQty">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:comment xml:lang="en">The received qty property in the integrated project information model.</rdfs:comment>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/receivedQty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/procurement"/>
+    <rdfs:label>received quantity</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/procurement#offerProduct">
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/procurement"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/offerProduct"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="en">offer Product</rdfs:label>
+    <rdfs:comment>Product/spec offered — e.g. 'Wall-hung WC, Brand X model Y'.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/procurement#Vendor">
+    <rdfs:comment>One supplier/subcontractor in the org's vendor database.</rdfs:comment>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/procurement"/>
+    <rdfs:label xml:lang="en">Vendor</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/Vendor"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/procurement#MaterialIssue">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+    <rdfs:comment>A site store issue of construction material (cement, steel, etc.) against a project activity. Used for IS-coefficient-based consumption reconciliation.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Material Issue</rdfs:label>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/procurement"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/MaterialIssue"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/procurement#vendor">
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/vendor"/>
+    <rdfs:label>vendor name / SAP vendor code (LIFNR)</rdfs:label>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/procurement"/>
+    <rdfs:comment xml:lang="en">The vendor property in the integrated project information model.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/procurement#leadTimeDays">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/procurement"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/leadTimeDays"/>
+    <rdfs:comment xml:lang="en">The lead time days property in the integrated project information model.</rdfs:comment>
+    <rdfs:label xml:lang="en">lead Time Days</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/procurement#poAmount">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/poAmount"/>
+    <rdfs:comment xml:lang="en">The po amount property in the integrated project information model.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+    <rdfs:label>PO net value (NETWR), INR</rdfs:label>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/procurement"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/procurement#issueDate">
+    <rdfs:label>issue date</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/procurement"/>
+    <rdfs:comment>Date the material was issued from the site store. Mandatory. Domain unspecified.</rdfs:comment>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/issueDate"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/procurement#ProductOffer">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+    <rdfs:label xml:lang="en">Product Offer</rdfs:label>
+    <rdfs:comment>One vendor's offer for a product/spec: rate, lead time, quality, warranty.</rdfs:comment>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/procurement"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/ProductOffer"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/procurement#receivedAmount">
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/procurement"/>
+    <rdfs:label>received amount (INR)</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/receivedAmount"/>
+    <rdfs:comment xml:lang="en">The received amount property in the integrated project information model.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/procurement#grnDate">
+    <rdfs:label>GRN posting date (BUDAT)</rdfs:label>
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="en">The grn date property in the integrated project information model.</rdfs:comment>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/procurement"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/grnDate"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/procurement#byVendor">
+    <rdfs:label xml:lang="en">by Vendor</rdfs:label>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/procurement"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/byVendor"/>
+    <rdfs:comment>The &lt;https://w3id.org/iprok/procurement#Vendor&gt; making this offer. Range undeclared (antipattern #8).</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/procurement#poStatus">
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/procurement"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label>PO status</rdfs:label>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/poStatus"/>
+    <rdfs:comment>Open / PartiallyDelivered / FullyDelivered / Cancelled. Mirrors SAP EKKO.STATU but flattened to the four states a IproK framework PM actually cares about.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/procurement#unitRate">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+    <rdfs:label xml:lang="en">unit Rate</rdfs:label>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/procurement"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/unitRate"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:comment xml:lang="en">The unit rate property in the integrated project information model.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/procurement#grnNumber">
+    <rdfs:comment xml:lang="en">The grn number property in the integrated project information model.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/procurement"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/grnNumber"/>
+    <rdfs:label>SAP GRN / material-document number (MBLNR)</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/procurement#PurchaseOrder">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment>One SAP PO header. linkedBOQItem connects procurement back to the contract chain so the gap-report engine can compute committed vs certified per BOQ row.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+    <rdfs:label>Purchase order (SAP)</rdfs:label>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/procurement"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/PurchaseOrder"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/procurement#poDate">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/poDate"/>
+    <rdfs:label>PO date (BEDAT)</rdfs:label>
+    <rdfs:comment xml:lang="en">The po date property in the integrated project information model.</rdfs:comment>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/procurement"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/procurement#poNumber">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+    <rdfs:label>SAP PO number (EBELN)</rdfs:label>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/procurement"/>
+    <rdfs:comment xml:lang="en">The po number property in the integrated project information model.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/poNumber"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/procurement#qualityGrade">
+    <rdfs:comment>1 (basic) … 5 (premium) — the estimator's grade for compare dashboards.</rdfs:comment>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/qualityGrade"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/procurement"/>
+    <rdfs:label xml:lang="en">quality Grade</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/procurement#forPO">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/forPO"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/procurement"/>
+    <rdfs:label>for purchase order</rdfs:label>
+    <rdfs:comment>Link from a &lt;https://w3id.org/iprok/procurement#GoodsReceipt&gt; to its &lt;https://w3id.org/iprok/procurement#PurchaseOrder&gt;. Domain unspecified (antipattern #8).</rdfs:comment>
+  </rdf:Description>
+</rdf:RDF>

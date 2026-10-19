@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:dcterms="http://purl.org/dc/terms/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+>
+  <rdf:Description rdf:about="https://w3id.org/iprok/building#contentVersion">
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/contentVersion"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:comment>VIDHI's content version of an answer (sha256:…); it excludes the review state, so a review changes the label, not the version. No rdfs:domain.</rdfs:comment>
+    <rdfs:label xml:lang="en">content Version</rdfs:label>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/building"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/building#identifiedAt">
+    <rdfs:label xml:lang="en">identified At</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    <rdfs:comment>When project information interface asked VIDHI. No rdfs:domain.</rdfs:comment>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/identifiedAt"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/building"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/building#viewName">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/viewName"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/building"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="en">view Name</rdfs:label>
+    <rdfs:comment>Which generated view the comment was made in — '3D', a storey plan name, or an elevation name.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/building#forModel">
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/building"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/forModel"/>
+    <rdfs:label xml:lang="en">for Model</rdfs:label>
+    <rdfs:comment>The &lt;https://w3id.org/iprok/building#IfcModel&gt; this audit measured.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/building#checklistJson">
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/building"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/checklistJson"/>
+    <rdfs:comment>JSON array of actionable modelling gaps, worst first.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="en">checklist Json</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/building#sectionDesignation">
+    <rdfs:comment>The IS 808 designation VIDHI named, on an exact fit only. No rdfs:domain.</rdfs:comment>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/building"/>
+    <rdfs:label xml:lang="en">section Designation</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/sectionDesignation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/building#elementType">
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/building"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/elementType"/>
+    <rdfs:label>element type</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:comment>IFC class name verbatim, e.g. 'IfcWall', 'IfcColumn', 'IfcBeam', 'IfcSlab', 'IfcDoor'. Polymorphic — domain unspecified (antipattern #8) so other classes can carry it in future without RDFS contamination.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/building#commentStatus">
+    <rdfs:comment>Open | Resolved.</rdfs:comment>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/building"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="en">comment Status</rdfs:label>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/commentStatus"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/building#enrichedFileRef">
+    <rdfs:label xml:lang="en">enriched File Ref</rdfs:label>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/building"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment>Object-store key of the enriched IFC, when enrichment produced one. The source model is never modified in place.</rdfs:comment>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/enrichedFileRef"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/building#overallScore">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:label xml:lang="en">overall Score</rdfs:label>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/building"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/overallScore"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment>Mean readiness across the uses that bear on this model, 0-100. Uses with no applicable element are skipped, never scored zero.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/building#quantitiesWritten">
+    <rdfs:label xml:lang="en">quantities Written</rdfs:label>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/building"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/quantitiesWritten"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:comment>Quantities project information interface computed and wrote back on the enrichment pass, if one ran.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/building#IfcModel">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>IFC Model</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/iprok/document#Document"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/building"/>
+    <rdfs:comment>One uploaded IFC model revision. Carries fileRef, fileFormat ('IFC'), uploadedAt, modelRevision, elementCount, ofProject. Element-level detail lives in &lt;https://w3id.org/iprok/building#Element&gt; triples.</rdfs:comment>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/IfcModel"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/building#ElementDuplicatesRetired">
+    <rdfs:comment>N41.2; the startup migration retiring, in one project graph, the extra element nodes the pre-N41.2 parser wrote. Carries when it started and ended, how many nodes it retired, and (&lt;https://w3id.org/iprok/integrated#hadChange&gt;) each model element count it corrected from the duplicated count to the number of distinct elements.</rdfs:comment>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/ElementDuplicatesRetired"/>
+    <rdfs:label>element duplicates retired</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Activity"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/building"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/building#elementsAudited">
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/building"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+    <rdfs:comment xml:lang="en">The elements audited property in the integrated project information model.</rdfs:comment>
+    <rdfs:label xml:lang="en">elements Audited</rdfs:label>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/elementsAudited"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/building#gradeStatus">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/building"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/gradeStatus"/>
+    <rdfs:comment>is2062 | foreign_stated | stated_strength | assumed | not_stated | unrecognised; absent when VIDHI refused the member whole. No rdfs:domain.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="en">grade Status</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/building#replyTo">
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/replyTo"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment>Optional thread parent — another &lt;https://w3id.org/iprok/building#ModelComment&gt;. Range undeclared (antipattern #8).</rdfs:comment>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/building"/>
+    <rdfs:label xml:lang="en">reply To</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/building#healthCheckId">
+    <rdfs:label xml:lang="en">health Check Id</rdfs:label>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/building"/>
+    <rdfs:comment>Human-facing id, MH-NNNN.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/healthCheckId"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/building#checkedAt">
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+    <rdfs:comment xml:lang="en">The checked at property in the integrated project information model.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    <rdfs:label xml:lang="en">checked At</rdfs:label>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/checkedAt"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/building"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/building#sectionStatus">
+    <rdfs:label xml:lang="en">section Status</rdfs:label>
+    <rdfs:comment>is808_exact | is808_ambiguous | measurement_too_uncertain | foreign | unidentified | inconsistent | not_in_catalogue; absent when VIDHI refused the member whole. No rdfs:domain.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/building"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/sectionStatus"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/building#vidhiContract">
+    <rdfs:comment>The VIDHI contract an answer was given under (vidhi.element-identity/1). No rdfs:domain.</rdfs:comment>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/vidhiContract"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/building"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="en">vidhi Contract</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/building#memberSignature">
+    <rdfs:label xml:lang="en">member Signature</rdfs:label>
+    <rdfs:comment>project information interface's hash of the member description it sent (sha256:…): identical descriptions are asked once. No rdfs:domain.</rdfs:comment>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/memberSignature"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/building"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/building#identityJson">
+    <rdfs:comment>VIDHI's answer as JSON, less every value marked may_store:false. No rdfs:domain.</rdfs:comment>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/building"/>
+    <rdfs:label xml:lang="en">identity Json</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/identityJson"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/building#elementsRetired">
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/building"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="en">elements Retired</rdfs:label>
+    <rdfs:comment>How many element nodes an ElementDuplicatesRetired activity retired. No rdfs:domain.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/elementsRetired"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/building#readinessJson">
+    <rdfs:comment>JSON array of {use, score, verdict, fields[]} — caller-defined requirement set, so JSON-as-TEXT (the &lt;https://w3id.org/iprok#zoneConfig&gt; precedent).</rdfs:comment>
+    <rdfs:label xml:lang="en">readiness Json</rdfs:label>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/readinessJson"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/building"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/building#commentId">
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/commentId"/>
+    <rdfs:comment xml:lang="en">The comment id property in the integrated project information model.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/building"/>
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="en">comment Id</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/building#commentText">
+    <rdfs:comment xml:lang="en">The comment text property in the integrated project information model.</rdfs:comment>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/building"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+    <rdfs:label xml:lang="en">comment Text</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/commentText"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/building#Element">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+    <rdfs:label>IFC Element</rdfs:label>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/Element"/>
+    <rdfs:comment>One parseable IFC entity (wall / column / beam / slab / door / MEP fixture) extracted from an uploaded IFC model and persisted as triples for cross-domain joins. The single most important predicate is &lt;https://w3id.org/iprok/building#ifcGuid&gt;; every Issue / Annotation / future cost+schedule attribution that already carries an ifcGuid lights up automatically.</rdfs:comment>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/building"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/building#ModelComment">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/building"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+    <rdfs:comment>One recorded design-review comment on an IFC model view; the graph-native markup that Bluebeam/BIMcollab keep in opaque files.</rdfs:comment>
+    <rdfs:label xml:lang="en">Model Comment</rdfs:label>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/ModelComment"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/building#viewpointJson">
+    <rdfs:label xml:lang="en">viewpoint Json</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/viewpointJson"/>
+    <rdfs:comment>BCF-style camera state (position / target / projection / open view) as a JSON literal — the JSON-as-TEXT precedent (&lt;https://w3id.org/iprok#zoneConfig&gt;).</rdfs:comment>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/building"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/building#ElementCopiesRecorded">
+    <rdfs:comment>N41.1; the act of keeping, on each copy, which model's element the take-off counted it as. Carries the person, the time, the take-off it came from (rdfs:comment) and how many elements changed; each changed element points back at it (prov:wasInfluencedBy).</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Activity"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/ElementCopiesRecorded"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/building"/>
+    <rdfs:label>element copies recorded</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/building#reviewState">
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/building"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="en">review State</rdfs:label>
+    <rdfs:comment>VIDHI's review state of an answer: proposed or approved. No rdfs:domain.</rdfs:comment>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/reviewState"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/building#markupJson">
+    <rdfs:comment>Drawn markup strokes (pen / arrow / rect / text) in view-normalised 0–1 coordinates, as a JSON literal.</rdfs:comment>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/building"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/markupJson"/>
+    <rdfs:label xml:lang="en">markup Json</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/building#inputSha256">
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/inputSha256"/>
+    <rdfs:label xml:lang="en">input Sha256</rdfs:label>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/building"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment>VIDHI's hash of the question it answered (sha256:…). No rdfs:domain.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/building#ModelHealthCheck">
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/ModelHealthCheck"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+    <rdfs:comment>One health audit of one IFC model at a point in time.</rdfs:comment>
+    <rdfs:label xml:lang="en">Model Health Check</rdfs:label>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/building"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/building#MemberIdentity">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/building"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/MemberIdentity"/>
+    <rdfs:label xml:lang="en">Member Identity</rdfs:label>
+    <rdfs:comment>VIDHI's IS-code identity of the steel members of one model that project information interface described identically.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/building#ifcGuid">
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/ifcGuid"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/building"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment>IfcGloballyUniqueId of the element the issue is on. The single most important field for cross-domain joins (Clash on IFC element → Drawing → Activity).</rdfs:comment>
+    <rdfs:label>IFC GUID</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/building#reviewLabel">
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/building"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:comment>The label shown wherever the answer is shown or used (e.g. 'proposed, not approved by a reviewer'). No rdfs:domain.</rdfs:comment>
+    <rdfs:label xml:lang="en">review Label</rdfs:label>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/reviewLabel"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/building#onModel">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment>The &lt;https://w3id.org/iprok/building#IfcModel&gt; upload/revision this comment was recorded against. Range undeclared (antipattern #8).</rdfs:comment>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/onModel"/>
+    <rdfs:label xml:lang="en">on Model</rdfs:label>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/building"/>
+  </rdf:Description>
+</rdf:RDF>

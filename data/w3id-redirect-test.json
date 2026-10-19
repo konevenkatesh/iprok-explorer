@@ -1,0 +1,9 @@
+{
+  "checkedOn": "2026-10-19",
+  "scope": "Local real Apache with upstream w3id configuration; live upstream merge is a separate event",
+  "server": "Installed macOS Apache, exact temporary copy of identifier rules and upstream rootless configuration",
+  "cases": 613,
+  "matched": 613,
+  "failures": [],
+  "ruleFileSHA256": "0f0c9f1aab599d1f3b75e4330c310bccb8218f2cc351244fea1621a9843e51c5"
+}

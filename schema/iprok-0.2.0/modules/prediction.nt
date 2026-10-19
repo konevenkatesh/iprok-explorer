@@ -1,0 +1,43 @@
+<https://w3id.org/iprok/prediction#modelVersion> <http://www.w3.org/2000/01/rdf-schema#comment> "Model identifier like 'gat-v1'. Lets the UI flag stale predictions when the model is retrained." .
+<https://w3id.org/iprok/prediction#costOverrunRisk> <http://www.w3.org/2000/01/rdf-schema#label> "cost overrun risk (0–1)" .
+<https://w3id.org/iprok/prediction#predictedFloatChange> <http://www.w3.org/2000/01/rdf-schema#label> "predicted float change (days)" .
+<https://w3id.org/iprok/prediction#predictedFloatChange> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/prediction> .
+<https://w3id.org/iprok/prediction#predictedFloatChange> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/prediction#predictedAt> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/prediction> .
+<https://w3id.org/iprok/prediction#predictedAt> <http://www.w3.org/2000/01/rdf-schema#label> "predicted at" .
+<https://w3id.org/iprok/prediction#confidenceScore> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/confidenceScore> .
+<https://w3id.org/iprok/prediction#predictedAt> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/prediction#delayRisk> <http://www.w3.org/2000/01/rdf-schema#comment> "Probability the activity will be delayed by more than 7 days. Sigmoid output of the GAT delay head." .
+<https://w3id.org/iprok/prediction#costOverrunRisk> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/costOverrunRisk> .
+<https://w3id.org/iprok/prediction#predictedAt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/prediction#confidenceScore> <http://www.w3.org/2000/01/rdf-schema#label> "model confidence (0–1)" .
+<https://w3id.org/iprok/prediction#costOverrunRisk> <http://www.w3.org/2000/01/rdf-schema#comment> "Probability the activity's BOQ-linked cost will overrun by >10%. Sigmoid output of the GAT cost head." .
+<https://w3id.org/iprok/prediction#predictedAt> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://w3id.org/iprok/prediction#ActivityPrediction> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/prediction> .
+<https://w3id.org/iprok/prediction#costOverrunRisk> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/iprok/prediction#confidenceScore> <http://www.w3.org/2000/01/rdf-schema#comment> "Model's self-reported confidence in this prediction (1 − attention entropy, normalised)." .
+<https://w3id.org/iprok/prediction#ActivityPrediction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Entity> .
+<https://w3id.org/iprok/prediction#confidenceScore> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/iprok/prediction#delayRisk> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/iprok/prediction#predictedAt> <http://www.w3.org/2000/01/rdf-schema#comment> "The predicted at property in the integrated project information model."@en .
+<https://w3id.org/iprok/prediction#predictedAt> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/predictedAt> .
+<https://w3id.org/iprok/prediction#costOverrunRisk> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/prediction> .
+<https://w3id.org/iprok/prediction#modelVersion> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/prediction> .
+<https://w3id.org/iprok/prediction#costOverrunRisk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/prediction#ActivityPrediction> <http://www.w3.org/2000/01/rdf-schema#comment> "A versioned record describing an activity-level prediction and its input, model and baseline provenance." .
+<https://w3id.org/iprok/prediction#predictedFloatChange> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/predictedFloatChange> .
+<https://w3id.org/iprok/prediction#modelVersion> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/prediction#modelVersion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/prediction#ActivityPrediction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iprok/prediction#delayRisk> <http://www.w3.org/2000/01/rdf-schema#label> "delay risk (0–1)" .
+<https://w3id.org/iprok/prediction#modelVersion> <http://www.w3.org/2000/01/rdf-schema#label> "model version" .
+<https://w3id.org/iprok/prediction#ActivityPrediction> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/ActivityPrediction> .
+<https://w3id.org/iprok/prediction#modelVersion> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/modelVersion> .
+<https://w3id.org/iprok/prediction#confidenceScore> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/prediction> .
+<https://w3id.org/iprok/prediction#ActivityPrediction> <http://www.w3.org/2000/01/rdf-schema#label> "Activity prediction (GAT-derived)" .
+<https://w3id.org/iprok/prediction#confidenceScore> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/prediction#predictedFloatChange> <http://www.w3.org/2000/01/rdf-schema#comment> "tanh-bounded change in totalFloat. Negative = float will shrink. Range [-30, +30]." .
+<https://w3id.org/iprok/prediction#predictedFloatChange> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/iprok/prediction#delayRisk> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/prediction> .
+<https://w3id.org/iprok/prediction#delayRisk> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/delayRisk> .
+<https://w3id.org/iprok/prediction#delayRisk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .

@@ -1,0 +1,36 @@
+<https://w3id.org/iprok/approval#approvalStatus> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/approval#approvalStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/approval#applicationRef> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/approval#applicationRef> <http://www.w3.org/2000/01/rdf-schema#label> "application reference" .
+<https://w3id.org/iprok/approval#applicationRef> <http://www.w3.org/2000/01/rdf-schema#comment> "The authority's application / file number once submitted. Domain unspecified (antipattern #8)." .
+<https://w3id.org/iprok/approval#approvalStatus> <http://www.w3.org/2000/01/rdf-schema#comment> "NotStarted / Preparing / Submitted / QueryRound / Approved / Rejected. Domain unspecified (antipattern #8)." .
+<https://w3id.org/iprok/approval#Approval> <http://www.w3.org/2000/01/rdf-schema#label> "Statutory approval" .
+<https://w3id.org/iprok/approval#slaDays> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<https://w3id.org/iprok/approval#approvalId> <http://www.w3.org/2000/01/rdf-schema#comment> "Stable id within the project, e.g. APR-0003. Domain unspecified (antipattern #8)." .
+<https://w3id.org/iprok/approval#approvalId> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/approval> .
+<https://w3id.org/iprok/approval#Approval> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/Approval> .
+<https://w3id.org/iprok/approval#approvalType> <http://www.w3.org/2000/01/rdf-schema#label> "approval type" .
+<https://w3id.org/iprok/approval#approvalId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/approval#Approval> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/approval> .
+<https://w3id.org/iprok/approval#approvalStatus> <http://www.w3.org/2000/01/rdf-schema#label> "approval status" .
+<https://w3id.org/iprok/approval#approvalId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/approval#approvalType> <http://www.w3.org/2000/01/rdf-schema#comment> "One of the ApprovalShape sh:in set (PlanSanction / CommencementCertificate / NALAConversion / FireNOC / …). Domain unspecified (antipattern #8)." .
+<https://w3id.org/iprok/approval#Approval> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Entity> .
+<https://w3id.org/iprok/approval#approvalId> <http://www.w3.org/2000/01/rdf-schema#label> "approval id" .
+<https://w3id.org/iprok/approval#approvalStatus> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/approvalStatus> .
+<https://w3id.org/iprok/approval#Approval> <http://www.w3.org/2000/01/rdf-schema#comment> "A statutory approval, NOC, registration or certificate the project must obtain. Status transitions are PROV-O supersessions; the record is append-only." .
+<https://w3id.org/iprok/approval#approvalType> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/approval> .
+<https://w3id.org/iprok/approval#approvalType> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/approvalType> .
+<https://w3id.org/iprok/approval#slaDays> <http://www.w3.org/2000/01/rdf-schema#comment> "Statutory or practical service-level clock in days from submission (TG-bPASS style deemed approvals). 0 = no clock. Domain unspecified (antipattern #8)." .
+<https://w3id.org/iprok/approval#approvalId> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/approvalId> .
+<https://w3id.org/iprok/approval#slaDays> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/approval> .
+<https://w3id.org/iprok/approval#approvalType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/approval#approvalType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/approval#applicationRef> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/applicationRef> .
+<https://w3id.org/iprok/approval#approvalStatus> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/approval> .
+<https://w3id.org/iprok/approval#slaDays> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/slaDays> .
+<https://w3id.org/iprok/approval#applicationRef> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/approval> .
+<https://w3id.org/iprok/approval#Approval> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iprok/approval#slaDays> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/approval#slaDays> <http://www.w3.org/2000/01/rdf-schema#label> "SLA / deemed-approval days" .
+<https://w3id.org/iprok/approval#applicationRef> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .

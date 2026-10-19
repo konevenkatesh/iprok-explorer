@@ -18,7 +18,7 @@ The network's solid arrows use explicit object-property domains and ranges; dash
 
 ## Retain consistent sources
 
-1. Obtain an identified source commit. Preserve exact source namespaces and metadata.
+1. Obtain an identified source commit. Preserve exact namespaces and metadata in the source archives. Apply the explicit lowercase migration map only to the current expanded draft and derived examples.
 2. Keep historical IproK separate from later BIMSaarthi/Niyoj development. No automatic term renaming or equivalence claim is permitted.
 3. For Niyoj, take `bs.ttl`, `iprok_site_intelligence.ttl` and `shapes.ttl` from the same commit. The extension must be explicitly loaded with the core; the core does not import it. The current retained snapshot is identified in `schema/niyoj/source.json`.
 4. Run `python scripts/build_schema.py`. This creates term indexes, relationship edges and source hashes. It aligns the downloadable N-Triples graph to Turtle while preserving the previous export in `legacy/`. RDF/XML and JSON-LD already agree with the retained Turtle source.
@@ -35,13 +35,13 @@ The Niyoj schema audit covers 111 classes, 105 object properties, 640 data prope
 2. Enable GitHub Pages with GitHub Actions as its source.
 3. Push to `main`. The workflow verifies schema assets before packaging only website files and deploying.
 4. Wait for a successful Pages deployment and verify the returned public URL, data files and source-download links.
-5. Preserve the current IprokDoc repository and w3id redirects. This separate explanatory site does not change persistent identifiers or canonical ontology IRIs.
+5. Preserve the original IprokDoc source release. The user subsequently authorised canonical lowercase identifiers and a w3id redirect contribution. Deploy all target files first, validate the real Apache rules and upstream checker, then submit only `ids/iprok/.htaccess` and maintainer README changes upstream. The public redirect changes only after upstream merge.
 
-## If the persistent identifier is updated later
+## Authorised persistent-identifier integration
 
 The current upstream w3id repository places entries under `ids/iprok/`; the older fork used `iprok/`. The upstream accepts redirect rules and brief maintainer information, not ontology or interface files. Publish content to the target before changing redirects and submit a reviewed pull request against upstream. Test the rules with the upstream checker and a real Apache server.
 
-The inspected deployed base URL always redirects to HTML, even when an RDF Accept header is supplied. Existing version-shaped URLs also redirect to unversioned latest files; they should not be described as immutable releases. The source ontology's uppercase `IproK` namespace differs from the lowercase `iprok` PURL. These findings are recorded for a later, separately scoped redirect change. No current identifier has been rewritten or repurposed here.
+The inspected deployed base URL always redirects to HTML, even when an RDF Accept header is supplied. Existing version-shaped URLs also redirect to unversioned latest files; they should not be described as immutable releases. The source ontology's uppercase `IproK` namespace differs from the lowercase `iprok` PURL. The user authorised the redirect integration on 19 October 2026. The expanded schema has been migrated to lowercase; the explicit map preserves the difference between old and new RDF identifiers. Upstream acceptance and live resolution must be reported separately from local Apache test success.
 
 ## Verification evidence
 

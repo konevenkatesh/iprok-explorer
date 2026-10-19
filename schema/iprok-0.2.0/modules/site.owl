@@ -1,0 +1,537 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:dcterms="http://purl.org/dc/terms/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+>
+  <rdf:Description rdf:about="https://w3id.org/iprok/site#hospitalType">
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/hospitalType"/>
+    <rdfs:comment>Trauma Centre | Multi-speciality | Government | Primary Health Centre | Other.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://w3id.org/iprok/site#SiteWorkerSafety"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label>hospital type</rdfs:label>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/site"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/site#SiteHydrology">
+    <rdfs:comment>CGWB groundwater + nearest water source. Drives the groundwater &lt; 3m and CGWB over-exploited block auto-risks.</rdfs:comment>
+    <rdfs:label>Site Hydrology</rdfs:label>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/site"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/iprok/site#SiteIntelligence"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/SiteHydrology"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/site#dewateringRequired">
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/dewateringRequired"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label>dewatering required</rdfs:label>
+    <rdfs:comment>True when groundwaterDepthPreMonsoonM &lt; 3.0 — i.e. excavation will hit water table.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <rdfs:domain rdf:resource="https://w3id.org/iprok/site#SiteHydrology"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/site"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/site#gridSubstationDistanceKm">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+    <rdfs:comment xml:lang="en">The grid substation distance km property in the integrated project information model. Its declared domain is SiteUtilities and its declared range is decimal.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/site"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/gridSubstationDistanceKm"/>
+    <rdfs:label>grid substation distance (km)</rdfs:label>
+    <rdfs:domain rdf:resource="https://w3id.org/iprok/site#SiteUtilities"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/site#rmc1Name">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="https://w3id.org/iprok/site#SiteLogistics"/>
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:comment xml:lang="en">The rmc1name property in the integrated project information model. Its declared domain is SiteLogistics and its declared range is string.</rdfs:comment>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/rmc1Name"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/site"/>
+    <rdfs:label xml:lang="en">rmc1Name</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/site#heavyVehicleAccess">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/heavyVehicleAccess"/>
+    <rdfs:domain rdf:resource="https://w3id.org/iprok/site#SiteLogistics"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <rdfs:label>heavy vehicle access</rdfs:label>
+    <rdfs:comment>False triggers an auto-risk (cement/steel can't reach site at scale).</rdfs:comment>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/site"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/site#peakHeatMonth">
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/site"/>
+    <rdfs:comment xml:lang="en">The peak heat month property in the integrated project information model. Its declared domain is SiteWorkerSafety and its declared range is string.</rdfs:comment>
+    <rdfs:label>peak heat month</rdfs:label>
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="https://w3id.org/iprok/site#SiteWorkerSafety"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/peakHeatMonth"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/site#rmc2DistanceKm">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/site"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/rmc2DistanceKm"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label>RMC plant 2 distance (km)</rdfs:label>
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+    <rdfs:domain rdf:resource="https://w3id.org/iprok/site#SiteLogistics"/>
+    <rdfs:comment xml:lang="en">The rmc2distance km property in the integrated project information model. Its declared domain is SiteLogistics and its declared range is decimal.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/site#peakMonsoonWeek">
+    <rdfs:comment xml:lang="en">The peak monsoon week property in the integrated project information model. Its declared domain is SiteClimate and its declared range is integer.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="https://w3id.org/iprok/site#SiteClimate"/>
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/peakMonsoonWeek"/>
+    <rdfs:label>peak monsoon ISO week</rdfs:label>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/site"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/site#monsoonWithdrawalWeek">
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/site"/>
+    <rdfs:domain rdf:resource="https://w3id.org/iprok/site#SiteClimate"/>
+    <rdfs:label>monsoon withdrawal ISO week</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/monsoonWithdrawalWeek"/>
+    <rdfs:comment xml:lang="en">The monsoon withdrawal week property in the integrated project information model. Its declared domain is SiteClimate and its declared range is integer.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/site#railwayGoodsYardName">
+    <rdfs:label xml:lang="en">railway Goods Yard Name</rdfs:label>
+    <rdfs:domain rdf:resource="https://w3id.org/iprok/site#SiteLogistics"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/railwayGoodsYardName"/>
+    <rdfs:comment xml:lang="en">The railway goods yard name property in the integrated project information model. Its declared domain is SiteLogistics and its declared range is string.</rdfs:comment>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/site"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/site#labourAccommodationNeeded">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <rdfs:label>labour accommodation needed</rdfs:label>
+    <rdfs:comment>True when labourColonyDistanceKm &gt; 5 AND publicTransportDistanceM &gt; 500.</rdfs:comment>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/labourAccommodationNeeded"/>
+    <rdfs:domain rdf:resource="https://w3id.org/iprok/site#SiteLabour"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/site"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/site#dataVersion">
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/site"/>
+    <rdfs:comment>Semantic version of the site-intel fetcher schema. Bump on any breaking change to a sub-domain's property set so old reports can be re-fetched.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://w3id.org/iprok/site#SiteIntelligence"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/dataVersion"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label>data version</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/site#heatWaveDaysPerYear">
+    <rdfs:label>heat wave days per year</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/site"/>
+    <rdfs:domain rdf:resource="https://w3id.org/iprok/site#SiteClimate"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+    <rdfs:comment xml:lang="en">The heat wave days per year property in the integrated project information model. Its declared domain is SiteClimate and its declared range is decimal.</rdfs:comment>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/heatWaveDaysPerYear"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/site#hospitalName">
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/site"/>
+    <rdfs:comment xml:lang="en">The hospital name property in the integrated project information model. Its declared domain is SiteWorkerSafety and its declared range is string.</rdfs:comment>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/hospitalName"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="en">hospital Name</rdfs:label>
+    <rdfs:domain rdf:resource="https://w3id.org/iprok/site#SiteWorkerSafety"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/site#SiteWorkerSafety">
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/SiteWorkerSafety"/>
+    <rdfs:comment>NASA POWER heat stress (WBGT &gt; 32°C per IS 3786) + nearest hospital + AQI. Drives the hospital &gt; 15km auto-risk.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/iprok/site#SiteIntelligence"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/site"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Site Worker Safety</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/site#groundwaterDepthPreMonsoonM">
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/site"/>
+    <rdfs:label>groundwater depth pre-monsoon (m)</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/groundwaterDepthPreMonsoonM"/>
+    <rdfs:domain rdf:resource="https://w3id.org/iprok/site#SiteHydrology"/>
+    <rdfs:comment xml:lang="en">The groundwater depth pre monsoon m property in the integrated project information model. Its declared domain is SiteHydrology and its declared range is decimal.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/site#hospitalDistanceKm">
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/hospitalDistanceKm"/>
+    <rdfs:domain rdf:resource="https://w3id.org/iprok/site#SiteWorkerSafety"/>
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+    <rdfs:comment xml:lang="en">The hospital distance km property in the integrated project information model. Its declared domain is SiteWorkerSafety and its declared range is decimal.</rdfs:comment>
+    <rdfs:label>nearest emergency hospital distance (km)</rdfs:label>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/site"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/site#rmc2Name">
+    <rdfs:label xml:lang="en">rmc2Name</rdfs:label>
+    <rdfs:comment xml:lang="en">The rmc2name property in the integrated project information model. Its declared domain is SiteLogistics and its declared range is string.</rdfs:comment>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/site"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/rmc2Name"/>
+    <rdfs:domain rdf:resource="https://w3id.org/iprok/site#SiteLogistics"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/site#publicTransportType">
+    <rdfs:domain rdf:resource="https://w3id.org/iprok/site#SiteLabour"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/publicTransportType"/>
+    <rdfs:comment>Bus Stop | Metro | Suburban Rail | Auto Stand | None.</rdfs:comment>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/site"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label>public transport type</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/site#dustRiskMonths">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label>dust risk months</rdfs:label>
+    <rdfs:domain rdf:resource="https://w3id.org/iprok/site#SiteWorkerSafety"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:comment>Comma-separated month abbreviations where PM10 &gt; 250 µg/m³ typical.</rdfs:comment>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/site"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/dustRiskMonths"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/site#monsoonActiveWeeks">
+    <rdfs:domain rdf:resource="https://w3id.org/iprok/site#SiteClimate"/>
+    <rdfs:comment xml:lang="en">The monsoon active weeks property in the integrated project information model. Its declared domain is SiteClimate and its declared range is integer.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/monsoonActiveWeeks"/>
+    <rdfs:label>monsoon active weeks</rdfs:label>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/site"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/site#aggregateQuarryKm">
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/aggregateQuarryKm"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="en">The aggregate quarry km property in the integrated project information model. Its declared domain is SiteLogistics and its declared range is decimal.</rdfs:comment>
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+    <rdfs:domain rdf:resource="https://w3id.org/iprok/site#SiteLogistics"/>
+    <rdfs:label>aggregate quarry distance (km)</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/site"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/site#waterSourceDistanceKm">
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/waterSourceDistanceKm"/>
+    <rdfs:comment xml:lang="en">The water source distance km property in the integrated project information model. Its declared domain is SiteHydrology and its declared range is decimal.</rdfs:comment>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/site"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label>water source distance (km)</rdfs:label>
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+    <rdfs:domain rdf:resource="https://w3id.org/iprok/site#SiteHydrology"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/site#publicTransportDistanceM">
+    <rdfs:label>public transport distance (m)</rdfs:label>
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/publicTransportDistanceM"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:comment xml:lang="en">The public transport distance m property in the integrated project information model. Its declared domain is SiteLabour and its declared range is decimal.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://w3id.org/iprok/site#SiteLabour"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/site"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/site#SiteIntelligence">
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/site"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Site Intelligence Report</rdfs:label>
+    <rdfs:comment>Auto-generated site context report at project GPS setup. Holds six typed sub-domains (Hydrology / Logistics / Worker Safety / Utilities / Labour / Climate). Six threshold-based auto-risks (v2.0 §3.2) seeded at initiation from this report.</rdfs:comment>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/SiteIntelligence"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/site#SiteLogistics">
+    <rdfs:label>Site Logistics</rdfs:label>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/SiteLogistics"/>
+    <rdfs:comment>OSM-derived road / RMC / steel depot / rail / air. Drives the no-heavy-vehicle-access auto-risk.</rdfs:comment>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/site"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/iprok/site#SiteIntelligence"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/site#roadAccessClass">
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/site"/>
+    <rdfs:label>road access class</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment>NH | SH | MDR | ODR | VR (per OSM highway tag).</rdfs:comment>
+    <rdfs:domain rdf:resource="https://w3id.org/iprok/site#SiteLogistics"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/roadAccessClass"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/site#annualRainfallMM">
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/annualRainfallMM"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/site"/>
+    <rdfs:domain rdf:resource="https://w3id.org/iprok/site#SiteClimate"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="en">The annual rainfall mm property in the integrated project information model. Its declared domain is SiteClimate and its declared range is decimal.</rdfs:comment>
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+    <rdfs:label>annual rainfall (mm)</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/site#aqiZone">
+    <rdfs:comment>CPCB AQI band — Good | Satisfactory | Moderate | Poor | Very Poor | Severe.</rdfs:comment>
+    <rdfs:label>AQI zone</rdfs:label>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/site"/>
+    <rdfs:domain rdf:resource="https://w3id.org/iprok/site#SiteWorkerSafety"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/aqiZone"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/site#siteAmbientAQI">
+    <rdfs:comment xml:lang="en">The site ambient aqi property in the integrated project information model. Its declared domain is SiteWorkerSafety and its declared range is integer.</rdfs:comment>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/site"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/siteAmbientAQI"/>
+    <rdfs:domain rdf:resource="https://w3id.org/iprok/site#SiteWorkerSafety"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label>site ambient AQI</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/site#gridVoltageKV">
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/site"/>
+    <rdfs:label>grid voltage (kV)</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+    <rdfs:comment xml:lang="en">The grid voltage kv property in the integrated project information model. Its declared domain is SiteUtilities and its declared range is decimal.</rdfs:comment>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/gridVoltageKV"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:domain rdf:resource="https://w3id.org/iprok/site#SiteUtilities"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/site#gridSubstationName">
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/site"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/gridSubstationName"/>
+    <rdfs:label xml:lang="en">grid Substation Name</rdfs:label>
+    <rdfs:domain rdf:resource="https://w3id.org/iprok/site#SiteUtilities"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="en">The grid substation name property in the integrated project information model. Its declared domain is SiteUtilities and its declared range is string.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/site#rmc1DistanceKm">
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/rmc1DistanceKm"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/site"/>
+    <rdfs:label>RMC plant 1 distance (km)</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+    <rdfs:domain rdf:resource="https://w3id.org/iprok/site#SiteLogistics"/>
+    <rdfs:comment xml:lang="en">The rmc1distance km property in the integrated project information model. Its declared domain is SiteLogistics and its declared range is decimal.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/site#labourColonyDistanceKm">
+    <rdfs:domain rdf:resource="https://w3id.org/iprok/site#SiteLabour"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/site"/>
+    <rdfs:label>labour colony distance (km)</rdfs:label>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/labourColonyDistanceKm"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+    <rdfs:comment xml:lang="en">The labour colony distance km property in the integrated project information model. Its declared domain is SiteLabour and its declared range is decimal.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/site#cementStockistKm">
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/site"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:label>cement stockist distance (km)</rdfs:label>
+    <rdfs:comment xml:lang="en">The cement stockist km property in the integrated project information model. Its declared domain is SiteLogistics and its declared range is decimal.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://w3id.org/iprok/site#SiteLogistics"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/cementStockistKm"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/site#cgwbBlockCategory">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/cgwbBlockCategory"/>
+    <rdfs:domain rdf:resource="https://w3id.org/iprok/site#SiteHydrology"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/site"/>
+    <rdfs:comment>Safe | Semi-Critical | Critical | Over-exploited (per CGWB block-level groundwater assessment).</rdfs:comment>
+    <rdfs:label>CGWB block category</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/site#peakHeatMonthWBGT">
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/site"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/peakHeatMonthWBGT"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:label>peak heat month WBGT (°C)</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="https://w3id.org/iprok/site#SiteWorkerSafety"/>
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+    <rdfs:comment xml:lang="en">The peak heat month wbgt property in the integrated project information model. Its declared domain is SiteWorkerSafety and its declared range is decimal.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/site#groundwaterDepthPostMonsoonM">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:domain rdf:resource="https://w3id.org/iprok/site#SiteHydrology"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/site"/>
+    <rdfs:comment xml:lang="en">The groundwater depth post monsoon m property in the integrated project information model. Its declared domain is SiteHydrology and its declared range is decimal.</rdfs:comment>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/groundwaterDepthPostMonsoonM"/>
+    <rdfs:label>groundwater depth post-monsoon (m)</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/site#undergroundUtilityRisk">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/undergroundUtilityRisk"/>
+    <rdfs:comment>Low | Medium | High — based on OSM presence of buried gas / water / fibre lines within 50m.</rdfs:comment>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/site"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="https://w3id.org/iprok/site#SiteUtilities"/>
+    <rdfs:label>underground utility risk</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/site#nearestWaterSourceName">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/nearestWaterSourceName"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/site"/>
+    <rdfs:domain rdf:resource="https://w3id.org/iprok/site#SiteHydrology"/>
+    <rdfs:comment xml:lang="en">The nearest water source name property in the integrated project information model. Its declared domain is SiteHydrology and its declared range is string.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label>nearest water source name</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/site#undergroundUtilityNotes">
+    <rdfs:label xml:lang="en">underground Utility Notes</rdfs:label>
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:comment xml:lang="en">The underground utility notes property in the integrated project information model. Its declared domain is SiteUtilities and its declared range is string.</rdfs:comment>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/site"/>
+    <rdfs:domain rdf:resource="https://w3id.org/iprok/site#SiteUtilities"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/undergroundUtilityNotes"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/site#SiteLabour">
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/site"/>
+    <rdfs:comment>OSM labour colony + public transport + ICAR state agri calendar. Feeds the labour-availability adjustment in P2B planning.</rdfs:comment>
+    <rdfs:label>Site Labour</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/iprok/site#SiteIntelligence"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/SiteLabour"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/site#stateAgriCalendarJson">
+    <rdfs:comment>ICAR state×crop×month JSON. Kharif/Rabi harvest weeks and labour impact score. The P2B Planning Module reads this to reduce crew availability 20-35% on harvest weeks.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="https://w3id.org/iprok/site#SiteLabour"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/site"/>
+    <rdfs:label>state agricultural calendar (JSON)</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/stateAgriCalendarJson"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/site#nearestAirportKm">
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/site"/>
+    <rdfs:label>nearest airport distance (km)</rdfs:label>
+    <rdfs:domain rdf:resource="https://w3id.org/iprok/site#SiteLogistics"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/nearestAirportKm"/>
+    <rdfs:comment xml:lang="en">The nearest airport km property in the integrated project information model. Its declared domain is SiteLogistics and its declared range is decimal.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/site#SiteClimate">
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/site"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/iprok/site#SiteIntelligence"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/SiteClimate"/>
+    <rdfs:label>Site Climate</rdfs:label>
+    <rdfs:comment>NASA POWER 10-year climatology: monsoon onset/withdrawal ISO weeks + annual rainfall + heat-wave days/year. Companion to the S6.6+ &lt;https://w3id.org/iprok/signal#HistoricalWeatherProfile&gt; (which holds the 52-week probability profile).</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/site#historicalWeeklyRainJson">
+    <rdfs:comment>52-week array of {week, rain_mm} from NASA POWER 10-year mean. Cross-reference: &lt;https://w3id.org/iprok/signal#HistoricalWeatherProfile&gt; (S6.6+) holds the probabilistic version.</rdfs:comment>
+    <rdfs:label>historical weekly rain (JSON)</rdfs:label>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/site"/>
+    <rdfs:domain rdf:resource="https://w3id.org/iprok/site#SiteClimate"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/historicalWeeklyRainJson"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/site#railwayGoodsYardKm">
+    <rdfs:comment xml:lang="en">The railway goods yard km property in the integrated project information model. Its declared domain is SiteLogistics and its declared range is decimal.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://w3id.org/iprok/site#SiteLogistics"/>
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/site"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/railwayGoodsYardKm"/>
+    <rdfs:label>railway goods yard distance (km)</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/site#overheadHTLineDistanceM">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/overheadHTLineDistanceM"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/site"/>
+    <rdfs:domain rdf:resource="https://w3id.org/iprok/site#SiteUtilities"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label>overhead HT line distance (m)</rdfs:label>
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+    <rdfs:comment xml:lang="en">The overhead htline distance m property in the integrated project information model. Its declared domain is SiteUtilities and its declared range is decimal.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/site#SiteUtilities">
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/SiteUtilities"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/site"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/iprok/site#SiteIntelligence"/>
+    <rdfs:label>Site Utilities</rdfs:label>
+    <rdfs:comment>OSM grid substation + overhead HT line detection within 200m. The overhead-HT-line-present case is safety-critical and auto-creates a Score 16 risk.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/site#heatStressMonths">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:comment>Comma-separated month abbreviations where WBGT &gt; 32°C per IS 3786 (e.g. 'Apr,May,Jun').</rdfs:comment>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/heatStressMonths"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/site"/>
+    <rdfs:label>heat stress months</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="https://w3id.org/iprok/site#SiteWorkerSafety"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/site#steelDepotName">
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/steelDepotName"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/site"/>
+    <rdfs:comment xml:lang="en">The steel depot name property in the integrated project information model. Its declared domain is SiteLogistics and its declared range is string.</rdfs:comment>
+    <rdfs:label xml:lang="en">steel Depot Name</rdfs:label>
+    <rdfs:domain rdf:resource="https://w3id.org/iprok/site#SiteLogistics"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/site#steelDepotDistanceKm">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="https://w3id.org/iprok/site#SiteLogistics"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/steelDepotDistanceKm"/>
+    <rdfs:comment xml:lang="en">The steel depot distance km property in the integrated project information model. Its declared domain is SiteLogistics and its declared range is decimal.</rdfs:comment>
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/site"/>
+    <rdfs:label>steel depot distance (km)</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/site#seasonalFluctuationM">
+    <rdfs:comment xml:lang="en">The seasonal fluctuation m property in the integrated project information model. Its declared domain is SiteHydrology and its declared range is decimal.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://w3id.org/iprok/site#SiteHydrology"/>
+    <rdfs:label>seasonal fluctuation (m)</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/site"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/seasonalFluctuationM"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/site#monsoonOnsetWeek">
+    <rdfs:domain rdf:resource="https://w3id.org/iprok/site#SiteClimate"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:label>monsoon onset ISO week</rdfs:label>
+    <rdfs:comment xml:lang="en">The monsoon onset week property in the integrated project information model. Its declared domain is SiteClimate and its declared range is integer.</rdfs:comment>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/monsoonOnsetWeek"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/site"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/site#overheadHTLinePresent">
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/overheadHTLinePresent"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <rdfs:label>overhead HT line present (within 200m)</rdfs:label>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/site"/>
+    <rdfs:domain rdf:resource="https://w3id.org/iprok/site#SiteUtilities"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment>True triggers a Critical Score-16 auto-risk per IS 5613 safety clearance norms.</rdfs:comment>
+  </rdf:Description>
+</rdf:RDF>

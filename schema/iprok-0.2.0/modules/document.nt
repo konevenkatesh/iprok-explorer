@@ -1,0 +1,249 @@
+<https://w3id.org/iprok/document#geometry> <http://www.w3.org/2000/01/rdf-schema#comment> "SVG path data or a coordinate-JSON string. Page-normalised so it survives zoom. Domain unspecified (antipattern #8)." .
+<https://w3id.org/iprok/document#Document> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/document> .
+<https://w3id.org/iprok/document#annotatedAt> <http://www.w3.org/2000/01/rdf-schema#comment> "The annotated at property in the integrated project information model."@en .
+<https://w3id.org/iprok/document#annotationText> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/annotationText> .
+<https://w3id.org/iprok/document#Transmittal> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/document> .
+<https://w3id.org/iprok/document#detectedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/document#geometry> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/document#colour> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/colour> .
+<https://w3id.org/iprok/document#Drawing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iprok/document#Transmittal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iprok/document#colour> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/document> .
+<https://w3id.org/iprok/document#rfiState> <http://www.w3.org/2000/01/rdf-schema#comment> "Points at one <https://w3id.org/iprok/document#RFIState> individual. SHACL constrains via sh:in (sh:in ONLY, no sh:class — the API validates a node's turtle in isolation, per the V0.37 cross-graph caveat). Domain unspecified (antipattern #8)." .
+<https://w3id.org/iprok/document#drawingTitle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/document#comparedWith> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/comparedWith> .
+<https://w3id.org/iprok/document#Transmittal> <http://www.w3.org/2000/01/rdf-schema#comment> "ISO-19650 transmittal record. Auto-numbered T-NNNN, auto-PDF, append-only; one per drawing state transition + ad-hoc batches via POST /transmittals." .
+<https://w3id.org/iprok/document#stampType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/document#RFIState> <http://www.w3.org/2000/01/rdf-schema#label> "RFI state" .
+<https://w3id.org/iprok/document#drawingId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/document#pageNumber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/document#discipline> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/discipline> .
+<https://w3id.org/iprok/document#changeType> <http://www.w3.org/2000/01/rdf-schema#comment> "Added / Removed / Modified. SHACL constrains via sh:in (string literal — same idiom as <https://w3id.org/iprok/schedule#linkType>)." .
+<https://w3id.org/iprok/document#discipline> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/document> .
+<https://w3id.org/iprok/document#annotationText> <http://www.w3.org/2000/01/rdf-schema#label> "annotation text" .
+<https://w3id.org/iprok/document#rfiAnswer> <http://www.w3.org/2000/01/rdf-schema#label> "RFI answer" .
+<https://w3id.org/iprok/document#comparedWith> <http://www.w3.org/2000/01/rdf-schema#comment> "The prior <https://w3id.org/iprok/document#Drawing> revision the new one was diffed against. Domain unspecified (antipattern #8)." .
+<https://w3id.org/iprok/document#discipline> <http://www.w3.org/2000/01/rdf-schema#comment> "Structural / Architectural / MEP / Civil / Electrical / Plumbing." .
+<https://w3id.org/iprok/document#transmittalId> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/document> .
+<https://w3id.org/iprok/document#rfiId> <http://www.w3.org/2000/01/rdf-schema#comment> "Project-unique, zero-padded, e.g. \"RFI-0042\". Sequential per project (SPARQL MAX+1, same proven pattern as V0.29 measurementNo — FusekiRepo is Fuseki-only per the Layering rule, so no Redis client in the SPARQL layer). Domain unspecified (antipattern #8)." .
+<https://w3id.org/iprok/document#discipline> <http://www.w3.org/2000/01/rdf-schema#label> "discipline" .
+<https://w3id.org/iprok/document#transmittalDate> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/document> .
+<https://w3id.org/iprok/document#lifecycleState> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/document> .
+<https://w3id.org/iprok/document#RFIState> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/document> .
+<https://w3id.org/iprok/document#transmittalId> <http://www.w3.org/2000/01/rdf-schema#comment> "Project-unique zero-padded short id, e.g. \"T-0042\". SPARQL MAX+1 (V0.29 measurementNo posture, same as RFI-NNNN). Domain unspecified (antipattern #8)." .
+<https://w3id.org/iprok/document#onDrawing> <http://www.w3.org/2000/01/rdf-schema#comment> "The <https://w3id.org/iprok/document#Drawing> this annotation marks up. Domain unspecified (antipattern #8)." .
+<https://w3id.org/iprok/document#annotationText> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/document#changeType> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/changeType> .
+<https://w3id.org/iprok/document#geometry> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/geometry> .
+<https://w3id.org/iprok/document#RFIState> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iprok/document#RFIState> <http://www.w3.org/2000/01/rdf-schema#comment> "RFI lifecycle. Transitions (enforced in the API): Draft->Submitted (raiser); Submitted->UnderReview (assignee/PM); UnderReview->Answered (assignee); Answered->Closed (raiser confirms); Answered->UnderReview (raiser rejects); any->Cancelled (PM/Admin). Modelled like <https://w3id.org/iprok/document#DrawingState> / <https://w3id.org/iprok/quality#NCRStatus>." .
+<https://w3id.org/iprok/document#annotatedAt> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/document> .
+<https://w3id.org/iprok/document#issuedTo> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/document> .
+<https://w3id.org/iprok/document#drawingId> <http://www.w3.org/2000/01/rdf-schema#comment> "Project-unique sheet number, e.g. \"S-101\". Domain unspecified (antipattern #8)." .
+<https://w3id.org/iprok/document#answeredBy> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/answeredBy> .
+<https://w3id.org/iprok/document#annotationText> <http://www.w3.org/2000/01/rdf-schema#comment> "Optional — the callout / text-box content." .
+<https://w3id.org/iprok/document#annotatedAt> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/annotatedAt> .
+<https://w3id.org/iprok/document#rfiBody> <http://www.w3.org/2000/01/rdf-schema#label> "RFI body" .
+<https://w3id.org/iprok/document#lifecycleState> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/iprok/document#DrawingState> .
+<https://w3id.org/iprok/document#rfiSubject> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/rfiSubject> .
+<https://w3id.org/iprok/document#transmittalId> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/transmittalId> .
+<https://w3id.org/iprok/document#RFI> <http://www.w3.org/2000/01/rdf-schema#comment> "Request For Information; the core Indian-EPC document workflow, modelled as a graph node with a 6-state machine and SLA tracking, linked to the drawing / markup / activity that raised it." .
+<https://w3id.org/iprok/document#annotatedBy> <http://www.w3.org/2000/01/rdf-schema#label> "annotated by" .
+<https://w3id.org/iprok/document#Drawing> <http://www.w3.org/2000/01/rdf-schema#comment> "A construction drawing (GA / Detail / Section / Elevation / Layout / Schematic). One node per (drawingId, revision); <https://w3id.org/iprok/integrated#supersedes> links a new revision to the one it replaces (S2.1)." .
+<https://w3id.org/iprok/document#rfiState> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/rfiState> .
+<https://w3id.org/iprok/document#Transmittal> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Activity> .
+<https://w3id.org/iprok/document#drawingTitle> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/drawingTitle> .
+<https://w3id.org/iprok/document#inDrawing> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/inDrawing> .
+<https://w3id.org/iprok/document#colour> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/document#fileRef> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/document#locationHint> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/document> .
+<https://w3id.org/iprok/document#colour> <http://www.w3.org/2000/01/rdf-schema#comment> "Hex stroke/fill colour, e.g. \"#1d4ed8\". Domain unspecified (antipattern #8)." .
+<https://w3id.org/iprok/document#changeType> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/document> .
+<https://w3id.org/iprok/document#onDrawing> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/onDrawing> .
+<https://w3id.org/iprok/document#DrawingState> <http://www.w3.org/2000/01/rdf-schema#label> "Drawing state" .
+<https://w3id.org/iprok/document#detectedAt> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://w3id.org/iprok/document#changeDescription> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/changeDescription> .
+<https://w3id.org/iprok/document#DrawingChange> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/DrawingChange> .
+<https://w3id.org/iprok/document#purpose> <http://www.w3.org/2000/01/rdf-schema#comment> "ForConstruction / ForReview / ForApproval / ForInformation / AsBuilt / Superseded. SHACL constrains via sh:in (string literal, no sh:class — same idiom as DrawingChangeShape). Domain unspecified (antipattern #8)." .
+<https://w3id.org/iprok/document#detectedBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/document#transmittalId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/document#discipline> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/document#answeredBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/iprok/document#RFI> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/RFI> .
+<https://w3id.org/iprok/document#rfiAnswer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/document#purpose> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/document#answeredBy> <http://www.w3.org/2000/01/rdf-schema#comment> "The <https://w3id.org/iprok#User> who answered. Mandatory once state = RFIAnswered (RFIShape sh:or rule). Domain unspecified (antipattern #8)." .
+<https://w3id.org/iprok/document#rfiBody> <http://www.w3.org/2000/01/rdf-schema#comment> "The question being asked." .
+<https://w3id.org/iprok/document#Drawing> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/document> .
+<https://w3id.org/iprok/document#issuedTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/iprok/document#rfiBody> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/document#issuedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/iprok/document#transmittalDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://w3id.org/iprok/document#annotatedAt> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/document#drawingId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/document#geometry> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/document> .
+<https://w3id.org/iprok/document#purpose> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/document#stampType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/document#DrawingState> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iprok/document#rfiBody> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/document#includesDrawings> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/iprok/document#rfiId> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/document> .
+<https://w3id.org/iprok/document#comparedWith> <http://www.w3.org/2000/01/rdf-schema#label> "compared with" .
+<https://w3id.org/iprok/document#rfiId> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/rfiId> .
+<https://w3id.org/iprok/document#rfiState> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/iprok/document#RFIState> .
+<https://w3id.org/iprok/document#rfiSubject> <http://www.w3.org/2000/01/rdf-schema#label> "RFI subject" .
+<https://w3id.org/iprok/document#Annotation> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/Annotation> .
+<https://w3id.org/iprok/document#answeredBy> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/document> .
+<https://w3id.org/iprok/document#locationHint> <http://www.w3.org/2000/01/rdf-schema#comment> "Optional free-text where-on-the-sheet hint from the vision model (e.g. \"grid C-4, near the stair core\")." .
+<https://w3id.org/iprok/document#changeDescription> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/document> .
+<https://w3id.org/iprok/document#rfiState> <http://www.w3.org/2000/01/rdf-schema#label> "RFI state" .
+<https://w3id.org/iprok/document#rfiBody> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/rfiBody> .
+<https://w3id.org/iprok/document#DrawingState> <http://www.w3.org/2000/01/rdf-schema#comment> "ISO 19650 information-container lifecycle state. Transitions: WIP->Shared->Published->Archived; any->Superseded on a newer published revision. Modelled like <https://w3id.org/iprok/quality#NCRStatus> / <https://w3id.org/iprok/safety#IncidentType>." .
+<https://w3id.org/iprok/document#inDrawing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/iprok/document#purpose> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/purpose> .
+<https://w3id.org/iprok/document#detectedAt> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/detectedAt> .
+<https://w3id.org/iprok/document#annotationText> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/document#detectedAt> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/document#issuedBy> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/document> .
+<https://w3id.org/iprok/document#rfiState> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/document> .
+<https://w3id.org/iprok/document#DrawingState> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/DrawingState> .
+<https://w3id.org/iprok/document#locationHint> <http://www.w3.org/2000/01/rdf-schema#label> "location hint" .
+<https://w3id.org/iprok/document#discipline> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/document#issuedBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/prov#Agent> .
+<https://w3id.org/iprok/document#drawingId> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/drawingId> .
+<https://w3id.org/iprok/document#answeredBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/prov#Agent> .
+<https://w3id.org/iprok/document#annotationType> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/document> .
+<https://w3id.org/iprok/document#changeDescription> <http://www.w3.org/2000/01/rdf-schema#label> "change description" .
+<https://w3id.org/iprok/document#rfiSubject> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/document> .
+<https://w3id.org/iprok/document#annotationType> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/annotationType> .
+<https://w3id.org/iprok/document#colour> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/document#Annotation> <http://www.w3.org/2000/01/rdf-schema#label> "Annotation" .
+<https://w3id.org/iprok/document#DrawingChange> <http://www.w3.org/2000/01/rdf-schema#label> "Drawing change" .
+<https://w3id.org/iprok/document#transmittalDate> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/document#issuedTo> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/prov#Agent> .
+<https://w3id.org/iprok/document#annotationType> <http://www.w3.org/2000/01/rdf-schema#comment> "RevisionCloud / Callout / Text / Dimension / Stamp. SHACL constrains via sh:in (string literal, no sh:class)." .
+<https://w3id.org/iprok/document#annotatedAt> <http://www.w3.org/2000/01/rdf-schema#label> "annotated at" .
+<https://w3id.org/iprok/document#Document> <http://www.w3.org/2000/01/rdf-schema#comment> "A controlled project document / drawing artefact (ISO 19650 information container)." .
+<https://w3id.org/iprok/document#Drawing> <http://www.w3.org/2000/01/rdf-schema#label> "Drawing" .
+<https://w3id.org/iprok/document#includesDrawings> <http://www.w3.org/2000/01/rdf-schema#label> "includes drawings" .
+<https://w3id.org/iprok/document#detectedAt> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/document> .
+<https://w3id.org/iprok/document#changeDescription> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/document#inDrawing> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/document> .
+<https://w3id.org/iprok/document#Transmittal> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/Transmittal> .
+<https://w3id.org/iprok/document#locationHint> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/locationHint> .
+<https://w3id.org/iprok/document#transmittalId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/document#Document> <http://www.w3.org/2000/01/rdf-schema#label> "Document" .
+<https://w3id.org/iprok/document#transmittalDate> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/transmittalDate> .
+<https://w3id.org/iprok/document#drawingTitle> <http://www.w3.org/2000/01/rdf-schema#label> "drawing title" .
+<https://w3id.org/iprok/document#transmittalDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/document#issuedTo> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/issuedTo> .
+<https://w3id.org/iprok/document#onDrawing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/iprok/document#annotationType> <http://www.w3.org/2000/01/rdf-schema#label> "annotation type" .
+<https://w3id.org/iprok/document#answeredBy> <http://www.w3.org/2000/01/rdf-schema#label> "answered by" .
+<https://w3id.org/iprok/document#colour> <http://www.w3.org/2000/01/rdf-schema#label> "colour" .
+<https://w3id.org/iprok/document#changeDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/document#annotatedBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/prov#Agent> .
+<https://w3id.org/iprok/document#Transmittal> <http://www.w3.org/2000/01/rdf-schema#label> "Transmittal" .
+<https://w3id.org/iprok/document#annotatedAt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/document#rfiState> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/iprok/document#annotatedBy> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/annotatedBy> .
+<https://w3id.org/iprok/document#DrawingState> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/document> .
+<https://w3id.org/iprok/document#drawingTitle> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/document> .
+<https://w3id.org/iprok/document#drawingId> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/document> .
+<https://w3id.org/iprok/document#detectedBy> <http://www.w3.org/2000/01/rdf-schema#label> "detected by" .
+<https://w3id.org/iprok/document#annotationType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/document#pageNumber> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/document> .
+<https://w3id.org/iprok/document#annotatedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/iprok/document#issuedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "The <https://w3id.org/iprok#User> who issued the transmittal. Domain unspecified (antipattern #8)." .
+<https://w3id.org/iprok/document#drawingId> <http://www.w3.org/2000/01/rdf-schema#label> "drawing id" .
+<https://w3id.org/iprok/document#locationHint> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/document#locationHint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/document#rfiSubject> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/document#changeType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/document#fileRef> <http://www.w3.org/2000/01/rdf-schema#comment> "Canonical s3:// URI of the stored original. Domain unspecified (antipattern #8 — M2 reuse)." .
+<https://w3id.org/iprok/document#detectedAt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/document#onDrawing> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/document> .
+<https://w3id.org/iprok/document#detectedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Model identifier, e.g. \"gemini-2.0-flash\". A literal, not an agent IRI — this is machine-detected, the PROV-O wrap still records the triggering user." .
+<https://w3id.org/iprok/document#transmittalId> <http://www.w3.org/2000/01/rdf-schema#label> "transmittal id" .
+<https://w3id.org/iprok/document#rfiAnswer> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/rfiAnswer> .
+<https://w3id.org/iprok/document#geometry> <http://www.w3.org/2000/01/rdf-schema#label> "geometry" .
+<https://w3id.org/iprok/document#Annotation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iprok/document#lifecycleState> <http://www.w3.org/2000/01/rdf-schema#comment> "Points at one <https://w3id.org/iprok/document#DrawingState> individual. Domain unspecified (antipattern #8); SHACL DrawingShape constrains the value via sh:in (sh:in ONLY, no sh:class — the API validates a node's turtle in isolation with no ontology import, per the V0.37 cross-graph-validation caveat)." .
+<https://w3id.org/iprok/document#drawingTitle> <http://www.w3.org/2000/01/rdf-schema#comment> "The drawing title property in the integrated project information model."@en .
+<https://w3id.org/iprok/document#Annotation> <http://www.w3.org/2000/01/rdf-schema#comment> "One SVG markup on a drawing (revision cloud / callout / text / dimension / stamp). Append-only: a deleted markup is prov:invalidated, never removed. Modelled like <https://w3id.org/iprok/quality#RecurrenceAlert> (prov:Entity subclass)." .
+<https://w3id.org/iprok/document#onDrawing> <http://www.w3.org/2000/01/rdf-schema#label> "on drawing" .
+<https://w3id.org/iprok/document#stampType> <http://www.w3.org/2000/01/rdf-schema#label> "stamp type" .
+<https://w3id.org/iprok/document#lifecycleState> <http://www.w3.org/2000/01/rdf-schema#label> "lifecycle state" .
+<https://w3id.org/iprok/document#stampType> <http://www.w3.org/2000/01/rdf-schema#comment> "Optional — APPROVED / FOR CONSTRUCTION / FOR REVIEW / SUPERSEDED / NOT FOR CONSTRUCTION (only on Stamp annotations)." .
+<https://w3id.org/iprok/document#drawingTitle> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/document#annotatedBy> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/document> .
+<https://w3id.org/iprok/document#detectedBy> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/detectedBy> .
+<https://w3id.org/iprok/document#Document> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iprok/document#includesDrawings> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/iprok/document#Drawing> .
+<https://w3id.org/iprok/document#rfiAnswer> <http://www.w3.org/2000/01/rdf-schema#comment> "The answer text. Mandatory once state = RFIAnswered." .
+<https://w3id.org/iprok/document#includesDrawings> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/document> .
+<https://w3id.org/iprok/document#geometry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/document#includesDrawings> <http://www.w3.org/2000/01/rdf-schema#comment> "Repeatable. SHACL requires sh:minCount 1 — a transmittal with no drawings is meaningless. Domain unspecified (antipattern #8)." .
+<https://w3id.org/iprok/document#changeDescription> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/document#fileRef> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/fileRef> .
+<https://w3id.org/iprok/document#fileRef> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/document> .
+<https://w3id.org/iprok/document#transmittalDate> <http://www.w3.org/2000/01/rdf-schema#label> "transmittal date" .
+<https://w3id.org/iprok/document#comparedWith> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/iprok/document#inDrawing> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/iprok/document#Drawing> .
+<https://w3id.org/iprok/document#RFI> <http://www.w3.org/2000/01/rdf-schema#label> "RFI" .
+<https://w3id.org/iprok/document#rfiId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/document#issuedTo> <http://www.w3.org/2000/01/rdf-schema#comment> "Repeatable — the <https://w3id.org/iprok#User>(s) the transmittal is addressed to. SHACL requires sh:minCount 1. Domain unspecified (antipattern #8)." .
+<https://w3id.org/iprok/document#rfiId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/document#RFI> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/iprok/document#Document> .
+<https://w3id.org/iprok/document#Annotation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Entity> .
+<https://w3id.org/iprok/document#Drawing> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/Drawing> .
+<https://w3id.org/iprok/document#rfiAnswer> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/document> .
+<https://w3id.org/iprok/document#annotatedAt> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://w3id.org/iprok/document#pageNumber> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/pageNumber> .
+<https://w3id.org/iprok/document#pageNumber> <http://www.w3.org/2000/01/rdf-schema#label> "page number" .
+<https://w3id.org/iprok/document#RFI> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Entity> .
+<https://w3id.org/iprok/document#DrawingChange> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/document> .
+<https://w3id.org/iprok/document#annotatedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "The <https://w3id.org/iprok#User> (or, for AI suggestions, the model agent IRI) that made the markup. Domain unspecified (antipattern #8)." .
+<https://w3id.org/iprok/document#fileRef> <http://www.w3.org/2000/01/rdf-schema#label> "file ref" .
+<https://w3id.org/iprok/document#detectedBy> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/document> .
+<https://w3id.org/iprok/document#detectedAt> <http://www.w3.org/2000/01/rdf-schema#label> "detected at" .
+<https://w3id.org/iprok/document#issuedBy> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/issuedBy> .
+<https://w3id.org/iprok/document#inDrawing> <http://www.w3.org/2000/01/rdf-schema#label> "in drawing" .
+<https://w3id.org/iprok/document#includesDrawings> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/includesDrawings> .
+<https://w3id.org/iprok/document#transmittalDate> <http://www.w3.org/2000/01/rdf-schema#comment> "The transmittal date property in the integrated project information model."@en .
+<https://w3id.org/iprok/document#Document> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/Document> .
+<https://w3id.org/iprok/document#onDrawing> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/iprok/document#Drawing> .
+<https://w3id.org/iprok/document#purpose> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/document> .
+<https://w3id.org/iprok/document#stampType> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/stampType> .
+<https://w3id.org/iprok/document#DrawingChange> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iprok/document#Drawing> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/iprok/document#Document> .
+<https://w3id.org/iprok/document#RFIState> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/RFIState> .
+<https://w3id.org/iprok/document#comparedWith> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/iprok/document#Drawing> .
+<https://w3id.org/iprok/document#rfiSubject> <http://www.w3.org/2000/01/rdf-schema#comment> "The rfi subject property in the integrated project information model."@en .
+<https://w3id.org/iprok/document#comparedWith> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/document> .
+<https://w3id.org/iprok/document#stampType> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/document> .
+<https://w3id.org/iprok/document#purpose> <http://www.w3.org/2000/01/rdf-schema#label> "purpose" .
+<https://w3id.org/iprok/document#annotationType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/document#fileRef> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+<https://w3id.org/iprok/document#rfiBody> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/document> .
+<https://w3id.org/iprok/document#changeDescription> <http://www.w3.org/2000/01/rdf-schema#comment> "The change description property in the integrated project information model."@en .
+<https://w3id.org/iprok/document#rfiSubject> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/document#rfiSubject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/document#Annotation> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/document> .
+<https://w3id.org/iprok/document#changeType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/document#RFI> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/document> .
+<https://w3id.org/iprok/document#detectedAt> <http://www.w3.org/2000/01/rdf-schema#comment> "The detected at property in the integrated project information model."@en .
+<https://w3id.org/iprok/document#inDrawing> <http://www.w3.org/2000/01/rdf-schema#comment> "The (new) <https://w3id.org/iprok/document#Drawing> this change was detected on. Domain unspecified (antipattern #8)." .
+<https://w3id.org/iprok/document#changeType> <http://www.w3.org/2000/01/rdf-schema#label> "change type" .
+<https://w3id.org/iprok/document#DrawingChange> <http://www.w3.org/2000/01/rdf-schema#comment> "One AI-detected change between two drawing revisions (added / removed / modified element, dimension, annotation, or spec). Produced by the compare_revisions task; never hand-authored." .
+<https://w3id.org/iprok/document#RFI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iprok/document#pageNumber> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<https://w3id.org/iprok/document#issuedBy> <http://www.w3.org/2000/01/rdf-schema#label> "issued by" .
+<https://w3id.org/iprok/document#rfiId> <http://www.w3.org/2000/01/rdf-schema#label> "RFI id" .
+<https://w3id.org/iprok/document#lifecycleState> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/lifecycleState> .
+<https://w3id.org/iprok/document#annotationText> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/document> .
+<https://w3id.org/iprok/document#pageNumber> <http://www.w3.org/2000/01/rdf-schema#comment> "1-based PDF page the markup sits on. Domain unspecified (antipattern #8)." .
+<https://w3id.org/iprok/document#rfiAnswer> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/document#drawingTitle> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/document#lifecycleState> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/iprok/document#issuedTo> <http://www.w3.org/2000/01/rdf-schema#label> "issued to" .

@@ -1,0 +1,441 @@
+<https://w3id.org/iprok#OrganisationMasters> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok> .
+<https://w3id.org/iprok#User> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Agent> .
+<https://w3id.org/iprok#legallyBinding> <http://www.w3.org/2000/01/rdf-schema#comment> "xsd:boolean. True for real eMudhra/DigiLocker signatures; False for Stub mode. Allows queries to filter compliance-grade from development signatures." .
+<https://w3id.org/iprok#plannedEnd> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/iprok/schedule#Project> .
+<https://w3id.org/iprok#mastersSetAt> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://w3id.org/iprok#owner> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/owner> .
+<https://w3id.org/iprok#pan> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok#hasMember> <http://www.w3.org/2000/01/rdf-schema#comment> "The has member property in the integrated project information model. Its declared domain is Project and its declared range is ProjectMembership."@en .
+<https://w3id.org/iprok#legalName> <http://www.w3.org/2000/01/rdf-schema#label> "legal Name"@en .
+<https://w3id.org/iprok#plannedStart> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok#plannedStart> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/iprok#labourCessApplicable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok#plannedStart> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/plannedStart> .
+<https://w3id.org/iprok#pan> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/pan> .
+<https://w3id.org/iprok#decisionOptions> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok> .
+<https://w3id.org/iprok#User> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/User> .
+<https://w3id.org/iprok#cin> <http://www.w3.org/2000/01/rdf-schema#comment> "The cin property in the integrated project information model."@en .
+<https://w3id.org/iprok#phoneNumber> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok#deviationThresholdPct> <http://www.w3.org/2000/01/rdf-schema#label> "deviation Threshold Pct"@en .
+<https://w3id.org/iprok#decidedBy> <http://www.w3.org/2000/01/rdf-schema#label> "decided By"@en .
+<https://w3id.org/iprok#constraintStatus> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok> .
+<https://w3id.org/iprok#SignatureEvent> <http://www.w3.org/2000/01/rdf-schema#label> "Signature Event" .
+<https://w3id.org/iprok#IproKThing> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2002/07/owl#Thing> .
+<https://w3id.org/iprok#approvalLevel3Label> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok> .
+<https://w3id.org/iprok#hasMember> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/iprok#userRole> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok#constraintText> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok#constraintId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok#approvalLevel2Limit> <http://www.w3.org/2000/01/rdf-schema#comment> "Deviation value (INR) up to which level 2 approves; above it, level 3." .
+<https://w3id.org/iprok#decisionQuestion> <http://www.w3.org/2000/01/rdf-schema#label> "decision Question"@en .
+<https://w3id.org/iprok#legallyBinding> <http://www.w3.org/2000/01/rdf-schema#label> "legally binding" .
+<https://w3id.org/iprok#userRole> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok#phoneNumber> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/iprok#User> .
+<https://w3id.org/iprok#securityDepositPct> <http://www.w3.org/2000/01/rdf-schema#label> "security Deposit Pct"@en .
+<https://w3id.org/iprok#orgName> <http://www.w3.org/2000/01/rdf-schema#comment> "The org name property in the integrated project information model. Its declared domain is Organisation and its declared range is string."@en .
+<https://w3id.org/iprok#mastersNote> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok#Actor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/iprok#IproKThing> .
+<https://w3id.org/iprok#ProjectMembership> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok> .
+<https://w3id.org/iprok#orgName> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok#zoneConfig> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok#signedAt> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok> .
+<https://w3id.org/iprok#Decision> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok> .
+<https://w3id.org/iprok#joinedAt> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/joinedAt> .
+<https://w3id.org/iprok#signatureId> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok> .
+<https://w3id.org/iprok#zoneConfig> <http://www.w3.org/2000/01/rdf-schema#label> "zone config (JSON)" .
+<https://w3id.org/iprok#signatureProvider> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/signatureProvider> .
+<https://w3id.org/iprok#pilotStatus> <http://www.w3.org/2000/01/rdf-schema#comment> "An Organisation's pilot-lifecycle state. Domain intentionally unspecified (polymorphic-predicate discipline, antipattern #8) even though v0 uses it only on <https://w3id.org/iprok#Organisation>; OrgShape constrains the allowed individuals." .
+<https://w3id.org/iprok#mastersNote> <http://www.w3.org/2000/01/rdf-schema#comment> "Why this version was made — shown in the history." .
+<https://w3id.org/iprok#gstTdsApplicable> <http://www.w3.org/2000/01/rdf-schema#comment> "Whether CGST s.51 TDS applies to this organisation (government bodies and notified persons only)." .
+<https://w3id.org/iprok#decidedAt> <http://www.w3.org/2000/01/rdf-schema#label> "decided At"@en .
+<https://w3id.org/iprok#Constraint> <http://www.w3.org/2000/01/rdf-schema#label> "Constraint" .
+<https://w3id.org/iprok#phoneNumber> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok#adoptedAt> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://w3id.org/iprok#decisionQuestion> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok> .
+<https://w3id.org/iprok#dueDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/iprok#Decision> <http://www.w3.org/2000/01/rdf-schema#comment> "A question about the project and the answer a named person gave to it." .
+<https://w3id.org/iprok#decisionOptions> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok#MastersAdoption> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok> .
+<https://w3id.org/iprok#decisionSource> <http://www.w3.org/2000/01/rdf-schema#comment> "Where the question came from, e.g. plan-check. No rdfs:domain." .
+<https://w3id.org/iprok#legalName> <http://www.w3.org/2000/01/rdf-schema#comment> "The legal name property in the integrated project information model."@en .
+<https://w3id.org/iprok#Calendar> <http://www.w3.org/2000/01/rdf-schema#label> "Calendar" .
+<https://w3id.org/iprok#signedAt> <http://www.w3.org/2000/01/rdf-schema#comment> "ISO-8601 datetime when the signature was applied (server-stamped for stub; provider-returned for real modes)." .
+<https://w3id.org/iprok#constraintStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok#decidedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "The person who took the decision. No rdfs:domain / rdfs:range (antipattern #8)." .
+<https://w3id.org/iprok#mastersVersion> <http://www.w3.org/2000/01/rdf-schema#comment> "1, 2, 3 … per organisation. Version 0 means the platform defaults (never stored)." .
+<https://w3id.org/iprok#fyStartMonth> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<https://w3id.org/iprok#approvalLevel3Label> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok#constraintText> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok#approvalLevel1Limit> <http://www.w3.org/2000/01/rdf-schema#label> "approval Level1Limit"@en .
+<https://w3id.org/iprok#decisionText> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok> .
+<https://w3id.org/iprok#decisionQuestion> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/decisionQuestion> .
+<https://w3id.org/iprok#constraintFlow> <http://www.w3.org/2000/01/rdf-schema#comment> "PrerequisiteWork | Information | Materials | Labour | Equipment | Space | External. No rdfs:domain." .
+<https://w3id.org/iprok#plannedEnd> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok> .
+<https://w3id.org/iprok#orgName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok#joinedAt> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok#hasDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok#legallyBinding> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/legallyBinding> .
+<https://w3id.org/iprok#gstin> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok> .
+<https://w3id.org/iprok#decisionId> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/decisionId> .
+<https://w3id.org/iprok#ofUser> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/iprok#ProjectMembership> .
+<https://w3id.org/iprok#decisionOptions> <http://www.w3.org/2000/01/rdf-schema#comment> "The options considered, in plain language. No rdfs:domain." .
+<https://w3id.org/iprok#signedAt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok#Organisation> <http://www.w3.org/2000/01/rdf-schema#comment> "An organisation owning project records and defining a tenant boundary." .
+<https://w3id.org/iprok#cin> <http://www.w3.org/2000/01/rdf-schema#label> "cin"@en .
+<https://w3id.org/iprok#constraintId> <http://www.w3.org/2000/01/rdf-schema#comment> "Human-facing id, CON-NNNN. No rdfs:domain." .
+<https://w3id.org/iprok#decisionSource> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok#adoptedMastersVersion> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok> .
+<https://w3id.org/iprok#Calendar> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok#gstTdsApplicable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok#adoptedMastersVersion> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok#OrganisationMasters> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Entity> .
+<https://w3id.org/iprok#signatureId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok#gstTdsApplicable> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok> .
+<https://w3id.org/iprok#approvalLevel1Limit> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok> .
+<https://w3id.org/iprok#hasName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok#orgSlug> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/orgSlug> .
+<https://w3id.org/iprok#Constraint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iprok#fyStartMonth> <http://www.w3.org/2000/01/rdf-schema#comment> "Month the financial year begins, 1–12 (India: 4)." .
+<https://w3id.org/iprok#IdSequence> <http://www.w3.org/2000/01/rdf-schema#label> "Id Sequence"@en .
+<https://w3id.org/iprok#approvalLevel2Limit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok#decisionStatus> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/decisionStatus> .
+<https://w3id.org/iprok#constraintText> <http://www.w3.org/2000/01/rdf-schema#label> "constraint Text"@en .
+<https://w3id.org/iprok#hasId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok#constraintText> <http://www.w3.org/2000/01/rdf-schema#comment> "What must be cleared, in plain language. No rdfs:domain." .
+<https://w3id.org/iprok#approvalLevel2Limit> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok> .
+<https://w3id.org/iprok#approvalLevel2Label> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok#approvalLevel1Label> <http://www.w3.org/2000/01/rdf-schema#label> "approval Level1Label"@en .
+<https://w3id.org/iprok#PilotStatus> <http://www.w3.org/2000/01/rdf-schema#comment> "Enum of organisation pilot-lifecycle states." .
+<https://w3id.org/iprok#cin> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok> .
+<https://w3id.org/iprok#legallyBinding> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<https://w3id.org/iprok#cin> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok#decisionText> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/decisionText> .
+<https://w3id.org/iprok#decisionQuestion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok#decisionBasis> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/decisionBasis> .
+<https://w3id.org/iprok#constraintStatus> <http://www.w3.org/2000/01/rdf-schema#label> "constraint Status"@en .
+<https://w3id.org/iprok#constraintStatus> <http://www.w3.org/2000/01/rdf-schema#comment> "Open | Cleared | Withdrawn. No rdfs:domain." .
+<https://w3id.org/iprok#joinedAt> <http://www.w3.org/2000/01/rdf-schema#comment> "The joined at property in the integrated project information model. Its declared domain is ProjectMembership and its declared range is dateTime."@en .
+<https://w3id.org/iprok#gstin> <http://www.w3.org/2000/01/rdf-schema#label> "gstin"@en .
+<https://w3id.org/iprok#decisionOptions> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok#Constraint> <http://www.w3.org/2000/01/rdf-schema#comment> "A condition restricting the execution or organisation of project work."@en .
+<https://w3id.org/iprok#Decision> <http://www.w3.org/2000/01/rdf-schema#label> "Decision"@en .
+<https://w3id.org/iprok#hasId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/iprok#ProjectMembership> <http://www.w3.org/2000/01/rdf-schema#comment> "An (project, user) edge with a joinedAt timestamp." .
+<https://w3id.org/iprok#affectsActivity> <http://www.w3.org/2000/01/rdf-schema#label> "affects Activity"@en .
+<https://w3id.org/iprok#constraintText> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/constraintText> .
+<https://w3id.org/iprok#gstTdsApplicable> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/gstTdsApplicable> .
+<https://w3id.org/iprok#decisionId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok#plannedEnd> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok#decidedAt> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok> .
+<https://w3id.org/iprok#pilotStatus> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/iprok#PilotStatus> .
+<https://w3id.org/iprok#IdSequence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iprok#decidedAt> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok#decisionStatus> <http://www.w3.org/2000/01/rdf-schema#label> "decision Status"@en .
+<https://w3id.org/iprok#constraintId> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok> .
+<https://w3id.org/iprok#orgSlug> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok> .
+<https://w3id.org/iprok#pilotStatus> <http://www.w3.org/2000/01/rdf-schema#label> "pilot status" .
+<https://w3id.org/iprok#Calendar> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iprok#hasGlobalId> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/iprok#IproKThing> .
+<https://w3id.org/iprok#adoptedAt> <http://www.w3.org/2000/01/rdf-schema#label> "adopted At"@en .
+<https://w3id.org/iprok#joinedAt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok#plannedEnd> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok#zoneConfig> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/zoneConfig> .
+<https://w3id.org/iprok#plannedStart> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/iprok/schedule#Project> .
+<https://w3id.org/iprok#ProjectMembership> <http://www.w3.org/2000/01/rdf-schema#label> "Project membership" .
+<https://w3id.org/iprok#constraintId> <http://www.w3.org/2000/01/rdf-schema#label> "constraint Id"@en .
+<https://w3id.org/iprok#orgPlan> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/iprok#Organisation> .
+<https://w3id.org/iprok#gstin> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok#MastersAdoption> <http://www.w3.org/2000/01/rdf-schema#label> "Masters adoption" .
+<https://w3id.org/iprok#approvalLevel1Limit> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/iprok#SignatureEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iprok#gstin> <http://www.w3.org/2000/01/rdf-schema#comment> "The gstin property in the integrated project information model."@en .
+<https://w3id.org/iprok#signedAt> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://w3id.org/iprok#IproKThing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iprok#signedDocument> <http://www.w3.org/2000/01/rdf-schema#label> "signed document" .
+<https://w3id.org/iprok#approvalLevel1Limit> <http://www.w3.org/2000/01/rdf-schema#comment> "Deviation value (INR) up to which level 1 approves." .
+<https://w3id.org/iprok#signatureProvider> <http://www.w3.org/2000/01/rdf-schema#label> "signature provider" .
+<https://w3id.org/iprok#hasMember> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/iprok/schedule#Project> .
+<https://w3id.org/iprok#adoptedMastersVersion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok#pan> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok#labourCessApplicable> <http://www.w3.org/2000/01/rdf-schema#label> "labour Cess Applicable"@en .
+<https://w3id.org/iprok#mastersVersion> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<https://w3id.org/iprok#hasMember> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/hasMember> .
+<https://w3id.org/iprok#approvalLevel1Limit> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/approvalLevel1Limit> .
+<https://w3id.org/iprok#approvalLevel1Label> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok> .
+<https://w3id.org/iprok#deviationThresholdPct> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok> .
+<https://w3id.org/iprok#approvalLevel1Limit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok#fyStartMonth> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok> .
+<https://w3id.org/iprok#MastersAdoption> <http://www.w3.org/2000/01/rdf-schema#comment> "A project taking a version of its organisation's masters; at creation or when its PM adopts a newer one." .
+<https://w3id.org/iprok#mastersSetAt> <http://www.w3.org/2000/01/rdf-schema#label> "masters Set At"@en .
+<https://w3id.org/iprok#signaturePurpose> <http://www.w3.org/2000/01/rdf-schema#comment> "Why the document was signed. One of: DrawingApproval, RFIConfirmation, TransmittalApproval, JointMeasurement. sh:in in SignatureEventShape." .
+<https://w3id.org/iprok#hasMember> <http://www.w3.org/2000/01/rdf-schema#label> "has member" .
+<https://w3id.org/iprok#hasName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/iprok#approvalLevel2Label> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok#PilotStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iprok#cin> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/cin> .
+<https://w3id.org/iprok#approvalLevel2Label> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok> .
+<https://w3id.org/iprok#MastersAdoption> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Entity> .
+<https://w3id.org/iprok#cin> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok#legallyBinding> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok> .
+<https://w3id.org/iprok#securityDepositPct> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/iprok#decisionSource> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/decisionSource> .
+<https://w3id.org/iprok#OrganisationMasters> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iprok#decisionSource> <http://www.w3.org/2000/01/rdf-schema#label> "decision Source"@en .
+<https://w3id.org/iprok#PilotStatus> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/PilotStatus> .
+<https://w3id.org/iprok#signedAt> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/signedAt> .
+<https://w3id.org/iprok#decidedAt> <http://www.w3.org/2000/01/rdf-schema#comment> "The decided at property in the integrated project information model."@en .
+<https://w3id.org/iprok#decisionText> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok#Actor> <http://www.w3.org/2000/01/rdf-schema#comment> "A person or organisational actor to whom scheduled work can be assigned."@en .
+<https://w3id.org/iprok#orgSlug> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok#decidedAt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok#OrganisationMasters> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/OrganisationMasters> .
+<https://w3id.org/iprok#constraintId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok#orgSlug> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok#mastersVersion> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/mastersVersion> .
+<https://w3id.org/iprok#User> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iprok#legalName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok#decisionBasis> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok> .
+<https://w3id.org/iprok#ofUser> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/ofUser> .
+<https://w3id.org/iprok#adoptedAt> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/adoptedAt> .
+<https://w3id.org/iprok#orgPlan> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/orgPlan> .
+<https://w3id.org/iprok#signedDocument> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/signedDocument> .
+<https://w3id.org/iprok#deviationThresholdPct> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/iprok#hasName> <http://www.w3.org/2000/01/rdf-schema#label> "hasName"@en .
+<https://w3id.org/iprok#Actor> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok#mastersNote> <http://www.w3.org/2000/01/rdf-schema#label> "masters Note"@en .
+<https://w3id.org/iprok#approvalLevel2Label> <http://www.w3.org/2000/01/rdf-schema#comment> "The approval level2label property in the integrated project information model."@en .
+<https://w3id.org/iprok#ofUser> <http://www.w3.org/2000/01/rdf-schema#comment> "The of user property in the integrated project information model. Its declared domain is ProjectMembership and its declared range is User."@en .
+<https://w3id.org/iprok#signatureId> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/signatureId> .
+<https://w3id.org/iprok#pilotStatus> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/pilotStatus> .
+<https://w3id.org/iprok#pan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok#ProjectMembership> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iprok#decidedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/iprok#owner> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/iprok#pan> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok> .
+<https://w3id.org/iprok#approvalLevel1Label> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok#deviationThresholdPct> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok#Decision> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iprok#fyStartMonth> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok#securityDepositPct> <http://www.w3.org/2000/01/rdf-schema#comment> "Retention deducted from each contractor bill, in percent." .
+<https://w3id.org/iprok#SignatureEvent> <http://www.w3.org/2000/01/rdf-schema#comment> "A single act of signing a platform document via an e-signature provider. Carries who signed, when, the provider, purpose, and a reference to the signed document." .
+<https://w3id.org/iprok#adoptedAt> <http://www.w3.org/2000/01/rdf-schema#comment> "The adopted at property in the integrated project information model."@en .
+<https://w3id.org/iprok#Constraint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/iprok#IproKThing> .
+<https://w3id.org/iprok#ofUser> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/iprok#User> .
+<https://w3id.org/iprok#IdSequence> <http://www.w3.org/2000/01/rdf-schema#comment> "The last number issued for one kind of register id in one project." .
+<https://w3id.org/iprok#approvalLevel1Label> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/approvalLevel1Label> .
+<https://w3id.org/iprok#constraintStatus> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok#ofUser> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/iprok#signedBy> <http://www.w3.org/2000/01/rdf-schema#label> "signed by" .
+<https://w3id.org/iprok#plannedEnd> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/iprok#OrganisationMasters> <http://www.w3.org/2000/01/rdf-schema#label> "Organisation masters" .
+<https://w3id.org/iprok#OrganisationMasters> <http://www.w3.org/2000/01/rdf-schema#comment> "One version of an organisation's defaults: contract deductions, deviation routing, financial year and legal identity." .
+<https://w3id.org/iprok#orgPlan> <http://www.w3.org/2000/01/rdf-schema#comment> "Subscription tier. One of pilot / project / enterprise / sovereign." .
+<https://w3id.org/iprok#constraintFlow> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok> .
+<https://w3id.org/iprok#phoneNumber> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok> .
+<https://w3id.org/iprok#SignatureEvent> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/SignatureEvent> .
+<https://w3id.org/iprok#approvalLevel3Label> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok#legallyBinding> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok#hasId> <http://www.w3.org/2000/01/rdf-schema#comment> "A local or project-specific identifier." .
+<https://w3id.org/iprok#plannedStart> <http://www.w3.org/2000/01/rdf-schema#comment> "The planned start property in the integrated project information model. Its declared domain is Project and its declared range is date."@en .
+<https://w3id.org/iprok#hasDescription> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok#hasMember> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok> .
+<https://w3id.org/iprok#decisionId> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok> .
+<https://w3id.org/iprok#signaturePurpose> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok> .
+<https://w3id.org/iprok#User> <http://www.w3.org/2000/01/rdf-schema#comment> "An authenticated platform user, such as a site engineer, quality controller or project manager." .
+<https://w3id.org/iprok#owner> <http://www.w3.org/2000/01/rdf-schema#label> "owner" .
+<https://w3id.org/iprok#mastersVersion> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok> .
+<https://w3id.org/iprok#mastersNote> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok> .
+<https://w3id.org/iprok#zoneConfig> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok#signatureId> <http://www.w3.org/2000/01/rdf-schema#comment> "Platform-generated or provider-issued unique identifier for this signing event." .
+<https://w3id.org/iprok#signedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "IRI of the <https://w3id.org/iprok#User> who performed the signing action. Polymorphic — also used on <https://w3id.org/iprok/billing#JointMeasurement> (M3)." .
+<https://w3id.org/iprok#Calendar> <http://www.w3.org/2000/01/rdf-schema#comment> "A definition of working and non-working periods used to interpret scheduled work."@en .
+<https://w3id.org/iprok#phoneNumber> <http://www.w3.org/2000/01/rdf-schema#label> "phone number" .
+<https://w3id.org/iprok#PilotStatus> <http://www.w3.org/2000/01/rdf-schema#label> "Pilot Status" .
+<https://w3id.org/iprok#mastersNote> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/mastersNote> .
+<https://w3id.org/iprok#orgName> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok> .
+<https://w3id.org/iprok#decisionBasis> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok#orgName> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/iprok#Organisation> .
+<https://w3id.org/iprok#hasGlobalId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok#gstin> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/gstin> .
+<https://w3id.org/iprok#pan> <http://www.w3.org/2000/01/rdf-schema#label> "pan"@en .
+<https://w3id.org/iprok#Organisation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iprok#joinedAt> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://w3id.org/iprok#plannedEnd> <http://www.w3.org/2000/01/rdf-schema#comment> "The planned end property in the integrated project information model. Its declared domain is Project and its declared range is date."@en .
+<https://w3id.org/iprok#joinedAt> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/iprok#ProjectMembership> .
+<https://w3id.org/iprok#signatureProvider> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok> .
+<https://w3id.org/iprok#decidedAt> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/decidedAt> .
+<https://w3id.org/iprok#hasGlobalId> <http://www.w3.org/2000/01/rdf-schema#label> "hasGlobalId"@en .
+<https://w3id.org/iprok#adoptedAt> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok> .
+<https://w3id.org/iprok#decisionQuestion> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok#plannedStart> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok> .
+<https://w3id.org/iprok#signaturePurpose> <http://www.w3.org/2000/01/rdf-schema#label> "signature purpose" .
+<https://w3id.org/iprok#securityDepositPct> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/securityDepositPct> .
+<https://w3id.org/iprok#fyStartMonth> <http://www.w3.org/2000/01/rdf-schema#label> "fy Start Month"@en .
+<https://w3id.org/iprok#affectsActivity> <http://www.w3.org/2000/01/rdf-schema#comment> "An activity the decision changes. Repeatable. No rdfs:domain / rdfs:range." .
+<https://w3id.org/iprok#pilotStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/iprok#decisionBasis> <http://www.w3.org/2000/01/rdf-schema#label> "decision Basis"@en .
+<https://w3id.org/iprok#signedBy> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/signedBy> .
+<https://w3id.org/iprok#decidedBy> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok> .
+<https://w3id.org/iprok#owner> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok> .
+<https://w3id.org/iprok#IproKThing> <http://www.w3.org/2000/01/rdf-schema#label> "IproKThing" .
+<https://w3id.org/iprok#User> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok> .
+<https://w3id.org/iprok#IdSequence> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/IdSequence> .
+<https://w3id.org/iprok#ProjectMembership> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/ProjectMembership> .
+<https://w3id.org/iprok#orgPlan> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok> .
+<https://w3id.org/iprok#MastersAdoption> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/MastersAdoption> .
+<https://w3id.org/iprok#User> <http://www.w3.org/2000/01/rdf-schema#label> "User" .
+<https://w3id.org/iprok#approvalLevel2Label> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/approvalLevel2Label> .
+<https://w3id.org/iprok#hasMember> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok#constraintFlow> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok#ofUser> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok> .
+<https://w3id.org/iprok#phoneNumber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok#Actor> <http://www.w3.org/2000/01/rdf-schema#label> "Actor" .
+<https://w3id.org/iprok#decisionOptions> <http://www.w3.org/2000/01/rdf-schema#label> "decision Options"@en .
+<https://w3id.org/iprok#decisionOptions> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/decisionOptions> .
+<https://w3id.org/iprok#ofUser> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok#gstin> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok#decisionText> <http://www.w3.org/2000/01/rdf-schema#comment> "What was decided. No rdfs:domain." .
+<https://w3id.org/iprok#labourCessApplicable> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/labourCessApplicable> .
+<https://w3id.org/iprok#hasId> <http://www.w3.org/2000/01/rdf-schema#label> "hasId"@en .
+<https://w3id.org/iprok#decisionText> <http://www.w3.org/2000/01/rdf-schema#label> "decision Text"@en .
+<https://w3id.org/iprok#signedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/iprok#signaturePurpose> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok#joinedAt> <http://www.w3.org/2000/01/rdf-schema#label> "joined at" .
+<https://w3id.org/iprok#pan> <http://www.w3.org/2000/01/rdf-schema#comment> "The pan property in the integrated project information model."@en .
+<https://w3id.org/iprok#decisionBasis> <http://www.w3.org/2000/01/rdf-schema#comment> "Why — the rule or evidence the decision rests on. No rdfs:domain." .
+<https://w3id.org/iprok#decisionStatus> <http://www.w3.org/2000/01/rdf-schema#comment> "Open | Decided | Superseded | Withdrawn. No rdfs:domain." .
+<https://w3id.org/iprok#signatureId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok#deviationThresholdPct> <http://www.w3.org/2000/01/rdf-schema#comment> "Measured quantity above tendered by more than this percent raises a deviation for approval." .
+<https://w3id.org/iprok#mastersVersion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok#userRole> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/userRole> .
+<https://w3id.org/iprok#mastersNote> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok#signedDocument> <http://www.w3.org/2000/01/rdf-schema#comment> "IRI of the <https://w3id.org/iprok/document#Drawing>, <https://w3id.org/iprok/document#RFI>, <https://w3id.org/iprok/document#Transmittal>, or <https://w3id.org/iprok/billing#Measurement> that was signed. Mandatory." .
+<https://w3id.org/iprok#IproKThing> <http://www.w3.org/2000/01/rdf-schema#comment> "The common parent class for the published IproK project-information concepts."@en .
+<https://w3id.org/iprok#constraintFlow> <http://www.w3.org/2000/01/rdf-schema#label> "constraint Flow"@en .
+<https://w3id.org/iprok#approvalLevel3Label> <http://www.w3.org/2000/01/rdf-schema#comment> "Display names only. The stored deviation states stay ApprovedEE / ApprovedSE / ApprovedCE, so a renamed level never orphans an approval." .
+<https://w3id.org/iprok#decisionSource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok#approvalLevel2Limit> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/iprok#orgName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok#hasGlobalId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/iprok#hasName> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/iprok#IproKThing> .
+<https://w3id.org/iprok#mastersSetAt> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok> .
+<https://w3id.org/iprok#adoptedAt> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok#decisionSource> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok> .
+<https://w3id.org/iprok#mastersSetAt> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok#plannedEnd> <http://www.w3.org/2000/01/rdf-schema#label> "planned end date" .
+<https://w3id.org/iprok#signedDocument> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/iprok#gstTdsApplicable> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<https://w3id.org/iprok#approvalLevel3Label> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/approvalLevel3Label> .
+<https://w3id.org/iprok#zoneConfig> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/iprok/schedule#Project> .
+<https://w3id.org/iprok#decisionId> <http://www.w3.org/2000/01/rdf-schema#label> "decision Id"@en .
+<https://w3id.org/iprok#orgName> <http://www.w3.org/2000/01/rdf-schema#label> "organisation name" .
+<https://w3id.org/iprok#hasId> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/iprok#IproKThing> .
+<https://w3id.org/iprok#signatureProvider> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok#labourCessApplicable> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<https://w3id.org/iprok#mastersSetAt> <http://www.w3.org/2000/01/rdf-schema#comment> "The masters set at property in the integrated project information model."@en .
+<https://w3id.org/iprok#dueDate> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/dueDate> .
+<https://w3id.org/iprok#approvalLevel1Label> <http://www.w3.org/2000/01/rdf-schema#comment> "The approval level1label property in the integrated project information model."@en .
+<https://w3id.org/iprok#adoptedAt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok#signatureId> <http://www.w3.org/2000/01/rdf-schema#label> "signature ID" .
+<https://w3id.org/iprok#Organisation> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/Organisation> .
+<https://w3id.org/iprok#orgSlug> <http://www.w3.org/2000/01/rdf-schema#label> "organisation slug" .
+<https://w3id.org/iprok#cin> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok#hasGlobalId> <http://www.w3.org/2000/01/rdf-schema#comment> "A globally unique identifier." .
+<https://w3id.org/iprok#hasDescription> <http://www.w3.org/2000/01/rdf-schema#label> "hasDescription"@en .
+<https://w3id.org/iprok#approvalLevel2Limit> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/approvalLevel2Limit> .
+<https://w3id.org/iprok#dueDate> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok> .
+<https://w3id.org/iprok#decidedBy> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/decidedBy> .
+<https://w3id.org/iprok#plannedStart> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok#dueDate> <http://www.w3.org/2000/01/rdf-schema#label> "due date" .
+<https://w3id.org/iprok#affectsActivity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/iprok#orgName> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/orgName> .
+<https://w3id.org/iprok#approvalLevel2Label> <http://www.w3.org/2000/01/rdf-schema#label> "approval Level2Label"@en .
+<https://w3id.org/iprok#decisionText> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok#orgSlug> <http://www.w3.org/2000/01/rdf-schema#comment> "URL-safe short identifier; unique across the platform." .
+<https://w3id.org/iprok#hasId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok#pilotStatus> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok> .
+<https://w3id.org/iprok#adoptedMastersVersion> <http://www.w3.org/2000/01/rdf-schema#comment> "The adopted masters version property in the integrated project information model."@en .
+<https://w3id.org/iprok#orgPlan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok#deviationThresholdPct> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/deviationThresholdPct> .
+<https://w3id.org/iprok#securityDepositPct> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok> .
+<https://w3id.org/iprok#constraintFlow> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok#adoptedMastersVersion> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<https://w3id.org/iprok#constraintStatus> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/constraintStatus> .
+<https://w3id.org/iprok#hasName> <http://www.w3.org/2000/01/rdf-schema#comment> "The common name of the entity." .
+<https://w3id.org/iprok#gstin> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok#Organisation> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok> .
+<https://w3id.org/iprok#decisionId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok#phoneNumber> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/phoneNumber> .
+<https://w3id.org/iprok#fyStartMonth> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/fyStartMonth> .
+<https://w3id.org/iprok#labourCessApplicable> <http://www.w3.org/2000/01/rdf-schema#comment> "Whether BOCW cess is deducted from contractor bills (rather than paid at plan approval)." .
+<https://w3id.org/iprok#legalName> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok> .
+<https://w3id.org/iprok#plannedEnd> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/plannedEnd> .
+<https://w3id.org/iprok#legalName> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok#signaturePurpose> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok#ofUser> <http://www.w3.org/2000/01/rdf-schema#label> "of user" .
+<https://w3id.org/iprok#plannedStart> <http://www.w3.org/2000/01/rdf-schema#label> "planned start date" .
+<https://w3id.org/iprok#decisionStatus> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok> .
+<https://w3id.org/iprok#hasDescription> <http://www.w3.org/2000/01/rdf-schema#comment> "A textual description of the entity." .
+<https://w3id.org/iprok#signedBy> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok> .
+<https://w3id.org/iprok#signedAt> <http://www.w3.org/2000/01/rdf-schema#label> "signed at" .
+<https://w3id.org/iprok#legalName> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/legalName> .
+<https://w3id.org/iprok#zoneConfig> <http://www.w3.org/2000/01/rdf-schema#comment> "JSON array of {name, lat, lng, radius_m} dicts. v0 hack — gets a proper schema (and SHACL shape) when polygon zones land." .
+<https://w3id.org/iprok#approvalLevel1Label> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok#mastersSetAt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok#gstTdsApplicable> <http://www.w3.org/2000/01/rdf-schema#label> "gst Tds Applicable"@en .
+<https://w3id.org/iprok#signatureProvider> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok#mastersSetAt> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/mastersSetAt> .
+<https://w3id.org/iprok#labourCessApplicable> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok> .
+<https://w3id.org/iprok#IdSequence> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok> .
+<https://w3id.org/iprok#hasName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok#decisionId> <http://www.w3.org/2000/01/rdf-schema#comment> "Human-facing id, DEC-NNNN. No rdfs:domain." .
+<https://w3id.org/iprok#signedDocument> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok> .
+<https://w3id.org/iprok#constraintFlow> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/constraintFlow> .
+<https://w3id.org/iprok#dueDate> <http://www.w3.org/2000/01/rdf-schema#comment> "Optional SLA target date. Domain unspecified (antipattern #8)." .
+<https://w3id.org/iprok#approvalLevel2Label> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok#phoneNumber> <http://www.w3.org/2000/01/rdf-schema#comment> "The phone number property in the integrated project information model. Its declared domain is User and its declared range is string."@en .
+<https://w3id.org/iprok#dueDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok#approvalLevel3Label> <http://www.w3.org/2000/01/rdf-schema#label> "approval Level3Label"@en .
+<https://w3id.org/iprok#Actor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iprok#userRole> <http://www.w3.org/2000/01/rdf-schema#label> "user role" .
+<https://w3id.org/iprok#SignatureEvent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Activity> .
+<https://w3id.org/iprok#SignatureEvent> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok> .
+<https://w3id.org/iprok#orgPlan> <http://www.w3.org/2000/01/rdf-schema#label> "organisation plan" .
+<https://w3id.org/iprok#Decision> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/Decision> .
+<https://w3id.org/iprok#constraintText> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok> .
+<https://w3id.org/iprok#userRole> <http://www.w3.org/2000/01/rdf-schema#comment> "The user role property in the integrated project information model. Its declared domain is User and its declared range is string."@en .
+<https://w3id.org/iprok#affectsActivity> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/affectsActivity> .
+<https://w3id.org/iprok#hasMember> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/iprok#ProjectMembership> .
+<https://w3id.org/iprok#signaturePurpose> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/signaturePurpose> .
+<https://w3id.org/iprok#affectsActivity> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok> .
+<https://w3id.org/iprok#IproKThing> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok#approvalLevel2Limit> <http://www.w3.org/2000/01/rdf-schema#label> "approval Level2Limit"@en .
+<https://w3id.org/iprok#hasDescription> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/iprok#IproKThing> .
+<https://w3id.org/iprok#userRole> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok> .
+<https://w3id.org/iprok#userRole> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok#orgPlan> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok#Constraint> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok#adoptedMastersVersion> <http://www.w3.org/2000/01/rdf-schema#label> "adopted Masters Version"@en .
+<https://w3id.org/iprok#securityDepositPct> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok#Organisation> <http://www.w3.org/2000/01/rdf-schema#label> "Organisation" .
+<https://w3id.org/iprok#zoneConfig> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok> .
+<https://w3id.org/iprok#decidedAt> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://w3id.org/iprok#decisionQuestion> <http://www.w3.org/2000/01/rdf-schema#comment> "What had to be decided, in plain language. No rdfs:domain." .
+<https://w3id.org/iprok#MastersAdoption> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iprok#decisionBasis> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok#hasGlobalId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok#Calendar> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/iprok#IproKThing> .
+<https://w3id.org/iprok#constraintId> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/constraintId> .
+<https://w3id.org/iprok#signatureProvider> <http://www.w3.org/2000/01/rdf-schema#comment> "Name of the e-signature service used: 'eMudhra', 'DigiLocker', or 'Stub'. sh:in constraint in SignatureEventShape." .
+<https://w3id.org/iprok#mastersVersion> <http://www.w3.org/2000/01/rdf-schema#label> "masters Version"@en .
+<https://w3id.org/iprok#legalName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok#decisionStatus> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok#Decision> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Entity> .
+<https://w3id.org/iprok#joinedAt> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok> .
+<https://w3id.org/iprok#PilotStatus> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok> .
+<https://w3id.org/iprok#userRole> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/iprok#User> .
+<https://w3id.org/iprok#decisionStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok#adoptedMastersVersion> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/adoptedMastersVersion> .
+<https://w3id.org/iprok#approvalLevel1Label> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok#owner> <http://www.w3.org/2000/01/rdf-schema#comment> "User responsible for managing a graph node (S4.5: <https://w3id.org/iprok/coordination#Risk>). Domain unspecified (antipattern #8)." .
+<https://w3id.org/iprok#orgSlug> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/iprok#Organisation> .

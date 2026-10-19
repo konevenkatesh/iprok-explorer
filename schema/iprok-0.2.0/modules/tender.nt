@@ -1,0 +1,332 @@
+<https://w3id.org/iprok/tender#tenderEstQty> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/tender#deviationCount> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/deviationCount> .
+<https://w3id.org/iprok/tender#emdPercentage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/tender#matchStrategy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/tender#matchedSORItem> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/tender> .
+<https://w3id.org/iprok/tender#forTender> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/tender> .
+<https://w3id.org/iprok/tender#ComparableProject> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Entity> .
+<https://w3id.org/iprok/tender#tenderId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/tender#matchedSORItem> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/matchedSORItem> .
+<https://w3id.org/iprok/tender#sorDescription> <http://www.w3.org/2000/01/rdf-schema#comment> "The sor description property in the integrated project information model."@en .
+<https://w3id.org/iprok/tender#tenderAmount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/tender#extractionStatus> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/tender#highRiskCount> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<https://w3id.org/iprok/tender#riskMaterialisedCount> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/tender> .
+<https://w3id.org/iprok/tender#contingencyPct> <http://www.w3.org/2000/01/rdf-schema#comment> "Risk buffer percentage applied to total_quoted. Selected from the comparable projects' average historical CPI: 5% when avg_CPI ≥ 1.0 (historicals delivered on budget), 10% when 0.9-1.0 (slight over-runs), 15% when < 0.9 (significant historical over-runs). Domain-free." .
+<https://w3id.org/iprok/tender#deviationCount> <http://www.w3.org/2000/01/rdf-schema#comment> "Number of <https://w3id.org/iprok/billing#Deviation> nodes (S3.7) recorded on the historical project — counts how often measured quantity exceeded tendered quantity by >25%. Domain-free." .
+<https://w3id.org/iprok/tender#emdPercentage> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/emdPercentage> .
+<https://w3id.org/iprok/tender#matchedSORItem> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/iprok/tender#SORItem> .
+<https://w3id.org/iprok/tender#contingencyAmount> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/contingencyAmount> .
+<https://w3id.org/iprok/tender#matchedBOQItems> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<https://w3id.org/iprok/tender#BidRecommendation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Entity> .
+<https://w3id.org/iprok/tender#matchStrategy> <http://www.w3.org/2000/01/rdf-schema#comment> "How the match landed. Values: 'exact-code' | 'fuzzy-desc' | 'jargon-normalised' | 'no-match'. SHACL sh:in (string literals, antipattern #13)." .
+<https://w3id.org/iprok/tender#tenderEstQty> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/tenderEstQty> .
+<https://w3id.org/iprok/tender#riskMaterialisedCount> <http://www.w3.org/2000/01/rdf-schema#comment> "Number of <https://w3id.org/iprok/coordination#Risk> nodes (S4.5) on the historical project whose <https://w3id.org/iprok/integrated#linkedIssue> is set — risks that became real issues. Useful as a proxy for how well risk management worked. Domain-free." .
+<https://w3id.org/iprok/tender#tenderItemDescription> <http://www.w3.org/2000/01/rdf-schema#label> "tender item description" .
+<https://w3id.org/iprok/tender#ingestedAt> <http://www.w3.org/2000/01/rdf-schema#label> "ingested at" .
+<https://w3id.org/iprok/tender#contingencyPct> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/tender#riskMaterialisedCount> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<https://w3id.org/iprok/tender#highRiskCount> <http://www.w3.org/2000/01/rdf-schema#label> "high-risk count" .
+<https://w3id.org/iprok/tender#SORLibrary> <http://www.w3.org/2000/01/rdf-schema#comment> "A Schedule of Rates publication ingested into the platform. Platform-wide reference data, not per-project." .
+<https://w3id.org/iprok/tender#sorCode> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/sorCode> .
+<https://w3id.org/iprok/tender#SORItem> <http://www.w3.org/2000/01/rdf-schema#label> "SOR Item" .
+<https://w3id.org/iprok/tender#tenderTitle> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/tenderTitle> .
+<https://w3id.org/iprok/tender#tenderId> <http://www.w3.org/2000/01/rdf-schema#label> "tender id" .
+<https://w3id.org/iprok/tender#ingestedAt> <http://www.w3.org/2000/01/rdf-schema#comment> "Server timestamp when the library was ingested. Polymorphic — domain unspecified." .
+<https://w3id.org/iprok/tender#sorLibraryId> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/tender> .
+<https://w3id.org/iprok/tender#TenderBOQItem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Entity> .
+<https://w3id.org/iprok/tender#highRiskCount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/tender#baseRate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/tender#Tender> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iprok/tender#avgRateVariance> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/tender> .
+<https://w3id.org/iprok/tender#tenderUnit> <http://www.w3.org/2000/01/rdf-schema#label> "tender unit (canonical)" .
+<https://w3id.org/iprok/tender#tenderRate> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/tender#contractForm> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/tender> .
+<https://w3id.org/iprok/tender#actualCPI> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/actualCPI> .
+<https://w3id.org/iprok/tender#dedupCount> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/dedupCount> .
+<https://w3id.org/iprok/tender#estimatedValue> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/estimatedValue> .
+<https://w3id.org/iprok/tender#needsReview> <http://www.w3.org/2000/01/rdf-schema#comment> "Boolean — set true when any AI-extracted title-block field has confidence < 0.7, cleared when a user confirms the extraction. Polymorphic (any AI-written node can carry it); domain unspecified (antipattern #8)." .
+<https://w3id.org/iprok/tender#matchedBOQItems> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/tender> .
+<https://w3id.org/iprok/tender#matchConfidence> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/matchConfidence> .
+<https://w3id.org/iprok/tender#tenderUnit> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/tenderUnit> .
+<https://w3id.org/iprok/tender#matchStrategy> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/tender#matchConfidence> <http://www.w3.org/2000/01/rdf-schema#label> "match confidence (0–1)" .
+<https://w3id.org/iprok/tender#rateYear> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/tender#itemCount> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/itemCount> .
+<https://w3id.org/iprok/tender#procurementMode> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/tender#tenderShortDesc> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/tender#ingestedAt> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/ingestedAt> .
+<https://w3id.org/iprok/tender#sorLibraryId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/tender#totalQuoted> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/tender#SORItem> <http://www.w3.org/2000/01/rdf-schema#comment> "One rate item from a <https://w3id.org/iprok/tender#SORLibrary>. Carries sorCode + description + unit + baseRate." .
+<https://w3id.org/iprok/tender#publisher> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/tender#rateVariance> <http://www.w3.org/2000/01/rdf-schema#comment> "(quotedRate − sorBaseRate) / sorBaseRate × 100. Positive = tender priced higher than SOR; negative = tender priced lower. |variance| > 20% is flagged in the match report. Absent when no SOR match OR quotedRate is null." .
+<https://w3id.org/iprok/tender#forTender> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/iprok/tender#Tender> .
+<https://w3id.org/iprok/tender#tenderBoqSno> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/tender#tenderUnit> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/tender#publisher> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/tender#tenderAmount> <http://www.w3.org/2000/01/rdf-schema#comment> "The tender amount property in the integrated project information model."@en .
+<https://w3id.org/iprok/tender#ComparableProject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iprok/tender#estimatedValue> <http://www.w3.org/2000/01/rdf-schema#label> "estimated value (INR)" .
+<https://w3id.org/iprok/tender#coverSystem> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/tender> .
+<https://w3id.org/iprok/tender#tenderRate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/iprok/tender#Tender> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/tender> .
+<https://w3id.org/iprok/tender#matchedBOQItems> <http://www.w3.org/2000/01/rdf-schema#comment> "Count of tender BOQ items whose matchedSORItem also appears as <https://w3id.org/iprok/integrated#governedBy> on some <https://w3id.org/iprok/billing#BOQItem> in the historical project. The numerator of the BOQ-overlap sub-score. Domain-free." .
+<https://w3id.org/iprok/tender#deviationCount> <http://www.w3.org/2000/01/rdf-schema#label> "deviation count" .
+<https://w3id.org/iprok/tender#itemCount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/tender#recommendedBid> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/tender> .
+<https://w3id.org/iprok/tender#SORItem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iprok/tender#extractionStatus> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/iprok/tender#ExtractionStatus> .
+<https://w3id.org/iprok/tender#similarityScore> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/similarityScore> .
+<https://w3id.org/iprok/tender#highRiskCount> <http://www.w3.org/2000/01/rdf-schema#comment> "Count of line items the recommender flagged as risk_level=High (historical deviation OR rate_variance > 30%)." .
+<https://w3id.org/iprok/tender#similarProject> <http://www.w3.org/2000/01/rdf-schema#label> "similar project" .
+<https://w3id.org/iprok/tender#deviationCount> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<https://w3id.org/iprok/tender#tenderRate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/tender#emdPercentage> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/tender#needsReview> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/needsReview> .
+<https://w3id.org/iprok/tender#tenderAmount> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/tender#tenderId> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/tender#sorLibraryId> <http://www.w3.org/2000/01/rdf-schema#comment> "The sor library id property in the integrated project information model."@en .
+<https://w3id.org/iprok/tender#sorYear> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/tender#ofTender> <http://www.w3.org/2000/01/rdf-schema#label> "of tender" .
+<https://w3id.org/iprok/tender#TenderBOQItem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iprok/tender#rateYear> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/tender#forTender> <http://www.w3.org/2000/01/rdf-schema#label> "for tender" .
+<https://w3id.org/iprok/tender#sorYear> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/tender#avgRateVariance> <http://www.w3.org/2000/01/rdf-schema#label> "average rate variance (percent, signed)" .
+<https://w3id.org/iprok/tender#riskMaterialisedCount> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/riskMaterialisedCount> .
+<https://w3id.org/iprok/tender#procurementMode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/tender#tenderBoqSno> <http://www.w3.org/2000/01/rdf-schema#label> "tender BOQ sno" .
+<https://w3id.org/iprok/tender#tenderBoqSno> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/tenderBoqSno> .
+<https://w3id.org/iprok/tender#sorCode> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/tender> .
+<https://w3id.org/iprok/tender#tenderRate> <http://www.w3.org/2000/01/rdf-schema#comment> "The tender rate property in the integrated project information model."@en .
+<https://w3id.org/iprok/tender#ComparableProject> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/tender> .
+<https://w3id.org/iprok/tender#tenderEstQty> <http://www.w3.org/2000/01/rdf-schema#comment> "The tender est qty property in the integrated project information model."@en .
+<https://w3id.org/iprok/tender#tenderItemDescription> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/tender> .
+<https://w3id.org/iprok/tender#actualCPI> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/tender> .
+<https://w3id.org/iprok/tender#Tender> <http://www.w3.org/2000/01/rdf-schema#label> "Tender" .
+<https://w3id.org/iprok/tender#coverSystem> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/coverSystem> .
+<https://w3id.org/iprok/tender#coverSystem> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/tender#tenderBoqSno> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/tender#SORItem> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/tender> .
+<https://w3id.org/iprok/tender#similarityScore> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/tender#rateYear> <http://www.w3.org/2000/01/rdf-schema#label> "rate year" .
+<https://w3id.org/iprok/tender#similarProject> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/iprok/schedule#Project> .
+<https://w3id.org/iprok/tender#deviationCount> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/tender> .
+<https://w3id.org/iprok/tender#tenderAmount> <http://www.w3.org/2000/01/rdf-schema#label> "tender amount (INR)" .
+<https://w3id.org/iprok/tender#contingencyAmount> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/tender> .
+<https://w3id.org/iprok/tender#pbgPercentage> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/tender#emdPercentage> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/iprok/tender#tenderBoqSno> <http://www.w3.org/2000/01/rdf-schema#comment> "The tender boq sno property in the integrated project information model."@en .
+<https://w3id.org/iprok/tender#tenderAmount> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/iprok/tender#publisher> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/publisher> .
+<https://w3id.org/iprok/tender#tenderTitle> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/tender#avgRateVariance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/tender#dedupCount> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/tender#tenderId> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/tenderId> .
+<https://w3id.org/iprok/tender#SORItem> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/SORItem> .
+<https://w3id.org/iprok/tender#tenderItemDescription> <http://www.w3.org/2000/01/rdf-schema#comment> "The tender item description property in the integrated project information model."@en .
+<https://w3id.org/iprok/tender#sorLibraryId> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/sorLibraryId> .
+<https://w3id.org/iprok/tender#tenderId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/tender#ingestedAt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/tender#SORLibrary> <http://www.w3.org/2000/01/rdf-schema#label> "SOR Library" .
+<https://w3id.org/iprok/tender#contractForm> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/contractForm> .
+<https://w3id.org/iprok/tender#totalQuoted> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/totalQuoted> .
+<https://w3id.org/iprok/tender#pbgPercentage> <http://www.w3.org/2000/01/rdf-schema#comment> "The pbg percentage property in the integrated project information model."@en .
+<https://w3id.org/iprok/tender#similarityScore> <http://www.w3.org/2000/01/rdf-schema#comment> "Weighted average of the comparator's three sub-scores: BOQ overlap (0.5) + work-type Jaccard (0.3) + scale similarity (0.2). Domain-free." .
+<https://w3id.org/iprok/tender#contingencyPct> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/iprok/tender#totalQuoted> <http://www.w3.org/2000/01/rdf-schema#label> "total quoted (INR)" .
+<https://w3id.org/iprok/tender#matchStrategy> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/tender> .
+<https://w3id.org/iprok/tender#extractionStatus> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/extractionStatus> .
+<https://w3id.org/iprok/tender#estimatedValue> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/tender#TenderBOQItem> <http://www.w3.org/2000/01/rdf-schema#label> "Tender BOQ Item" .
+<https://w3id.org/iprok/tender#procurementMode> <http://www.w3.org/2000/01/rdf-schema#label> "procurement mode" .
+<https://w3id.org/iprok/tender#matchStrategy> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/matchStrategy> .
+<https://w3id.org/iprok/tender#tenderEstQty> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/tender> .
+<https://w3id.org/iprok/tender#pbgPercentage> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/iprok/tender#similarityScore> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/iprok/tender#ofTender> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/ofTender> .
+<https://w3id.org/iprok/tender#itemCount> <http://www.w3.org/2000/01/rdf-schema#label> "item count" .
+<https://w3id.org/iprok/tender#extractionStatus> <http://www.w3.org/2000/01/rdf-schema#comment> "The extraction status property in the integrated project information model."@en .
+<https://w3id.org/iprok/tender#BidRecommendation> <http://www.w3.org/2000/01/rdf-schema#label> "Bid Recommendation" .
+<https://w3id.org/iprok/tender#BidRecommendation> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/BidRecommendation> .
+<https://w3id.org/iprok/tender#estimatedValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/tender#baseRate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/iprok/tender#ofTender> <http://www.w3.org/2000/01/rdf-schema#comment> "The of tender property in the integrated project information model."@en .
+<https://w3id.org/iprok/tender#ComparableProject> <http://www.w3.org/2000/01/rdf-schema#label> "Comparable Project" .
+<https://w3id.org/iprok/tender#ExtractionStatus> <http://www.w3.org/2000/01/rdf-schema#label> "Extraction Status" .
+<https://w3id.org/iprok/tender#coverSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/tender#sorCode> <http://www.w3.org/2000/01/rdf-schema#comment> "Rate-book item code, e.g. '2.1.1.1'. Polymorphic — domain unspecified (antipattern #8)." .
+<https://w3id.org/iprok/tender#riskMaterialisedCount> <http://www.w3.org/2000/01/rdf-schema#label> "risks that materialised" .
+<https://w3id.org/iprok/tender#highRiskCount> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/highRiskCount> .
+<https://w3id.org/iprok/tender#needsReview> <http://www.w3.org/2000/01/rdf-schema#label> "needs review" .
+<https://w3id.org/iprok/tender#sorDescription> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/tender#pbgPercentage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/tender#forTender> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/forTender> .
+<https://w3id.org/iprok/tender#tenderTitle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/tender#needsReview> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/tender> .
+<https://w3id.org/iprok/tender#baseRate> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/baseRate> .
+<https://w3id.org/iprok/tender#similarProject> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/similarProject> .
+<https://w3id.org/iprok/tender#dedupCount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/tender#actualCPI> <http://www.w3.org/2000/01/rdf-schema#comment> "The historical project's most recent CPI (cost-performance index) from <https://w3id.org/iprok/schedule#EVMSnapshot> (S4.2). > 1.0 = under budget; < 1.0 = over budget. Null when the project has no EVM history. Domain-free." .
+<https://w3id.org/iprok/tender#matchConfidence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/tender#baseRate> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/tender> .
+<https://w3id.org/iprok/tender#emdPercentage> <http://www.w3.org/2000/01/rdf-schema#label> "EMD percentage" .
+<https://w3id.org/iprok/tender#totalQuoted> <http://www.w3.org/2000/01/rdf-schema#comment> "Sum of (recommended_rate × estimated_qty) across every matched <https://w3id.org/iprok/tender#TenderBOQItem>. The base bid before contingency. Domain-free (antipattern #8)." .
+<https://w3id.org/iprok/tender#totalQuoted> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/iprok/tender#itemCount> <http://www.w3.org/2000/01/rdf-schema#comment> "Denormalised count of SOR items in a library. Polymorphic — domain unspecified." .
+<https://w3id.org/iprok/tender#similarProject> <http://www.w3.org/2000/01/rdf-schema#comment> "The historical <https://w3id.org/iprok/schedule#Project> the comparator picked. Domain-free." .
+<https://w3id.org/iprok/tender#tenderEstQty> <http://www.w3.org/2000/01/rdf-schema#label> "tender est qty" .
+<https://w3id.org/iprok/tender#tenderId> <http://www.w3.org/2000/01/rdf-schema#comment> "The tender id property in the integrated project information model."@en .
+<https://w3id.org/iprok/tender#sorYear> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/sorYear> .
+<https://w3id.org/iprok/tender#contingencyPct> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/contingencyPct> .
+<https://w3id.org/iprok/tender#ExtractionStatus> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/ExtractionStatus> .
+<https://w3id.org/iprok/tender#coverSystem> <http://www.w3.org/2000/01/rdf-schema#label> "cover system" .
+<https://w3id.org/iprok/tender#publisher> <http://www.w3.org/2000/01/rdf-schema#comment> "Issuing authority: CPWD, AP-PWD, MES, NHAI, Railway, State-PWD. Polymorphic — domain unspecified." .
+<https://w3id.org/iprok/tender#actualCPI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/tender#contingencyAmount> <http://www.w3.org/2000/01/rdf-schema#label> "contingency amount (INR)" .
+<https://w3id.org/iprok/tender#tenderItemDescription> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/tenderItemDescription> .
+<https://w3id.org/iprok/tender#rateYear> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/rateYear> .
+<https://w3id.org/iprok/tender#totalQuoted> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/tender> .
+<https://w3id.org/iprok/tender#deviationCount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/tender#tenderShortDesc> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/tender> .
+<https://w3id.org/iprok/tender#contingencyAmount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/tender#publisher> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/tender> .
+<https://w3id.org/iprok/tender#BidRecommendation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iprok/tender#tenderUnit> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/tender> .
+<https://w3id.org/iprok/tender#sorLibraryId> <http://www.w3.org/2000/01/rdf-schema#label> "SOR library ID" .
+<https://w3id.org/iprok/tender#sorDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/tender#sorDescription> <http://www.w3.org/2000/01/rdf-schema#label> "SOR description" .
+<https://w3id.org/iprok/tender#sorYear> <http://www.w3.org/2000/01/rdf-schema#comment> "The sor year property in the integrated project information model."@en .
+<https://w3id.org/iprok/tender#contractForm> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/tender#matchedBOQItems> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/tender#coverSystem> <http://www.w3.org/2000/01/rdf-schema#comment> "The cover system property in the integrated project information model."@en .
+<https://w3id.org/iprok/tender#matchConfidence> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/iprok/tender#ExtractionStatus> <http://www.w3.org/2000/01/rdf-schema#comment> "Lifecycle state of the tender PDF → BOQ extraction pipeline. Values: Pending, Running, Complete, Failed, NeedsReview." .
+<https://w3id.org/iprok/tender#avgRateVariance> <http://www.w3.org/2000/01/rdf-schema#comment> "Mean of the tender BOQ items' rateVariance across the rows that matched into this historical project. Positive = tender priced higher than the historical actual; negative = lower. Domain-free." .
+<https://w3id.org/iprok/tender#TenderBOQItem> <http://www.w3.org/2000/01/rdf-schema#comment> "One BOQ row extracted from a tender PDF during ingestion. Distinct from <https://w3id.org/iprok/billing#BOQItem> (post-award, project-side). Carries <https://w3id.org/iprok/tender#ofTender>, <https://w3id.org/iprok/tender#needsReview> (L24 hallucination guard), and <https://w3id.org/iprok/tender#dedupCount> (5-gram Jaccard collapse)." .
+<https://w3id.org/iprok/tender#rateVariance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/tender#ofTender> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/iprok/tender#sorDescription> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/sorDescription> .
+<https://w3id.org/iprok/tender#rateVariance> <http://www.w3.org/2000/01/rdf-schema#label> "rate variance (percent, signed)" .
+<https://w3id.org/iprok/tender#matchConfidence> <http://www.w3.org/2000/01/rdf-schema#comment> "S3.2-style confidence: exact-code = 1.0; fuzzy-desc = 0.5 + 0.4×ratio; jargon-normalised = same but after Indian-PWD jargon stripped; no-match = 0.0. SHACL bounds enforce [0, 1]." .
+<https://w3id.org/iprok/tender#riskMaterialisedCount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/tender#tenderRate> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/tender> .
+<https://w3id.org/iprok/tender#estimatedValue> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/iprok/tender#itemCount> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<https://w3id.org/iprok/tender#actualCPI> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/iprok/tender#ingestedAt> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://w3id.org/iprok/tender#contractForm> <http://www.w3.org/2000/01/rdf-schema#comment> "The contract form property in the integrated project information model."@en .
+<https://w3id.org/iprok/tender#ofTender> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/tender> .
+<https://w3id.org/iprok/tender#pbgPercentage> <http://www.w3.org/2000/01/rdf-schema#label> "PBG percentage" .
+<https://w3id.org/iprok/tender#tenderEstQty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/tender#tenderAmount> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/tenderAmount> .
+<https://w3id.org/iprok/tender#dedupCount> <http://www.w3.org/2000/01/rdf-schema#label> "dedup count" .
+<https://w3id.org/iprok/tender#matchedSORItem> <http://www.w3.org/2000/01/rdf-schema#label> "matched SOR item" .
+<https://w3id.org/iprok/tender#rateYear> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/tender> .
+<https://w3id.org/iprok/tender#avgRateVariance> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/avgRateVariance> .
+<https://w3id.org/iprok/tender#matchedBOQItems> <http://www.w3.org/2000/01/rdf-schema#label> "matched BOQ items" .
+<https://w3id.org/iprok/tender#tenderShortDesc> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/tender#procurementMode> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/tender> .
+<https://w3id.org/iprok/tender#sorLibraryId> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/tender#similarProject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/iprok/tender#tenderShortDesc> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/tenderShortDesc> .
+<https://w3id.org/iprok/tender#baseRate> <http://www.w3.org/2000/01/rdf-schema#comment> "Unit rate in INR as published in the SOR." .
+<https://w3id.org/iprok/tender#tenderTitle> <http://www.w3.org/2000/01/rdf-schema#comment> "The tender title property in the integrated project information model."@en .
+<https://w3id.org/iprok/tender#tenderUnit> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/tender#needsReview> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<https://w3id.org/iprok/tender#tenderBoqSno> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/tender> .
+<https://w3id.org/iprok/tender#Tender> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/Tender> .
+<https://w3id.org/iprok/tender#sorLibraryId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/tender#baseRate> <http://www.w3.org/2000/01/rdf-schema#label> "base rate" .
+<https://w3id.org/iprok/tender#contractForm> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/tender#SORLibrary> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/SORLibrary> .
+<https://w3id.org/iprok/tender#recommendedBid> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/recommendedBid> .
+<https://w3id.org/iprok/tender#rateVariance> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/iprok/tender#recommendedBid> <http://www.w3.org/2000/01/rdf-schema#label> "recommended bid (INR)" .
+<https://w3id.org/iprok/tender#similarityScore> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/tender> .
+<https://w3id.org/iprok/tender#needsReview> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/tender#SORLibrary> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iprok/tender#contractForm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/tender#rateYear> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<https://w3id.org/iprok/tender#matchStrategy> <http://www.w3.org/2000/01/rdf-schema#label> "match strategy" .
+<https://w3id.org/iprok/tender#similarProject> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/tender> .
+<https://w3id.org/iprok/tender#dedupCount> <http://www.w3.org/2000/01/rdf-schema#comment> "The dedup count property in the integrated project information model."@en .
+<https://w3id.org/iprok/tender#publisher> <http://www.w3.org/2000/01/rdf-schema#label> "publisher" .
+<https://w3id.org/iprok/tender#itemCount> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/tender> .
+<https://w3id.org/iprok/tender#TenderBOQItem> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/tender> .
+<https://w3id.org/iprok/tender#contingencyAmount> <http://www.w3.org/2000/01/rdf-schema#comment> "total_quoted × contingency_pct / 100. Domain-free." .
+<https://w3id.org/iprok/tender#ofTender> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/tender#emdPercentage> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/tender> .
+<https://w3id.org/iprok/tender#ingestedAt> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/tender> .
+<https://w3id.org/iprok/tender#procurementMode> <http://www.w3.org/2000/01/rdf-schema#comment> "The procurement mode property in the integrated project information model."@en .
+<https://w3id.org/iprok/tender#recommendedBid> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/iprok/tender#tenderAmount> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/tender> .
+<https://w3id.org/iprok/tender#matchConfidence> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/tender> .
+<https://w3id.org/iprok/tender#tenderId> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/tender> .
+<https://w3id.org/iprok/tender#tenderItemDescription> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/tender#rateVariance> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/rateVariance> .
+<https://w3id.org/iprok/tender#extractionStatus> <http://www.w3.org/2000/01/rdf-schema#label> "extraction status" .
+<https://w3id.org/iprok/tender#dedupCount> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<https://w3id.org/iprok/tender#similarityScore> <http://www.w3.org/2000/01/rdf-schema#label> "similarity score (0–1)" .
+<https://w3id.org/iprok/tender#procurementMode> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/procurementMode> .
+<https://w3id.org/iprok/tender#procurementMode> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/tender#contingencyPct> <http://www.w3.org/2000/01/rdf-schema#label> "contingency percentage" .
+<https://w3id.org/iprok/tender#tenderShortDesc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/tender#estimatedValue> <http://www.w3.org/2000/01/rdf-schema#comment> "The estimated value property in the integrated project information model."@en .
+<https://w3id.org/iprok/tender#sorCode> <http://www.w3.org/2000/01/rdf-schema#label> "SOR code" .
+<https://w3id.org/iprok/tender#tenderRate> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/tenderRate> .
+<https://w3id.org/iprok/tender#recommendedBid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/tender#ExtractionStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iprok/tender#sorYear> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/tender> .
+<https://w3id.org/iprok/tender#avgRateVariance> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/iprok/tender#tenderTitle> <http://www.w3.org/2000/01/rdf-schema#label> "tender title" .
+<https://w3id.org/iprok/tender#SORLibrary> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/tender> .
+<https://w3id.org/iprok/tender#estimatedValue> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/tender> .
+<https://w3id.org/iprok/tender#actualCPI> <http://www.w3.org/2000/01/rdf-schema#label> "actual CPI" .
+<https://w3id.org/iprok/tender#tenderUnit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/tender#tenderShortDesc> <http://www.w3.org/2000/01/rdf-schema#label> "tender short desc" .
+<https://w3id.org/iprok/tender#rateYear> <http://www.w3.org/2000/01/rdf-schema#comment> "The rate year property in the integrated project information model."@en .
+<https://w3id.org/iprok/tender#contingencyPct> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/tender> .
+<https://w3id.org/iprok/tender#sorYear> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<https://w3id.org/iprok/tender#tenderTitle> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/tender#BidRecommendation> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/tender> .
+<https://w3id.org/iprok/tender#itemCount> <http://www.w3.org/2000/01/rdf-schema#comment> "Count of <https://w3id.org/iprok/tender#TenderBOQItem> rows in the recommendation (matched items only — unmatched are excluded since no rate can be recommended)." .
+<https://w3id.org/iprok/tender#ComparableProject> <http://www.w3.org/2000/01/rdf-schema#comment> "One row of the bid-intelligence audit trail for a tender. Links a <https://w3id.org/iprok/tender#Tender> to a historical <https://w3id.org/iprok/schedule#Project> that the comparator scored as similar, with the score decomposition + the historical project's outcome signals attached." .
+<https://w3id.org/iprok/tender#ComparableProject> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/ComparableProject> .
+<https://w3id.org/iprok/tender#pbgPercentage> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/tender> .
+<https://w3id.org/iprok/tender#highRiskCount> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/tender> .
+<https://w3id.org/iprok/tender#TenderBOQItem> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/TenderBOQItem> .
+<https://w3id.org/iprok/tender#tenderTitle> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/tender> .
+<https://w3id.org/iprok/tender#recommendedBid> <http://www.w3.org/2000/01/rdf-schema#comment> "total_quoted + contingency_amount. The MD-facing single number. Domain-free." .
+<https://w3id.org/iprok/tender#extractionStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/iprok/tender#dedupCount> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/tender> .
+<https://w3id.org/iprok/tender#sorCode> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/tender#forTender> <http://www.w3.org/2000/01/rdf-schema#comment> "Link from <https://w3id.org/iprok/tender#ComparableProject> to the <https://w3id.org/iprok/tender#Tender> this comparison was run for. Domain-free (antipattern #8)." .
+<https://w3id.org/iprok/tender#BidRecommendation> <http://www.w3.org/2000/01/rdf-schema#comment> "The final bid-output document for a tender: total quoted, contingency, recommended bid, item-count + high-risk-count breakdown. The line-item detail is NOT stored on this node; it is re-derivable from the underlying S5.2 + S5.3 graph state, and persisting it would create stale-data risk on a SOR-rate or comparable-project update. The PDF lives in MinIO via <https://w3id.org/iprok/document#fileRef>." .
+<https://w3id.org/iprok/tender#tenderItemDescription> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/tender#sorCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/tender#contingencyAmount> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/iprok/tender#emdPercentage> <http://www.w3.org/2000/01/rdf-schema#comment> "The emd percentage property in the integrated project information model."@en .
+<https://w3id.org/iprok/tender#tenderItemDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/tender#extractionStatus> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/tender> .
+<https://w3id.org/iprok/tender#ExtractionStatus> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/tender> .
+<https://w3id.org/iprok/tender#tenderRate> <http://www.w3.org/2000/01/rdf-schema#label> "tender rate (INR)" .
+<https://w3id.org/iprok/tender#pbgPercentage> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/pbgPercentage> .
+<https://w3id.org/iprok/tender#Tender> <http://www.w3.org/2000/01/rdf-schema#comment> "A tender document under consideration by the org. Lives in the org catalogue graph (data/org/{oid}); pre-award. Becomes a <https://w3id.org/iprok/schedule#Project> only on award." .
+<https://w3id.org/iprok/tender#Tender> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Entity> .
+<https://w3id.org/iprok/tender#matchedSORItem> <http://www.w3.org/2000/01/rdf-schema#comment> "IRI of the <https://w3id.org/iprok/tender#SORItem> the tender BOQ row matched against. Absent when match-strategy is 'no-match'." .
+<https://w3id.org/iprok/tender#coverSystem> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/tender#contractForm> <http://www.w3.org/2000/01/rdf-schema#label> "contract form" .
+<https://w3id.org/iprok/tender#sorDescription> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/tender#sorYear> <http://www.w3.org/2000/01/rdf-schema#label> "SOR year" .
+<https://w3id.org/iprok/tender#ofTender> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/iprok/tender#Tender> .
+<https://w3id.org/iprok/tender#matchedBOQItems> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/matchedBOQItems> .
+<https://w3id.org/iprok/tender#matchedSORItem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/iprok/tender#forTender> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/iprok/tender#tenderBoqSno> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<https://w3id.org/iprok/tender#sorDescription> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/tender> .
+<https://w3id.org/iprok/tender#tenderShortDesc> <http://www.w3.org/2000/01/rdf-schema#comment> "The tender short desc property in the integrated project information model."@en .
+<https://w3id.org/iprok/tender#tenderUnit> <http://www.w3.org/2000/01/rdf-schema#comment> "The tender unit property in the integrated project information model."@en .
+<https://w3id.org/iprok/tender#tenderEstQty> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/iprok/tender#rateVariance> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/tender> .

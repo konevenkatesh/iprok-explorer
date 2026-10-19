@@ -4,95 +4,95 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://w3id.org/IproK/property#Unit> a owl:Class ;
+<https://w3id.org/iprok/property#Unit> a owl:Class ;
     rdfs:label "Unit" ;
-    dcterms:isPartOf <https://w3id.org/IproK/property> ;
+    dcterms:isPartOf <https://w3id.org/iprok/property> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/Unit> ;
     rdfs:comment "One sellable unit. Status transitions are PROV-O supersessions." ;
     rdfs:subClassOf prov:Entity .
 
-<https://w3id.org/IproK/property#carpetAreaSqft> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/property#carpetAreaSqft> a owl:DatatypeProperty ;
     rdfs:label "carpet Area Sqft"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/property> ;
+    dcterms:isPartOf <https://w3id.org/iprok/property> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/carpetAreaSqft> ;
     rdfs:comment "RERA carpet area, sqft. Domain unspecified (antipattern #8)." ;
     rdfs:range xsd:decimal .
 
-<https://w3id.org/IproK/property#floorNo> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/property#floorNo> a owl:DatatypeProperty ;
     rdfs:label "floor No"@en ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/property> ;
+    dcterms:isPartOf <https://w3id.org/iprok/property> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/floorNo> ;
     rdfs:comment "The floor no property in the integrated project information model."@en ;
     rdfs:range xsd:integer .
 
-<https://w3id.org/IproK/property#ofTower> a owl:ObjectProperty ;
+<https://w3id.org/iprok/property#ofTower> a owl:ObjectProperty ;
     rdfs:label "of Tower"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/property> ;
+    dcterms:isPartOf <https://w3id.org/iprok/property> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/ofTower> ;
     rdfs:comment "Unit → its tower. Domain unspecified (antipattern #8)." ;
-    rdfs:range <https://w3id.org/IproK/property#Tower> .
+    rdfs:range <https://w3id.org/iprok/property#Tower> .
 
-<https://w3id.org/IproK/property#ofUnitType> a owl:ObjectProperty ;
+<https://w3id.org/iprok/property#ofUnitType> a owl:ObjectProperty ;
     rdfs:label "of Unit Type"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/property> ;
+    dcterms:isPartOf <https://w3id.org/iprok/property> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/ofUnitType> ;
     rdfs:comment "Unit → its archetype. Domain unspecified (antipattern #8)." ;
-    rdfs:range <https://w3id.org/IproK/property#UnitType> .
+    rdfs:range <https://w3id.org/iprok/property#UnitType> .
 
-<https://w3id.org/IproK/property#towerId> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/property#towerId> a owl:DatatypeProperty ;
     rdfs:label "tower Id"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/property> ;
+    dcterms:isPartOf <https://w3id.org/iprok/property> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/towerId> ;
     rdfs:comment "Stable id within the project (T1, T2 …). Domain unspecified (antipattern #8)." ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK/property#unitId> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/property#unitId> a owl:DatatypeProperty ;
     rdfs:label "unit Id"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/property> ;
+    dcterms:isPartOf <https://w3id.org/iprok/property> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/unitId> ;
     rdfs:comment "Stable id within the project, e.g. T1-0503 (tower-floor-unit). Domain unspecified (antipattern #8)." ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK/property#unitNo> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/property#unitNo> a owl:DatatypeProperty ;
     rdfs:label "unit No"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/property> ;
+    dcterms:isPartOf <https://w3id.org/iprok/property> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/unitNo> ;
     rdfs:comment "Door number on the floor (1, 2, 3 …)." ;
     rdfs:range xsd:integer .
 
-<https://w3id.org/IproK/property#unitStatus> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/property#unitStatus> a owl:DatatypeProperty ;
     rdfs:label "unit Status"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/property> ;
+    dcterms:isPartOf <https://w3id.org/iprok/property> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/unitStatus> ;
     rdfs:comment "Available / Blocked / Booked / Agreement / Registered / Possession. Domain unspecified (antipattern #8)." ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK/property#unitTypeId> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/property#unitTypeId> a owl:DatatypeProperty ;
     rdfs:label "unit Type Id"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/property> ;
+    dcterms:isPartOf <https://w3id.org/iprok/property> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/unitTypeId> ;
     rdfs:comment "Stable id within the project (UT1 …). Domain unspecified (antipattern #8)." ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK/property#unitTypeName> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/property#unitTypeName> a owl:DatatypeProperty ;
     rdfs:label "unit Type Name"@en ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/property> ;
+    dcterms:isPartOf <https://w3id.org/iprok/property> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/unitTypeName> ;
     rdfs:comment "The unit type name property in the integrated project information model."@en ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK/property#Tower> a owl:Class ;
+<https://w3id.org/iprok/property#Tower> a owl:Class ;
     rdfs:label "Tower / wing" ;
-    dcterms:isPartOf <https://w3id.org/IproK/property> ;
+    dcterms:isPartOf <https://w3id.org/iprok/property> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/Tower> ;
     rdfs:comment "A tower, wing or block of the project." ;
     rdfs:subClassOf prov:Entity .
 
-<https://w3id.org/IproK/property#UnitType> a owl:Class ;
+<https://w3id.org/iprok/property#UnitType> a owl:Class ;
     rdfs:label "Unit type" ;
-    dcterms:isPartOf <https://w3id.org/IproK/property> ;
+    dcterms:isPartOf <https://w3id.org/iprok/property> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/UnitType> ;
     rdfs:comment "A sellable unit archetype (2BHK / 3BHK …) with its area set and base rate." ;
     rdfs:subClassOf prov:Entity .

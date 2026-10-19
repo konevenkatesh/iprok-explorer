@@ -4,247 +4,247 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://w3id.org/IproK/finance#CollectionReceipt> a owl:Class ;
+<https://w3id.org/iprok/finance#CollectionReceipt> a owl:Class ;
     rdfs:label "Collection Receipt"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/finance> ;
+    dcterms:isPartOf <https://w3id.org/iprok/finance> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/CollectionReceipt> ;
     rdfs:comment "One buyer payment against a unit, split escrow/operating at receipt time." ;
     rdfs:subClassOf prov:Entity .
 
-<https://w3id.org/IproK/finance#DemandNote> a owl:Class ;
+<https://w3id.org/iprok/finance#DemandNote> a owl:Class ;
     rdfs:label "Demand Note"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/finance> ;
+    dcterms:isPartOf <https://w3id.org/iprok/finance> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/DemandNote> ;
     rdfs:comment "One payment demand to one unit's allottee against an achieved milestone." ;
     rdfs:subClassOf prov:Entity .
 
-<https://w3id.org/IproK/finance#EscrowAccount> a owl:Class ;
+<https://w3id.org/iprok/finance#EscrowAccount> a owl:Class ;
     rdfs:label "Escrow Account"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/finance> ;
+    dcterms:isPartOf <https://w3id.org/iprok/finance> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/EscrowAccount> ;
     rdfs:comment "The project's RERA collection account discipline: a designated escrow account receiving the statutory share (default 70%) of every buyer collection." ;
     rdfs:subClassOf prov:Entity .
 
-<https://w3id.org/IproK/finance#EscrowWithdrawal> a owl:Class ;
+<https://w3id.org/iprok/finance#EscrowWithdrawal> a owl:Class ;
     rdfs:label "Escrow Withdrawal"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/finance> ;
+    dcterms:isPartOf <https://w3id.org/iprok/finance> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/EscrowWithdrawal> ;
     rdfs:comment "One utilization of escrow funds against a cost head, certificate-backed per RERA S.4(2)(l)(D)." ;
     rdfs:subClassOf prov:Activity .
 
-<https://w3id.org/IproK/finance#PaymentMilestone> a owl:Class ;
+<https://w3id.org/iprok/finance#PaymentMilestone> a owl:Class ;
     rdfs:label "Payment Milestone"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/finance> ;
+    dcterms:isPartOf <https://w3id.org/iprok/finance> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/PaymentMilestone> ;
     rdfs:comment "One instalment trigger in the project's payment schedule; e.g. 'Plinth completion; 15%'." ;
     rdfs:subClassOf prov:Entity .
 
-<https://w3id.org/IproK/finance#achievedAt> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/finance#achievedAt> a owl:DatatypeProperty ;
     rdfs:label "achieved At"@en ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/finance> ;
+    dcterms:isPartOf <https://w3id.org/iprok/finance> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/achievedAt> ;
     rdfs:comment "The achieved at property in the integrated project information model."@en ;
     rdfs:range xsd:dateTime .
 
-<https://w3id.org/IproK/finance#certificateRef> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/finance#certificateRef> a owl:DatatypeProperty ;
     rdfs:label "certificate Ref"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/finance> ;
+    dcterms:isPartOf <https://w3id.org/iprok/finance> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/certificateRef> ;
     rdfs:comment "Reference to the engineer + architect + CA certificate that authorises this withdrawal (RERA S.4(2)(l)(D)). Mandatory." ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK/finance#costHead> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/finance#costHead> a owl:DatatypeProperty ;
     rdfs:label "cost Head"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/finance> ;
+    dcterms:isPartOf <https://w3id.org/iprok/finance> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/costHead> ;
     rdfs:comment "RERA utilization head: Land | Construction | Statutory | Consultants | Finance | Other." ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK/finance#demandAmount> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/finance#demandAmount> a owl:DatatypeProperty ;
     rdfs:label "demand Amount"@en ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/finance> ;
+    dcterms:isPartOf <https://w3id.org/iprok/finance> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/demandAmount> ;
     rdfs:comment "The demand amount property in the integrated project information model."@en ;
     rdfs:range xsd:decimal .
 
-<https://w3id.org/IproK/finance#demandDate> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/finance#demandDate> a owl:DatatypeProperty ;
     rdfs:label "demand Date"@en ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/finance> ;
+    dcterms:isPartOf <https://w3id.org/iprok/finance> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/demandDate> ;
     rdfs:comment "The demand date property in the integrated project information model."@en ;
     rdfs:range xsd:date .
 
-<https://w3id.org/IproK/finance#demandId> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/finance#demandId> a owl:DatatypeProperty ;
     rdfs:label "demand Id"@en ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/finance> ;
+    dcterms:isPartOf <https://w3id.org/iprok/finance> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/demandId> ;
     rdfs:comment "The demand id property in the integrated project information model."@en ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK/finance#demandStatus> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/finance#demandStatus> a owl:DatatypeProperty ;
     rdfs:label "demand Status"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/finance> ;
+    dcterms:isPartOf <https://w3id.org/iprok/finance> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/demandStatus> ;
     rdfs:comment "Raised | Cancelled. Settled/overdue are computed from receipts, never asserted." ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK/finance#dueDate2> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/finance#dueDate2> a owl:DatatypeProperty ;
     rdfs:label "due Date2"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/finance> ;
+    dcterms:isPartOf <https://w3id.org/iprok/finance> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/dueDate2> ;
-    rdfs:comment "Payment due date. Named dueDate2 because <https://w3id.org/IproK#dueDate> exists with task semantics elsewhere; both stay domain-free." ;
+    rdfs:comment "Payment due date. Named dueDate2 because <https://w3id.org/iprok#dueDate> exists with task semantics elsewhere; both stay domain-free." ;
     rdfs:range xsd:date .
 
-<https://w3id.org/IproK/finance#escrowAccountRef> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/finance#escrowAccountRef> a owl:DatatypeProperty ;
     rdfs:label "escrow Account Ref"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/finance> ;
+    dcterms:isPartOf <https://w3id.org/iprok/finance> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/escrowAccountRef> ;
     rdfs:comment "Masked account reference — never the full account number." ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK/finance#escrowBank> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/finance#escrowBank> a owl:DatatypeProperty ;
     rdfs:label "escrow Bank"@en ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/finance> ;
+    dcterms:isPartOf <https://w3id.org/iprok/finance> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/escrowBank> ;
     rdfs:comment "The escrow bank property in the integrated project information model."@en ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK/finance#escrowSetupAt> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/finance#escrowSetupAt> a owl:DatatypeProperty ;
     rdfs:label "escrow Setup At"@en ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/finance> ;
+    dcterms:isPartOf <https://w3id.org/iprok/finance> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/escrowSetupAt> ;
     rdfs:comment "The escrow setup at property in the integrated project information model."@en ;
     rdfs:range xsd:dateTime .
 
-<https://w3id.org/IproK/finance#escrowShare> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/finance#escrowShare> a owl:DatatypeProperty ;
     rdfs:label "escrow Share"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/finance> ;
+    dcterms:isPartOf <https://w3id.org/iprok/finance> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/escrowShare> ;
     rdfs:comment "Server-computed: receiptAmount × escrowSplitPct/100, 2dp." ;
     rdfs:range xsd:decimal .
 
-<https://w3id.org/IproK/finance#escrowSplitPct> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/finance#escrowSplitPct> a owl:DatatypeProperty ;
     rdfs:label "escrow Split Pct"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/finance> ;
+    dcterms:isPartOf <https://w3id.org/iprok/finance> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/escrowSplitPct> ;
     rdfs:comment "Statutory share of every collection routed to escrow. RERA default 70." ;
     rdfs:range xsd:decimal .
 
-<https://w3id.org/IproK/finance#forMilestone> a owl:ObjectProperty ;
+<https://w3id.org/iprok/finance#forMilestone> a owl:ObjectProperty ;
     rdfs:label "for Milestone"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/finance> ;
+    dcterms:isPartOf <https://w3id.org/iprok/finance> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/forMilestone> ;
-    rdfs:comment "The achieved <https://w3id.org/IproK/finance#PaymentMilestone> this demand cites. Range undeclared (antipattern #8)." .
+    rdfs:comment "The achieved <https://w3id.org/iprok/finance#PaymentMilestone> this demand cites. Range undeclared (antipattern #8)." .
 
-<https://w3id.org/IproK/finance#forUnit> a owl:ObjectProperty ;
+<https://w3id.org/iprok/finance#forUnit> a owl:ObjectProperty ;
     rdfs:label "for Unit"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/finance> ;
+    dcterms:isPartOf <https://w3id.org/iprok/finance> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/forUnit> ;
-    rdfs:comment "The <https://w3id.org/IproK/property#Unit> this receipt pays against. Range left undeclared so RDFS inference never re-classifies referenced IRIs (antipattern #8)." .
+    rdfs:comment "The <https://w3id.org/iprok/property#Unit> this receipt pays against. Range left undeclared so RDFS inference never re-classifies referenced IRIs (antipattern #8)." .
 
-<https://w3id.org/IproK/finance#milestoneId> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/finance#milestoneId> a owl:DatatypeProperty ;
     rdfs:label "milestone Id"@en ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/finance> ;
+    dcterms:isPartOf <https://w3id.org/iprok/finance> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/milestoneId> ;
     rdfs:comment "The milestone id property in the integrated project information model."@en ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK/finance#milestoneName> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/finance#milestoneName> a owl:DatatypeProperty ;
     rdfs:label "milestone Name"@en ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/finance> ;
+    dcterms:isPartOf <https://w3id.org/iprok/finance> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/milestoneName> ;
     rdfs:comment "The milestone name property in the integrated project information model."@en ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK/finance#milestoneOrder> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/finance#milestoneOrder> a owl:DatatypeProperty ;
     rdfs:label "milestone Order"@en ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/finance> ;
+    dcterms:isPartOf <https://w3id.org/iprok/finance> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/milestoneOrder> ;
     rdfs:comment "The milestone order property in the integrated project information model."@en ;
     rdfs:range xsd:integer .
 
-<https://w3id.org/IproK/finance#milestonePct> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/finance#milestonePct> a owl:DatatypeProperty ;
     rdfs:label "milestone Pct"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/finance> ;
+    dcterms:isPartOf <https://w3id.org/iprok/finance> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/milestonePct> ;
     rdfs:comment "Instalment share of the unit price (0–100]." ;
     rdfs:range xsd:decimal .
 
-<https://w3id.org/IproK/finance#milestoneStatus> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/finance#milestoneStatus> a owl:DatatypeProperty ;
     rdfs:label "milestone Status"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/finance> ;
+    dcterms:isPartOf <https://w3id.org/iprok/finance> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/milestoneStatus> ;
     rdfs:comment "Pending | Achieved." ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK/finance#operatingShare> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/finance#operatingShare> a owl:DatatypeProperty ;
     rdfs:label "operating Share"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/finance> ;
+    dcterms:isPartOf <https://w3id.org/iprok/finance> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/operatingShare> ;
     rdfs:comment "Server-computed: receiptAmount − escrowShare (no penny drift)." ;
     rdfs:range xsd:decimal .
 
-<https://w3id.org/IproK/finance#receiptAmount> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/finance#receiptAmount> a owl:DatatypeProperty ;
     rdfs:label "receipt Amount"@en ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/finance> ;
+    dcterms:isPartOf <https://w3id.org/iprok/finance> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/receiptAmount> ;
     rdfs:comment "The receipt amount property in the integrated project information model."@en ;
     rdfs:range xsd:decimal .
 
-<https://w3id.org/IproK/finance#receiptDate> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/finance#receiptDate> a owl:DatatypeProperty ;
     rdfs:label "receipt Date"@en ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/finance> ;
+    dcterms:isPartOf <https://w3id.org/iprok/finance> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/receiptDate> ;
     rdfs:comment "The receipt date property in the integrated project information model."@en ;
     rdfs:range xsd:date .
 
-<https://w3id.org/IproK/finance#receiptId> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/finance#receiptId> a owl:DatatypeProperty ;
     rdfs:label "receipt Id"@en ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/finance> ;
+    dcterms:isPartOf <https://w3id.org/iprok/finance> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/receiptId> ;
     rdfs:comment "The receipt id property in the integrated project information model."@en ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK/finance#receiptMode> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/finance#receiptMode> a owl:DatatypeProperty ;
     rdfs:label "receipt Mode"@en ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/finance> ;
+    dcterms:isPartOf <https://w3id.org/iprok/finance> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/receiptMode> ;
     rdfs:comment "The receipt mode property in the integrated project information model."@en ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK/finance#withdrawalAmount> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/finance#withdrawalAmount> a owl:DatatypeProperty ;
     rdfs:label "withdrawal Amount"@en ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/finance> ;
+    dcterms:isPartOf <https://w3id.org/iprok/finance> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/withdrawalAmount> ;
     rdfs:comment "The withdrawal amount property in the integrated project information model."@en ;
     rdfs:range xsd:decimal .
 
-<https://w3id.org/IproK/finance#withdrawalDate> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/finance#withdrawalDate> a owl:DatatypeProperty ;
     rdfs:label "withdrawal Date"@en ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/finance> ;
+    dcterms:isPartOf <https://w3id.org/iprok/finance> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/withdrawalDate> ;
     rdfs:comment "The withdrawal date property in the integrated project information model."@en ;
     rdfs:range xsd:date .
 
-<https://w3id.org/IproK/finance#withdrawalId> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/finance#withdrawalId> a owl:DatatypeProperty ;
     rdfs:label "withdrawal Id"@en ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/finance> ;
+    dcterms:isPartOf <https://w3id.org/iprok/finance> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/withdrawalId> ;
     rdfs:comment "The withdrawal id property in the integrated project information model."@en ;
     rdfs:range xsd:string .

@@ -1,0 +1,160 @@
+<https://w3id.org/iprok/signal#heatProbability> <http://www.w3.org/2000/01/rdf-schema#label> "extreme heat probability" .
+<https://w3id.org/iprok/signal#pricePerUnit> <http://www.w3.org/2000/01/rdf-schema#comment> "Current market price in INR per the material's UOM (Steel: per MT; Cement: per bag; Bitumen: per MT)." .
+<https://w3id.org/iprok/signal#profileLat> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/profileLat> .
+<https://w3id.org/iprok/signal#HistoricalWeatherProfile> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iprok/signal#maxTempC> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/maxTempC> .
+<https://w3id.org/iprok/signal#LabourSignal> <http://www.w3.org/2000/01/rdf-schema#label> "labour signal" .
+<https://w3id.org/iprok/signal#stateCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/signal#avgRainfallMM> <http://www.w3.org/2000/01/rdf-schema#comment> "10-year mean of weekly rainfall (mm) for this calendar week at this site. Drives the historical_rain_mm_avg_this_week GNN feature." .
+<https://w3id.org/iprok/signal#profileLng> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/signal> .
+<https://w3id.org/iprok/signal#LabourSignal> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/signal> .
+<https://w3id.org/iprok/signal#pricePerUnit> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/signal> .
+<https://w3id.org/iprok/signal#fetchedAt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/signal#WeatherSignal> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/iprok/signal#ExternalSignal> .
+<https://w3id.org/iprok/signal#fetchedAt> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://w3id.org/iprok/signal#workingDayLossRisk> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/iprok/signal#isMonsoonPeriod> <http://www.w3.org/2000/01/rdf-schema#comment> "True when the signal date falls inside the regional monsoon window (SW: Jun–Sep all India; NE: Oct–Dec for Tamil Nadu/Andhra)." .
+<https://w3id.org/iprok/signal#priceDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/iprok/signal#reason> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/signal> .
+<https://w3id.org/iprok/signal#MaterialPriceSignal> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/signal> .
+<https://w3id.org/iprok/signal#WeatherSignal> <http://www.w3.org/2000/01/rdf-schema#label> "weather signal" .
+<https://w3id.org/iprok/signal#isMonsoonPeriod> <http://www.w3.org/2000/01/rdf-schema#label> "monsoon period flag" .
+<https://w3id.org/iprok/signal#volatility30d> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/iprok/signal#avgRainfallMM> <http://www.w3.org/2000/01/rdf-schema#label> "average rainfall (mm)" .
+<https://w3id.org/iprok/signal#rainProbability> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/rainProbability> .
+<https://w3id.org/iprok/signal#priceDate> <http://www.w3.org/2000/01/rdf-schema#label> "price observation date" .
+<https://w3id.org/iprok/signal#avgRainfallMM> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/avgRainfallMM> .
+<https://w3id.org/iprok/signal#workingDayLossRisk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/signal#WeatherSignal> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/WeatherSignal> .
+<https://w3id.org/iprok/signal#availabilityScore> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/availabilityScore> .
+<https://w3id.org/iprok/signal#maxTempC> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/signal> .
+<https://w3id.org/iprok/signal#signalDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/iprok/signal#MaterialPriceSignal> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/iprok/signal#ExternalSignal> .
+<https://w3id.org/iprok/signal#sourceYears> <http://www.w3.org/2000/01/rdf-schema#label> "source years" .
+<https://w3id.org/iprok/signal#HistoricalWeatherWeek> <http://www.w3.org/2000/01/rdf-schema#label> "historical weather week" .
+<https://w3id.org/iprok/signal#profileLng> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/iprok/signal#vsQuotedRate> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/signal> .
+<https://w3id.org/iprok/signal#profileLng> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/signal#profileLat> <http://www.w3.org/2000/01/rdf-schema#comment> "Site latitude (degrees, WGS84) the profile was fetched for. Stored on the profile so a later GPS edit can compare + decide whether to refetch." .
+<https://w3id.org/iprok/signal#reason> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/signal#reason> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/signal#isMonsoonPeriod> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/isMonsoonPeriod> .
+<https://w3id.org/iprok/signal#volatility30d> <http://www.w3.org/2000/01/rdf-schema#comment> "Coefficient of variation (stddev / mean) of the price over the trailing 30 days. >0.05 flags 'volatile' for the auto-risk engine." .
+<https://w3id.org/iprok/signal#avgRainfallMM> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/signal> .
+<https://w3id.org/iprok/signal#profileLat> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/signal> .
+<https://w3id.org/iprok/signal#HistoricalWeatherProfile> <http://www.w3.org/2000/01/rdf-schema#label> "historical weather profile" .
+<https://w3id.org/iprok/signal#stateCode> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/stateCode> .
+<https://w3id.org/iprok/signal#profileLng> <http://www.w3.org/2000/01/rdf-schema#comment> "Site longitude (degrees, WGS84) the profile was fetched for." .
+<https://w3id.org/iprok/signal#priceDate> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/priceDate> .
+<https://w3id.org/iprok/signal#LabourSignal> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/LabourSignal> .
+<https://w3id.org/iprok/signal#sourceYears> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/sourceYears> .
+<https://w3id.org/iprok/signal#pricePerUnit> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/pricePerUnit> .
+<https://w3id.org/iprok/signal#maxTempC> <http://www.w3.org/2000/01/rdf-schema#comment> "Daily maximum temperature in degrees Celsius. >42°C correlates with reduced productivity in north India." .
+<https://w3id.org/iprok/signal#vsQuotedRate> <http://www.w3.org/2000/01/rdf-schema#label> "deviation vs BOQ quoted rate" .
+<https://w3id.org/iprok/signal#vsQuotedRate> <http://www.w3.org/2000/01/rdf-schema#comment> "Fractional deviation: (current_price - boq_quoted_rate) / boq_quoted_rate. Positive = market is above quoted; +0.15 (15%) is the steel-escalation trigger." .
+<https://w3id.org/iprok/signal#signalDate> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/signalDate> .
+<https://w3id.org/iprok/signal#maxTempC> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/signal#MaterialPriceSignal> <http://www.w3.org/2000/01/rdf-schema#comment> "Weekly market price for a material (Steel-TMT, Cement, Bitumen, etc.) with 30-day rolling volatility and percent-deviation vs the BOQ quoted rate. Sources: SAIL website scrape (steel), RBI WPI index (cement)." .
+<https://w3id.org/iprok/signal#HistoricalWeatherWeek> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iprok/signal#rainProbability> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/signal> .
+<https://w3id.org/iprok/signal#sourceYears> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/signal> .
+<https://w3id.org/iprok/signal#isMonsoonPeriod> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<https://w3id.org/iprok/signal#reason> <http://www.w3.org/2000/01/rdf-schema#comment> "Free-text reason: 'Diwali' | 'Pongal' | 'Kharif harvest' | 'Rabi harvest' | 'Holi' | 'Normal'. Surfaced on the UI alongside the score." .
+<https://w3id.org/iprok/signal#HistoricalWeatherWeek> <http://www.w3.org/2000/01/rdf-schema#comment> "One ISO week-of-year bucket (1..53) of the climatology profile. 52 instances per HistoricalWeatherProfile; the GNN reads three scalars from the week-bucket whose ISO week matches an activity's planned-start." .
+<https://w3id.org/iprok/signal#profileLat> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/iprok/signal#heatProbability> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/heatProbability> .
+<https://w3id.org/iprok/signal#ExternalSignal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iprok/signal#vsQuotedRate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/signal#heatProbability> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/signal> .
+<https://w3id.org/iprok/signal#stateCode> <http://www.w3.org/2000/01/rdf-schema#label> "Indian state ISO code" .
+<https://w3id.org/iprok/signal#weekOfYear> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<https://w3id.org/iprok/signal#profileLng> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/profileLng> .
+<https://w3id.org/iprok/signal#reason> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/reason> .
+<https://w3id.org/iprok/signal#ExternalSignal> <http://www.w3.org/2000/01/rdf-schema#label> "external signal" .
+<https://w3id.org/iprok/signal#MaterialPriceSignal> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/MaterialPriceSignal> .
+<https://w3id.org/iprok/signal#profileLat> <http://www.w3.org/2000/01/rdf-schema#label> "profile latitude" .
+<https://w3id.org/iprok/signal#weekOfYear> <http://www.w3.org/2000/01/rdf-schema#comment> "ISO week number 1..53. Activities query historical features by computing ISO week from their planned_start date." .
+<https://w3id.org/iprok/signal#HistoricalWeatherProfile> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/signal> .
+<https://w3id.org/iprok/signal#profileLat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/signal#avgRainfallMM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/signal#signalDate> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/signal> .
+<https://w3id.org/iprok/signal#sourceYears> <http://www.w3.org/2000/01/rdf-schema#comment> "Length of the climatology window in years (NASA POWER default: 10)." .
+<https://w3id.org/iprok/signal#signalDate> <http://www.w3.org/2000/01/rdf-schema#label> "signal date" .
+<https://w3id.org/iprok/signal#rainProbability> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/iprok/signal#maxTempC> <http://www.w3.org/2000/01/rdf-schema#label> "max temperature (°C)" .
+<https://w3id.org/iprok/signal#availabilityScore> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/signal> .
+<https://w3id.org/iprok/signal#availabilityScore> <http://www.w3.org/2000/01/rdf-schema#label> "labour availability score" .
+<https://w3id.org/iprok/signal#LabourSignal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iprok/signal#HistoricalWeatherProfile> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/iprok/signal#ExternalSignal> .
+<https://w3id.org/iprok/signal#vsQuotedRate> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/vsQuotedRate> .
+<https://w3id.org/iprok/signal#workingDayLossRisk> <http://www.w3.org/2000/01/rdf-schema#comment> "Probability [0, 1] that this calendar day will be lost to weather (rain > 25mm, extreme heat, cyclone). Computed from the underlying numbers — the GNN consumes this scalar directly." .
+<https://w3id.org/iprok/signal#MaterialPriceSignal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iprok/signal#rainProbability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/signal#sourceYears> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/signal#signalWeek> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/signal#HistoricalWeatherWeek> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/signal> .
+<https://w3id.org/iprok/signal#MaterialPriceSignal> <http://www.w3.org/2000/01/rdf-schema#label> "material price signal" .
+<https://w3id.org/iprok/signal#ExternalSignal> <http://www.w3.org/2000/01/rdf-schema#comment> "Abstract parent; concrete subclasses (WeatherSignal, MaterialPriceSignal, LabourSignal) carry the data. Domain-free; signal triples are written to data/external/signals/{type}." .
+<https://w3id.org/iprok/signal#HistoricalWeatherProfile> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/HistoricalWeatherProfile> .
+<https://w3id.org/iprok/signal#signalWeek> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#gYearMonth> .
+<https://w3id.org/iprok/signal#rainProbability> <http://www.w3.org/2000/01/rdf-schema#label> "rain probability" .
+<https://w3id.org/iprok/signal#availabilityScore> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/iprok/signal#heatProbability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/signal#priceDate> <http://www.w3.org/2000/01/rdf-schema#comment> "Date of the price snapshot — typically the Saturday of the week the price was sampled." .
+<https://w3id.org/iprok/signal#vsQuotedRate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/iprok/signal#priceDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/signal#reason> <http://www.w3.org/2000/01/rdf-schema#label> "labour availability reason" .
+<https://w3id.org/iprok/signal#ExternalSignal> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/signal> .
+<https://w3id.org/iprok/signal#ExternalSignal> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/ExternalSignal> .
+<https://w3id.org/iprok/signal#stateCode> <http://www.w3.org/2000/01/rdf-schema#comment> "Two-letter state code (KA / TN / MH / TG / AP / UP). Labour signals are state-specific because the festival calendar differs by region." .
+<https://w3id.org/iprok/signal#signalWeek> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/signal> .
+<https://w3id.org/iprok/signal#signalDate> <http://www.w3.org/2000/01/rdf-schema#comment> "Calendar date the signal value pertains to (weather: that day; material price: that week's settlement; labour: week start). Domain-free." .
+<https://w3id.org/iprok/signal#isMonsoonPeriod> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/signal#weekOfYear> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/signal> .
+<https://w3id.org/iprok/signal#weekOfYear> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/weekOfYear> .
+<https://w3id.org/iprok/signal#signalDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/signal#avgRainfallMM> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/iprok/signal#priceDate> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/signal> .
+<https://w3id.org/iprok/signal#volatility30d> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/signal> .
+<https://w3id.org/iprok/signal#rainProbability> <http://www.w3.org/2000/01/rdf-schema#comment> "Empirical probability [0, 1] that this calendar week sees > 25mm total rainfall, computed across the 10 years of the climatology window. Activities planned in high-rain-prob weeks should learn a delay bias." .
+<https://w3id.org/iprok/signal#pricePerUnit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/signal#stateCode> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/signal#isMonsoonPeriod> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/signal> .
+<https://w3id.org/iprok/signal#rainfallMM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/signal#fetchedAt> <http://www.w3.org/2000/01/rdf-schema#comment> "When the NASA POWER fetch ran. The Celery worker re-fetches only when this is > 1 year old." .
+<https://w3id.org/iprok/signal#availabilityScore> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/signal#workingDayLossRisk> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/workingDayLossRisk> .
+<https://w3id.org/iprok/signal#WeatherSignal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iprok/signal#signalWeek> <http://www.w3.org/2000/01/rdf-schema#comment> "ISO week the labour signal pertains to (gYearMonth gives month granularity; combined with a state code identifies the week)." .
+<https://w3id.org/iprok/signal#maxTempC> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/iprok/signal#rainfallMM> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/signal> .
+<https://w3id.org/iprok/signal#volatility30d> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/volatility30d> .
+<https://w3id.org/iprok/signal#signalWeek> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/signalWeek> .
+<https://w3id.org/iprok/signal#stateCode> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/signal> .
+<https://w3id.org/iprok/signal#volatility30d> <http://www.w3.org/2000/01/rdf-schema#label> "30-day rolling volatility" .
+<https://w3id.org/iprok/signal#heatProbability> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/iprok/signal#signalWeek> <http://www.w3.org/2000/01/rdf-schema#label> "signal week" .
+<https://w3id.org/iprok/signal#profileLng> <http://www.w3.org/2000/01/rdf-schema#label> "profile longitude" .
+<https://w3id.org/iprok/signal#rainfallMM> <http://www.w3.org/2000/01/rdf-schema#label> "rainfall (mm)" .
+<https://w3id.org/iprok/signal#fetchedAt> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/signal> .
+<https://w3id.org/iprok/signal#rainfallMM> <http://www.w3.org/2000/01/rdf-schema#comment> "Daily rainfall in millimetres at the project's GPS coordinates. Used by the auto-risk engine to gate monsoon triggers." .
+<https://w3id.org/iprok/signal#weekOfYear> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/signal#LabourSignal> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/iprok/signal#ExternalSignal> .
+<https://w3id.org/iprok/signal#HistoricalWeatherProfile> <http://www.w3.org/2000/01/rdf-schema#comment> "10-year climatology snapshot at a project's GPS; 52 weekly buckets, each with avg rainfall + rain probability + extreme-heat probability. Source: NASA POWER (power.larc.nasa.gov), free climatology API, no auth required. Fetched once at project geocoding; treated as static climate context (re-fetch only if site GPS changes)." .
+<https://w3id.org/iprok/signal#heatProbability> <http://www.w3.org/2000/01/rdf-schema#comment> "Empirical probability [0, 1] that this calendar week sees at least one day with max temp > 40°C, computed across the 10 years of the climatology window. Indian-summer concrete-pour productivity drops sharply above 40°C." .
+<https://w3id.org/iprok/signal#pricePerUnit> <http://www.w3.org/2000/01/rdf-schema#label> "market price per unit (INR)" .
+<https://w3id.org/iprok/signal#weekOfYear> <http://www.w3.org/2000/01/rdf-schema#label> "week of year" .
+<https://w3id.org/iprok/signal#volatility30d> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/signal#LabourSignal> <http://www.w3.org/2000/01/rdf-schema#comment> "Per-week per-state labour availability score (0-1, where 0 = peak festival/harvest absence). Reason field carries the cause: Diwali / Pongal / Kharif harvest / Normal. Source: calendarific.com API + ICAR crop calendar." .
+<https://w3id.org/iprok/signal#fetchedAt> <http://www.w3.org/2000/01/rdf-schema#label> "profile fetched at" .
+<https://w3id.org/iprok/signal#workingDayLossRisk> <http://www.w3.org/2000/01/rdf-schema#label> "working day loss risk" .
+<https://w3id.org/iprok/signal#pricePerUnit> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/iprok/signal#WeatherSignal> <http://www.w3.org/2000/01/rdf-schema#comment> "Daily weather snapshot at a project's GPS; rainfall, max temp, working-day-loss-risk. Source: IMD via indianapi.in (free tier) with OpenWeatherMap fallback." .
+<https://w3id.org/iprok/signal#sourceYears> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<https://w3id.org/iprok/signal#rainfallMM> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/iprok/signal#rainfallMM> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/rainfallMM> .
+<https://w3id.org/iprok/signal#workingDayLossRisk> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/signal> .
+<https://w3id.org/iprok/signal#WeatherSignal> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/signal> .
+<https://w3id.org/iprok/signal#availabilityScore> <http://www.w3.org/2000/01/rdf-schema#comment> "Score in [0, 1]. 0 = peak festival absence (Diwali week, Pongal week, Kharif harvest); 1 = normal availability. <0.5 triggers the festival_labour_shortage auto-risk." .
+<https://w3id.org/iprok/signal#HistoricalWeatherWeek> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/HistoricalWeatherWeek> .
+<https://w3id.org/iprok/signal#fetchedAt> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/fetchedAt> .

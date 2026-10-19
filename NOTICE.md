@@ -14,3 +14,6 @@ No equivalence mapping between historical IproK and the BIMSaarthi namespace is 
 
 
 The user subsequently requested rewriting and extending IproK to include the later modules, and explicitly approved public disclosure of the full source schema. `schema/iprok-0.2.0/` is the new proposed derivative: 138 classes, 21 namespaces, a traceable mapping, migrated SHACL and equivalent RDF distributions. It preserves 401 original non-header assertions and corrects three documented hierarchy errors. This is newly dated development, not a historical release. Source namespaces in `dct:source` identify provenance, not equivalence.
+
+
+On 19 October 2026 the user explicitly approved canonical lowercase `https://w3id.org/iprok` identifiers and connected thesis updates. Historical uppercase source files remain unchanged. The current expanded draft and constraints are migrated with `namespace-migration.json`; this changes RDF identifiers and is not an equivalence assertion. The former draft version IRI maps to `https://w3id.org/iprok/draft/0.2.0`.

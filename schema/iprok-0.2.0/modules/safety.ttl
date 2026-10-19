@@ -4,67 +4,67 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://w3id.org/IproK/safety#immediateCause> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/safety#immediateCause> a owl:DatatypeProperty ;
     rdfs:label "immediate cause" ;
-    dcterms:isPartOf <https://w3id.org/IproK/safety> ;
+    dcterms:isPartOf <https://w3id.org/iprok/safety> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/immediateCause> ;
     rdfs:comment "Free-text first-pass cause. Root-cause analysis lives at V0.28." ;
-    rdfs:domain <https://w3id.org/IproK/safety#Incident> ;
+    rdfs:domain <https://w3id.org/iprok/safety#Incident> ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK/safety#incidentAt> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/safety#incidentAt> a owl:DatatypeProperty ;
     rdfs:label "incident at" ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/safety> ;
+    dcterms:isPartOf <https://w3id.org/iprok/safety> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/incidentAt> ;
     rdfs:comment "The incident at property in the integrated project information model. Its declared domain is Incident and its declared range is dateTime."@en ;
-    rdfs:domain <https://w3id.org/IproK/safety#Incident> ;
+    rdfs:domain <https://w3id.org/iprok/safety#Incident> ;
     rdfs:range xsd:dateTime .
 
-<https://w3id.org/IproK/safety#incidentType> a owl:ObjectProperty ;
+<https://w3id.org/iprok/safety#incidentType> a owl:ObjectProperty ;
     rdfs:label "incident type" ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/safety> ;
+    dcterms:isPartOf <https://w3id.org/iprok/safety> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/incidentType> ;
     rdfs:comment "The incident type property in the integrated project information model. Its declared domain is Incident and its declared range is IncidentType."@en ;
-    rdfs:domain <https://w3id.org/IproK/safety#Incident> ;
-    rdfs:range <https://w3id.org/IproK/safety#IncidentType> .
+    rdfs:domain <https://w3id.org/iprok/safety#Incident> ;
+    rdfs:range <https://w3id.org/iprok/safety#IncidentType> .
 
-<https://w3id.org/IproK/safety#linkedActivity> a owl:ObjectProperty ;
+<https://w3id.org/iprok/safety#linkedActivity> a owl:ObjectProperty ;
     rdfs:label "linked activity" ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/safety> ;
+    dcterms:isPartOf <https://w3id.org/iprok/safety> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/linkedActivity> ;
     rdfs:comment "The linked activity property in the integrated project information model. Its declared domain is Incident and its declared range is Activity."@en ;
-    rdfs:domain <https://w3id.org/IproK/safety#Incident> ;
-    rdfs:range <https://w3id.org/IproK/schedule#Activity> .
+    rdfs:domain <https://w3id.org/iprok/safety#Incident> ;
+    rdfs:range <https://w3id.org/iprok/schedule#Activity> .
 
-<https://w3id.org/IproK/safety#personsInvolved> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/safety#personsInvolved> a owl:DatatypeProperty ;
     rdfs:label "persons involved" ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/safety> ;
+    dcterms:isPartOf <https://w3id.org/iprok/safety> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/personsInvolved> ;
     rdfs:comment "The persons involved property in the integrated project information model. Its declared domain is Incident and its declared range is integer."@en ;
-    rdfs:domain <https://w3id.org/IproK/safety#Incident> ;
+    rdfs:domain <https://w3id.org/iprok/safety#Incident> ;
     rdfs:range xsd:integer .
 
-<https://w3id.org/IproK/safety#reportedBy> a owl:ObjectProperty ;
+<https://w3id.org/iprok/safety#reportedBy> a owl:ObjectProperty ;
     rdfs:label "reported by" ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/safety> ;
+    dcterms:isPartOf <https://w3id.org/iprok/safety> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/reportedBy> ;
     rdfs:comment "The reported by property in the integrated project information model."@en ;
-    rdfs:range <https://w3id.org/IproK#User> .
+    rdfs:range <https://w3id.org/iprok#User> .
 
-<https://w3id.org/IproK/safety#IncidentType> a owl:Class ;
+<https://w3id.org/iprok/safety#IncidentType> a owl:Class ;
     rdfs:label "Incident type" ;
-    dcterms:isPartOf <https://w3id.org/IproK/safety> ;
+    dcterms:isPartOf <https://w3id.org/iprok/safety> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/IncidentType> ;
     rdfs:comment "Severity bucket for safety incidents. Four-level scale follows IS 14489 / DGMS site-safety classification." .
 
-<https://w3id.org/IproK/safety#Incident> a owl:Class ;
+<https://w3id.org/iprok/safety#Incident> a owl:Class ;
     rdfs:label "Safety incident" ;
-    dcterms:isPartOf <https://w3id.org/IproK/safety> ;
+    dcterms:isPartOf <https://w3id.org/iprok/safety> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/Incident> ;
     rdfs:comment "A recorded site safety event with its severity, activity context and follow-up information." ;
     rdfs:subClassOf prov:Activity .

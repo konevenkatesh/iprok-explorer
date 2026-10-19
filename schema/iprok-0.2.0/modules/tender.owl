@@ -1,0 +1,443 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:dcterms="http://purl.org/dc/terms/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+>
+  <rdf:Description rdf:about="https://w3id.org/iprok/tender#tenderEstQty">
+    <rdfs:label>tender est qty</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/tenderEstQty"/>
+    <rdfs:comment xml:lang="en">The tender est qty property in the integrated project information model.</rdfs:comment>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/tender"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/tender#deviationCount">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:label>deviation count</rdfs:label>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/deviationCount"/>
+    <rdfs:comment>Number of &lt;https://w3id.org/iprok/billing#Deviation&gt; nodes (S3.7) recorded on the historical project — counts how often measured quantity exceeded tendered quantity by &gt;25%. Domain-free.</rdfs:comment>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/tender"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/tender#emdPercentage">
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/tender"/>
+    <rdfs:label>EMD percentage</rdfs:label>
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/emdPercentage"/>
+    <rdfs:comment xml:lang="en">The emd percentage property in the integrated project information model.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/tender#matchStrategy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment>How the match landed. Values: 'exact-code' | 'fuzzy-desc' | 'jargon-normalised' | 'no-match'. SHACL sh:in (string literals, antipattern #13).</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/matchStrategy"/>
+    <rdfs:label>match strategy</rdfs:label>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/tender"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/tender#matchedSORItem">
+    <rdfs:range rdf:resource="https://w3id.org/iprok/tender#SORItem"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/matchedSORItem"/>
+    <rdfs:comment>IRI of the &lt;https://w3id.org/iprok/tender#SORItem&gt; the tender BOQ row matched against. Absent when match-strategy is 'no-match'.</rdfs:comment>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/tender"/>
+    <rdfs:label>matched SOR item</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/tender#forTender">
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/forTender"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/tender"/>
+    <rdfs:label>for tender</rdfs:label>
+    <rdfs:range rdf:resource="https://w3id.org/iprok/tender#Tender"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment>Link from &lt;https://w3id.org/iprok/tender#ComparableProject&gt; to the &lt;https://w3id.org/iprok/tender#Tender&gt; this comparison was run for. Domain-free (antipattern #8).</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/tender#ComparableProject">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/tender"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/ComparableProject"/>
+    <rdfs:comment>One row of the bid-intelligence audit trail for a tender. Links a &lt;https://w3id.org/iprok/tender#Tender&gt; to a historical &lt;https://w3id.org/iprok/schedule#Project&gt; that the comparator scored as similar, with the score decomposition + the historical project's outcome signals attached.</rdfs:comment>
+    <rdfs:label>Comparable Project</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/tender#tenderId">
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/tender"/>
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label>tender id</rdfs:label>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/tenderId"/>
+    <rdfs:comment xml:lang="en">The tender id property in the integrated project information model.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/tender#sorDescription">
+    <rdfs:label>SOR description</rdfs:label>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/tender"/>
+    <rdfs:comment xml:lang="en">The sor description property in the integrated project information model.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/sorDescription"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/tender#tenderAmount">
+    <rdfs:label>tender amount (INR)</rdfs:label>
+    <rdfs:comment xml:lang="en">The tender amount property in the integrated project information model.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/tender"/>
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/tenderAmount"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/tender#extractionStatus">
+    <rdfs:label>extraction status</rdfs:label>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/tender"/>
+    <rdfs:range rdf:resource="https://w3id.org/iprok/tender#ExtractionStatus"/>
+    <rdfs:comment xml:lang="en">The extraction status property in the integrated project information model.</rdfs:comment>
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/extractionStatus"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/tender#highRiskCount">
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/highRiskCount"/>
+    <rdfs:comment>Count of line items the recommender flagged as risk_level=High (historical deviation OR rate_variance &gt; 30%).</rdfs:comment>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/tender"/>
+    <rdfs:label>high-risk count</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/tender#riskMaterialisedCount">
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/riskMaterialisedCount"/>
+    <rdfs:comment>Number of &lt;https://w3id.org/iprok/coordination#Risk&gt; nodes (S4.5) on the historical project whose &lt;https://w3id.org/iprok/integrated#linkedIssue&gt; is set — risks that became real issues. Useful as a proxy for how well risk management worked. Domain-free.</rdfs:comment>
+    <rdfs:label>risks that materialised</rdfs:label>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/tender"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/tender#contingencyPct">
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/tender"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/contingencyPct"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label>contingency percentage</rdfs:label>
+    <rdfs:comment>Risk buffer percentage applied to total_quoted. Selected from the comparable projects' average historical CPI: 5% when avg_CPI ≥ 1.0 (historicals delivered on budget), 10% when 0.9-1.0 (slight over-runs), 15% when &lt; 0.9 (significant historical over-runs). Domain-free.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/tender#contingencyAmount">
+    <rdfs:comment>total_quoted × contingency_pct / 100. Domain-free.</rdfs:comment>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/contingencyAmount"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:label>contingency amount (INR)</rdfs:label>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/tender"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/tender#matchedBOQItems">
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/tender"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/matchedBOQItems"/>
+    <rdfs:label>matched BOQ items</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:comment>Count of tender BOQ items whose matchedSORItem also appears as &lt;https://w3id.org/iprok/integrated#governedBy&gt; on some &lt;https://w3id.org/iprok/billing#BOQItem&gt; in the historical project. The numerator of the BOQ-overlap sub-score. Domain-free.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/tender#BidRecommendation">
+    <rdfs:label>Bid Recommendation</rdfs:label>
+    <rdfs:comment>The final bid-output document for a tender: total quoted, contingency, recommended bid, item-count + high-risk-count breakdown. The line-item detail is NOT stored on this node; it is re-derivable from the underlying S5.2 + S5.3 graph state, and persisting it would create stale-data risk on a SOR-rate or comparable-project update. The PDF lives in MinIO via &lt;https://w3id.org/iprok/document#fileRef&gt;.</rdfs:comment>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/tender"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/BidRecommendation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/tender#tenderItemDescription">
+    <rdfs:label>tender item description</rdfs:label>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/tender"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/tenderItemDescription"/>
+    <rdfs:comment xml:lang="en">The tender item description property in the integrated project information model.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/tender#ingestedAt">
+    <rdfs:comment>Server timestamp when the library was ingested. Polymorphic — domain unspecified.</rdfs:comment>
+    <rdfs:label>ingested at</rdfs:label>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/tender"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/ingestedAt"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/tender#SORLibrary">
+    <rdfs:comment>A Schedule of Rates publication ingested into the platform. Platform-wide reference data, not per-project.</rdfs:comment>
+    <rdfs:label>SOR Library</rdfs:label>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/SORLibrary"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/tender"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/tender#sorCode">
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/tender"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/sorCode"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label>SOR code</rdfs:label>
+    <rdfs:comment>Rate-book item code, e.g. '2.1.1.1'. Polymorphic — domain unspecified (antipattern #8).</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/tender#SORItem">
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/SORItem"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/tender"/>
+    <rdfs:label>SOR Item</rdfs:label>
+    <rdfs:comment>One rate item from a &lt;https://w3id.org/iprok/tender#SORLibrary&gt;. Carries sorCode + description + unit + baseRate.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/tender#tenderTitle">
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/tenderTitle"/>
+    <rdfs:label>tender title</rdfs:label>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/tender"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+    <rdfs:comment xml:lang="en">The tender title property in the integrated project information model.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/tender#sorLibraryId">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+    <rdfs:comment xml:lang="en">The sor library id property in the integrated project information model.</rdfs:comment>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/tender"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label>SOR library ID</rdfs:label>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/sorLibraryId"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/tender#TenderBOQItem">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/TenderBOQItem"/>
+    <rdfs:comment>One BOQ row extracted from a tender PDF during ingestion. Distinct from &lt;https://w3id.org/iprok/billing#BOQItem&gt; (post-award, project-side). Carries &lt;https://w3id.org/iprok/tender#ofTender&gt;, &lt;https://w3id.org/iprok/tender#needsReview&gt; (L24 hallucination guard), and &lt;https://w3id.org/iprok/tender#dedupCount&gt; (5-gram Jaccard collapse).</rdfs:comment>
+    <rdfs:label>Tender BOQ Item</rdfs:label>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/tender"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/tender#baseRate">
+    <rdfs:comment>Unit rate in INR as published in the SOR.</rdfs:comment>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/tender"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label>base rate</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/baseRate"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/tender#Tender">
+    <rdfs:label>Tender</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/Tender"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/tender"/>
+    <rdfs:comment>A tender document under consideration by the org. Lives in the org catalogue graph (data/org/{oid}); pre-award. Becomes a &lt;https://w3id.org/iprok/schedule#Project&gt; only on award.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/tender#avgRateVariance">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/avgRateVariance"/>
+    <rdfs:label>average rate variance (percent, signed)</rdfs:label>
+    <rdfs:comment>Mean of the tender BOQ items' rateVariance across the rows that matched into this historical project. Positive = tender priced higher than the historical actual; negative = lower. Domain-free.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/tender"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/tender#tenderUnit">
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/tenderUnit"/>
+    <rdfs:comment xml:lang="en">The tender unit property in the integrated project information model.</rdfs:comment>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/tender"/>
+    <rdfs:label>tender unit (canonical)</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/tender#tenderRate">
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/tender"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/tenderRate"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:label>tender rate (INR)</rdfs:label>
+    <rdfs:comment xml:lang="en">The tender rate property in the integrated project information model.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/tender#contractForm">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/contractForm"/>
+    <rdfs:label>contract form</rdfs:label>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/tender"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+    <rdfs:comment xml:lang="en">The contract form property in the integrated project information model.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/tender#actualCPI">
+    <rdfs:label>actual CPI</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/actualCPI"/>
+    <rdfs:comment>The historical project's most recent CPI (cost-performance index) from &lt;https://w3id.org/iprok/schedule#EVMSnapshot&gt; (S4.2). &gt; 1.0 = under budget; &lt; 1.0 = over budget. Null when the project has no EVM history. Domain-free.</rdfs:comment>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/tender"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/tender#dedupCount">
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:label>dedup count</rdfs:label>
+    <rdfs:comment xml:lang="en">The dedup count property in the integrated project information model.</rdfs:comment>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/dedupCount"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/tender"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/tender#estimatedValue">
+    <rdfs:label>estimated value (INR)</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/estimatedValue"/>
+    <rdfs:comment xml:lang="en">The estimated value property in the integrated project information model.</rdfs:comment>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/tender"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/tender#needsReview">
+    <rdfs:comment>Boolean — set true when any AI-extracted title-block field has confidence &lt; 0.7, cleared when a user confirms the extraction. Polymorphic (any AI-written node can carry it); domain unspecified (antipattern #8).</rdfs:comment>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/needsReview"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <rdfs:label>needs review</rdfs:label>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/tender"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/tender#matchConfidence">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:label>match confidence (0–1)</rdfs:label>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/tender"/>
+    <rdfs:comment>S3.2-style confidence: exact-code = 1.0; fuzzy-desc = 0.5 + 0.4×ratio; jargon-normalised = same but after Indian-PWD jargon stripped; no-match = 0.0. SHACL bounds enforce [0, 1].</rdfs:comment>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/matchConfidence"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/tender#rateYear">
+    <rdfs:label>rate year</rdfs:label>
+    <rdfs:comment xml:lang="en">The rate year property in the integrated project information model.</rdfs:comment>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/rateYear"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/tender"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/tender#itemCount">
+    <rdfs:comment>Count of &lt;https://w3id.org/iprok/tender#TenderBOQItem&gt; rows in the recommendation (matched items only — unmatched are excluded since no rate can be recommended).</rdfs:comment>
+    <rdfs:comment>Denormalised count of SOR items in a library. Polymorphic — domain unspecified.</rdfs:comment>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/itemCount"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/tender"/>
+    <rdfs:label>item count</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/tender#procurementMode">
+    <rdfs:label>procurement mode</rdfs:label>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/tender"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+    <rdfs:comment xml:lang="en">The procurement mode property in the integrated project information model.</rdfs:comment>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/procurementMode"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/tender#tenderShortDesc">
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/tender"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/tenderShortDesc"/>
+    <rdfs:label>tender short desc</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+    <rdfs:comment xml:lang="en">The tender short desc property in the integrated project information model.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/tender#totalQuoted">
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/totalQuoted"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:label>total quoted (INR)</rdfs:label>
+    <rdfs:comment>Sum of (recommended_rate × estimated_qty) across every matched &lt;https://w3id.org/iprok/tender#TenderBOQItem&gt;. The base bid before contingency. Domain-free (antipattern #8).</rdfs:comment>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/tender"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/tender#publisher">
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/tender"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment>Issuing authority: CPWD, AP-PWD, MES, NHAI, Railway, State-PWD. Polymorphic — domain unspecified.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/publisher"/>
+    <rdfs:label>publisher</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/tender#rateVariance">
+    <rdfs:comment>(quotedRate − sorBaseRate) / sorBaseRate × 100. Positive = tender priced higher than SOR; negative = tender priced lower. |variance| &gt; 20% is flagged in the match report. Absent when no SOR match OR quotedRate is null.</rdfs:comment>
+    <rdfs:label>rate variance (percent, signed)</rdfs:label>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/tender"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/rateVariance"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/tender#tenderBoqSno">
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/tenderBoqSno"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/tender"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+    <rdfs:label>tender BOQ sno</rdfs:label>
+    <rdfs:comment xml:lang="en">The tender boq sno property in the integrated project information model.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/tender#coverSystem">
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/coverSystem"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/tender"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+    <rdfs:label>cover system</rdfs:label>
+    <rdfs:comment xml:lang="en">The cover system property in the integrated project information model.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/tender#recommendedBid">
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/recommendedBid"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:label>recommended bid (INR)</rdfs:label>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/tender"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment>total_quoted + contingency_amount. The MD-facing single number. Domain-free.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/tender#similarityScore">
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/tender"/>
+    <rdfs:label>similarity score (0–1)</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/similarityScore"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:comment>Weighted average of the comparator's three sub-scores: BOQ overlap (0.5) + work-type Jaccard (0.3) + scale similarity (0.2). Domain-free.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/tender#similarProject">
+    <rdfs:range rdf:resource="https://w3id.org/iprok/schedule#Project"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>similar project</rdfs:label>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/similarProject"/>
+    <rdfs:comment>The historical &lt;https://w3id.org/iprok/schedule#Project&gt; the comparator picked. Domain-free.</rdfs:comment>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/tender"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/tender#sorYear">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="en">The sor year property in the integrated project information model.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/sorYear"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/tender"/>
+    <rdfs:label>SOR year</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/tender#ofTender">
+    <rdfs:range rdf:resource="https://w3id.org/iprok/tender#Tender"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/ofTender"/>
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="en">The of tender property in the integrated project information model.</rdfs:comment>
+    <rdfs:label>of tender</rdfs:label>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/tender"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/tender#pbgPercentage">
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+    <rdfs:label>PBG percentage</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/pbgPercentage"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/tender"/>
+    <rdfs:comment xml:lang="en">The pbg percentage property in the integrated project information model.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/tender#ExtractionStatus">
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/ExtractionStatus"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/tender"/>
+    <rdfs:label>Extraction Status</rdfs:label>
+    <rdfs:comment>Lifecycle state of the tender PDF → BOQ extraction pipeline. Values: Pending, Running, Complete, Failed, NeedsReview.</rdfs:comment>
+  </rdf:Description>
+</rdf:RDF>

@@ -1,0 +1,384 @@
+<https://w3id.org/iprok/resource#compositionCount> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/resource#reportCount> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<https://w3id.org/iprok/resource#compositionRole> <http://www.w3.org/2000/01/rdf-schema#label> "composition Role"@en .
+<https://w3id.org/iprok/resource#ProductivityRecompute> <http://www.w3.org/2000/01/rdf-schema#comment> "The per-organisation claim token for writing measured rates." .
+<https://w3id.org/iprok/resource#withdrawnBy> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/resource> .
+<https://w3id.org/iprok/resource#TrackingTag> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/iprok#IproKThing> .
+<https://w3id.org/iprok/resource#productivityRate> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/resource> .
+<https://w3id.org/iprok/resource#reportCount> <http://www.w3.org/2000/01/rdf-schema#comment> "Daily reports of this work type considered for a norm — counted or set aside." .
+<https://w3id.org/iprok/resource#TrackingTag> <http://www.w3.org/2000/01/rdf-schema#label> "TrackingTag" .
+<https://w3id.org/iprok/resource#compositionCount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/resource#ProductivityContribution> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/resource> .
+<https://w3id.org/iprok/resource#withdrawalReason> <http://www.w3.org/2000/01/rdf-schema#label> "withdrawal Reason"@en .
+<https://w3id.org/iprok/resource#ProductivityNorm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iprok/resource#withdrawnAt> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/resource> .
+<https://w3id.org/iprok/resource#workerName> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/resource#hasResourceType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/iprok/resource#contributedBy> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/contributedBy> .
+<https://w3id.org/iprok/resource#observedOn> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/resource> .
+<https://w3id.org/iprok/resource#compositionCount> <http://www.w3.org/2000/01/rdf-schema#label> "composition Count"@en .
+<https://w3id.org/iprok/resource#observedUnit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/resource#budgetedUnits> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/iprok/resource#Resource> .
+<https://w3id.org/iprok/resource#skillLevel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/resource#certificationName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/resource#compositionRole> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/compositionRole> .
+<https://w3id.org/iprok/resource#crewTypeName> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/crewTypeName> .
+<https://w3id.org/iprok/resource#workerAccount> <http://www.w3.org/2000/01/rdf-schema#label> "worker Account"@en .
+<https://w3id.org/iprok/resource#hasResourceType> <http://www.w3.org/2000/01/rdf-schema#label> "hasResourceType" .
+<https://w3id.org/iprok/resource#baseRate> <http://www.w3.org/2000/01/rdf-schema#label> "baseRate"@en .
+<https://w3id.org/iprok/resource#ProductivityContribution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iprok/resource#validUntil> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/resource> .
+<https://w3id.org/iprok/resource#workerTrade> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/resource#SkillCertification> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/SkillCertification> .
+<https://w3id.org/iprok/resource#isPrimaryResource> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/resource#actualUnits> <http://www.w3.org/2000/01/rdf-schema#comment> "" .
+<https://w3id.org/iprok/resource#LaborResource> <http://www.w3.org/2000/01/rdf-schema#comment> "A resource-type classification for labour."@en .
+<https://w3id.org/iprok/resource#withdrawnBy> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/withdrawnBy> .
+<https://w3id.org/iprok/resource#workerAccount> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/workerAccount> .
+<https://w3id.org/iprok/resource#hasTrackingTag> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/iprok/resource#TrackingTag> .
+<https://w3id.org/iprok/resource#Units> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/iprok#IproKThing> .
+<https://w3id.org/iprok/resource#crewTypeName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/resource#workerId> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/resource> .
+<https://w3id.org/iprok/resource#withdrawnBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/iprok/resource#isPrimaryResource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/resource#CrewType> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/CrewType> .
+<https://w3id.org/iprok/resource#ProductivityNorm> <http://www.w3.org/2000/01/rdf-schema#label> "Productivity Norm"@en .
+<https://w3id.org/iprok/resource#normId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/resource#observationId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/resource#LaborResource> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/resource#withdrawnAt> <http://www.w3.org/2000/01/rdf-schema#comment> "The withdrawn at property in the integrated project information model."@en .
+<https://w3id.org/iprok/resource#validFrom> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/iprok/resource#workerId> <http://www.w3.org/2000/01/rdf-schema#comment> "Human-facing id, W-NNNN." .
+<https://w3id.org/iprok/resource#workerAccount> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/resource> .
+<https://w3id.org/iprok/resource#measuredIn> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/iprok/resource#Units> .
+<https://w3id.org/iprok/resource#hasResourceConstraints> <http://www.w3.org/2000/01/rdf-schema#label> "hasResourceConstraints" .
+<https://w3id.org/iprok/resource#certifiedWorker> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/certifiedWorker> .
+<https://w3id.org/iprok/resource#handObservationCount> <http://www.w3.org/2000/01/rdf-schema#comment> "Observations recorded by hand that a norm also rests on. Polymorphic — antipattern #8." .
+<https://w3id.org/iprok/resource#normId> <http://www.w3.org/2000/01/rdf-schema#label> "norm Id"@en .
+<https://w3id.org/iprok/resource#contributedAt> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/resource> .
+<https://w3id.org/iprok/resource#normComputedAt> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://w3id.org/iprok/resource#withdrawalReason> <http://www.w3.org/2000/01/rdf-schema#comment> "Why the project's days no longer count — kept with the record." .
+<https://w3id.org/iprok/resource#ProductivityNorm> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/ProductivityNorm> .
+<https://w3id.org/iprok/resource#contributedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Who published the project's days to the organisation." .
+<https://w3id.org/iprok/resource#workerName> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/workerName> .
+<https://w3id.org/iprok/resource#workerName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/resource#ResourceType> <http://www.w3.org/2000/01/rdf-schema#label> "ResourceType" .
+<https://w3id.org/iprok/resource#MaterialResource> <http://www.w3.org/2000/01/rdf-schema#comment> "A resource-type classification for materials."@en .
+<https://w3id.org/iprok/resource#ProductivityObservation> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/ProductivityObservation> .
+<https://w3id.org/iprok/resource#atCompleteUnits> <http://www.w3.org/2000/01/rdf-schema#comment> "The at complete units property in the integrated project information model. Its declared domain is Resource and its declared range is decimal."@en .
+<https://w3id.org/iprok/resource#workerTrade> <http://www.w3.org/2000/01/rdf-schema#comment> "The worker trade property in the integrated project information model."@en .
+<https://w3id.org/iprok/resource#ResourceConstraint> <http://www.w3.org/2000/01/rdf-schema#label> "ResourceConstraint" .
+<https://w3id.org/iprok/resource#normRate> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/resource> .
+<https://w3id.org/iprok/resource#hasResourceConstraints> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/resource#observedUnit> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/observedUnit> .
+<https://w3id.org/iprok/resource#MaterialResource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iprok/resource#normComputedAt> <http://www.w3.org/2000/01/rdf-schema#label> "norm Computed At"@en .
+<https://w3id.org/iprok/resource#ResourceConstraint> <http://www.w3.org/2000/01/rdf-schema#comment> "A condition restricting the availability or use of a resource."@en .
+<https://w3id.org/iprok/resource#hasResourceType> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/iprok/resource#ResourceType> .
+<https://w3id.org/iprok/resource#maxUnits> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/resource#workerTrade> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/resource#hasTrackingTag> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/iprok/resource#ProductivityObservation> <http://www.w3.org/2000/01/rdf-schema#label> "Productivity Observation"@en .
+<https://w3id.org/iprok/resource#budgetedUnits> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/resource#certificationName> <http://www.w3.org/2000/01/rdf-schema#label> "certification Name"@en .
+<https://w3id.org/iprok/resource#TrackingTag> <http://www.w3.org/2000/01/rdf-schema#comment> "An identifier concept used to track a resource."@en .
+<https://w3id.org/iprok/resource#crewTypeName> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/resource> .
+<https://w3id.org/iprok/resource#normId> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/normId> .
+<https://w3id.org/iprok/resource#currency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/iprok/resource#currency> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/resource#workerAccount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/iprok/resource#measuredIn> <http://www.w3.org/2000/01/rdf-schema#label> "measuredIn" .
+<https://w3id.org/iprok/resource#remainingUnits> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/iprok/resource#Resource> .
+<https://w3id.org/iprok/resource#Worker> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iprok/resource#isPrimaryResource> <http://www.w3.org/2000/01/rdf-schema#comment> "The is primary resource property in the integrated project information model. Its declared domain is Resource and its declared range is boolean."@en .
+<https://w3id.org/iprok/resource#effectiveDateForRate> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/iprok/resource#Resource> .
+<https://w3id.org/iprok/resource#isPrimaryResource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/iprok/resource#SkillCertification> <http://www.w3.org/2000/01/rdf-schema#label> "Skill Certification"@en .
+<https://w3id.org/iprok/resource#baseRate> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/iprok/resource#Resource> .
+<https://w3id.org/iprok/resource#Resource> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/resource#certifiedWorker> <http://www.w3.org/2000/01/rdf-schema#label> "certified Worker"@en .
+<https://w3id.org/iprok/resource#ResourceConstraint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/iprok#Constraint> .
+<https://w3id.org/iprok/resource#crewTypeId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/resource#withdrawalReason> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/withdrawalReason> .
+<https://w3id.org/iprok/resource#crewTrade> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/resource#steadyDayCount> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<https://w3id.org/iprok/resource#workerTrade> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/workerTrade> .
+<https://w3id.org/iprok/resource#ProductivityRecompute> <http://www.w3.org/2000/01/rdf-schema#label> "Productivity recompute" .
+<https://w3id.org/iprok/resource#observationId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/resource#observedQuantity> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/iprok/resource#observedOn> <http://www.w3.org/2000/01/rdf-schema#comment> "The observed on property in the integrated project information model."@en .
+<https://w3id.org/iprok/resource#hasResourceType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/iprok/resource#handObservationCount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/resource#compositionRole> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/resource#normComputedAt> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/resource> .
+<https://w3id.org/iprok/resource#ProductivityContribution> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/ProductivityContribution> .
+<https://w3id.org/iprok/resource#validFrom> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/resource#ProductivityObservation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Entity> .
+<https://w3id.org/iprok/resource#crewTrade> <http://www.w3.org/2000/01/rdf-schema#comment> "Masonry | Concrete | Reinforcement | Shuttering | Finishing | MEP | Earthwork | General." .
+<https://w3id.org/iprok/resource#atCompleteUnits> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/iprok/resource#Resource> .
+<https://w3id.org/iprok/resource#compositionCount> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/resource> .
+<https://w3id.org/iprok/resource#contributingProject> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/resource> .
+<https://w3id.org/iprok/resource#observationId> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/observationId> .
+<https://w3id.org/iprok/resource#effectiveDateForRate> <http://www.w3.org/2000/01/rdf-schema#comment> "The effective date for rate property in the integrated project information model. Its declared domain is Resource and its declared range is dateTime."@en .
+<https://w3id.org/iprok/resource#CrewComposition> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/resource> .
+<https://w3id.org/iprok/resource#skillLevel> <http://www.w3.org/2000/01/rdf-schema#comment> "Skilled | SemiSkilled | Unskilled — the Indian wage-schedule categories." .
+<https://w3id.org/iprok/resource#EquipmentResource> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/resource#observedUnit> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/resource> .
+<https://w3id.org/iprok/resource#skillLevel> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/resource> .
+<https://w3id.org/iprok/resource#hasResourceConstraints> <http://www.w3.org/2000/01/rdf-schema#comment> "The has resource constraints property in the integrated project information model. Its declared domain is Resource and its declared range is ResourceConstraint."@en .
+<https://w3id.org/iprok/resource#certifiedWorker> <http://www.w3.org/2000/01/rdf-schema#comment> "The certified worker property in the integrated project information model."@en .
+<https://w3id.org/iprok/resource#crewTypeName> <http://www.w3.org/2000/01/rdf-schema#comment> "The crew type name property in the integrated project information model."@en .
+<https://w3id.org/iprok/resource#workerTrade> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/resource> .
+<https://w3id.org/iprok/resource#certifiedWorker> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/resource> .
+<https://w3id.org/iprok/resource#maxUnits> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/resource#LaborResource> <http://www.w3.org/2000/01/rdf-schema#label> "LaborResource" .
+<https://w3id.org/iprok/resource#UserDefinedResource> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/resource#CrewComposition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iprok/resource#SkillCertification> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Entity> .
+<https://w3id.org/iprok/resource#Worker> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/resource> .
+<https://w3id.org/iprok/resource#normComputedAt> <http://www.w3.org/2000/01/rdf-schema#comment> "The norm computed at property in the integrated project information model."@en .
+<https://w3id.org/iprok/resource#hasTrackingTag> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/resource#crewTypeId> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/resource> .
+<https://w3id.org/iprok/resource#actualUnits> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/iprok/resource#Resource> .
+<https://w3id.org/iprok/resource#reportCount> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/reportCount> .
+<https://w3id.org/iprok/resource#crewTrade> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/resource#Units> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/resource#contributingProject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/iprok/resource#budgetedUnits> <http://www.w3.org/2000/01/rdf-schema#label> "budgetedUnits"@en .
+<https://w3id.org/iprok/resource#observationId> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/resource> .
+<https://w3id.org/iprok/resource#ResourceType> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/resource#contributingProject> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/contributingProject> .
+<https://w3id.org/iprok/resource#Worker> <http://www.w3.org/2000/01/rdf-schema#label> "Worker"@en .
+<https://w3id.org/iprok/resource#observedQuantity> <http://www.w3.org/2000/01/rdf-schema#comment> "The observed quantity property in the integrated project information model."@en .
+<https://w3id.org/iprok/resource#normId> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/resource> .
+<https://w3id.org/iprok/resource#hasResourceType> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/iprok/resource#Resource> .
+<https://w3id.org/iprok/resource#remainingUnits> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/resource#productivityRate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/resource#validUntil> <http://www.w3.org/2000/01/rdf-schema#label> "valid Until"@en .
+<https://w3id.org/iprok/resource#contributedAt> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/resource#skillLevel> <http://www.w3.org/2000/01/rdf-schema#label> "skill Level"@en .
+<https://w3id.org/iprok/resource#compositionRole> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/resource#SkillCertification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iprok/resource#Units> <http://www.w3.org/2000/01/rdf-schema#comment> "A unit of measure used to express a resource quantity."@en .
+<https://w3id.org/iprok/resource#observedQuantity> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/resource> .
+<https://w3id.org/iprok/resource#workerName> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/resource> .
+<https://w3id.org/iprok/resource#hasResourceType> <http://www.w3.org/2000/01/rdf-schema#comment> "The has resource type property in the integrated project information model. Its declared domain is Resource and its declared range is ResourceType."@en .
+<https://w3id.org/iprok/resource#certifiedWorker> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/iprok/resource#steadyDayCount> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/resource> .
+<https://w3id.org/iprok/resource#compositionCount> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<https://w3id.org/iprok/resource#TrackingTag> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/resource#reportCount> <http://www.w3.org/2000/01/rdf-schema#label> "report Count"@en .
+<https://w3id.org/iprok/resource#contributedBy> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/resource> .
+<https://w3id.org/iprok/resource#LaborResource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iprok/resource#atCompleteUnits> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/resource#projectCount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/resource#maxUnits> <http://www.w3.org/2000/01/rdf-schema#label> "maxUnits"@en .
+<https://w3id.org/iprok/resource#measuredIn> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/resource#withdrawnBy> <http://www.w3.org/2000/01/rdf-schema#label> "withdrawn By"@en .
+<https://w3id.org/iprok/resource#ProductivityObservation> <http://www.w3.org/2000/01/rdf-schema#comment> "One measured data point: quantity achieved by a crew of a known size over a known period on a known activity." .
+<https://w3id.org/iprok/resource#observationId> <http://www.w3.org/2000/01/rdf-schema#label> "observation Id"@en .
+<https://w3id.org/iprok/resource#UserDefinedResource> <http://www.w3.org/2000/01/rdf-schema#comment> "A resource-type classification defined for a project-specific need."@en .
+<https://w3id.org/iprok/resource#CrewType> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/resource> .
+<https://w3id.org/iprok/resource#handObservationCount> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/handObservationCount> .
+<https://w3id.org/iprok/resource#crewTypeId> <http://www.w3.org/2000/01/rdf-schema#label> "crew Type Id"@en .
+<https://w3id.org/iprok/resource#effectiveDateForRate> <http://www.w3.org/2000/01/rdf-schema#label> "effectiveDateForRate"@en .
+<https://w3id.org/iprok/resource#workerId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/resource#CrewComposition> <http://www.w3.org/2000/01/rdf-schema#label> "Crew Composition"@en .
+<https://w3id.org/iprok/resource#UserDefinedResource> <http://www.w3.org/2000/01/rdf-schema#label> "UserDefinedResource" .
+<https://w3id.org/iprok/resource#measuredIn> <http://www.w3.org/2000/01/rdf-schema#comment> "The measured in property in the integrated project information model. Its declared domain is Resource and its declared range is Units."@en .
+<https://w3id.org/iprok/resource#currency> <http://www.w3.org/2000/01/rdf-schema#label> "currency"@en .
+<https://w3id.org/iprok/resource#handObservationCount> <http://www.w3.org/2000/01/rdf-schema#label> "hand Observation Count"@en .
+<https://w3id.org/iprok/resource#crewTrade> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/resource> .
+<https://w3id.org/iprok/resource#CrewType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iprok/resource#EquipmentResource> <http://www.w3.org/2000/01/rdf-schema#label> "EquipmentResource" .
+<https://w3id.org/iprok/resource#withdrawalReason> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/resource#crewDays> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/resource#ProductivityRecompute> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/ProductivityRecompute> .
+<https://w3id.org/iprok/resource#ProductivityContribution> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Entity> .
+<https://w3id.org/iprok/resource#observedUnit> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/resource#compositionRole> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/resource> .
+<https://w3id.org/iprok/resource#workerName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/resource#contributedAt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/resource#contributedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/iprok/resource#steadyDayCount> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/steadyDayCount> .
+<https://w3id.org/iprok/resource#observedOn> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/observedOn> .
+<https://w3id.org/iprok/resource#hasResourceConstraints> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/iprok/resource#Resource> .
+<https://w3id.org/iprok/resource#compositionRole> <http://www.w3.org/2000/01/rdf-schema#comment> "Mason | Helper | Bar bender | Carpenter | Operator | Supervisor…" .
+<https://w3id.org/iprok/resource#projectCount> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/projectCount> .
+<https://w3id.org/iprok/resource#validFrom> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/resource> .
+<https://w3id.org/iprok/resource#CrewType> <http://www.w3.org/2000/01/rdf-schema#label> "Crew Type"@en .
+<https://w3id.org/iprok/resource#normRate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/resource#certificationName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/resource#budgetedUnits> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/resource#workerId> <http://www.w3.org/2000/01/rdf-schema#label> "worker Id"@en .
+<https://w3id.org/iprok/resource#hasTrackingTag> <http://www.w3.org/2000/01/rdf-schema#label> "hasTrackingTag" .
+<https://w3id.org/iprok/resource#currency> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/iprok/resource#Resource> .
+<https://w3id.org/iprok/resource#ResourceConstraint> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/resource#atCompleteUnits> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/resource#LaborResource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/iprok/resource#ResourceType> .
+<https://w3id.org/iprok/resource#certificationName> <http://www.w3.org/2000/01/rdf-schema#comment> "The certification name property in the integrated project information model."@en .
+<https://w3id.org/iprok/resource#certifiedWorker> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/resource#validUntil> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/validUntil> .
+<https://w3id.org/iprok/resource#remainingUnits> <http://www.w3.org/2000/01/rdf-schema#label> "remainingUnits"@en .
+<https://w3id.org/iprok/resource#isPrimaryResource> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/iprok/resource#Resource> .
+<https://w3id.org/iprok/resource#Resource> <http://www.w3.org/2000/01/rdf-schema#label> "Resource" .
+<https://w3id.org/iprok/resource#crewDays> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/iprok/resource#reportCount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/resource#ProductivityNorm> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Entity> .
+<https://w3id.org/iprok/resource#MaterialResource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/iprok/resource#ResourceType> .
+<https://w3id.org/iprok/resource#normRate> <http://www.w3.org/2000/01/rdf-schema#comment> "Output per person-day for this work type + crew type." .
+<https://w3id.org/iprok/resource#productivityRate> <http://www.w3.org/2000/01/rdf-schema#comment> "observedQuantity ÷ crewDays, i.e. output per person-day. Server-computed; never trusted from the client." .
+<https://w3id.org/iprok/resource#currency> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/resource#normId> <http://www.w3.org/2000/01/rdf-schema#comment> "The norm id property in the integrated project information model."@en .
+<https://w3id.org/iprok/resource#contributedBy> <http://www.w3.org/2000/01/rdf-schema#label> "contributed By"@en .
+<https://w3id.org/iprok/resource#measuredIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/iprok/resource#withdrawnAt> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/withdrawnAt> .
+<https://w3id.org/iprok/resource#ProductivityNorm> <http://www.w3.org/2000/01/rdf-schema#comment> "The organisation's rolled-up rate for a work type + crew type, derived from observations. Falls back to a seeded default until enough observations exist." .
+<https://w3id.org/iprok/resource#workerName> <http://www.w3.org/2000/01/rdf-schema#label> "worker Name"@en .
+<https://w3id.org/iprok/resource#observedQuantity> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/observedQuantity> .
+<https://w3id.org/iprok/resource#effectiveDateForRate> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/resource#validFrom> <http://www.w3.org/2000/01/rdf-schema#comment> "The valid from property in the integrated project information model."@en .
+<https://w3id.org/iprok/resource#observedUnit> <http://www.w3.org/2000/01/rdf-schema#label> "observed Unit"@en .
+<https://w3id.org/iprok/resource#ResourceType> <http://www.w3.org/2000/01/rdf-schema#comment> "A classification describing the kind of a resource."@en .
+<https://w3id.org/iprok/resource#normId> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/resource#productivityRate> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/productivityRate> .
+<https://w3id.org/iprok/resource#withdrawalReason> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/resource#normComputedAt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/resource#observedOn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/resource#withdrawnAt> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/resource#budgetedUnits> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/iprok/resource#CrewComposition> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/CrewComposition> .
+<https://w3id.org/iprok/resource#observedQuantity> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/resource#observedQuantity> <http://www.w3.org/2000/01/rdf-schema#label> "observed Quantity"@en .
+<https://w3id.org/iprok/resource#Resource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iprok/resource#contributedAt> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://w3id.org/iprok/resource#validFrom> <http://www.w3.org/2000/01/rdf-schema#label> "valid From"@en .
+<https://w3id.org/iprok/resource#hasResourceConstraints> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/iprok/resource#skillLevel> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/resource#contributedAt> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/contributedAt> .
+<https://w3id.org/iprok/resource#SkillCertification> <http://www.w3.org/2000/01/rdf-schema#comment> "A certification held by a worker, with a validity window so expiry is queryable." .
+<https://w3id.org/iprok/resource#validUntil> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/resource#crewDays> <http://www.w3.org/2000/01/rdf-schema#label> "crew Days"@en .
+<https://w3id.org/iprok/resource#normRate> <http://www.w3.org/2000/01/rdf-schema#label> "norm Rate"@en .
+<https://w3id.org/iprok/resource#certificationName> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/resource> .
+<https://w3id.org/iprok/resource#crewTrade> <http://www.w3.org/2000/01/rdf-schema#label> "crew Trade"@en .
+<https://w3id.org/iprok/resource#atCompleteUnits> <http://www.w3.org/2000/01/rdf-schema#label> "atCompleteUnits"@en .
+<https://w3id.org/iprok/resource#maxUnits> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/iprok/resource#Resource> .
+<https://w3id.org/iprok/resource#projectCount> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/resource> .
+<https://w3id.org/iprok/resource#crewDays> <http://www.w3.org/2000/01/rdf-schema#comment> "headcount × days worked — the denominator of the rate." .
+<https://w3id.org/iprok/resource#contributingProject> <http://www.w3.org/2000/01/rdf-schema#comment> "The project whose steady site days count." .
+<https://w3id.org/iprok/resource#baseRate> <http://www.w3.org/2000/01/rdf-schema#comment> "The base rate property in the integrated project information model. Its declared domain is Resource and its declared range is decimal."@en .
+<https://w3id.org/iprok/resource#workerName> <http://www.w3.org/2000/01/rdf-schema#comment> "The worker name property in the integrated project information model."@en .
+<https://w3id.org/iprok/resource#handObservationCount> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<https://w3id.org/iprok/resource#crewTypeId> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/crewTypeId> .
+<https://w3id.org/iprok/resource#EquipmentResource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iprok/resource#currency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/resource#currency> <http://www.w3.org/2000/01/rdf-schema#comment> "The currency property in the integrated project information model. Its declared domain is Resource and its declared range is string."@en .
+<https://w3id.org/iprok/resource#remainingUnits> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/resource#SkillCertification> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/resource> .
+<https://w3id.org/iprok/resource#crewTypeId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/resource#baseRate> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/resource#TrackingTag> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iprok/resource#EquipmentResource> <http://www.w3.org/2000/01/rdf-schema#comment> "A resource-type classification for equipment."@en .
+<https://w3id.org/iprok/resource#projectCount> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<https://w3id.org/iprok/resource#EquipmentResource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/iprok/resource#ResourceType> .
+<https://w3id.org/iprok/resource#UserDefinedResource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iprok/resource#effectiveDateForRate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/resource#normId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/resource#Worker> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Agent> .
+<https://w3id.org/iprok/resource#withdrawalReason> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/resource> .
+<https://w3id.org/iprok/resource#crewDays> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/resource> .
+<https://w3id.org/iprok/resource#normRate> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/normRate> .
+<https://w3id.org/iprok/resource#productivityRate> <http://www.w3.org/2000/01/rdf-schema#label> "productivity Rate"@en .
+<https://w3id.org/iprok/resource#MaterialResource> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/resource#withdrawnBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Who took the project's days out of the organisation's rates." .
+<https://w3id.org/iprok/resource#ProductivityContribution> <http://www.w3.org/2000/01/rdf-schema#comment> "A project's site days counted in its organisation's measured rates. Withdrawn by prov:invalidatedAtTime with who and why; publishing again creates a new one." .
+<https://w3id.org/iprok/resource#projectCount> <http://www.w3.org/2000/01/rdf-schema#comment> "Projects that contributed a counted site day to a norm." .
+<https://w3id.org/iprok/resource#CrewType> <http://www.w3.org/2000/01/rdf-schema#comment> "A named gang the organisation deploys; 'Mason gang (6)', 'Bar bender gang (4)'. Org-level catalogue." .
+<https://w3id.org/iprok/resource#hasResourceType> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/resource#workerAccount> <http://www.w3.org/2000/01/rdf-schema#comment> "Optional link to a <https://w3id.org/iprok#User>, when this worker also has a platform login. Most do not." .
+<https://w3id.org/iprok/resource#ProductivityObservation> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/resource> .
+<https://w3id.org/iprok/resource#withdrawnAt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/resource#validFrom> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/validFrom> .
+<https://w3id.org/iprok/resource#observedQuantity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/resource#Worker> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/Worker> .
+<https://w3id.org/iprok/resource#UserDefinedResource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/iprok/resource#ResourceType> .
+<https://w3id.org/iprok/resource#CrewComposition> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Entity> .
+<https://w3id.org/iprok/resource#Units> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iprok/resource#crewTypeName> <http://www.w3.org/2000/01/rdf-schema#label> "crew Type Name"@en .
+<https://w3id.org/iprok/resource#ResourceType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iprok/resource#steadyDayCount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/resource#maxUnits> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/iprok/resource#skillLevel> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/skillLevel> .
+<https://w3id.org/iprok/resource#validUntil> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/resource#measuredIn> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/iprok/resource#Resource> .
+<https://w3id.org/iprok/resource#withdrawnAt> <http://www.w3.org/2000/01/rdf-schema#label> "withdrawn At"@en .
+<https://w3id.org/iprok/resource#Resource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/iprok#IproKThing> .
+<https://w3id.org/iprok/resource#ProductivityObservation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iprok/resource#crewTypeId> <http://www.w3.org/2000/01/rdf-schema#comment> "Human-facing id, CT-NNNN." .
+<https://w3id.org/iprok/resource#observationId> <http://www.w3.org/2000/01/rdf-schema#comment> "The observation id property in the integrated project information model."@en .
+<https://w3id.org/iprok/resource#maxUnits> <http://www.w3.org/2000/01/rdf-schema#comment> "The max units property in the integrated project information model. Its declared domain is Resource and its declared range is decimal."@en .
+<https://w3id.org/iprok/resource#measuredIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/iprok/resource#productivityRate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/iprok/resource#remainingUnits> <http://www.w3.org/2000/01/rdf-schema#comment> "The remaining units property in the integrated project information model. Its declared domain is Resource and its declared range is decimal."@en .
+<https://w3id.org/iprok/resource#Worker> <http://www.w3.org/2000/01/rdf-schema#comment> "A person performing site labour. NOT a <https://w3id.org/iprok#User>; most site labour never logs in. Org-level catalogue." .
+<https://w3id.org/iprok/resource#baseRate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/iprok/resource#maxUnits> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/iprok/resource#workerId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/resource#isPrimaryResource> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<https://w3id.org/iprok/resource#crewTypeName> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/resource#normComputedAt> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/normComputedAt> .
+<https://w3id.org/iprok/resource#compositionCount> <http://www.w3.org/2000/01/rdf-schema#comment> "The composition count property in the integrated project information model."@en .
+<https://w3id.org/iprok/resource#reportCount> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/resource> .
+<https://w3id.org/iprok/resource#hasTrackingTag> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/iprok/resource#Resource> .
+<https://w3id.org/iprok/resource#contributingProject> <http://www.w3.org/2000/01/rdf-schema#label> "contributing Project"@en .
+<https://w3id.org/iprok/resource#baseRate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/resource#compositionCount> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/compositionCount> .
+<https://w3id.org/iprok/resource#crewTrade> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/crewTrade> .
+<https://w3id.org/iprok/resource#isPrimaryResource> <http://www.w3.org/2000/01/rdf-schema#label> "isPrimaryResource"@en .
+<https://w3id.org/iprok/resource#Resource> <http://www.w3.org/2000/01/rdf-schema#comment> "A resource available for allocation to a task or activity."@en .
+<https://w3id.org/iprok/resource#budgetedUnits> <http://www.w3.org/2000/01/rdf-schema#comment> "The budgeted units property in the integrated project information model. Its declared domain is Resource and its declared range is decimal."@en .
+<https://w3id.org/iprok/resource#observedUnit> <http://www.w3.org/2000/01/rdf-schema#comment> "The observed unit property in the integrated project information model."@en .
+<https://w3id.org/iprok/resource#normComputedAt> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/resource#MaterialResource> <http://www.w3.org/2000/01/rdf-schema#label> "MaterialResource" .
+<https://w3id.org/iprok/resource#observedOn> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/iprok/resource#effectiveDateForRate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/iprok/resource#handObservationCount> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/resource> .
+<https://w3id.org/iprok/resource#observedUnit> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/resource#effectiveDateForRate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://w3id.org/iprok/resource#actualUnits> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/resource#CrewComposition> <http://www.w3.org/2000/01/rdf-schema#comment> "One trade line within a crew type: N of a given trade at a given skill level." .
+<https://w3id.org/iprok/resource#Units> <http://www.w3.org/2000/01/rdf-schema#label> "Units" .
+<https://w3id.org/iprok/resource#validUntil> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/iprok/resource#atCompleteUnits> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/iprok/resource#ProductivityRecompute> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/resource> .
+<https://w3id.org/iprok/resource#contributedAt> <http://www.w3.org/2000/01/rdf-schema#label> "contributed At"@en .
+<https://w3id.org/iprok/resource#steadyDayCount> <http://www.w3.org/2000/01/rdf-schema#comment> "Steady site days behind a norm, before the outlier trim — compared with the reports read now to tell whether the stored rate is behind. Polymorphic — antipattern #8." .
+<https://w3id.org/iprok/resource#withdrawnAt> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://w3id.org/iprok/resource#workerId> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/workerId> .
+<https://w3id.org/iprok/resource#validUntil> <http://www.w3.org/2000/01/rdf-schema#comment> "The valid until property in the integrated project information model."@en .
+<https://w3id.org/iprok/resource#validFrom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/resource#projectCount> <http://www.w3.org/2000/01/rdf-schema#label> "project Count"@en .
+<https://w3id.org/iprok/resource#crewDays> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/crewDays> .
+<https://w3id.org/iprok/resource#certificationName> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/resource#certificationName> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/certificationName> .
+<https://w3id.org/iprok/resource#workerTrade> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/resource#ProductivityRecompute> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iprok/resource#ProductivityContribution> <http://www.w3.org/2000/01/rdf-schema#label> "Productivity Contribution"@en .
+<https://w3id.org/iprok/resource#hasTrackingTag> <http://www.w3.org/2000/01/rdf-schema#comment> "The has tracking tag property in the integrated project information model. Its declared domain is Resource and its declared range is TrackingTag."@en .
+<https://w3id.org/iprok/resource#CrewType> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Entity> .
+<https://w3id.org/iprok/resource#observedOn> <http://www.w3.org/2000/01/rdf-schema#label> "observed On"@en .
+<https://w3id.org/iprok/resource#ResourceType> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/iprok#IproKThing> .
+<https://w3id.org/iprok/resource#actualUnits> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/iprok/resource#actualUnits> <http://www.w3.org/2000/01/rdf-schema#label> "actualUnits"@en .
+<https://w3id.org/iprok/resource#crewTypeName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/resource#remainingUnits> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/iprok/resource#hasResourceConstraints> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/iprok/resource#ResourceConstraint> .
+<https://w3id.org/iprok/resource#steadyDayCount> <http://www.w3.org/2000/01/rdf-schema#label> "steady Day Count"@en .
+<https://w3id.org/iprok/resource#workerTrade> <http://www.w3.org/2000/01/rdf-schema#label> "worker Trade"@en .
+<https://w3id.org/iprok/resource#contributedAt> <http://www.w3.org/2000/01/rdf-schema#comment> "The contributed at property in the integrated project information model."@en .
+<https://w3id.org/iprok/resource#ProductivityNorm> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/resource> .
+<https://w3id.org/iprok/resource#normRate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/iprok/resource#observationId> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/resource#observedOn> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/resource#ResourceConstraint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .

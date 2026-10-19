@@ -11,132 +11,135 @@
   "modules": [
     {
       "module": "core",
-      "namespace": "https://w3id.org/IproK#",
+      "namespace": "https://w3id.org/iprok#",
       "triples": 441,
       "classes": 13
     },
     {
       "module": "approval",
-      "namespace": "https://w3id.org/IproK/approval#",
+      "namespace": "https://w3id.org/iprok/approval#",
       "triples": 36,
       "classes": 1
     },
     {
       "module": "billing",
-      "namespace": "https://w3id.org/IproK/billing#",
+      "namespace": "https://w3id.org/iprok/billing#",
       "triples": 344,
       "classes": 9
     },
     {
       "module": "building",
-      "namespace": "https://w3id.org/IproK/building#",
+      "namespace": "https://w3id.org/iprok/building#",
       "triples": 229,
       "classes": 7
     },
     {
       "module": "coordination",
-      "namespace": "https://w3id.org/IproK/coordination#",
+      "namespace": "https://w3id.org/iprok/coordination#",
       "triples": 141,
       "classes": 4
     },
     {
       "module": "cost",
-      "namespace": "https://w3id.org/IproK/cost#",
+      "namespace": "https://w3id.org/iprok/cost#",
       "triples": 425,
       "classes": 14
     },
     {
       "module": "document",
-      "namespace": "https://w3id.org/IproK/document#",
+      "namespace": "https://w3id.org/iprok/document#",
       "triples": 249,
       "classes": 8
     },
     {
       "module": "finance",
-      "namespace": "https://w3id.org/IproK/finance#",
+      "namespace": "https://w3id.org/iprok/finance#",
       "triples": 212,
       "classes": 5
     },
     {
       "module": "handover",
-      "namespace": "https://w3id.org/IproK/handover#",
+      "namespace": "https://w3id.org/iprok/handover#",
       "triples": 136,
       "classes": 4
     },
     {
       "module": "integrated",
-      "namespace": "https://w3id.org/IproK/integrated#",
+      "namespace": "https://w3id.org/iprok/integrated#",
       "triples": 2458,
       "classes": 1
     },
     {
       "module": "prediction",
-      "namespace": "https://w3id.org/IproK/prediction#",
+      "namespace": "https://w3id.org/iprok/prediction#",
       "triples": 43,
       "classes": 1
     },
     {
       "module": "procurement",
-      "namespace": "https://w3id.org/IproK/procurement#",
+      "namespace": "https://w3id.org/iprok/procurement#",
       "triples": 167,
       "classes": 5
     },
     {
       "module": "property",
-      "namespace": "https://w3id.org/IproK/property#",
+      "namespace": "https://w3id.org/iprok/property#",
       "triples": 80,
       "classes": 3
     },
     {
       "module": "quality",
-      "namespace": "https://w3id.org/IproK/quality#",
+      "namespace": "https://w3id.org/iprok/quality#",
       "triples": 228,
       "classes": 6
     },
     {
       "module": "reporting",
-      "namespace": "https://w3id.org/IproK/reporting#",
+      "namespace": "https://w3id.org/iprok/reporting#",
       "triples": 107,
       "classes": 3
     },
     {
       "module": "resource",
-      "namespace": "https://w3id.org/IproK/resource#",
+      "namespace": "https://w3id.org/iprok/resource#",
       "triples": 384,
       "classes": 17
     },
     {
       "module": "safety",
-      "namespace": "https://w3id.org/IproK/safety#",
+      "namespace": "https://w3id.org/iprok/safety#",
       "triples": 57,
       "classes": 2
     },
     {
       "module": "schedule",
-      "namespace": "https://w3id.org/IproK/schedule#",
+      "namespace": "https://w3id.org/iprok/schedule#",
       "triples": 675,
       "classes": 15
     },
     {
       "module": "signal",
-      "namespace": "https://w3id.org/IproK/signal#",
+      "namespace": "https://w3id.org/iprok/signal#",
       "triples": 160,
       "classes": 6
     },
     {
       "module": "site",
-      "namespace": "https://w3id.org/IproK/site#",
+      "namespace": "https://w3id.org/iprok/site#",
       "triples": 418,
       "classes": 7
     },
     {
       "module": "tender",
-      "namespace": "https://w3id.org/IproK/tender#",
+      "namespace": "https://w3id.org/iprok/tender#",
       "triples": 332,
       "classes": 7
     }
   ],
-  "preservedPublishedAssertions": 401,
+  "normalisedPublishedAssertionsRetained": 401,
+  "canonicalNamespace": "https://w3id.org/iprok",
+  "versionIRI": "https://w3id.org/iprok/draft/0.2.0",
+  "namespaceMigrationIdentifiers": 1330,
   "correctedHierarchy": [
     {
       "removed": "schedule:Task rdfs:subClassOf schedule:WBS_Element",
@@ -156,16 +159,20 @@
     "schedule:WorkConstraint rdfs:subClassOf iprok:Constraint"
   ],
   "files": {
-    "ontology.jsonld": "1fe64687749798922cbcb580fed0df53c0bb1ea06e7e9915d4c3e112cfbd6e8e",
-    "shapes.ttl": "09b8c3b5942ed47fb0bca87f4b2c777ba8afda494007624d3f20e818767aad1c",
-    "relationship-contract.json": "8707cb8aacc3beb1c0f7469cf1c6532f8d5cf41cfca376c74aae31f29ce306db",
+    "shapes.nt": "bec8d5cd43c5e5635386f718cbe7d13a11f08619b19d5230696145f1d32427d5",
+    "ontology.jsonld": "bd9f413e32bfb3120e9034ad376724a463ba33714e5b51bf77eda4bd37bf53cb",
+    "shapes.owl": "cc8b6857584b1be4c5213708cb111cc9cb12b95c80a3635eddcf01660385e453",
+    "shapes.ttl": "b5330af04105e8eaef9d3fc999af564bc0c74a91e1a88cc574b7956f19989812",
+    "relationship-contract.json": "c9ee598b41dd8987c5ed2447adf5bc73cac1c931ec9832fc32d94bbb9f4d3e54",
     "relationship-validation.json": "b62d88c999e12bcaf5c0a7103527146ec6778cca4420dcdd5ea41e487efa74c4",
-    "ontology.nt": "29a0f861bd9a36601844c7bf549b4451b0891381bffb2e3af8e118eae4ae11c7",
-    "README.md": "4aad4b7f7528171cf976bc0b374f933cc76f9df50bafaa19e16b6bbded404603",
-    "mapping.json": "62ce3561930da51755f99db0d9018e905d5cb22c3e2728715b40275edbdfcf28",
-    "ontology.owl": "7ff5773d60b1932e11634e509ad1a6474aeb055f3a0be66ec89f283b411cfae4",
-    "validation.json": "9c7eb72ea74f7b6fe16d0d37a8799038a809cb3df4ffe993496f23654e361457",
-    "ontology.ttl": "0756c2d943952ca329e235f05aeebdb5fb153cafe18ededb77de23d56f75b19e"
+    "ontology.nt": "f873aaf1cb1940d5951698a55af1c9d5ce34b2029bfa58cd601792d114080fd3",
+    "README.md": "6196f92f8097cc417aa5169d1217ed368a7bb996f3bd9064a23a3910db58c1e4",
+    "mapping.json": "4c293bfd26ba88b25d0eb937ed61b73a03126b602105337d2c57cfec9292c7e8",
+    "ontology.owl": "2c48b504c4b385daf475814883b4bb0c42bc80cc577661838ae4c5c858df403e",
+    "validation.json": "29113d1ca04b74448b66b8373ff5be3e7ce263db34542f14247d2b5eba8a073b",
+    "namespace-migration.json": "f1f2464675e0303e7a777006b78298b260df725d3cbb0b08869580c3910a1122",
+    "shapes.jsonld": "8eb4aa0441e8e07990c7db327794590a4facf61ba95fc5ac12ba33e16a5bb117",
+    "ontology.ttl": "5d637c092295fbdab8a2f3e26ab971d2e0e448083938044fa94124a7bbc2fa5f"
   },
   "moduleConnectedComponents": 1,
   "crossModulePairs": 40,

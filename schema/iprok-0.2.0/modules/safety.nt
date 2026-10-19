@@ -1,0 +1,57 @@
+<https://w3id.org/iprok/safety#linkedActivity> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/linkedActivity> .
+<https://w3id.org/iprok/safety#linkedActivity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/iprok/safety#incidentAt> <http://www.w3.org/2000/01/rdf-schema#label> "incident at" .
+<https://w3id.org/iprok/safety#incidentType> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/incidentType> .
+<https://w3id.org/iprok/safety#personsInvolved> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/safety#reportedBy> <http://www.w3.org/2000/01/rdf-schema#label> "reported by" .
+<https://w3id.org/iprok/safety#personsInvolved> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/safety#incidentAt> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/incidentAt> .
+<https://w3id.org/iprok/safety#IncidentType> <http://www.w3.org/2000/01/rdf-schema#label> "Incident type" .
+<https://w3id.org/iprok/safety#incidentAt> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/safety#incidentType> <http://www.w3.org/2000/01/rdf-schema#label> "incident type" .
+<https://w3id.org/iprok/safety#linkedActivity> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/safety#Incident> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iprok/safety#immediateCause> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/immediateCause> .
+<https://w3id.org/iprok/safety#incidentAt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/safety#immediateCause> <http://www.w3.org/2000/01/rdf-schema#label> "immediate cause" .
+<https://w3id.org/iprok/safety#incidentType> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/safety> .
+<https://w3id.org/iprok/safety#IncidentType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iprok/safety#Incident> <http://www.w3.org/2000/01/rdf-schema#label> "Safety incident" .
+<https://w3id.org/iprok/safety#linkedActivity> <http://www.w3.org/2000/01/rdf-schema#label> "linked activity" .
+<https://w3id.org/iprok/safety#incidentAt> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://w3id.org/iprok/safety#immediateCause> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/safety#immediateCause> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/safety#IncidentType> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/safety> .
+<https://w3id.org/iprok/safety#reportedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "The reported by property in the integrated project information model."@en .
+<https://w3id.org/iprok/safety#Incident> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/safety> .
+<https://w3id.org/iprok/safety#incidentType> <http://www.w3.org/2000/01/rdf-schema#comment> "The incident type property in the integrated project information model. Its declared domain is Incident and its declared range is IncidentType."@en .
+<https://w3id.org/iprok/safety#reportedBy> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/safety> .
+<https://w3id.org/iprok/safety#personsInvolved> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/iprok/safety#Incident> .
+<https://w3id.org/iprok/safety#incidentAt> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/iprok/safety#Incident> .
+<https://w3id.org/iprok/safety#IncidentType> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/IncidentType> .
+<https://w3id.org/iprok/safety#personsInvolved> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/safety> .
+<https://w3id.org/iprok/safety#incidentType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/iprok/safety#Incident> <http://www.w3.org/2000/01/rdf-schema#comment> "A recorded site safety event with its severity, activity context and follow-up information." .
+<https://w3id.org/iprok/safety#immediateCause> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/iprok/safety#Incident> .
+<https://w3id.org/iprok/safety#linkedActivity> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/iprok/safety#Incident> .
+<https://w3id.org/iprok/safety#personsInvolved> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<https://w3id.org/iprok/safety#linkedActivity> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/safety> .
+<https://w3id.org/iprok/safety#personsInvolved> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/personsInvolved> .
+<https://w3id.org/iprok/safety#incidentAt> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/safety> .
+<https://w3id.org/iprok/safety#incidentType> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/safety#Incident> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Activity> .
+<https://w3id.org/iprok/safety#personsInvolved> <http://www.w3.org/2000/01/rdf-schema#comment> "The persons involved property in the integrated project information model. Its declared domain is Incident and its declared range is integer."@en .
+<https://w3id.org/iprok/safety#reportedBy> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/reportedBy> .
+<https://w3id.org/iprok/safety#reportedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/iprok/safety#incidentType> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/iprok/safety#IncidentType> .
+<https://w3id.org/iprok/safety#immediateCause> <http://www.w3.org/2000/01/rdf-schema#comment> "Free-text first-pass cause. Root-cause analysis lives at V0.28." .
+<https://w3id.org/iprok/safety#immediateCause> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/safety> .
+<https://w3id.org/iprok/safety#reportedBy> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/iprok#User> .
+<https://w3id.org/iprok/safety#incidentAt> <http://www.w3.org/2000/01/rdf-schema#comment> "The incident at property in the integrated project information model. Its declared domain is Incident and its declared range is dateTime."@en .
+<https://w3id.org/iprok/safety#IncidentType> <http://www.w3.org/2000/01/rdf-schema#comment> "Severity bucket for safety incidents. Four-level scale follows IS 14489 / DGMS site-safety classification." .
+<https://w3id.org/iprok/safety#incidentType> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/iprok/safety#Incident> .
+<https://w3id.org/iprok/safety#linkedActivity> <http://www.w3.org/2000/01/rdf-schema#comment> "The linked activity property in the integrated project information model. Its declared domain is Incident and its declared range is Activity."@en .
+<https://w3id.org/iprok/safety#reportedBy> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/safety#personsInvolved> <http://www.w3.org/2000/01/rdf-schema#label> "persons involved" .
+<https://w3id.org/iprok/safety#Incident> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/Incident> .
+<https://w3id.org/iprok/safety#linkedActivity> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/iprok/schedule#Activity> .

@@ -4,387 +4,387 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://w3id.org/IproK/tender#BidRecommendation> a owl:Class ;
+<https://w3id.org/iprok/tender#BidRecommendation> a owl:Class ;
     rdfs:label "Bid Recommendation" ;
-    dcterms:isPartOf <https://w3id.org/IproK/tender> ;
+    dcterms:isPartOf <https://w3id.org/iprok/tender> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/BidRecommendation> ;
-    rdfs:comment "The final bid-output document for a tender: total quoted, contingency, recommended bid, item-count + high-risk-count breakdown. The line-item detail is NOT stored on this node; it is re-derivable from the underlying S5.2 + S5.3 graph state, and persisting it would create stale-data risk on a SOR-rate or comparable-project update. The PDF lives in MinIO via <https://w3id.org/IproK/document#fileRef>." ;
+    rdfs:comment "The final bid-output document for a tender: total quoted, contingency, recommended bid, item-count + high-risk-count breakdown. The line-item detail is NOT stored on this node; it is re-derivable from the underlying S5.2 + S5.3 graph state, and persisting it would create stale-data risk on a SOR-rate or comparable-project update. The PDF lives in MinIO via <https://w3id.org/iprok/document#fileRef>." ;
     rdfs:subClassOf prov:Entity .
 
-<https://w3id.org/IproK/tender#ComparableProject> a owl:Class ;
+<https://w3id.org/iprok/tender#ComparableProject> a owl:Class ;
     rdfs:label "Comparable Project" ;
-    dcterms:isPartOf <https://w3id.org/IproK/tender> ;
+    dcterms:isPartOf <https://w3id.org/iprok/tender> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/ComparableProject> ;
-    rdfs:comment "One row of the bid-intelligence audit trail for a tender. Links a <https://w3id.org/IproK/tender#Tender> to a historical <https://w3id.org/IproK/schedule#Project> that the comparator scored as similar, with the score decomposition + the historical project's outcome signals attached." ;
+    rdfs:comment "One row of the bid-intelligence audit trail for a tender. Links a <https://w3id.org/iprok/tender#Tender> to a historical <https://w3id.org/iprok/schedule#Project> that the comparator scored as similar, with the score decomposition + the historical project's outcome signals attached." ;
     rdfs:subClassOf prov:Entity .
 
-<https://w3id.org/IproK/tender#SORLibrary> a owl:Class ;
+<https://w3id.org/iprok/tender#SORLibrary> a owl:Class ;
     rdfs:label "SOR Library" ;
-    dcterms:isPartOf <https://w3id.org/IproK/tender> ;
+    dcterms:isPartOf <https://w3id.org/iprok/tender> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/SORLibrary> ;
     rdfs:comment "A Schedule of Rates publication ingested into the platform. Platform-wide reference data, not per-project." .
 
-<https://w3id.org/IproK/tender#TenderBOQItem> a owl:Class ;
+<https://w3id.org/iprok/tender#TenderBOQItem> a owl:Class ;
     rdfs:label "Tender BOQ Item" ;
-    dcterms:isPartOf <https://w3id.org/IproK/tender> ;
+    dcterms:isPartOf <https://w3id.org/iprok/tender> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/TenderBOQItem> ;
-    rdfs:comment "One BOQ row extracted from a tender PDF during ingestion. Distinct from <https://w3id.org/IproK/billing#BOQItem> (post-award, project-side). Carries <https://w3id.org/IproK/tender#ofTender>, <https://w3id.org/IproK/tender#needsReview> (L24 hallucination guard), and <https://w3id.org/IproK/tender#dedupCount> (5-gram Jaccard collapse)." ;
+    rdfs:comment "One BOQ row extracted from a tender PDF during ingestion. Distinct from <https://w3id.org/iprok/billing#BOQItem> (post-award, project-side). Carries <https://w3id.org/iprok/tender#ofTender>, <https://w3id.org/iprok/tender#needsReview> (L24 hallucination guard), and <https://w3id.org/iprok/tender#dedupCount> (5-gram Jaccard collapse)." ;
     rdfs:subClassOf prov:Entity .
 
-<https://w3id.org/IproK/tender#actualCPI> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/tender#actualCPI> a owl:DatatypeProperty ;
     rdfs:label "actual CPI" ;
-    dcterms:isPartOf <https://w3id.org/IproK/tender> ;
+    dcterms:isPartOf <https://w3id.org/iprok/tender> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/actualCPI> ;
-    rdfs:comment "The historical project's most recent CPI (cost-performance index) from <https://w3id.org/IproK/schedule#EVMSnapshot> (S4.2). > 1.0 = under budget; < 1.0 = over budget. Null when the project has no EVM history. Domain-free." ;
+    rdfs:comment "The historical project's most recent CPI (cost-performance index) from <https://w3id.org/iprok/schedule#EVMSnapshot> (S4.2). > 1.0 = under budget; < 1.0 = over budget. Null when the project has no EVM history. Domain-free." ;
     rdfs:range xsd:decimal .
 
-<https://w3id.org/IproK/tender#avgRateVariance> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/tender#avgRateVariance> a owl:DatatypeProperty ;
     rdfs:label "average rate variance (percent, signed)" ;
-    dcterms:isPartOf <https://w3id.org/IproK/tender> ;
+    dcterms:isPartOf <https://w3id.org/iprok/tender> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/avgRateVariance> ;
     rdfs:comment "Mean of the tender BOQ items' rateVariance across the rows that matched into this historical project. Positive = tender priced higher than the historical actual; negative = lower. Domain-free." ;
     rdfs:range xsd:decimal .
 
-<https://w3id.org/IproK/tender#baseRate> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/tender#baseRate> a owl:DatatypeProperty ;
     rdfs:label "base rate" ;
-    dcterms:isPartOf <https://w3id.org/IproK/tender> ;
+    dcterms:isPartOf <https://w3id.org/iprok/tender> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/baseRate> ;
     rdfs:comment "Unit rate in INR as published in the SOR." ;
     rdfs:range xsd:decimal .
 
-<https://w3id.org/IproK/tender#contingencyAmount> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/tender#contingencyAmount> a owl:DatatypeProperty ;
     rdfs:label "contingency amount (INR)" ;
-    dcterms:isPartOf <https://w3id.org/IproK/tender> ;
+    dcterms:isPartOf <https://w3id.org/iprok/tender> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/contingencyAmount> ;
     rdfs:comment "total_quoted × contingency_pct / 100. Domain-free." ;
     rdfs:range xsd:decimal .
 
-<https://w3id.org/IproK/tender#contingencyPct> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/tender#contingencyPct> a owl:DatatypeProperty ;
     rdfs:label "contingency percentage" ;
-    dcterms:isPartOf <https://w3id.org/IproK/tender> ;
+    dcterms:isPartOf <https://w3id.org/iprok/tender> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/contingencyPct> ;
     rdfs:comment "Risk buffer percentage applied to total_quoted. Selected from the comparable projects' average historical CPI: 5% when avg_CPI ≥ 1.0 (historicals delivered on budget), 10% when 0.9-1.0 (slight over-runs), 15% when < 0.9 (significant historical over-runs). Domain-free." ;
     rdfs:range xsd:decimal .
 
-<https://w3id.org/IproK/tender#contractForm> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/tender#contractForm> a owl:DatatypeProperty ;
     rdfs:label "contract form" ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/tender> ;
+    dcterms:isPartOf <https://w3id.org/iprok/tender> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/contractForm> ;
     rdfs:comment "The contract form property in the integrated project information model."@en ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK/tender#coverSystem> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/tender#coverSystem> a owl:DatatypeProperty ;
     rdfs:label "cover system" ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/tender> ;
+    dcterms:isPartOf <https://w3id.org/iprok/tender> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/coverSystem> ;
     rdfs:comment "The cover system property in the integrated project information model."@en ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK/tender#dedupCount> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/tender#dedupCount> a owl:DatatypeProperty ;
     rdfs:label "dedup count" ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/tender> ;
+    dcterms:isPartOf <https://w3id.org/iprok/tender> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/dedupCount> ;
     rdfs:comment "The dedup count property in the integrated project information model."@en ;
     rdfs:range xsd:integer .
 
-<https://w3id.org/IproK/tender#deviationCount> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/tender#deviationCount> a owl:DatatypeProperty ;
     rdfs:label "deviation count" ;
-    dcterms:isPartOf <https://w3id.org/IproK/tender> ;
+    dcterms:isPartOf <https://w3id.org/iprok/tender> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/deviationCount> ;
-    rdfs:comment "Number of <https://w3id.org/IproK/billing#Deviation> nodes (S3.7) recorded on the historical project — counts how often measured quantity exceeded tendered quantity by >25%. Domain-free." ;
+    rdfs:comment "Number of <https://w3id.org/iprok/billing#Deviation> nodes (S3.7) recorded on the historical project — counts how often measured quantity exceeded tendered quantity by >25%. Domain-free." ;
     rdfs:range xsd:integer .
 
-<https://w3id.org/IproK/tender#emdPercentage> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/tender#emdPercentage> a owl:DatatypeProperty ;
     rdfs:label "EMD percentage" ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/tender> ;
+    dcterms:isPartOf <https://w3id.org/iprok/tender> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/emdPercentage> ;
     rdfs:comment "The emd percentage property in the integrated project information model."@en ;
     rdfs:range xsd:decimal .
 
-<https://w3id.org/IproK/tender#estimatedValue> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/tender#estimatedValue> a owl:DatatypeProperty ;
     rdfs:label "estimated value (INR)" ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/tender> ;
+    dcterms:isPartOf <https://w3id.org/iprok/tender> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/estimatedValue> ;
     rdfs:comment "The estimated value property in the integrated project information model."@en ;
     rdfs:range xsd:decimal .
 
-<https://w3id.org/IproK/tender#extractionStatus> a owl:ObjectProperty ;
+<https://w3id.org/iprok/tender#extractionStatus> a owl:ObjectProperty ;
     rdfs:label "extraction status" ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/tender> ;
+    dcterms:isPartOf <https://w3id.org/iprok/tender> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/extractionStatus> ;
     rdfs:comment "The extraction status property in the integrated project information model."@en ;
-    rdfs:range <https://w3id.org/IproK/tender#ExtractionStatus> .
+    rdfs:range <https://w3id.org/iprok/tender#ExtractionStatus> .
 
-<https://w3id.org/IproK/tender#forTender> a owl:ObjectProperty ;
+<https://w3id.org/iprok/tender#forTender> a owl:ObjectProperty ;
     rdfs:label "for tender" ;
-    dcterms:isPartOf <https://w3id.org/IproK/tender> ;
+    dcterms:isPartOf <https://w3id.org/iprok/tender> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/forTender> ;
-    rdfs:comment "Link from <https://w3id.org/IproK/tender#ComparableProject> to the <https://w3id.org/IproK/tender#Tender> this comparison was run for. Domain-free (antipattern #8)." ;
-    rdfs:range <https://w3id.org/IproK/tender#Tender> .
+    rdfs:comment "Link from <https://w3id.org/iprok/tender#ComparableProject> to the <https://w3id.org/iprok/tender#Tender> this comparison was run for. Domain-free (antipattern #8)." ;
+    rdfs:range <https://w3id.org/iprok/tender#Tender> .
 
-<https://w3id.org/IproK/tender#highRiskCount> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/tender#highRiskCount> a owl:DatatypeProperty ;
     rdfs:label "high-risk count" ;
-    dcterms:isPartOf <https://w3id.org/IproK/tender> ;
+    dcterms:isPartOf <https://w3id.org/iprok/tender> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/highRiskCount> ;
     rdfs:comment "Count of line items the recommender flagged as risk_level=High (historical deviation OR rate_variance > 30%)." ;
     rdfs:range xsd:integer .
 
-<https://w3id.org/IproK/tender#ingestedAt> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/tender#ingestedAt> a owl:DatatypeProperty ;
     rdfs:label "ingested at" ;
-    dcterms:isPartOf <https://w3id.org/IproK/tender> ;
+    dcterms:isPartOf <https://w3id.org/iprok/tender> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/ingestedAt> ;
     rdfs:comment "Server timestamp when the library was ingested. Polymorphic — domain unspecified." ;
     rdfs:range xsd:dateTime .
 
-<https://w3id.org/IproK/tender#itemCount> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/tender#itemCount> a owl:DatatypeProperty ;
     rdfs:label "item count" ;
-    dcterms:isPartOf <https://w3id.org/IproK/tender> ;
+    dcterms:isPartOf <https://w3id.org/iprok/tender> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/itemCount> ;
-    rdfs:comment "Count of <https://w3id.org/IproK/tender#TenderBOQItem> rows in the recommendation (matched items only — unmatched are excluded since no rate can be recommended).",
+    rdfs:comment "Count of <https://w3id.org/iprok/tender#TenderBOQItem> rows in the recommendation (matched items only — unmatched are excluded since no rate can be recommended).",
         "Denormalised count of SOR items in a library. Polymorphic — domain unspecified." ;
     rdfs:range xsd:integer .
 
-<https://w3id.org/IproK/tender#matchConfidence> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/tender#matchConfidence> a owl:DatatypeProperty ;
     rdfs:label "match confidence (0–1)" ;
-    dcterms:isPartOf <https://w3id.org/IproK/tender> ;
+    dcterms:isPartOf <https://w3id.org/iprok/tender> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/matchConfidence> ;
     rdfs:comment "S3.2-style confidence: exact-code = 1.0; fuzzy-desc = 0.5 + 0.4×ratio; jargon-normalised = same but after Indian-PWD jargon stripped; no-match = 0.0. SHACL bounds enforce [0, 1]." ;
     rdfs:range xsd:decimal .
 
-<https://w3id.org/IproK/tender#matchStrategy> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/tender#matchStrategy> a owl:DatatypeProperty ;
     rdfs:label "match strategy" ;
-    dcterms:isPartOf <https://w3id.org/IproK/tender> ;
+    dcterms:isPartOf <https://w3id.org/iprok/tender> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/matchStrategy> ;
     rdfs:comment "How the match landed. Values: 'exact-code' | 'fuzzy-desc' | 'jargon-normalised' | 'no-match'. SHACL sh:in (string literals, antipattern #13)." ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK/tender#matchedBOQItems> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/tender#matchedBOQItems> a owl:DatatypeProperty ;
     rdfs:label "matched BOQ items" ;
-    dcterms:isPartOf <https://w3id.org/IproK/tender> ;
+    dcterms:isPartOf <https://w3id.org/iprok/tender> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/matchedBOQItems> ;
-    rdfs:comment "Count of tender BOQ items whose matchedSORItem also appears as <https://w3id.org/IproK/integrated#governedBy> on some <https://w3id.org/IproK/billing#BOQItem> in the historical project. The numerator of the BOQ-overlap sub-score. Domain-free." ;
+    rdfs:comment "Count of tender BOQ items whose matchedSORItem also appears as <https://w3id.org/iprok/integrated#governedBy> on some <https://w3id.org/iprok/billing#BOQItem> in the historical project. The numerator of the BOQ-overlap sub-score. Domain-free." ;
     rdfs:range xsd:integer .
 
-<https://w3id.org/IproK/tender#matchedSORItem> a owl:ObjectProperty ;
+<https://w3id.org/iprok/tender#matchedSORItem> a owl:ObjectProperty ;
     rdfs:label "matched SOR item" ;
-    dcterms:isPartOf <https://w3id.org/IproK/tender> ;
+    dcterms:isPartOf <https://w3id.org/iprok/tender> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/matchedSORItem> ;
-    rdfs:comment "IRI of the <https://w3id.org/IproK/tender#SORItem> the tender BOQ row matched against. Absent when match-strategy is 'no-match'." ;
-    rdfs:range <https://w3id.org/IproK/tender#SORItem> .
+    rdfs:comment "IRI of the <https://w3id.org/iprok/tender#SORItem> the tender BOQ row matched against. Absent when match-strategy is 'no-match'." ;
+    rdfs:range <https://w3id.org/iprok/tender#SORItem> .
 
-<https://w3id.org/IproK/tender#needsReview> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/tender#needsReview> a owl:DatatypeProperty ;
     rdfs:label "needs review" ;
-    dcterms:isPartOf <https://w3id.org/IproK/tender> ;
+    dcterms:isPartOf <https://w3id.org/iprok/tender> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/needsReview> ;
     rdfs:comment "Boolean — set true when any AI-extracted title-block field has confidence < 0.7, cleared when a user confirms the extraction. Polymorphic (any AI-written node can carry it); domain unspecified (antipattern #8)." ;
     rdfs:range xsd:boolean .
 
-<https://w3id.org/IproK/tender#ofTender> a owl:ObjectProperty ;
+<https://w3id.org/iprok/tender#ofTender> a owl:ObjectProperty ;
     rdfs:label "of tender" ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/tender> ;
+    dcterms:isPartOf <https://w3id.org/iprok/tender> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/ofTender> ;
     rdfs:comment "The of tender property in the integrated project information model."@en ;
-    rdfs:range <https://w3id.org/IproK/tender#Tender> .
+    rdfs:range <https://w3id.org/iprok/tender#Tender> .
 
-<https://w3id.org/IproK/tender#pbgPercentage> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/tender#pbgPercentage> a owl:DatatypeProperty ;
     rdfs:label "PBG percentage" ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/tender> ;
+    dcterms:isPartOf <https://w3id.org/iprok/tender> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/pbgPercentage> ;
     rdfs:comment "The pbg percentage property in the integrated project information model."@en ;
     rdfs:range xsd:decimal .
 
-<https://w3id.org/IproK/tender#procurementMode> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/tender#procurementMode> a owl:DatatypeProperty ;
     rdfs:label "procurement mode" ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/tender> ;
+    dcterms:isPartOf <https://w3id.org/iprok/tender> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/procurementMode> ;
     rdfs:comment "The procurement mode property in the integrated project information model."@en ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK/tender#publisher> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/tender#publisher> a owl:DatatypeProperty ;
     rdfs:label "publisher" ;
-    dcterms:isPartOf <https://w3id.org/IproK/tender> ;
+    dcterms:isPartOf <https://w3id.org/iprok/tender> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/publisher> ;
     rdfs:comment "Issuing authority: CPWD, AP-PWD, MES, NHAI, Railway, State-PWD. Polymorphic — domain unspecified." ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK/tender#rateVariance> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/tender#rateVariance> a owl:DatatypeProperty ;
     rdfs:label "rate variance (percent, signed)" ;
-    dcterms:isPartOf <https://w3id.org/IproK/tender> ;
+    dcterms:isPartOf <https://w3id.org/iprok/tender> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/rateVariance> ;
     rdfs:comment "(quotedRate − sorBaseRate) / sorBaseRate × 100. Positive = tender priced higher than SOR; negative = tender priced lower. |variance| > 20% is flagged in the match report. Absent when no SOR match OR quotedRate is null." ;
     rdfs:range xsd:decimal .
 
-<https://w3id.org/IproK/tender#rateYear> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/tender#rateYear> a owl:DatatypeProperty ;
     rdfs:label "rate year" ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/tender> ;
+    dcterms:isPartOf <https://w3id.org/iprok/tender> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/rateYear> ;
     rdfs:comment "The rate year property in the integrated project information model."@en ;
     rdfs:range xsd:integer .
 
-<https://w3id.org/IproK/tender#recommendedBid> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/tender#recommendedBid> a owl:DatatypeProperty ;
     rdfs:label "recommended bid (INR)" ;
-    dcterms:isPartOf <https://w3id.org/IproK/tender> ;
+    dcterms:isPartOf <https://w3id.org/iprok/tender> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/recommendedBid> ;
     rdfs:comment "total_quoted + contingency_amount. The MD-facing single number. Domain-free." ;
     rdfs:range xsd:decimal .
 
-<https://w3id.org/IproK/tender#riskMaterialisedCount> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/tender#riskMaterialisedCount> a owl:DatatypeProperty ;
     rdfs:label "risks that materialised" ;
-    dcterms:isPartOf <https://w3id.org/IproK/tender> ;
+    dcterms:isPartOf <https://w3id.org/iprok/tender> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/riskMaterialisedCount> ;
-    rdfs:comment "Number of <https://w3id.org/IproK/coordination#Risk> nodes (S4.5) on the historical project whose <https://w3id.org/IproK/integrated#linkedIssue> is set — risks that became real issues. Useful as a proxy for how well risk management worked. Domain-free." ;
+    rdfs:comment "Number of <https://w3id.org/iprok/coordination#Risk> nodes (S4.5) on the historical project whose <https://w3id.org/iprok/integrated#linkedIssue> is set — risks that became real issues. Useful as a proxy for how well risk management worked. Domain-free." ;
     rdfs:range xsd:integer .
 
-<https://w3id.org/IproK/tender#similarProject> a owl:ObjectProperty ;
+<https://w3id.org/iprok/tender#similarProject> a owl:ObjectProperty ;
     rdfs:label "similar project" ;
-    dcterms:isPartOf <https://w3id.org/IproK/tender> ;
+    dcterms:isPartOf <https://w3id.org/iprok/tender> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/similarProject> ;
-    rdfs:comment "The historical <https://w3id.org/IproK/schedule#Project> the comparator picked. Domain-free." ;
-    rdfs:range <https://w3id.org/IproK/schedule#Project> .
+    rdfs:comment "The historical <https://w3id.org/iprok/schedule#Project> the comparator picked. Domain-free." ;
+    rdfs:range <https://w3id.org/iprok/schedule#Project> .
 
-<https://w3id.org/IproK/tender#similarityScore> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/tender#similarityScore> a owl:DatatypeProperty ;
     rdfs:label "similarity score (0–1)" ;
-    dcterms:isPartOf <https://w3id.org/IproK/tender> ;
+    dcterms:isPartOf <https://w3id.org/iprok/tender> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/similarityScore> ;
     rdfs:comment "Weighted average of the comparator's three sub-scores: BOQ overlap (0.5) + work-type Jaccard (0.3) + scale similarity (0.2). Domain-free." ;
     rdfs:range xsd:decimal .
 
-<https://w3id.org/IproK/tender#sorCode> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/tender#sorCode> a owl:DatatypeProperty ;
     rdfs:label "SOR code" ;
-    dcterms:isPartOf <https://w3id.org/IproK/tender> ;
+    dcterms:isPartOf <https://w3id.org/iprok/tender> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/sorCode> ;
     rdfs:comment "Rate-book item code, e.g. '2.1.1.1'. Polymorphic — domain unspecified (antipattern #8)." ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK/tender#sorDescription> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/tender#sorDescription> a owl:DatatypeProperty ;
     rdfs:label "SOR description" ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/tender> ;
+    dcterms:isPartOf <https://w3id.org/iprok/tender> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/sorDescription> ;
     rdfs:comment "The sor description property in the integrated project information model."@en ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK/tender#sorLibraryId> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/tender#sorLibraryId> a owl:DatatypeProperty ;
     rdfs:label "SOR library ID" ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/tender> ;
+    dcterms:isPartOf <https://w3id.org/iprok/tender> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/sorLibraryId> ;
     rdfs:comment "The sor library id property in the integrated project information model."@en ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK/tender#sorYear> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/tender#sorYear> a owl:DatatypeProperty ;
     rdfs:label "SOR year" ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/tender> ;
+    dcterms:isPartOf <https://w3id.org/iprok/tender> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/sorYear> ;
     rdfs:comment "The sor year property in the integrated project information model."@en ;
     rdfs:range xsd:integer .
 
-<https://w3id.org/IproK/tender#tenderAmount> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/tender#tenderAmount> a owl:DatatypeProperty ;
     rdfs:label "tender amount (INR)" ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/tender> ;
+    dcterms:isPartOf <https://w3id.org/iprok/tender> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/tenderAmount> ;
     rdfs:comment "The tender amount property in the integrated project information model."@en ;
     rdfs:range xsd:decimal .
 
-<https://w3id.org/IproK/tender#tenderBoqSno> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/tender#tenderBoqSno> a owl:DatatypeProperty ;
     rdfs:label "tender BOQ sno" ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/tender> ;
+    dcterms:isPartOf <https://w3id.org/iprok/tender> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/tenderBoqSno> ;
     rdfs:comment "The tender boq sno property in the integrated project information model."@en ;
     rdfs:range xsd:integer .
 
-<https://w3id.org/IproK/tender#tenderEstQty> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/tender#tenderEstQty> a owl:DatatypeProperty ;
     rdfs:label "tender est qty" ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/tender> ;
+    dcterms:isPartOf <https://w3id.org/iprok/tender> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/tenderEstQty> ;
     rdfs:comment "The tender est qty property in the integrated project information model."@en ;
     rdfs:range xsd:decimal .
 
-<https://w3id.org/IproK/tender#tenderId> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/tender#tenderId> a owl:DatatypeProperty ;
     rdfs:label "tender id" ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/tender> ;
+    dcterms:isPartOf <https://w3id.org/iprok/tender> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/tenderId> ;
     rdfs:comment "The tender id property in the integrated project information model."@en ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK/tender#tenderItemDescription> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/tender#tenderItemDescription> a owl:DatatypeProperty ;
     rdfs:label "tender item description" ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/tender> ;
+    dcterms:isPartOf <https://w3id.org/iprok/tender> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/tenderItemDescription> ;
     rdfs:comment "The tender item description property in the integrated project information model."@en ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK/tender#tenderRate> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/tender#tenderRate> a owl:DatatypeProperty ;
     rdfs:label "tender rate (INR)" ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/tender> ;
+    dcterms:isPartOf <https://w3id.org/iprok/tender> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/tenderRate> ;
     rdfs:comment "The tender rate property in the integrated project information model."@en ;
     rdfs:range xsd:decimal .
 
-<https://w3id.org/IproK/tender#tenderShortDesc> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/tender#tenderShortDesc> a owl:DatatypeProperty ;
     rdfs:label "tender short desc" ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/tender> ;
+    dcterms:isPartOf <https://w3id.org/iprok/tender> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/tenderShortDesc> ;
     rdfs:comment "The tender short desc property in the integrated project information model."@en ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK/tender#tenderTitle> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/tender#tenderTitle> a owl:DatatypeProperty ;
     rdfs:label "tender title" ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/tender> ;
+    dcterms:isPartOf <https://w3id.org/iprok/tender> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/tenderTitle> ;
     rdfs:comment "The tender title property in the integrated project information model."@en ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK/tender#tenderUnit> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/tender#tenderUnit> a owl:DatatypeProperty ;
     rdfs:label "tender unit (canonical)" ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/tender> ;
+    dcterms:isPartOf <https://w3id.org/iprok/tender> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/tenderUnit> ;
     rdfs:comment "The tender unit property in the integrated project information model."@en ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK/tender#totalQuoted> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/tender#totalQuoted> a owl:DatatypeProperty ;
     rdfs:label "total quoted (INR)" ;
-    dcterms:isPartOf <https://w3id.org/IproK/tender> ;
+    dcterms:isPartOf <https://w3id.org/iprok/tender> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/totalQuoted> ;
-    rdfs:comment "Sum of (recommended_rate × estimated_qty) across every matched <https://w3id.org/IproK/tender#TenderBOQItem>. The base bid before contingency. Domain-free (antipattern #8)." ;
+    rdfs:comment "Sum of (recommended_rate × estimated_qty) across every matched <https://w3id.org/iprok/tender#TenderBOQItem>. The base bid before contingency. Domain-free (antipattern #8)." ;
     rdfs:range xsd:decimal .
 
-<https://w3id.org/IproK/tender#ExtractionStatus> a owl:Class ;
+<https://w3id.org/iprok/tender#ExtractionStatus> a owl:Class ;
     rdfs:label "Extraction Status" ;
-    dcterms:isPartOf <https://w3id.org/IproK/tender> ;
+    dcterms:isPartOf <https://w3id.org/iprok/tender> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/ExtractionStatus> ;
     rdfs:comment "Lifecycle state of the tender PDF → BOQ extraction pipeline. Values: Pending, Running, Complete, Failed, NeedsReview." .
 
-<https://w3id.org/IproK/tender#SORItem> a owl:Class ;
+<https://w3id.org/iprok/tender#SORItem> a owl:Class ;
     rdfs:label "SOR Item" ;
-    dcterms:isPartOf <https://w3id.org/IproK/tender> ;
+    dcterms:isPartOf <https://w3id.org/iprok/tender> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/SORItem> ;
-    rdfs:comment "One rate item from a <https://w3id.org/IproK/tender#SORLibrary>. Carries sorCode + description + unit + baseRate." .
+    rdfs:comment "One rate item from a <https://w3id.org/iprok/tender#SORLibrary>. Carries sorCode + description + unit + baseRate." .
 
-<https://w3id.org/IproK/tender#Tender> a owl:Class ;
+<https://w3id.org/iprok/tender#Tender> a owl:Class ;
     rdfs:label "Tender" ;
-    dcterms:isPartOf <https://w3id.org/IproK/tender> ;
+    dcterms:isPartOf <https://w3id.org/iprok/tender> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/Tender> ;
-    rdfs:comment "A tender document under consideration by the org. Lives in the org catalogue graph (data/org/{oid}); pre-award. Becomes a <https://w3id.org/IproK/schedule#Project> only on award." ;
+    rdfs:comment "A tender document under consideration by the org. Lives in the org catalogue graph (data/org/{oid}); pre-award. Becomes a <https://w3id.org/iprok/schedule#Project> only on award." ;
     rdfs:subClassOf prov:Entity .
 

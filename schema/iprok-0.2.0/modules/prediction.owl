@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:dcterms="http://purl.org/dc/terms/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+>
+  <rdf:Description rdf:about="https://w3id.org/iprok/prediction#modelVersion">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label>model version</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/prediction"/>
+    <rdfs:comment>Model identifier like 'gat-v1'. Lets the UI flag stale predictions when the model is retrained.</rdfs:comment>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/modelVersion"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/prediction#costOverrunRisk">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/costOverrunRisk"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/prediction"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:label>cost overrun risk (0–1)</rdfs:label>
+    <rdfs:comment>Probability the activity's BOQ-linked cost will overrun by &gt;10%. Sigmoid output of the GAT cost head.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/prediction#predictedFloatChange">
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/predictedFloatChange"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/prediction"/>
+    <rdfs:comment>tanh-bounded change in totalFloat. Negative = float will shrink. Range [-30, +30].</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:label>predicted float change (days)</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/prediction#predictedAt">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/predictedAt"/>
+    <rdfs:label>predicted at</rdfs:label>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/prediction"/>
+    <rdfs:comment xml:lang="en">The predicted at property in the integrated project information model.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/prediction#confidenceScore">
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/prediction"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label>model confidence (0–1)</rdfs:label>
+    <rdfs:comment>Model's self-reported confidence in this prediction (1 − attention entropy, normalised).</rdfs:comment>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/confidenceScore"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/prediction#delayRisk">
+    <rdfs:label>delay risk (0–1)</rdfs:label>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/prediction"/>
+    <rdfs:comment>Probability the activity will be delayed by more than 7 days. Sigmoid output of the GAT delay head.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/delayRisk"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/prediction#ActivityPrediction">
+    <rdfs:label>Activity prediction (GAT-derived)</rdfs:label>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/ActivityPrediction"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/prediction"/>
+    <rdfs:comment>A versioned record describing an activity-level prediction and its input, model and baseline provenance.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+</rdf:RDF>

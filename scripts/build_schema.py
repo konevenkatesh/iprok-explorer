@@ -32,7 +32,8 @@ def build(key, files, name, note):
   for p,o in sorted(g.predicate_objects(s),key=lambda t:(str(t[0]),str(t[1]))): statements.append({'predicate':str(p),**value(o)})
   module=uri.split('#')[0].rstrip('/').rsplit('/',1)[-1]
   if uri.startswith('https://bimsaarthi.com/ontology/v0/'): module='BIMSaarthi v0'
-  elif not uri.startswith('https://w3id.org/IproK'): module='External metadata'
+  elif uri.startswith('https://w3id.org/iprok#'): module='IproK'
+  elif not uri.startswith(('https://w3id.org/IproK','https://w3id.org/iprok')): module='External metadata'
   terms.append({'id':uri,'local':short(uri),'label':labels[0] if labels else re.sub(r'(?<=[a-z])(?=[A-Z])',' ',short(uri)).replace('_',' '),'declaredLabel':bool(labels),'kind':kind,'module':module,'description':' '.join(str(x) for x in g.objects(s,RDFS.comment)), 'domain':[str(x) for x in g.objects(s,RDFS.domain)],'range':[str(x) for x in g.objects(s,RDFS.range)],'parents':[str(x) for x in g.objects(s,RDFS.subClassOf) if isinstance(x,URIRef)],'statements':statements,'sourceFiles':[f for f in files if s in file_subjects[f]]})
  priority={'Class':0,'Object property':1,'Data property':2,'Property':3,'Annotation property':4}
  terms.sort(key=lambda t:(priority[t['kind']],t['module'],t['label'].lower()))
@@ -58,7 +59,7 @@ for name,fmt in [('ontology.nt','nt'),('ontology.owl','xml'),('ontology.jsonld',
  assert isomorphic(g,Graph().parse(ROOT/name,format=fmt)),name
 outputs=[iprok]
 if (ROOT/'schema/iprok-0.2.0/ontology.ttl').exists():
- expanded,eg=build('expanded',['schema/iprok-0.2.0/ontology.ttl'],'IproK · expanded 0.2.0 draft','Proposed IproK extension: original published identifiers plus migrated platform schema. Created 19 October 2026; engineering verification is separate from historical thesis results.')
+ expanded,eg=build('expanded',['schema/iprok-0.2.0/ontology.ttl'],'IproK · expanded 0.2.0 draft','Proposed IproK extension using canonical lowercase https://w3id.org/iprok; historical files remain separately preserved. Created 19 October 2026; engineering verification is separate from historical thesis results.')
  es=Graph().parse(ROOT/'schema/iprok-0.2.0/shapes.ttl',format='turtle')
  expanded['audit']['shaclTriples']=len(es)
  expanded['audit']['nodeShapes']=len(set(es.subjects(RDF.type,SH.NodeShape)))

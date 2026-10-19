@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:dcterms="http://purl.org/dc/terms/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+>
+  <rdf:Description rdf:about="https://w3id.org/iprok/safety#linkedActivity">
+    <rdfs:domain rdf:resource="https://w3id.org/iprok/safety#Incident"/>
+    <rdfs:label>linked activity</rdfs:label>
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/safety"/>
+    <rdfs:range rdf:resource="https://w3id.org/iprok/schedule#Activity"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="en">The linked activity property in the integrated project information model. Its declared domain is Incident and its declared range is Activity.</rdfs:comment>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/linkedActivity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/safety#incidentAt">
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/incidentAt"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="https://w3id.org/iprok/safety#Incident"/>
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+    <rdfs:label>incident at</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/safety"/>
+    <rdfs:comment xml:lang="en">The incident at property in the integrated project information model. Its declared domain is Incident and its declared range is dateTime.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/safety#incidentType">
+    <rdfs:range rdf:resource="https://w3id.org/iprok/safety#IncidentType"/>
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/safety"/>
+    <rdfs:domain rdf:resource="https://w3id.org/iprok/safety#Incident"/>
+    <rdfs:comment xml:lang="en">The incident type property in the integrated project information model. Its declared domain is Incident and its declared range is IncidentType.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/incidentType"/>
+    <rdfs:label>incident type</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/safety#personsInvolved">
+    <rdfs:domain rdf:resource="https://w3id.org/iprok/safety#Incident"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/safety"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/personsInvolved"/>
+    <rdfs:comment xml:lang="en">The persons involved property in the integrated project information model. Its declared domain is Incident and its declared range is integer.</rdfs:comment>
+    <rdfs:label>persons involved</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/safety#reportedBy">
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+    <rdfs:range rdf:resource="https://w3id.org/iprok#User"/>
+    <rdfs:label>reported by</rdfs:label>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/safety"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/reportedBy"/>
+    <rdfs:comment xml:lang="en">The reported by property in the integrated project information model.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/safety#IncidentType">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/safety"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/IncidentType"/>
+    <rdfs:comment>Severity bucket for safety incidents. Four-level scale follows IS 14489 / DGMS site-safety classification.</rdfs:comment>
+    <rdfs:label>Incident type</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/safety#Incident">
+    <rdfs:label>Safety incident</rdfs:label>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/safety"/>
+    <rdfs:comment>A recorded site safety event with its severity, activity context and follow-up information.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/Incident"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Activity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/safety#immediateCause">
+    <rdfs:domain rdf:resource="https://w3id.org/iprok/safety#Incident"/>
+    <rdfs:comment>Free-text first-pass cause. Root-cause analysis lives at V0.28.</rdfs:comment>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/immediateCause"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/safety"/>
+    <rdfs:label>immediate cause</rdfs:label>
+  </rdf:Description>
+</rdf:RDF>

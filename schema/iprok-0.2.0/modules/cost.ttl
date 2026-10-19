@@ -4,499 +4,499 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://w3id.org/IproK/cost#AnalysisAddition> a owl:Class ;
+<https://w3id.org/iprok/cost#AnalysisAddition> a owl:Class ;
     rdfs:label "Analysis Addition"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/cost> ;
+    dcterms:isPartOf <https://w3id.org/iprok/cost> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/AnalysisAddition> ;
     rdfs:comment "A percentage added to an analysis in order, on a stated base; water charges on cost, contractor's profit and overheads on the running total." ;
     rdfs:subClassOf prov:Entity .
 
-<https://w3id.org/IproK/cost#AnalysisLine> a owl:Class ;
+<https://w3id.org/iprok/cost#AnalysisLine> a owl:Class ;
     rdfs:label "Analysis Line"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/cost> ;
+    dcterms:isPartOf <https://w3id.org/iprok/cost> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/AnalysisLine> ;
     rdfs:comment "One resource line of an analysis version." ;
     rdfs:subClassOf prov:Entity .
 
-<https://w3id.org/IproK/cost#CostResource> a owl:Class ;
+<https://w3id.org/iprok/cost#CostResource> a owl:Class ;
     rdfs:label "Cost Resource"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/cost> ;
+    dcterms:isPartOf <https://w3id.org/iprok/cost> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/CostResource> ;
     rdfs:comment "An entry in an organisation's book of basic rates: a trade, material, plant item or other cost with its unit and current rate." ;
     rdfs:subClassOf prov:Entity .
 
-<https://w3id.org/IproK/cost#DesignOption> a owl:Class ;
+<https://w3id.org/iprok/cost#DesignOption> a owl:Class ;
     rdfs:label "Design option" ;
-    dcterms:isPartOf <https://w3id.org/IproK/cost> ;
+    dcterms:isPartOf <https://w3id.org/iprok/cost> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/DesignOption> ;
     rdfs:comment "A priced design decision under consideration or decided. Decisions are PROV-O supersessions; Approved options move the working estimate." ;
     rdfs:subClassOf prov:Entity .
 
-<https://w3id.org/IproK/cost#EquipmentCost> a owl:Class ;
+<https://w3id.org/iprok/cost#EquipmentCost> a owl:Class ;
     rdfs:label "EquipmentCost" ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
     rdfs:comment "A cost-type classification for equipment-related expenditure."@en ;
-    rdfs:subClassOf <https://w3id.org/IproK/cost#CostType> .
+    rdfs:subClassOf <https://w3id.org/iprok/cost#CostType> .
 
-<https://w3id.org/IproK/cost#ExpenseItem> a owl:Class ;
+<https://w3id.org/iprok/cost#ExpenseItem> a owl:Class ;
     rdfs:label "ExpenseItem" ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
     rdfs:comment "A cost-type classification for other project expenses."@en ;
-    rdfs:subClassOf <https://w3id.org/IproK/cost#CostType> .
+    rdfs:subClassOf <https://w3id.org/iprok/cost#CostType> .
 
-<https://w3id.org/IproK/cost#LaborCost> a owl:Class ;
+<https://w3id.org/iprok/cost#LaborCost> a owl:Class ;
     rdfs:label "LaborCost" ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
     rdfs:comment "A cost-type classification for labour-related expenditure."@en ;
-    rdfs:subClassOf <https://w3id.org/IproK/cost#CostType> .
+    rdfs:subClassOf <https://w3id.org/iprok/cost#CostType> .
 
-<https://w3id.org/IproK/cost#MaterialCost> a owl:Class ;
+<https://w3id.org/iprok/cost#MaterialCost> a owl:Class ;
     rdfs:label "MaterialCost" ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
     rdfs:comment "A cost-type classification for material-related expenditure."@en ;
-    rdfs:subClassOf <https://w3id.org/IproK/cost#CostType> .
+    rdfs:subClassOf <https://w3id.org/iprok/cost#CostType> .
 
-<https://w3id.org/IproK/cost#ProjectResourcePrice> a owl:Class ;
+<https://w3id.org/iprok/cost#ProjectResourcePrice> a owl:Class ;
     rdfs:label "Project Resource Price"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/cost> ;
+    dcterms:isPartOf <https://w3id.org/iprok/cost> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/ProjectResourcePrice> ;
     rdfs:comment "The one rate a project uses for a resource. Copied from the organisation's basic rates when first used; changed only by a person, and every change is recorded." ;
     rdfs:subClassOf prov:Entity .
 
-<https://w3id.org/IproK/cost#RateAnalysis> a owl:Class ;
+<https://w3id.org/iprok/cost#RateAnalysis> a owl:Class ;
     rdfs:label "Rate Analysis"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/cost> ;
+    dcterms:isPartOf <https://w3id.org/iprok/cost> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/RateAnalysis> ;
     rdfs:comment "One version of an analysis of rates: a library analysis the organisation keeps, or the analysis behind one BOQ line of a project. A save writes a new version and supersedes the old one." ;
     rdfs:subClassOf prov:Entity .
 
-<https://w3id.org/IproK/cost#ResourceMapping> a owl:Class ;
+<https://w3id.org/iprok/cost#ResourceMapping> a owl:Class ;
     rdfs:label "Resource Mapping"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/cost> ;
+    dcterms:isPartOf <https://w3id.org/iprok/cost> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/ResourceMapping> ;
     rdfs:comment "Which of the organisation's resources a code of an outside source stands for (a CPWD DAR resource code, a cited CPWD item). Chosen by a person, never guessed; a change supersedes the old mapping." ;
     rdfs:subClassOf prov:Entity .
 
-<https://w3id.org/IproK/cost#actualCostAmount> a owl:DatatypeProperty,
+<https://w3id.org/iprok/cost#actualCostAmount> a owl:DatatypeProperty,
         owl:FunctionalProperty ;
     rdfs:label "actualCostAmount"@en ;
     rdfs:comment "this is actual cost amount" ;
-    rdfs:domain <https://w3id.org/IproK/cost#CostItem> ;
+    rdfs:domain <https://w3id.org/iprok/cost#CostItem> ;
     rdfs:range xsd:decimal .
 
-<https://w3id.org/IproK/cost#additionBase> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/cost#additionBase> a owl:DatatypeProperty ;
     rdfs:label "addition Base"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/cost> ;
+    dcterms:isPartOf <https://w3id.org/iprok/cost> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/additionBase> ;
     rdfs:comment "Labour | Material | Plant | Cost (all lines) | Running (all lines and every earlier addition). No rdfs:domain." ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK/cost#additionLabel> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/cost#additionLabel> a owl:DatatypeProperty ;
     rdfs:label "addition Label"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/cost> ;
+    dcterms:isPartOf <https://w3id.org/iprok/cost> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/additionLabel> ;
     rdfs:comment "What the addition is for. No rdfs:domain." ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK/cost#additionPercent> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/cost#additionPercent> a owl:DatatypeProperty ;
     rdfs:label "addition Percent"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/cost> ;
+    dcterms:isPartOf <https://w3id.org/iprok/cost> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/additionPercent> ;
     rdfs:comment "The percentage, 0 to 100. No rdfs:domain." ;
     rdfs:range xsd:decimal .
 
-<https://w3id.org/IproK/cost#analysedQuantity> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/cost#analysedQuantity> a owl:DatatypeProperty ;
     rdfs:label "analysed Quantity"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/cost> ;
+    dcterms:isPartOf <https://w3id.org/iprok/cost> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/analysedQuantity> ;
     rdfs:comment "The quantity the details of cost are for (a CPWD analysis is often for 10 m² or 1 quintal); the rate per unit is the total divided by it. No rdfs:domain." ;
     rdfs:range xsd:decimal .
 
-<https://w3id.org/IproK/cost#analysisId> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/cost#analysisId> a owl:DatatypeProperty ;
     rdfs:label "analysis Id"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/cost> ;
+    dcterms:isPartOf <https://w3id.org/iprok/cost> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/analysisId> ;
     rdfs:comment "Human-facing id: RL-NNNN in the organisation library, RA-NNNN in a project. Shared by every version. No rdfs:domain." ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK/cost#analysisNote> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/cost#analysisNote> a owl:DatatypeProperty ;
     rdfs:label "analysis Note"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/cost> ;
+    dcterms:isPartOf <https://w3id.org/iprok/cost> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/analysisNote> ;
     rdfs:comment "Why this version was saved. No rdfs:domain." ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK/cost#analysisScope> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/cost#analysisScope> a owl:DatatypeProperty ;
     rdfs:label "analysis Scope"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/cost> ;
+    dcterms:isPartOf <https://w3id.org/iprok/cost> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/analysisScope> ;
     rdfs:comment "library | project. No rdfs:domain." ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK/cost#analysisSource> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/cost#analysisSource> a owl:DatatypeProperty ;
     rdfs:label "analysis Source"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/cost> ;
+    dcterms:isPartOf <https://w3id.org/iprok/cost> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/analysisSource> ;
     rdfs:comment "Where the coefficients come from, e.g. a published analysis of rates or the organisation's own; never blank, so a figure can be traced. No rdfs:domain." ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK/cost#analysisTitle> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/cost#analysisTitle> a owl:DatatypeProperty ;
     rdfs:label "analysis Title"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/cost> ;
+    dcterms:isPartOf <https://w3id.org/iprok/cost> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/analysisTitle> ;
     rdfs:comment "The work the analysis prices, in plain words. No rdfs:domain." ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK/cost#analysisVersion> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/cost#analysisVersion> a owl:DatatypeProperty ;
     rdfs:label "analysis Version"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/cost> ;
+    dcterms:isPartOf <https://w3id.org/iprok/cost> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/analysisVersion> ;
     rdfs:comment "Version number of an analysis, from 1. No rdfs:domain." ;
     rdfs:range xsd:integer .
 
-<https://w3id.org/IproK/cost#atCompleteCostAmount> a owl:DatatypeProperty,
+<https://w3id.org/iprok/cost#atCompleteCostAmount> a owl:DatatypeProperty,
         owl:FunctionalProperty ;
     rdfs:label "atCompleteCostAmount"@en ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
     rdfs:comment "The at complete cost amount property in the integrated project information model. Its declared domain is CostItem and its declared range is decimal."@en ;
-    rdfs:domain <https://w3id.org/IproK/cost#CostItem> ;
+    rdfs:domain <https://w3id.org/iprok/cost#CostItem> ;
     rdfs:range xsd:decimal .
 
-<https://w3id.org/IproK/cost#basicRate> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/cost#basicRate> a owl:DatatypeProperty ;
     rdfs:label "basic Rate"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/cost> ;
+    dcterms:isPartOf <https://w3id.org/iprok/cost> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/basicRate> ;
     rdfs:comment "The organisation's current rate per unit, in rupees. Absent = not priced yet (never read as zero). No rdfs:domain." ;
     rdfs:range xsd:decimal .
 
-<https://w3id.org/IproK/cost#budgetedCostAmount> a owl:DatatypeProperty,
+<https://w3id.org/iprok/cost#budgetedCostAmount> a owl:DatatypeProperty,
         owl:FunctionalProperty ;
     rdfs:label "budgetedCostAmount"@en ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
     rdfs:comment "The budgeted cost amount property in the integrated project information model. Its declared domain is CostItem and its declared range is decimal."@en ;
-    rdfs:domain <https://w3id.org/IproK/cost#CostItem> ;
+    rdfs:domain <https://w3id.org/iprok/cost#CostItem> ;
     rdfs:range xsd:decimal .
 
-<https://w3id.org/IproK/cost#costDeltaAmount> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/cost#costDeltaAmount> a owl:DatatypeProperty ;
     rdfs:label "cost Delta Amount"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/cost> ;
+    dcterms:isPartOf <https://w3id.org/iprok/cost> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/costDeltaAmount> ;
     rdfs:comment "Signed cost impact in ₹ against the working estimate." ;
     rdfs:range xsd:decimal .
 
-<https://w3id.org/IproK/cost#excludesGroup> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/cost#excludesGroup> a owl:DatatypeProperty ;
     rdfs:label "excludes Group"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/cost> ;
+    dcterms:isPartOf <https://w3id.org/iprok/cost> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/excludesGroup> ;
     rdfs:comment "On an addition with a Cost or Running base: a line group left out of the base, as CPWD writes 'Add 15% CPOH on Y-A'. Repeatable. No rdfs:domain." ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK/cost#executionReadinessRating> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/cost#executionReadinessRating> a owl:DatatypeProperty ;
     rdfs:label "execution Readiness Rating"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/cost> ;
+    dcterms:isPartOf <https://w3id.org/iprok/cost> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/executionReadinessRating> ;
     rdfs:comment "How buildable this option is with the resources at hand, 1–5." ;
     rdfs:range xsd:integer .
 
-<https://w3id.org/IproK/cost#externalCode> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/cost#externalCode> a owl:DatatypeProperty ;
     rdfs:label "external Code"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/cost> ;
+    dcterms:isPartOf <https://w3id.org/iprok/cost> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/externalCode> ;
     rdfs:comment "A code of an outside source, e.g. the DAR resource code 0114. No rdfs:domain." ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK/cost#externalScheme> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/cost#externalScheme> a owl:DatatypeProperty ;
     rdfs:label "external Scheme"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/cost> ;
+    dcterms:isPartOf <https://w3id.org/iprok/cost> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/externalScheme> ;
     rdfs:comment "The code list an external code belongs to, e.g. cpwd-dar-resource. No rdfs:domain." ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK/cost#flexibilityRating> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/cost#flexibilityRating> a owl:DatatypeProperty ;
     rdfs:label "flexibility Rating"@en ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/cost> ;
+    dcterms:isPartOf <https://w3id.org/iprok/cost> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/flexibilityRating> ;
     rdfs:comment "The flexibility rating property in the integrated project information model."@en ;
     rdfs:range xsd:integer .
 
-<https://w3id.org/IproK/cost#fromLibraryAnalysis> a owl:ObjectProperty ;
+<https://w3id.org/iprok/cost#fromLibraryAnalysis> a owl:ObjectProperty ;
     rdfs:label "from Library Analysis"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/cost> ;
+    dcterms:isPartOf <https://w3id.org/iprok/cost> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/fromLibraryAnalysis> ;
     rdfs:comment "The library analysis version a project analysis was copied from. No rdfs:domain." .
 
-<https://w3id.org/IproK/cost#gangOutput> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/cost#gangOutput> a owl:DatatypeProperty ;
     rdfs:label "gang Output"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/cost> ;
+    dcterms:isPartOf <https://w3id.org/iprok/cost> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/gangOutput> ;
     rdfs:comment "What one gang produces in a day, in the analysis unit. Labour and plant per unit = gang size ÷ this. No rdfs:domain." ;
     rdfs:range xsd:decimal .
 
-<https://w3id.org/IproK/cost#hasCostCategory> a owl:FunctionalProperty,
+<https://w3id.org/iprok/cost#hasCostCategory> a owl:FunctionalProperty,
         owl:ObjectProperty ;
     rdfs:label "hasCostCategory" ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
     rdfs:comment "The has cost category property in the integrated project information model. Its declared domain is CostItem and its declared range is CostCategory."@en ;
-    rdfs:domain <https://w3id.org/IproK/cost#CostItem> ;
-    rdfs:range <https://w3id.org/IproK/cost#CostCategory> .
+    rdfs:domain <https://w3id.org/iprok/cost#CostItem> ;
+    rdfs:range <https://w3id.org/iprok/cost#CostCategory> .
 
-<https://w3id.org/IproK/cost#hasCostType> a owl:FunctionalProperty,
+<https://w3id.org/iprok/cost#hasCostType> a owl:FunctionalProperty,
         owl:ObjectProperty ;
     rdfs:label "hasCostType" ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
     rdfs:comment "The has cost type property in the integrated project information model. Its declared domain is CostItem and its declared range is CostType."@en ;
-    rdfs:domain <https://w3id.org/IproK/cost#CostItem> ;
-    rdfs:range <https://w3id.org/IproK/cost#CostType> .
+    rdfs:domain <https://w3id.org/iprok/cost#CostItem> ;
+    rdfs:range <https://w3id.org/iprok/cost#CostType> .
 
-<https://w3id.org/IproK/cost#importedCheckStatus> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/cost#importedCheckStatus> a owl:DatatypeProperty ;
     rdfs:label "imported Check Status"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/cost> ;
+    dcterms:isPartOf <https://w3id.org/iprok/cost> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/importedCheckStatus> ;
     rdfs:comment "The source's arithmetic check at import: reconciled, reconciled_with_unchecked or flagged. No rdfs:domain." ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK/cost#importedEdition> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/cost#importedEdition> a owl:DatatypeProperty ;
     rdfs:label "imported Edition"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/cost> ;
+    dcterms:isPartOf <https://w3id.org/iprok/cost> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/importedEdition> ;
     rdfs:comment "The source edition, e.g. cpwd-dar-2023. No rdfs:domain." ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK/cost#importedFrom> a owl:ObjectProperty ;
+<https://w3id.org/iprok/cost#importedFrom> a owl:ObjectProperty ;
     rdfs:label "imported From"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/cost> ;
+    dcterms:isPartOf <https://w3id.org/iprok/cost> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/importedFrom> ;
     rdfs:comment "The outside record (a VIDHI rate-analysis or basic-rate record IRI) an analysis version or a resource was imported from. No rdfs:domain." .
 
-<https://w3id.org/IproK/cost#importedItemCode> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/cost#importedItemCode> a owl:DatatypeProperty ;
     rdfs:label "imported Item Code"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/cost> ;
+    dcterms:isPartOf <https://w3id.org/iprok/cost> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/importedItemCode> ;
     rdfs:comment "The source's own code: the CPWD item number of an analysis, the DAR resource code of a resource. No rdfs:domain." ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK/cost#importedRecordVersion> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/cost#importedRecordVersion> a owl:DatatypeProperty ;
     rdfs:label "imported Record Version"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/cost> ;
+    dcterms:isPartOf <https://w3id.org/iprok/cost> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/importedRecordVersion> ;
     rdfs:comment "The outside record's content version at import, e.g. sha256:… — the key for 'already imported, unchanged'. No rdfs:domain." ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK/cost#importedReviewState> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/cost#importedReviewState> a owl:DatatypeProperty ;
     rdfs:label "imported Review State"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/cost> ;
+    dcterms:isPartOf <https://w3id.org/iprok/cost> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/importedReviewState> ;
     rdfs:comment "The source's review state at import: proposed (machine-extracted, not approved by an engineer) or approved. No rdfs:domain." ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK/cost#inAnalysis> a owl:ObjectProperty ;
+<https://w3id.org/iprok/cost#inAnalysis> a owl:ObjectProperty ;
     rdfs:label "in Analysis"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/cost> ;
+    dcterms:isPartOf <https://w3id.org/iprok/cost> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/inAnalysis> ;
     rdfs:comment "The analysis version a line or addition belongs to. No rdfs:domain." .
 
-<https://w3id.org/IproK/cost#lineGroup> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/cost#lineGroup> a owl:DatatypeProperty ;
     rdfs:label "line Group"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/cost> ;
+    dcterms:isPartOf <https://w3id.org/iprok/cost> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/lineGroup> ;
     rdfs:comment "A group letter on an analysis line (CPWD marks lines that use another item's rate with 'A'), so an addition can leave the group out. No rdfs:domain." ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK/cost#lineKind> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/cost#lineKind> a owl:DatatypeProperty ;
     rdfs:label "line Kind"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/cost> ;
+    dcterms:isPartOf <https://w3id.org/iprok/cost> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/lineKind> ;
     rdfs:comment "gang: the quantity is how many of the resource are in the gang (per unit = count × analysed quantity ÷ gang output); perUnit: the quantity is per analysed quantity. No rdfs:domain." ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK/cost#lineNote> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/cost#lineNote> a owl:DatatypeProperty ;
     rdfs:label "line Note"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/cost> ;
+    dcterms:isPartOf <https://w3id.org/iprok/cost> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/lineNote> ;
     rdfs:comment "What the source printed for a line, when it differs from the resource's name (or several source lines merged into one). No rdfs:domain." ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK/cost#lineOrder> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/cost#lineOrder> a owl:DatatypeProperty ;
     rdfs:label "line Order"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/cost> ;
+    dcterms:isPartOf <https://w3id.org/iprok/cost> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/lineOrder> ;
     rdfs:comment "Position of a line or addition within its analysis, from 1. No rdfs:domain." ;
     rdfs:range xsd:integer .
 
-<https://w3id.org/IproK/cost#lineQuantity> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/cost#lineQuantity> a owl:DatatypeProperty ;
     rdfs:label "line Quantity"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/cost> ;
+    dcterms:isPartOf <https://w3id.org/iprok/cost> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/lineQuantity> ;
-    rdfs:comment "The gang count or the quantity per analysed quantity, by <https://w3id.org/IproK/cost#lineKind>. No rdfs:domain." ;
+    rdfs:comment "The gang count or the quantity per analysed quantity, by <https://w3id.org/iprok/cost#lineKind>. No rdfs:domain." ;
     rdfs:range xsd:decimal .
 
-<https://w3id.org/IproK/cost#maintainabilityRating> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/cost#maintainabilityRating> a owl:DatatypeProperty ;
     rdfs:label "maintainability Rating"@en ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/cost> ;
+    dcterms:isPartOf <https://w3id.org/iprok/cost> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/maintainabilityRating> ;
     rdfs:comment "The maintainability rating property in the integrated project information model."@en ;
     rdfs:range xsd:integer .
 
-<https://w3id.org/IproK/cost#optionDiscipline> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/cost#optionDiscipline> a owl:DatatypeProperty ;
     rdfs:label "option Discipline"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/cost> ;
+    dcterms:isPartOf <https://w3id.org/iprok/cost> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/optionDiscipline> ;
     rdfs:comment "Architecture / Structure / MEP / Finishes. Domain unspecified (antipattern #8)." ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK/cost#optionId> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/cost#optionId> a owl:DatatypeProperty ;
     rdfs:label "option Id"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/cost> ;
+    dcterms:isPartOf <https://w3id.org/iprok/cost> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/optionId> ;
     rdfs:comment "Stable id within the project (DO-0001). Domain unspecified (antipattern #8)." ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK/cost#optionStatus> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/cost#optionStatus> a owl:DatatypeProperty ;
     rdfs:label "option Status"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/cost> ;
+    dcterms:isPartOf <https://w3id.org/iprok/cost> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/optionStatus> ;
     rdfs:comment "Proposed / Approved / Rejected / Superseded. Domain unspecified (antipattern #8)." ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK/cost#optionTitle> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/cost#optionTitle> a owl:DatatypeProperty ;
     rdfs:label "option Title"@en ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/cost> ;
+    dcterms:isPartOf <https://w3id.org/iprok/cost> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/optionTitle> ;
     rdfs:comment "The option title property in the integrated project information model."@en ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK/cost#outputObservations> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/cost#outputObservations> a owl:DatatypeProperty ;
     rdfs:label "output Observations"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/cost> ;
+    dcterms:isPartOf <https://w3id.org/iprok/cost> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/outputObservations> ;
     rdfs:comment "How many measured site days stand behind a measured output. No rdfs:domain." ;
     rdfs:range xsd:integer .
 
-<https://w3id.org/IproK/cost#outputSource> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/cost#outputSource> a owl:DatatypeProperty ;
     rdfs:label "output Source"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/cost> ;
+    dcterms:isPartOf <https://w3id.org/iprok/cost> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/outputSource> ;
     rdfs:comment "typed | measured | library — where the gang output came from; measured means the organisation's own site productivity (P2A). No rdfs:domain." ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK/cost#priceAsOf> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/cost#priceAsOf> a owl:DatatypeProperty ;
     rdfs:label "price As Of"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/cost> ;
+    dcterms:isPartOf <https://w3id.org/iprok/cost> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/priceAsOf> ;
     rdfs:comment "The date the project's rate was set. No rdfs:domain." ;
     rdfs:range xsd:date .
 
-<https://w3id.org/IproK/cost#priceRate> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/cost#priceRate> a owl:DatatypeProperty ;
     rdfs:label "price Rate"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/cost> ;
+    dcterms:isPartOf <https://w3id.org/iprok/cost> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/priceRate> ;
     rdfs:comment "The project's rate per unit, in rupees. No rdfs:domain." ;
     rdfs:range xsd:decimal .
 
-<https://w3id.org/IproK/cost#priceSource> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/cost#priceSource> a owl:DatatypeProperty ;
     rdfs:label "price Source"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/cost> ;
+    dcterms:isPartOf <https://w3id.org/iprok/cost> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/priceSource> ;
     rdfs:comment "Where the project's rate came from. No rdfs:domain." ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK/cost#qualityRating> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/cost#qualityRating> a owl:DatatypeProperty ;
     rdfs:label "quality Rating"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/cost> ;
+    dcterms:isPartOf <https://w3id.org/iprok/cost> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/qualityRating> ;
     rdfs:comment "Design quality / performance grade 1–5." ;
     rdfs:range xsd:integer .
 
-<https://w3id.org/IproK/cost#rateAsOf> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/cost#rateAsOf> a owl:DatatypeProperty ;
     rdfs:label "rate As Of"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/cost> ;
+    dcterms:isPartOf <https://w3id.org/iprok/cost> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/rateAsOf> ;
     rdfs:comment "The date a rate was last confirmed. No rdfs:domain." ;
     rdfs:range xsd:date .
 
-<https://w3id.org/IproK/cost#rateSource> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/cost#rateSource> a owl:DatatypeProperty ;
     rdfs:label "rate Source"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/cost> ;
+    dcterms:isPartOf <https://w3id.org/iprok/cost> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/rateSource> ;
     rdfs:comment "Where a rate came from: a supplier quote, a purchase order, a published schedule. No rdfs:domain." ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK/cost#remainingCostAmount> a owl:DatatypeProperty,
+<https://w3id.org/iprok/cost#remainingCostAmount> a owl:DatatypeProperty,
         owl:FunctionalProperty ;
     rdfs:label "remainingCostAmount"@en ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
     rdfs:comment "The remaining cost amount property in the integrated project information model. Its declared domain is CostItem and its declared range is decimal."@en ;
-    rdfs:domain <https://w3id.org/IproK/cost#CostItem> ;
+    rdfs:domain <https://w3id.org/iprok/cost#CostItem> ;
     rdfs:range xsd:decimal .
 
-<https://w3id.org/IproK/cost#resourceCode> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/cost#resourceCode> a owl:DatatypeProperty ;
     rdfs:label "resource Code"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/cost> ;
+    dcterms:isPartOf <https://w3id.org/iprok/cost> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/resourceCode> ;
     rdfs:comment "The organisation's code for a cost resource, e.g. MAT-CEMENT-OPC53. Lines and project prices refer to it. No rdfs:domain." ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK/cost#resourceKind> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/cost#resourceKind> a owl:DatatypeProperty ;
     rdfs:label "resource Kind"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/cost> ;
+    dcterms:isPartOf <https://w3id.org/iprok/cost> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/resourceKind> ;
     rdfs:comment "Labour | Material | Plant | Carriage | Other. No rdfs:domain." ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK/cost#resourceName> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/cost#resourceName> a owl:DatatypeProperty ;
     rdfs:label "resource Name"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/cost> ;
+    dcterms:isPartOf <https://w3id.org/iprok/cost> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/resourceName> ;
     rdfs:comment "What the resource is, e.g. 'Cement OPC 53 grade, 50 kg bag'. No rdfs:domain." ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK/cost#sourceCitation> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/cost#sourceCitation> a owl:DatatypeProperty ;
     rdfs:label "source Citation"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/cost> ;
+    dcterms:isPartOf <https://w3id.org/iprok/cost> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/sourceCitation> ;
     rdfs:comment "Document, edition, volume, page and item of the printed source, in words a quantity surveyor can look up. No rdfs:domain." ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK/cost#timeDeltaDays> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/cost#timeDeltaDays> a owl:DatatypeProperty ;
     rdfs:label "time Delta Days"@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/cost> ;
+    dcterms:isPartOf <https://w3id.org/iprok/cost> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/timeDeltaDays> ;
     rdfs:comment "Signed schedule impact in days." ;
     rdfs:range xsd:integer .
 
-<https://w3id.org/IproK/cost#userValueRating> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/cost#userValueRating> a owl:DatatypeProperty ;
     rdfs:label "user Value Rating"@en ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
-    dcterms:isPartOf <https://w3id.org/IproK/cost> ;
+    dcterms:isPartOf <https://w3id.org/iprok/cost> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/userValueRating> ;
     rdfs:comment "The user value rating property in the integrated project information model."@en ;
     rdfs:range xsd:integer .
 
-<https://w3id.org/IproK/cost#vendorName> a owl:DatatypeProperty ;
+<https://w3id.org/iprok/cost#vendorName> a owl:DatatypeProperty ;
     rdfs:label "vendorName"@en ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
     rdfs:comment "The vendor name property in the integrated project information model. Its declared domain is CostItem and its declared range is string."@en ;
-    rdfs:domain <https://w3id.org/IproK/cost#CostItem> ;
+    rdfs:domain <https://w3id.org/iprok/cost#CostItem> ;
     rdfs:range xsd:string .
 
-<https://w3id.org/IproK/cost#CostCategory> a owl:Class ;
+<https://w3id.org/iprok/cost#CostCategory> a owl:Class ;
     rdfs:label "CostCategory" ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
     rdfs:comment "A classification grouping cost items by their purpose or accounting category."@en ;
-    rdfs:subClassOf <https://w3id.org/IproK#IproKThing> .
+    rdfs:subClassOf <https://w3id.org/iprok#IproKThing> .
 
-<https://w3id.org/IproK/cost#CostType> a owl:Class ;
+<https://w3id.org/iprok/cost#CostType> a owl:Class ;
     rdfs:label "CostType" ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
     rdfs:comment "A classification of expenditure by the kind of resource or expense involved."@en ;
-    rdfs:subClassOf <https://w3id.org/IproK#IproKThing> .
+    rdfs:subClassOf <https://w3id.org/iprok#IproKThing> .
 
-<https://w3id.org/IproK/cost#CostItem> a owl:Class ;
+<https://w3id.org/iprok/cost#CostItem> a owl:Class ;
     rdfs:label "CostItem" ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
     rdfs:comment "A cost record associated with scheduled work or a resource allocation."@en ;
-    rdfs:subClassOf <https://w3id.org/IproK#IproKThing> .
+    rdfs:subClassOf <https://w3id.org/iprok#IproKThing> .
 

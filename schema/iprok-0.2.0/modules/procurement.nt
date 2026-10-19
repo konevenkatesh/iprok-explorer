@@ -1,0 +1,167 @@
+<https://w3id.org/iprok/procurement#vendorName> <http://www.w3.org/2000/01/rdf-schema#label> "vendor Name"@en .
+<https://w3id.org/iprok/procurement#vendorName> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/vendorName> .
+<https://w3id.org/iprok/procurement#vendorCategory> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/procurement#GoodsReceipt> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Entity> .
+<https://w3id.org/iprok/procurement#offerId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/procurement#quantityIssued> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/iprok/procurement#vendorId> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/procurement> .
+<https://w3id.org/iprok/procurement#receivedQty> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/procurement> .
+<https://w3id.org/iprok/procurement#offerProduct> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/procurement> .
+<https://w3id.org/iprok/procurement#offerId> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/procurement#vendorCategory> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/procurement> .
+<https://w3id.org/iprok/procurement#Vendor> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/procurement> .
+<https://w3id.org/iprok/procurement#GoodsReceipt> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/procurement> .
+<https://w3id.org/iprok/procurement#MaterialIssue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iprok/procurement#offerId> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/procurement> .
+<https://w3id.org/iprok/procurement#vendor> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/procurement#offerProduct> <http://www.w3.org/2000/01/rdf-schema#label> "offer Product"@en .
+<https://w3id.org/iprok/procurement#leadTimeDays> <http://www.w3.org/2000/01/rdf-schema#label> "lead Time Days"@en .
+<https://w3id.org/iprok/procurement#poAmount> <http://www.w3.org/2000/01/rdf-schema#comment> "The po amount property in the integrated project information model."@en .
+<https://w3id.org/iprok/procurement#leadTimeDays> <http://www.w3.org/2000/01/rdf-schema#comment> "The lead time days property in the integrated project information model."@en .
+<https://w3id.org/iprok/procurement#issueDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/iprok/procurement#ProductOffer> <http://www.w3.org/2000/01/rdf-schema#label> "Product Offer"@en .
+<https://w3id.org/iprok/procurement#receivedAmount> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/iprok/procurement#poAmount> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/procurement> .
+<https://w3id.org/iprok/procurement#grnDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/iprok/procurement#byVendor> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/byVendor> .
+<https://w3id.org/iprok/procurement#Vendor> <http://www.w3.org/2000/01/rdf-schema#label> "Vendor"@en .
+<https://w3id.org/iprok/procurement#MaterialIssue> <http://www.w3.org/2000/01/rdf-schema#comment> "A site store issue of construction material (cement, steel, etc.) against a project activity. Used for IS-coefficient-based consumption reconciliation." .
+<https://w3id.org/iprok/procurement#receivedQty> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/iprok/procurement#leadTimeDays> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/procurement> .
+<https://w3id.org/iprok/procurement#offerId> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/offerId> .
+<https://w3id.org/iprok/procurement#poStatus> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/procurement#ProductOffer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Entity> .
+<https://w3id.org/iprok/procurement#poStatus> <http://www.w3.org/2000/01/rdf-schema#comment> "Open / PartiallyDelivered / FullyDelivered / Cancelled. Mirrors SAP EKKO.STATU but flattened to the four states a IproK framework PM actually cares about." .
+<https://w3id.org/iprok/procurement#unitRate> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/unitRate> .
+<https://w3id.org/iprok/procurement#Vendor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Entity> .
+<https://w3id.org/iprok/procurement#grnNumber> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/procurement> .
+<https://w3id.org/iprok/procurement#leadTimeDays> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<https://w3id.org/iprok/procurement#vendorId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/procurement#vendorId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/procurement#offerProduct> <http://www.w3.org/2000/01/rdf-schema#comment> "Product/spec offered — e.g. 'Wall-hung WC, Brand X model Y'." .
+<https://w3id.org/iprok/procurement#unitRate> <http://www.w3.org/2000/01/rdf-schema#comment> "The unit rate property in the integrated project information model."@en .
+<https://w3id.org/iprok/procurement#PurchaseOrder> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iprok/procurement#issueDate> <http://www.w3.org/2000/01/rdf-schema#label> "issue date" .
+<https://w3id.org/iprok/procurement#unitRate> <http://www.w3.org/2000/01/rdf-schema#label> "unit Rate"@en .
+<https://w3id.org/iprok/procurement#poStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/procurement#byVendor> <http://www.w3.org/2000/01/rdf-schema#label> "by Vendor"@en .
+<https://w3id.org/iprok/procurement#vendorCategory> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/vendorCategory> .
+<https://w3id.org/iprok/procurement#vendorCategory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/procurement#vendorId> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/vendorId> .
+<https://w3id.org/iprok/procurement#receivedAmount> <http://www.w3.org/2000/01/rdf-schema#comment> "The received amount property in the integrated project information model."@en .
+<https://w3id.org/iprok/procurement#leadTimeDays> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/leadTimeDays> .
+<https://w3id.org/iprok/procurement#offerId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/procurement#ProductOffer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iprok/procurement#grnDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/procurement#poAmount> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/iprok/procurement#byVendor> <http://www.w3.org/2000/01/rdf-schema#comment> "The <https://w3id.org/iprok/procurement#Vendor> making this offer. Range undeclared (antipattern #8)." .
+<https://w3id.org/iprok/procurement#GoodsReceipt> <http://www.w3.org/2000/01/rdf-schema#comment> "One SAP material-document line (MIGO MIGO_GR). Links back to its <https://w3id.org/iprok/procurement#PurchaseOrder> via <https://w3id.org/iprok/procurement#forPO>." .
+<https://w3id.org/iprok/procurement#issueDate> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/issueDate> .
+<https://w3id.org/iprok/procurement#receivedQty> <http://www.w3.org/2000/01/rdf-schema#comment> "The received qty property in the integrated project information model."@en .
+<https://w3id.org/iprok/procurement#MaterialIssue> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/MaterialIssue> .
+<https://w3id.org/iprok/procurement#poStatus> <http://www.w3.org/2000/01/rdf-schema#label> "PO status" .
+<https://w3id.org/iprok/procurement#PurchaseOrder> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/PurchaseOrder> .
+<https://w3id.org/iprok/procurement#GoodsReceipt> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/GoodsReceipt> .
+<https://w3id.org/iprok/procurement#quantityIssued> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/procurement#grnDate> <http://www.w3.org/2000/01/rdf-schema#label> "GRN posting date (BUDAT)" .
+<https://w3id.org/iprok/procurement#unitRate> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/procurement#poDate> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/procurement#poDate> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/poDate> .
+<https://w3id.org/iprok/procurement#leadTimeDays> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/procurement#poAmount> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/procurement#PurchaseOrder> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Entity> .
+<https://w3id.org/iprok/procurement#poDate> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/procurement> .
+<https://w3id.org/iprok/procurement#issueDate> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/procurement> .
+<https://w3id.org/iprok/procurement#grnNumber> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/procurement#vendorCategory> <http://www.w3.org/2000/01/rdf-schema#comment> "Material | Equipment | Labour | Services | Fixtures | Other." .
+<https://w3id.org/iprok/procurement#vendor> <http://www.w3.org/2000/01/rdf-schema#label> "vendor name / SAP vendor code (LIFNR)" .
+<https://w3id.org/iprok/procurement#PurchaseOrder> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/procurement> .
+<https://w3id.org/iprok/procurement#PurchaseOrder> <http://www.w3.org/2000/01/rdf-schema#comment> "One SAP PO header. linkedBOQItem connects procurement back to the contract chain so the gap-report engine can compute committed vs certified per BOQ row." .
+<https://w3id.org/iprok/procurement#ProductOffer> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/ProductOffer> .
+<https://w3id.org/iprok/procurement#offerId> <http://www.w3.org/2000/01/rdf-schema#comment> "The offer id property in the integrated project information model."@en .
+<https://w3id.org/iprok/procurement#grnNumber> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/procurement#grnDate> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/procurement#receivedQty> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/receivedQty> .
+<https://w3id.org/iprok/procurement#grnNumber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/procurement#grnDate> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/procurement> .
+<https://w3id.org/iprok/procurement#ProductOffer> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/procurement> .
+<https://w3id.org/iprok/procurement#quantityIssued> <http://www.w3.org/2000/01/rdf-schema#label> "quantity issued" .
+<https://w3id.org/iprok/procurement#poNumber> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/poNumber> .
+<https://w3id.org/iprok/procurement#GoodsReceipt> <http://www.w3.org/2000/01/rdf-schema#label> "Goods receipt (SAP)" .
+<https://w3id.org/iprok/procurement#poNumber> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/procurement> .
+<https://w3id.org/iprok/procurement#grnDate> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/grnDate> .
+<https://w3id.org/iprok/procurement#receivedQty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/procurement#offerProduct> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/procurement#offerProduct> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/procurement#PurchaseOrder> <http://www.w3.org/2000/01/rdf-schema#label> "Purchase order (SAP)" .
+<https://w3id.org/iprok/procurement#vendor> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/procurement#vendorId> <http://www.w3.org/2000/01/rdf-schema#label> "vendor Id"@en .
+<https://w3id.org/iprok/procurement#qualityGrade> <http://www.w3.org/2000/01/rdf-schema#comment> "1 (basic) … 5 (premium) — the estimator's grade for compare dashboards." .
+<https://w3id.org/iprok/procurement#vendor> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/procurement> .
+<https://w3id.org/iprok/procurement#vendor> <http://www.w3.org/2000/01/rdf-schema#comment> "The vendor property in the integrated project information model."@en .
+<https://w3id.org/iprok/procurement#vendorName> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/procurement#Vendor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iprok/procurement#vendorId> <http://www.w3.org/2000/01/rdf-schema#comment> "The vendor id property in the integrated project information model."@en .
+<https://w3id.org/iprok/procurement#vendorName> <http://www.w3.org/2000/01/rdf-schema#comment> "The vendor name property in the integrated project information model."@en .
+<https://w3id.org/iprok/procurement#poStatus> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/poStatus> .
+<https://w3id.org/iprok/procurement#forPO> <http://www.w3.org/2000/01/rdf-schema#label> "for purchase order" .
+<https://w3id.org/iprok/procurement#quantityIssued> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/quantityIssued> .
+<https://w3id.org/iprok/procurement#unitRate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/procurement#forPO> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/forPO> .
+<https://w3id.org/iprok/procurement#poDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/procurement#offerProduct> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/offerProduct> .
+<https://w3id.org/iprok/procurement#leadTimeDays> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/procurement#poAmount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/procurement#receivedAmount> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/procurement#Vendor> <http://www.w3.org/2000/01/rdf-schema#comment> "One supplier/subcontractor in the org's vendor database." .
+<https://w3id.org/iprok/procurement#poNumber> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/procurement#quantityIssued> <http://www.w3.org/2000/01/rdf-schema#comment> "Quantity of material issued. Mandatory. Domain unspecified." .
+<https://w3id.org/iprok/procurement#MaterialIssue> <http://www.w3.org/2000/01/rdf-schema#label> "Material Issue" .
+<https://w3id.org/iprok/procurement#unitRate> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/procurement> .
+<https://w3id.org/iprok/procurement#poNumber> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/procurement#MaterialIssue> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Entity> .
+<https://w3id.org/iprok/procurement#issueDate> <http://www.w3.org/2000/01/rdf-schema#comment> "Date the material was issued from the site store. Mandatory. Domain unspecified." .
+<https://w3id.org/iprok/procurement#Vendor> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/Vendor> .
+<https://w3id.org/iprok/procurement#qualityGrade> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/procurement> .
+<https://w3id.org/iprok/procurement#receivedQty> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/procurement#byVendor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/iprok/procurement#receivedAmount> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/receivedAmount> .
+<https://w3id.org/iprok/procurement#receivedAmount> <http://www.w3.org/2000/01/rdf-schema#label> "received amount (INR)" .
+<https://w3id.org/iprok/procurement#vendorId> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/procurement#grnNumber> <http://www.w3.org/2000/01/rdf-schema#comment> "The grn number property in the integrated project information model."@en .
+<https://w3id.org/iprok/procurement#poNumber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/procurement#qualityGrade> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/qualityGrade> .
+<https://w3id.org/iprok/procurement#vendorCategory> <http://www.w3.org/2000/01/rdf-schema#label> "vendor Category"@en .
+<https://w3id.org/iprok/procurement#receivedQty> <http://www.w3.org/2000/01/rdf-schema#label> "received quantity" .
+<https://w3id.org/iprok/procurement#poDate> <http://www.w3.org/2000/01/rdf-schema#label> "PO date (BEDAT)" .
+<https://w3id.org/iprok/procurement#forPO> <http://www.w3.org/2000/01/rdf-schema#comment> "Link from a <https://w3id.org/iprok/procurement#GoodsReceipt> to its <https://w3id.org/iprok/procurement#PurchaseOrder>. Domain unspecified (antipattern #8)." .
+<https://w3id.org/iprok/procurement#poStatus> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/procurement> .
+<https://w3id.org/iprok/procurement#forPO> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/iprok/procurement#grnNumber> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/grnNumber> .
+<https://w3id.org/iprok/procurement#byVendor> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/procurement> .
+<https://w3id.org/iprok/procurement#poAmount> <http://www.w3.org/2000/01/rdf-schema#label> "PO net value (NETWR), INR" .
+<https://w3id.org/iprok/procurement#grnNumber> <http://www.w3.org/2000/01/rdf-schema#label> "SAP GRN / material-document number (MBLNR)" .
+<https://w3id.org/iprok/procurement#vendor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/procurement#vendor> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/vendor> .
+<https://w3id.org/iprok/procurement#poDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/iprok/procurement#unitRate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/iprok/procurement#qualityGrade> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<https://w3id.org/iprok/procurement#forPO> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/procurement> .
+<https://w3id.org/iprok/procurement#vendorName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/procurement#vendorName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/procurement#quantityIssued> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/procurement> .
+<https://w3id.org/iprok/procurement#poNumber> <http://www.w3.org/2000/01/rdf-schema#comment> "The po number property in the integrated project information model."@en .
+<https://w3id.org/iprok/procurement#GoodsReceipt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iprok/procurement#poDate> <http://www.w3.org/2000/01/rdf-schema#comment> "The po date property in the integrated project information model."@en .
+<https://w3id.org/iprok/procurement#vendorName> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/procurement> .
+<https://w3id.org/iprok/procurement#qualityGrade> <http://www.w3.org/2000/01/rdf-schema#label> "quality Grade"@en .
+<https://w3id.org/iprok/procurement#ProductOffer> <http://www.w3.org/2000/01/rdf-schema#comment> "One vendor's offer for a product/spec: rate, lead time, quality, warranty." .
+<https://w3id.org/iprok/procurement#issueDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/procurement#receivedAmount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/procurement#offerId> <http://www.w3.org/2000/01/rdf-schema#label> "offer Id"@en .
+<https://w3id.org/iprok/procurement#grnDate> <http://www.w3.org/2000/01/rdf-schema#comment> "The grn date property in the integrated project information model."@en .
+<https://w3id.org/iprok/procurement#qualityGrade> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/procurement#poAmount> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/poAmount> .
+<https://w3id.org/iprok/procurement#poNumber> <http://www.w3.org/2000/01/rdf-schema#label> "SAP PO number (EBELN)" .
+<https://w3id.org/iprok/procurement#receivedAmount> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/procurement> .
+<https://w3id.org/iprok/procurement#MaterialIssue> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/procurement> .

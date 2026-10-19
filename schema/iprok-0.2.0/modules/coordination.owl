@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:dcterms="http://purl.org/dc/terms/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+>
+  <rdf:Description rdf:about="https://w3id.org/iprok/coordination#probability">
+    <rdfs:label>probability</rdfs:label>
+    <rdfs:comment>Low / Medium / High / Critical. Mapped to 1/2/3/4 for scoring.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/probability"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/coordination"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/coordination#closureRate">
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/coordination"/>
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/closureRate"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:label>closure rate (% — 0..1)</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="en">The closure rate property in the integrated project information model.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/coordination#batchId">
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/coordination"/>
+    <rdfs:label>batch id (BCH-NNNN)</rdfs:label>
+    <rdfs:comment xml:lang="en">The batch id property in the integrated project information model.</rdfs:comment>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/batchId"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/coordination#issueType">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/issueType"/>
+    <rdfs:label>issue type</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment>Clash / Coordination / Design / Construction / Safety / Other. SHACL constrains via sh:in (string literal, no sh:class — same idiom as DrawingChangeShape).</rdfs:comment>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/coordination"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/coordination#riskStatus">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/riskStatus"/>
+    <rdfs:label>risk status</rdfs:label>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/coordination"/>
+    <rdfs:comment>Open / Mitigating / Closed / Accepted. Transitions enforced in route layer; sh:in in RiskShape.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/coordination#issueId">
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/coordination"/>
+    <rdfs:label>issue id</rdfs:label>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/issueId"/>
+    <rdfs:comment>Project-unique short id. For BCF-imported topics this is the BCF topic GUID; for manually-raised ones it's an auto-generated short id. Domain unspecified (antipattern #8).</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/coordination#importedAt">
+    <rdfs:comment xml:lang="en">The imported at property in the integrated project information model.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+    <rdfs:label>imported at</rdfs:label>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/coordination"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/importedAt"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/coordination#riskTitle">
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/riskTitle"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/coordination"/>
+    <rdfs:label>risk title</rdfs:label>
+    <rdfs:comment xml:lang="en">The risk title property in the integrated project information model.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/coordination#Issue">
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/coordination"/>
+    <rdfs:label>Issue</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/iprok/coordination#Event"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/Issue"/>
+    <rdfs:comment>A BCF-imported clash / coordination / design / safety / construction issue, or a manually-raised graph-native one. Linked to an IFC element GUID + optionally to an RFI / Drawing / Activity; the cross-domain closure chain (Clash → RFI → Drawing → Activity) that no point solution can answer natively.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/coordination#resolvedClashes">
+    <rdfs:label>resolved clashes in batch</rdfs:label>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/resolvedClashes"/>
+    <rdfs:comment xml:lang="en">The resolved clashes property in the integrated project information model.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/coordination"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/coordination#openClashes">
+    <rdfs:label>open clashes in batch</rdfs:label>
+    <rdfs:comment>Recomputed by the closure-tracking refresher on every issue-status transition.</rdfs:comment>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/openClashes"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/coordination"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/coordination#riskId">
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/riskId"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/coordination"/>
+    <rdfs:comment xml:lang="en">The risk id property in the integrated project information model.</rdfs:comment>
+    <rdfs:label>risk id (RSK-NNNN)</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/coordination#issueStatus">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/issueStatus"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/coordination"/>
+    <rdfs:comment>Open / InProgress / Resolved / Closed / ReOpened / WontFix. SHACL constrains via sh:in (string literal, no sh:class).</rdfs:comment>
+    <rdfs:label>issue status</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/coordination#riskCategory">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment>One of Design / Commercial / Resource / External / Technical / Regulatory / Environmental / Safety. Enforced by RiskShape sh:in.</rdfs:comment>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/coordination"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/riskCategory"/>
+    <rdfs:label>risk category</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/coordination#riskScore">
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/riskScore"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/coordination"/>
+    <rdfs:comment>Computed server-side as probability_int * impact_int. Range 1-16.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label>risk score (1-16)</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/coordination#totalClashes">
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/coordination"/>
+    <rdfs:label>total clashes in batch</rdfs:label>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/totalClashes"/>
+    <rdfs:comment xml:lang="en">The total clashes property in the integrated project information model.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/coordination#Event">
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/coordination"/>
+    <rdfs:comment>Superclass for issue-like nodes (BCF issues, future inspection events). No shape; concrete subclasses carry the constraints.</rdfs:comment>
+    <rdfs:label>Event</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/Event"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/coordination#Risk">
+    <rdfs:subClassOf rdf:resource="https://w3id.org/iprok/coordination#Event"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+    <rdfs:comment>A proactive risk-register row. Sub-class of &lt;https://w3id.org/iprok/coordination#Event&gt; so issue + risk reuse the same superclass; sub-class of prov:Entity for PROV-O attribution.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/Risk"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/coordination"/>
+    <rdfs:label>Risk</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/coordination#issueTitle">
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/issueTitle"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+    <rdfs:comment xml:lang="en">The issue title property in the integrated project information model.</rdfs:comment>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/coordination"/>
+    <rdfs:label>issue title</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/coordination#ClashBatch">
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/ClashBatch"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/coordination"/>
+    <rdfs:label>BCF clash batch</rdfs:label>
+    <rdfs:comment>One BCF-zip import. Used by the clash lifecycle dashboard to roll up closure rates per batch.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/coordination#impact">
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/impact"/>
+    <rdfs:label>impact</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment>Low / Medium / High / Critical. Mapped to 1/2/3/4 for scoring.</rdfs:comment>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/coordination"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/coordination#sourceFile">
+    <rdfs:label>source file</rdfs:label>
+    <rdfs:comment>Original BCF zip filename. Audit only; the bytes are not stored.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/sourceFile"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/coordination"/>
+  </rdf:Description>
+</rdf:RDF>

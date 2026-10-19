@@ -1,0 +1,517 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:dcterms="http://purl.org/dc/terms/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+>
+  <rdf:Description rdf:about="https://w3id.org/iprok/resource#compositionCount">
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:comment xml:lang="en">The composition count property in the integrated project information model.</rdfs:comment>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/compositionCount"/>
+    <rdfs:label xml:lang="en">composition Count</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/resource"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/resource#reportCount">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/resource"/>
+    <rdfs:comment>Daily reports of this work type considered for a norm — counted or set aside.</rdfs:comment>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/reportCount"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:label xml:lang="en">report Count</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/resource#compositionRole">
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/compositionRole"/>
+    <rdfs:comment>Mason | Helper | Bar bender | Carpenter | Operator | Supervisor…</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/resource"/>
+    <rdfs:label xml:lang="en">composition Role</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/resource#ProductivityRecompute">
+    <rdfs:label>Productivity recompute</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment>The per-organisation claim token for writing measured rates.</rdfs:comment>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/ProductivityRecompute"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/resource"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/resource#withdrawnBy">
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/resource"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/withdrawnBy"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment>Who took the project's days out of the organisation's rates.</rdfs:comment>
+    <rdfs:label xml:lang="en">withdrawn By</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/resource#TrackingTag">
+    <rdfs:subClassOf rdf:resource="https://w3id.org/iprok#IproKThing"/>
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+    <rdfs:comment xml:lang="en">An identifier concept used to track a resource.</rdfs:comment>
+    <rdfs:label>TrackingTag</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/resource#productivityRate">
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/productivityRate"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:label xml:lang="en">productivity Rate</rdfs:label>
+    <rdfs:comment>observedQuantity ÷ crewDays, i.e. output per person-day. Server-computed; never trusted from the client.</rdfs:comment>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/resource"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/resource#ProductivityContribution">
+    <rdfs:comment>A project's site days counted in its organisation's measured rates. Withdrawn by prov:invalidatedAtTime with who and why; publishing again creates a new one.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/ProductivityContribution"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/resource"/>
+    <rdfs:label xml:lang="en">Productivity Contribution</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/resource#withdrawalReason">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/resource"/>
+    <rdfs:label xml:lang="en">withdrawal Reason</rdfs:label>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/withdrawalReason"/>
+    <rdfs:comment>Why the project's days no longer count — kept with the record.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/resource#ProductivityNorm">
+    <rdfs:label xml:lang="en">Productivity Norm</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment>The organisation's rolled-up rate for a work type + crew type, derived from observations. Falls back to a seeded default until enough observations exist.</rdfs:comment>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/resource"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/ProductivityNorm"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/resource#withdrawnAt">
+    <rdfs:label xml:lang="en">withdrawn At</rdfs:label>
+    <rdfs:comment xml:lang="en">The withdrawn at property in the integrated project information model.</rdfs:comment>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/withdrawnAt"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/resource"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/resource#workerName">
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/resource"/>
+    <rdfs:label xml:lang="en">worker Name</rdfs:label>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/workerName"/>
+    <rdfs:comment xml:lang="en">The worker name property in the integrated project information model.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/resource#hasResourceType">
+    <rdfs:comment xml:lang="en">The has resource type property in the integrated project information model. Its declared domain is Resource and its declared range is ResourceType.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://w3id.org/iprok/resource#Resource"/>
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+    <rdfs:range rdf:resource="https://w3id.org/iprok/resource#ResourceType"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:label>hasResourceType</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/resource#contributedBy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment>Who published the project's days to the organisation.</rdfs:comment>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/contributedBy"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/resource"/>
+    <rdfs:label xml:lang="en">contributed By</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/resource#observedOn">
+    <rdfs:comment xml:lang="en">The observed on property in the integrated project information model.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/resource"/>
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+    <rdfs:label xml:lang="en">observed On</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/observedOn"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/resource#observedUnit">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/resource"/>
+    <rdfs:label xml:lang="en">observed Unit</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/observedUnit"/>
+    <rdfs:comment xml:lang="en">The observed unit property in the integrated project information model.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/resource#budgetedUnits">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+    <rdfs:label xml:lang="en">budgetedUnits</rdfs:label>
+    <rdfs:comment xml:lang="en">The budgeted units property in the integrated project information model. Its declared domain is Resource and its declared range is decimal.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://w3id.org/iprok/resource#Resource"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/resource#skillLevel">
+    <rdfs:comment>Skilled | SemiSkilled | Unskilled — the Indian wage-schedule categories.</rdfs:comment>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/resource"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/skillLevel"/>
+    <rdfs:label xml:lang="en">skill Level</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/resource#certificationName">
+    <rdfs:label xml:lang="en">certification Name</rdfs:label>
+    <rdfs:comment xml:lang="en">The certification name property in the integrated project information model.</rdfs:comment>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/certificationName"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/resource"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/resource#crewTypeName">
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/crewTypeName"/>
+    <rdfs:label xml:lang="en">crew Type Name</rdfs:label>
+    <rdfs:comment xml:lang="en">The crew type name property in the integrated project information model.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/resource"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/resource#workerAccount">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">worker Account</rdfs:label>
+    <rdfs:comment>Optional link to a &lt;https://w3id.org/iprok#User&gt;, when this worker also has a platform login. Most do not.</rdfs:comment>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/workerAccount"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/resource"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/resource#baseRate">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+    <rdfs:domain rdf:resource="https://w3id.org/iprok/resource#Resource"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:label xml:lang="en">baseRate</rdfs:label>
+    <rdfs:comment xml:lang="en">The base rate property in the integrated project information model. Its declared domain is Resource and its declared range is decimal.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/resource#validUntil">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    <rdfs:label xml:lang="en">valid Until</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/resource"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/validUntil"/>
+    <rdfs:comment xml:lang="en">The valid until property in the integrated project information model.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/resource#workerTrade">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/resource"/>
+    <rdfs:comment xml:lang="en">The worker trade property in the integrated project information model.</rdfs:comment>
+    <rdfs:label xml:lang="en">worker Trade</rdfs:label>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/workerTrade"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/resource#SkillCertification">
+    <rdfs:label xml:lang="en">Skill Certification</rdfs:label>
+    <rdfs:comment>A certification held by a worker, with a validity window so expiry is queryable.</rdfs:comment>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/SkillCertification"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/resource"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/resource#isPrimaryResource">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <rdfs:label xml:lang="en">isPrimaryResource</rdfs:label>
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+    <rdfs:comment xml:lang="en">The is primary resource property in the integrated project information model. Its declared domain is Resource and its declared range is boolean.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://w3id.org/iprok/resource#Resource"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/resource#actualUnits">
+    <rdfs:domain rdf:resource="https://w3id.org/iprok/resource#Resource"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment></rdfs:comment>
+    <rdfs:label xml:lang="en">actualUnits</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/resource#LaborResource">
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+    <rdfs:label>LaborResource</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/iprok/resource#ResourceType"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">A resource-type classification for labour.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/resource#hasTrackingTag">
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>hasTrackingTag</rdfs:label>
+    <rdfs:range rdf:resource="https://w3id.org/iprok/resource#TrackingTag"/>
+    <rdfs:domain rdf:resource="https://w3id.org/iprok/resource#Resource"/>
+    <rdfs:comment xml:lang="en">The has tracking tag property in the integrated project information model. Its declared domain is Resource and its declared range is TrackingTag.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/resource#Units">
+    <rdfs:label>Units</rdfs:label>
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+    <rdfs:comment xml:lang="en">A unit of measure used to express a resource quantity.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/iprok#IproKThing"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/resource#workerId">
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/workerId"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/resource"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:comment>Human-facing id, W-NNNN.</rdfs:comment>
+    <rdfs:label xml:lang="en">worker Id</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/resource#CrewType">
+    <rdfs:comment>A named gang the organisation deploys; 'Mason gang (6)', 'Bar bender gang (4)'. Org-level catalogue.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Crew Type</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/CrewType"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/resource"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/resource#normId">
+    <rdfs:label xml:lang="en">norm Id</rdfs:label>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/normId"/>
+    <rdfs:comment xml:lang="en">The norm id property in the integrated project information model.</rdfs:comment>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/resource"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/resource#observationId">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/resource"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/observationId"/>
+    <rdfs:comment xml:lang="en">The observation id property in the integrated project information model.</rdfs:comment>
+    <rdfs:label xml:lang="en">observation Id</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/resource#validFrom">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/validFrom"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/resource"/>
+    <rdfs:label xml:lang="en">valid From</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+    <rdfs:comment xml:lang="en">The valid from property in the integrated project information model.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/resource#measuredIn">
+    <rdfs:domain rdf:resource="https://w3id.org/iprok/resource#Resource"/>
+    <rdfs:label>measuredIn</rdfs:label>
+    <rdfs:comment xml:lang="en">The measured in property in the integrated project information model. Its declared domain is Resource and its declared range is Units.</rdfs:comment>
+    <rdfs:range rdf:resource="https://w3id.org/iprok/resource#Units"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/resource#hasResourceConstraints">
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="en">The has resource constraints property in the integrated project information model. Its declared domain is Resource and its declared range is ResourceConstraint.</rdfs:comment>
+    <rdfs:label>hasResourceConstraints</rdfs:label>
+    <rdfs:domain rdf:resource="https://w3id.org/iprok/resource#Resource"/>
+    <rdfs:range rdf:resource="https://w3id.org/iprok/resource#ResourceConstraint"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/resource#certifiedWorker">
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/resource"/>
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/certifiedWorker"/>
+    <rdfs:comment xml:lang="en">The certified worker property in the integrated project information model.</rdfs:comment>
+    <rdfs:label xml:lang="en">certified Worker</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/resource#handObservationCount">
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/handObservationCount"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/resource"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:comment>Observations recorded by hand that a norm also rests on. Polymorphic — antipattern #8.</rdfs:comment>
+    <rdfs:label xml:lang="en">hand Observation Count</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/resource#contributedAt">
+    <rdfs:label xml:lang="en">contributed At</rdfs:label>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/resource"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/contributedAt"/>
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+    <rdfs:comment xml:lang="en">The contributed at property in the integrated project information model.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/resource#normComputedAt">
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/resource"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/normComputedAt"/>
+    <rdfs:label xml:lang="en">norm Computed At</rdfs:label>
+    <rdfs:comment xml:lang="en">The norm computed at property in the integrated project information model.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/resource#ResourceType">
+    <rdfs:comment xml:lang="en">A classification describing the kind of a resource.</rdfs:comment>
+    <rdfs:label>ResourceType</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/iprok#IproKThing"/>
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/resource#MaterialResource">
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+    <rdfs:label>MaterialResource</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/iprok/resource#ResourceType"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">A resource-type classification for materials.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/resource#ProductivityObservation">
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/ProductivityObservation"/>
+    <rdfs:comment>One measured data point: quantity achieved by a crew of a known size over a known period on a known activity.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/resource"/>
+    <rdfs:label xml:lang="en">Productivity Observation</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/resource#atCompleteUnits">
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+    <rdfs:comment xml:lang="en">The at complete units property in the integrated project information model. Its declared domain is Resource and its declared range is decimal.</rdfs:comment>
+    <rdfs:label xml:lang="en">atCompleteUnits</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:domain rdf:resource="https://w3id.org/iprok/resource#Resource"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/resource#ResourceConstraint">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/iprok#Constraint"/>
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+    <rdfs:label>ResourceConstraint</rdfs:label>
+    <rdfs:comment xml:lang="en">A condition restricting the availability or use of a resource.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/resource#normRate">
+    <rdfs:comment>Output per person-day for this work type + crew type.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:label xml:lang="en">norm Rate</rdfs:label>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/resource"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/normRate"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/resource#maxUnits">
+    <rdfs:domain rdf:resource="https://w3id.org/iprok/resource#Resource"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:label xml:lang="en">maxUnits</rdfs:label>
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:comment xml:lang="en">The max units property in the integrated project information model. Its declared domain is Resource and its declared range is decimal.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/resource#currency">
+    <rdfs:domain rdf:resource="https://w3id.org/iprok/resource#Resource"/>
+    <rdfs:label xml:lang="en">currency</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+    <rdfs:comment xml:lang="en">The currency property in the integrated project information model. Its declared domain is Resource and its declared range is string.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/resource#remainingUnits">
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+    <rdfs:label xml:lang="en">remainingUnits</rdfs:label>
+    <rdfs:comment xml:lang="en">The remaining units property in the integrated project information model. Its declared domain is Resource and its declared range is decimal.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:domain rdf:resource="https://w3id.org/iprok/resource#Resource"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/resource#Worker">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Agent"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/Worker"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment>A person performing site labour. NOT a &lt;https://w3id.org/iprok#User&gt;; most site labour never logs in. Org-level catalogue.</rdfs:comment>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/resource"/>
+    <rdfs:label xml:lang="en">Worker</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/resource#effectiveDateForRate">
+    <rdfs:label xml:lang="en">effectiveDateForRate</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="en">The effective date for rate property in the integrated project information model. Its declared domain is Resource and its declared range is dateTime.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://w3id.org/iprok/resource#Resource"/>
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/resource#Resource">
+    <rdfs:label>Resource</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/iprok#IproKThing"/>
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+    <rdfs:comment xml:lang="en">A resource available for allocation to a task or activity.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/resource#crewTypeId">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/resource"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment>Human-facing id, CT-NNNN.</rdfs:comment>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/crewTypeId"/>
+    <rdfs:label xml:lang="en">crew Type Id</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/resource#crewTrade">
+    <rdfs:comment>Masonry | Concrete | Reinforcement | Shuttering | Finishing | MEP | Earthwork | General.</rdfs:comment>
+    <rdfs:label xml:lang="en">crew Trade</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/resource"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/crewTrade"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/resource#steadyDayCount">
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/steadyDayCount"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:comment>Steady site days behind a norm, before the outlier trim — compared with the reports read now to tell whether the stored rate is behind. Polymorphic — antipattern #8.</rdfs:comment>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/resource"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="en">steady Day Count</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/resource#observedQuantity">
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+    <rdfs:label xml:lang="en">observed Quantity</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:comment xml:lang="en">The observed quantity property in the integrated project information model.</rdfs:comment>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/observedQuantity"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/resource"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/resource#contributingProject">
+    <rdfs:label xml:lang="en">contributing Project</rdfs:label>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/contributingProject"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/resource"/>
+    <rdfs:comment>The project whose steady site days count.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/resource#CrewComposition">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+    <rdfs:comment>One trade line within a crew type: N of a given trade at a given skill level.</rdfs:comment>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/resource"/>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/CrewComposition"/>
+    <rdfs:label xml:lang="en">Crew Composition</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/resource#EquipmentResource">
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+    <rdfs:comment xml:lang="en">A resource-type classification for equipment.</rdfs:comment>
+    <rdfs:label>EquipmentResource</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/iprok/resource#ResourceType"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/resource#UserDefinedResource">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <dcterms:description xml:lang="en">Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record.</dcterms:description>
+    <rdfs:comment xml:lang="en">A resource-type classification defined for a project-specific need.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/iprok/resource#ResourceType"/>
+    <rdfs:label>UserDefinedResource</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/resource#projectCount">
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/resource"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:comment>Projects that contributed a counted site day to a norm.</rdfs:comment>
+    <rdfs:label xml:lang="en">project Count</rdfs:label>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/projectCount"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/iprok/resource#crewDays">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <dcterms:isPartOf rdf:resource="https://w3id.org/iprok/resource"/>
+    <rdfs:comment>headcount × days worked — the denominator of the rate.</rdfs:comment>
+    <dcterms:source rdf:resource="https://bimsaarthi.com/ontology/v0/crewDays"/>
+    <rdfs:label xml:lang="en">crew Days</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+  </rdf:Description>
+</rdf:RDF>

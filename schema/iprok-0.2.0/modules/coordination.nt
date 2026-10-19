@@ -1,0 +1,141 @@
+<https://w3id.org/iprok/coordination#probability> <http://www.w3.org/2000/01/rdf-schema#comment> "Low / Medium / High / Critical. Mapped to 1/2/3/4 for scoring." .
+<https://w3id.org/iprok/coordination#closureRate> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/coordination#batchId> <http://www.w3.org/2000/01/rdf-schema#comment> "The batch id property in the integrated project information model."@en .
+<https://w3id.org/iprok/coordination#issueType> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/coordination> .
+<https://w3id.org/iprok/coordination#riskStatus> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/coordination> .
+<https://w3id.org/iprok/coordination#issueId> <http://www.w3.org/2000/01/rdf-schema#comment> "Project-unique short id. For BCF-imported topics this is the BCF topic GUID; for manually-raised ones it's an auto-generated short id. Domain unspecified (antipattern #8)." .
+<https://w3id.org/iprok/coordination#closureRate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/coordination#batchId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/coordination#importedAt> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/importedAt> .
+<https://w3id.org/iprok/coordination#riskTitle> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/coordination#riskTitle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/coordination#Issue> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/Issue> .
+<https://w3id.org/iprok/coordination#resolvedClashes> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<https://w3id.org/iprok/coordination#probability> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/probability> .
+<https://w3id.org/iprok/coordination#openClashes> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/coordination> .
+<https://w3id.org/iprok/coordination#riskId> <http://www.w3.org/2000/01/rdf-schema#label> "risk id (RSK-NNNN)" .
+<https://w3id.org/iprok/coordination#issueStatus> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/issueStatus> .
+<https://w3id.org/iprok/coordination#issueId> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/coordination> .
+<https://w3id.org/iprok/coordination#riskCategory> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/coordination> .
+<https://w3id.org/iprok/coordination#riskScore> <http://www.w3.org/2000/01/rdf-schema#comment> "Computed server-side as probability_int * impact_int. Range 1-16." .
+<https://w3id.org/iprok/coordination#totalClashes> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/coordination#openClashes> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/openClashes> .
+<https://w3id.org/iprok/coordination#Event> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/coordination> .
+<https://w3id.org/iprok/coordination#Risk> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/Risk> .
+<https://w3id.org/iprok/coordination#riskScore> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<https://w3id.org/iprok/coordination#issueTitle> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/coordination#riskStatus> <http://www.w3.org/2000/01/rdf-schema#label> "risk status" .
+<https://w3id.org/iprok/coordination#probability> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/coordination#riskId> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/coordination#issueTitle> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/coordination#resolvedClashes> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/coordination#openClashes> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<https://w3id.org/iprok/coordination#importedAt> <http://www.w3.org/2000/01/rdf-schema#comment> "The imported at property in the integrated project information model."@en .
+<https://w3id.org/iprok/coordination#issueTitle> <http://www.w3.org/2000/01/rdf-schema#label> "issue title" .
+<https://w3id.org/iprok/coordination#Issue> <http://www.w3.org/2000/01/rdf-schema#comment> "A BCF-imported clash / coordination / design / safety / construction issue, or a manually-raised graph-native one. Linked to an IFC element GUID + optionally to an RFI / Drawing / Activity; the cross-domain closure chain (Clash → RFI → Drawing → Activity) that no point solution can answer natively." .
+<https://w3id.org/iprok/coordination#ClashBatch> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/ClashBatch> .
+<https://w3id.org/iprok/coordination#closureRate> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/coordination> .
+<https://w3id.org/iprok/coordination#batchId> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/coordination> .
+<https://w3id.org/iprok/coordination#totalClashes> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/totalClashes> .
+<https://w3id.org/iprok/coordination#impact> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/impact> .
+<https://w3id.org/iprok/coordination#Risk> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/coordination> .
+<https://w3id.org/iprok/coordination#issueStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/coordination#batchId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/coordination#issueStatus> <http://www.w3.org/2000/01/rdf-schema#comment> "Open / InProgress / Resolved / Closed / ReOpened / WontFix. SHACL constrains via sh:in (string literal, no sh:class)." .
+<https://w3id.org/iprok/coordination#Event> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/Event> .
+<https://w3id.org/iprok/coordination#riskCategory> <http://www.w3.org/2000/01/rdf-schema#comment> "One of Design / Commercial / Resource / External / Technical / Regulatory / Environmental / Safety. Enforced by RiskShape sh:in." .
+<https://w3id.org/iprok/coordination#Issue> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/coordination> .
+<https://w3id.org/iprok/coordination#issueType> <http://www.w3.org/2000/01/rdf-schema#label> "issue type" .
+<https://w3id.org/iprok/coordination#Issue> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Entity> .
+<https://w3id.org/iprok/coordination#Risk> <http://www.w3.org/2000/01/rdf-schema#label> "Risk" .
+<https://w3id.org/iprok/coordination#riskTitle> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/riskTitle> .
+<https://w3id.org/iprok/coordination#totalClashes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/coordination#importedAt> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/coordination#Risk> <http://www.w3.org/2000/01/rdf-schema#comment> "A proactive risk-register row. Sub-class of <https://w3id.org/iprok/coordination#Event> so issue + risk reuse the same superclass; sub-class of prov:Entity for PROV-O attribution." .
+<https://w3id.org/iprok/coordination#issueStatus> <http://www.w3.org/2000/01/rdf-schema#label> "issue status" .
+<https://w3id.org/iprok/coordination#issueId> <http://www.w3.org/2000/01/rdf-schema#label> "issue id" .
+<https://w3id.org/iprok/coordination#Issue> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/iprok/coordination#Event> .
+<https://w3id.org/iprok/coordination#riskId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/coordination#riskId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/coordination#totalClashes> <http://www.w3.org/2000/01/rdf-schema#label> "total clashes in batch" .
+<https://w3id.org/iprok/coordination#Issue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iprok/coordination#issueTitle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/coordination#importedAt> <http://www.w3.org/2000/01/rdf-schema#label> "imported at" .
+<https://w3id.org/iprok/coordination#probability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/coordination#closureRate> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/closureRate> .
+<https://w3id.org/iprok/coordination#impact> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/coordination#probability> <http://www.w3.org/2000/01/rdf-schema#label> "probability" .
+<https://w3id.org/iprok/coordination#sourceFile> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/coordination#Issue> <http://www.w3.org/2000/01/rdf-schema#label> "Issue" .
+<https://w3id.org/iprok/coordination#riskScore> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/riskScore> .
+<https://w3id.org/iprok/coordination#batchId> <http://www.w3.org/2000/01/rdf-schema#label> "batch id (BCH-NNNN)" .
+<https://w3id.org/iprok/coordination#Risk> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Entity> .
+<https://w3id.org/iprok/coordination#sourceFile> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/coordination#openClashes> <http://www.w3.org/2000/01/rdf-schema#comment> "Recomputed by the closure-tracking refresher on every issue-status transition." .
+<https://w3id.org/iprok/coordination#resolvedClashes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/coordination#riskStatus> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/coordination#riskStatus> <http://www.w3.org/2000/01/rdf-schema#comment> "Open / Mitigating / Closed / Accepted. Transitions enforced in route layer; sh:in in RiskShape." .
+<https://w3id.org/iprok/coordination#Event> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iprok/coordination#riskTitle> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/coordination> .
+<https://w3id.org/iprok/coordination#batchId> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/batchId> .
+<https://w3id.org/iprok/coordination#sourceFile> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/sourceFile> .
+<https://w3id.org/iprok/coordination#impact> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/coordination#impact> <http://www.w3.org/2000/01/rdf-schema#comment> "Low / Medium / High / Critical. Mapped to 1/2/3/4 for scoring." .
+<https://w3id.org/iprok/coordination#ClashBatch> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/coordination> .
+<https://w3id.org/iprok/coordination#issueStatus> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/coordination#resolvedClashes> <http://www.w3.org/2000/01/rdf-schema#label> "resolved clashes in batch" .
+<https://w3id.org/iprok/coordination#riskScore> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/coordination#ClashBatch> <http://www.w3.org/2000/01/rdf-schema#label> "BCF clash batch" .
+<https://w3id.org/iprok/coordination#Risk> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/iprok/coordination#Event> .
+<https://w3id.org/iprok/coordination#resolvedClashes> <http://www.w3.org/2000/01/rdf-schema#comment> "The resolved clashes property in the integrated project information model."@en .
+<https://w3id.org/iprok/coordination#totalClashes> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/coordination> .
+<https://w3id.org/iprok/coordination#impact> <http://www.w3.org/2000/01/rdf-schema#label> "impact" .
+<https://w3id.org/iprok/coordination#Event> <http://www.w3.org/2000/01/rdf-schema#label> "Event" .
+<https://w3id.org/iprok/coordination#riskCategory> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/riskCategory> .
+<https://w3id.org/iprok/coordination#riskId> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/coordination> .
+<https://w3id.org/iprok/coordination#Risk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iprok/coordination#totalClashes> <http://www.w3.org/2000/01/rdf-schema#comment> "The total clashes property in the integrated project information model."@en .
+<https://w3id.org/iprok/coordination#issueTitle> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/coordination> .
+<https://w3id.org/iprok/coordination#importedAt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/coordination#probability> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/coordination> .
+<https://w3id.org/iprok/coordination#importedAt> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://w3id.org/iprok/coordination#issueTitle> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/issueTitle> .
+<https://w3id.org/iprok/coordination#issueType> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/issueType> .
+<https://w3id.org/iprok/coordination#riskTitle> <http://www.w3.org/2000/01/rdf-schema#label> "risk title" .
+<https://w3id.org/iprok/coordination#resolvedClashes> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/coordination> .
+<https://w3id.org/iprok/coordination#issueType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/coordination#riskCategory> <http://www.w3.org/2000/01/rdf-schema#label> "risk category" .
+<https://w3id.org/iprok/coordination#totalClashes> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<https://w3id.org/iprok/coordination#issueTitle> <http://www.w3.org/2000/01/rdf-schema#comment> "The issue title property in the integrated project information model."@en .
+<https://w3id.org/iprok/coordination#impact> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/coordination> .
+<https://w3id.org/iprok/coordination#closureRate> <http://www.w3.org/2000/01/rdf-schema#label> "closure rate (% — 0..1)" .
+<https://w3id.org/iprok/coordination#issueStatus> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/coordination> .
+<https://w3id.org/iprok/coordination#batchId> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/coordination#riskScore> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/coordination> .
+<https://w3id.org/iprok/coordination#riskTitle> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/coordination#sourceFile> <http://www.w3.org/2000/01/rdf-schema#label> "source file" .
+<https://w3id.org/iprok/coordination#ClashBatch> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Entity> .
+<https://w3id.org/iprok/coordination#issueType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/coordination#riskStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/coordination#issueType> <http://www.w3.org/2000/01/rdf-schema#comment> "Clash / Coordination / Design / Construction / Safety / Other. SHACL constrains via sh:in (string literal, no sh:class — same idiom as DrawingChangeShape)." .
+<https://w3id.org/iprok/coordination#Event> <http://www.w3.org/2000/01/rdf-schema#comment> "Superclass for issue-like nodes (BCF issues, future inspection events). No shape; concrete subclasses carry the constraints." .
+<https://w3id.org/iprok/coordination#openClashes> <http://www.w3.org/2000/01/rdf-schema#label> "open clashes in batch" .
+<https://w3id.org/iprok/coordination#ClashBatch> <http://www.w3.org/2000/01/rdf-schema#comment> "One BCF-zip import. Used by the clash lifecycle dashboard to roll up closure rates per batch." .
+<https://w3id.org/iprok/coordination#sourceFile> <http://www.w3.org/2000/01/rdf-schema#comment> "Original BCF zip filename. Audit only; the bytes are not stored." .
+<https://w3id.org/iprok/coordination#riskId> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/riskId> .
+<https://w3id.org/iprok/coordination#riskStatus> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/riskStatus> .
+<https://w3id.org/iprok/coordination#importedAt> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/coordination> .
+<https://w3id.org/iprok/coordination#openClashes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/coordination#issueId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/coordination#issueId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/coordination#riskCategory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/coordination#riskCategory> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/coordination#issueId> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/issueId> .
+<https://w3id.org/iprok/coordination#ClashBatch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iprok/coordination#riskId> <http://www.w3.org/2000/01/rdf-schema#comment> "The risk id property in the integrated project information model."@en .
+<https://w3id.org/iprok/coordination#riskScore> <http://www.w3.org/2000/01/rdf-schema#label> "risk score (1-16)" .
+<https://w3id.org/iprok/coordination#riskTitle> <http://www.w3.org/2000/01/rdf-schema#comment> "The risk title property in the integrated project information model."@en .
+<https://w3id.org/iprok/coordination#closureRate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/iprok/coordination#resolvedClashes> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/resolvedClashes> .
+<https://w3id.org/iprok/coordination#sourceFile> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/coordination> .
+<https://w3id.org/iprok/coordination#closureRate> <http://www.w3.org/2000/01/rdf-schema#comment> "The closure rate property in the integrated project information model."@en .

@@ -1,0 +1,212 @@
+<https://w3id.org/iprok/finance#demandStatus> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/finance> .
+<https://w3id.org/iprok/finance#demandAmount> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/finance> .
+<https://w3id.org/iprok/finance#escrowShare> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/escrowShare> .
+<https://w3id.org/iprok/finance#EscrowWithdrawal> <http://www.w3.org/2000/01/rdf-schema#comment> "One utilization of escrow funds against a cost head, certificate-backed per RERA S.4(2)(l)(D)." .
+<https://w3id.org/iprok/finance#DemandNote> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/finance> .
+<https://w3id.org/iprok/finance#dueDate2> <http://www.w3.org/2000/01/rdf-schema#label> "due Date2"@en .
+<https://w3id.org/iprok/finance#withdrawalDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/iprok/finance#escrowBank> <http://www.w3.org/2000/01/rdf-schema#comment> "The escrow bank property in the integrated project information model."@en .
+<https://w3id.org/iprok/finance#escrowAccountRef> <http://www.w3.org/2000/01/rdf-schema#label> "escrow Account Ref"@en .
+<https://w3id.org/iprok/finance#dueDate2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/finance#milestoneStatus> <http://www.w3.org/2000/01/rdf-schema#label> "milestone Status"@en .
+<https://w3id.org/iprok/finance#milestoneName> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/milestoneName> .
+<https://w3id.org/iprok/finance#milestoneId> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/finance> .
+<https://w3id.org/iprok/finance#demandDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/finance#PaymentMilestone> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Entity> .
+<https://w3id.org/iprok/finance#receiptMode> <http://www.w3.org/2000/01/rdf-schema#comment> "The receipt mode property in the integrated project information model."@en .
+<https://w3id.org/iprok/finance#milestoneStatus> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/milestoneStatus> .
+<https://w3id.org/iprok/finance#milestoneName> <http://www.w3.org/2000/01/rdf-schema#label> "milestone Name"@en .
+<https://w3id.org/iprok/finance#escrowSplitPct> <http://www.w3.org/2000/01/rdf-schema#label> "escrow Split Pct"@en .
+<https://w3id.org/iprok/finance#escrowAccountRef> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/escrowAccountRef> .
+<https://w3id.org/iprok/finance#milestoneName> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/finance#forMilestone> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/forMilestone> .
+<https://w3id.org/iprok/finance#withdrawalAmount> <http://www.w3.org/2000/01/rdf-schema#comment> "The withdrawal amount property in the integrated project information model."@en .
+<https://w3id.org/iprok/finance#operatingShare> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/finance> .
+<https://w3id.org/iprok/finance#achievedAt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/finance#escrowSplitPct> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/iprok/finance#achievedAt> <http://www.w3.org/2000/01/rdf-schema#comment> "The achieved at property in the integrated project information model."@en .
+<https://w3id.org/iprok/finance#demandAmount> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/iprok/finance#CollectionReceipt> <http://www.w3.org/2000/01/rdf-schema#comment> "One buyer payment against a unit, split escrow/operating at receipt time." .
+<https://w3id.org/iprok/finance#forUnit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/iprok/finance#PaymentMilestone> <http://www.w3.org/2000/01/rdf-schema#label> "Payment Milestone"@en .
+<https://w3id.org/iprok/finance#receiptAmount> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/finance#EscrowAccount> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Entity> .
+<https://w3id.org/iprok/finance#PaymentMilestone> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/finance> .
+<https://w3id.org/iprok/finance#certificateRef> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/finance#escrowSetupAt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/finance#demandAmount> <http://www.w3.org/2000/01/rdf-schema#comment> "The demand amount property in the integrated project information model."@en .
+<https://w3id.org/iprok/finance#milestoneName> <http://www.w3.org/2000/01/rdf-schema#comment> "The milestone name property in the integrated project information model."@en .
+<https://w3id.org/iprok/finance#demandStatus> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/finance#withdrawalAmount> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/withdrawalAmount> .
+<https://w3id.org/iprok/finance#certificateRef> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/certificateRef> .
+<https://w3id.org/iprok/finance#escrowBank> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/escrowBank> .
+<https://w3id.org/iprok/finance#operatingShare> <http://www.w3.org/2000/01/rdf-schema#comment> "Server-computed: receiptAmount − escrowShare (no penny drift)." .
+<https://w3id.org/iprok/finance#DemandNote> <http://www.w3.org/2000/01/rdf-schema#comment> "One payment demand to one unit's allottee against an achieved milestone." .
+<https://w3id.org/iprok/finance#milestonePct> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/finance> .
+<https://w3id.org/iprok/finance#operatingShare> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/iprok/finance#milestoneId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/finance#forMilestone> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/iprok/finance#CollectionReceipt> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Entity> .
+<https://w3id.org/iprok/finance#escrowBank> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/finance> .
+<https://w3id.org/iprok/finance#milestoneId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/finance#DemandNote> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/DemandNote> .
+<https://w3id.org/iprok/finance#demandId> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/finance#demandDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/iprok/finance#forUnit> <http://www.w3.org/2000/01/rdf-schema#label> "for Unit"@en .
+<https://w3id.org/iprok/finance#escrowSplitPct> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/escrowSplitPct> .
+<https://w3id.org/iprok/finance#operatingShare> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/finance#EscrowAccount> <http://www.w3.org/2000/01/rdf-schema#label> "Escrow Account"@en .
+<https://w3id.org/iprok/finance#withdrawalDate> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/finance#milestonePct> <http://www.w3.org/2000/01/rdf-schema#label> "milestone Pct"@en .
+<https://w3id.org/iprok/finance#EscrowAccount> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/EscrowAccount> .
+<https://w3id.org/iprok/finance#demandStatus> <http://www.w3.org/2000/01/rdf-schema#comment> "Raised | Cancelled. Settled/overdue are computed from receipts, never asserted." .
+<https://w3id.org/iprok/finance#escrowShare> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/iprok/finance#milestonePct> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/iprok/finance#demandId> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/finance> .
+<https://w3id.org/iprok/finance#CollectionReceipt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iprok/finance#forMilestone> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/finance> .
+<https://w3id.org/iprok/finance#EscrowWithdrawal> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/EscrowWithdrawal> .
+<https://w3id.org/iprok/finance#receiptId> <http://www.w3.org/2000/01/rdf-schema#comment> "The receipt id property in the integrated project information model."@en .
+<https://w3id.org/iprok/finance#receiptAmount> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/iprok/finance#certificateRef> <http://www.w3.org/2000/01/rdf-schema#label> "certificate Ref"@en .
+<https://w3id.org/iprok/finance#withdrawalAmount> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/finance> .
+<https://w3id.org/iprok/finance#milestoneName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/finance#receiptId> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/receiptId> .
+<https://w3id.org/iprok/finance#escrowBank> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/finance#milestoneStatus> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/finance#CollectionReceipt> <http://www.w3.org/2000/01/rdf-schema#label> "Collection Receipt"@en .
+<https://w3id.org/iprok/finance#escrowBank> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/finance#achievedAt> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://w3id.org/iprok/finance#escrowBank> <http://www.w3.org/2000/01/rdf-schema#label> "escrow Bank"@en .
+<https://w3id.org/iprok/finance#receiptMode> <http://www.w3.org/2000/01/rdf-schema#label> "receipt Mode"@en .
+<https://w3id.org/iprok/finance#forUnit> <http://www.w3.org/2000/01/rdf-schema#comment> "The <https://w3id.org/iprok/property#Unit> this receipt pays against. Range left undeclared so RDFS inference never re-classifies referenced IRIs (antipattern #8)." .
+<https://w3id.org/iprok/finance#EscrowWithdrawal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iprok/finance#receiptAmount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/finance#withdrawalId> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/finance> .
+<https://w3id.org/iprok/finance#escrowBank> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/finance#demandDate> <http://www.w3.org/2000/01/rdf-schema#label> "demand Date"@en .
+<https://w3id.org/iprok/finance#escrowSetupAt> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://w3id.org/iprok/finance#escrowAccountRef> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/finance> .
+<https://w3id.org/iprok/finance#milestoneName> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/finance> .
+<https://w3id.org/iprok/finance#operatingShare> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/operatingShare> .
+<https://w3id.org/iprok/finance#dueDate2> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/iprok/finance#withdrawalAmount> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/iprok/finance#demandStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/finance#demandAmount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/finance#PaymentMilestone> <http://www.w3.org/2000/01/rdf-schema#comment> "One instalment trigger in the project's payment schedule; e.g. 'Plinth completion; 15%'." .
+<https://w3id.org/iprok/finance#EscrowAccount> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/finance> .
+<https://w3id.org/iprok/finance#receiptDate> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/finance#milestoneOrder> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<https://w3id.org/iprok/finance#receiptMode> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/receiptMode> .
+<https://w3id.org/iprok/finance#receiptAmount> <http://www.w3.org/2000/01/rdf-schema#label> "receipt Amount"@en .
+<https://w3id.org/iprok/finance#milestoneOrder> <http://www.w3.org/2000/01/rdf-schema#label> "milestone Order"@en .
+<https://w3id.org/iprok/finance#EscrowAccount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iprok/finance#costHead> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/finance#withdrawalId> <http://www.w3.org/2000/01/rdf-schema#label> "withdrawal Id"@en .
+<https://w3id.org/iprok/finance#receiptMode> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/finance#withdrawalId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/finance#withdrawalAmount> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/finance#demandStatus> <http://www.w3.org/2000/01/rdf-schema#label> "demand Status"@en .
+<https://w3id.org/iprok/finance#costHead> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/costHead> .
+<https://w3id.org/iprok/finance#costHead> <http://www.w3.org/2000/01/rdf-schema#label> "cost Head"@en .
+<https://w3id.org/iprok/finance#certificateRef> <http://www.w3.org/2000/01/rdf-schema#comment> "Reference to the engineer + architect + CA certificate that authorises this withdrawal (RERA S.4(2)(l)(D)). Mandatory." .
+<https://w3id.org/iprok/finance#CollectionReceipt> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/finance> .
+<https://w3id.org/iprok/finance#receiptDate> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/finance> .
+<https://w3id.org/iprok/finance#withdrawalDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/finance#EscrowWithdrawal> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Activity> .
+<https://w3id.org/iprok/finance#costHead> <http://www.w3.org/2000/01/rdf-schema#comment> "RERA utilization head: Land | Construction | Statutory | Consultants | Finance | Other." .
+<https://w3id.org/iprok/finance#withdrawalId> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/finance#demandStatus> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/demandStatus> .
+<https://w3id.org/iprok/finance#receiptId> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/finance> .
+<https://w3id.org/iprok/finance#forMilestone> <http://www.w3.org/2000/01/rdf-schema#label> "for Milestone"@en .
+<https://w3id.org/iprok/finance#escrowAccountRef> <http://www.w3.org/2000/01/rdf-schema#comment> "Masked account reference — never the full account number." .
+<https://w3id.org/iprok/finance#dueDate2> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/finance> .
+<https://w3id.org/iprok/finance#milestonePct> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/milestonePct> .
+<https://w3id.org/iprok/finance#withdrawalId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/finance#demandDate> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/finance> .
+<https://w3id.org/iprok/finance#receiptMode> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/finance> .
+<https://w3id.org/iprok/finance#milestoneName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/finance#costHead> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/finance> .
+<https://w3id.org/iprok/finance#withdrawalDate> <http://www.w3.org/2000/01/rdf-schema#comment> "The withdrawal date property in the integrated project information model."@en .
+<https://w3id.org/iprok/finance#escrowAccountRef> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/finance#milestoneOrder> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/finance#withdrawalAmount> <http://www.w3.org/2000/01/rdf-schema#label> "withdrawal Amount"@en .
+<https://w3id.org/iprok/finance#EscrowWithdrawal> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/finance> .
+<https://w3id.org/iprok/finance#withdrawalId> <http://www.w3.org/2000/01/rdf-schema#comment> "The withdrawal id property in the integrated project information model."@en .
+<https://w3id.org/iprok/finance#withdrawalDate> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/finance> .
+<https://w3id.org/iprok/finance#escrowShare> <http://www.w3.org/2000/01/rdf-schema#label> "escrow Share"@en .
+<https://w3id.org/iprok/finance#demandId> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/demandId> .
+<https://w3id.org/iprok/finance#achievedAt> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/finance> .
+<https://w3id.org/iprok/finance#milestonePct> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/finance#EscrowAccount> <http://www.w3.org/2000/01/rdf-schema#comment> "The project's RERA collection account discipline: a designated escrow account receiving the statutory share (default 70%) of every buyer collection." .
+<https://w3id.org/iprok/finance#milestonePct> <http://www.w3.org/2000/01/rdf-schema#comment> "Instalment share of the unit price (0–100]." .
+<https://w3id.org/iprok/finance#receiptDate> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/receiptDate> .
+<https://w3id.org/iprok/finance#receiptId> <http://www.w3.org/2000/01/rdf-schema#label> "receipt Id"@en .
+<https://w3id.org/iprok/finance#milestoneOrder> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/finance> .
+<https://w3id.org/iprok/finance#milestoneStatus> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/finance> .
+<https://w3id.org/iprok/finance#escrowShare> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/finance> .
+<https://w3id.org/iprok/finance#receiptId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/finance#demandId> <http://www.w3.org/2000/01/rdf-schema#label> "demand Id"@en .
+<https://w3id.org/iprok/finance#receiptAmount> <http://www.w3.org/2000/01/rdf-schema#comment> "The receipt amount property in the integrated project information model."@en .
+<https://w3id.org/iprok/finance#DemandNote> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Entity> .
+<https://w3id.org/iprok/finance#escrowSetupAt> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/finance> .
+<https://w3id.org/iprok/finance#demandDate> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/demandDate> .
+<https://w3id.org/iprok/finance#certificateRef> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/finance> .
+<https://w3id.org/iprok/finance#escrowSplitPct> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/finance> .
+<https://w3id.org/iprok/finance#milestoneStatus> <http://www.w3.org/2000/01/rdf-schema#comment> "Pending | Achieved." .
+<https://w3id.org/iprok/finance#withdrawalId> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/withdrawalId> .
+<https://w3id.org/iprok/finance#receiptId> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/finance#escrowSetupAt> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/escrowSetupAt> .
+<https://w3id.org/iprok/finance#receiptDate> <http://www.w3.org/2000/01/rdf-schema#comment> "The receipt date property in the integrated project information model."@en .
+<https://w3id.org/iprok/finance#receiptDate> <http://www.w3.org/2000/01/rdf-schema#label> "receipt Date"@en .
+<https://w3id.org/iprok/finance#milestoneId> <http://www.w3.org/2000/01/rdf-schema#comment> "The milestone id property in the integrated project information model."@en .
+<https://w3id.org/iprok/finance#receiptDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/finance#costHead> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/finance#escrowSetupAt> <http://www.w3.org/2000/01/rdf-schema#label> "escrow Setup At"@en .
+<https://w3id.org/iprok/finance#receiptId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/finance#demandId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/finance#receiptMode> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/finance#demandId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/finance#demandAmount> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/demandAmount> .
+<https://w3id.org/iprok/finance#receiptMode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/finance#demandDate> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/finance#withdrawalAmount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/finance#DemandNote> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iprok/finance#escrowShare> <http://www.w3.org/2000/01/rdf-schema#comment> "Server-computed: receiptAmount × escrowSplitPct/100, 2dp." .
+<https://w3id.org/iprok/finance#operatingShare> <http://www.w3.org/2000/01/rdf-schema#label> "operating Share"@en .
+<https://w3id.org/iprok/finance#withdrawalDate> <http://www.w3.org/2000/01/rdf-schema#label> "withdrawal Date"@en .
+<https://w3id.org/iprok/finance#milestoneOrder> <http://www.w3.org/2000/01/rdf-schema#comment> "The milestone order property in the integrated project information model."@en .
+<https://w3id.org/iprok/finance#demandId> <http://www.w3.org/2000/01/rdf-schema#comment> "The demand id property in the integrated project information model."@en .
+<https://w3id.org/iprok/finance#achievedAt> <http://www.w3.org/2000/01/rdf-schema#label> "achieved At"@en .
+<https://w3id.org/iprok/finance#milestoneId> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/milestoneId> .
+<https://w3id.org/iprok/finance#forMilestone> <http://www.w3.org/2000/01/rdf-schema#comment> "The achieved <https://w3id.org/iprok/finance#PaymentMilestone> this demand cites. Range undeclared (antipattern #8)." .
+<https://w3id.org/iprok/finance#achievedAt> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/achievedAt> .
+<https://w3id.org/iprok/finance#achievedAt> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/finance#receiptAmount> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/receiptAmount> .
+<https://w3id.org/iprok/finance#EscrowWithdrawal> <http://www.w3.org/2000/01/rdf-schema#label> "Escrow Withdrawal"@en .
+<https://w3id.org/iprok/finance#withdrawalDate> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/withdrawalDate> .
+<https://w3id.org/iprok/finance#escrowSplitPct> <http://www.w3.org/2000/01/rdf-schema#comment> "Statutory share of every collection routed to escrow. RERA default 70." .
+<https://w3id.org/iprok/finance#milestoneOrder> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/milestoneOrder> .
+<https://w3id.org/iprok/finance#certificateRef> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/finance#milestoneOrder> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/finance#PaymentMilestone> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/PaymentMilestone> .
+<https://w3id.org/iprok/finance#escrowAccountRef> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/iprok/finance#escrowSetupAt> <http://www.w3.org/2000/01/rdf-schema#comment> "The escrow setup at property in the integrated project information model."@en .
+<https://w3id.org/iprok/finance#milestoneStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/finance#escrowShare> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/finance#DemandNote> <http://www.w3.org/2000/01/rdf-schema#label> "Demand Note"@en .
+<https://w3id.org/iprok/finance#demandAmount> <http://www.w3.org/2000/01/rdf-schema#label> "demand Amount"@en .
+<https://w3id.org/iprok/finance#escrowSetupAt> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/finance#dueDate2> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/dueDate2> .
+<https://w3id.org/iprok/finance#escrowSplitPct> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/iprok/finance#CollectionReceipt> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/CollectionReceipt> .
+<https://w3id.org/iprok/finance#PaymentMilestone> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/iprok/finance#receiptDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/iprok/finance#demandAmount> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/finance#demandDate> <http://www.w3.org/2000/01/rdf-schema#comment> "The demand date property in the integrated project information model."@en .
+<https://w3id.org/iprok/finance#forUnit> <http://purl.org/dc/terms/source> <https://bimsaarthi.com/ontology/v0/forUnit> .
+<https://w3id.org/iprok/finance#dueDate2> <http://www.w3.org/2000/01/rdf-schema#comment> "Payment due date. Named dueDate2 because <https://w3id.org/iprok#dueDate> exists with task semantics elsewhere; both stay domain-free." .
+<https://w3id.org/iprok/finance#receiptAmount> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/finance> .
+<https://w3id.org/iprok/finance#milestoneId> <http://purl.org/dc/terms/description> "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en .
+<https://w3id.org/iprok/finance#forUnit> <http://purl.org/dc/terms/isPartOf> <https://w3id.org/iprok/finance> .
+<https://w3id.org/iprok/finance#milestoneId> <http://www.w3.org/2000/01/rdf-schema#label> "milestone Id"@en .
