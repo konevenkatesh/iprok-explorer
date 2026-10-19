@@ -1,0 +1,3486 @@
+@prefix bs:    <https://bimsaarthi.com/ontology/v0/> .
+@prefix sh:    <http://www.w3.org/ns/shacl#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix prov:  <http://www.w3.org/ns/prov#> .
+
+# =========================================================
+# BIMSaarthi SHACL shapes v0.1
+# Slice V0.03 — Sprint 1 Wk 1.
+# Validation runs in API before any triple commits to the graph.
+# =========================================================
+
+bs:DPREntryShape a sh:NodeShape ;
+    sh:targetClass bs:DPREntry ;
+    # bs:reportedAgainst — the Activity reference is validated as IRI-only,
+    # not as `sh:class bs:Activity`. The activity's rdf:type triple lives
+    # in the project's named graph (created earlier by POST /activities),
+    # but pyshacl validates the *new* turtle in isolation before the write
+    # reaches the graph — so a class check would never see the type triple
+    # and would reject every legitimate DPR. Proper cross-graph SHACL
+    # (validation against the union of new triples + project graph) is its
+    # own slice; until then sh:nodeKind keeps the schema honest about the
+    # shape we can actually enforce here.
+    sh:property [
+        sh:path bs:reportedAgainst ;
+        sh:nodeKind sh:IRI ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "DPR entry must reference exactly one Activity (IRI)." ;
+    ] ;
+    sh:property [
+        sh:path bs:reportedQuantity ;
+        sh:datatype xsd:decimal ;
+        sh:minCount 1 ;
+        sh:minInclusive 0 ;
+        sh:message "DPR entry must include a non-negative reported quantity." ;
+    ] ;
+    sh:property [
+        sh:path bs:unit ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:message "DPR entry must specify a unit (e.g. m³, kg, m²)." ;
+    ] ;
+    sh:property [
+        sh:path bs:reportedAt ;
+        sh:datatype xsd:dateTime ;
+        sh:minCount 1 ;
+        sh:message "DPR entry must have a reportedAt timestamp." ;
+    ] ;
+    # V0.15 — optional offline-queue idempotency key. Uniqueness is enforced
+    # in the repo (SPARQL ASK before insert), not here.
+    sh:property [
+        sh:path bs:clientId ;
+        sh:datatype xsd:string ;
+        sh:maxCount 1 ;
+        sh:pattern "^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$" ;
+        sh:message "If provided, clientId must be a UUID." ;
+    ] ;
+    # P2A.3 — the weather that day, and the hours of this work it cost.
+    # Both optional (reports before P2A.3 carry neither); hours lost need
+    # the weather that caused them.
+    sh:property [
+        sh:path bs:weatherCondition ;
+        sh:maxCount 1 ;
+        sh:in ( "Fair" "Cloudy" "LightRain" "HeavyRain" "Waterlogged" "ExtremeHeat" "HighWind" ) ;
+        sh:message "weatherCondition must be one of Fair, Cloudy, LightRain, HeavyRain, Waterlogged, ExtremeHeat, HighWind." ;
+    ] ;
+    sh:property [
+        sh:path bs:weatherHoursLost ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:decimal ;
+        sh:minInclusive 0 ;
+        sh:maxInclusive 12 ;
+        sh:message "weatherHoursLost must be a decimal from 0 to 12 hours." ;
+    ] .
+
+# P2A.3 — the two weather rules that span both properties, each in its own
+# shape so its message names that rule alone (a node-level sh:message on
+# DPREntryShape would relabel every node-level rule added there later).
+bs:DPRWeatherHoursNeedConditionShape a sh:NodeShape ;
+    sh:targetClass bs:DPREntry ;
+    sh:or (
+        [ sh:path bs:weatherHoursLost ; sh:maxCount 0 ]
+        [ sh:path bs:weatherCondition ; sh:minCount 1 ]
+    ) ;
+    sh:message "Hours lost to weather need the weather that caused them (weatherCondition)." .
+
+# Fair or cloudy weather costs no working hours: hours lost there were lost
+# to something else, which belongs in a hindrance, not the weather.
+bs:DPRWeatherHoursNeedStoppingWeatherShape a sh:NodeShape ;
+    sh:targetClass bs:DPREntry ;
+    sh:or (
+        [ sh:path bs:weatherCondition ;
+          sh:in ( "LightRain" "HeavyRain" "Waterlogged" "ExtremeHeat" "HighWind" ) ]
+        [ sh:path bs:weatherHoursLost ; sh:maxInclusive 0 ]
+    ) ;
+    sh:message "Fair or cloudy weather costs no working hours — record the rain, waterlogging, heat or wind that did." .
+
+bs:UserShape a sh:NodeShape ;
+    sh:targetClass bs:User ;
+    sh:property [
+        sh:path bs:phoneNumber ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:pattern "^\\+[0-9]{10,15}$" ;
+        sh:message "User must have a valid E.164-format phone number." ;
+    ] ;
+    sh:property [
+        sh:path bs:userRole ;
+        sh:datatype xsd:string ;
+        sh:in ( "SiteEngineer" "QC" "Safety" "PM" "Planning" "BIM" "Director" "Auditor" "Admin" ) ;
+        sh:minCount 1 ;
+        sh:message "User must have a recognised role." ;
+    ] .
+
+bs:ProjectShape a sh:NodeShape ;
+    sh:targetClass bs:Project ;
+    sh:property [
+        sh:path <http://purl.org/dc/terms/title> ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:message "Project must have a title." ;
+    ] .
+
+# V0.14 — Photo entity. photoUri + reportedAt are mandatory. locationWkt is
+# optional but if present must be POINT(lng lat) format (matches DPREntry).
+bs:PhotoShape a sh:NodeShape ;
+    sh:targetClass bs:Photo ;
+    sh:property [
+        sh:path bs:photoUri ;
+        sh:datatype xsd:anyURI ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "Photo must include exactly one photoUri." ;
+    ] ;
+    sh:property [
+        sh:path bs:reportedAt ;
+        sh:datatype xsd:dateTime ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "Photo must have a reportedAt timestamp." ;
+    ] ;
+    sh:property [
+        sh:path bs:locationWkt ;
+        sh:datatype xsd:string ;
+        sh:maxCount 1 ;
+        sh:pattern "^POINT\\(-?[0-9]+(\\.[0-9]+)? -?[0-9]+(\\.[0-9]+)?\\)$" ;
+        sh:message "If provided, locationWkt must be POINT(lng lat) format." ;
+    ] ;
+    # V0.15 — optional offline-queue idempotency key. Uniqueness is enforced
+    # in the repo (SPARQL ASK before insert), not here.
+    sh:property [
+        sh:path bs:clientId ;
+        sh:datatype xsd:string ;
+        sh:maxCount 1 ;
+        sh:pattern "^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$" ;
+        sh:message "If provided, clientId must be a UUID." ;
+    ] .
+
+# V0.17 — Inspection + ChecklistItem + NCR.
+#   - InspectionShape: inspectedActivity (IRI) and inspectedAt (xsd:dateTime)
+#     are mandatory. Same `sh:nodeKind sh:IRI` rationale as DPREntryShape:
+#     pyshacl validates the new turtle in isolation, so a `sh:class
+#     bs:Activity` check would reject every legitimate write. Cross-graph
+#     SHACL is deferred to the V0.31 tenant SPARQL firewall.
+#   - ChecklistItemShape: every item has itemCode + itemResult ∈ {pass, fail}.
+#     If itemResult = "fail" then bs:failureNote MUST be present — encoded
+#     via sh:or (item is valid iff result=pass OR failureNote is set).
+#   - NCRShape: every auto-created NCR carries the back-pointers + Open status.
+
+bs:InspectionShape a sh:NodeShape ;
+    sh:targetClass bs:Inspection ;
+    sh:property [
+        sh:path bs:inspectedActivity ;
+        sh:nodeKind sh:IRI ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "Inspection must reference exactly one Activity (IRI)." ;
+    ] ;
+    sh:property [
+        sh:path bs:inspectedAt ;
+        sh:datatype xsd:dateTime ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "Inspection must have an inspectedAt timestamp." ;
+    ] ;
+    sh:property [
+        sh:path bs:overallResult ;
+        sh:datatype xsd:string ;
+        sh:in ( "pass" "fail" ) ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "Inspection must have an overallResult of 'pass' or 'fail'." ;
+    ] ;
+    # V0.27 — every Inspection MUST declare its category. 'quality' is
+    # the V0.17 surface (IS-456 concrete pour); 'safety' is V0.27
+    # (IS 7969 / MoRTH highway / confined-space). New write paths set
+    # this explicitly; legacy V0.17 inspections that lack the property
+    # in the graph are treated as 'quality' on read.
+    sh:property [
+        sh:path bs:inspectionCategory ;
+        sh:datatype xsd:string ;
+        sh:in ( "quality" "safety" ) ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "Inspection must declare bs:inspectionCategory of 'quality' or 'safety'." ;
+    ] .
+
+bs:ChecklistItemShape a sh:NodeShape ;
+    sh:targetClass bs:ChecklistItem ;
+    sh:property [
+        sh:path bs:itemCode ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:message "Checklist item must have an itemCode." ;
+    ] ;
+    sh:property [
+        sh:path bs:itemResult ;
+        sh:datatype xsd:string ;
+        sh:in ( "pass" "fail" ) ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "Checklist item result must be 'pass' or 'fail'." ;
+    ] ;
+    sh:or (
+        [ sh:property [
+            sh:path bs:itemResult ;
+            sh:hasValue "pass" ;
+        ] ]
+        [ sh:property [
+            sh:path bs:failureNote ;
+            sh:datatype xsd:string ;
+            sh:minCount 1 ;
+            sh:minLength 1 ;
+        ] ]
+    ) ;
+    sh:message "A failed checklist item must carry a failureNote." .
+
+bs:NCRShape a sh:NodeShape ;
+    sh:targetClass bs:NCR ;
+    sh:property [
+        sh:path bs:relatedInspection ;
+        sh:nodeKind sh:IRI ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "NCR must point to exactly one Inspection (IRI)." ;
+    ] ;
+    sh:property [
+        sh:path bs:relatedActivity ;
+        sh:nodeKind sh:IRI ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "NCR must point to exactly one Activity (IRI)." ;
+    ] ;
+    # V0.19 — status is now an IRI pointing at one of the four bs:NCRStatus
+    # individuals, replacing V0.17's bs:ncrStatus string literal. Existing
+    # V0.17 records are migrated on API startup (see migrations/v019_ncr_status).
+    sh:property [
+        sh:path bs:status ;
+        sh:nodeKind sh:IRI ;
+        sh:in ( bs:Open bs:UnderReview bs:Closed bs:Rejected ) ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "NCR status must be one of bs:Open / bs:UnderReview / bs:Closed / bs:Rejected." ;
+    ] ;
+    sh:property [
+        sh:path bs:raisedAt ;
+        sh:datatype xsd:dateTime ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+    ] ;
+    sh:property [
+        sh:path bs:failureNote ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:minLength 1 ;
+        sh:message "NCR must carry the failure note copied from the failed item." ;
+    ] ;
+    # V0.19 — state machine rule: a Closed NCR must carry closedBy + closedAt
+    # + closureNote. Encoded with sh:or — the node is conformant iff EITHER
+    # status is NOT Closed (Open/UnderReview/Rejected pass through) OR all
+    # three closure properties are present. closurePhoto stays optional.
+    # The QC-only role guard is enforced in the API (SHACL can't see JWT
+    # claims).
+    sh:or (
+        [ sh:not [ sh:property [ sh:path bs:status ; sh:hasValue bs:Closed ] ] ]
+        [
+            sh:property [ sh:path bs:closedBy ;    sh:nodeKind sh:IRI ;       sh:minCount 1 ; sh:maxCount 1 ] ;
+            sh:property [ sh:path bs:closedAt ;    sh:datatype xsd:dateTime ; sh:minCount 1 ; sh:maxCount 1 ] ;
+            sh:property [ sh:path bs:closureNote ; sh:datatype xsd:string ;   sh:minCount 1 ; sh:minLength 1 ]
+        ]
+    ) ;
+    sh:message "A Closed NCR must carry closedBy, closedAt, and closureNote." .
+
+# V0.22 — Project membership.
+# Each (project, user) edge carries an inviter identity (via the parent
+# turtle's PROV-O wrapper) and the joinedAt timestamp. Two minimum
+# requirements: bs:ofUser (IRI of the bs:User) and bs:joinedAt.
+# Cross-graph constraint that the user actually exists is V0.31 territory.
+
+bs:ProjectMembershipShape a sh:NodeShape ;
+    sh:targetClass bs:ProjectMembership ;
+    sh:property [
+        sh:path bs:ofUser ;
+        sh:nodeKind sh:IRI ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "ProjectMembership must reference exactly one User (IRI)." ;
+    ] ;
+    sh:property [
+        sh:path bs:joinedAt ;
+        sh:datatype xsd:dateTime ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "ProjectMembership must record a joinedAt timestamp." ;
+    ] .
+
+# V0.26 — Incident shape.
+#   - incidentType (IRI), incidentAt (xsd:dateTime), personsInvolved
+#     (xsd:integer >= 1), immediateCause (xsd:string), reportedBy (IRI)
+#     all mandatory.
+#   - linkedActivity, locationWkt, zone, photoUris stay optional.
+#   - personsInvolved minInclusive=1 catches the "0 persons" case the
+#     spec calls out (a true near-miss with zero persons should still be
+#     logged as 1 = the observer/reporter; if you really need 0, raise
+#     the floor in this shape).
+
+bs:IncidentShape a sh:NodeShape ;
+    sh:targetClass bs:Incident ;
+    sh:property [
+        sh:path bs:incidentType ;
+        sh:nodeKind sh:IRI ;
+        sh:in ( bs:NearMiss bs:FirstAid bs:LostTimeInjury bs:Fatality ) ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "Incident must have an incidentType (NearMiss / FirstAid / LostTimeInjury / Fatality)." ;
+    ] ;
+    sh:property [
+        sh:path bs:incidentAt ;
+        sh:datatype xsd:dateTime ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "Incident must record an incidentAt timestamp." ;
+    ] ;
+    sh:property [
+        sh:path bs:personsInvolved ;
+        sh:datatype xsd:integer ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:minInclusive 1 ;
+        sh:message "personsInvolved must be a positive integer (≥ 1)." ;
+    ] ;
+    sh:property [
+        sh:path bs:immediateCause ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:minLength 1 ;
+        sh:message "Incident must include an immediate-cause note." ;
+    ] ;
+    sh:property [
+        sh:path bs:reportedBy ;
+        sh:nodeKind sh:IRI ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "Incident must point at the User who reported it (IRI)." ;
+    ] .
+
+
+# V0.28 — RecurrenceAlertShape.
+#   - alertedActivity (IRI) is mandatory + single-valued.
+#   - defectDescription is the normalised join key — non-empty.
+#   - occurrenceCount must be at least 2 (a single occurrence isn't
+#     a "recurrence").
+#   - generatedAt is mandatory; firstSeenAt + lastSeenAt are also
+#     mandatory so consumers always have a date range to render.
+#   - status (reused from V0.19) is required and constrained to
+#     bs:Open / bs:Acknowledged for this surface.
+bs:RecurrenceAlertShape a sh:NodeShape ;
+    sh:targetClass bs:RecurrenceAlert ;
+    sh:property [
+        sh:path bs:alertedActivity ;
+        sh:nodeKind sh:IRI ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "RecurrenceAlert must reference exactly one Activity (IRI)." ;
+    ] ;
+    sh:property [
+        sh:path bs:defectDescription ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:minLength 1 ;
+        sh:message "RecurrenceAlert must carry a non-empty defectDescription." ;
+    ] ;
+    sh:property [
+        sh:path bs:occurrenceCount ;
+        sh:datatype xsd:integer ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:minInclusive 2 ;
+        sh:message "occurrenceCount must be at least 2 — a single occurrence is not a recurrence." ;
+    ] ;
+    sh:property [
+        sh:path bs:firstSeenAt ;
+        sh:datatype xsd:dateTime ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "RecurrenceAlert must record a firstSeenAt timestamp." ;
+    ] ;
+    sh:property [
+        sh:path bs:lastSeenAt ;
+        sh:datatype xsd:dateTime ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "RecurrenceAlert must record a lastSeenAt timestamp." ;
+    ] ;
+    sh:property [
+        sh:path bs:generatedAt ;
+        sh:datatype xsd:dateTime ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "RecurrenceAlert must record a generatedAt timestamp." ;
+    ] ;
+    sh:property [
+        sh:path bs:status ;
+        sh:nodeKind sh:IRI ;
+        sh:in ( bs:Open bs:Acknowledged ) ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "RecurrenceAlert status must be bs:Open or bs:Acknowledged." ;
+    ] .
+
+
+# V0.29 — BOQItem + Measurement.
+#   - BOQItemShape: itemCode + description + unit + ofProject (IRI)
+#     all mandatory and single-valued.
+#   - MeasurementShape: measuredItem (IRI), quantity, unit,
+#     measuredBy (IRI), measuredAt, measurementNo all mandatory.
+#     quantity must be a non-negative decimal; measurementNo must
+#     be >= 1.
+#
+# Same `sh:nodeKind sh:IRI` rationale as the older shapes: pyshacl
+# validates the new turtle in isolation, so a `sh:class bs:Project`
+# check would fail every legitimate write. Cross-graph SHACL is
+# deferred to the V0.31 tenant SPARQL firewall.
+
+bs:BOQItemShape a sh:NodeShape ;
+    sh:targetClass bs:BOQItem ;
+    sh:property [
+        sh:path bs:itemCode ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:minLength 1 ;
+        sh:message "BOQ item must carry an itemCode." ;
+    ] ;
+    sh:property [
+        sh:path bs:description ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:minLength 1 ;
+        sh:message "BOQ item must carry a description." ;
+    ] ;
+    sh:property [
+        sh:path bs:unit ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:minLength 1 ;
+        sh:message "BOQ item must carry a unit (e.g. m³, m², m, nos, kg)." ;
+    ] ;
+    sh:property [
+        sh:path bs:ofProject ;
+        sh:nodeKind sh:IRI ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "BOQ item must point at its parent Project (IRI)." ;
+    ] ;
+    sh:property [
+        sh:path bs:boqItemNo ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "BOQ item must carry boqItemNo (e.g. '1.1', '2.3.4')." ;
+    ] ;
+    sh:property [
+        sh:path bs:quotedRate ;
+        sh:datatype xsd:decimal ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "BOQ item must carry quotedRate (INR, xsd:decimal)." ;
+    ] ;
+    sh:property [
+        sh:path bs:amount ;
+        sh:datatype xsd:decimal ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "BOQ item must carry amount = tenderedQty × quotedRate (server-computed)." ;
+    ] ;
+    sh:property [
+        sh:path bs:isStarRate ;
+        sh:datatype xsd:boolean ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "BOQ item must declare isStarRate (xsd:boolean)." ;
+    ] ;
+    sh:property [ sh:path bs:rateFromAnalysis ; sh:maxCount 1 ; sh:nodeKind sh:IRI ] .
+
+bs:MeasurementShape a sh:NodeShape ;
+    sh:targetClass bs:Measurement ;
+    sh:property [
+        sh:path bs:measuredItem ;
+        sh:nodeKind sh:IRI ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "Measurement must reference exactly one BOQ item (IRI)." ;
+    ] ;
+    sh:property [
+        sh:path bs:quantity ;
+        sh:datatype xsd:decimal ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:minInclusive 0 ;
+        sh:message "Measurement must carry a non-negative quantity." ;
+    ] ;
+    sh:property [
+        sh:path bs:unit ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:minLength 1 ;
+        sh:message "Measurement must carry a unit." ;
+    ] ;
+    sh:property [
+        sh:path bs:measuredBy ;
+        sh:nodeKind sh:IRI ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "Measurement must point at the User who recorded it (IRI)." ;
+    ] ;
+    sh:property [
+        sh:path bs:measuredAt ;
+        sh:datatype xsd:dateTime ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "Measurement must record a measuredAt timestamp." ;
+    ] ;
+    sh:property [
+        sh:path bs:measurementNo ;
+        sh:datatype xsd:integer ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:minInclusive 1 ;
+        sh:message "measurementNo must be a positive integer (>= 1)." ;
+    ] ;
+    sh:property [
+        sh:path bs:linkedElement ;
+        sh:datatype xsd:string ;
+        sh:maxCount 1 ;
+        sh:message "Optional IFC GUID linking this measurement to a bs:Element." ;
+    ] ;
+    sh:property [
+        sh:path bs:mbPageRef ;
+        sh:datatype xsd:string ;
+        sh:maxCount 1 ;
+        sh:message "Optional Measurement Book page reference." ;
+    ] ;
+    sh:property [
+        sh:path bs:jointSignatureRequired ;
+        sh:datatype xsd:boolean ;
+        sh:maxCount 1 ;
+        sh:message "Optional computed flag: true when cumulative amount exceeds project threshold." ;
+    ] .
+
+
+# V0.30 — OrgShape. orgName + orgSlug + createdAt are mandatory.
+# orgPlan is optional (defaults to "pilot" application-side); when
+# present it must be one of the four valid tiers.
+
+bs:OrgShape a sh:NodeShape ;
+    sh:targetClass bs:Organisation ;
+    sh:property [
+        sh:path bs:orgName ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:minLength 1 ;
+        sh:message "Organisation must have orgName." ;
+    ] ;
+    sh:property [
+        sh:path bs:orgSlug ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:pattern "^[a-z0-9][a-z0-9-]{1,49}$" ;
+        sh:message "orgSlug must be 2-50 lowercase letters / digits / hyphens (no leading hyphen)." ;
+    ] ;
+    sh:property [
+        sh:path bs:createdAt ;
+        sh:datatype xsd:dateTime ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "Organisation must have a createdAt timestamp." ;
+    ] ;
+    sh:property [
+        sh:path bs:orgPlan ;
+        sh:datatype xsd:string ;
+        sh:in ( "pilot" "project" "enterprise" "sovereign" ) ;
+        sh:maxCount 1 ;
+        sh:message "orgPlan, when set, must be pilot / project / enterprise / sovereign." ;
+    ] ;
+    # V0.37 — pilotStatus is optional (POST /orgs defaults it to
+    # bs:Invited application-side); when present it must be one of
+    # the four bs:PilotStatus individuals.
+    # sh:in only (no sh:class) — mirrors NCRShape's bs:status. An
+    # sh:class bs:PilotStatus check would need the `bs:X a
+    # bs:PilotStatus` typing triple in the *data* graph, but the API
+    # validates a node's turtle in isolation (no ontology import), so
+    # sh:class would spuriously reject every real write.
+    sh:property [
+        sh:path bs:pilotStatus ;
+        sh:in ( bs:Invited bs:Active bs:Churned bs:Converted ) ;
+        sh:maxCount 1 ;
+        sh:message "pilotStatus, when set, must be one of bs:Invited / bs:Active / bs:Churned / bs:Converted." ;
+    ] .
+
+# =========================================================
+# S1.1 — Schedule ingestion shapes.
+#
+# ActivityShape is DELIBERATELY permissive: it has NO required
+# properties. bs:Activity has writers since V0.09 that use
+# dct:title (not bs:activityName) and carry no bs:activityId — a
+# mandatory shape would retro-break every legacy activity (and the
+# whole DPR/NCR/RA-Bill chain that references them). pyshacl
+# validates each turtle in isolation, so we can only constrain
+# *format* of the schedule properties when present; the ingester
+# enforces activityId+activityName at the application layer.
+#
+# ScheduleLinkShape DOES require linkSource + linkType: a reified
+# predecessor edge is meaningless without them, and it has exactly
+# one writer (the ingester), so there is no legacy to protect.
+# =========================================================
+
+bs:ActivityShape a sh:NodeShape ;
+    sh:targetClass bs:Activity ;
+    sh:property [
+        sh:path bs:activityId ;
+        sh:datatype xsd:string ;
+        sh:maxCount 1 ;
+        sh:message "activityId, when set, is a single string." ;
+    ] ;
+    sh:property [
+        sh:path bs:activityName ;
+        sh:datatype xsd:string ;
+        sh:maxCount 1 ;
+        sh:message "activityName, when set, is a single string." ;
+    ] ;
+    sh:property [
+        sh:path bs:plannedStartDate ;
+        sh:datatype xsd:dateTime ;
+        sh:maxCount 1 ;
+        sh:message "plannedStart, when set, must be a single xsd:dateTime." ;
+    ] ;
+    sh:property [
+        sh:path bs:plannedFinishDate ;
+        sh:datatype xsd:dateTime ;
+        sh:maxCount 1 ;
+        sh:message "plannedFinish, when set, must be a single xsd:dateTime." ;
+    ] ;
+    sh:property [
+        sh:path bs:percentComplete ;
+        sh:datatype xsd:decimal ;
+        sh:maxCount 1 ;
+        sh:minInclusive 0 ;
+        sh:maxInclusive 100 ;
+        sh:message "percentComplete, when set, is a single decimal in 0-100." ;
+    ] ;
+    sh:property [
+        sh:path bs:isCritical ;
+        sh:datatype xsd:boolean ;
+        sh:maxCount 1 ;
+        sh:message "isCritical, when set, is a single boolean." ;
+    ] ;
+    sh:property [
+        sh:path bs:totalFloat ;
+        sh:datatype xsd:decimal ;
+        sh:maxCount 1 ;
+        sh:message "totalFloat, when set, is a single decimal (days)." ;
+    ] .
+
+bs:ScheduleLinkShape a sh:NodeShape ;
+    sh:targetClass bs:ScheduleLink ;
+    sh:property [
+        sh:path bs:linkSource ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "ScheduleLink must name its predecessor activity (linkSource)." ;
+    ] ;
+    sh:property [
+        sh:path bs:linkType ;
+        sh:datatype xsd:string ;
+        sh:in ( "FS" "SS" "FF" "SF" ) ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "ScheduleLink type must be one of FS / SS / FF / SF." ;
+    ] ;
+    sh:property [
+        sh:path bs:linkLag ;
+        sh:datatype xsd:decimal ;
+        sh:maxCount 1 ;
+        sh:message "linkLag, when set, is a single decimal (days)." ;
+    ] .
+
+# ---------- S2.1 — Drawing & document control ----------
+#
+# drawingId / drawingTitle / lifecycleState / fileRef / uploadedAt /
+# ofProject are mandatory. lifecycleState is constrained by sh:in
+# over the five bs:DrawingState individuals — sh:in ONLY, NO sh:class
+# (the API validates a node's turtle in isolation with no ontology
+# import; an sh:class bs:DrawingState check would spuriously reject
+# every real write — same lesson as NCRShape's bs:status / V0.37's
+# OrgShape pilotStatus). Valid lifecycle transitions
+# (WIP->Shared->Published->Archived; any->Superseded on a newer
+# published revision) are enforced in drawing_routes.py, not here:
+# SHACL validates one node in isolation and cannot see the prior
+# state, so the state machine lives in the API.
+bs:DrawingShape a sh:NodeShape ;
+    sh:targetClass bs:Drawing ;
+    sh:property [
+        sh:path bs:drawingId ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:minLength 1 ;
+        sh:message "Drawing must carry a project-unique drawingId." ;
+    ] ;
+    sh:property [
+        sh:path bs:drawingTitle ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:minLength 1 ;
+        sh:message "Drawing must carry a title." ;
+    ] ;
+    sh:property [
+        sh:path bs:lifecycleState ;
+        sh:nodeKind sh:IRI ;
+        sh:in ( bs:WIP bs:Shared bs:Published bs:Archived bs:Superseded ) ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "lifecycleState must be one of bs:WIP / bs:Shared / bs:Published / bs:Archived / bs:Superseded." ;
+    ] ;
+    sh:property [
+        sh:path bs:fileRef ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "Drawing must reference its stored file (fileRef)." ;
+    ] ;
+    sh:property [
+        sh:path bs:uploadedAt ;
+        sh:datatype xsd:dateTime ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "Drawing must record an uploadedAt timestamp." ;
+    ] ;
+    sh:property [
+        sh:path bs:ofProject ;
+        sh:nodeKind sh:IRI ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "Drawing must point at its owning project (ofProject, IRI)." ;
+    ] .
+
+# ---------- S2.2 — AI-detected revision change ----------
+#
+# changeType / changeDescription / detectedAt / detectedBy /
+# inDrawing / comparedWith mandatory; locationHint optional.
+# changeType via sh:in over the three literals (same idiom as
+# ScheduleLinkShape's linkType — string sh:in, no sh:class).
+bs:DrawingChangeShape a sh:NodeShape ;
+    sh:targetClass bs:DrawingChange ;
+    sh:property [
+        sh:path bs:changeType ;
+        sh:datatype xsd:string ;
+        sh:in ( "Added" "Removed" "Modified" ) ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "changeType must be one of Added / Removed / Modified." ;
+    ] ;
+    sh:property [
+        sh:path bs:changeDescription ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:minLength 1 ;
+        sh:message "DrawingChange must carry a non-empty description." ;
+    ] ;
+    sh:property [
+        sh:path bs:detectedAt ;
+        sh:datatype xsd:dateTime ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "DrawingChange must record detectedAt." ;
+    ] ;
+    sh:property [
+        sh:path bs:detectedBy ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:minLength 1 ;
+        sh:message "DrawingChange must name the model that detected it." ;
+    ] ;
+    sh:property [
+        sh:path bs:inDrawing ;
+        sh:nodeKind sh:IRI ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "DrawingChange must point at the (new) drawing (inDrawing, IRI)." ;
+    ] ;
+    sh:property [
+        sh:path bs:comparedWith ;
+        sh:nodeKind sh:IRI ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "DrawingChange must point at the prior revision (comparedWith, IRI)." ;
+    ] ;
+    sh:property [
+        sh:path bs:locationHint ;
+        sh:datatype xsd:string ;
+        sh:maxCount 1 ;
+        sh:message "locationHint, when set, is a single string." ;
+    ] .
+
+# ---------- S2.3 — drawing markup annotation ----------
+#
+# annotationType / pageNumber / geometry / onDrawing / annotatedBy /
+# annotatedAt mandatory. annotationType via sh:in over the five
+# tool literals (string sh:in, no sh:class — same idiom as
+# ScheduleLinkShape / DrawingChangeShape). Everything else optional.
+bs:AnnotationShape a sh:NodeShape ;
+    sh:targetClass bs:Annotation ;
+    sh:property [
+        sh:path bs:annotationType ;
+        sh:datatype xsd:string ;
+        sh:in ( "RevisionCloud" "Callout" "Text" "Dimension" "Stamp" ) ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "annotationType must be one of RevisionCloud / Callout / Text / Dimension / Stamp." ;
+    ] ;
+    sh:property [
+        sh:path bs:pageNumber ;
+        sh:datatype xsd:integer ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:minInclusive 1 ;
+        sh:message "Annotation must carry a 1-based pageNumber." ;
+    ] ;
+    sh:property [
+        sh:path bs:geometry ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:minLength 1 ;
+        sh:message "Annotation must carry geometry (SVG path / coord JSON)." ;
+    ] ;
+    sh:property [
+        sh:path bs:onDrawing ;
+        sh:nodeKind sh:IRI ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "Annotation must point at its drawing (onDrawing, IRI)." ;
+    ] ;
+    sh:property [
+        sh:path bs:annotatedBy ;
+        sh:nodeKind sh:IRI ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "Annotation must record who made it (annotatedBy, IRI)." ;
+    ] ;
+    sh:property [
+        sh:path bs:annotatedAt ;
+        sh:datatype xsd:dateTime ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "Annotation must record annotatedAt." ;
+    ] ;
+    sh:property [
+        sh:path bs:annotationText ;
+        sh:datatype xsd:string ;
+        sh:maxCount 1 ;
+    ] ;
+    sh:property [
+        sh:path bs:stampType ;
+        sh:datatype xsd:string ;
+        sh:maxCount 1 ;
+    ] ;
+    sh:property [
+        sh:path bs:colour ;
+        sh:datatype xsd:string ;
+        sh:maxCount 1 ;
+    ] .
+
+# ---------- S2.5 — RFI ----------
+#
+# rfiId / rfiSubject / rfiBody / discipline / rfiState / raisedBy /
+# ofProject mandatory. rfiState via sh:in over the 6 individuals
+# (sh:in ONLY, no sh:class — node validated in isolation, V0.37
+# caveat). State-machine rule (sh:or, mirrors NCRShape's Closed
+# rule): an RFIAnswered RFI must carry answeredBy + rfiAnswer.
+# Transition legality + role guards live in the API (SHACL can't
+# see the prior state or JWT claims).
+bs:RFIShape a sh:NodeShape ;
+    sh:targetClass bs:RFI ;
+    sh:property [
+        sh:path bs:rfiId ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:minLength 1 ;
+        sh:message "RFI must carry a project-unique rfiId (RFI-NNNN)." ;
+    ] ;
+    sh:property [
+        sh:path bs:rfiSubject ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:minLength 1 ;
+        sh:message "RFI must carry a subject." ;
+    ] ;
+    sh:property [
+        sh:path bs:rfiBody ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:minLength 1 ;
+        sh:message "RFI must carry a body (the question)." ;
+    ] ;
+    sh:property [
+        sh:path bs:discipline ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "RFI must carry a discipline." ;
+    ] ;
+    sh:property [
+        sh:path bs:rfiState ;
+        sh:nodeKind sh:IRI ;
+        sh:in ( bs:RFIDraft bs:RFISubmitted bs:RFIUnderReview bs:RFIAnswered bs:RFIClosed bs:RFICancelled ) ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "rfiState must be one of bs:RFIDraft / RFISubmitted / RFIUnderReview / RFIAnswered / RFIClosed / RFICancelled." ;
+    ] ;
+    sh:property [
+        sh:path bs:raisedBy ;
+        sh:nodeKind sh:IRI ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "RFI must record who raised it (raisedBy, IRI)." ;
+    ] ;
+    sh:property [
+        sh:path bs:ofProject ;
+        sh:nodeKind sh:IRI ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "RFI must point at its owning project (ofProject, IRI)." ;
+    ] ;
+    # State-machine rule: an Answered RFI must carry answeredBy +
+    # rfiAnswer. Conformant iff EITHER state is NOT RFIAnswered OR
+    # both are present (same sh:or idiom as NCRShape's Closed rule).
+    sh:or (
+        [ sh:not [ sh:property [ sh:path bs:rfiState ; sh:hasValue bs:RFIAnswered ] ] ]
+        [
+            sh:property [ sh:path bs:answeredBy ; sh:nodeKind sh:IRI ;     sh:minCount 1 ; sh:maxCount 1 ] ;
+            sh:property [ sh:path bs:rfiAnswer ;  sh:datatype xsd:string ; sh:minCount 1 ; sh:minLength 1 ]
+        ]
+    ) ;
+    sh:message "An Answered RFI must carry answeredBy and rfiAnswer." .
+
+# ---------- S2.6 — Transmittal ----------
+#
+# transmittalId / transmittalDate / issuedBy / issuedTo (>=1) /
+# purpose / includesDrawings (>=1) / ofProject mandatory.
+# purpose via sh:in over the 6 literals (string sh:in, no sh:class
+# — same idiom as DrawingChangeShape / AnnotationShape).
+# transmittalNote / includesDocuments / transmittalPdfRef are
+# optional and left unconstrained here.
+bs:TransmittalShape a sh:NodeShape ;
+    sh:targetClass bs:Transmittal ;
+    sh:property [
+        sh:path bs:transmittalId ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:minLength 1 ;
+        sh:message "Transmittal must carry a project-unique transmittalId (T-NNNN)." ;
+    ] ;
+    sh:property [
+        sh:path bs:transmittalDate ;
+        sh:datatype xsd:dateTime ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "Transmittal must record transmittalDate." ;
+    ] ;
+    sh:property [
+        sh:path bs:issuedBy ;
+        sh:nodeKind sh:IRI ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "Transmittal must record who issued it (issuedBy, IRI)." ;
+    ] ;
+    sh:property [
+        sh:path bs:issuedTo ;
+        sh:nodeKind sh:IRI ;
+        sh:minCount 1 ;
+        sh:message "Transmittal must be issued to at least one user (issuedTo, IRI)." ;
+    ] ;
+    sh:property [
+        sh:path bs:purpose ;
+        sh:datatype xsd:string ;
+        sh:in ( "ForConstruction" "ForReview" "ForApproval" "ForInformation" "AsBuilt" "Superseded" ) ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "purpose must be ForConstruction / ForReview / ForApproval / ForInformation / AsBuilt / Superseded." ;
+    ] ;
+    sh:property [
+        sh:path bs:includesDrawings ;
+        sh:nodeKind sh:IRI ;
+        sh:minCount 1 ;
+        sh:message "Transmittal must include at least one drawing (includesDrawings, IRI)." ;
+    ] ;
+    sh:property [
+        sh:path bs:ofProject ;
+        sh:nodeKind sh:IRI ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "Transmittal must point at its owning project (ofProject, IRI)." ;
+    ] .
+
+# ---------- S2.7 — BCF / Issue ----------
+#
+# issueId / issueTitle / issueType / issueStatus / ofProject /
+# createdAt mandatory. issueType + issueStatus via sh:in over the
+# defined literals (no sh:class — same idiom as
+# DrawingChangeShape / TransmittalShape). issueDescription /
+# issuePriority / ifcGuid / viewpointSnapshot / bcfGuid /
+# linkedRFI / linkedDrawing / linkedActivity / assignedTo /
+# dueDate / resolvedAt are all optional and left unconstrained.
+bs:IssueShape a sh:NodeShape ;
+    sh:targetClass bs:Issue ;
+    sh:property [
+        sh:path bs:issueId ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:minLength 1 ;
+        sh:message "Issue must carry a project-unique issueId." ;
+    ] ;
+    sh:property [
+        sh:path bs:issueTitle ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:minLength 1 ;
+        sh:message "Issue must carry a title." ;
+    ] ;
+    sh:property [
+        sh:path bs:issueType ;
+        sh:datatype xsd:string ;
+        sh:in ( "Clash" "Coordination" "Design" "Construction" "Safety" "Other" ) ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "issueType must be Clash / Coordination / Design / Construction / Safety / Other." ;
+    ] ;
+    sh:property [
+        sh:path bs:issueStatus ;
+        sh:datatype xsd:string ;
+        sh:in ( "Open" "InProgress" "Resolved" "Closed" "ReOpened" "WontFix" ) ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "issueStatus must be Open / InProgress / Resolved / Closed / ReOpened / WontFix." ;
+    ] ;
+    sh:property [
+        sh:path bs:ofProject ;
+        sh:nodeKind sh:IRI ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "Issue must point at its owning project (ofProject, IRI)." ;
+    ] ;
+    sh:property [
+        sh:path bs:createdAt ;
+        sh:datatype xsd:dateTime ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "Issue must record createdAt." ;
+    ] .
+
+# S2.8 — IFC Element shape. ifcGuid + elementType + ofProject mandatory.
+# elementName / discipline / spatialZone / modelRevision are optional —
+# IFC files in the wild are messy and the goal is best-effort capture,
+# not strict completeness. Validates one element in isolation; nothing
+# in this shape touches the spatial hierarchy.
+bs:ElementShape a sh:NodeShape ;
+    sh:targetClass bs:Element ;
+    sh:property [
+        sh:path bs:ifcGuid ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "Element must carry the IFC GlobalId via bs:ifcGuid." ;
+    ] ;
+    sh:property [
+        sh:path bs:elementType ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "Element must declare its IFC class via bs:elementType (e.g. 'IfcWall')." ;
+    ] ;
+    sh:property [
+        sh:path bs:ofProject ;
+        sh:nodeKind sh:IRI ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "Element must point at its owning project (ofProject, IRI)." ;
+    ] .
+
+# S2.9 — eSign approval flow.
+# SignatureEventShape validates every bs:SignatureEvent written to the
+# project graph. All fields except signatureCertificate are mandatory.
+# signatureProvider + signaturePurpose use sh:in (string literals, no
+# sh:class — cross-graph-validation caveat, same as DrawingState / NCRStatus).
+# legallyBinding is required so queries can reliably filter stub (false)
+# from real (true) signatures without OPTIONAL.
+bs:SignatureEventShape a sh:NodeShape ;
+    sh:targetClass bs:SignatureEvent ;
+    sh:property [
+        sh:path bs:signatureId ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "SignatureEvent must carry a unique signatureId." ;
+    ] ;
+    sh:property [
+        sh:path bs:signedBy ;
+        sh:nodeKind sh:IRI ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "SignatureEvent must record the signer (signedBy, IRI of bs:User)." ;
+    ] ;
+    sh:property [
+        sh:path bs:signedAt ;
+        sh:datatype xsd:dateTime ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "SignatureEvent must record when the signature was applied (signedAt, xsd:dateTime)." ;
+    ] ;
+    sh:property [
+        sh:path bs:signatureProvider ;
+        sh:datatype xsd:string ;
+        sh:in ( "eMudhra" "DigiLocker" "Stub" ) ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "signatureProvider must be one of: eMudhra, DigiLocker, Stub." ;
+    ] ;
+    sh:property [
+        sh:path bs:signaturePurpose ;
+        sh:datatype xsd:string ;
+        sh:in ( "DrawingApproval" "RFIConfirmation" "TransmittalApproval" "JointMeasurement" ) ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "signaturePurpose must be one of: DrawingApproval, RFIConfirmation, TransmittalApproval, JointMeasurement." ;
+    ] ;
+    sh:property [
+        sh:path bs:signedDocument ;
+        sh:nodeKind sh:IRI ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "SignatureEvent must reference the signed document (signedDocument, IRI)." ;
+    ] ;
+    sh:property [
+        sh:path bs:legallyBinding ;
+        sh:datatype xsd:boolean ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "SignatureEvent must declare legallyBinding (xsd:boolean)." ;
+    ] .
+
+# S3.1 — SOR library shapes
+bs:SORLibraryShape a sh:NodeShape ;
+    sh:targetClass bs:SORLibrary ;
+    sh:property [ sh:path bs:sorLibraryId ; sh:datatype xsd:string ; sh:minCount 1 ; sh:maxCount 1 ;
+                  sh:message "SORLibrary must carry a sorLibraryId." ] ;
+    sh:property [ sh:path bs:publisher ; sh:datatype xsd:string ; sh:minCount 1 ; sh:maxCount 1 ;
+                  sh:message "SORLibrary must carry a publisher." ] ;
+    sh:property [ sh:path bs:sorYear ; sh:datatype xsd:integer ; sh:minCount 1 ; sh:maxCount 1 ;
+                  sh:message "SORLibrary must carry sorYear." ] ;
+    sh:property [ sh:path bs:ingestedAt ; sh:datatype xsd:dateTime ; sh:minCount 1 ; sh:maxCount 1 ;
+                  sh:message "SORLibrary must carry ingestedAt." ] .
+
+bs:SORItemShape a sh:NodeShape ;
+    sh:targetClass bs:SORItem ;
+    sh:property [ sh:path bs:sorCode ; sh:datatype xsd:string ; sh:minCount 1 ; sh:maxCount 1 ;
+                  sh:message "SORItem must carry sorCode." ] ;
+    sh:property [ sh:path bs:sorDescription ; sh:datatype xsd:string ; sh:minCount 1 ; sh:maxCount 1 ;
+                  sh:message "SORItem must carry sorDescription." ] ;
+    sh:property [ sh:path bs:unit ; sh:datatype xsd:string ; sh:minCount 1 ; sh:maxCount 1 ;
+                  sh:message "SORItem must carry unit." ] ;
+    sh:property [ sh:path bs:baseRate ; sh:datatype xsd:decimal ; sh:minCount 1 ; sh:maxCount 1 ;
+                  sh:message "SORItem must carry baseRate." ] ;
+    sh:property [ sh:path bs:rateYear ; sh:datatype xsd:integer ; sh:minCount 1 ; sh:maxCount 1 ;
+                  sh:message "SORItem must carry rateYear." ] ;
+    sh:property [ sh:path bs:partOf ; sh:nodeKind sh:IRI ; sh:minCount 1 ; sh:maxCount 1 ;
+                  sh:message "SORItem must link to its parent SORLibrary via bs:partOf." ] .
+
+# S3.5 — JointMeasurementShape.
+# jmId / contractorSignatory / departmentalSignatory / jmStatus / measuredItem mandatory.
+# JMComplete requires contractorSignedAt + departmentalSignedAt.
+# JMRejected requires rejectedBy + rejectionReason.
+
+bs:JointMeasurementShape a sh:NodeShape ;
+    sh:targetClass bs:JointMeasurement ;
+    sh:property [
+        sh:path bs:jmId ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:minLength 1 ;
+        sh:message "JointMeasurement must carry a jmId (e.g. JM-0001)." ;
+    ] ;
+    sh:property [
+        sh:path bs:jmStatus ;
+        sh:nodeKind sh:IRI ;
+        sh:in ( bs:JMPendingContractor bs:JMPendingDepartmental bs:JMComplete bs:JMRejected ) ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "jmStatus must be one of the four bs:JMStatus individuals." ;
+    ] ;
+    sh:property [
+        sh:path bs:contractorSignatory ;
+        sh:nodeKind sh:IRI ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "JointMeasurement must identify the contractor signatory (IRI)." ;
+    ] ;
+    sh:property [
+        sh:path bs:departmentalSignatory ;
+        sh:nodeKind sh:IRI ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "JointMeasurement must identify the departmental signatory JE/AE (IRI)." ;
+    ] ;
+    sh:property [
+        sh:path bs:measuredItem ;
+        sh:nodeKind sh:IRI ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "JointMeasurement must reference the BOQ item (IRI)." ;
+    ] ;
+    # JMComplete requires both signature timestamps.
+    sh:or (
+        [ sh:not [ sh:property [ sh:path bs:jmStatus ; sh:hasValue bs:JMComplete ] ] ]
+        [
+            sh:property [ sh:path bs:contractorSignedAt ;   sh:datatype xsd:dateTime ; sh:minCount 1 ; sh:maxCount 1 ] ;
+            sh:property [ sh:path bs:departmentalSignedAt ; sh:datatype xsd:dateTime ; sh:minCount 1 ; sh:maxCount 1 ]
+        ]
+    ) ;
+    # JMRejected requires rejectedBy + rejectionReason.
+    sh:or (
+        [ sh:not [ sh:property [ sh:path bs:jmStatus ; sh:hasValue bs:JMRejected ] ] ]
+        [
+            sh:property [ sh:path bs:rejectedBy ;      sh:nodeKind sh:IRI ;     sh:minCount 1 ; sh:maxCount 1 ] ;
+            sh:property [ sh:path bs:rejectionReason ; sh:datatype xsd:string ; sh:minCount 1 ; sh:minLength 1 ]
+        ]
+    ) .
+
+# S3.6 — RABillShape and RecoveryShape.
+# All monetary fields mandatory.
+# billState sh:in over the 4 BillState individuals (sh:in ONLY, no sh:class
+# — cross-graph-validation caveat, same posture as JointMeasurementShape).
+# SHACL invariant: netPayable = currentGross − totalRecoveries (sh:sparql).
+# RecoveryShape: recoveryType + recoveryRate + recoveryAmount + recoveryBase +
+# forBill mandatory.
+
+bs:RABillShape a sh:NodeShape ;
+    sh:targetClass bs:RABill ;
+    sh:property [
+        sh:path bs:billNo ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:minLength 1 ;
+        sh:message "RABill must carry a billNo (e.g. RA-1)." ;
+    ] ;
+    sh:property [
+        sh:path bs:billDate ;
+        sh:datatype xsd:date ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "RABill must carry a billDate." ;
+    ] ;
+    sh:property [
+        sh:path bs:billingPeriodStart ;
+        sh:datatype xsd:date ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "RABill must carry a billingPeriodStart." ;
+    ] ;
+    sh:property [
+        sh:path bs:billingPeriodEnd ;
+        sh:datatype xsd:date ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "RABill must carry a billingPeriodEnd." ;
+    ] ;
+    sh:property [
+        sh:path bs:cumulativeGross ;
+        sh:datatype xsd:decimal ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "RABill must carry cumulativeGross." ;
+    ] ;
+    sh:property [
+        sh:path bs:previousBillAmount ;
+        sh:datatype xsd:decimal ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "RABill must carry previousBillAmount." ;
+    ] ;
+    sh:property [
+        sh:path bs:currentGross ;
+        sh:datatype xsd:decimal ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "RABill must carry currentGross." ;
+    ] ;
+    sh:property [
+        sh:path bs:totalRecoveries ;
+        sh:datatype xsd:decimal ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "RABill must carry totalRecoveries." ;
+    ] ;
+    sh:property [
+        sh:path bs:netPayable ;
+        sh:datatype xsd:decimal ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "RABill must carry netPayable." ;
+    ] ;
+    sh:property [
+        sh:path bs:billState ;
+        sh:nodeKind sh:IRI ;
+        sh:in ( bs:BillDraft bs:BillSubmitted bs:BillApproved bs:BillFinalised ) ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "billState must be one of the four bs:BillState individuals." ;
+    ] ;
+    sh:property [
+        sh:path bs:ofProject ;
+        sh:nodeKind sh:IRI ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "RABill must link to its project via bs:ofProject." ;
+    ] ;
+    sh:property [
+        sh:path bs:preparedBy ;
+        sh:nodeKind sh:IRI ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "RABill must identify its preparer via bs:preparedBy." ;
+    ] ;
+    # Arithmetic integrity invariant: netPayable = currentGross − totalRecoveries (±₹0.01)
+    sh:sparql [
+        a sh:SPARQLConstraint ;
+        sh:message "netPayable must equal currentGross minus totalRecoveries (arithmetic integrity check, tolerance ±₹0.01)." ;
+        sh:select """
+            SELECT $this
+            WHERE {
+                $this <https://bimsaarthi.com/ontology/v0/netPayable> ?net ;
+                      <https://bimsaarthi.com/ontology/v0/currentGross> ?gross ;
+                      <https://bimsaarthi.com/ontology/v0/totalRecoveries> ?rec .
+                FILTER (ABS(?net - ?gross + ?rec) > 0.01)
+            }
+        """ ;
+    ] .
+
+bs:RecoveryShape a sh:NodeShape ;
+    sh:targetClass bs:Recovery ;
+    sh:property [
+        sh:path bs:recoveryType ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:minLength 1 ;
+        sh:message "Recovery must carry a recoveryType." ;
+    ] ;
+    sh:property [
+        sh:path bs:recoveryRate ;
+        sh:datatype xsd:decimal ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "Recovery must carry a recoveryRate." ;
+    ] ;
+    sh:property [
+        sh:path bs:recoveryAmount ;
+        sh:datatype xsd:decimal ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "Recovery must carry a recoveryAmount." ;
+    ] ;
+    sh:property [
+        sh:path bs:recoveryBase ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "Recovery must carry a recoveryBase." ;
+    ] ;
+    sh:property [
+        sh:path bs:forBill ;
+        sh:nodeKind sh:IRI ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "Recovery must link to its parent RABill via bs:forBill." ;
+    ] .
+
+# ==========================================================
+# S3.7 — DeviationShape
+# ==========================================================
+
+bs:DeviationShape a sh:NodeShape ;
+    sh:targetClass bs:Deviation ;
+    sh:property [
+        sh:path bs:forBOQItem ;
+        sh:nodeKind sh:IRI ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "Deviation must link to its bs:BOQItem via bs:forBOQItem." ;
+    ] ;
+    sh:property [
+        sh:path bs:tenderedQty ;
+        sh:datatype xsd:decimal ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "Deviation must carry the tendered quantity." ;
+    ] ;
+    sh:property [
+        sh:path bs:measuredQty ;
+        sh:datatype xsd:decimal ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "Deviation must carry the measured quantity." ;
+    ] ;
+    sh:property [
+        sh:path bs:deviationPct ;
+        sh:datatype xsd:decimal ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "Deviation must carry deviationPct." ;
+    ] ;
+    sh:property [
+        sh:path bs:deviationState ;
+        sh:in ("Pending" "ApprovedEE" "ApprovedSE" "ApprovedCE" "Rejected") ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "Deviation must carry a valid deviationState." ;
+    ] ;
+    sh:property [
+        sh:path bs:forBill ;
+        sh:nodeKind sh:IRI ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "Deviation must link to its parent RABill via bs:forBill." ;
+    ] .
+
+# S3.9 — Payment shape
+bs:PaymentShape a sh:NodeShape ;
+    sh:targetClass bs:Payment ;
+    sh:property [
+        sh:path bs:paymentId ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "Payment must carry a paymentId (Tally voucher number)." ;
+    ] ;
+    sh:property [
+        sh:path bs:paymentDate ;
+        sh:datatype xsd:date ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "Payment must carry a paymentDate." ;
+    ] ;
+    sh:property [
+        sh:path bs:paymentAmount ;
+        sh:datatype xsd:decimal ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "Payment must carry a paymentAmount." ;
+    ] ;
+    sh:property [
+        sh:path bs:ofProject ;
+        sh:nodeKind sh:IRI ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "Payment must link to its project via bs:ofProject." ;
+    ] .
+
+# S3.9 — MaterialIssue shape
+bs:MaterialIssueShape a sh:NodeShape ;
+    sh:targetClass bs:MaterialIssue ;
+    sh:property [
+        sh:path bs:material ;
+        # sh:in ONLY — no sh:datatype alongside (pyshacl rejects typed literals vs plain sh:in values)
+        sh:in ("Cement" "Steel" "Bitumen" "Sand" "Aggregate" "Brick" "Other") ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "MaterialIssue must carry a valid material name." ;
+    ] ;
+    sh:property [
+        sh:path bs:issueDate ;
+        sh:datatype xsd:date ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "MaterialIssue must carry an issueDate." ;
+    ] ;
+    sh:property [
+        sh:path bs:quantityIssued ;
+        sh:datatype xsd:decimal ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "MaterialIssue must carry quantityIssued." ;
+    ] ;
+    sh:property [
+        sh:path bs:unit ;
+        # sh:in ONLY — no sh:datatype alongside (same pyshacl antipattern as bs:material)
+        sh:in ("bags" "MT" "m³" "nos" "units") ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "MaterialIssue must carry a valid unit." ;
+    ] ;
+    sh:property [
+        sh:path bs:ofProject ;
+        sh:nodeKind sh:IRI ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "MaterialIssue must link to its project via bs:ofProject." ;
+    ] .
+
+# ====================================================================
+# S4.2 — EVMSnapshotShape
+# ====================================================================
+# Every immutable EVM snapshot row must carry statusDate, PV, EV, AC,
+# BAC, EAC, ETC, CV, SV, VAC, computedAt, and ofProject. CPI and SPI
+# are intentionally optional — undefined when AC=0 or PV=0 (the engine
+# omits them rather than write a sentinel 0 that would mislead the
+# dashboard). The shape lets these snapshots be queried back with
+# COALESCE / OPTIONAL in SPARQL the same way the engine writes them.
+
+bs:EVMSnapshotShape a sh:NodeShape ;
+    sh:targetClass bs:EVMSnapshot ;
+    sh:property [
+        sh:path bs:statusDate ;
+        sh:datatype xsd:date ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+        sh:message "EVMSnapshot must carry a statusDate." ;
+    ] ;
+    sh:property [
+        sh:path bs:pv ;
+        sh:datatype xsd:decimal ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+    ] ;
+    sh:property [
+        sh:path bs:ev ;
+        sh:datatype xsd:decimal ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+    ] ;
+    sh:property [
+        sh:path bs:ac ;
+        sh:datatype xsd:decimal ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+    ] ;
+    sh:property [
+        sh:path bs:bac ;
+        sh:datatype xsd:decimal ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+    ] ;
+    sh:property [
+        sh:path bs:cpi ;
+        sh:datatype xsd:decimal ;
+        sh:maxCount 1 ;
+        # No sh:minCount — CPI is undefined when AC=0.
+    ] ;
+    sh:property [
+        sh:path bs:spi ;
+        sh:datatype xsd:decimal ;
+        sh:maxCount 1 ;
+        # No sh:minCount — SPI is undefined when PV=0.
+    ] ;
+    sh:property [
+        sh:path bs:eac ;
+        sh:datatype xsd:decimal ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+    ] ;
+    sh:property [
+        sh:path bs:etc ;
+        sh:datatype xsd:decimal ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+    ] ;
+    sh:property [
+        sh:path bs:cv ;
+        sh:datatype xsd:decimal ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+    ] ;
+    sh:property [
+        sh:path bs:sv ;
+        sh:datatype xsd:decimal ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+    ] ;
+    sh:property [
+        sh:path bs:vac ;
+        sh:datatype xsd:decimal ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+    ] ;
+    sh:property [
+        sh:path bs:computedAt ;
+        sh:datatype xsd:dateTime ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+    ] ;
+    sh:property [
+        sh:path bs:ofProject ;
+        sh:nodeKind sh:IRI ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+        sh:message "EVMSnapshot must link to its project via bs:ofProject." ;
+    ] .
+
+# ====================================================================
+# S4.5 — RiskShape
+# ====================================================================
+# Mandatory: riskId, riskTitle, riskCategory, probability, impact,
+# riskStatus, raisedBy, ofProject. riskScore is computed server-side
+# but optional in SHACL (an in-flight write might land before the
+# score-write follow-up, though the engine writes both atomically).
+# All sh:in enums use plain literals (pyshacl antipattern: never mix
+# sh:in with sh:datatype xsd:string — see S3.7 / S3.9 narrative).
+
+bs:RiskShape a sh:NodeShape ;
+    sh:targetClass bs:Risk ;
+    sh:property [
+        sh:path bs:riskId ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+        sh:datatype xsd:string ;
+        sh:message "Risk must carry a riskId." ;
+    ] ;
+    sh:property [
+        sh:path bs:riskTitle ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+        sh:datatype xsd:string ;
+        sh:message "Risk must carry a riskTitle." ;
+    ] ;
+    sh:property [
+        sh:path bs:riskCategory ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+        # sh:in only — no sh:datatype alongside (antipattern #13).
+        sh:in ("Design" "Commercial" "Resource" "External"
+               "Technical" "Regulatory" "Environmental" "Safety") ;
+        sh:message "Risk category must be one of the 8 standard buckets." ;
+    ] ;
+    sh:property [
+        sh:path bs:probability ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+        sh:in ("Low" "Medium" "High" "Critical") ;
+        sh:message "Probability must be Low / Medium / High / Critical." ;
+    ] ;
+    sh:property [
+        sh:path bs:impact ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+        sh:in ("Low" "Medium" "High" "Critical") ;
+        sh:message "Impact must be Low / Medium / High / Critical." ;
+    ] ;
+    sh:property [
+        sh:path bs:riskStatus ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+        sh:in ("Open" "Mitigating" "Closed" "Accepted") ;
+        sh:message "Risk status must be Open / Mitigating / Closed / Accepted." ;
+    ] ;
+    sh:property [
+        sh:path bs:riskScore ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:integer ;
+        # Optional in SHACL even though the engine always writes it —
+        # keeps the shape robust against a partial in-flight write.
+    ] ;
+    sh:property [
+        sh:path bs:raisedBy ;
+        sh:nodeKind sh:IRI ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+        sh:message "Risk must record who raised it." ;
+    ] ;
+    sh:property [
+        sh:path bs:ofProject ;
+        sh:nodeKind sh:IRI ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+        sh:message "Risk must link to its project via bs:ofProject." ;
+    ] .
+
+# ====================================================================
+# S4.6 — SavedQueryShape
+# ====================================================================
+# Mandatory: queryName, sparqlText, queryRole, visualType,
+# displayOrder, ofProject, createdBy. visualType + queryRole carry
+# their sh:in value sets via PLAIN literals (no co-declared
+# sh:datatype — antipattern #13 / pyshacl 0.31).
+
+bs:SavedQueryShape a sh:NodeShape ;
+    sh:targetClass bs:SavedQuery ;
+    sh:property [
+        sh:path bs:queryName ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+        sh:message "SavedQuery must carry a queryName." ;
+    ] ;
+    sh:property [
+        sh:path bs:sparqlText ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+        sh:message "SavedQuery must carry sparqlText." ;
+    ] ;
+    sh:property [
+        sh:path bs:queryRole ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+        sh:in ("Any" "PM" "Director" "Auditor") ;
+        sh:message "queryRole must be Any / PM / Director / Auditor." ;
+    ] ;
+    sh:property [
+        sh:path bs:visualType ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+        sh:in ("table" "number" "bar" "line" "pie") ;
+        sh:message "visualType must be table / number / bar / line / pie." ;
+    ] ;
+    sh:property [
+        sh:path bs:displayOrder ;
+        sh:datatype xsd:integer ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+    ] ;
+    sh:property [
+        sh:path bs:isPinned ;
+        sh:datatype xsd:boolean ;
+        sh:maxCount 1 ;
+    ] ;
+    sh:property [
+        sh:path bs:ofProject ;
+        sh:nodeKind sh:IRI ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+    ] ;
+    sh:property [
+        sh:path bs:createdBy ;
+        sh:nodeKind sh:IRI ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+    ] .
+
+# ====================================================================
+# S4.8 — ClashBatchShape
+# ====================================================================
+# One row per imported BCF zip. batchId / importedAt / totalClashes /
+# ofProject are mandatory. The count rollups (open/resolved/closure
+# rate) are written by the recompute path on every status transition;
+# left optional in SHACL so a partial in-flight write won't violate.
+
+bs:ClashBatchShape a sh:NodeShape ;
+    sh:targetClass bs:ClashBatch ;
+    sh:property [
+        sh:path bs:batchId ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+        sh:message "ClashBatch must carry a batchId." ;
+    ] ;
+    sh:property [
+        sh:path bs:importedAt ;
+        sh:datatype xsd:dateTime ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+    ] ;
+    sh:property [
+        sh:path bs:sourceFile ;
+        sh:datatype xsd:string ;
+        sh:maxCount 1 ;
+    ] ;
+    sh:property [
+        sh:path bs:totalClashes ;
+        sh:datatype xsd:integer ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+    ] ;
+    sh:property [
+        sh:path bs:openClashes ;
+        sh:datatype xsd:integer ;
+        sh:maxCount 1 ;
+    ] ;
+    sh:property [
+        sh:path bs:resolvedClashes ;
+        sh:datatype xsd:integer ;
+        sh:maxCount 1 ;
+    ] ;
+    sh:property [
+        sh:path bs:closureRate ;
+        sh:datatype xsd:decimal ;
+        sh:maxCount 1 ;
+    ] ;
+    sh:property [
+        sh:path bs:ofProject ;
+        sh:nodeKind sh:IRI ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+    ] .
+
+# ====================================================================
+# S4.9 — PurchaseOrderShape + GoodsReceiptShape
+# ====================================================================
+
+bs:PurchaseOrderShape a sh:NodeShape ;
+    sh:targetClass bs:PurchaseOrder ;
+    sh:property [
+        sh:path bs:poNumber ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+        sh:message "PurchaseOrder must carry a poNumber (SAP EBELN)." ;
+    ] ;
+    sh:property [
+        sh:path bs:poDate ;
+        sh:datatype xsd:date ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+    ] ;
+    sh:property [
+        sh:path bs:vendor ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+    ] ;
+    sh:property [
+        sh:path bs:poAmount ;
+        sh:datatype xsd:decimal ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+    ] ;
+    sh:property [
+        sh:path bs:poStatus ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+        # sh:in only — no co-declared sh:datatype (antipattern #13).
+        sh:in ("Open" "PartiallyDelivered" "FullyDelivered" "Cancelled") ;
+        sh:message "poStatus must be Open / PartiallyDelivered / FullyDelivered / Cancelled." ;
+    ] ;
+    sh:property [
+        sh:path bs:ofProject ;
+        sh:nodeKind sh:IRI ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+    ] .
+
+bs:GoodsReceiptShape a sh:NodeShape ;
+    sh:targetClass bs:GoodsReceipt ;
+    sh:property [
+        sh:path bs:grnNumber ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+        sh:message "GoodsReceipt must carry a grnNumber (SAP MBLNR)." ;
+    ] ;
+    sh:property [
+        sh:path bs:grnDate ;
+        sh:datatype xsd:date ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+    ] ;
+    sh:property [
+        sh:path bs:forPO ;
+        sh:nodeKind sh:IRI ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+        sh:message "GoodsReceipt must link to its PurchaseOrder via bs:forPO." ;
+    ] ;
+    sh:property [
+        sh:path bs:receivedAmount ;
+        sh:datatype xsd:decimal ;
+        sh:maxCount 1 ;
+    ] ;
+    sh:property [
+        sh:path bs:receivedQty ;
+        sh:datatype xsd:decimal ;
+        sh:maxCount 1 ;
+    ] ;
+    sh:property [
+        sh:path bs:ofProject ;
+        sh:nodeKind sh:IRI ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+    ] .
+
+# ====================================================================
+# S4.10 — ActivityPredictionShape
+# ====================================================================
+# delayRisk + costOverrunRisk + confidenceScore are bounded [0, 1]
+# (sigmoid outputs). predictedFloatChange is bounded [-30, 30] days
+# (tanh × 30). Bounds-enforcement keeps a buggy retrain from
+# corrupting the dashboard.
+
+bs:ActivityPredictionShape a sh:NodeShape ;
+    sh:targetClass bs:ActivityPrediction ;
+    sh:property [
+        sh:path bs:forActivity ;
+        sh:nodeKind sh:IRI ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+        sh:message "ActivityPrediction must link to its bs:Activity." ;
+    ] ;
+    sh:property [
+        sh:path bs:delayRisk ;
+        sh:datatype xsd:decimal ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+        sh:minInclusive 0.0 ;
+        sh:maxInclusive 1.0 ;
+        sh:message "delayRisk must be in [0.0, 1.0]." ;
+    ] ;
+    sh:property [
+        sh:path bs:costOverrunRisk ;
+        sh:datatype xsd:decimal ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+        sh:minInclusive 0.0 ;
+        sh:maxInclusive 1.0 ;
+        sh:message "costOverrunRisk must be in [0.0, 1.0]." ;
+    ] ;
+    sh:property [
+        sh:path bs:predictedFloatChange ;
+        sh:datatype xsd:decimal ;
+        sh:maxCount 1 ;
+        sh:minInclusive -30.0 ;
+        sh:maxInclusive 30.0 ;
+    ] ;
+    sh:property [
+        sh:path bs:confidenceScore ;
+        sh:datatype xsd:decimal ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+        sh:minInclusive 0.0 ;
+        sh:maxInclusive 1.0 ;
+    ] ;
+    sh:property [
+        sh:path bs:modelVersion ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+    ] ;
+    sh:property [
+        sh:path bs:predictedAt ;
+        sh:datatype xsd:dateTime ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+    ] ;
+    sh:property [
+        sh:path bs:ofProject ;
+        sh:nodeKind sh:IRI ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+    ] .
+
+# ─────────────────────────────────────────────────────────────────────────────
+# S5.1 — TenderShape + TenderBOQItemShape.
+#
+# Per antipattern #13: enum-valued properties use sh:in with plain literals only.
+# NO co-declared sh:datatype alongside sh:in (pyshacl 0.31 rejects conforming
+# fixtures when both are present).
+# Per the V0.19/V0.37 cross-graph-validation caveat: enum-class predicates
+# (bs:extractionStatus) use sh:in over the IRI individuals, NOT sh:class —
+# the API validates a node's turtle in isolation with no ontology import.
+# ─────────────────────────────────────────────────────────────────────────────
+
+bs:TenderShape a sh:NodeShape ;
+    sh:targetClass bs:Tender ;
+    sh:property [
+        sh:path bs:tenderId ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+    ] ;
+    sh:property [
+        sh:path bs:tenderTitle ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+        sh:minLength 1 ;
+    ] ;
+    sh:property [
+        sh:path bs:ofOrganisation ;
+        sh:nodeKind sh:IRI ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+    ] ;
+    sh:property [
+        sh:path bs:uploadedAt ;
+        sh:datatype xsd:dateTime ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+    ] ;
+    sh:property [
+        sh:path bs:extractionStatus ;
+        sh:nodeKind sh:IRI ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+        sh:in ( bs:Pending bs:Running bs:Complete bs:Failed bs:NeedsReview ) ;
+    ] ;
+    # Optional enum-valued fields — sh:in plain literals (antipattern #13).
+    sh:property [
+        sh:path bs:coverSystem ;
+        sh:maxCount 1 ;
+        sh:in ( "Single" "Two" "Three" ) ;
+    ] ;
+    sh:property [
+        sh:path bs:procurementMode ;
+        sh:maxCount 1 ;
+        sh:in ( "Open" "Limited" "Single" "Two-Stage" "Reverse" ) ;
+    ] ;
+    sh:property [
+        sh:path bs:contractForm ;
+        sh:maxCount 1 ;
+        sh:in ( "Lump-sum" "Rate" "BOT" "Other" ) ;
+    ] ;
+    # Optional numeric bounds — non-negative.
+    sh:property [
+        sh:path bs:estimatedValue ;
+        sh:datatype xsd:decimal ;
+        sh:maxCount 1 ;
+        sh:minInclusive 0 ;
+    ] ;
+    sh:property [
+        sh:path bs:emdPercentage ;
+        sh:datatype xsd:decimal ;
+        sh:maxCount 1 ;
+        sh:minInclusive 0 ; sh:maxInclusive 100 ;
+    ] ;
+    sh:property [
+        sh:path bs:pbgPercentage ;
+        sh:datatype xsd:decimal ;
+        sh:maxCount 1 ;
+        sh:minInclusive 0 ; sh:maxInclusive 100 ;
+    ] .
+
+bs:TenderBOQItemShape a sh:NodeShape ;
+    sh:targetClass bs:TenderBOQItem ;
+    sh:property [
+        sh:path bs:tenderBoqSno ;
+        sh:datatype xsd:integer ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+        sh:minInclusive 1 ;
+    ] ;
+    sh:property [
+        sh:path bs:tenderItemDescription ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+        sh:minLength 1 ;
+    ] ;
+    sh:property [
+        sh:path bs:tenderShortDesc ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+        sh:maxLength 80 ;
+    ] ;
+    sh:property [
+        sh:path bs:tenderEstQty ;
+        sh:datatype xsd:decimal ;
+        sh:maxCount 1 ;
+        sh:minInclusive 0 ;
+    ] ;
+    sh:property [
+        sh:path bs:tenderUnit ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+    ] ;
+    sh:property [
+        sh:path bs:tenderRate ;
+        sh:datatype xsd:decimal ;
+        sh:maxCount 1 ;
+        sh:minInclusive 0 ;
+    ] ;
+    sh:property [
+        sh:path bs:tenderAmount ;
+        sh:datatype xsd:decimal ;
+        sh:maxCount 1 ;
+        sh:minInclusive 0 ;
+    ] ;
+    sh:property [
+        sh:path bs:ofTender ;
+        sh:nodeKind sh:IRI ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+    ] ;
+    sh:property [
+        sh:path bs:needsReview ;
+        sh:datatype xsd:boolean ;
+        sh:maxCount 1 ;
+    ] ;
+    sh:property [
+        sh:path bs:dedupCount ;
+        sh:datatype xsd:integer ;
+        sh:maxCount 1 ;
+        sh:minInclusive 1 ;
+    ] ;
+    # S5.2 — 5 optional SOR-match properties, written by the matcher.
+    # All optional (no sh:minCount) so the pre-match TenderBOQItem
+    # turtle that S5.1 writes stays valid.
+    sh:property [
+        sh:path bs:matchedSORItem ;
+        sh:nodeKind sh:IRI ;
+        sh:maxCount 1 ;
+    ] ;
+    sh:property [
+        sh:path bs:matchConfidence ;
+        sh:datatype xsd:decimal ;
+        sh:maxCount 1 ;
+        sh:minInclusive 0 ;
+        sh:maxInclusive 1 ;
+    ] ;
+    sh:property [
+        sh:path bs:matchStrategy ;
+        sh:maxCount 1 ;
+        sh:in ( "exact-code" "fuzzy-desc" "jargon-normalised" "no-match" ) ;
+    ] ;
+    sh:property [
+        sh:path bs:quotedRate ;
+        sh:datatype xsd:decimal ;
+        sh:maxCount 1 ;
+        sh:minInclusive 0 ;
+    ] ;
+    sh:property [
+        sh:path bs:rateVariance ;
+        sh:datatype xsd:decimal ;
+        sh:maxCount 1 ;
+    ] .
+
+# ─────────────────────────────────────────────────────────────────────────────
+# S5.3 — ComparableProjectShape. The 4 mandatory fields are the audit-trail
+# minimum: which tender / which historical project / similarity score /
+# computed-at timestamp. The 5 outcome signals (matchedBOQItems /
+# avgRateVariance / actualCPI / deviationCount / riskMaterialisedCount) are
+# optional because a historical project may legitimately have zero EVM
+# history (CPI undefined) or zero deviations recorded (deviationCount = 0 is
+# a valid count; an ABSENT triple means "no data", a present 0 means "checked
+# and none"). Per antipattern #13 — no co-declared sh:datatype on properties
+# that don't need it; bounds enforced where they matter (similarityScore ∈
+# [0, 1], counts ≥ 0, CPI ≥ 0).
+# ─────────────────────────────────────────────────────────────────────────────
+
+bs:ComparableProjectShape a sh:NodeShape ;
+    sh:targetClass bs:ComparableProject ;
+    sh:property [
+        sh:path bs:forTender ;
+        sh:nodeKind sh:IRI ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+    ] ;
+    sh:property [
+        sh:path bs:similarProject ;
+        sh:nodeKind sh:IRI ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+    ] ;
+    sh:property [
+        sh:path bs:similarityScore ;
+        sh:datatype xsd:decimal ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+        sh:minInclusive 0 ;
+        sh:maxInclusive 1 ;
+    ] ;
+    sh:property [
+        sh:path bs:computedAt ;
+        sh:datatype xsd:dateTime ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+    ] ;
+    sh:property [
+        sh:path bs:matchedBOQItems ;
+        sh:datatype xsd:integer ;
+        sh:maxCount 1 ;
+        sh:minInclusive 0 ;
+    ] ;
+    sh:property [
+        sh:path bs:avgRateVariance ;
+        sh:datatype xsd:decimal ;
+        sh:maxCount 1 ;
+    ] ;
+    sh:property [
+        sh:path bs:actualCPI ;
+        sh:datatype xsd:decimal ;
+        sh:maxCount 1 ;
+        sh:minInclusive 0 ;
+    ] ;
+    sh:property [
+        sh:path bs:deviationCount ;
+        sh:datatype xsd:integer ;
+        sh:maxCount 1 ;
+        sh:minInclusive 0 ;
+    ] ;
+    sh:property [
+        sh:path bs:riskMaterialisedCount ;
+        sh:datatype xsd:integer ;
+        sh:maxCount 1 ;
+        sh:minInclusive 0 ;
+    ] .
+
+# ─────────────────────────────────────────────────────────────────────────────
+# S5.4 — BidRecommendationShape. Mandatory: forTender / totalQuoted /
+# contingencyPct / contingencyAmount / recommendedBid / itemCount /
+# computedAt (the audit-trail minimum — every recommendation must carry the
+# 4 money numbers + when it was computed). highRiskCount is optional (a
+# zero-risk recommendation is valid; an absent triple means "not computed",
+# a present 0 means "computed, none flagged").
+# ─────────────────────────────────────────────────────────────────────────────
+
+bs:BidRecommendationShape a sh:NodeShape ;
+    sh:targetClass bs:BidRecommendation ;
+    sh:property [
+        sh:path bs:forTender ;
+        sh:nodeKind sh:IRI ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+    ] ;
+    sh:property [
+        sh:path bs:totalQuoted ;
+        sh:datatype xsd:decimal ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+        sh:minInclusive 0 ;
+    ] ;
+    sh:property [
+        sh:path bs:contingencyPct ;
+        sh:datatype xsd:decimal ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+        sh:minInclusive 0 ;
+        sh:maxInclusive 100 ;
+    ] ;
+    sh:property [
+        sh:path bs:contingencyAmount ;
+        sh:datatype xsd:decimal ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+        sh:minInclusive 0 ;
+    ] ;
+    sh:property [
+        sh:path bs:recommendedBid ;
+        sh:datatype xsd:decimal ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+        sh:minInclusive 0 ;
+    ] ;
+    sh:property [
+        sh:path bs:itemCount ;
+        sh:datatype xsd:integer ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+        sh:minInclusive 0 ;
+    ] ;
+    sh:property [
+        sh:path bs:computedAt ;
+        sh:datatype xsd:dateTime ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+    ] ;
+    sh:property [
+        sh:path bs:highRiskCount ;
+        sh:datatype xsd:integer ;
+        sh:maxCount 1 ;
+        sh:minInclusive 0 ;
+    ] .
+
+
+# ─────────────────────────────────────────────────────────────────────
+# S6.1 — External Signal SHACL shapes (Phase 6A)
+#
+# Signals live in data/external/signals/{type}. Each shape requires
+# the discriminating fields per the bs.ttl class doc. PROV-O wrap
+# (wasGeneratedBy / generatedAtTime) is the platform's universal
+# invariant — not repeated per shape.
+# ─────────────────────────────────────────────────────────────────────
+
+bs:WeatherSignalShape a sh:NodeShape ;
+    sh:targetClass bs:WeatherSignal ;
+    sh:property [
+        sh:path bs:signalDate ;
+        sh:datatype xsd:date ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+    ] ;
+    sh:property [
+        sh:path bs:rainfallMM ;
+        sh:datatype xsd:decimal ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+        sh:minInclusive 0 ;
+    ] ;
+    sh:property [
+        sh:path bs:maxTempC ;
+        sh:datatype xsd:decimal ;
+        sh:maxCount 1 ;
+    ] ;
+    sh:property [
+        sh:path bs:workingDayLossRisk ;
+        sh:datatype xsd:decimal ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+        sh:minInclusive 0 ;
+        sh:maxInclusive 1 ;
+    ] ;
+    sh:property [
+        sh:path bs:isMonsoonPeriod ;
+        sh:datatype xsd:boolean ;
+        sh:maxCount 1 ;
+    ] ;
+    sh:property [
+        sh:path bs:forProject ;
+        sh:nodeKind sh:IRI ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+    ] .
+
+bs:MaterialPriceSignalShape a sh:NodeShape ;
+    sh:targetClass bs:MaterialPriceSignal ;
+    sh:property [
+        sh:path bs:material ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+        # sh:in plain literals only — antipattern #13 (pyshacl rejects
+        # mixed sh:datatype + sh:in if datatype is co-declared).
+        sh:in ("Steel-TMT" "Cement" "Bitumen" "Aggregate" "Sand" "Brick" "Other") ;
+    ] ;
+    sh:property [
+        sh:path bs:pricePerUnit ;
+        sh:datatype xsd:decimal ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+        sh:minInclusive 0 ;
+    ] ;
+    sh:property [
+        sh:path bs:priceDate ;
+        sh:datatype xsd:date ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+    ] ;
+    sh:property [
+        sh:path bs:volatility30d ;
+        sh:datatype xsd:decimal ;
+        sh:maxCount 1 ;
+        sh:minInclusive 0 ;
+    ] ;
+    sh:property [
+        sh:path bs:vsQuotedRate ;
+        sh:datatype xsd:decimal ;
+        sh:maxCount 1 ;
+    ] .
+
+bs:LabourSignalShape a sh:NodeShape ;
+    sh:targetClass bs:LabourSignal ;
+    sh:property [
+        sh:path bs:signalWeek ;
+        sh:datatype xsd:gYearMonth ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+    ] ;
+    sh:property [
+        sh:path bs:availabilityScore ;
+        sh:datatype xsd:decimal ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+        sh:minInclusive 0 ;
+        sh:maxInclusive 1 ;
+    ] ;
+    sh:property [
+        sh:path bs:reason ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+    ] ;
+    sh:property [
+        sh:path bs:stateCode ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+    ] .
+
+
+# ─────────────────────────────────────────────────────────────────────
+# S6.6+ — HistoricalWeatherProfile + HistoricalWeatherWeek shapes
+# ─────────────────────────────────────────────────────────────────────
+
+bs:HistoricalWeatherProfileShape a sh:NodeShape ;
+    sh:targetClass bs:HistoricalWeatherProfile ;
+    sh:property [
+        sh:path bs:forProject ;
+        sh:nodeKind sh:IRI ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+    ] ;
+    sh:property [
+        sh:path bs:profileLat ;
+        sh:datatype xsd:decimal ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+        sh:minInclusive -90 ; sh:maxInclusive 90 ;
+    ] ;
+    sh:property [
+        sh:path bs:profileLng ;
+        sh:datatype xsd:decimal ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+        sh:minInclusive -180 ; sh:maxInclusive 180 ;
+    ] ;
+    sh:property [
+        sh:path bs:sourceYears ;
+        sh:datatype xsd:integer ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+        sh:minInclusive 1 ;
+    ] ;
+    sh:property [
+        sh:path bs:fetchedAt ;
+        sh:datatype xsd:dateTime ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+    ] .
+
+bs:HistoricalWeatherWeekShape a sh:NodeShape ;
+    sh:targetClass bs:HistoricalWeatherWeek ;
+    sh:property [
+        sh:path bs:weekOfYear ;
+        sh:datatype xsd:integer ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+        sh:minInclusive 1 ; sh:maxInclusive 53 ;
+    ] ;
+    sh:property [
+        sh:path bs:avgRainfallMM ;
+        sh:datatype xsd:decimal ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+        sh:minInclusive 0 ;
+    ] ;
+    sh:property [
+        sh:path bs:rainProbability ;
+        sh:datatype xsd:decimal ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+        sh:minInclusive 0 ; sh:maxInclusive 1 ;
+    ] ;
+    sh:property [
+        sh:path bs:heatProbability ;
+        sh:datatype xsd:decimal ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+        sh:minInclusive 0 ; sh:maxInclusive 1 ;
+    ] .
+
+
+# ─────────────────────────────────────────────────────────────────────
+# S6.2 — Site Intelligence Report shapes
+#
+# Site context auto-generated at project GPS setup. The parent
+# SiteIntelligenceShape fires on every sub-domain node via RDFS
+# subclass inference (the conformance harness runs pyshacl with
+# inference="rdfs"). The 6 sub-domain shapes layer their own
+# domain-specific constraints on top.
+#
+# All `sh:in` enum constraints use plain literals only (no
+# co-declared sh:datatype) — antipattern #13.
+# ─────────────────────────────────────────────────────────────────────
+
+bs:SiteIntelligenceShape a sh:NodeShape ;
+    sh:targetClass bs:SiteIntelligence ;
+    sh:property [
+        sh:path bs:forProject ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+        sh:message "SiteIntelligence must link to exactly one Project" ;
+    ] ;
+    sh:property [
+        sh:path bs:generatedAt ;
+        sh:datatype xsd:dateTime ;
+        sh:minCount 1 ;
+        sh:message "SiteIntelligence must have a generatedAt timestamp" ;
+    ] .
+
+bs:SiteHydrologyShape a sh:NodeShape ;
+    sh:targetClass bs:SiteHydrology ;
+    sh:property [
+        sh:path bs:groundwaterDepthPostMonsoonM ;
+        sh:datatype xsd:decimal ;
+        sh:minInclusive 0 ;
+        sh:message "Post-monsoon groundwater depth must be >= 0m" ;
+    ] ;
+    sh:property [
+        sh:path bs:dewateringRequired ;
+        sh:datatype xsd:boolean ;
+        sh:minCount 1 ;
+        sh:message "dewateringRequired flag is mandatory" ;
+    ] ;
+    sh:property [
+        sh:path bs:cgwbBlockCategory ;
+        sh:in ("Safe" "Semi-Critical" "Critical" "Over-exploited") ;
+        sh:message "cgwbBlockCategory must be Safe|Semi-Critical|Critical|Over-exploited" ;
+    ] .
+
+bs:SiteLogisticsShape a sh:NodeShape ;
+    sh:targetClass bs:SiteLogistics ;
+    sh:property [
+        sh:path bs:rmc1DistanceKm ;
+        sh:datatype xsd:decimal ;
+        sh:minInclusive 0 ;
+        sh:message "rmc1DistanceKm must be >= 0" ;
+    ] ;
+    sh:property [
+        sh:path bs:heavyVehicleAccess ;
+        sh:datatype xsd:boolean ;
+        sh:minCount 1 ;
+        sh:message "heavyVehicleAccess flag is mandatory" ;
+    ] .
+
+bs:SiteWorkerSafetyShape a sh:NodeShape ;
+    sh:targetClass bs:SiteWorkerSafety ;
+    sh:property [
+        sh:path bs:hospitalDistanceKm ;
+        sh:datatype xsd:decimal ;
+        sh:minInclusive 0 ;
+        sh:message "hospitalDistanceKm must be >= 0" ;
+    ] ;
+    sh:property [
+        sh:path bs:peakHeatMonthWBGT ;
+        sh:datatype xsd:decimal ;
+        sh:minInclusive 20 ; sh:maxInclusive 55 ;
+        sh:message "peakHeatMonthWBGT must be between 20 and 55 degrees C" ;
+    ] ;
+    sh:property [
+        sh:path bs:aqiZone ;
+        sh:in ("Good" "Satisfactory" "Moderate" "Poor" "Very Poor" "Severe") ;
+        sh:message "aqiZone must be a valid CPCB AQI category" ;
+    ] .
+
+bs:SiteUtilitiesShape a sh:NodeShape ;
+    sh:targetClass bs:SiteUtilities ;
+    sh:property [
+        sh:path bs:undergroundUtilityRisk ;
+        sh:in ("Low" "Medium" "High") ;
+        sh:message "undergroundUtilityRisk must be Low|Medium|High" ;
+    ] ;
+    sh:property [
+        sh:path bs:overheadHTLinePresent ;
+        sh:datatype xsd:boolean ;
+        sh:minCount 1 ;
+        sh:message "overheadHTLinePresent flag is mandatory" ;
+    ] .
+
+bs:SiteLabourShape a sh:NodeShape ;
+    sh:targetClass bs:SiteLabour ;
+    sh:property [
+        sh:path bs:labourColonyDistanceKm ;
+        sh:datatype xsd:decimal ;
+        sh:minInclusive 0 ;
+        sh:message "labourColonyDistanceKm must be >= 0" ;
+    ] ;
+    sh:property [
+        sh:path bs:labourAccommodationNeeded ;
+        sh:datatype xsd:boolean ;
+        sh:minCount 1 ;
+        sh:message "labourAccommodationNeeded flag is mandatory" ;
+    ] .
+
+bs:SiteClimateShape a sh:NodeShape ;
+    sh:targetClass bs:SiteClimate ;
+    sh:property [
+        sh:path bs:monsoonOnsetWeek ;
+        sh:datatype xsd:integer ;
+        sh:minInclusive 1 ; sh:maxInclusive 52 ;
+        sh:message "monsoonOnsetWeek must be ISO week 1-52" ;
+    ] ;
+    sh:property [
+        sh:path bs:monsoonWithdrawalWeek ;
+        sh:datatype xsd:integer ;
+        sh:minInclusive 1 ; sh:maxInclusive 52 ;
+        sh:message "monsoonWithdrawalWeek must be ISO week 1-52" ;
+    ] ;
+    sh:property [
+        sh:path bs:annualRainfallMM ;
+        sh:datatype xsd:decimal ;
+        sh:minInclusive 0 ;
+        sh:message "annualRainfallMM must be >= 0" ;
+    ] .
+
+# ====================================================================
+# Scope Management — WBSNodeShape (Slice 1)
+# ====================================================================
+# Mandatory: wbsCode, wbsName, wbsLevel, ofProject. parentWBS is
+# optional (absent on the project-root node). isWorkPackage is an
+# optional boolean (a non-leaf node simply omits it / sets false).
+# wbsPlannedCost is optional even though the recompute always writes
+# it — keeps the shape robust against a partial in-flight write (same
+# posture as RiskShape.riskScore / the S4.8 clash-batch counts).
+
+bs:WBSNodeShape a sh:NodeShape ;
+    sh:targetClass bs:WBSNode ;
+    sh:property [
+        sh:path bs:wbsCode ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+        sh:datatype xsd:string ;
+        sh:message "WBS node must carry a wbsCode." ;
+    ] ;
+    sh:property [
+        sh:path bs:wbsName ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+        sh:datatype xsd:string ;
+        sh:message "WBS node must carry a wbsName." ;
+    ] ;
+    sh:property [
+        sh:path bs:wbsLevel ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+        sh:datatype xsd:integer ;
+        sh:minInclusive 1 ;
+        sh:message "WBS node must carry a wbsLevel >= 1." ;
+    ] ;
+    sh:property [
+        sh:path bs:ofProject ;
+        sh:nodeKind sh:IRI ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+        sh:message "WBS node must link to its project via bs:ofProject." ;
+    ] ;
+    sh:property [
+        sh:path bs:parentWBS ;
+        sh:nodeKind sh:IRI ;
+        sh:maxCount 1 ;
+        sh:message "WBS node may have at most one parentWBS." ;
+    ] ;
+    sh:property [
+        sh:path bs:isWorkPackage ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:boolean ;
+    ] ;
+    sh:property [
+        sh:path bs:wbsPlannedCost ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:decimal ;
+    ] .
+
+# ====================================================================
+# NIYOJ N1 — ApprovalShape
+# ====================================================================
+# Mandatory: approvalId, approvalType, approvalStatus, ofProject.
+# Both enums are PLAIN-literal sh:in sets (no co-declared sh:datatype —
+# antipattern #13 / pyshacl 0.31). Everything else is optional so a
+# freshly-bootstrapped chain node (nothing submitted yet) conforms.
+
+bs:ApprovalShape a sh:NodeShape ;
+    sh:targetClass bs:Approval ;
+    sh:property [
+        sh:path bs:approvalId ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+        sh:message "Approval must carry an approvalId." ;
+    ] ;
+    sh:property [
+        sh:path bs:approvalType ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+        sh:in ("PlanSanction" "CommencementCertificate" "NALAConversion"
+               "FireNOC" "AirportHeightNOC" "PCBConsent"
+               "EnvironmentalClearance" "WaterSewerageNOC" "ElectricityNOC"
+               "MortgageToULB" "RERARegistration" "APFApproval"
+               "LiftLicence" "FireFinalNOC" "OccupancyCertificate"
+               "CompletionCertificate") ;
+        sh:message "approvalType must be one of the statutory chain types." ;
+    ] ;
+    sh:property [
+        sh:path bs:approvalStatus ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+        sh:in ("NotStarted" "Preparing" "Submitted" "QueryRound"
+               "Approved" "Rejected") ;
+        sh:message "approvalStatus must be NotStarted / Preparing / Submitted / QueryRound / Approved / Rejected." ;
+    ] ;
+    sh:property [
+        sh:path bs:ofProject ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+        sh:nodeKind sh:IRI ;
+        sh:message "Approval must belong to a project." ;
+    ] ;
+    sh:property [ sh:path bs:slaDays ; sh:datatype xsd:integer ; sh:maxCount 1 ] ;
+    sh:property [ sh:path bs:applicationRef ; sh:datatype xsd:string ; sh:maxCount 1 ] .
+
+# ====================================================================
+# NIYOJ N2 — Tower / UnitType / Unit shapes
+# ====================================================================
+# unitStatus is a PLAIN-literal sh:in set (antipattern #13). Fixture
+# stubs use urn:uuid: IRIs with inline Project nodes (bs:ofProject
+# rdfs:range → ProjectShape via RDFS, same as valid_ra_bill).
+
+bs:TowerShape a sh:NodeShape ;
+    sh:targetClass bs:Tower ;
+    sh:property [ sh:path bs:towerId ; sh:datatype xsd:string ;
+                  sh:minCount 1 ; sh:maxCount 1 ;
+                  sh:message "Tower must carry a towerId." ] ;
+    sh:property [ sh:path bs:ofProject ; sh:minCount 1 ; sh:maxCount 1 ;
+                  sh:nodeKind sh:IRI ;
+                  sh:message "Tower must belong to a project." ] .
+
+bs:UnitTypeShape a sh:NodeShape ;
+    sh:targetClass bs:UnitType ;
+    sh:property [ sh:path bs:unitTypeId ; sh:datatype xsd:string ;
+                  sh:minCount 1 ; sh:maxCount 1 ;
+                  sh:message "UnitType must carry a unitTypeId." ] ;
+    sh:property [ sh:path bs:unitTypeName ; sh:datatype xsd:string ;
+                  sh:minCount 1 ; sh:maxCount 1 ;
+                  sh:message "UnitType must carry a unitTypeName." ] ;
+    sh:property [ sh:path bs:carpetAreaSqft ; sh:datatype xsd:decimal ;
+                  sh:minCount 1 ; sh:maxCount 1 ;
+                  sh:message "UnitType must carry carpetAreaSqft." ] ;
+    sh:property [ sh:path bs:ofProject ; sh:minCount 1 ; sh:maxCount 1 ;
+                  sh:nodeKind sh:IRI ;
+                  sh:message "UnitType must belong to a project." ] .
+
+bs:UnitShape a sh:NodeShape ;
+    sh:targetClass bs:Unit ;
+    sh:property [ sh:path bs:unitId ; sh:datatype xsd:string ;
+                  sh:minCount 1 ; sh:maxCount 1 ;
+                  sh:message "Unit must carry a unitId." ] ;
+    sh:property [ sh:path bs:unitStatus ; sh:minCount 1 ; sh:maxCount 1 ;
+                  sh:in ("Available" "Blocked" "Booked" "Agreement"
+                         "Registered" "Possession") ;
+                  sh:message "unitStatus must be Available / Blocked / Booked / Agreement / Registered / Possession." ] ;
+    sh:property [ sh:path bs:ofTower ; sh:minCount 1 ; sh:maxCount 1 ;
+                  sh:nodeKind sh:IRI ;
+                  sh:message "Unit must belong to a tower." ] ;
+    sh:property [ sh:path bs:ofUnitType ; sh:minCount 1 ; sh:maxCount 1 ;
+                  sh:nodeKind sh:IRI ;
+                  sh:message "Unit must reference its unit type." ] ;
+    sh:property [ sh:path bs:floorNo ; sh:datatype xsd:integer ; sh:maxCount 1 ] ;
+    sh:property [ sh:path bs:unitNo ; sh:datatype xsd:integer ; sh:maxCount 1 ] .
+
+# ====================================================================
+# NIYOJ N2.b — DesignOptionShape
+# ====================================================================
+
+bs:DesignOptionShape a sh:NodeShape ;
+    sh:targetClass bs:DesignOption ;
+    sh:property [ sh:path bs:optionId ; sh:datatype xsd:string ;
+                  sh:minCount 1 ; sh:maxCount 1 ;
+                  sh:message "DesignOption must carry an optionId." ] ;
+    sh:property [ sh:path bs:optionTitle ; sh:datatype xsd:string ;
+                  sh:minCount 1 ; sh:maxCount 1 ;
+                  sh:message "DesignOption must carry an optionTitle." ] ;
+    sh:property [ sh:path bs:optionDiscipline ; sh:minCount 1 ; sh:maxCount 1 ;
+                  sh:in ("Architecture" "Structure" "MEP" "Finishes") ;
+                  sh:message "optionDiscipline must be Architecture / Structure / MEP / Finishes." ] ;
+    sh:property [ sh:path bs:optionStatus ; sh:minCount 1 ; sh:maxCount 1 ;
+                  sh:in ("Proposed" "Approved" "Rejected" "Superseded") ;
+                  sh:message "optionStatus must be Proposed / Approved / Rejected / Superseded." ] ;
+    sh:property [ sh:path bs:ofProject ; sh:minCount 1 ; sh:maxCount 1 ;
+                  sh:nodeKind sh:IRI ;
+                  sh:message "DesignOption must belong to a project." ] ;
+    sh:property [ sh:path bs:costDeltaAmount ; sh:datatype xsd:decimal ; sh:maxCount 1 ] ;
+    sh:property [ sh:path bs:timeDeltaDays ; sh:datatype xsd:integer ; sh:maxCount 1 ] ;
+    sh:property [ sh:path bs:qualityRating ; sh:maxCount 1 ;
+                  sh:minInclusive 1 ; sh:maxInclusive 5 ] ;
+    sh:property [ sh:path bs:maintainabilityRating ; sh:maxCount 1 ;
+                  sh:minInclusive 1 ; sh:maxInclusive 5 ] ;
+    sh:property [ sh:path bs:userValueRating ; sh:maxCount 1 ;
+                  sh:minInclusive 1 ; sh:maxInclusive 5 ] ;
+    sh:property [ sh:path bs:flexibilityRating ; sh:maxCount 1 ;
+                  sh:minInclusive 1 ; sh:maxInclusive 5 ] ;
+    sh:property [ sh:path bs:executionReadinessRating ; sh:maxCount 1 ;
+                  sh:minInclusive 1 ; sh:maxInclusive 5 ] .
+
+# ---------------------------------------------------------------------------
+# NIYOJ N6 — Escrow & Cash Control shapes
+# ---------------------------------------------------------------------------
+
+bs:EscrowAccountShape a sh:NodeShape ;
+    sh:targetClass bs:EscrowAccount ;
+    sh:property [ sh:path bs:escrowBank ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path bs:escrowAccountRef ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path bs:escrowSplitPct ; sh:minCount 1 ; sh:maxCount 1 ;
+                  sh:minInclusive 50 ; sh:maxInclusive 100 ] ;
+    sh:property [ sh:path bs:ofProject ; sh:minCount 1 ; sh:maxCount 1 ; sh:nodeKind sh:IRI ] ;
+    sh:property [ sh:path bs:escrowSetupAt ; sh:minCount 1 ; sh:maxCount 1 ] .
+
+bs:CollectionReceiptShape a sh:NodeShape ;
+    sh:targetClass bs:CollectionReceipt ;
+    sh:property [ sh:path bs:receiptId ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path bs:forUnit ; sh:minCount 1 ; sh:maxCount 1 ; sh:nodeKind sh:IRI ] ;
+    sh:property [ sh:path bs:receiptAmount ; sh:minCount 1 ; sh:maxCount 1 ;
+                  sh:minExclusive 0 ] ;
+    sh:property [ sh:path bs:receiptDate ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    # plain-literal sh:in only — no co-declared sh:datatype (antipattern #13)
+    sh:property [ sh:path bs:receiptMode ; sh:minCount 1 ; sh:maxCount 1 ;
+                  sh:in ("Cheque" "NEFT" "RTGS" "UPI" "Cash" "Other") ] ;
+    sh:property [ sh:path bs:escrowShare ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path bs:operatingShare ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path bs:ofProject ; sh:minCount 1 ; sh:maxCount 1 ; sh:nodeKind sh:IRI ] .
+
+bs:EscrowWithdrawalShape a sh:NodeShape ;
+    sh:targetClass bs:EscrowWithdrawal ;
+    sh:property [ sh:path bs:withdrawalId ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path bs:withdrawalAmount ; sh:minCount 1 ; sh:maxCount 1 ;
+                  sh:minExclusive 0 ] ;
+    sh:property [ sh:path bs:withdrawalDate ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path bs:costHead ; sh:minCount 1 ; sh:maxCount 1 ;
+                  sh:in ("Land" "Construction" "Statutory" "Consultants" "Finance" "Other") ] ;
+    # RERA S.4(2)(l)(D): no certificate, no withdrawal — enforced pre-write
+    sh:property [ sh:path bs:certificateRef ; sh:minCount 1 ; sh:maxCount 1 ;
+                  sh:minLength 3 ] ;
+    sh:property [ sh:path bs:ofProject ; sh:minCount 1 ; sh:maxCount 1 ; sh:nodeKind sh:IRI ] .
+
+# ---------------------------------------------------------------------------
+# NIYOJ N7 — HoldPointShape
+# ---------------------------------------------------------------------------
+
+bs:HoldPointShape a sh:NodeShape ;
+    sh:targetClass bs:HoldPoint ;
+    sh:property [ sh:path bs:holdPointId ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path bs:holdPointType ; sh:minCount 1 ; sh:maxCount 1 ;
+                  sh:in ("Hold" "Witness") ] ;
+    sh:property [ sh:path bs:holdDescription ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path bs:forActivity ; sh:minCount 1 ; sh:maxCount 1 ; sh:nodeKind sh:IRI ] ;
+    sh:property [ sh:path bs:holdStatus ; sh:minCount 1 ; sh:maxCount 1 ;
+                  sh:in ("Pending" "OfferedForInspection" "Released" "Waived") ] ;
+    sh:property [ sh:path bs:ofProject ; sh:minCount 1 ; sh:maxCount 1 ; sh:nodeKind sh:IRI ] ;
+    # a Released point must carry the release signature triple set
+    sh:or (
+        [ sh:property [ sh:path bs:holdStatus ; sh:not [ sh:hasValue "Released" ] ] ]
+        [ sh:property [ sh:path bs:releasedBy ; sh:minCount 1 ] ;
+          sh:property [ sh:path bs:releasedAt ; sh:minCount 1 ] ;
+          sh:property [ sh:path bs:releaseOTPRef ; sh:minCount 1 ] ]
+    ) .
+
+# ---------------------------------------------------------------------------
+# NIYOJ N8 — Handover / Snag / DLP / Warranty shapes
+# ---------------------------------------------------------------------------
+
+bs:HandoverPackageShape a sh:NodeShape ;
+    sh:targetClass bs:HandoverPackage ;
+    sh:property [ sh:path bs:handoverStatus ; sh:minCount 1 ; sh:maxCount 1 ;
+                  sh:in ("Preparing" "Transferred") ] ;
+    sh:property [ sh:path bs:committedHandoverDate ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path bs:dlpMonths ; sh:minCount 1 ; sh:maxCount 1 ;
+                  sh:minInclusive 12 ; sh:maxInclusive 120 ] ;
+    sh:property [ sh:path bs:ofProject ; sh:minCount 1 ; sh:maxCount 1 ; sh:nodeKind sh:IRI ] ;
+    # Transferred ⇒ transferredAt + transferredTo (the DLP clock anchor)
+    sh:or (
+        [ sh:property [ sh:path bs:handoverStatus ; sh:not [ sh:hasValue "Transferred" ] ] ]
+        [ sh:property [ sh:path bs:transferredAt ; sh:minCount 1 ] ;
+          sh:property [ sh:path bs:transferredTo ; sh:minCount 1 ] ]
+    ) .
+
+bs:SnagItemShape a sh:NodeShape ;
+    sh:targetClass bs:SnagItem ;
+    sh:property [ sh:path bs:snagId ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path bs:snagDescription ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path bs:snagSeverity ; sh:minCount 1 ; sh:maxCount 1 ;
+                  sh:in ("Minor" "Major" "Critical") ] ;
+    sh:property [ sh:path bs:snagStatus ; sh:minCount 1 ; sh:maxCount 1 ;
+                  sh:in ("Open" "Fixed" "Verified" "Deferred") ] ;
+    sh:property [ sh:path bs:raisedAt ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path bs:ofProject ; sh:minCount 1 ; sh:maxCount 1 ; sh:nodeKind sh:IRI ] .
+
+bs:DLPDefectShape a sh:NodeShape ;
+    sh:targetClass bs:DLPDefect ;
+    sh:property [ sh:path bs:defectId ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path bs:defectDescription ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path bs:defectStatus ; sh:minCount 1 ; sh:maxCount 1 ;
+                  sh:in ("Reported" "InRepair" "Rectified" "Disputed") ] ;
+    sh:property [ sh:path bs:reportedAt ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path bs:ofProject ; sh:minCount 1 ; sh:maxCount 1 ; sh:nodeKind sh:IRI ] ;
+    # Rectified ⇒ rectifiedAt (stops the 30-day clock verifiably)
+    sh:or (
+        [ sh:property [ sh:path bs:defectStatus ; sh:not [ sh:hasValue "Rectified" ] ] ]
+        [ sh:property [ sh:path bs:rectifiedAt ; sh:minCount 1 ] ]
+    ) .
+
+bs:WarrantyRecordShape a sh:NodeShape ;
+    sh:targetClass bs:WarrantyRecord ;
+    sh:property [ sh:path bs:warrantyId ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path bs:warrantyAsset ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path bs:warrantyVendor ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path bs:warrantyStartDate ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path bs:warrantyMonths ; sh:minCount 1 ; sh:maxCount 1 ;
+                  sh:minInclusive 1 ; sh:maxInclusive 240 ] ;
+    sh:property [ sh:path bs:ofProject ; sh:minCount 1 ; sh:maxCount 1 ; sh:nodeKind sh:IRI ] .
+
+# ---------------------------------------------------------------------------
+# NIYOJ N9 — Vendor / ProductOffer shapes
+# ---------------------------------------------------------------------------
+
+bs:VendorShape a sh:NodeShape ;
+    sh:targetClass bs:Vendor ;
+    sh:property [ sh:path bs:vendorId ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path bs:vendorName ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path bs:vendorCategory ; sh:minCount 1 ; sh:maxCount 1 ;
+                  sh:in ("Material" "Equipment" "Labour" "Services" "Fixtures" "Other") ] .
+
+bs:ProductOfferShape a sh:NodeShape ;
+    sh:targetClass bs:ProductOffer ;
+    sh:property [ sh:path bs:offerId ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path bs:offerProduct ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path bs:byVendor ; sh:minCount 1 ; sh:maxCount 1 ; sh:nodeKind sh:IRI ] ;
+    sh:property [ sh:path bs:unitRate ; sh:minCount 1 ; sh:maxCount 1 ; sh:minExclusive 0 ] ;
+    sh:property [ sh:path bs:unit ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path bs:leadTimeDays ; sh:minCount 1 ; sh:maxCount 1 ;
+                  sh:minInclusive 0 ; sh:maxInclusive 365 ] ;
+    sh:property [ sh:path bs:qualityGrade ; sh:minCount 1 ; sh:maxCount 1 ;
+                  sh:minInclusive 1 ; sh:maxInclusive 5 ] .
+
+# ---------------------------------------------------------------------------
+# NIYOJ N12 — PaymentMilestone / DemandNote shapes
+# ---------------------------------------------------------------------------
+
+bs:PaymentMilestoneShape a sh:NodeShape ;
+    sh:targetClass bs:PaymentMilestone ;
+    sh:property [ sh:path bs:milestoneId ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path bs:milestoneName ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path bs:milestonePct ; sh:minCount 1 ; sh:maxCount 1 ;
+                  sh:minExclusive 0 ; sh:maxInclusive 100 ] ;
+    sh:property [ sh:path bs:milestoneOrder ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path bs:milestoneStatus ; sh:minCount 1 ; sh:maxCount 1 ;
+                  sh:in ("Pending" "Achieved") ] ;
+    sh:property [ sh:path bs:ofProject ; sh:minCount 1 ; sh:maxCount 1 ; sh:nodeKind sh:IRI ] ;
+    # Achieved ⇒ achievedAt (evidence anchor)
+    sh:or (
+        [ sh:property [ sh:path bs:milestoneStatus ; sh:not [ sh:hasValue "Achieved" ] ] ]
+        [ sh:property [ sh:path bs:achievedAt ; sh:minCount 1 ] ]
+    ) .
+
+bs:DemandNoteShape a sh:NodeShape ;
+    sh:targetClass bs:DemandNote ;
+    sh:property [ sh:path bs:demandId ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path bs:forUnit ; sh:minCount 1 ; sh:maxCount 1 ; sh:nodeKind sh:IRI ] ;
+    sh:property [ sh:path bs:forMilestone ; sh:minCount 1 ; sh:maxCount 1 ; sh:nodeKind sh:IRI ] ;
+    sh:property [ sh:path bs:demandAmount ; sh:minCount 1 ; sh:maxCount 1 ; sh:minExclusive 0 ] ;
+    sh:property [ sh:path bs:demandDate ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path bs:dueDate2 ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path bs:demandStatus ; sh:minCount 1 ; sh:maxCount 1 ;
+                  sh:in ("Raised" "Cancelled") ] ;
+    sh:property [ sh:path bs:ofProject ; sh:minCount 1 ; sh:maxCount 1 ; sh:nodeKind sh:IRI ] .
+
+# ---------------------------------------------------------------------------
+# NIYOJ N14 — ModelComment shape
+# ---------------------------------------------------------------------------
+
+bs:ModelCommentShape a sh:NodeShape ;
+    sh:targetClass bs:ModelComment ;
+    sh:property [ sh:path bs:commentId ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path bs:onModel ; sh:minCount 1 ; sh:maxCount 1 ; sh:nodeKind sh:IRI ] ;
+    sh:property [ sh:path bs:commentText ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path bs:commentStatus ; sh:minCount 1 ; sh:maxCount 1 ;
+                  sh:in ("Open" "Resolved") ] ;
+    sh:property [ sh:path bs:raisedBy ; sh:minCount 1 ; sh:maxCount 1 ; sh:nodeKind sh:IRI ] ;
+    sh:property [ sh:path bs:createdAt ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path bs:ofProject ; sh:minCount 1 ; sh:maxCount 1 ; sh:nodeKind sh:IRI ] ;
+    sh:property [ sh:path bs:viewName ; sh:maxCount 1 ] ;
+    sh:property [ sh:path bs:viewpointJson ; sh:maxCount 1 ] ;
+    sh:property [ sh:path bs:markupJson ; sh:maxCount 1 ] ;
+    sh:property [ sh:path bs:ifcGuid ; sh:maxCount 1 ] ;
+    sh:property [ sh:path bs:replyTo ; sh:maxCount 1 ; sh:nodeKind sh:IRI ] ;
+    sh:property [ sh:path bs:resolvedBy ; sh:maxCount 1 ] ;
+    sh:property [ sh:path bs:resolvedAt ; sh:maxCount 1 ] ;
+    # Resolved ⇒ resolvedBy + resolvedAt (the NCR-closure idiom)
+    sh:or (
+        [ sh:property [ sh:path bs:commentStatus ; sh:not [ sh:hasValue "Resolved" ] ] ]
+        [ sh:property [ sh:path bs:resolvedBy ; sh:minCount 1 ] ;
+          sh:property [ sh:path bs:resolvedAt ; sh:minCount 1 ] ]
+    ) .
+
+# --- NIYOJ N26 — ModelHealthCheckShape --------------------------------------
+# overallScore is bounded so a buggy audit cannot poison the trend line
+# (the S4.10 ActivityPrediction precedent). readinessJson is mandatory:
+# a health record with no evidence is worse than none.
+bs:ModelHealthCheckShape a sh:NodeShape ;
+    sh:targetClass bs:ModelHealthCheck ;
+    sh:property [ sh:path bs:healthCheckId ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path bs:forModel ; sh:minCount 1 ; sh:maxCount 1 ; sh:nodeKind sh:IRI ] ;
+    sh:property [ sh:path bs:checkedAt ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path bs:ofProject ; sh:minCount 1 ; sh:maxCount 1 ; sh:nodeKind sh:IRI ] ;
+    # Numeric bounds need a co-declared sh:datatype and matching literal
+    # types or pyshacl silently does not compare (the S4.10 precedent).
+    # This is NOT antipattern #13 — that forbids sh:datatype beside sh:in.
+    sh:property [ sh:path bs:overallScore ; sh:minCount 1 ; sh:maxCount 1 ;
+                  sh:datatype xsd:decimal ;
+                  sh:minInclusive 0.0 ; sh:maxInclusive 100.0 ] ;
+    sh:property [ sh:path bs:elementsAudited ; sh:minCount 1 ; sh:maxCount 1 ;
+                  sh:datatype xsd:integer ; sh:minInclusive 0 ] ;
+    sh:property [ sh:path bs:readinessJson ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path bs:checklistJson ; sh:maxCount 1 ] ;
+    sh:property [ sh:path bs:quantitiesWritten ; sh:maxCount 1 ;
+                  sh:datatype xsd:integer ; sh:minInclusive 0 ] ;
+    sh:property [ sh:path bs:enrichedFileRef ; sh:maxCount 1 ] .
+
+# --- P2A — Resource Foundation ----------------------------------------------
+# Enum values use plain-literal sh:in with NO co-declared sh:datatype
+# (antipattern #13). Numeric bounds DO co-declare sh:datatype, because
+# without it pyshacl silently does not compare (the N26 lesson).
+
+bs:CrewTypeShape a sh:NodeShape ;
+    sh:targetClass bs:CrewType ;
+    sh:property [ sh:path bs:crewTypeId ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path bs:crewTypeName ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path bs:crewTrade ; sh:minCount 1 ; sh:maxCount 1 ;
+                  sh:in ("Masonry" "Concrete" "Reinforcement" "Shuttering"
+                         "Finishing" "MEP" "Earthwork" "General") ] ;
+    sh:property [ sh:path bs:crewSize ; sh:minCount 1 ; sh:maxCount 1 ;
+                  sh:datatype xsd:integer ; sh:minInclusive 1 ] ;
+    sh:property [ sh:path bs:ofOrganisation ; sh:minCount 1 ; sh:maxCount 1 ;
+                  sh:nodeKind sh:IRI ] .
+
+bs:CrewCompositionShape a sh:NodeShape ;
+    sh:targetClass bs:CrewComposition ;
+    sh:property [ sh:path bs:compositionRole ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path bs:compositionCount ; sh:minCount 1 ; sh:maxCount 1 ;
+                  sh:datatype xsd:integer ; sh:minInclusive 1 ] ;
+    sh:property [ sh:path bs:skillLevel ; sh:maxCount 1 ;
+                  sh:in ("Skilled" "SemiSkilled" "Unskilled") ] .
+
+bs:WorkerShape a sh:NodeShape ;
+    sh:targetClass bs:Worker ;
+    sh:property [ sh:path bs:workerId ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path bs:workerName ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path bs:workerTrade ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path bs:skillLevel ; sh:maxCount 1 ;
+                  sh:in ("Skilled" "SemiSkilled" "Unskilled") ] ;
+    sh:property [ sh:path bs:ofOrganisation ; sh:minCount 1 ; sh:maxCount 1 ;
+                  sh:nodeKind sh:IRI ] ;
+    # Optional: most site labour has no platform login at all.
+    sh:property [ sh:path bs:workerAccount ; sh:maxCount 1 ; sh:nodeKind sh:IRI ] .
+
+bs:SkillCertificationShape a sh:NodeShape ;
+    sh:targetClass bs:SkillCertification ;
+    sh:property [ sh:path bs:certificationName ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path bs:certifiedWorker ; sh:minCount 1 ; sh:maxCount 1 ;
+                  sh:nodeKind sh:IRI ] ;
+    sh:property [ sh:path bs:validFrom ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path bs:validUntil ; sh:maxCount 1 ] .
+
+bs:ProductivityObservationShape a sh:NodeShape ;
+    sh:targetClass bs:ProductivityObservation ;
+    sh:property [ sh:path bs:observationId ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path bs:observedQuantity ; sh:minCount 1 ; sh:maxCount 1 ;
+                  sh:datatype xsd:decimal ; sh:minInclusive 0.0 ] ;
+    sh:property [ sh:path bs:observedUnit ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    # A rate needs a non-zero denominator — an observation with no
+    # crew-days is not a measurement, it is a number with no meaning.
+    sh:property [ sh:path bs:crewDays ; sh:minCount 1 ; sh:maxCount 1 ;
+                  sh:datatype xsd:decimal ; sh:minExclusive 0.0 ] ;
+    sh:property [ sh:path bs:productivityRate ; sh:minCount 1 ; sh:maxCount 1 ;
+                  sh:datatype xsd:decimal ; sh:minInclusive 0.0 ] ;
+    sh:property [ sh:path bs:workType ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path bs:observedOn ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path bs:ofProject ; sh:minCount 1 ; sh:maxCount 1 ;
+                  sh:nodeKind sh:IRI ] .
+
+bs:ProductivityNormShape a sh:NodeShape ;
+    sh:targetClass bs:ProductivityNorm ;
+    sh:property [ sh:path bs:normId ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path bs:workType ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path bs:normRate ; sh:minCount 1 ; sh:maxCount 1 ;
+                  sh:datatype xsd:decimal ; sh:minExclusive 0.0 ] ;
+    sh:property [ sh:path bs:observedUnit ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    # A seeded default must never be readable as a measured norm.
+    sh:property [ sh:path bs:normSource ; sh:minCount 1 ; sh:maxCount 1 ;
+                  sh:in ("measured" "seeded") ] ;
+    sh:property [ sh:path bs:observationCount ; sh:minCount 1 ; sh:maxCount 1 ;
+                  sh:datatype xsd:integer ; sh:minInclusive 0 ] ;
+    sh:property [ sh:path bs:normComputedAt ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path bs:reportCount ; sh:maxCount 1 ;
+                  sh:datatype xsd:integer ; sh:minInclusive 0 ] ;
+    sh:property [ sh:path bs:projectCount ; sh:maxCount 1 ;
+                  sh:datatype xsd:integer ; sh:minInclusive 0 ] ;
+    sh:property [ sh:path bs:steadyDayCount ; sh:maxCount 1 ;
+                  sh:datatype xsd:integer ; sh:minInclusive 0 ] ;
+    sh:property [ sh:path bs:handObservationCount ; sh:maxCount 1 ;
+                  sh:datatype xsd:integer ; sh:minInclusive 0 ] ;
+    sh:property [ sh:path bs:ofOrganisation ; sh:minCount 1 ; sh:maxCount 1 ;
+                  sh:nodeKind sh:IRI ] .
+
+# --- P2A.2 — a project's site days published to its organisation's rates ----
+# Withdrawn ⇒ who, when and why (the NCR-closure / decision idiom).
+bs:ProductivityContributionShape a sh:NodeShape ;
+    sh:targetClass bs:ProductivityContribution ;
+    sh:property [ sh:path bs:contributingProject ; sh:minCount 1 ; sh:maxCount 1 ;
+                  sh:nodeKind sh:IRI ] ;
+    sh:property [ sh:path bs:contributedBy ; sh:minCount 1 ; sh:maxCount 1 ;
+                  sh:nodeKind sh:IRI ] ;
+    sh:property [ sh:path bs:contributedAt ; sh:minCount 1 ; sh:maxCount 1 ;
+                  sh:datatype xsd:dateTime ] ;
+    sh:property [ sh:path bs:ofOrganisation ; sh:minCount 1 ; sh:maxCount 1 ;
+                  sh:nodeKind sh:IRI ] ;
+    sh:property [ sh:path bs:withdrawalReason ; sh:maxCount 1 ; sh:minLength 3 ] ;
+    sh:or (
+        [ sh:property [ sh:path bs:withdrawnAt ; sh:maxCount 0 ] ]
+        [ sh:property [ sh:path bs:withdrawnBy ; sh:minCount 1 ] ;
+          sh:property [ sh:path bs:withdrawalReason ; sh:minCount 1 ] ]
+    ) ;
+    sh:message "A withdrawn publication records who withdrew it and why." .
+
+# --- N34 — Organisation masters ---------------------------------------------
+# Numeric bounds co-declare sh:datatype (the S4.10 / N26 lesson). The two
+# approval limits are ordered with sh:lessThan: a level-1 ceiling at or
+# above level 2's would route every deviation to the wrong authority.
+bs:OrganisationMastersShape a sh:NodeShape ;
+    sh:targetClass bs:OrganisationMasters ;
+    sh:property [ sh:path bs:mastersVersion ; sh:minCount 1 ; sh:maxCount 1 ;
+                  sh:datatype xsd:integer ; sh:minInclusive 1 ] ;
+    sh:property [ sh:path bs:ofOrganisation ; sh:minCount 1 ; sh:maxCount 1 ;
+                  sh:nodeKind sh:IRI ] ;
+    sh:property [ sh:path bs:mastersSetAt ; sh:minCount 1 ; sh:maxCount 1 ;
+                  sh:datatype xsd:dateTime ] ;
+    sh:property [ sh:path bs:mastersNote ; sh:maxCount 1 ] ;
+    sh:property [ sh:path bs:securityDepositPct ; sh:minCount 1 ; sh:maxCount 1 ;
+                  sh:datatype xsd:decimal ; sh:minInclusive 0.0 ; sh:maxInclusive 100.0 ] ;
+    sh:property [ sh:path bs:gstTdsApplicable ; sh:minCount 1 ; sh:maxCount 1 ;
+                  sh:datatype xsd:boolean ] ;
+    sh:property [ sh:path bs:labourCessApplicable ; sh:minCount 1 ; sh:maxCount 1 ;
+                  sh:datatype xsd:boolean ] ;
+    sh:property [ sh:path bs:deviationThresholdPct ; sh:minCount 1 ; sh:maxCount 1 ;
+                  sh:datatype xsd:decimal ; sh:minExclusive 0.0 ; sh:maxInclusive 100.0 ] ;
+    sh:property [ sh:path bs:approvalLevel1Limit ; sh:minCount 1 ; sh:maxCount 1 ;
+                  sh:datatype xsd:decimal ; sh:minExclusive 0.0 ;
+                  sh:lessThan bs:approvalLevel2Limit ;
+                  sh:message "Level-1 approval limit must be below the level-2 limit." ] ;
+    sh:property [ sh:path bs:approvalLevel2Limit ; sh:minCount 1 ; sh:maxCount 1 ;
+                  sh:datatype xsd:decimal ; sh:minExclusive 0.0 ] ;
+    sh:property [ sh:path bs:approvalLevel1Label ; sh:minCount 1 ; sh:maxCount 1 ; sh:minLength 1 ] ;
+    sh:property [ sh:path bs:approvalLevel2Label ; sh:minCount 1 ; sh:maxCount 1 ; sh:minLength 1 ] ;
+    sh:property [ sh:path bs:approvalLevel3Label ; sh:minCount 1 ; sh:maxCount 1 ; sh:minLength 1 ] ;
+    sh:property [ sh:path bs:fyStartMonth ; sh:minCount 1 ; sh:maxCount 1 ;
+                  sh:datatype xsd:integer ; sh:minInclusive 1 ; sh:maxInclusive 12 ] ;
+    sh:property [ sh:path bs:legalName ; sh:maxCount 1 ] ;
+    sh:property [ sh:path bs:gstin ; sh:maxCount 1 ;
+                  sh:pattern "^[0-9]{2}[A-Z]{5}[0-9]{4}[A-Z][1-9A-Z]Z[0-9A-Z]$" ;
+                  sh:message "GSTIN must be 15 characters: state code, PAN, entity, Z, checksum." ] ;
+    sh:property [ sh:path bs:pan ; sh:maxCount 1 ;
+                  sh:pattern "^[A-Z]{5}[0-9]{4}[A-Z]$" ;
+                  sh:message "PAN must be 5 letters, 4 digits, 1 letter." ] ;
+    sh:property [ sh:path bs:cin ; sh:maxCount 1 ;
+                  sh:pattern "^[LU][0-9]{5}[A-Z]{2}[0-9]{4}[A-Z]{3}[0-9]{6}$" ;
+                  sh:message "CIN must be 21 characters, e.g. U72100AP2025PTC122937." ] .
+
+bs:MastersAdoptionShape a sh:NodeShape ;
+    sh:targetClass bs:MastersAdoption ;
+    sh:property [ sh:path bs:adoptedMastersVersion ; sh:minCount 1 ; sh:maxCount 1 ;
+                  sh:datatype xsd:integer ; sh:minInclusive 1 ] ;
+    sh:property [ sh:path bs:adoptedAt ; sh:minCount 1 ; sh:maxCount 1 ;
+                  sh:datatype xsd:dateTime ] ;
+    sh:property [ sh:path bs:ofProject ; sh:minCount 1 ; sh:maxCount 1 ;
+                  sh:nodeKind sh:IRI ] .
+
+# --- N35 — Activity duration estimate ---------------------------------------
+# The reasoning behind a planned duration. Numeric bounds co-declare
+# sh:datatype (the S4.10 / N26 lesson); normSource is sh:in ONLY (antipattern
+# #13). Two rules a planner would otherwise break silently:
+#   * allowances only ever lengthen an activity — baseDays <= finalDays;
+#   * a rate called "measured" must say how many site days it rests on, so a
+#     one-day figure cannot pass itself off as the organisation's norm.
+bs:ActivityDurationEstimateShape a sh:NodeShape ;
+    sh:targetClass bs:ActivityDurationEstimate ;
+    sh:property [ sh:path bs:estimateId ; sh:minCount 1 ; sh:maxCount 1 ; sh:minLength 1 ] ;
+    sh:property [ sh:path bs:forActivity ; sh:minCount 1 ; sh:maxCount 1 ;
+                  sh:nodeKind sh:IRI ] ;
+    sh:property [ sh:path bs:workType ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path bs:plannedQuantity ; sh:minCount 1 ; sh:maxCount 1 ;
+                  sh:datatype xsd:decimal ; sh:minInclusive 0.0 ] ;
+    sh:property [ sh:path bs:unit ; sh:maxCount 1 ] ;
+    sh:property [ sh:path bs:crewCount ; sh:minCount 1 ; sh:maxCount 1 ;
+                  sh:datatype xsd:integer ; sh:minInclusive 1 ] ;
+    sh:property [ sh:path bs:crewDescription ; sh:maxCount 1 ] ;
+    sh:property [ sh:path bs:crewSize ; sh:maxCount 1 ;
+                  sh:datatype xsd:integer ; sh:minInclusive 1 ] ;
+    sh:property [ sh:path bs:dailyOutput ; sh:minCount 1 ; sh:maxCount 1 ;
+                  sh:datatype xsd:decimal ; sh:minExclusive 0.0 ] ;
+    sh:property [ sh:path bs:seededDailyOutput ; sh:maxCount 1 ;
+                  sh:datatype xsd:decimal ; sh:minExclusive 0.0 ] ;
+    sh:property [ sh:path bs:normSource ; sh:minCount 1 ; sh:maxCount 1 ;
+                  sh:in ("measured" "seeded") ] ;
+    sh:property [ sh:path bs:observationCount ; sh:maxCount 1 ;
+                  sh:datatype xsd:integer ; sh:minInclusive 0 ] ;
+    sh:property [ sh:path bs:baseDays ; sh:minCount 1 ; sh:maxCount 1 ;
+                  sh:datatype xsd:integer ; sh:minInclusive 1 ;
+                  sh:lessThanOrEquals bs:finalDays ;
+                  sh:message "Allowances only lengthen an activity: base days cannot exceed final days." ] ;
+    sh:property [ sh:path bs:finalDays ; sh:minCount 1 ; sh:maxCount 1 ;
+                  sh:datatype xsd:integer ; sh:minInclusive 1 ] ;
+    sh:property [ sh:path bs:weatherPadPct ; sh:maxCount 1 ;
+                  sh:datatype xsd:decimal ; sh:minInclusive 0.0 ] ;
+    sh:property [ sh:path bs:labourPadPct ; sh:maxCount 1 ;
+                  sh:datatype xsd:decimal ; sh:minInclusive 0.0 ] ;
+    sh:property [ sh:path bs:durationBasis ; sh:minCount 1 ; sh:maxCount 1 ; sh:minLength 1 ] ;
+    sh:property [ sh:path bs:estimatedAt ; sh:minCount 1 ; sh:maxCount 1 ;
+                  sh:datatype xsd:dateTime ] ;
+    sh:property [ sh:path bs:scheduleRevision ; sh:maxCount 1 ] ;
+    sh:or (
+        [ sh:property [ sh:path bs:normSource ; sh:hasValue "seeded" ] ]
+        [ sh:property [ sh:path bs:observationCount ; sh:minCount 1 ;
+                        sh:datatype xsd:integer ; sh:minInclusive 1 ] ]
+    ) ;
+    sh:message "A measured rate must record how many site observations it rests on." .
+
+# --- N38 — A model-planned activity's budget share ---------------------------
+# A second shape on bs:Activity, kept apart from ActivityShape (which is
+# deliberately permissive for V0.09+ legacy writers). Everything is optional —
+# an imported schedule carries none of it — but when present it must be a
+# single non-negative figure, and a budget share must say which line it is a
+# share of: a share with no parent cannot be reconciled against the BOQ.
+bs:ActivityBudgetShape a sh:NodeShape ;
+    sh:targetClass bs:Activity ;
+    sh:property [ sh:path bs:budgetedCost ; sh:maxCount 1 ;
+                  sh:datatype xsd:decimal ; sh:minInclusive 0.0 ] ;
+    sh:property [ sh:path bs:budgetedQuantity ; sh:maxCount 1 ;
+                  sh:datatype xsd:decimal ; sh:minInclusive 0.0 ] ;
+    sh:property [ sh:path bs:boqShareOf ; sh:maxCount 1 ; sh:nodeKind sh:IRI ] ;
+    sh:or (
+        [ sh:property [ sh:path bs:budgetedCost ; sh:maxCount 0 ] ]
+        [ sh:property [ sh:path bs:boqShareOf ; sh:minCount 1 ] ]
+    ) ;
+    sh:message "A budget share must name the BOQ line it is a share of (bs:boqShareOf)." .
+
+# --- N38 — Decision ---------------------------------------------------------
+# decisionStatus is sh:in ONLY (antipattern #13). A Decided decision must name
+# who decided, when, and what — the same conditional idiom as HoldPointShape.
+bs:DecisionShape a sh:NodeShape ;
+    sh:targetClass bs:Decision ;
+    sh:property [ sh:path bs:decisionId ; sh:minCount 1 ; sh:maxCount 1 ; sh:minLength 1 ] ;
+    sh:property [ sh:path bs:decisionQuestion ; sh:minCount 1 ; sh:maxCount 1 ; sh:minLength 1 ] ;
+    sh:property [ sh:path bs:decisionStatus ; sh:minCount 1 ; sh:maxCount 1 ;
+                  sh:in ("Open" "Decided" "Superseded" "Withdrawn") ] ;
+    sh:property [ sh:path bs:decisionText ; sh:maxCount 1 ; sh:minLength 1 ] ;
+    sh:property [ sh:path bs:decisionBasis ; sh:maxCount 1 ] ;
+    sh:property [ sh:path bs:decisionSource ; sh:maxCount 1 ] ;
+    sh:property [ sh:path bs:decidedBy ; sh:maxCount 1 ; sh:nodeKind sh:IRI ] ;
+    sh:property [ sh:path bs:decidedAt ; sh:maxCount 1 ; sh:datatype xsd:dateTime ] ;
+    sh:property [ sh:path bs:affectsActivity ; sh:nodeKind sh:IRI ] ;
+    sh:property [ sh:path bs:ofProject ; sh:minCount 1 ; sh:maxCount 1 ; sh:nodeKind sh:IRI ] ;
+    # N36 — the open-question fields.
+    sh:property [ sh:path bs:owner ; sh:maxCount 1 ; sh:nodeKind sh:IRI ] ;
+    sh:property [ sh:path bs:dueDate ; sh:maxCount 1 ; sh:datatype xsd:date ] ;
+    sh:property [ sh:path bs:raisedBy ; sh:maxCount 1 ; sh:nodeKind sh:IRI ] ;
+    sh:property [ sh:path bs:raisedAt ; sh:maxCount 1 ; sh:datatype xsd:dateTime ] ;
+    sh:property [ sh:path bs:decisionOptions ; sh:maxCount 1 ] ;
+    sh:property [ sh:path prov:wasRevisionOf ; sh:maxCount 1 ; sh:nodeKind sh:IRI ] ;
+    # Anything but Open — Decided, Superseded (it was decided), Withdrawn —
+    # records who closed it, when, and what (or why).
+    sh:or (
+        [ sh:property [ sh:path bs:decisionStatus ; sh:in ("Open") ] ]
+        [ sh:property [ sh:path bs:decidedBy ; sh:minCount 1 ] ;
+          sh:property [ sh:path bs:decidedAt ; sh:minCount 1 ] ;
+          sh:property [ sh:path bs:decisionText ; sh:minCount 1 ] ]
+    ) ;
+    # An open question has someone who must answer it, by a date.
+    sh:or (
+        [ sh:property [ sh:path bs:decisionStatus ; sh:not [ sh:hasValue "Open" ] ] ]
+        [ sh:property [ sh:path bs:owner ; sh:minCount 1 ] ;
+          sh:property [ sh:path bs:dueDate ; sh:minCount 1 ] ]
+    ) ;
+    sh:message "A decision closed in any way records who, when and what; an open one names who must decide, by when." .
+
+# --- N36 — Constraint (the make-ready log) ------------------------------------
+# Flow and status are sh:in ONLY (antipattern #13). A constraint always has an
+# owner, a need-by date and at least one activity; once cleared or withdrawn
+# it records who and when; a withdrawn one records why.
+bs:ConstraintShape a sh:NodeShape ;
+    sh:targetClass bs:Constraint ;
+    sh:property [ sh:path bs:constraintId ; sh:minCount 1 ; sh:maxCount 1 ; sh:minLength 1 ] ;
+    sh:property [ sh:path bs:constraintText ; sh:minCount 1 ; sh:maxCount 1 ; sh:minLength 3 ] ;
+    sh:property [ sh:path bs:constraintFlow ; sh:minCount 1 ; sh:maxCount 1 ;
+                  sh:in ("PrerequisiteWork" "Information" "Materials" "Labour" "Equipment" "Space" "External") ] ;
+    sh:property [ sh:path bs:constraintStatus ; sh:minCount 1 ; sh:maxCount 1 ;
+                  sh:in ("Open" "Cleared" "Withdrawn") ] ;
+    sh:property [ sh:path bs:owner ; sh:minCount 1 ; sh:maxCount 1 ; sh:nodeKind sh:IRI ] ;
+    sh:property [ sh:path bs:dueDate ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:date ] ;
+    sh:property [ sh:path bs:affectsActivity ; sh:minCount 1 ; sh:nodeKind sh:IRI ] ;
+    sh:property [ sh:path bs:raisedBy ; sh:minCount 1 ; sh:maxCount 1 ; sh:nodeKind sh:IRI ] ;
+    sh:property [ sh:path bs:raisedAt ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:dateTime ] ;
+    sh:property [ sh:path bs:resolvedBy ; sh:maxCount 1 ; sh:nodeKind sh:IRI ] ;
+    sh:property [ sh:path bs:resolvedAt ; sh:maxCount 1 ; sh:datatype xsd:dateTime ] ;
+    sh:property [ sh:path bs:closureNote ; sh:maxCount 1 ] ;
+    sh:property [ sh:path bs:ofProject ; sh:minCount 1 ; sh:maxCount 1 ; sh:nodeKind sh:IRI ] ;
+    sh:or (
+        [ sh:property [ sh:path bs:constraintStatus ; sh:in ("Open") ] ]
+        [ sh:property [ sh:path bs:resolvedBy ; sh:minCount 1 ] ;
+          sh:property [ sh:path bs:resolvedAt ; sh:minCount 1 ] ]
+    ) ;
+    sh:or (
+        [ sh:property [ sh:path bs:constraintStatus ; sh:not [ sh:hasValue "Withdrawn" ] ] ]
+        [ sh:property [ sh:path bs:closureNote ; sh:minCount 1 ; sh:minLength 3 ] ]
+    ) ;
+    sh:message "A constraint names its owner, need-by date and activities; clearing or withdrawing it records who and when, and a withdrawal says why." .
+
+# ──────────────────────────────────────────────────────────────────────
+# NIYOJ N39 — Rate analysis
+# Numeric bounds carry a co-declared sh:datatype (pyshacl compares only then);
+# value sets are plain-literal sh:in with no sh:datatype (antipattern #13).
+# ──────────────────────────────────────────────────────────────────────
+bs:CostResourceShape a sh:NodeShape ;
+    sh:targetClass bs:CostResource ;
+    sh:property [ sh:path bs:resourceCode ; sh:minCount 1 ; sh:maxCount 1 ;
+                  sh:pattern "^[A-Z0-9][A-Z0-9._-]{0,39}$" ] ;
+    sh:property [ sh:path bs:resourceName ; sh:minCount 1 ; sh:maxCount 1 ; sh:minLength 2 ] ;
+    sh:property [ sh:path bs:resourceKind ; sh:minCount 1 ; sh:maxCount 1 ;
+                  sh:in ("Labour" "Material" "Plant" "Carriage" "Other") ] ;
+    sh:property [ sh:path bs:unit ; sh:minCount 1 ; sh:maxCount 1 ; sh:minLength 1 ] ;
+    sh:property [ sh:path bs:basicRate ; sh:maxCount 1 ; sh:datatype xsd:decimal ; sh:minInclusive 0 ] ;
+    sh:property [ sh:path bs:rateAsOf ; sh:maxCount 1 ; sh:datatype xsd:date ] ;
+    sh:property [ sh:path bs:rateSource ; sh:maxCount 1 ; sh:minLength 2 ] ;
+    sh:or (
+        [ sh:property [ sh:path bs:basicRate ; sh:maxCount 0 ] ]
+        [ sh:property [ sh:path bs:rateAsOf ; sh:minCount 1 ] ;
+          sh:property [ sh:path bs:rateSource ; sh:minCount 1 ] ]
+    ) ;
+    sh:or (
+        [ sh:property [ sh:path bs:importedFrom ; sh:maxCount 0 ] ]
+        [ sh:property [ sh:path bs:importedFrom ; sh:maxCount 1 ; sh:nodeKind sh:IRI ] ;
+          sh:property [ sh:path bs:importedRecordVersion ; sh:maxCount 1 ;
+                        sh:pattern "^sha256:[0-9a-f]{64}$" ] ;
+          sh:property [ sh:path bs:importedEdition ; sh:minCount 1 ; sh:maxCount 1 ] ;
+          sh:property [ sh:path bs:importedItemCode ; sh:minCount 1 ; sh:maxCount 1 ] ;
+          sh:property [ sh:path bs:sourceCitation ; sh:minCount 1 ; sh:maxCount 1 ; sh:minLength 10 ] ]
+    ) ;
+    sh:message "A basic rate names its code, kind and unit; a priced resource says when and from where the rate came; an imported resource names its source record, edition, code and citation (and the record's version, written on every import since the N40 review; resources imported before it carry none and must stay priceable)." .
+
+bs:RateAnalysisShape a sh:NodeShape ;
+    sh:targetClass bs:RateAnalysis ;
+    sh:property [ sh:path bs:analysisId ; sh:minCount 1 ; sh:maxCount 1 ; sh:pattern "^R[AL]-[0-9]{4,}$" ] ;
+    sh:property [ sh:path bs:analysisVersion ; sh:minCount 1 ; sh:maxCount 1 ;
+                  sh:datatype xsd:integer ; sh:minInclusive 1 ] ;
+    sh:property [ sh:path bs:analysisTitle ; sh:minCount 1 ; sh:maxCount 1 ; sh:minLength 3 ] ;
+    sh:property [ sh:path bs:analysisScope ; sh:minCount 1 ; sh:maxCount 1 ; sh:in ("library" "project") ] ;
+    sh:property [ sh:path bs:unit ; sh:minCount 1 ; sh:maxCount 1 ; sh:minLength 1 ] ;
+    sh:property [ sh:path bs:analysedQuantity ; sh:minCount 1 ; sh:maxCount 1 ;
+                  sh:datatype xsd:decimal ; sh:minExclusive 0 ] ;
+    sh:property [ sh:path bs:gangOutput ; sh:maxCount 1 ; sh:datatype xsd:decimal ; sh:minExclusive 0 ] ;
+    sh:property [ sh:path bs:outputSource ; sh:maxCount 1 ; sh:in ("typed" "measured" "library") ] ;
+    sh:property [ sh:path bs:outputObservations ; sh:maxCount 1 ; sh:datatype xsd:integer ; sh:minInclusive 0 ] ;
+    sh:property [ sh:path bs:workType ; sh:maxCount 1 ] ;
+    sh:property [ sh:path bs:analysisSource ; sh:minCount 1 ; sh:maxCount 1 ; sh:minLength 3 ] ;
+    sh:property [ sh:path bs:analysisNote ; sh:maxCount 1 ] ;
+    sh:property [ sh:path bs:forBOQItem ; sh:maxCount 1 ; sh:nodeKind sh:IRI ] ;
+    sh:property [ sh:path bs:fromLibraryAnalysis ; sh:maxCount 1 ; sh:nodeKind sh:IRI ] ;
+    sh:property [ sh:path bs:ofProject ; sh:maxCount 1 ; sh:nodeKind sh:IRI ] ;
+    sh:or (
+        [ sh:property [ sh:path bs:analysisScope ; sh:in ("library") ] ]
+        [ sh:property [ sh:path bs:forBOQItem ; sh:minCount 1 ] ;
+          sh:property [ sh:path bs:ofProject ; sh:minCount 1 ] ]
+    ) ;
+    sh:or (
+        [ sh:property [ sh:path bs:outputSource ; sh:not [ sh:hasValue "measured" ] ] ]
+        [ sh:property [ sh:path bs:outputObservations ; sh:minCount 1 ; sh:minInclusive 1 ] ]
+    ) ;
+    sh:or (
+        [ sh:property [ sh:path bs:importedFrom ; sh:maxCount 0 ] ]
+        [ sh:property [ sh:path bs:importedFrom ; sh:maxCount 1 ; sh:nodeKind sh:IRI ] ;
+          sh:property [ sh:path bs:importedRecordVersion ; sh:minCount 1 ; sh:maxCount 1 ;
+                        sh:pattern "^sha256:[0-9a-f]{64}$" ] ;
+          sh:property [ sh:path bs:importedEdition ; sh:minCount 1 ; sh:maxCount 1 ] ;
+          sh:property [ sh:path bs:importedItemCode ; sh:minCount 1 ; sh:maxCount 1 ] ;
+          sh:property [ sh:path bs:sourceCitation ; sh:minCount 1 ; sh:maxCount 1 ; sh:minLength 10 ] ;
+          sh:property [ sh:path bs:importedReviewState ; sh:minCount 1 ; sh:maxCount 1 ;
+                        sh:in ("proposed" "approved") ] ;
+          sh:property [ sh:path bs:importedCheckStatus ; sh:minCount 1 ; sh:maxCount 1 ;
+                        sh:in ("reconciled" "reconciled_with_unchecked" "flagged") ] ]
+    ) ;
+    sh:message "An analysis version names its id, version, work, unit, the quantity it is for and where its figures come from; a project analysis names its BOQ line; a measured output says how many site days stand behind it; an imported version names its source record, version, edition, item, citation, review state and check." .
+
+bs:AnalysisLineShape a sh:NodeShape ;
+    sh:targetClass bs:AnalysisLine ;
+    sh:property [ sh:path bs:inAnalysis ; sh:minCount 1 ; sh:maxCount 1 ; sh:nodeKind sh:IRI ] ;
+    sh:property [ sh:path bs:lineOrder ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:integer ; sh:minInclusive 1 ] ;
+    sh:property [ sh:path bs:resourceCode ; sh:minCount 1 ; sh:maxCount 1 ; sh:minLength 1 ] ;
+    sh:property [ sh:path bs:lineKind ; sh:minCount 1 ; sh:maxCount 1 ; sh:in ("gang" "perUnit") ] ;
+    sh:property [ sh:path bs:lineQuantity ; sh:minCount 1 ; sh:maxCount 1 ;
+                  sh:datatype xsd:decimal ; sh:minInclusive 0 ] ;
+    sh:property [ sh:path bs:lineGroup ; sh:maxCount 1 ; sh:pattern "^[A-Z]$" ] ;
+    sh:property [ sh:path bs:lineNote ; sh:maxCount 1 ; sh:minLength 1 ] ;
+    sh:message "An analysis line names its analysis, position, resource, kind and a quantity of zero or more; a group is one capital letter." .
+
+bs:AnalysisAdditionShape a sh:NodeShape ;
+    sh:targetClass bs:AnalysisAddition ;
+    sh:property [ sh:path bs:inAnalysis ; sh:minCount 1 ; sh:maxCount 1 ; sh:nodeKind sh:IRI ] ;
+    sh:property [ sh:path bs:lineOrder ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:integer ; sh:minInclusive 1 ] ;
+    sh:property [ sh:path bs:additionLabel ; sh:minCount 1 ; sh:maxCount 1 ; sh:minLength 2 ] ;
+    sh:property [ sh:path bs:additionPercent ; sh:minCount 1 ; sh:maxCount 1 ;
+                  sh:datatype xsd:decimal ; sh:minInclusive 0 ; sh:maxInclusive 100 ] ;
+    sh:property [ sh:path bs:additionBase ; sh:minCount 1 ; sh:maxCount 1 ;
+                  sh:in ("Labour" "Material" "Plant" "Cost" "Running") ] ;
+    sh:property [ sh:path bs:excludesGroup ; sh:pattern "^[A-Z]$" ] ;
+    sh:or (
+        [ sh:property [ sh:path bs:excludesGroup ; sh:maxCount 0 ] ]
+        [ sh:property [ sh:path bs:additionBase ; sh:in ("Cost" "Running") ] ]
+    ) ;
+    sh:message "An addition names its analysis, position, label, a percentage from 0 to 100 and its base; only a Cost or Running base can leave out a group of lines." .
+
+bs:ResourceMappingShape a sh:NodeShape ;
+    sh:targetClass bs:ResourceMapping ;
+    sh:property [ sh:path bs:externalScheme ; sh:minCount 1 ; sh:maxCount 1 ; sh:in ("cpwd-dar-resource" "cpwd-dar-item") ] ;
+    sh:property [ sh:path bs:externalCode ; sh:minCount 1 ; sh:maxCount 1 ; sh:minLength 1 ] ;
+    sh:property [ sh:path bs:resourceCode ; sh:minCount 1 ; sh:maxCount 1 ;
+                  sh:pattern "^[A-Z0-9][A-Z0-9._-]{0,39}$" ] ;
+    sh:message "A resource mapping names the outside code list, the outside code and the organisation's resource code." .
+
+bs:ProjectResourcePriceShape a sh:NodeShape ;
+    sh:targetClass bs:ProjectResourcePrice ;
+    sh:property [ sh:path bs:resourceCode ; sh:minCount 1 ; sh:maxCount 1 ; sh:minLength 1 ] ;
+    sh:property [ sh:path bs:priceRate ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:decimal ; sh:minInclusive 0 ] ;
+    sh:property [ sh:path bs:priceSource ; sh:minCount 1 ; sh:maxCount 1 ; sh:minLength 2 ] ;
+    sh:property [ sh:path bs:priceAsOf ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:date ] ;
+    sh:property [ sh:path bs:ofProject ; sh:minCount 1 ; sh:maxCount 1 ; sh:nodeKind sh:IRI ] ;
+    sh:message "A project price names its resource, a rate of zero or more, where it came from and when." .
+
+# ─────────────────────────────────────────────────────────────────────
+# P2B.8 — Schedule baselines (CPWD GCC 2023 Clause 5)
+# ─────────────────────────────────────────────────────────────────────
+
+bs:ScheduleBaselineShape a sh:NodeShape ;
+    sh:targetClass bs:ScheduleBaseline ;
+    sh:property [ sh:path bs:baselineNo ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:integer ; sh:minInclusive 0 ] ;
+    sh:property [ sh:path bs:baselineLabel ; sh:minCount 1 ; sh:maxCount 1 ; sh:minLength 2 ] ;
+    sh:property [ sh:path bs:baselineBasis ; sh:minCount 1 ; sh:maxCount 1 ;
+                  sh:in ("ApprovedProgramme" "AgreedAmendment" "ExtensionOfTime") ] ;
+    sh:property [ sh:path bs:dataDate ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:date ] ;
+    sh:property [ sh:path bs:approvedBy ; sh:minCount 1 ; sh:maxCount 1 ; sh:nodeKind sh:IRI ] ;
+    sh:property [ sh:path bs:approvedAt ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:dateTime ] ;
+    sh:property [ sh:path bs:ofProject ; sh:minCount 1 ; sh:maxCount 1 ; sh:nodeKind sh:IRI ] ;
+    sh:property [ sh:path bs:baselineStartDate ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:date ;
+                  sh:lessThanOrEquals bs:baselineFinishDate ] ;
+    sh:property [ sh:path bs:baselineFinishDate ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:date ] ;
+    sh:property [ sh:path bs:stipulatedFinishDate ; sh:maxCount 1 ; sh:datatype xsd:date ] ;
+    sh:property [ sh:path bs:entryCount ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:integer ; sh:minInclusive 1 ] ;
+    sh:property [ sh:path bs:eotClause ; sh:maxCount 1 ; sh:in ("5.2" "5.3") ] ;
+    sh:property [ sh:path bs:extensionDays ; sh:maxCount 1 ; sh:datatype xsd:integer ; sh:minInclusive 1 ] ;
+    sh:or (
+        [ sh:property [ sh:path bs:baselineBasis ; sh:not [ sh:hasValue "ExtensionOfTime" ] ] ]
+        [ sh:property [ sh:path bs:eotClause ; sh:minCount 1 ] ;
+          sh:property [ sh:path bs:extensionDays ; sh:minCount 1 ] ]
+    ) ;
+    sh:or (
+        [ sh:property [ sh:path bs:baselineBasis ; sh:hasValue "ApprovedProgramme" ] ]
+        [ sh:property [ sh:path bs:baselineReason ; sh:minCount 1 ; sh:minLength 3 ] ]
+    ) ;
+    sh:message "A baseline names its number, label, basis, data date, approver and time, project, first and last day and how many activities it froze; an extension of time names its Clause 5 sub-clause and the days granted; a revision says why." .
+
+bs:BaselineEntryShape a sh:NodeShape ;
+    sh:targetClass bs:BaselineEntry ;
+    sh:property [ sh:path bs:inBaseline ; sh:minCount 1 ; sh:maxCount 1 ; sh:nodeKind sh:IRI ] ;
+    sh:property [ sh:path bs:baselineOf ; sh:minCount 1 ; sh:maxCount 1 ; sh:nodeKind sh:IRI ] ;
+    sh:property [ sh:path bs:baselineActivityId ; sh:minCount 1 ; sh:maxCount 1 ; sh:minLength 1 ] ;
+    sh:property [ sh:path bs:baselineActivityName ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path bs:baselineStart ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:date ;
+                  sh:lessThanOrEquals bs:baselineLastDay ] ;
+    sh:property [ sh:path bs:baselineLastDay ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:date ] ;
+    sh:property [ sh:path bs:baselineDurationDays ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:integer ; sh:minInclusive 1 ] ;
+    sh:property [ sh:path bs:baselineCost ; sh:maxCount 1 ; sh:datatype xsd:decimal ; sh:minInclusive 0 ] ;
+    sh:message "A baseline entry names its baseline, the activity it froze, that activity's id and name, a first day no later than its last, a duration of a day or more, and at most one budget of zero or more." .
+
+# NIYOJ N41.1 — an element counted from another model's copy. Three rules,
+# each its own shape so a message never relabels another: a copy names the
+# model that counted it and what it was counted as, and is never priced
+# itself (that would count the work twice).
+bs:ElementCountedAsShape a sh:NodeShape ;
+    sh:targetSubjectsOf bs:countedAsElement ;
+    sh:property [ sh:path bs:countedAsElement ; sh:datatype xsd:string ;
+                  sh:pattern "^[0-9A-Za-z_$]{22}$" ;
+                  sh:message "countedAsElement must be an IFC GlobalId (22 characters)." ] ;
+    sh:property [ sh:path bs:countedInModel ; sh:minCount 1 ; sh:maxCount 1 ; sh:nodeKind sh:IRI ;
+                  sh:message "An element counted from another model's copy names that one model (countedInModel)." ] .
+
+bs:ElementCountedInShape a sh:NodeShape ;
+    sh:targetSubjectsOf bs:countedInModel ;
+    sh:property [ sh:path bs:countedAsElement ; sh:minCount 1 ;
+                  sh:message "An element counted in another model names the GlobalId(s) it was counted as (countedAsElement)." ] .
+
+bs:ElementCountedNotPricedShape a sh:NodeShape ;
+    sh:targetSubjectsOf bs:countedAsElement ;
+    sh:property [ sh:path bs:governedByBOQ ; sh:maxCount 0 ;
+                  sh:message "An element counted from another model's copy is not priced itself — a BOQ line governing it would count the same work twice." ] .
+
+# NIYOJ N41.2 — a retired duplicate element node. Each rule its own shape so
+# a message never relabels another: a duplicate is retired and names one
+# survivor; it carries no relation of its own (they moved to the survivor);
+# and the migration that retires them says when and by what.
+bs:ElementDuplicateRetiredShape a sh:NodeShape ;
+    sh:targetSubjectsOf bs:duplicateOf ;
+    sh:property [ sh:path bs:duplicateOf ; sh:maxCount 1 ; sh:nodeKind sh:IRI ;
+                  sh:message "A duplicate element node names the one node that carries the element now (duplicateOf)." ] ;
+    sh:property [ sh:path prov:invalidatedAtTime ; sh:minCount 1 ;
+                  sh:message "An element node that is a duplicate of another is retired (prov:invalidatedAtTime)." ] .
+
+bs:ElementDuplicateInertShape a sh:NodeShape ;
+    sh:targetSubjectsOf bs:duplicateOf ;
+    sh:property [ sh:path bs:governedByBOQ ; sh:maxCount 0 ;
+                  sh:message "A retired duplicate is not priced — its BOQ line belongs to the node it duplicates." ] ;
+    sh:property [ sh:path bs:countedInModel ; sh:maxCount 0 ;
+                  sh:message "A retired duplicate records no copy relation — it belongs to the node it duplicates." ] ;
+    sh:property [ sh:path bs:countedAsElement ; sh:maxCount 0 ;
+                  sh:message "A retired duplicate records no copy relation — it belongs to the node it duplicates." ] ;
+    sh:property [ sh:path bs:linkedActivity ; sh:maxCount 0 ;
+                  sh:message "A retired duplicate links no activity — the link belongs to the node it duplicates." ] .
+
+bs:ElementDuplicatesRetiredShape a sh:NodeShape ;
+    sh:targetClass bs:ElementDuplicatesRetired ;
+    sh:property [ sh:path prov:startedAtTime ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:dateTime ;
+                  sh:message "A duplicate retirement says when it started." ] ;
+    sh:property [ sh:path prov:wasAssociatedWith ; sh:minCount 1 ; sh:nodeKind sh:IRI ;
+                  sh:message "A duplicate retirement names the agent that ran it." ] ;
+    sh:property [ sh:path bs:elementsRetired ; sh:maxCount 1 ; sh:datatype xsd:integer ; sh:minInclusive 0 ;
+                  sh:message "elementsRetired is one whole number, 0 or more." ] .
+
+# --- NIYOJ N42 — MemberIdentityShape (VIDHI ADR 013) ------------------------
+# The enums are VIDHI's (plain-literal sh:in, no sh:datatype — antipattern
+# #13). The review state is a field, never a gate: an answer is stored and
+# used the same way whether a reviewer has approved it or not (founder rule,
+# 2026-10-13); a label, when VIDHI sends one, is stored with it.
+bs:MemberIdentityShape a sh:NodeShape ;
+    sh:targetClass bs:MemberIdentity ;
+    sh:property [ sh:path bs:forModel ; sh:minCount 1 ; sh:maxCount 1 ; sh:nodeKind sh:IRI ;
+                  sh:message "A member identity names the model it was asked for." ] ;
+    sh:property [ sh:path bs:ofProject ; sh:minCount 1 ; sh:maxCount 1 ; sh:nodeKind sh:IRI ] ;
+    sh:property [ sh:path bs:ifcGuid ; sh:minCount 1 ;
+                  sh:message "A member identity covers at least one member (its GlobalId)." ] ;
+    sh:property [ sh:path bs:vidhiContract ; sh:minCount 1 ; sh:maxCount 1 ;
+                  sh:in ("vidhi.element-identity/1") ] ;
+    sh:property [ sh:path bs:inputSha256 ; sh:minCount 1 ; sh:maxCount 1 ;
+                  sh:pattern "^sha256:[0-9a-f]{64}$" ] ;
+    sh:property [ sh:path bs:memberSignature ; sh:minCount 1 ; sh:maxCount 1 ;
+                  sh:pattern "^sha256:[0-9a-f]{64}$" ] ;
+    sh:property [ sh:path bs:contentVersion ; sh:minCount 1 ; sh:maxCount 1 ;
+                  sh:pattern "^sha256:[0-9a-f]{64}$" ] ;
+    sh:property [ sh:path bs:reviewState ; sh:minCount 1 ; sh:maxCount 1 ;
+                  sh:in ("proposed" "approved") ] ;
+    sh:property [ sh:path bs:reviewLabel ; sh:maxCount 1 ; sh:minLength 1 ] ;
+    # No section or grade when VIDHI refused the member whole (the JSON
+    # carries its reasons).
+    sh:property [ sh:path bs:sectionStatus ; sh:maxCount 1 ;
+                  sh:in ("is808_exact" "is808_ambiguous" "measurement_too_uncertain" "foreign" "unidentified"
+                         "inconsistent" "not_in_catalogue") ] ;
+    sh:property [ sh:path bs:sectionDesignation ; sh:maxCount 1 ] ;
+    sh:property [ sh:path bs:gradeStatus ; sh:maxCount 1 ;
+                  sh:in ("is2062" "foreign_stated" "stated_strength" "assumed" "not_stated" "unrecognised") ] ;
+    sh:property [ sh:path bs:identityJson ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path bs:identifiedAt ; sh:minCount 1 ; sh:maxCount 1 ] .

@@ -1,0 +1,43 @@
+{
+  "verifiedOn": "2026-10-19",
+  "type": "Dated engineering diagnostics; not historical research evidence",
+  "sourceCommits": {
+    "iprok": "ee4cf206af08a47db3363fa4404ac51cce1868de",
+    "niyoj": "59bb8c2ae61228cd21778cc6beae523331f4529a"
+  },
+  "schemaChecks": {
+    "fourIprokSerialisationsIsomorphic": true,
+    "completePerTermAssertionsChecked": true,
+    "sourceHashesVerified": true,
+    "guidedPathsVerified": 4,
+    "niyojClassesGroupedExactlyOnce": 111,
+    "editorialNiyojGroups": 20,
+    "forwardAndInverseConstructedQueryResultsChecked": true
+  },
+  "niyojConformance": {
+    "corpusCommit": "59bb8c2ae61228cd21778cc6beae523331f4529a",
+    "runner": "Retained platform .github/actions/shacl-conformance/shacl_conformance.py at the same commit",
+    "inference": "rdfs",
+    "advanced": true,
+    "expectedOutcomesMatched": 193,
+    "failures": 0,
+    "pyshacl": "0.31.0",
+    "scope": "Official core+SHACL conformance runner, 193 retained valid/invalid fixtures. This does not validate a populated project graph or historical thesis results."
+  },
+  "browserChecks": [
+    "Module overview and class drill-down for both sources",
+    "Term inspector with linked assertions",
+    "Forward and inverse paths and disconnected concepts",
+    "Schema cards, table and graph",
+    "Desktop and narrow-screen rendering; no whole-page horizontal overflow",
+    "JavaScript console checked without errors during tested interactions"
+  ],
+  "limitations": [
+    "No OWL reasoner consistency check or import closure validation",
+    "Only 13 of 105 Niyoj object properties declare a domain; absent edges are not proof of absent runtime relationships",
+    "Niyoj source metadata is stale; source identified by exact commit",
+    "No accepted equivalence mapping between historical IproK and Niyoj",
+    "Archival documentation and OOPS reports are preserved source material, not current validation"
+  ],
+  "publicationScope": "Separate explanatory website; existing IprokDoc and w3id redirects unchanged"
+}

@@ -1,0 +1,2426 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" href="resources/primer.css" media="screen"/>
+<link rel="stylesheet" href="resources/rec.css" media="screen"/>
+<link rel="stylesheet" href="resources/extra.css" media="screen"/>
+<link rel="stylesheet" href="resources/owl.css" media="screen"/>
+<link rel="stylesheet" href="resources/dark.css" media="(prefers-color-scheme: dark)"/>
+<link rel="stylesheet" href="resources/light.css" media="(prefers-color-scheme: light)"/>
+<link rel="stylesheet" href="resources/slider.css" media="screen"/>
+<meta name="color-scheme" content="dark light">
+<script type="module" src="resources/dark-mode-toggle.mjs"></script><div class="darkmode">
+	<dark-mode-toggle class="slider"></dark-mode-toggle>
+</div>
+ <title>Integrated Project Knowledge (IproK) Ontology</title>
+
+
+<!-- SCHEMA.ORG METADATA -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://w3id.org/IproK#","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://w3id.org/IproK#","name":"Integrated Project Knowledge (IproK) Ontology", "headline":"IproK initially focuses on three core knowledge areas from the Project Management Body of Knowledge (PMBOK® Guide): Schedule Management, Resource Management, and Cost Management. This strategic scope was chosen due to the fundamental importance and high degree of interdependence of these domains for project success and their foundational role in overall project control. This modular approach, grounded in established PMBOK knowledge areas, is intentionally designed to ensure scalability and to facilitate future extensibility to other critical knowledge areas such as Scope Management, Risk Management, Quality Management, and Stakeholder Management.", "dateReleased":"25-05-2025", "version":"0.1.0", "license":"https://creativecommons.org/licenses/by/4.0/", "author":[{"@type":"Person","name":"Venkatesh Kone","url":"https://orcid.org/0000-0002-6398-5850"}], "contributor":[{"@type":"Person","name":"Prof. Gangadhar Mahesh"}]}</script>
+
+<script src="resources/jquery.js"></script> 
+<script src="resources/marked.min.js"></script> 
+    <script> 
+function loadHash() {
+  jQuery(".markdown").each(function(el){jQuery(this).after(marked.parse(jQuery(this).text())).remove()});
+	var hash = location.hash;
+	if($(hash).offset()!=null){
+	  $('html, body').animate({scrollTop: $(hash).offset().top}, 0);
+}
+	loadTOC();
+}
+function loadTOC(){
+	//process toc dynamically
+	  var t='<h2>Table of contents</h2><ul>';i = 1;j=0;
+	  jQuery(".list").each(function(){
+		if(jQuery(this).is('h2')){
+			if(j>0){
+				t+='</ul>';
+				j=0;
+			}
+			t+= '<li>'+i+'. <a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+			i++;
+		}
+		if(jQuery(this).is('h3')){
+			if(j==0){
+				t+='<ul>';
+			}
+			j++;
+			t+= '<li>'+(i-1)+'.'+j+'. '+'<a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+		}
+	  });
+	  t+='</ul>';
+	  $("#toc").html(t); 
+}
+$(function(){
+    loadHash();
+}); $.fn.ignore = function(sel){
+        return this.clone().find(sel||">*").remove().end();
+ }; 
+   </script> 
+  </head> 
+
+<body>
+<div class="container">
+<div class="head">
+<div style="float:right">language <a href="index-en.html"><b>en</b></a> </div>
+<h1>Integrated Project Knowledge (IproK) Ontology</h1>
+<h2>Release: 25-05-2025</h2>
+
+
+<dl>
+<dt>Latest version:</dt>
+<dd><a href="https://w3id.org/IproK#">https://w3id.org/IproK#</a></dd>
+<dt>Revision:</dt>
+<dd>0.1.0</dd>
+<dt>Issued on:</dt>
+<dd>Date issued</dd>
+<dt>Authors:</dt>
+<dd><a href="https://orcid.org/0000-0002-6398-5850">Venkatesh Kone</a>, NITK, Surathkal</dd>
+
+<dt>Contributors:</dt>
+<dd>Prof. Gangadhar Mahesh</dd>
+
+<dt>See also:</dt>
+<dd><a href="https://iprok-web.streamlit.app/">https://iprok-web.streamlit.app/</a></dd>
+
+<dt>Download serialization:</dt><dd><span><a href="ontology.jsonld" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ontology.owl" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License:</dt><dd><a href="https://creativecommons.org/licenses/by/4.0/" target="_blank"><img src="https://img.shields.io/badge/License-https://creativecommons.org/licenses/by/4.0/-blue.svg" alt="https://creativecommons.org/licenses/by/4.0/" /></a>
+<a href="https://creativecommons.org/licenses/by/4.0/" rel="license" target="_blank">
+<img src="null" style="border-width:0" alt="License" />
+</a>
+<br/></dd><dt>Visualization:</dt><dd><a href="webvowl/index.html#" target="_blank"><img src="https://img.shields.io/badge/Visualize_with-WebVowl-blue.svg" alt="Visualize with WebVowl" /></a></dd>
+<dt>Evaluation:</dt><dd><a href="OOPSevaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd><dt>Cite as:</dt>
+<dd>Venkatesh Kone, https://orcid.org/0000-0002-6398-5850. Integrated Project Knowledge (IproK) Ontology. Revision: 0.1.0.</dd>
+</dl>
+
+<hr/>
+</div>
+<div class="status">
+<div>
+<span>Ontology Specification Draft</span>
+</div>
+</div>     <div id="abstract"><h2>Abstract</h2><span class="markdown">
+IproK initially focuses on three core knowledge areas from the Project Management Body of Knowledge (PMBOK® Guide): Schedule Management, Resource Management, and Cost Management. This strategic scope was chosen due to the fundamental importance and high degree of interdependence of these domains for project success and their foundational role in overall project control. This modular approach, grounded in established PMBOK knowledge areas, is intentionally designed to ensure scalability and to facilitate future extensibility to other critical knowledge areas such as Scope Management, Risk Management, Quality Management, and Stakeholder Management. </span>
+</div>
+<div id="toc"></div> 
+
+<!--INTRODUCTION SECTION-->
+    <div id="introduction"><h2 id="intro" class="list">Introduction <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">The primary purpose of the IproK ontology is to provide a formal, explicit, and semantically rich specification for standardizing and integrating heterogeneous construction project management data, focusing on project schedules, costs, and resources. It aims to create a unified knowledge base that captures their complex interdependencies, thereby facilitating advanced data analytics and decision support. A key driver is the vision for IproK to serve not merely as a solution for individual projects, but as a reusable and evolving knowledge asset for future construction endeavors.</span>
+</div>
+  
+
+<!--OVERVIEW SECTION-->
+    <div id="overview"><h2 id="overv" class="list">Integrated Project Knowledge (IproK) Ontology: Overview <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+This ontology has the following classes and properties.</span>
+<h4>Classes</h4>
+<ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#Actor" title="https://w3id.org/IproK#Actor">Actor</a>
+   </li>
+   <li>
+      <a href="#Calendar" title="https://w3id.org/IproK#Calendar">Calendar</a>
+   </li>
+   <li>
+      <a href="#Constraint" title="https://w3id.org/IproK#Constraint">Constraint</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/IproK/cost#CostCategory" title="https://w3id.org/IproK/cost#CostCategory">CostCategory</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/IproK/cost#CostItem" title="https://w3id.org/IproK/cost#CostItem">CostItem</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/IproK/cost#CostType" title="https://w3id.org/IproK/cost#CostType">CostType</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/IproK/cost#EquipmentCost" title="https://w3id.org/IproK/cost#EquipmentCost">EquipmentCost</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/IproK/resource#EquipmentResource"
+         title="https://w3id.org/IproK/resource#EquipmentResource">EquipmentResource</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/IproK/cost#ExpenseItem" title="https://w3id.org/IproK/cost#ExpenseItem">ExpenseItem</a>
+   </li>
+   <li>
+      <a href="#IproKThing" title="https://w3id.org/IproK#IproKThing">IproKThing</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/IproK/cost#LaborCost" title="https://w3id.org/IproK/cost#LaborCost">LaborCost</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/IproK/resource#LaborResource" title="https://w3id.org/IproK/resource#LaborResource">LaborResource</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/IproK/cost#MaterialCost" title="https://w3id.org/IproK/cost#MaterialCost">MaterialCost</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/IproK/resource#MaterialResource"
+         title="https://w3id.org/IproK/resource#MaterialResource">MaterialResource</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/IproK/schedule#Milestone" title="https://w3id.org/IproK/schedule#Milestone">Milestone</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/IproK/schedule#Project" title="https://w3id.org/IproK/schedule#Project">Project</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/IproK/resource#Resource" title="https://w3id.org/IproK/resource#Resource">Resource</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/IproK/integrated#ResourceAllocation"
+         title="https://w3id.org/IproK/integrated#ResourceAllocation">ResourceAllocation</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/IproK/resource#ResourceConstraint"
+         title="https://w3id.org/IproK/resource#ResourceConstraint">ResourceConstraint</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/IproK/resource#ResourceType" title="https://w3id.org/IproK/resource#ResourceType">ResourceType</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/IproK/schedule#Task" title="https://w3id.org/IproK/schedule#Task">Task</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/IproK/schedule#TaskDependency" title="https://w3id.org/IproK/schedule#TaskDependency">TaskDependency</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/IproK/schedule#TaskTime" title="https://w3id.org/IproK/schedule#TaskTime">TaskTime</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/IproK/resource#TrackingTag" title="https://w3id.org/IproK/resource#TrackingTag">TrackingTag</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/IproK/resource#Units" title="https://w3id.org/IproK/resource#Units">Units</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/IproK/resource#UserDefinedResource"
+         title="https://w3id.org/IproK/resource#UserDefinedResource">UserDefinedResource</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/IproK/schedule#WBS_Element" title="https://w3id.org/IproK/schedule#WBS_Element">WBS_Element</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/IproK/schedule#WorkPackage" title="https://w3id.org/IproK/schedule#WorkPackage">WorkPackage</a>
+   </li>
+</ul><h4>Object Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#https://w3id.org/IproK/integrated#allocationAssignsResource"
+         title="https://w3id.org/IproK/integrated#allocationAssignsResource">allocationAssignsResource</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/IproK/integrated#allocationForTask"
+         title="https://w3id.org/IproK/integrated#allocationForTask">allocationForTask</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/IproK/schedule#assignedTo" title="https://w3id.org/IproK/schedule#assignedTo">assignedTo</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/IproK/schedule#hasConstraint" title="https://w3id.org/IproK/schedule#hasConstraint">hasConstraint</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/IproK/cost#hasCostCategory" title="https://w3id.org/IproK/cost#hasCostCategory">hasCostCategory</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/IproK/cost#hasCostType" title="https://w3id.org/IproK/cost#hasCostType">hasCostType</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/IproK/schedule#hasPredecessorDependency"
+         title="https://w3id.org/IproK/schedule#hasPredecessorDependency">hasPredecessorDependency</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/IproK/resource#hasResourceConstraints"
+         title="https://w3id.org/IproK/resource#hasResourceConstraints">hasResourceConstraints</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/IproK/resource#hasResourceType" title="https://w3id.org/IproK/resource#hasResourceType">hasResourceType</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/IproK/schedule#hasSubTask" title="https://w3id.org/IproK/schedule#hasSubTask">hasSubTask</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/IproK/schedule#hasSuccessorDependency"
+         title="https://w3id.org/IproK/schedule#hasSuccessorDependency">hasSuccessorDependency</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/IproK/schedule#hasTask" title="https://w3id.org/IproK/schedule#hasTask">hasTask</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/IproK/schedule#hasTaskTime" title="https://w3id.org/IproK/schedule#hasTaskTime">hasTaskTime</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/IproK/resource#hasTrackingTag" title="https://w3id.org/IproK/resource#hasTrackingTag">hasTrackingTag</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/IproK/schedule#hasWBS" title="https://w3id.org/IproK/schedule#hasWBS">hasWBS</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/IproK/schedule#hasWorkPackage" title="https://w3id.org/IproK/schedule#hasWorkPackage">hasWorkPackage</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/IproK/schedule#linksToPredecessorTask"
+         title="https://w3id.org/IproK/schedule#linksToPredecessorTask">linksToPredecessorTask</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/IproK/schedule#linksToSuccessorTask"
+         title="https://w3id.org/IproK/schedule#linksToSuccessorTask">linksToSuccessorTask</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/IproK/resource#measuredIn" title="https://w3id.org/IproK/resource#measuredIn">measuredIn</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/IproK/integrated#resourceAllocationIncursCostItem"
+         title="https://w3id.org/IproK/integrated#resourceAllocationIncursCostItem">resourceAllocationIncursCostItem</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/IproK/integrated#taskGeneratesCostItem"
+         title="https://w3id.org/IproK/integrated#taskGeneratesCostItem">taskGeneratesCostItem</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/IproK/integrated#taskHasResourceAllocation"
+         title="https://w3id.org/IproK/integrated#taskHasResourceAllocation">taskHasResourceAllocation</a>
+   </li>
+</ul><h4>Data Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#https://w3id.org/IproK/cost#actualCostAmount" title="https://w3id.org/IproK/cost#actualCostAmount">actualCostAmount</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/IproK/schedule#actualDuration" title="https://w3id.org/IproK/schedule#actualDuration">actualDuration</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/IproK/schedule#actualFinishDate" title="https://w3id.org/IproK/schedule#actualFinishDate">actualFinishDate</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/IproK/schedule#actualStartDate" title="https://w3id.org/IproK/schedule#actualStartDate">actualStartDate</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/IproK/resource#actualUnits" title="https://w3id.org/IproK/resource#actualUnits">actualUnits</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/IproK/integrated#allocatedUnits" title="https://w3id.org/IproK/integrated#allocatedUnits">allocatedUnits</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/IproK/integrated#allocationPlannedFinishDate"
+         title="https://w3id.org/IproK/integrated#allocationPlannedFinishDate">allocationPlannedFinishDate</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/IproK/integrated#allocationPlannedStartDate"
+         title="https://w3id.org/IproK/integrated#allocationPlannedStartDate">allocationPlannedStartDate</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/IproK/cost#atCompleteCostAmount" title="https://w3id.org/IproK/cost#atCompleteCostAmount">atCompleteCostAmount</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/IproK/schedule#atCompleteDuration"
+         title="https://w3id.org/IproK/schedule#atCompleteDuration">atCompleteDuration</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/IproK/resource#atCompleteUnits" title="https://w3id.org/IproK/resource#atCompleteUnits">atCompleteUnits</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/IproK/resource#baseRate" title="https://w3id.org/IproK/resource#baseRate">baseRate</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/IproK/cost#budgetedCostAmount" title="https://w3id.org/IproK/cost#budgetedCostAmount">budgetedCostAmount</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/IproK/resource#budgetedUnits" title="https://w3id.org/IproK/resource#budgetedUnits">budgetedUnits</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/IproK/schedule#constraintDate" title="https://w3id.org/IproK/schedule#constraintDate">constraintDate</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/IproK/schedule#constraintType" title="https://w3id.org/IproK/schedule#constraintType">constraintType</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/IproK/resource#currency" title="https://w3id.org/IproK/resource#currency">currency</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/IproK/resource#effectiveDateForRate"
+         title="https://w3id.org/IproK/resource#effectiveDateForRate">effectiveDateForRate</a>
+   </li>
+   <li>
+      <a href="#hasDescription" title="https://w3id.org/IproK#hasDescription">hasDescription</a>
+   </li>
+   <li>
+      <a href="#hasGlobalId" title="https://w3id.org/IproK#hasGlobalId">hasGlobalId</a>
+   </li>
+   <li>
+      <a href="#hasId" title="https://w3id.org/IproK#hasId">hasId</a>
+   </li>
+   <li>
+      <a href="#hasName" title="https://w3id.org/IproK#hasName">hasName</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/IproK/schedule#isCriticalTask" title="https://w3id.org/IproK/schedule#isCriticalTask">isCriticalTask</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/IproK/schedule#isMilestone" title="https://w3id.org/IproK/schedule#isMilestone">isMilestone</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/IproK/resource#isPrimaryResource"
+         title="https://w3id.org/IproK/resource#isPrimaryResource">isPrimaryResource</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/IproK/schedule#lagTime" title="https://w3id.org/IproK/schedule#lagTime">lagTime</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/IproK/resource#maxUnits" title="https://w3id.org/IproK/resource#maxUnits">maxUnits</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/IproK/schedule#plannedFinishDate"
+         title="https://w3id.org/IproK/schedule#plannedFinishDate">plannedFinishDate</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/IproK/schedule#plannedStartDate" title="https://w3id.org/IproK/schedule#plannedStartDate">plannedFinishDate</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/IproK/schedule#projectAddress" title="https://w3id.org/IproK/schedule#projectAddress">projectAddress</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/IproK/schedule#projectCategory" title="https://w3id.org/IproK/schedule#projectCategory">projectCategory</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/IproK/schedule#projectOwner" title="https://w3id.org/IproK/schedule#projectOwner">projectOwner</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/IproK/cost#remainingCostAmount" title="https://w3id.org/IproK/cost#remainingCostAmount">remainingCostAmount</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/IproK/schedule#remainingDuration"
+         title="https://w3id.org/IproK/schedule#remainingDuration">remainingDuration</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/IproK/resource#remainingUnits" title="https://w3id.org/IproK/resource#remainingUnits">remainingUnits</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/IproK/schedule#scheduleDuration" title="https://w3id.org/IproK/schedule#scheduleDuration">scheduleDuration</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/IproK/schedule#taskPriority" title="https://w3id.org/IproK/schedule#taskPriority">taskPriority</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/IproK/schedule#taskRelationshipType"
+         title="https://w3id.org/IproK/schedule#taskRelationshipType">taskRelationshipType</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/IproK/cost#vendorName" title="https://w3id.org/IproK/cost#vendorName">vendorName</a>
+   </li>
+</ul><iframe src="webvowl/index.html"></iframe> 
+</div>
+  
+
+<!--DESCRIPTION SECTION-->
+    <div id="description"><h2 id="desc" class="list">Integrated Project Knowledge (IproK) Ontology: Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+
+<span class="markdown">The Integrated Project Knowledge (IproK) ontology is a specialized, formal model designed to standardize and integrate construction project management data. It focuses on structuring information related to project schedules, costs, and resources, and their complex interdependencies. The core aim of IproK is to create a unified, machine-interpretable knowledge base. This enables robust AI integration, particularly with Large Language Models (LLMs), to facilitate advanced data analytics, support complex querying via natural language, and improve decision-making in construction projects. Key design principles include deep integration of the core project management domains, AI-readiness, PMBOK-aligned modularity for scalability and extensibility, and pragmatic reuse of established industry standards and concepts.</span><img src="https://raw.githubusercontent.com/konevenkatesh/Ontology_PM/refs/heads/main/Onto_Development/Schedule_Class.svg"><img src="https://raw.githubusercontent.com/konevenkatesh/Ontology_PM/refs/heads/main/Onto_Development/Resource_Class.svg"><img src="https://raw.githubusercontent.com/konevenkatesh/Ontology_PM/refs/heads/main/Onto_Development/Cost_Class.svg"></div>
+   
+
+<!--CROSSREF SECTION-->
+   <div id="crossref"><h2 id="crossreference" class="list">Cross-reference for Integrated Project Knowledge (IproK) Ontology classes, object properties and data properties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by Integrated Project Knowledge (IproK) Ontology.
+<div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="classes">
+ <h3 id="classes-headline" class="list">Classes</h3>
+ <ul class="hlist">
+  <li><a href="#Actor" title="https://w3id.org/IproK#Actor">Actor</a></li>
+  <li><a href="#Calendar" title="https://w3id.org/IproK#Calendar">Calendar</a></li>
+  <li><a href="#Constraint" title="https://w3id.org/IproK#Constraint">Constraint</a></li>
+  <li><a href="#https://w3id.org/IproK/cost#CostCategory" title="https://w3id.org/IproK/cost#CostCategory">CostCategory</a></li>
+  <li><a href="#https://w3id.org/IproK/cost#CostItem" title="https://w3id.org/IproK/cost#CostItem">CostItem</a></li>
+  <li><a href="#https://w3id.org/IproK/cost#CostType" title="https://w3id.org/IproK/cost#CostType">CostType</a></li>
+  <li><a href="#https://w3id.org/IproK/cost#EquipmentCost" title="https://w3id.org/IproK/cost#EquipmentCost">EquipmentCost</a></li>
+  <li><a href="#https://w3id.org/IproK/resource#EquipmentResource" title="https://w3id.org/IproK/resource#EquipmentResource">EquipmentResource</a></li>
+  <li><a href="#https://w3id.org/IproK/cost#ExpenseItem" title="https://w3id.org/IproK/cost#ExpenseItem">ExpenseItem</a></li>
+  <li><a href="#IproKThing" title="https://w3id.org/IproK#IproKThing">IproKThing</a></li>
+  <li><a href="#https://w3id.org/IproK/cost#LaborCost" title="https://w3id.org/IproK/cost#LaborCost">LaborCost</a></li>
+  <li><a href="#https://w3id.org/IproK/resource#LaborResource" title="https://w3id.org/IproK/resource#LaborResource">LaborResource</a></li>
+  <li><a href="#https://w3id.org/IproK/cost#MaterialCost" title="https://w3id.org/IproK/cost#MaterialCost">MaterialCost</a></li>
+  <li><a href="#https://w3id.org/IproK/resource#MaterialResource" title="https://w3id.org/IproK/resource#MaterialResource">MaterialResource</a></li>
+  <li><a href="#https://w3id.org/IproK/schedule#Milestone" title="https://w3id.org/IproK/schedule#Milestone">Milestone</a></li>
+  <li><a href="#https://w3id.org/IproK/schedule#Project" title="https://w3id.org/IproK/schedule#Project">Project</a></li>
+  <li><a href="#https://w3id.org/IproK/resource#Resource" title="https://w3id.org/IproK/resource#Resource">Resource</a></li>
+  <li><a href="#https://w3id.org/IproK/integrated#ResourceAllocation" title="https://w3id.org/IproK/integrated#ResourceAllocation">ResourceAllocation</a></li>
+  <li><a href="#https://w3id.org/IproK/resource#ResourceConstraint" title="https://w3id.org/IproK/resource#ResourceConstraint">ResourceConstraint</a></li>
+  <li><a href="#https://w3id.org/IproK/resource#ResourceType" title="https://w3id.org/IproK/resource#ResourceType">ResourceType</a></li>
+  <li><a href="#https://w3id.org/IproK/schedule#Task" title="https://w3id.org/IproK/schedule#Task">Task</a></li>
+  <li><a href="#https://w3id.org/IproK/schedule#TaskDependency" title="https://w3id.org/IproK/schedule#TaskDependency">TaskDependency</a></li>
+  <li><a href="#https://w3id.org/IproK/schedule#TaskTime" title="https://w3id.org/IproK/schedule#TaskTime">TaskTime</a></li>
+  <li><a href="#https://w3id.org/IproK/resource#TrackingTag" title="https://w3id.org/IproK/resource#TrackingTag">TrackingTag</a></li>
+  <li><a href="#https://w3id.org/IproK/resource#Units" title="https://w3id.org/IproK/resource#Units">Units</a></li>
+  <li><a href="#https://w3id.org/IproK/resource#UserDefinedResource" title="https://w3id.org/IproK/resource#UserDefinedResource">UserDefinedResource</a></li>
+  <li><a href="#https://w3id.org/IproK/schedule#WBS_Element" title="https://w3id.org/IproK/schedule#WBS_Element">WBS_Element</a></li>
+  <li><a href="#https://w3id.org/IproK/schedule#WorkPackage" title="https://w3id.org/IproK/schedule#WorkPackage">WorkPackage</a></li>
+ </ul>
+ <div class="entity" id="Actor">
+  <h3>Actor<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/IproK#Actor</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#IproKThing" title="https://w3id.org/IproK#IproKThing">IproKThing</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/IproK/schedule#assignedTo" title="https://w3id.org/IproK/schedule#assignedTo">assignedTo</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Calendar">
+  <h3>Calendar<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/IproK#Calendar</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#IproKThing" title="https://w3id.org/IproK#IproKThing">IproKThing</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Constraint">
+  <h3>Constraint<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/IproK#Constraint</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#IproKThing" title="https://w3id.org/IproK#IproKThing">IproKThing</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/IproK/resource#ResourceConstraint" title="https://w3id.org/IproK/resource#ResourceConstraint">ResourceConstraint</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/IproK/schedule#constraintDate" title="https://w3id.org/IproK/schedule#constraintDate">constraintDate</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/IproK/schedule#constraintType" title="https://w3id.org/IproK/schedule#constraintType">constraintType</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/IproK/schedule#hasConstraint" title="https://w3id.org/IproK/schedule#hasConstraint">hasConstraint</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/IproK/cost#CostCategory">
+  <h3>CostCategory<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/IproK/cost#CostCategory</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#IproKThing" title="https://w3id.org/IproK#IproKThing">IproKThing</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/IproK/cost#hasCostCategory" title="https://w3id.org/IproK/cost#hasCostCategory">hasCostCategory</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/IproK/cost#CostItem">
+  <h3>CostItem<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/IproK/cost#CostItem</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#IproKThing" title="https://w3id.org/IproK#IproKThing">IproKThing</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/IproK/cost#actualCostAmount" title="https://w3id.org/IproK/cost#actualCostAmount">actualCostAmount</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/IproK/cost#atCompleteCostAmount" title="https://w3id.org/IproK/cost#atCompleteCostAmount">atCompleteCostAmount</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/IproK/cost#budgetedCostAmount" title="https://w3id.org/IproK/cost#budgetedCostAmount">budgetedCostAmount</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/IproK/cost#hasCostCategory" title="https://w3id.org/IproK/cost#hasCostCategory">hasCostCategory</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/IproK/cost#hasCostType" title="https://w3id.org/IproK/cost#hasCostType">hasCostType</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/IproK/cost#remainingCostAmount" title="https://w3id.org/IproK/cost#remainingCostAmount">remainingCostAmount</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/IproK/cost#vendorName" title="https://w3id.org/IproK/cost#vendorName">vendorName</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/IproK/integrated#resourceAllocationIncursCostItem" title="https://w3id.org/IproK/integrated#resourceAllocationIncursCostItem">resourceAllocationIncursCostItem</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/IproK/integrated#taskGeneratesCostItem" title="https://w3id.org/IproK/integrated#taskGeneratesCostItem">taskGeneratesCostItem</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/IproK/cost#CostType">
+  <h3>CostType<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/IproK/cost#CostType</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#IproKThing" title="https://w3id.org/IproK#IproKThing">IproKThing</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/IproK/cost#EquipmentCost" title="https://w3id.org/IproK/cost#EquipmentCost">EquipmentCost</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/IproK/cost#ExpenseItem" title="https://w3id.org/IproK/cost#ExpenseItem">ExpenseItem</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/IproK/cost#LaborCost" title="https://w3id.org/IproK/cost#LaborCost">LaborCost</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/IproK/cost#MaterialCost" title="https://w3id.org/IproK/cost#MaterialCost">MaterialCost</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/IproK/cost#hasCostType" title="https://w3id.org/IproK/cost#hasCostType">hasCostType</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/IproK/cost#EquipmentCost">
+  <h3>EquipmentCost<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/IproK/cost#EquipmentCost</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/IproK/cost#CostType" title="https://w3id.org/IproK/cost#CostType">CostType</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/IproK/cost#ExpenseItem" title="https://w3id.org/IproK/cost#ExpenseItem">ExpenseItem</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/IproK/cost#LaborCost" title="https://w3id.org/IproK/cost#LaborCost">LaborCost</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/IproK/cost#MaterialCost" title="https://w3id.org/IproK/cost#MaterialCost">MaterialCost</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/IproK/resource#EquipmentResource">
+  <h3>EquipmentResource<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/IproK/resource#EquipmentResource</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/IproK/resource#ResourceType" title="https://w3id.org/IproK/resource#ResourceType">ResourceType</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/IproK/resource#LaborResource" title="https://w3id.org/IproK/resource#LaborResource">LaborResource</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/IproK/resource#MaterialResource" title="https://w3id.org/IproK/resource#MaterialResource">MaterialResource</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/IproK/resource#UserDefinedResource" title="https://w3id.org/IproK/resource#UserDefinedResource">UserDefinedResource</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/IproK/cost#ExpenseItem">
+  <h3>ExpenseItem<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/IproK/cost#ExpenseItem</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/IproK/cost#CostType" title="https://w3id.org/IproK/cost#CostType">CostType</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/IproK/cost#EquipmentCost" title="https://w3id.org/IproK/cost#EquipmentCost">EquipmentCost</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/IproK/cost#LaborCost" title="https://w3id.org/IproK/cost#LaborCost">LaborCost</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/IproK/cost#MaterialCost" title="https://w3id.org/IproK/cost#MaterialCost">MaterialCost</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="IproKThing">
+  <h3>IproKThing<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/IproK#IproKThing</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2002/07/owl#Thing" target="_blank" title="http://www.w3.org/2002/07/owl#Thing">Thing</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#Actor" title="https://w3id.org/IproK#Actor">Actor</a> <sup class="type-c" title="class">c</sup>, <a href="#Calendar" title="https://w3id.org/IproK#Calendar">Calendar</a> <sup class="type-c" title="class">c</sup>, <a href="#Constraint" title="https://w3id.org/IproK#Constraint">Constraint</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/IproK/cost#CostCategory" title="https://w3id.org/IproK/cost#CostCategory">CostCategory</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/IproK/cost#CostItem" title="https://w3id.org/IproK/cost#CostItem">CostItem</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/IproK/cost#CostType" title="https://w3id.org/IproK/cost#CostType">CostType</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/IproK/schedule#Project" title="https://w3id.org/IproK/schedule#Project">Project</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/IproK/resource#Resource" title="https://w3id.org/IproK/resource#Resource">Resource</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/IproK/integrated#ResourceAllocation" title="https://w3id.org/IproK/integrated#ResourceAllocation">ResourceAllocation</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/IproK/resource#ResourceType" title="https://w3id.org/IproK/resource#ResourceType">ResourceType</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/IproK/schedule#TaskDependency" title="https://w3id.org/IproK/schedule#TaskDependency">TaskDependency</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/IproK/schedule#TaskTime" title="https://w3id.org/IproK/schedule#TaskTime">TaskTime</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/IproK/resource#TrackingTag" title="https://w3id.org/IproK/resource#TrackingTag">TrackingTag</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/IproK/resource#Units" title="https://w3id.org/IproK/resource#Units">Units</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#hasDescription" title="https://w3id.org/IproK#hasDescription">hasDescription</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#hasGlobalId" title="https://w3id.org/IproK#hasGlobalId">hasGlobalId</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#hasId" title="https://w3id.org/IproK#hasId">hasId</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#hasName" title="https://w3id.org/IproK#hasName">hasName</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/IproK/cost#LaborCost">
+  <h3>LaborCost<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/IproK/cost#LaborCost</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/IproK/cost#CostType" title="https://w3id.org/IproK/cost#CostType">CostType</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/IproK/cost#EquipmentCost" title="https://w3id.org/IproK/cost#EquipmentCost">EquipmentCost</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/IproK/cost#ExpenseItem" title="https://w3id.org/IproK/cost#ExpenseItem">ExpenseItem</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/IproK/cost#MaterialCost" title="https://w3id.org/IproK/cost#MaterialCost">MaterialCost</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/IproK/resource#LaborResource">
+  <h3>LaborResource<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/IproK/resource#LaborResource</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/IproK/resource#ResourceType" title="https://w3id.org/IproK/resource#ResourceType">ResourceType</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/IproK/resource#EquipmentResource" title="https://w3id.org/IproK/resource#EquipmentResource">EquipmentResource</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/IproK/resource#MaterialResource" title="https://w3id.org/IproK/resource#MaterialResource">MaterialResource</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/IproK/resource#UserDefinedResource" title="https://w3id.org/IproK/resource#UserDefinedResource">UserDefinedResource</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/IproK/cost#MaterialCost">
+  <h3>MaterialCost<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/IproK/cost#MaterialCost</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/IproK/cost#CostType" title="https://w3id.org/IproK/cost#CostType">CostType</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/IproK/cost#EquipmentCost" title="https://w3id.org/IproK/cost#EquipmentCost">EquipmentCost</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/IproK/cost#ExpenseItem" title="https://w3id.org/IproK/cost#ExpenseItem">ExpenseItem</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/IproK/cost#LaborCost" title="https://w3id.org/IproK/cost#LaborCost">LaborCost</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/IproK/resource#MaterialResource">
+  <h3>MaterialResource<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/IproK/resource#MaterialResource</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/IproK/resource#ResourceType" title="https://w3id.org/IproK/resource#ResourceType">ResourceType</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/IproK/resource#EquipmentResource" title="https://w3id.org/IproK/resource#EquipmentResource">EquipmentResource</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/IproK/resource#LaborResource" title="https://w3id.org/IproK/resource#LaborResource">LaborResource</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/IproK/resource#UserDefinedResource" title="https://w3id.org/IproK/resource#UserDefinedResource">UserDefinedResource</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/IproK/schedule#Milestone">
+  <h3>Milestone<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/IproK/schedule#Milestone</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/IproK/schedule#Task" title="https://w3id.org/IproK/schedule#Task">Task</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/IproK/schedule#Project">
+  <h3>Project<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/IproK/schedule#Project</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#IproKThing" title="https://w3id.org/IproK#IproKThing">IproKThing</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/IproK/schedule#WBS_Element" title="https://w3id.org/IproK/schedule#WBS_Element">WBS_Element</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/IproK/schedule#hasWorkPackage" title="https://w3id.org/IproK/schedule#hasWorkPackage">hasWorkPackage</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/IproK/schedule#projectAddress" title="https://w3id.org/IproK/schedule#projectAddress">projectAddress</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/IproK/schedule#projectCategory" title="https://w3id.org/IproK/schedule#projectCategory">projectCategory</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/IproK/schedule#projectOwner" title="https://w3id.org/IproK/schedule#projectOwner">projectOwner</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/IproK/resource#Resource">
+  <h3>Resource<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/IproK/resource#Resource</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#IproKThing" title="https://w3id.org/IproK#IproKThing">IproKThing</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/IproK/resource#actualUnits" title="https://w3id.org/IproK/resource#actualUnits">actualUnits</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/IproK/resource#atCompleteUnits" title="https://w3id.org/IproK/resource#atCompleteUnits">atCompleteUnits</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/IproK/resource#baseRate" title="https://w3id.org/IproK/resource#baseRate">baseRate</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/IproK/resource#budgetedUnits" title="https://w3id.org/IproK/resource#budgetedUnits">budgetedUnits</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/IproK/resource#currency" title="https://w3id.org/IproK/resource#currency">currency</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/IproK/resource#effectiveDateForRate" title="https://w3id.org/IproK/resource#effectiveDateForRate">effectiveDateForRate</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/IproK/resource#hasResourceConstraints" title="https://w3id.org/IproK/resource#hasResourceConstraints">hasResourceConstraints</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/IproK/resource#hasResourceType" title="https://w3id.org/IproK/resource#hasResourceType">hasResourceType</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/IproK/resource#hasTrackingTag" title="https://w3id.org/IproK/resource#hasTrackingTag">hasTrackingTag</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/IproK/resource#isPrimaryResource" title="https://w3id.org/IproK/resource#isPrimaryResource">isPrimaryResource</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/IproK/resource#maxUnits" title="https://w3id.org/IproK/resource#maxUnits">maxUnits</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/IproK/resource#measuredIn" title="https://w3id.org/IproK/resource#measuredIn">measuredIn</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/IproK/resource#remainingUnits" title="https://w3id.org/IproK/resource#remainingUnits">remainingUnits</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/IproK/integrated#allocationAssignsResource" title="https://w3id.org/IproK/integrated#allocationAssignsResource">allocationAssignsResource</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/IproK/integrated#ResourceAllocation">
+  <h3>ResourceAllocation<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/IproK/integrated#ResourceAllocation</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#IproKThing" title="https://w3id.org/IproK#IproKThing">IproKThing</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/IproK/integrated#allocatedUnits" title="https://w3id.org/IproK/integrated#allocatedUnits">allocatedUnits</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/IproK/integrated#allocationAssignsResource" title="https://w3id.org/IproK/integrated#allocationAssignsResource">allocationAssignsResource</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/IproK/integrated#allocationForTask" title="https://w3id.org/IproK/integrated#allocationForTask">allocationForTask</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/IproK/integrated#allocationPlannedFinishDate" title="https://w3id.org/IproK/integrated#allocationPlannedFinishDate">allocationPlannedFinishDate</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/IproK/integrated#allocationPlannedStartDate" title="https://w3id.org/IproK/integrated#allocationPlannedStartDate">allocationPlannedStartDate</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/IproK/integrated#resourceAllocationIncursCostItem" title="https://w3id.org/IproK/integrated#resourceAllocationIncursCostItem">resourceAllocationIncursCostItem</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/IproK/integrated#taskHasResourceAllocation" title="https://w3id.org/IproK/integrated#taskHasResourceAllocation">taskHasResourceAllocation</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/IproK/resource#ResourceConstraint">
+  <h3>ResourceConstraint<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/IproK/resource#ResourceConstraint</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Constraint" title="https://w3id.org/IproK#Constraint">Constraint</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/IproK/resource#hasResourceConstraints" title="https://w3id.org/IproK/resource#hasResourceConstraints">hasResourceConstraints</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/IproK/resource#ResourceType">
+  <h3>ResourceType<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/IproK/resource#ResourceType</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#IproKThing" title="https://w3id.org/IproK#IproKThing">IproKThing</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/IproK/resource#EquipmentResource" title="https://w3id.org/IproK/resource#EquipmentResource">EquipmentResource</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/IproK/resource#LaborResource" title="https://w3id.org/IproK/resource#LaborResource">LaborResource</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/IproK/resource#MaterialResource" title="https://w3id.org/IproK/resource#MaterialResource">MaterialResource</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/IproK/resource#UserDefinedResource" title="https://w3id.org/IproK/resource#UserDefinedResource">UserDefinedResource</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/IproK/resource#hasResourceType" title="https://w3id.org/IproK/resource#hasResourceType">hasResourceType</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/IproK/schedule#Task">
+  <h3>Task<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/IproK/schedule#Task</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/IproK/schedule#WBS_Element" title="https://w3id.org/IproK/schedule#WBS_Element">WBS_Element</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/IproK/schedule#Milestone" title="https://w3id.org/IproK/schedule#Milestone">Milestone</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/IproK/schedule#assignedTo" title="https://w3id.org/IproK/schedule#assignedTo">assignedTo</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/IproK/schedule#hasConstraint" title="https://w3id.org/IproK/schedule#hasConstraint">hasConstraint</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/IproK/schedule#hasPredecessorDependency" title="https://w3id.org/IproK/schedule#hasPredecessorDependency">hasPredecessorDependency</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/IproK/schedule#hasSubTask" title="https://w3id.org/IproK/schedule#hasSubTask">hasSubTask</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/IproK/schedule#hasSuccessorDependency" title="https://w3id.org/IproK/schedule#hasSuccessorDependency">hasSuccessorDependency</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/IproK/schedule#hasTaskTime" title="https://w3id.org/IproK/schedule#hasTaskTime">hasTaskTime</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/IproK/schedule#isCriticalTask" title="https://w3id.org/IproK/schedule#isCriticalTask">isCriticalTask</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/IproK/schedule#isMilestone" title="https://w3id.org/IproK/schedule#isMilestone">isMilestone</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/IproK/integrated#taskGeneratesCostItem" title="https://w3id.org/IproK/integrated#taskGeneratesCostItem">taskGeneratesCostItem</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/IproK/integrated#taskHasResourceAllocation" title="https://w3id.org/IproK/integrated#taskHasResourceAllocation">taskHasResourceAllocation</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/IproK/schedule#taskPriority" title="https://w3id.org/IproK/schedule#taskPriority">taskPriority</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/IproK/integrated#allocationForTask" title="https://w3id.org/IproK/integrated#allocationForTask">allocationForTask</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/IproK/schedule#hasSubTask" title="https://w3id.org/IproK/schedule#hasSubTask">hasSubTask</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/IproK/schedule#hasTask" title="https://w3id.org/IproK/schedule#hasTask">hasTask</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/IproK/schedule#linksToPredecessorTask" title="https://w3id.org/IproK/schedule#linksToPredecessorTask">linksToPredecessorTask</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/IproK/schedule#linksToSuccessorTask" title="https://w3id.org/IproK/schedule#linksToSuccessorTask">linksToSuccessorTask</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/IproK/schedule#TaskDependency">
+  <h3>TaskDependency<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/IproK/schedule#TaskDependency</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#IproKThing" title="https://w3id.org/IproK#IproKThing">IproKThing</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/IproK/schedule#lagTime" title="https://w3id.org/IproK/schedule#lagTime">lagTime</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/IproK/schedule#linksToPredecessorTask" title="https://w3id.org/IproK/schedule#linksToPredecessorTask">linksToPredecessorTask</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/IproK/schedule#linksToSuccessorTask" title="https://w3id.org/IproK/schedule#linksToSuccessorTask">linksToSuccessorTask</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/IproK/schedule#taskRelationshipType" title="https://w3id.org/IproK/schedule#taskRelationshipType">taskRelationshipType</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/IproK/schedule#hasPredecessorDependency" title="https://w3id.org/IproK/schedule#hasPredecessorDependency">hasPredecessorDependency</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/IproK/schedule#hasSuccessorDependency" title="https://w3id.org/IproK/schedule#hasSuccessorDependency">hasSuccessorDependency</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/IproK/schedule#TaskTime">
+  <h3>TaskTime<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/IproK/schedule#TaskTime</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#IproKThing" title="https://w3id.org/IproK#IproKThing">IproKThing</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/IproK/schedule#actualDuration" title="https://w3id.org/IproK/schedule#actualDuration">actualDuration</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/IproK/schedule#actualFinishDate" title="https://w3id.org/IproK/schedule#actualFinishDate">actualFinishDate</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/IproK/schedule#actualStartDate" title="https://w3id.org/IproK/schedule#actualStartDate">actualStartDate</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/IproK/schedule#atCompleteDuration" title="https://w3id.org/IproK/schedule#atCompleteDuration">atCompleteDuration</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/IproK/schedule#plannedFinishDate" title="https://w3id.org/IproK/schedule#plannedFinishDate">plannedFinishDate</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/IproK/schedule#plannedStartDate" title="https://w3id.org/IproK/schedule#plannedStartDate">plannedFinishDate</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/IproK/schedule#remainingDuration" title="https://w3id.org/IproK/schedule#remainingDuration">remainingDuration</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/IproK/schedule#scheduleDuration" title="https://w3id.org/IproK/schedule#scheduleDuration">scheduleDuration</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/IproK/schedule#hasTaskTime" title="https://w3id.org/IproK/schedule#hasTaskTime">hasTaskTime</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/IproK/resource#TrackingTag">
+  <h3>TrackingTag<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/IproK/resource#TrackingTag</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#IproKThing" title="https://w3id.org/IproK#IproKThing">IproKThing</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/IproK/resource#hasTrackingTag" title="https://w3id.org/IproK/resource#hasTrackingTag">hasTrackingTag</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/IproK/resource#Units">
+  <h3>Units<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/IproK/resource#Units</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#IproKThing" title="https://w3id.org/IproK#IproKThing">IproKThing</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/IproK/resource#measuredIn" title="https://w3id.org/IproK/resource#measuredIn">measuredIn</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/IproK/resource#UserDefinedResource">
+  <h3>UserDefinedResource<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/IproK/resource#UserDefinedResource</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/IproK/resource#ResourceType" title="https://w3id.org/IproK/resource#ResourceType">ResourceType</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/IproK/resource#EquipmentResource" title="https://w3id.org/IproK/resource#EquipmentResource">EquipmentResource</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/IproK/resource#LaborResource" title="https://w3id.org/IproK/resource#LaborResource">LaborResource</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/IproK/resource#MaterialResource" title="https://w3id.org/IproK/resource#MaterialResource">MaterialResource</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/IproK/schedule#WBS_Element">
+  <h3>WBS_Element<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/IproK/schedule#WBS_Element</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/IproK/schedule#Project" title="https://w3id.org/IproK/schedule#Project">Project</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/IproK/schedule#Task" title="https://w3id.org/IproK/schedule#Task">Task</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/IproK/schedule#WorkPackage" title="https://w3id.org/IproK/schedule#WorkPackage">WorkPackage</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/IproK/schedule#hasTask" title="https://w3id.org/IproK/schedule#hasTask">hasTask</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/IproK/schedule#hasWBS" title="https://w3id.org/IproK/schedule#hasWBS">hasWBS</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/IproK/schedule#WorkPackage">
+  <h3>WorkPackage<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/IproK/schedule#WorkPackage</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/IproK/schedule#WBS_Element" title="https://w3id.org/IproK/schedule#WBS_Element">WBS_Element</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/IproK/schedule#hasWBS" title="https://w3id.org/IproK/schedule#hasWBS">hasWBS</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/IproK/schedule#hasWorkPackage" title="https://w3id.org/IproK/schedule#hasWorkPackage">hasWorkPackage</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="objectproperties">
+ <h3 id="properties" class="list">Object Properties</h3>
+ <ul class="hlist">
+  <li><a href="#https://w3id.org/IproK/integrated#allocationAssignsResource" title="https://w3id.org/IproK/integrated#allocationAssignsResource">allocationAssignsResource</a></li>
+  <li><a href="#https://w3id.org/IproK/integrated#allocationForTask" title="https://w3id.org/IproK/integrated#allocationForTask">allocationForTask</a></li>
+  <li><a href="#https://w3id.org/IproK/schedule#assignedTo" title="https://w3id.org/IproK/schedule#assignedTo">assignedTo</a></li>
+  <li><a href="#https://w3id.org/IproK/schedule#hasConstraint" title="https://w3id.org/IproK/schedule#hasConstraint">hasConstraint</a></li>
+  <li><a href="#https://w3id.org/IproK/cost#hasCostCategory" title="https://w3id.org/IproK/cost#hasCostCategory">hasCostCategory</a></li>
+  <li><a href="#https://w3id.org/IproK/cost#hasCostType" title="https://w3id.org/IproK/cost#hasCostType">hasCostType</a></li>
+  <li><a href="#https://w3id.org/IproK/schedule#hasPredecessorDependency" title="https://w3id.org/IproK/schedule#hasPredecessorDependency">hasPredecessorDependency</a></li>
+  <li><a href="#https://w3id.org/IproK/resource#hasResourceConstraints" title="https://w3id.org/IproK/resource#hasResourceConstraints">hasResourceConstraints</a></li>
+  <li><a href="#https://w3id.org/IproK/resource#hasResourceType" title="https://w3id.org/IproK/resource#hasResourceType">hasResourceType</a></li>
+  <li><a href="#https://w3id.org/IproK/schedule#hasSubTask" title="https://w3id.org/IproK/schedule#hasSubTask">hasSubTask</a></li>
+  <li><a href="#https://w3id.org/IproK/schedule#hasSuccessorDependency" title="https://w3id.org/IproK/schedule#hasSuccessorDependency">hasSuccessorDependency</a></li>
+  <li><a href="#https://w3id.org/IproK/schedule#hasTask" title="https://w3id.org/IproK/schedule#hasTask">hasTask</a></li>
+  <li><a href="#https://w3id.org/IproK/schedule#hasTaskTime" title="https://w3id.org/IproK/schedule#hasTaskTime">hasTaskTime</a></li>
+  <li><a href="#https://w3id.org/IproK/resource#hasTrackingTag" title="https://w3id.org/IproK/resource#hasTrackingTag">hasTrackingTag</a></li>
+  <li><a href="#https://w3id.org/IproK/schedule#hasWBS" title="https://w3id.org/IproK/schedule#hasWBS">hasWBS</a></li>
+  <li><a href="#https://w3id.org/IproK/schedule#hasWorkPackage" title="https://w3id.org/IproK/schedule#hasWorkPackage">hasWorkPackage</a></li>
+  <li><a href="#https://w3id.org/IproK/schedule#linksToPredecessorTask" title="https://w3id.org/IproK/schedule#linksToPredecessorTask">linksToPredecessorTask</a></li>
+  <li><a href="#https://w3id.org/IproK/schedule#linksToSuccessorTask" title="https://w3id.org/IproK/schedule#linksToSuccessorTask">linksToSuccessorTask</a></li>
+  <li><a href="#https://w3id.org/IproK/resource#measuredIn" title="https://w3id.org/IproK/resource#measuredIn">measuredIn</a></li>
+  <li><a href="#https://w3id.org/IproK/integrated#resourceAllocationIncursCostItem" title="https://w3id.org/IproK/integrated#resourceAllocationIncursCostItem">resourceAllocationIncursCostItem</a></li>
+  <li><a href="#https://w3id.org/IproK/integrated#taskGeneratesCostItem" title="https://w3id.org/IproK/integrated#taskGeneratesCostItem">taskGeneratesCostItem</a></li>
+  <li><a href="#https://w3id.org/IproK/integrated#taskHasResourceAllocation" title="https://w3id.org/IproK/integrated#taskHasResourceAllocation">taskHasResourceAllocation</a></li>
+ </ul>
+ <div class="entity" id="https://w3id.org/IproK/integrated#allocationAssignsResource">
+  <h3>allocationAssignsResource<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/IproK/integrated#allocationAssignsResource</p>
+  <div class="description">
+   <p><strong>has characteristics: </strong> functional</p>
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/IproK/integrated#ResourceAllocation" title="https://w3id.org/IproK/integrated#ResourceAllocation">ResourceAllocation</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/IproK/resource#Resource" title="https://w3id.org/IproK/resource#Resource">Resource</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/IproK/integrated#allocationForTask">
+  <h3>allocationForTask<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/IproK/integrated#allocationForTask</p>
+  <div class="description">
+   <p><strong>has characteristics: </strong> functional</p>
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/IproK/integrated#ResourceAllocation" title="https://w3id.org/IproK/integrated#ResourceAllocation">ResourceAllocation</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/IproK/schedule#Task" title="https://w3id.org/IproK/schedule#Task">Task</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/IproK/schedule#assignedTo">
+  <h3>assignedTo<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/IproK/schedule#assignedTo</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/IproK/schedule#Task" title="https://w3id.org/IproK/schedule#Task">Task</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Actor" title="https://w3id.org/IproK#Actor">Actor</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/IproK/schedule#hasConstraint">
+  <h3>hasConstraint<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/IproK/schedule#hasConstraint</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/IproK/schedule#Task" title="https://w3id.org/IproK/schedule#Task">Task</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Constraint" title="https://w3id.org/IproK#Constraint">Constraint</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/IproK/cost#hasCostCategory">
+  <h3>hasCostCategory<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/IproK/cost#hasCostCategory</p>
+  <div class="description">
+   <p><strong>has characteristics: </strong> functional</p>
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/IproK/cost#CostItem" title="https://w3id.org/IproK/cost#CostItem">CostItem</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/IproK/cost#CostCategory" title="https://w3id.org/IproK/cost#CostCategory">CostCategory</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/IproK/cost#hasCostType">
+  <h3>hasCostType<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/IproK/cost#hasCostType</p>
+  <div class="description">
+   <p><strong>has characteristics: </strong> functional</p>
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/IproK/cost#CostItem" title="https://w3id.org/IproK/cost#CostItem">CostItem</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/IproK/cost#CostType" title="https://w3id.org/IproK/cost#CostType">CostType</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/IproK/schedule#hasPredecessorDependency">
+  <h3>hasPredecessorDependency<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/IproK/schedule#hasPredecessorDependency</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/IproK/schedule#Task" title="https://w3id.org/IproK/schedule#Task">Task</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/IproK/schedule#TaskDependency" title="https://w3id.org/IproK/schedule#TaskDependency">TaskDependency</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/IproK/resource#hasResourceConstraints">
+  <h3>hasResourceConstraints<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/IproK/resource#hasResourceConstraints</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/IproK/resource#Resource" title="https://w3id.org/IproK/resource#Resource">Resource</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/IproK/resource#ResourceConstraint" title="https://w3id.org/IproK/resource#ResourceConstraint">ResourceConstraint</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/IproK/resource#hasResourceType">
+  <h3>hasResourceType<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/IproK/resource#hasResourceType</p>
+  <div class="description">
+   <p><strong>has characteristics: </strong> functional</p>
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/IproK/resource#Resource" title="https://w3id.org/IproK/resource#Resource">Resource</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/IproK/resource#ResourceType" title="https://w3id.org/IproK/resource#ResourceType">ResourceType</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/IproK/schedule#hasSubTask">
+  <h3>hasSubTask<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/IproK/schedule#hasSubTask</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/IproK/schedule#Task" title="https://w3id.org/IproK/schedule#Task">Task</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/IproK/schedule#Task" title="https://w3id.org/IproK/schedule#Task">Task</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/IproK/schedule#hasSuccessorDependency">
+  <h3>hasSuccessorDependency<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/IproK/schedule#hasSuccessorDependency</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/IproK/schedule#Task" title="https://w3id.org/IproK/schedule#Task">Task</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/IproK/schedule#TaskDependency" title="https://w3id.org/IproK/schedule#TaskDependency">TaskDependency</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/IproK/schedule#hasTask">
+  <h3>hasTask<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/IproK/schedule#hasTask</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/IproK/schedule#WBS_Element" title="https://w3id.org/IproK/schedule#WBS_Element">WBS_Element</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/IproK/schedule#Task" title="https://w3id.org/IproK/schedule#Task">Task</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/IproK/schedule#hasTaskTime">
+  <h3>hasTaskTime<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/IproK/schedule#hasTaskTime</p>
+  <div class="description">
+   <p><strong>has characteristics: </strong> functional</p>
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/IproK/schedule#Task" title="https://w3id.org/IproK/schedule#Task">Task</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/IproK/schedule#TaskTime" title="https://w3id.org/IproK/schedule#TaskTime">TaskTime</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/IproK/resource#hasTrackingTag">
+  <h3>hasTrackingTag<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/IproK/resource#hasTrackingTag</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/IproK/resource#Resource" title="https://w3id.org/IproK/resource#Resource">Resource</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/IproK/resource#TrackingTag" title="https://w3id.org/IproK/resource#TrackingTag">TrackingTag</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/IproK/schedule#hasWBS">
+  <h3>hasWBS<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/IproK/schedule#hasWBS</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/IproK/schedule#WorkPackage" title="https://w3id.org/IproK/schedule#WorkPackage">WorkPackage</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/IproK/schedule#WBS_Element" title="https://w3id.org/IproK/schedule#WBS_Element">WBS_Element</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/IproK/schedule#hasWorkPackage">
+  <h3>hasWorkPackage<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/IproK/schedule#hasWorkPackage</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/IproK/schedule#Project" title="https://w3id.org/IproK/schedule#Project">Project</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/IproK/schedule#WorkPackage" title="https://w3id.org/IproK/schedule#WorkPackage">WorkPackage</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/IproK/schedule#linksToPredecessorTask">
+  <h3>linksToPredecessorTask<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/IproK/schedule#linksToPredecessorTask</p>
+  <div class="description">
+   <p><strong>has characteristics: </strong> functional</p>
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/IproK/schedule#TaskDependency" title="https://w3id.org/IproK/schedule#TaskDependency">TaskDependency</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/IproK/schedule#Task" title="https://w3id.org/IproK/schedule#Task">Task</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/IproK/schedule#linksToSuccessorTask">
+  <h3>linksToSuccessorTask<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/IproK/schedule#linksToSuccessorTask</p>
+  <div class="description">
+   <p><strong>has characteristics: </strong> functional</p>
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/IproK/schedule#TaskDependency" title="https://w3id.org/IproK/schedule#TaskDependency">TaskDependency</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/IproK/schedule#Task" title="https://w3id.org/IproK/schedule#Task">Task</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/IproK/resource#measuredIn">
+  <h3>measuredIn<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/IproK/resource#measuredIn</p>
+  <div class="description">
+   <p><strong>has characteristics: </strong> functional</p>
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/IproK/resource#Resource" title="https://w3id.org/IproK/resource#Resource">Resource</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/IproK/resource#Units" title="https://w3id.org/IproK/resource#Units">Units</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/IproK/integrated#resourceAllocationIncursCostItem">
+  <h3>resourceAllocationIncursCostItem<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/IproK/integrated#resourceAllocationIncursCostItem</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/IproK/integrated#ResourceAllocation" title="https://w3id.org/IproK/integrated#ResourceAllocation">ResourceAllocation</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/IproK/cost#CostItem" title="https://w3id.org/IproK/cost#CostItem">CostItem</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/IproK/integrated#taskGeneratesCostItem">
+  <h3>taskGeneratesCostItem<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/IproK/integrated#taskGeneratesCostItem</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/IproK/schedule#Task" title="https://w3id.org/IproK/schedule#Task">Task</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/IproK/cost#CostItem" title="https://w3id.org/IproK/cost#CostItem">CostItem</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/IproK/integrated#taskHasResourceAllocation">
+  <h3>taskHasResourceAllocation<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/IproK/integrated#taskHasResourceAllocation</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/IproK/schedule#Task" title="https://w3id.org/IproK/schedule#Task">Task</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/IproK/integrated#ResourceAllocation" title="https://w3id.org/IproK/integrated#ResourceAllocation">ResourceAllocation</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="dataproperties">
+ <h3 id="dataproperties-headline" class="list">Data Properties</h3>
+ <ul class="hlist">
+  <li><a href="#https://w3id.org/IproK/cost#actualCostAmount" title="https://w3id.org/IproK/cost#actualCostAmount">actualCostAmount</a></li>
+  <li><a href="#https://w3id.org/IproK/schedule#actualDuration" title="https://w3id.org/IproK/schedule#actualDuration">actualDuration</a></li>
+  <li><a href="#https://w3id.org/IproK/schedule#actualFinishDate" title="https://w3id.org/IproK/schedule#actualFinishDate">actualFinishDate</a></li>
+  <li><a href="#https://w3id.org/IproK/schedule#actualStartDate" title="https://w3id.org/IproK/schedule#actualStartDate">actualStartDate</a></li>
+  <li><a href="#https://w3id.org/IproK/resource#actualUnits" title="https://w3id.org/IproK/resource#actualUnits">actualUnits</a></li>
+  <li><a href="#https://w3id.org/IproK/integrated#allocatedUnits" title="https://w3id.org/IproK/integrated#allocatedUnits">allocatedUnits</a></li>
+  <li><a href="#https://w3id.org/IproK/integrated#allocationPlannedFinishDate" title="https://w3id.org/IproK/integrated#allocationPlannedFinishDate">allocationPlannedFinishDate</a></li>
+  <li><a href="#https://w3id.org/IproK/integrated#allocationPlannedStartDate" title="https://w3id.org/IproK/integrated#allocationPlannedStartDate">allocationPlannedStartDate</a></li>
+  <li><a href="#https://w3id.org/IproK/cost#atCompleteCostAmount" title="https://w3id.org/IproK/cost#atCompleteCostAmount">atCompleteCostAmount</a></li>
+  <li><a href="#https://w3id.org/IproK/schedule#atCompleteDuration" title="https://w3id.org/IproK/schedule#atCompleteDuration">atCompleteDuration</a></li>
+  <li><a href="#https://w3id.org/IproK/resource#atCompleteUnits" title="https://w3id.org/IproK/resource#atCompleteUnits">atCompleteUnits</a></li>
+  <li><a href="#https://w3id.org/IproK/resource#baseRate" title="https://w3id.org/IproK/resource#baseRate">baseRate</a></li>
+  <li><a href="#https://w3id.org/IproK/cost#budgetedCostAmount" title="https://w3id.org/IproK/cost#budgetedCostAmount">budgetedCostAmount</a></li>
+  <li><a href="#https://w3id.org/IproK/resource#budgetedUnits" title="https://w3id.org/IproK/resource#budgetedUnits">budgetedUnits</a></li>
+  <li><a href="#https://w3id.org/IproK/schedule#constraintDate" title="https://w3id.org/IproK/schedule#constraintDate">constraintDate</a></li>
+  <li><a href="#https://w3id.org/IproK/schedule#constraintType" title="https://w3id.org/IproK/schedule#constraintType">constraintType</a></li>
+  <li><a href="#https://w3id.org/IproK/resource#currency" title="https://w3id.org/IproK/resource#currency">currency</a></li>
+  <li><a href="#https://w3id.org/IproK/resource#effectiveDateForRate" title="https://w3id.org/IproK/resource#effectiveDateForRate">effectiveDateForRate</a></li>
+  <li><a href="#hasDescription" title="https://w3id.org/IproK#hasDescription">hasDescription</a></li>
+  <li><a href="#hasGlobalId" title="https://w3id.org/IproK#hasGlobalId">hasGlobalId</a></li>
+  <li><a href="#hasId" title="https://w3id.org/IproK#hasId">hasId</a></li>
+  <li><a href="#hasName" title="https://w3id.org/IproK#hasName">hasName</a></li>
+  <li><a href="#https://w3id.org/IproK/schedule#isCriticalTask" title="https://w3id.org/IproK/schedule#isCriticalTask">isCriticalTask</a></li>
+  <li><a href="#https://w3id.org/IproK/schedule#isMilestone" title="https://w3id.org/IproK/schedule#isMilestone">isMilestone</a></li>
+  <li><a href="#https://w3id.org/IproK/resource#isPrimaryResource" title="https://w3id.org/IproK/resource#isPrimaryResource">isPrimaryResource</a></li>
+  <li><a href="#https://w3id.org/IproK/schedule#lagTime" title="https://w3id.org/IproK/schedule#lagTime">lagTime</a></li>
+  <li><a href="#https://w3id.org/IproK/resource#maxUnits" title="https://w3id.org/IproK/resource#maxUnits">maxUnits</a></li>
+  <li><a href="#https://w3id.org/IproK/schedule#plannedFinishDate" title="https://w3id.org/IproK/schedule#plannedFinishDate">plannedFinishDate</a></li>
+  <li><a href="#https://w3id.org/IproK/schedule#plannedStartDate" title="https://w3id.org/IproK/schedule#plannedStartDate">plannedFinishDate</a></li>
+  <li><a href="#https://w3id.org/IproK/schedule#projectAddress" title="https://w3id.org/IproK/schedule#projectAddress">projectAddress</a></li>
+  <li><a href="#https://w3id.org/IproK/schedule#projectCategory" title="https://w3id.org/IproK/schedule#projectCategory">projectCategory</a></li>
+  <li><a href="#https://w3id.org/IproK/schedule#projectOwner" title="https://w3id.org/IproK/schedule#projectOwner">projectOwner</a></li>
+  <li><a href="#https://w3id.org/IproK/cost#remainingCostAmount" title="https://w3id.org/IproK/cost#remainingCostAmount">remainingCostAmount</a></li>
+  <li><a href="#https://w3id.org/IproK/schedule#remainingDuration" title="https://w3id.org/IproK/schedule#remainingDuration">remainingDuration</a></li>
+  <li><a href="#https://w3id.org/IproK/resource#remainingUnits" title="https://w3id.org/IproK/resource#remainingUnits">remainingUnits</a></li>
+  <li><a href="#https://w3id.org/IproK/schedule#scheduleDuration" title="https://w3id.org/IproK/schedule#scheduleDuration">scheduleDuration</a></li>
+  <li><a href="#https://w3id.org/IproK/schedule#taskPriority" title="https://w3id.org/IproK/schedule#taskPriority">taskPriority</a></li>
+  <li><a href="#https://w3id.org/IproK/schedule#taskRelationshipType" title="https://w3id.org/IproK/schedule#taskRelationshipType">taskRelationshipType</a></li>
+  <li><a href="#https://w3id.org/IproK/cost#vendorName" title="https://w3id.org/IproK/cost#vendorName">vendorName</a></li>
+ </ul>
+ <div class="entity" id="https://w3id.org/IproK/cost#actualCostAmount">
+  <h3>actualCostAmount<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/IproK/cost#actualCostAmount</p>
+  <div class="comment">
+   <span class="markdown">this is actual cost amount</span>
+  </div>
+  <div class="description">
+   <p><strong>has characteristics: </strong> functional</p>
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/IproK/cost#CostItem" title="https://w3id.org/IproK/cost#CostItem">CostItem</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/IproK/schedule#actualDuration">
+  <h3>actualDuration<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/IproK/schedule#actualDuration</p>
+  <div class="description">
+   <p><strong>has characteristics: </strong> functional</p>
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/IproK/schedule#TaskTime" title="https://w3id.org/IproK/schedule#TaskTime">TaskTime</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/IproK/schedule#actualFinishDate">
+  <h3>actualFinishDate<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/IproK/schedule#actualFinishDate</p>
+  <div class="description">
+   <p><strong>has characteristics: </strong> functional</p>
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/IproK/schedule#TaskTime" title="https://w3id.org/IproK/schedule#TaskTime">TaskTime</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#dateTime" target="_blank" title="http://www.w3.org/2001/XMLSchema#dateTime">date Time</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/IproK/schedule#actualStartDate">
+  <h3>actualStartDate<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/IproK/schedule#actualStartDate</p>
+  <div class="description">
+   <p><strong>has characteristics: </strong> functional</p>
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/IproK/schedule#TaskTime" title="https://w3id.org/IproK/schedule#TaskTime">TaskTime</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#dateTime" target="_blank" title="http://www.w3.org/2001/XMLSchema#dateTime">date Time</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/IproK/resource#actualUnits">
+  <h3>actualUnits<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/IproK/resource#actualUnits</p>
+  <div class="comment">
+   <span class="markdown"></span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/IproK/resource#Resource" title="https://w3id.org/IproK/resource#Resource">Resource</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/IproK/integrated#allocatedUnits">
+  <h3>allocatedUnits<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/IproK/integrated#allocatedUnits</p>
+  <div class="comment">
+   <span class="markdown"></span>
+  </div>
+  <div class="description">
+   <p><strong>has characteristics: </strong> functional</p>
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/IproK/integrated#ResourceAllocation" title="https://w3id.org/IproK/integrated#ResourceAllocation">ResourceAllocation</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/IproK/integrated#allocationPlannedFinishDate">
+  <h3>allocationPlannedFinishDate<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/IproK/integrated#allocationPlannedFinishDate</p>
+  <div class="description">
+   <p><strong>has characteristics: </strong> functional</p>
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/IproK/integrated#ResourceAllocation" title="https://w3id.org/IproK/integrated#ResourceAllocation">ResourceAllocation</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#dateTime" target="_blank" title="http://www.w3.org/2001/XMLSchema#dateTime">date Time</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/IproK/integrated#allocationPlannedStartDate">
+  <h3>allocationPlannedStartDate<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/IproK/integrated#allocationPlannedStartDate</p>
+  <div class="description">
+   <p><strong>has characteristics: </strong> functional</p>
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/IproK/integrated#ResourceAllocation" title="https://w3id.org/IproK/integrated#ResourceAllocation">ResourceAllocation</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#dateTime" target="_blank" title="http://www.w3.org/2001/XMLSchema#dateTime">date Time</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/IproK/cost#atCompleteCostAmount">
+  <h3>atCompleteCostAmount<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/IproK/cost#atCompleteCostAmount</p>
+  <div class="description">
+   <p><strong>has characteristics: </strong> functional</p>
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/IproK/cost#CostItem" title="https://w3id.org/IproK/cost#CostItem">CostItem</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/IproK/schedule#atCompleteDuration">
+  <h3>atCompleteDuration<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/IproK/schedule#atCompleteDuration</p>
+  <div class="description">
+   <p><strong>has characteristics: </strong> functional</p>
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/IproK/schedule#TaskTime" title="https://w3id.org/IproK/schedule#TaskTime">TaskTime</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/IproK/resource#atCompleteUnits">
+  <h3>atCompleteUnits<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/IproK/resource#atCompleteUnits</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/IproK/resource#Resource" title="https://w3id.org/IproK/resource#Resource">Resource</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/IproK/resource#baseRate">
+  <h3>baseRate<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/IproK/resource#baseRate</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/IproK/resource#Resource" title="https://w3id.org/IproK/resource#Resource">Resource</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/IproK/cost#budgetedCostAmount">
+  <h3>budgetedCostAmount<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/IproK/cost#budgetedCostAmount</p>
+  <div class="description">
+   <p><strong>has characteristics: </strong> functional</p>
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/IproK/cost#CostItem" title="https://w3id.org/IproK/cost#CostItem">CostItem</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/IproK/resource#budgetedUnits">
+  <h3>budgetedUnits<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/IproK/resource#budgetedUnits</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/IproK/resource#Resource" title="https://w3id.org/IproK/resource#Resource">Resource</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/IproK/schedule#constraintDate">
+  <h3>constraintDate<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/IproK/schedule#constraintDate</p>
+  <div class="description">
+   <p><strong>has characteristics: </strong> functional</p>
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Constraint" title="https://w3id.org/IproK#Constraint">Constraint</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#dateTime" target="_blank" title="http://www.w3.org/2001/XMLSchema#dateTime">date Time</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/IproK/schedule#constraintType">
+  <h3>constraintType<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/IproK/schedule#constraintType</p>
+  <div class="description">
+   <p><strong>has characteristics: </strong> functional</p>
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Constraint" title="https://w3id.org/IproK#Constraint">Constraint</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/IproK/resource#currency">
+  <h3>currency<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/IproK/resource#currency</p>
+  <div class="description">
+   <p><strong>has characteristics: </strong> functional</p>
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/IproK/resource#Resource" title="https://w3id.org/IproK/resource#Resource">Resource</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/IproK/resource#effectiveDateForRate">
+  <h3>effectiveDateForRate<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/IproK/resource#effectiveDateForRate</p>
+  <div class="description">
+   <p><strong>has characteristics: </strong> functional</p>
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/IproK/resource#Resource" title="https://w3id.org/IproK/resource#Resource">Resource</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#dateTime" target="_blank" title="http://www.w3.org/2001/XMLSchema#dateTime">date Time</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasDescription">
+  <h3>hasDescription<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/IproK#hasDescription</p>
+  <div class="comment">
+   <span class="markdown">A textual description of the entity.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#IproKThing" title="https://w3id.org/IproK#IproKThing">IproKThing</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasGlobalId">
+  <h3>hasGlobalId<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/IproK#hasGlobalId</p>
+  <div class="comment">
+   <span class="markdown">A globally unique identifier.</span>
+  </div>
+  <div class="description">
+   <p><strong>has characteristics: </strong> functional</p>
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#IproKThing" title="https://w3id.org/IproK#IproKThing">IproKThing</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasId">
+  <h3>hasId<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/IproK#hasId</p>
+  <div class="comment">
+   <span class="markdown">A local or project-specific identifier.</span>
+  </div>
+  <div class="description">
+   <p><strong>has characteristics: </strong> functional</p>
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#IproKThing" title="https://w3id.org/IproK#IproKThing">IproKThing</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasName">
+  <h3>hasName<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/IproK#hasName</p>
+  <div class="comment">
+   <span class="markdown">The common name of the entity.</span>
+  </div>
+  <div class="description">
+   <p><strong>has characteristics: </strong> functional</p>
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#IproKThing" title="https://w3id.org/IproK#IproKThing">IproKThing</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/IproK/schedule#isCriticalTask">
+  <h3>isCriticalTask<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/IproK/schedule#isCriticalTask</p>
+  <div class="description">
+   <p><strong>has characteristics: </strong> functional</p>
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/IproK/schedule#Task" title="https://w3id.org/IproK/schedule#Task">Task</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#boolean" target="_blank" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/IproK/schedule#isMilestone">
+  <h3>isMilestone<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/IproK/schedule#isMilestone</p>
+  <div class="description">
+   <p><strong>has characteristics: </strong> functional</p>
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/IproK/schedule#Task" title="https://w3id.org/IproK/schedule#Task">Task</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#boolean" target="_blank" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/IproK/resource#isPrimaryResource">
+  <h3>isPrimaryResource<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/IproK/resource#isPrimaryResource</p>
+  <div class="description">
+   <p><strong>has characteristics: </strong> functional</p>
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/IproK/resource#Resource" title="https://w3id.org/IproK/resource#Resource">Resource</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#boolean" target="_blank" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/IproK/schedule#lagTime">
+  <h3>lagTime<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/IproK/schedule#lagTime</p>
+  <div class="description">
+   <p><strong>has characteristics: </strong> functional</p>
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/IproK/schedule#TaskDependency" title="https://w3id.org/IproK/schedule#TaskDependency">TaskDependency</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/IproK/resource#maxUnits">
+  <h3>maxUnits<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/IproK/resource#maxUnits</p>
+  <div class="description">
+   <p><strong>has characteristics: </strong> functional</p>
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/IproK/resource#Resource" title="https://w3id.org/IproK/resource#Resource">Resource</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/IproK/schedule#plannedFinishDate">
+  <h3>plannedFinishDate<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/IproK/schedule#plannedFinishDate</p>
+  <div class="description">
+   <p><strong>has characteristics: </strong> functional</p>
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/IproK/schedule#TaskTime" title="https://w3id.org/IproK/schedule#TaskTime">TaskTime</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#dateTime" target="_blank" title="http://www.w3.org/2001/XMLSchema#dateTime">date Time</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/IproK/schedule#plannedStartDate">
+  <h3>plannedFinishDate<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/IproK/schedule#plannedStartDate</p>
+  <div class="description">
+   <p><strong>has characteristics: </strong> functional</p>
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/IproK/schedule#TaskTime" title="https://w3id.org/IproK/schedule#TaskTime">TaskTime</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#dateTime" target="_blank" title="http://www.w3.org/2001/XMLSchema#dateTime">date Time</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/IproK/schedule#projectAddress">
+  <h3>projectAddress<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/IproK/schedule#projectAddress</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/IproK/schedule#Project" title="https://w3id.org/IproK/schedule#Project">Project</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/IproK/schedule#projectCategory">
+  <h3>projectCategory<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/IproK/schedule#projectCategory</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/IproK/schedule#Project" title="https://w3id.org/IproK/schedule#Project">Project</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/IproK/schedule#projectOwner">
+  <h3>projectOwner<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/IproK/schedule#projectOwner</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/IproK/schedule#Project" title="https://w3id.org/IproK/schedule#Project">Project</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/IproK/cost#remainingCostAmount">
+  <h3>remainingCostAmount<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/IproK/cost#remainingCostAmount</p>
+  <div class="description">
+   <p><strong>has characteristics: </strong> functional</p>
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/IproK/cost#CostItem" title="https://w3id.org/IproK/cost#CostItem">CostItem</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/IproK/schedule#remainingDuration">
+  <h3>remainingDuration<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/IproK/schedule#remainingDuration</p>
+  <div class="description">
+   <p><strong>has characteristics: </strong> functional</p>
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/IproK/schedule#TaskTime" title="https://w3id.org/IproK/schedule#TaskTime">TaskTime</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/IproK/resource#remainingUnits">
+  <h3>remainingUnits<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/IproK/resource#remainingUnits</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/IproK/resource#Resource" title="https://w3id.org/IproK/resource#Resource">Resource</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/IproK/schedule#scheduleDuration">
+  <h3>scheduleDuration<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/IproK/schedule#scheduleDuration</p>
+  <div class="description">
+   <p><strong>has characteristics: </strong> functional</p>
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/IproK/schedule#TaskTime" title="https://w3id.org/IproK/schedule#TaskTime">TaskTime</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/IproK/schedule#taskPriority">
+  <h3>taskPriority<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/IproK/schedule#taskPriority</p>
+  <div class="description">
+   <p><strong>has characteristics: </strong> functional</p>
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/IproK/schedule#Task" title="https://w3id.org/IproK/schedule#Task">Task</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/IproK/schedule#taskRelationshipType">
+  <h3>taskRelationshipType<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/IproK/schedule#taskRelationshipType</p>
+  <div class="description">
+   <p><strong>has characteristics: </strong> functional</p>
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/IproK/schedule#TaskDependency" title="https://w3id.org/IproK/schedule#TaskDependency">TaskDependency</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/IproK/cost#vendorName">
+  <h3>vendorName<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/IproK/cost#vendorName</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/IproK/cost#CostItem" title="https://w3id.org/IproK/cost#CostItem">CostItem</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+<sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
+</div>
+</div>
+</div>
+    
+
+<!--REFERENCES SECTION-->
+  <div id="references">
+<h2 id="ref" class="list">References <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+Add your references here. It is recommended to have them as a list.</span>
+
+</div>
+<div id="acknowledgments">
+<h2 id="ack" class="list">Acknowledgments <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<p>
+The authors would like to thank <a href="http://www.essepuntato.it/">Silvio Peroni</a> for developing <a href="http://www.essepuntato.it/lode">LODE</a>, a Live OWL Documentation Environment, which is used for representing the Cross Referencing Section of this document and <a href="https://w3id.org/people/dgarijo">Daniel Garijo</a> for developing <a href="https://github.com/dgarijo/Widoco">Widoco</a>, the program used to create the template used in this documentation.</p>
+</div>
+
+
+</div>
+</body>
+</html>

@@ -1,0 +1,297 @@
+# S6.2 — Site Intelligence Report ontology module.
+#
+# Auto-generated site-context report fired on project GPS setup. Six
+# parallel Celery sub-fetches (CGWB groundwater · OSM logistics ·
+# NASA POWER worker-safety + climate · OSM utilities · OSM + ICAR
+# labour) populate one bs:SiteIntelligence parent node and six
+# typed sub-domain children under it. The site-intel graph lives at
+# data/external/site/{project_id} (per v2.0 §2.2) but written into
+# the project's named graph by way of the V0.30 multi-tenant URI
+# discipline; the actual placement decision is in ADR-001
+# (CLAUDE.md): flat per-project graph with a bs:processGroup
+# predicate tagging this triple set as "Initiation".
+#
+# Namespace note — this file uses the project's canonical
+# https://bimsaarthi.com/ontology/v0/ prefix so the classes resolve
+# to the same RDF entities the existing bs.ttl declares. The S6.2
+# spec's "ontologies/iprok#" namespace was withdrawn at file-write
+# time because it would have orphaned every new class from the
+# existing graph (queries joining bs:Project ↔ bs:SiteIntelligence
+# would silently return zero rows).
+#
+# Predicate-reuse note — two predicates the spec proposes already
+# exist in bs.ttl and are deliberately NOT redeclared here:
+#   * bs:forProject — already declared at bs.ttl:2554 as a
+#     domain-free polymorphic ObjectProperty shared by all four
+#     bs:ExternalSignal subclasses (V0.28 + S6.1) and the new
+#     bs:HistoricalWeatherProfile (S6.6+). Re-declaring with
+#     rdfs:domain bs:SiteIntelligence would RDFS-infer every signal
+#     as a SiteIntelligence node — antipattern #8.
+#   * bs:generatedAt — declared at bs.ttl:453 (V0.28). The
+#     rdfs:domain bs:RecurrenceAlert was DROPPED in the same commit
+#     that creates this file so the predicate is polymorphic and
+#     safely reusable by SiteIntelligence — antipattern #8.
+
+@prefix bs:    <https://bimsaarthi.com/ontology/v0/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+
+# ── ADR-001 — Process Group predicate ────────────────────────────
+# Tags any triple set with its PMBOK process group so the v2.0 §2.2
+# sub-graph prescription is satisfied at the predicate layer instead
+# of the storage layer (see CLAUDE.md ADR-001).
+bs:processGroup a owl:DatatypeProperty ;
+    rdfs:label "PMBOK process group" ;
+    rdfs:comment "Initiation | Planning | Execution | Monitoring | Closing. Polymorphic — domain-free per antipattern #8 (every PG-affiliated entity carries this predicate)." ;
+    rdfs:range xsd:string .
+
+
+# ── Root class ───────────────────────────────────────────────────
+bs:SiteIntelligence a owl:Class ;
+    rdfs:label "Site Intelligence Report" ;
+    rdfs:comment "Auto-generated site context report at project GPS setup. Holds six typed sub-domains (Hydrology / Logistics / Worker Safety / Utilities / Labour / Climate). Six threshold-based auto-risks (v2.0 §3.2) seeded at initiation from this report." .
+
+bs:dataVersion a owl:DatatypeProperty ;
+    rdfs:label "data version" ;
+    rdfs:comment "Semantic version of the site-intel fetcher schema. Bump on any breaking change to a sub-domain's property set so old reports can be re-fetched." ;
+    rdfs:domain bs:SiteIntelligence ;
+    rdfs:range xsd:string .
+
+
+# ── Sub-domain classes ───────────────────────────────────────────
+bs:SiteHydrology    a owl:Class ; rdfs:subClassOf bs:SiteIntelligence ;
+    rdfs:label "Site Hydrology" ;
+    rdfs:comment "CGWB groundwater + nearest water source. Drives the groundwater < 3m and CGWB over-exploited block auto-risks." .
+
+bs:SiteLogistics    a owl:Class ; rdfs:subClassOf bs:SiteIntelligence ;
+    rdfs:label "Site Logistics" ;
+    rdfs:comment "OSM-derived road / RMC / steel depot / rail / air. Drives the no-heavy-vehicle-access auto-risk." .
+
+bs:SiteWorkerSafety a owl:Class ; rdfs:subClassOf bs:SiteIntelligence ;
+    rdfs:label "Site Worker Safety" ;
+    rdfs:comment "NASA POWER heat stress (WBGT > 32°C per IS 3786) + nearest hospital + AQI. Drives the hospital > 15km auto-risk." .
+
+bs:SiteUtilities    a owl:Class ; rdfs:subClassOf bs:SiteIntelligence ;
+    rdfs:label "Site Utilities" ;
+    rdfs:comment "OSM grid substation + overhead HT line detection within 200m. The overhead-HT-line-present case is safety-critical and auto-creates a Score 16 risk." .
+
+bs:SiteLabour       a owl:Class ; rdfs:subClassOf bs:SiteIntelligence ;
+    rdfs:label "Site Labour" ;
+    rdfs:comment "OSM labour colony + public transport + ICAR state agri calendar. Feeds the labour-availability adjustment in P2B planning." .
+
+bs:SiteClimate      a owl:Class ; rdfs:subClassOf bs:SiteIntelligence ;
+    rdfs:label "Site Climate" ;
+    rdfs:comment "NASA POWER 10-year climatology: monsoon onset/withdrawal ISO weeks + annual rainfall + heat-wave days/year. Companion to the S6.6+ bs:HistoricalWeatherProfile (which holds the 52-week probability profile)." .
+
+
+# ── bs:SiteHydrology properties (7) ──────────────────────────────
+bs:groundwaterDepthPreMonsoonM a owl:DatatypeProperty ;
+    rdfs:label "groundwater depth pre-monsoon (m)" ;
+    rdfs:domain bs:SiteHydrology ; rdfs:range xsd:decimal .
+
+bs:groundwaterDepthPostMonsoonM a owl:DatatypeProperty ;
+    rdfs:label "groundwater depth post-monsoon (m)" ;
+    rdfs:domain bs:SiteHydrology ; rdfs:range xsd:decimal .
+
+bs:seasonalFluctuationM a owl:DatatypeProperty ;
+    rdfs:label "seasonal fluctuation (m)" ;
+    rdfs:domain bs:SiteHydrology ; rdfs:range xsd:decimal .
+
+bs:dewateringRequired a owl:DatatypeProperty ;
+    rdfs:label "dewatering required" ;
+    rdfs:comment "True when groundwaterDepthPreMonsoonM < 3.0 — i.e. excavation will hit water table." ;
+    rdfs:domain bs:SiteHydrology ; rdfs:range xsd:boolean .
+
+bs:cgwbBlockCategory a owl:DatatypeProperty ;
+    rdfs:label "CGWB block category" ;
+    rdfs:comment "Safe | Semi-Critical | Critical | Over-exploited (per CGWB block-level groundwater assessment)." ;
+    rdfs:domain bs:SiteHydrology ; rdfs:range xsd:string .
+
+bs:waterSourceDistanceKm a owl:DatatypeProperty ;
+    rdfs:label "water source distance (km)" ;
+    rdfs:domain bs:SiteHydrology ; rdfs:range xsd:decimal .
+
+bs:nearestWaterSourceName a owl:DatatypeProperty ;
+    rdfs:label "nearest water source name" ;
+    rdfs:domain bs:SiteHydrology ; rdfs:range xsd:string .
+
+
+# ── bs:SiteLogistics properties (13) ─────────────────────────────
+bs:roadAccessClass a owl:DatatypeProperty ;
+    rdfs:label "road access class" ;
+    rdfs:comment "NH | SH | MDR | ODR | VR (per OSM highway tag)." ;
+    rdfs:domain bs:SiteLogistics ; rdfs:range xsd:string .
+
+bs:heavyVehicleAccess a owl:DatatypeProperty ;
+    rdfs:label "heavy vehicle access" ;
+    rdfs:comment "False triggers an auto-risk (cement/steel can't reach site at scale)." ;
+    rdfs:domain bs:SiteLogistics ; rdfs:range xsd:boolean .
+
+bs:rmc1DistanceKm a owl:DatatypeProperty ;
+    rdfs:label "RMC plant 1 distance (km)" ;
+    rdfs:domain bs:SiteLogistics ; rdfs:range xsd:decimal .
+
+bs:rmc1Name a owl:DatatypeProperty ;
+    rdfs:domain bs:SiteLogistics ; rdfs:range xsd:string .
+
+bs:rmc2DistanceKm a owl:DatatypeProperty ;
+    rdfs:label "RMC plant 2 distance (km)" ;
+    rdfs:domain bs:SiteLogistics ; rdfs:range xsd:decimal .
+
+bs:rmc2Name a owl:DatatypeProperty ;
+    rdfs:domain bs:SiteLogistics ; rdfs:range xsd:string .
+
+bs:steelDepotDistanceKm a owl:DatatypeProperty ;
+    rdfs:label "steel depot distance (km)" ;
+    rdfs:domain bs:SiteLogistics ; rdfs:range xsd:decimal .
+
+bs:steelDepotName a owl:DatatypeProperty ;
+    rdfs:domain bs:SiteLogistics ; rdfs:range xsd:string .
+
+bs:cementStockistKm a owl:DatatypeProperty ;
+    rdfs:label "cement stockist distance (km)" ;
+    rdfs:domain bs:SiteLogistics ; rdfs:range xsd:decimal .
+
+bs:aggregateQuarryKm a owl:DatatypeProperty ;
+    rdfs:label "aggregate quarry distance (km)" ;
+    rdfs:domain bs:SiteLogistics ; rdfs:range xsd:decimal .
+
+bs:railwayGoodsYardKm a owl:DatatypeProperty ;
+    rdfs:label "railway goods yard distance (km)" ;
+    rdfs:domain bs:SiteLogistics ; rdfs:range xsd:decimal .
+
+bs:railwayGoodsYardName a owl:DatatypeProperty ;
+    rdfs:domain bs:SiteLogistics ; rdfs:range xsd:string .
+
+bs:nearestAirportKm a owl:DatatypeProperty ;
+    rdfs:label "nearest airport distance (km)" ;
+    rdfs:domain bs:SiteLogistics ; rdfs:range xsd:decimal .
+
+
+# ── bs:SiteWorkerSafety properties (9) ───────────────────────────
+bs:heatStressMonths a owl:DatatypeProperty ;
+    rdfs:label "heat stress months" ;
+    rdfs:comment "Comma-separated month abbreviations where WBGT > 32°C per IS 3786 (e.g. 'Apr,May,Jun')." ;
+    rdfs:domain bs:SiteWorkerSafety ; rdfs:range xsd:string .
+
+bs:peakHeatMonthWBGT a owl:DatatypeProperty ;
+    rdfs:label "peak heat month WBGT (°C)" ;
+    rdfs:domain bs:SiteWorkerSafety ; rdfs:range xsd:decimal .
+
+bs:peakHeatMonth a owl:DatatypeProperty ;
+    rdfs:label "peak heat month" ;
+    rdfs:domain bs:SiteWorkerSafety ; rdfs:range xsd:string .
+
+bs:hospitalDistanceKm a owl:DatatypeProperty ;
+    rdfs:label "nearest emergency hospital distance (km)" ;
+    rdfs:domain bs:SiteWorkerSafety ; rdfs:range xsd:decimal .
+
+bs:hospitalName a owl:DatatypeProperty ;
+    rdfs:domain bs:SiteWorkerSafety ; rdfs:range xsd:string .
+
+bs:hospitalType a owl:DatatypeProperty ;
+    rdfs:label "hospital type" ;
+    rdfs:comment "Trauma Centre | Multi-speciality | Government | Primary Health Centre | Other." ;
+    rdfs:domain bs:SiteWorkerSafety ; rdfs:range xsd:string .
+
+bs:aqiZone a owl:DatatypeProperty ;
+    rdfs:label "AQI zone" ;
+    rdfs:comment "CPCB AQI band — Good | Satisfactory | Moderate | Poor | Very Poor | Severe." ;
+    rdfs:domain bs:SiteWorkerSafety ; rdfs:range xsd:string .
+
+bs:siteAmbientAQI a owl:DatatypeProperty ;
+    rdfs:label "site ambient AQI" ;
+    rdfs:domain bs:SiteWorkerSafety ; rdfs:range xsd:integer .
+
+bs:dustRiskMonths a owl:DatatypeProperty ;
+    rdfs:label "dust risk months" ;
+    rdfs:comment "Comma-separated month abbreviations where PM10 > 250 µg/m³ typical." ;
+    rdfs:domain bs:SiteWorkerSafety ; rdfs:range xsd:string .
+
+
+# ── bs:SiteUtilities properties (7) ──────────────────────────────
+bs:gridSubstationDistanceKm a owl:DatatypeProperty ;
+    rdfs:label "grid substation distance (km)" ;
+    rdfs:domain bs:SiteUtilities ; rdfs:range xsd:decimal .
+
+bs:gridSubstationName a owl:DatatypeProperty ;
+    rdfs:domain bs:SiteUtilities ; rdfs:range xsd:string .
+
+bs:gridVoltageKV a owl:DatatypeProperty ;
+    rdfs:label "grid voltage (kV)" ;
+    rdfs:domain bs:SiteUtilities ; rdfs:range xsd:decimal .
+
+bs:overheadHTLinePresent a owl:DatatypeProperty ;
+    rdfs:label "overhead HT line present (within 200m)" ;
+    rdfs:comment "True triggers a Critical Score-16 auto-risk per IS 5613 safety clearance norms." ;
+    rdfs:domain bs:SiteUtilities ; rdfs:range xsd:boolean .
+
+bs:overheadHTLineDistanceM a owl:DatatypeProperty ;
+    rdfs:label "overhead HT line distance (m)" ;
+    rdfs:domain bs:SiteUtilities ; rdfs:range xsd:decimal .
+
+bs:undergroundUtilityRisk a owl:DatatypeProperty ;
+    rdfs:label "underground utility risk" ;
+    rdfs:comment "Low | Medium | High — based on OSM presence of buried gas / water / fibre lines within 50m." ;
+    rdfs:domain bs:SiteUtilities ; rdfs:range xsd:string .
+
+bs:undergroundUtilityNotes a owl:DatatypeProperty ;
+    rdfs:domain bs:SiteUtilities ; rdfs:range xsd:string .
+
+
+# ── bs:SiteLabour properties (5) ─────────────────────────────────
+bs:labourColonyDistanceKm a owl:DatatypeProperty ;
+    rdfs:label "labour colony distance (km)" ;
+    rdfs:domain bs:SiteLabour ; rdfs:range xsd:decimal .
+
+bs:publicTransportDistanceM a owl:DatatypeProperty ;
+    rdfs:label "public transport distance (m)" ;
+    rdfs:domain bs:SiteLabour ; rdfs:range xsd:decimal .
+
+bs:publicTransportType a owl:DatatypeProperty ;
+    rdfs:label "public transport type" ;
+    rdfs:comment "Bus Stop | Metro | Suburban Rail | Auto Stand | None." ;
+    rdfs:domain bs:SiteLabour ; rdfs:range xsd:string .
+
+bs:labourAccommodationNeeded a owl:DatatypeProperty ;
+    rdfs:label "labour accommodation needed" ;
+    rdfs:comment "True when labourColonyDistanceKm > 5 AND publicTransportDistanceM > 500." ;
+    rdfs:domain bs:SiteLabour ; rdfs:range xsd:boolean .
+
+bs:stateAgriCalendarJson a owl:DatatypeProperty ;
+    rdfs:label "state agricultural calendar (JSON)" ;
+    rdfs:comment "ICAR state×crop×month JSON. Kharif/Rabi harvest weeks and labour impact score. The P2B Planning Module reads this to reduce crew availability 20-35% on harvest weeks." ;
+    rdfs:domain bs:SiteLabour ; rdfs:range xsd:string .
+
+
+# ── bs:SiteClimate properties (7) ────────────────────────────────
+bs:monsoonOnsetWeek a owl:DatatypeProperty ;
+    rdfs:label "monsoon onset ISO week" ;
+    rdfs:domain bs:SiteClimate ; rdfs:range xsd:integer .
+
+bs:monsoonWithdrawalWeek a owl:DatatypeProperty ;
+    rdfs:label "monsoon withdrawal ISO week" ;
+    rdfs:domain bs:SiteClimate ; rdfs:range xsd:integer .
+
+bs:monsoonActiveWeeks a owl:DatatypeProperty ;
+    rdfs:label "monsoon active weeks" ;
+    rdfs:domain bs:SiteClimate ; rdfs:range xsd:integer .
+
+bs:peakMonsoonWeek a owl:DatatypeProperty ;
+    rdfs:label "peak monsoon ISO week" ;
+    rdfs:domain bs:SiteClimate ; rdfs:range xsd:integer .
+
+bs:annualRainfallMM a owl:DatatypeProperty ;
+    rdfs:label "annual rainfall (mm)" ;
+    rdfs:domain bs:SiteClimate ; rdfs:range xsd:decimal .
+
+bs:historicalWeeklyRainJson a owl:DatatypeProperty ;
+    rdfs:label "historical weekly rain (JSON)" ;
+    rdfs:comment "52-week array of {week, rain_mm} from NASA POWER 10-year mean. Cross-reference: bs:HistoricalWeatherProfile (S6.6+) holds the probabilistic version." ;
+    rdfs:domain bs:SiteClimate ; rdfs:range xsd:string .
+
+bs:heatWaveDaysPerYear a owl:DatatypeProperty ;
+    rdfs:label "heat wave days per year" ;
+    rdfs:domain bs:SiteClimate ; rdfs:range xsd:decimal .

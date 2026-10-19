@@ -1,0 +1,16 @@
+{
+  "sourceRepository": "BIMSAARTHI_PLATFORM/platform",
+  "commit": "59bb8c2ae61228cd21778cc6beae523331f4529a",
+  "retrievedOn": "2026-10-19",
+  "scope": "Runtime ontology and SHACL source only. Subsequent development; no project instance records. Cached origin/main selected as a single consistent revision, confirmed with Niyoj session 124.",
+  "files": {
+    "bs.ttl": "e5b83ccf294a08e1f635cec9eab7af4403b5147ef898f0b92a108efa4bbbc5c2",
+    "iprok_site_intelligence.ttl": "4b5271b521afc6ce2842996279fcada20046ee7f9bf73ed57922714efa386562",
+    "shapes.ttl": "f4c11e0a192c672211e1adb1e72a3d62c4884d08c7a601959f3d9e836ef47bea"
+  },
+  "caveats": [
+    "Header 0.1.0 / M1 subset is stale metadata, not a newly verified semantic release.",
+    "No reviewed equivalence mapping to historical IproK.",
+    "No claim of complete planned architecture or historical thesis validation."
+  ]
+}

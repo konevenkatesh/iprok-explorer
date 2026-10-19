@@ -1,0 +1,2062 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "en", "undefined" ],
+    "baseIris" : [ "https://w3id.org/IproK/integrated", "http://www.w3.org/1999/02/22-rdf-syntax-ns", "https://w3id.org/IproK", "http://www.w3.org/2000/01/rdf-schema", "https://w3id.org/IproK/resource", "http://www.w3.org/2001/XMLSchema", "https://w3id.org/IproK/schedule", "https://w3id.org/IproK/cost" ],
+    "title" : { },
+    "iri" : "https://w3id.org/IproK",
+    "version" : "0.1.0",
+    "author" : [ "https://orcid.org/0000-0002-6398-5850", "Venkatesh Kone" ],
+    "description" : {
+      "en" : "The Integrated Project Knowledge (IproK) ontology is a specialized, formal model designed to standardize and integrate construction project management data. It focuses on structuring information related to project schedules, costs, and resources, and their complex interdependencies. The core aim of IproK is to create a unified, machine-interpretable knowledge base. This enables robust AI integration, particularly with Large Language Models (LLMs), to facilitate advanced data analytics, support complex querying via natural language, and improve decision-making in construction projects. Key design principles include deep integration of the core project management domains, AI-readiness, PMBOK-aligned modularity for scalability and extensibility, and pragmatic reuse of established industry standards and concepts."
+    },
+    "other" : {
+      "license" : [ {
+        "identifier" : "license",
+        "language" : "undefined",
+        "value" : "https://creativecommons.org/licenses/by/4.0/",
+        "type" : "label"
+      } ],
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "Venkatesh Kone",
+        "type" : "label"
+      }, {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "https://orcid.org/0000-0002-6398-5850",
+        "type" : "label"
+      }, {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "",
+        "type" : "label"
+      } ],
+      "contributor" : [ {
+        "identifier" : "contributor",
+        "language" : "undefined",
+        "value" : "Prof. Gangadhar Mahesh",
+        "type" : "label"
+      } ],
+      "preferredNamespacePrefix" : [ {
+        "identifier" : "preferredNamespacePrefix",
+        "language" : "undefined",
+        "value" : "",
+        "type" : "label"
+      }, {
+        "identifier" : "preferredNamespacePrefix",
+        "language" : "undefined",
+        "value" : "iprok",
+        "type" : "label"
+      } ],
+      "preferredNamespaceUri" : [ {
+        "identifier" : "preferredNamespaceUri",
+        "language" : "undefined",
+        "value" : "https://w3id.org/IproK#",
+        "type" : "label"
+      } ],
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "undefined",
+        "value" : "0.1.0",
+        "type" : "label"
+      } ],
+      "title" : [ {
+        "identifier" : "title",
+        "language" : "undefined",
+        "value" : "Integrated Project Knowledge (IproK) Ontology",
+        "type" : "label"
+      }, {
+        "identifier" : "title",
+        "language" : "undefined",
+        "value" : "",
+        "type" : "label"
+      } ],
+      "issued" : [ {
+        "identifier" : "issued",
+        "language" : "undefined",
+        "value" : "25-05-2025",
+        "type" : "label"
+      } ],
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://iprok-web.streamlit.app/",
+        "type" : "label"
+      } ]
+    }
+  },
+  "namespace" : [ ],
+  "class" : [ {
+    "id" : "0",
+    "type" : "owl:Class"
+  }, {
+    "id" : "3",
+    "type" : "owl:Class"
+  }, {
+    "id" : "5",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "8",
+    "type" : "owl:Class"
+  }, {
+    "id" : "18",
+    "type" : "owl:Class"
+  }, {
+    "id" : "19",
+    "type" : "owl:Class"
+  }, {
+    "id" : "20",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "21",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "22",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "17",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "23",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "24",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "25",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "26",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "32",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "29",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "28",
+    "type" : "owl:Class"
+  }, {
+    "id" : "35",
+    "type" : "owl:Class"
+  }, {
+    "id" : "1",
+    "type" : "owl:Class"
+  }, {
+    "id" : "2",
+    "type" : "owl:Class"
+  }, {
+    "id" : "45",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "46",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "47",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "31",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "51",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "34",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "54",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "63",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "65",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "72",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "73",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "11",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "56",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "75",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "76",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "77",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "62",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "7",
+    "type" : "owl:Class"
+  }, {
+    "id" : "53",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "79",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "13",
+    "type" : "owl:Class"
+  }, {
+    "id" : "86",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "87",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "88",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "89",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "90",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "91",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "92",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "71",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "82",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "40",
+    "type" : "owl:Class"
+  }, {
+    "id" : "58",
+    "type" : "owl:Class"
+  }, {
+    "id" : "14",
+    "type" : "owl:Class"
+  }, {
+    "id" : "38",
+    "type" : "owl:Class"
+  }, {
+    "id" : "96",
+    "type" : "owl:Class"
+  }, {
+    "id" : "59",
+    "type" : "owl:Class"
+  }, {
+    "id" : "43",
+    "type" : "owl:Class"
+  }, {
+    "id" : "42",
+    "type" : "owl:Class"
+  }, {
+    "id" : "16",
+    "type" : "owl:Class"
+  }, {
+    "id" : "39",
+    "type" : "owl:Class"
+  }, {
+    "id" : "78",
+    "type" : "owl:Class"
+  }, {
+    "id" : "4",
+    "type" : "owl:Class"
+  }, {
+    "id" : "142",
+    "type" : "owl:Class"
+  }, {
+    "id" : "99",
+    "type" : "owl:Class"
+  }, {
+    "id" : "37",
+    "type" : "owl:Class"
+  }, {
+    "id" : "9",
+    "type" : "owl:Class"
+  }, {
+    "id" : "41",
+    "type" : "owl:Class"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "https://w3id.org/IproK#Constraint",
+    "baseIri" : "https://w3id.org/IproK",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Constraint",
+      "undefined" : "Constraint"
+    },
+    "subClasses" : [ "2" ],
+    "id" : "0",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "https://w3id.org/IproK/cost#MaterialCost",
+    "baseIri" : "https://w3id.org/IproK/cost",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "MaterialCost",
+      "undefined" : "MaterialCost"
+    },
+    "attributes" : [ "external" ],
+    "id" : "3",
+    "superClasses" : [ "4" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "5",
+    "label" : {
+      "IRI-based" : "boolean"
+    }
+  }, {
+    "iri" : "https://w3id.org/IproK/resource#MaterialResource",
+    "baseIri" : "https://w3id.org/IproK/resource",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "MaterialResource",
+      "undefined" : "MaterialResource"
+    },
+    "attributes" : [ "external" ],
+    "id" : "8",
+    "superClasses" : [ "9" ]
+  }, {
+    "iri" : "https://w3id.org/IproK/cost#CostItem",
+    "baseIri" : "https://w3id.org/IproK/cost",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "CostItem",
+      "undefined" : "CostItem"
+    },
+    "attributes" : [ "external" ],
+    "id" : "18",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "https://w3id.org/IproK/cost#EquipmentCost",
+    "baseIri" : "https://w3id.org/IproK/cost",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "EquipmentCost",
+      "undefined" : "EquipmentCost"
+    },
+    "attributes" : [ "external" ],
+    "id" : "19",
+    "superClasses" : [ "4" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "20",
+    "label" : {
+      "IRI-based" : "dateTime"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "21",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "22",
+    "label" : {
+      "IRI-based" : "decimal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "17",
+    "label" : {
+      "IRI-based" : "decimal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "23",
+    "label" : {
+      "IRI-based" : "decimal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "24",
+    "label" : {
+      "IRI-based" : "decimal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "25",
+    "label" : {
+      "IRI-based" : "decimal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "26",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "32",
+    "label" : {
+      "IRI-based" : "dateTime"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "29",
+    "label" : {
+      "IRI-based" : "dateTime"
+    }
+  }, {
+    "iri" : "https://w3id.org/IproK/integrated#ResourceAllocation",
+    "baseIri" : "https://w3id.org/IproK/integrated",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ResourceAllocation",
+      "undefined" : "ResourceAllocation"
+    },
+    "attributes" : [ "external" ],
+    "id" : "28",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "https://w3id.org/IproK/schedule#WBS_Element",
+    "baseIri" : "https://w3id.org/IproK/schedule",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "WBS_Element",
+      "undefined" : "WBS_Element"
+    },
+    "subClasses" : [ "7", "14" ],
+    "attributes" : [ "external" ],
+    "id" : "35",
+    "superClasses" : [ "13" ]
+  }, {
+    "iri" : "https://w3id.org/IproK#IproKThing",
+    "baseIri" : "https://w3id.org/IproK",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "IproKThing",
+      "undefined" : "IproKThing"
+    },
+    "subClasses" : [ "0", "37", "28", "38", "39", "40", "4", "18", "9", "41", "13", "42", "43", "16" ],
+    "id" : "1"
+  }, {
+    "iri" : "https://w3id.org/IproK/resource#ResourceConstraint",
+    "baseIri" : "https://w3id.org/IproK/resource",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ResourceConstraint",
+      "undefined" : "ResourceConstraint"
+    },
+    "attributes" : [ "external" ],
+    "id" : "2",
+    "superClasses" : [ "0" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "45",
+    "label" : {
+      "IRI-based" : "decimal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "46",
+    "label" : {
+      "IRI-based" : "decimal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "47",
+    "label" : {
+      "IRI-based" : "decimal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "31",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "51",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "34",
+    "label" : {
+      "IRI-based" : "decimal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "54",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "63",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "65",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "72",
+    "label" : {
+      "IRI-based" : "decimal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "73",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "11",
+    "label" : {
+      "IRI-based" : "integer"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "56",
+    "label" : {
+      "IRI-based" : "decimal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "75",
+    "label" : {
+      "IRI-based" : "dateTime"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "76",
+    "label" : {
+      "IRI-based" : "dateTime"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "77",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "62",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "https://w3id.org/IproK/schedule#Task",
+    "baseIri" : "https://w3id.org/IproK/schedule",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Task",
+      "undefined" : "Task"
+    },
+    "subClasses" : [ "78" ],
+    "attributes" : [ "external" ],
+    "id" : "7",
+    "superClasses" : [ "35" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "53",
+    "label" : {
+      "IRI-based" : "decimal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "79",
+    "label" : {
+      "IRI-based" : "boolean"
+    }
+  }, {
+    "iri" : "https://w3id.org/IproK/schedule#Project",
+    "baseIri" : "https://w3id.org/IproK/schedule",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Project",
+      "undefined" : "Project"
+    },
+    "subClasses" : [ "35" ],
+    "attributes" : [ "external" ],
+    "id" : "13",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "86",
+    "label" : {
+      "IRI-based" : "boolean"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "87",
+    "label" : {
+      "IRI-based" : "decimal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "88",
+    "label" : {
+      "IRI-based" : "dateTime"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "89",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "90",
+    "label" : {
+      "IRI-based" : "dateTime"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "91",
+    "label" : {
+      "IRI-based" : "decimal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "92",
+    "label" : {
+      "IRI-based" : "decimal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "71",
+    "label" : {
+      "IRI-based" : "dateTime"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "82",
+    "label" : {
+      "IRI-based" : "decimal"
+    }
+  }, {
+    "iri" : "https://w3id.org/IproK/cost#CostCategory",
+    "baseIri" : "https://w3id.org/IproK/cost",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "CostCategory",
+      "undefined" : "CostCategory"
+    },
+    "attributes" : [ "external" ],
+    "id" : "40",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "https://w3id.org/IproK/resource#LaborResource",
+    "baseIri" : "https://w3id.org/IproK/resource",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "LaborResource",
+      "undefined" : "LaborResource"
+    },
+    "attributes" : [ "external" ],
+    "id" : "58",
+    "superClasses" : [ "9" ]
+  }, {
+    "iri" : "https://w3id.org/IproK/schedule#WorkPackage",
+    "baseIri" : "https://w3id.org/IproK/schedule",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "WorkPackage",
+      "undefined" : "WorkPackage"
+    },
+    "attributes" : [ "external" ],
+    "id" : "14",
+    "superClasses" : [ "35" ]
+  }, {
+    "iri" : "https://w3id.org/IproK/schedule#TaskDependency",
+    "baseIri" : "https://w3id.org/IproK/schedule",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "TaskDependency",
+      "undefined" : "TaskDependency"
+    },
+    "attributes" : [ "external" ],
+    "id" : "38",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "https://w3id.org/IproK/cost#LaborCost",
+    "baseIri" : "https://w3id.org/IproK/cost",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "LaborCost",
+      "undefined" : "LaborCost"
+    },
+    "attributes" : [ "external" ],
+    "id" : "96",
+    "superClasses" : [ "4" ]
+  }, {
+    "iri" : "https://w3id.org/IproK/resource#UserDefinedResource",
+    "baseIri" : "https://w3id.org/IproK/resource",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "UserDefinedResource",
+      "undefined" : "UserDefinedResource"
+    },
+    "attributes" : [ "external" ],
+    "id" : "59",
+    "superClasses" : [ "9" ]
+  }, {
+    "iri" : "https://w3id.org/IproK/schedule#TaskTime",
+    "baseIri" : "https://w3id.org/IproK/schedule",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "TaskTime",
+      "undefined" : "TaskTime"
+    },
+    "attributes" : [ "external" ],
+    "id" : "43",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "https://w3id.org/IproK/resource#Units",
+    "baseIri" : "https://w3id.org/IproK/resource",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Units",
+      "undefined" : "Units"
+    },
+    "attributes" : [ "external" ],
+    "id" : "42",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "https://w3id.org/IproK/resource#Resource",
+    "baseIri" : "https://w3id.org/IproK/resource",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Resource",
+      "undefined" : "Resource"
+    },
+    "attributes" : [ "external" ],
+    "id" : "16",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "https://w3id.org/IproK/resource#TrackingTag",
+    "baseIri" : "https://w3id.org/IproK/resource",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "TrackingTag",
+      "undefined" : "TrackingTag"
+    },
+    "attributes" : [ "external" ],
+    "id" : "39",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "https://w3id.org/IproK/schedule#Milestone",
+    "baseIri" : "https://w3id.org/IproK/schedule",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Milestone",
+      "undefined" : "Milestone"
+    },
+    "attributes" : [ "external" ],
+    "id" : "78",
+    "superClasses" : [ "7" ]
+  }, {
+    "iri" : "https://w3id.org/IproK/cost#CostType",
+    "baseIri" : "https://w3id.org/IproK/cost",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "CostType",
+      "undefined" : "CostType"
+    },
+    "subClasses" : [ "3", "96", "19", "99" ],
+    "attributes" : [ "external" ],
+    "id" : "4",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "https://w3id.org/IproK/resource#EquipmentResource",
+    "baseIri" : "https://w3id.org/IproK/resource",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "EquipmentResource",
+      "undefined" : "EquipmentResource"
+    },
+    "attributes" : [ "external" ],
+    "id" : "142",
+    "superClasses" : [ "9" ]
+  }, {
+    "iri" : "https://w3id.org/IproK/cost#ExpenseItem",
+    "baseIri" : "https://w3id.org/IproK/cost",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ExpenseItem",
+      "undefined" : "ExpenseItem"
+    },
+    "attributes" : [ "external" ],
+    "id" : "99",
+    "superClasses" : [ "4" ]
+  }, {
+    "iri" : "https://w3id.org/IproK#Calendar",
+    "baseIri" : "https://w3id.org/IproK",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Calendar",
+      "undefined" : "Calendar"
+    },
+    "id" : "37",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "https://w3id.org/IproK/resource#ResourceType",
+    "baseIri" : "https://w3id.org/IproK/resource",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ResourceType",
+      "undefined" : "ResourceType"
+    },
+    "subClasses" : [ "58", "142", "8", "59" ],
+    "attributes" : [ "external" ],
+    "id" : "9",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "https://w3id.org/IproK#Actor",
+    "baseIri" : "https://w3id.org/IproK",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Actor",
+      "undefined" : "Actor"
+    },
+    "id" : "41",
+    "superClasses" : [ "1" ]
+  } ],
+  "property" : [ {
+    "id" : "6",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "10",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "12",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "15",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "27",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "30",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "33",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "36",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "44",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "48",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "49",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "50",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "52",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "55",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "57",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "60",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "61",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "64",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "66",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "67",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "68",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "69",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "70",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "74",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "80",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "81",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "83",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "84",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "85",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "93",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "94",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "95",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "97",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "98",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "100",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "101",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "102",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "103",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "104",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "105",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "106",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "107",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "108",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "109",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "110",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "111",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "112",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "113",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "114",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "115",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "116",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "117",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "118",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "119",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "120",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "121",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "122",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "123",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "124",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "125",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "126",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "127",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "128",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "129",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "130",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "131",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "132",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "133",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "134",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "135",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "136",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "137",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "138",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "139",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "140",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "141",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "143",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "144",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "145",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "146",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "147",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "148",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "149",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "150",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "151",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "152",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "153",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "154",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "155",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "156",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "157",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "158",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "159",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "160",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "161",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "162",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "163",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "164",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "165",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "166",
+    "type" : "rdfs:SubClassOf"
+  } ],
+  "propertyAttribute" : [ {
+    "iri" : "https://w3id.org/IproK/schedule#hasSubTask",
+    "baseIri" : "https://w3id.org/IproK/schedule",
+    "range" : "7",
+    "label" : {
+      "IRI-based" : "hasSubTask",
+      "undefined" : "hasSubTask"
+    },
+    "domain" : "7",
+    "attributes" : [ "external", "object" ],
+    "id" : "6"
+  }, {
+    "iri" : "https://w3id.org/IproK/schedule#taskPriority",
+    "baseIri" : "https://w3id.org/IproK/schedule",
+    "range" : "11",
+    "label" : {
+      "IRI-based" : "taskPriority",
+      "en" : "taskPriority"
+    },
+    "domain" : "7",
+    "attributes" : [ "functional", "datatype", "external" ],
+    "id" : "10"
+  }, {
+    "iri" : "https://w3id.org/IproK/schedule#hasWorkPackage",
+    "baseIri" : "https://w3id.org/IproK/schedule",
+    "range" : "14",
+    "label" : {
+      "IRI-based" : "hasWorkPackage",
+      "undefined" : "hasWorkPackage"
+    },
+    "domain" : "13",
+    "attributes" : [ "external", "object" ],
+    "id" : "12"
+  }, {
+    "iri" : "https://w3id.org/IproK/resource#actualUnits",
+    "baseIri" : "https://w3id.org/IproK/resource",
+    "range" : "17",
+    "label" : {
+      "IRI-based" : "actualUnits",
+      "en" : "actualUnits"
+    },
+    "domain" : "16",
+    "comment" : { },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "15"
+  }, {
+    "iri" : "https://w3id.org/IproK/integrated#allocationPlannedFinishDate",
+    "baseIri" : "https://w3id.org/IproK/integrated",
+    "range" : "29",
+    "label" : {
+      "IRI-based" : "allocationPlannedFinishDate",
+      "en" : "allocationPlannedFinishDate"
+    },
+    "domain" : "28",
+    "attributes" : [ "functional", "datatype", "external" ],
+    "id" : "27"
+  }, {
+    "iri" : "https://w3id.org/IproK#hasId",
+    "baseIri" : "https://w3id.org/IproK",
+    "range" : "31",
+    "label" : {
+      "IRI-based" : "hasId",
+      "en" : "hasId"
+    },
+    "domain" : "1",
+    "comment" : {
+      "undefined" : "A local or project-specific identifier."
+    },
+    "attributes" : [ "functional", "datatype" ],
+    "id" : "30"
+  }, {
+    "iri" : "https://w3id.org/IproK/cost#actualCostAmount",
+    "baseIri" : "https://w3id.org/IproK/cost",
+    "range" : "34",
+    "label" : {
+      "IRI-based" : "actualCostAmount",
+      "en" : "actualCostAmount"
+    },
+    "domain" : "18",
+    "comment" : {
+      "undefined" : "this is actual cost amount"
+    },
+    "attributes" : [ "functional", "datatype", "external" ],
+    "id" : "33"
+  }, {
+    "iri" : "https://w3id.org/IproK/schedule#hasWBS",
+    "baseIri" : "https://w3id.org/IproK/schedule",
+    "range" : "35",
+    "label" : {
+      "IRI-based" : "hasWBS",
+      "undefined" : "hasWBS"
+    },
+    "domain" : "14",
+    "attributes" : [ "external", "object" ],
+    "id" : "36"
+  }, {
+    "iri" : "https://w3id.org/IproK/integrated#taskHasResourceAllocation",
+    "baseIri" : "https://w3id.org/IproK/integrated",
+    "range" : "28",
+    "label" : {
+      "IRI-based" : "taskHasResourceAllocation",
+      "undefined" : "taskHasResourceAllocation"
+    },
+    "domain" : "7",
+    "attributes" : [ "external", "object" ],
+    "id" : "44"
+  }, {
+    "iri" : "https://w3id.org/IproK/resource#baseRate",
+    "baseIri" : "https://w3id.org/IproK/resource",
+    "range" : "24",
+    "label" : {
+      "IRI-based" : "baseRate",
+      "en" : "baseRate"
+    },
+    "domain" : "16",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "48"
+  }, {
+    "iri" : "https://w3id.org/IproK/integrated#resourceAllocationIncursCostItem",
+    "baseIri" : "https://w3id.org/IproK/integrated",
+    "range" : "18",
+    "label" : {
+      "IRI-based" : "resourceAllocationIncursCostItem",
+      "undefined" : "resourceAllocationIncursCostItem"
+    },
+    "domain" : "28",
+    "attributes" : [ "external", "object" ],
+    "id" : "49"
+  }, {
+    "iri" : "https://w3id.org/IproK/integrated#allocationAssignsResource",
+    "baseIri" : "https://w3id.org/IproK/integrated",
+    "range" : "16",
+    "label" : {
+      "IRI-based" : "allocationAssignsResource",
+      "undefined" : "allocationAssignsResource"
+    },
+    "domain" : "28",
+    "attributes" : [ "functional", "external", "object" ],
+    "id" : "50"
+  }, {
+    "iri" : "https://w3id.org/IproK/schedule#lagTime",
+    "baseIri" : "https://w3id.org/IproK/schedule",
+    "range" : "53",
+    "label" : {
+      "IRI-based" : "lagTime",
+      "en" : "lagTime"
+    },
+    "domain" : "38",
+    "attributes" : [ "functional", "datatype", "external" ],
+    "id" : "52"
+  }, {
+    "iri" : "https://w3id.org/IproK/schedule#scheduleDuration",
+    "baseIri" : "https://w3id.org/IproK/schedule",
+    "range" : "56",
+    "label" : {
+      "IRI-based" : "scheduleDuration",
+      "en" : "scheduleDuration"
+    },
+    "domain" : "43",
+    "attributes" : [ "functional", "datatype", "external" ],
+    "id" : "55"
+  }, {
+    "range" : "59",
+    "domain" : "58",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "57"
+  }, {
+    "iri" : "https://w3id.org/IproK/cost#remainingCostAmount",
+    "baseIri" : "https://w3id.org/IproK/cost",
+    "range" : "47",
+    "label" : {
+      "IRI-based" : "remainingCostAmount",
+      "en" : "remainingCostAmount"
+    },
+    "domain" : "18",
+    "attributes" : [ "functional", "datatype", "external" ],
+    "id" : "60"
+  }, {
+    "iri" : "https://w3id.org/IproK/schedule#projectAddress",
+    "baseIri" : "https://w3id.org/IproK/schedule",
+    "range" : "62",
+    "label" : {
+      "IRI-based" : "projectAddress",
+      "en" : "projectAddress"
+    },
+    "domain" : "13",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "61"
+  }, {
+    "range" : "59",
+    "domain" : "8",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "64"
+  }, {
+    "range" : "35",
+    "domain" : "7",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "66"
+  }, {
+    "range" : "0",
+    "domain" : "2",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "67"
+  }, {
+    "iri" : "https://w3id.org/IproK/schedule#hasConstraint",
+    "baseIri" : "https://w3id.org/IproK/schedule",
+    "range" : "0",
+    "label" : {
+      "IRI-based" : "hasConstraint",
+      "undefined" : "hasConstraint"
+    },
+    "domain" : "7",
+    "attributes" : [ "external", "object" ],
+    "id" : "68"
+  }, {
+    "iri" : "https://w3id.org/IproK/cost#budgetedCostAmount",
+    "baseIri" : "https://w3id.org/IproK/cost",
+    "range" : "45",
+    "label" : {
+      "IRI-based" : "budgetedCostAmount",
+      "en" : "budgetedCostAmount"
+    },
+    "domain" : "18",
+    "attributes" : [ "functional", "datatype", "external" ],
+    "id" : "69"
+  }, {
+    "iri" : "https://w3id.org/IproK/schedule#actualFinishDate",
+    "baseIri" : "https://w3id.org/IproK/schedule",
+    "range" : "71",
+    "label" : {
+      "IRI-based" : "actualFinishDate",
+      "en" : "actualFinishDate"
+    },
+    "domain" : "43",
+    "attributes" : [ "functional", "datatype", "external" ],
+    "id" : "70"
+  }, {
+    "iri" : "https://w3id.org/IproK/integrated#allocatedUnits",
+    "baseIri" : "https://w3id.org/IproK/integrated",
+    "range" : "25",
+    "label" : {
+      "IRI-based" : "allocatedUnits",
+      "en" : "allocatedUnits"
+    },
+    "domain" : "28",
+    "comment" : { },
+    "attributes" : [ "functional", "datatype", "external" ],
+    "id" : "74"
+  }, {
+    "iri" : "https://w3id.org/IproK/resource#hasResourceType",
+    "baseIri" : "https://w3id.org/IproK/resource",
+    "range" : "9",
+    "label" : {
+      "IRI-based" : "hasResourceType",
+      "undefined" : "hasResourceType"
+    },
+    "domain" : "16",
+    "attributes" : [ "functional", "external", "object" ],
+    "id" : "80"
+  }, {
+    "iri" : "https://w3id.org/IproK/schedule#actualDuration",
+    "baseIri" : "https://w3id.org/IproK/schedule",
+    "range" : "82",
+    "label" : {
+      "IRI-based" : "actualDuration",
+      "en" : "actualDuration"
+    },
+    "domain" : "43",
+    "attributes" : [ "functional", "datatype", "external" ],
+    "id" : "81"
+  }, {
+    "iri" : "https://w3id.org/IproK/schedule#hasTask",
+    "baseIri" : "https://w3id.org/IproK/schedule",
+    "range" : "7",
+    "label" : {
+      "IRI-based" : "hasTask",
+      "undefined" : "hasTask"
+    },
+    "domain" : "35",
+    "attributes" : [ "external", "object" ],
+    "id" : "83"
+  }, {
+    "iri" : "https://w3id.org/IproK#hasDescription",
+    "baseIri" : "https://w3id.org/IproK",
+    "range" : "63",
+    "label" : {
+      "IRI-based" : "hasDescription",
+      "en" : "hasDescription"
+    },
+    "domain" : "1",
+    "comment" : {
+      "undefined" : "A textual description of the entity."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "84"
+  }, {
+    "iri" : "https://w3id.org/IproK/resource#atCompleteUnits",
+    "baseIri" : "https://w3id.org/IproK/resource",
+    "range" : "22",
+    "label" : {
+      "IRI-based" : "atCompleteUnits",
+      "en" : "atCompleteUnits"
+    },
+    "domain" : "16",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "85"
+  }, {
+    "iri" : "https://w3id.org/IproK/resource#effectiveDateForRate",
+    "baseIri" : "https://w3id.org/IproK/resource",
+    "range" : "20",
+    "label" : {
+      "IRI-based" : "effectiveDateForRate",
+      "en" : "effectiveDateForRate"
+    },
+    "domain" : "16",
+    "attributes" : [ "functional", "datatype", "external" ],
+    "id" : "93"
+  }, {
+    "range" : "4",
+    "domain" : "19",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "94"
+  }, {
+    "range" : "4",
+    "domain" : "96",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "95"
+  }, {
+    "range" : "9",
+    "domain" : "58",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "97"
+  }, {
+    "range" : "4",
+    "domain" : "99",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "98"
+  }, {
+    "iri" : "https://w3id.org/IproK/schedule#isMilestone",
+    "baseIri" : "https://w3id.org/IproK/schedule",
+    "range" : "79",
+    "label" : {
+      "IRI-based" : "isMilestone",
+      "en" : "isMilestone"
+    },
+    "domain" : "7",
+    "attributes" : [ "functional", "datatype", "external" ],
+    "id" : "100"
+  }, {
+    "range" : "4",
+    "domain" : "3",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "101"
+  }, {
+    "iri" : "https://w3id.org/IproK/cost#vendorName",
+    "baseIri" : "https://w3id.org/IproK/cost",
+    "range" : "26",
+    "label" : {
+      "IRI-based" : "vendorName",
+      "en" : "vendorName"
+    },
+    "domain" : "18",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "102"
+  }, {
+    "iri" : "https://w3id.org/IproK/resource#budgetedUnits",
+    "baseIri" : "https://w3id.org/IproK/resource",
+    "range" : "23",
+    "label" : {
+      "IRI-based" : "budgetedUnits",
+      "en" : "budgetedUnits"
+    },
+    "domain" : "16",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "103"
+  }, {
+    "iri" : "https://w3id.org/IproK/schedule#linksToSuccessorTask",
+    "baseIri" : "https://w3id.org/IproK/schedule",
+    "range" : "7",
+    "label" : {
+      "IRI-based" : "linksToSuccessorTask",
+      "undefined" : "linksToSuccessorTask"
+    },
+    "domain" : "38",
+    "attributes" : [ "functional", "external", "object" ],
+    "id" : "104"
+  }, {
+    "iri" : "https://w3id.org/IproK/resource#isPrimaryResource",
+    "baseIri" : "https://w3id.org/IproK/resource",
+    "range" : "5",
+    "label" : {
+      "IRI-based" : "isPrimaryResource",
+      "en" : "isPrimaryResource"
+    },
+    "domain" : "16",
+    "attributes" : [ "functional", "datatype", "external" ],
+    "id" : "105"
+  }, {
+    "iri" : "https://w3id.org/IproK/schedule#hasPredecessorDependency",
+    "baseIri" : "https://w3id.org/IproK/schedule",
+    "range" : "38",
+    "label" : {
+      "IRI-based" : "hasPredecessorDependency",
+      "undefined" : "hasPredecessorDependency"
+    },
+    "domain" : "7",
+    "attributes" : [ "external", "object" ],
+    "id" : "106"
+  }, {
+    "iri" : "https://w3id.org/IproK/schedule#actualStartDate",
+    "baseIri" : "https://w3id.org/IproK/schedule",
+    "range" : "88",
+    "label" : {
+      "IRI-based" : "actualStartDate",
+      "en" : "actualStartDate"
+    },
+    "domain" : "43",
+    "attributes" : [ "functional", "datatype", "external" ],
+    "id" : "107"
+  }, {
+    "range" : "13",
+    "domain" : "35",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "108"
+  }, {
+    "iri" : "https://w3id.org/IproK/schedule#projectCategory",
+    "baseIri" : "https://w3id.org/IproK/schedule",
+    "range" : "77",
+    "label" : {
+      "IRI-based" : "projectCategory",
+      "en" : "projectCategory"
+    },
+    "domain" : "13",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "109"
+  }, {
+    "range" : "7",
+    "domain" : "78",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "110"
+  }, {
+    "iri" : "https://w3id.org/IproK/integrated#allocationForTask",
+    "baseIri" : "https://w3id.org/IproK/integrated",
+    "range" : "7",
+    "label" : {
+      "IRI-based" : "allocationForTask",
+      "undefined" : "allocationForTask"
+    },
+    "domain" : "28",
+    "attributes" : [ "functional", "external", "object" ],
+    "id" : "111"
+  }, {
+    "range" : "1",
+    "domain" : "42",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "112"
+  }, {
+    "range" : "1",
+    "domain" : "13",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "113"
+  }, {
+    "iri" : "https://w3id.org/IproK/schedule#linksToPredecessorTask",
+    "baseIri" : "https://w3id.org/IproK/schedule",
+    "range" : "7",
+    "label" : {
+      "IRI-based" : "linksToPredecessorTask",
+      "undefined" : "linksToPredecessorTask"
+    },
+    "domain" : "38",
+    "attributes" : [ "functional", "external", "object" ],
+    "id" : "114"
+  }, {
+    "range" : "1",
+    "domain" : "16",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "115"
+  }, {
+    "iri" : "https://w3id.org/IproK/schedule#taskRelationshipType",
+    "baseIri" : "https://w3id.org/IproK/schedule",
+    "range" : "65",
+    "label" : {
+      "IRI-based" : "taskRelationshipType",
+      "en" : "taskRelationshipType"
+    },
+    "domain" : "38",
+    "attributes" : [ "functional", "datatype", "external" ],
+    "id" : "116"
+  }, {
+    "range" : "1",
+    "domain" : "43",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "117"
+  }, {
+    "range" : "1",
+    "domain" : "18",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "118"
+  }, {
+    "range" : "1",
+    "domain" : "4",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "119"
+  }, {
+    "iri" : "https://w3id.org/IproK/integrated#allocationPlannedStartDate",
+    "baseIri" : "https://w3id.org/IproK/integrated",
+    "range" : "32",
+    "label" : {
+      "IRI-based" : "allocationPlannedStartDate",
+      "en" : "allocationPlannedStartDate"
+    },
+    "domain" : "28",
+    "attributes" : [ "functional", "datatype", "external" ],
+    "id" : "120"
+  }, {
+    "range" : "1",
+    "domain" : "41",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "121"
+  }, {
+    "range" : "1",
+    "domain" : "9",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "122"
+  }, {
+    "iri" : "https://w3id.org/IproK/schedule#assignedTo",
+    "baseIri" : "https://w3id.org/IproK/schedule",
+    "range" : "41",
+    "label" : {
+      "IRI-based" : "assignedTo",
+      "undefined" : "assignedTo"
+    },
+    "domain" : "7",
+    "attributes" : [ "external", "object" ],
+    "id" : "123"
+  }, {
+    "iri" : "https://w3id.org/IproK/schedule#hasTaskTime",
+    "baseIri" : "https://w3id.org/IproK/schedule",
+    "range" : "43",
+    "label" : {
+      "IRI-based" : "hasTaskTime",
+      "undefined" : "hasTaskTime"
+    },
+    "domain" : "7",
+    "attributes" : [ "functional", "external", "object" ],
+    "id" : "124"
+  }, {
+    "iri" : "https://w3id.org/IproK/resource#maxUnits",
+    "baseIri" : "https://w3id.org/IproK/resource",
+    "range" : "92",
+    "label" : {
+      "IRI-based" : "maxUnits",
+      "en" : "maxUnits"
+    },
+    "domain" : "16",
+    "attributes" : [ "functional", "datatype", "external" ],
+    "id" : "125"
+  }, {
+    "iri" : "https://w3id.org/IproK/schedule#constraintDate",
+    "baseIri" : "https://w3id.org/IproK/schedule",
+    "range" : "90",
+    "label" : {
+      "IRI-based" : "constraintDate",
+      "en" : "constraintDate"
+    },
+    "domain" : "0",
+    "attributes" : [ "functional", "datatype", "external" ],
+    "id" : "126"
+  }, {
+    "iri" : "https://w3id.org/IproK/resource#measuredIn",
+    "baseIri" : "https://w3id.org/IproK/resource",
+    "range" : "42",
+    "label" : {
+      "IRI-based" : "measuredIn",
+      "undefined" : "measuredIn"
+    },
+    "domain" : "16",
+    "attributes" : [ "functional", "external", "object" ],
+    "id" : "127"
+  }, {
+    "range" : "1",
+    "domain" : "39",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "128"
+  }, {
+    "iri" : "https://w3id.org/IproK#hasGlobalId",
+    "baseIri" : "https://w3id.org/IproK",
+    "range" : "51",
+    "label" : {
+      "IRI-based" : "hasGlobalId",
+      "en" : "hasGlobalId"
+    },
+    "domain" : "1",
+    "comment" : {
+      "undefined" : "A globally unique identifier."
+    },
+    "attributes" : [ "functional", "datatype" ],
+    "id" : "129"
+  }, {
+    "range" : "1",
+    "domain" : "38",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "130"
+  }, {
+    "range" : "1",
+    "domain" : "40",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "131"
+  }, {
+    "range" : "1",
+    "domain" : "0",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "132"
+  }, {
+    "range" : "35",
+    "domain" : "14",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "133"
+  }, {
+    "range" : "1",
+    "domain" : "28",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "134"
+  }, {
+    "range" : "1",
+    "domain" : "37",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "135"
+  }, {
+    "iri" : "https://w3id.org/IproK/schedule#atCompleteDuration",
+    "baseIri" : "https://w3id.org/IproK/schedule",
+    "range" : "87",
+    "label" : {
+      "IRI-based" : "atCompleteDuration",
+      "en" : "atCompleteDuration"
+    },
+    "domain" : "43",
+    "attributes" : [ "functional", "datatype", "external" ],
+    "id" : "136"
+  }, {
+    "range" : "3",
+    "domain" : "19",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "137"
+  }, {
+    "range" : "96",
+    "domain" : "99",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "138"
+  }, {
+    "range" : "3",
+    "domain" : "99",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "139"
+  }, {
+    "range" : "3",
+    "domain" : "96",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "140"
+  }, {
+    "range" : "58",
+    "domain" : "142",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "141"
+  }, {
+    "range" : "8",
+    "domain" : "142",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "143"
+  }, {
+    "range" : "59",
+    "domain" : "142",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "144"
+  }, {
+    "iri" : "https://w3id.org/IproK#hasName",
+    "baseIri" : "https://w3id.org/IproK",
+    "range" : "54",
+    "label" : {
+      "IRI-based" : "hasName",
+      "en" : "hasName"
+    },
+    "domain" : "1",
+    "comment" : {
+      "undefined" : "The common name of the entity."
+    },
+    "attributes" : [ "functional", "datatype" ],
+    "id" : "145"
+  }, {
+    "range" : "8",
+    "domain" : "58",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "146"
+  }, {
+    "iri" : "https://w3id.org/IproK/integrated#taskGeneratesCostItem",
+    "baseIri" : "https://w3id.org/IproK/integrated",
+    "range" : "18",
+    "label" : {
+      "IRI-based" : "taskGeneratesCostItem",
+      "undefined" : "taskGeneratesCostItem"
+    },
+    "domain" : "7",
+    "attributes" : [ "external", "object" ],
+    "id" : "147"
+  }, {
+    "iri" : "https://w3id.org/IproK/cost#hasCostType",
+    "baseIri" : "https://w3id.org/IproK/cost",
+    "range" : "4",
+    "label" : {
+      "IRI-based" : "hasCostType",
+      "undefined" : "hasCostType"
+    },
+    "domain" : "18",
+    "attributes" : [ "functional", "external", "object" ],
+    "id" : "148"
+  }, {
+    "iri" : "https://w3id.org/IproK/schedule#remainingDuration",
+    "baseIri" : "https://w3id.org/IproK/schedule",
+    "range" : "72",
+    "label" : {
+      "IRI-based" : "remainingDuration",
+      "en" : "remainingDuration"
+    },
+    "domain" : "43",
+    "attributes" : [ "functional", "datatype", "external" ],
+    "id" : "149"
+  }, {
+    "iri" : "https://w3id.org/IproK/resource#remainingUnits",
+    "baseIri" : "https://w3id.org/IproK/resource",
+    "range" : "91",
+    "label" : {
+      "IRI-based" : "remainingUnits",
+      "en" : "remainingUnits"
+    },
+    "domain" : "16",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "150"
+  }, {
+    "range" : "99",
+    "domain" : "19",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "151"
+  }, {
+    "iri" : "https://w3id.org/IproK/resource#currency",
+    "baseIri" : "https://w3id.org/IproK/resource",
+    "range" : "21",
+    "label" : {
+      "IRI-based" : "currency",
+      "en" : "currency"
+    },
+    "domain" : "16",
+    "attributes" : [ "functional", "datatype", "external" ],
+    "id" : "152"
+  }, {
+    "range" : "96",
+    "domain" : "19",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "153"
+  }, {
+    "iri" : "https://w3id.org/IproK/cost#atCompleteCostAmount",
+    "baseIri" : "https://w3id.org/IproK/cost",
+    "range" : "46",
+    "label" : {
+      "IRI-based" : "atCompleteCostAmount",
+      "en" : "atCompleteCostAmount"
+    },
+    "domain" : "18",
+    "attributes" : [ "functional", "datatype", "external" ],
+    "id" : "154"
+  }, {
+    "iri" : "https://w3id.org/IproK/schedule#constraintType",
+    "baseIri" : "https://w3id.org/IproK/schedule",
+    "range" : "89",
+    "label" : {
+      "IRI-based" : "constraintType",
+      "en" : "constraintType"
+    },
+    "domain" : "0",
+    "attributes" : [ "functional", "datatype", "external" ],
+    "id" : "155"
+  }, {
+    "iri" : "https://w3id.org/IproK/schedule#isCriticalTask",
+    "baseIri" : "https://w3id.org/IproK/schedule",
+    "range" : "86",
+    "label" : {
+      "IRI-based" : "isCriticalTask",
+      "en" : "isCriticalTask"
+    },
+    "domain" : "7",
+    "attributes" : [ "functional", "datatype", "external" ],
+    "id" : "156"
+  }, {
+    "iri" : "https://w3id.org/IproK/resource#hasResourceConstraints",
+    "baseIri" : "https://w3id.org/IproK/resource",
+    "range" : "2",
+    "label" : {
+      "IRI-based" : "hasResourceConstraints",
+      "undefined" : "hasResourceConstraints"
+    },
+    "domain" : "16",
+    "attributes" : [ "external", "object" ],
+    "id" : "157"
+  }, {
+    "iri" : "https://w3id.org/IproK/resource#hasTrackingTag",
+    "baseIri" : "https://w3id.org/IproK/resource",
+    "range" : "39",
+    "label" : {
+      "IRI-based" : "hasTrackingTag",
+      "undefined" : "hasTrackingTag"
+    },
+    "domain" : "16",
+    "attributes" : [ "external", "object" ],
+    "id" : "158"
+  }, {
+    "iri" : "https://w3id.org/IproK/cost#hasCostCategory",
+    "baseIri" : "https://w3id.org/IproK/cost",
+    "range" : "40",
+    "label" : {
+      "IRI-based" : "hasCostCategory",
+      "undefined" : "hasCostCategory"
+    },
+    "domain" : "18",
+    "attributes" : [ "functional", "external", "object" ],
+    "id" : "159"
+  }, {
+    "iri" : "https://w3id.org/IproK/schedule#plannedStartDate",
+    "baseIri" : "https://w3id.org/IproK/schedule",
+    "range" : "75",
+    "label" : {
+      "IRI-based" : "plannedStartDate",
+      "en" : "plannedFinishDate"
+    },
+    "domain" : "43",
+    "attributes" : [ "functional", "datatype", "external" ],
+    "id" : "160"
+  }, {
+    "iri" : "https://w3id.org/IproK/schedule#hasSuccessorDependency",
+    "baseIri" : "https://w3id.org/IproK/schedule",
+    "range" : "38",
+    "label" : {
+      "IRI-based" : "hasSuccessorDependency",
+      "undefined" : "hasSuccessorDependency"
+    },
+    "domain" : "7",
+    "attributes" : [ "external", "object" ],
+    "id" : "161"
+  }, {
+    "iri" : "https://w3id.org/IproK/schedule#plannedFinishDate",
+    "baseIri" : "https://w3id.org/IproK/schedule",
+    "range" : "76",
+    "label" : {
+      "IRI-based" : "plannedFinishDate",
+      "en" : "plannedFinishDate"
+    },
+    "domain" : "43",
+    "attributes" : [ "functional", "datatype", "external" ],
+    "id" : "162"
+  }, {
+    "iri" : "https://w3id.org/IproK/schedule#projectOwner",
+    "baseIri" : "https://w3id.org/IproK/schedule",
+    "range" : "73",
+    "label" : {
+      "IRI-based" : "projectOwner",
+      "en" : "projectOwner"
+    },
+    "domain" : "13",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "163"
+  }, {
+    "range" : "9",
+    "domain" : "8",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "164"
+  }, {
+    "range" : "9",
+    "domain" : "142",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "165"
+  }, {
+    "range" : "9",
+    "domain" : "59",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "166"
+  } ]
+}

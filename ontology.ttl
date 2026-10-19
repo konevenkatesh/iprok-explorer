@@ -1,0 +1,752 @@
+@prefix : <https://w3id.org/IproK#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://w3id.org/IproK#> .
+
+<https://w3id.org/IproK> rdf:type owl:Ontology ;
+                          <http://purl.org/dc/terms/contributor> "Prof. Gangadhar Mahesh" ;
+                          <http://purl.org/dc/terms/creator> "" ,
+                                                             "Venkatesh Kone" ,
+                                                             "https://orcid.org/0000-0002-6398-5850" ;
+                          <http://purl.org/dc/terms/description> "The Integrated Project Knowledge (IproK) ontology is a specialized, formal model designed to standardize and integrate construction project management data. It focuses on structuring information related to project schedules, costs, and resources, and their complex interdependencies. The core aim of IproK is to create a unified, machine-interpretable knowledge base. This enables robust AI integration, particularly with Large Language Models (LLMs), to facilitate advanced data analytics, support complex querying via natural language, and improve decision-making in construction projects. Key design principles include deep integration of the core project management domains, AI-readiness, PMBOK-aligned modularity for scalability and extensibility, and pragmatic reuse of established industry standards and concepts."@en ,
+                                                                 "" ;
+                          <http://purl.org/dc/terms/issued> "25-05-2025" ;
+                          <http://purl.org/dc/terms/license> "https://creativecommons.org/licenses/by/4.0/" ;
+                          <http://purl.org/dc/terms/title> "" ,
+                                                           "Integrated Project Knowledge (IproK) Ontology" ;
+                          <http://purl.org/vocab/vann/preferredNamespacePrefix> "" ,
+                                                                                "iprok" ;
+                          <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/IproK#" ;
+                          rdfs:seeAlso "https://iprok-web.streamlit.app/" ;
+                          owl:versionInfo "0.1.0" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/contributor
+<http://purl.org/dc/terms/contributor> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/issued
+<http://purl.org/dc/terms/issued> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/modified
+<http://purl.org/dc/terms/modified> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.w3.org/2001/XMLSchema#date
+xsd:date rdf:type rdfs:Datatype .
+
+
+###  http://www.w3.org/2001/XMLSchema#duration
+xsd:duration rdf:type rdfs:Datatype .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://w3id.org/IproK/cost#hasCostCategory
+<https://w3id.org/IproK/cost#hasCostCategory> rdf:type owl:ObjectProperty ,
+                                                       owl:FunctionalProperty ;
+                                              rdfs:domain <https://w3id.org/IproK/cost#CostItem> ;
+                                              rdfs:range <https://w3id.org/IproK/cost#CostCategory> ;
+                                              rdfs:label "hasCostCategory" .
+
+
+###  https://w3id.org/IproK/cost#hasCostType
+<https://w3id.org/IproK/cost#hasCostType> rdf:type owl:ObjectProperty ,
+                                                   owl:FunctionalProperty ;
+                                          rdfs:domain <https://w3id.org/IproK/cost#CostItem> ;
+                                          rdfs:range <https://w3id.org/IproK/cost#CostType> ;
+                                          rdfs:label "hasCostType" .
+
+
+###  https://w3id.org/IproK/integrated#allocationAssignsResource
+<https://w3id.org/IproK/integrated#allocationAssignsResource> rdf:type owl:ObjectProperty ,
+                                                                       owl:FunctionalProperty ;
+                                                              rdfs:domain <https://w3id.org/IproK/integrated#ResourceAllocation> ;
+                                                              rdfs:range <https://w3id.org/IproK/resource#Resource> ;
+                                                              rdfs:label "allocationAssignsResource" .
+
+
+###  https://w3id.org/IproK/integrated#allocationForTask
+<https://w3id.org/IproK/integrated#allocationForTask> rdf:type owl:ObjectProperty ,
+                                                               owl:FunctionalProperty ;
+                                                      rdfs:domain <https://w3id.org/IproK/integrated#ResourceAllocation> ;
+                                                      rdfs:range <https://w3id.org/IproK/schedule#Task> ;
+                                                      rdfs:label "allocationForTask" .
+
+
+###  https://w3id.org/IproK/integrated#resourceAllocationIncursCostItem
+<https://w3id.org/IproK/integrated#resourceAllocationIncursCostItem> rdf:type owl:ObjectProperty ;
+                                                                     rdfs:domain <https://w3id.org/IproK/integrated#ResourceAllocation> ;
+                                                                     rdfs:range <https://w3id.org/IproK/cost#CostItem> ;
+                                                                     rdfs:label "resourceAllocationIncursCostItem" .
+
+
+###  https://w3id.org/IproK/integrated#taskGeneratesCostItem
+<https://w3id.org/IproK/integrated#taskGeneratesCostItem> rdf:type owl:ObjectProperty ;
+                                                          rdfs:domain <https://w3id.org/IproK/schedule#Task> ;
+                                                          rdfs:range <https://w3id.org/IproK/cost#CostItem> ;
+                                                          rdfs:label "taskGeneratesCostItem" .
+
+
+###  https://w3id.org/IproK/integrated#taskHasResourceAllocation
+<https://w3id.org/IproK/integrated#taskHasResourceAllocation> rdf:type owl:ObjectProperty ;
+                                                              rdfs:domain <https://w3id.org/IproK/schedule#Task> ;
+                                                              rdfs:range <https://w3id.org/IproK/integrated#ResourceAllocation> ;
+                                                              rdfs:label "taskHasResourceAllocation" .
+
+
+###  https://w3id.org/IproK/resource#hasResourceConstraints
+<https://w3id.org/IproK/resource#hasResourceConstraints> rdf:type owl:ObjectProperty ;
+                                                         rdfs:domain <https://w3id.org/IproK/resource#Resource> ;
+                                                         rdfs:range <https://w3id.org/IproK/resource#ResourceConstraint> ;
+                                                         rdfs:label "hasResourceConstraints" .
+
+
+###  https://w3id.org/IproK/resource#hasResourceType
+<https://w3id.org/IproK/resource#hasResourceType> rdf:type owl:ObjectProperty ,
+                                                           owl:FunctionalProperty ;
+                                                  rdfs:domain <https://w3id.org/IproK/resource#Resource> ;
+                                                  rdfs:range <https://w3id.org/IproK/resource#ResourceType> ;
+                                                  rdfs:label "hasResourceType" .
+
+
+###  https://w3id.org/IproK/resource#hasTrackingTag
+<https://w3id.org/IproK/resource#hasTrackingTag> rdf:type owl:ObjectProperty ;
+                                                 rdfs:domain <https://w3id.org/IproK/resource#Resource> ;
+                                                 rdfs:range <https://w3id.org/IproK/resource#TrackingTag> ;
+                                                 rdfs:label "hasTrackingTag" .
+
+
+###  https://w3id.org/IproK/resource#measuredIn
+<https://w3id.org/IproK/resource#measuredIn> rdf:type owl:ObjectProperty ,
+                                                      owl:FunctionalProperty ;
+                                             rdfs:domain <https://w3id.org/IproK/resource#Resource> ;
+                                             rdfs:range <https://w3id.org/IproK/resource#Units> ;
+                                             rdfs:label "measuredIn" .
+
+
+###  https://w3id.org/IproK/schedule#assignedTo
+<https://w3id.org/IproK/schedule#assignedTo> rdf:type owl:ObjectProperty ;
+                                             rdfs:domain <https://w3id.org/IproK/schedule#Task> ;
+                                             rdfs:range :Actor ;
+                                             rdfs:label "assignedTo" .
+
+
+###  https://w3id.org/IproK/schedule#hasConstraint
+<https://w3id.org/IproK/schedule#hasConstraint> rdf:type owl:ObjectProperty ;
+                                                rdfs:domain <https://w3id.org/IproK/schedule#Task> ;
+                                                rdfs:range :Constraint ;
+                                                rdfs:label "hasConstraint" .
+
+
+###  https://w3id.org/IproK/schedule#hasPredecessorDependency
+<https://w3id.org/IproK/schedule#hasPredecessorDependency> rdf:type owl:ObjectProperty ;
+                                                           rdfs:domain <https://w3id.org/IproK/schedule#Task> ;
+                                                           rdfs:range <https://w3id.org/IproK/schedule#TaskDependency> ;
+                                                           rdfs:label "hasPredecessorDependency" .
+
+
+###  https://w3id.org/IproK/schedule#hasSubTask
+<https://w3id.org/IproK/schedule#hasSubTask> rdf:type owl:ObjectProperty ;
+                                             rdfs:domain <https://w3id.org/IproK/schedule#Task> ;
+                                             rdfs:range <https://w3id.org/IproK/schedule#Task> ;
+                                             rdfs:label "hasSubTask" .
+
+
+###  https://w3id.org/IproK/schedule#hasSuccessorDependency
+<https://w3id.org/IproK/schedule#hasSuccessorDependency> rdf:type owl:ObjectProperty ;
+                                                         rdfs:domain <https://w3id.org/IproK/schedule#Task> ;
+                                                         rdfs:range <https://w3id.org/IproK/schedule#TaskDependency> ;
+                                                         rdfs:label "hasSuccessorDependency" .
+
+
+###  https://w3id.org/IproK/schedule#hasTask
+<https://w3id.org/IproK/schedule#hasTask> rdf:type owl:ObjectProperty ;
+                                          rdfs:domain <https://w3id.org/IproK/schedule#WBS_Element> ;
+                                          rdfs:range <https://w3id.org/IproK/schedule#Task> ;
+                                          rdfs:label "hasTask" .
+
+
+###  https://w3id.org/IproK/schedule#hasTaskTime
+<https://w3id.org/IproK/schedule#hasTaskTime> rdf:type owl:ObjectProperty ,
+                                                       owl:FunctionalProperty ;
+                                              rdfs:domain <https://w3id.org/IproK/schedule#Task> ;
+                                              rdfs:range <https://w3id.org/IproK/schedule#TaskTime> ;
+                                              rdfs:label "hasTaskTime" .
+
+
+###  https://w3id.org/IproK/schedule#hasWBS
+<https://w3id.org/IproK/schedule#hasWBS> rdf:type owl:ObjectProperty ;
+                                         rdfs:domain <https://w3id.org/IproK/schedule#WorkPackage> ;
+                                         rdfs:range <https://w3id.org/IproK/schedule#WBS_Element> ;
+                                         rdfs:label "hasWBS" .
+
+
+###  https://w3id.org/IproK/schedule#hasWorkPackage
+<https://w3id.org/IproK/schedule#hasWorkPackage> rdf:type owl:ObjectProperty ;
+                                                 rdfs:domain <https://w3id.org/IproK/schedule#Project> ;
+                                                 rdfs:range <https://w3id.org/IproK/schedule#WorkPackage> ;
+                                                 rdfs:label "hasWorkPackage" .
+
+
+###  https://w3id.org/IproK/schedule#linksToPredecessorTask
+<https://w3id.org/IproK/schedule#linksToPredecessorTask> rdf:type owl:ObjectProperty ,
+                                                                  owl:FunctionalProperty ;
+                                                         rdfs:domain <https://w3id.org/IproK/schedule#TaskDependency> ;
+                                                         rdfs:range <https://w3id.org/IproK/schedule#Task> ;
+                                                         rdfs:label "linksToPredecessorTask" .
+
+
+###  https://w3id.org/IproK/schedule#linksToSuccessorTask
+<https://w3id.org/IproK/schedule#linksToSuccessorTask> rdf:type owl:ObjectProperty ,
+                                                                owl:FunctionalProperty ;
+                                                       rdfs:domain <https://w3id.org/IproK/schedule#TaskDependency> ;
+                                                       rdfs:range <https://w3id.org/IproK/schedule#Task> ;
+                                                       rdfs:label "linksToSuccessorTask" .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  https://w3id.org/IproK#hasDescription
+:hasDescription rdf:type owl:DatatypeProperty ;
+                rdfs:domain :IproKThing ;
+                rdfs:range xsd:string ;
+                rdfs:comment "A textual description of the entity." ;
+                rdfs:label "hasDescription"@en .
+
+
+###  https://w3id.org/IproK#hasGlobalId
+:hasGlobalId rdf:type owl:DatatypeProperty ,
+                      owl:FunctionalProperty ;
+             rdfs:domain :IproKThing ;
+             rdfs:range xsd:string ;
+             rdfs:comment "A globally unique identifier." ;
+             rdfs:label "hasGlobalId"@en .
+
+
+###  https://w3id.org/IproK#hasId
+:hasId rdf:type owl:DatatypeProperty ,
+                owl:FunctionalProperty ;
+       rdfs:domain :IproKThing ;
+       rdfs:range xsd:string ;
+       rdfs:comment "A local or project-specific identifier." ;
+       rdfs:label "hasId"@en .
+
+
+###  https://w3id.org/IproK#hasName
+:hasName rdf:type owl:DatatypeProperty ,
+                  owl:FunctionalProperty ;
+         rdfs:domain :IproKThing ;
+         rdfs:range xsd:string ;
+         rdfs:comment "The common name of the entity." ;
+         rdfs:label "hasName"@en .
+
+
+###  https://w3id.org/IproK/cost#actualCostAmount
+<https://w3id.org/IproK/cost#actualCostAmount> rdf:type owl:DatatypeProperty ,
+                                                        owl:FunctionalProperty ;
+                                               rdfs:domain <https://w3id.org/IproK/cost#CostItem> ;
+                                               rdfs:range xsd:decimal ;
+                                               rdfs:comment "this is actual cost amount" ;
+                                               rdfs:label "actualCostAmount"@en .
+
+
+###  https://w3id.org/IproK/cost#atCompleteCostAmount
+<https://w3id.org/IproK/cost#atCompleteCostAmount> rdf:type owl:DatatypeProperty ,
+                                                            owl:FunctionalProperty ;
+                                                   rdfs:domain <https://w3id.org/IproK/cost#CostItem> ;
+                                                   rdfs:range xsd:decimal ;
+                                                   rdfs:label "atCompleteCostAmount"@en .
+
+
+###  https://w3id.org/IproK/cost#budgetedCostAmount
+<https://w3id.org/IproK/cost#budgetedCostAmount> rdf:type owl:DatatypeProperty ,
+                                                          owl:FunctionalProperty ;
+                                                 rdfs:domain <https://w3id.org/IproK/cost#CostItem> ;
+                                                 rdfs:range xsd:decimal ;
+                                                 rdfs:label "budgetedCostAmount"@en .
+
+
+###  https://w3id.org/IproK/cost#remainingCostAmount
+<https://w3id.org/IproK/cost#remainingCostAmount> rdf:type owl:DatatypeProperty ,
+                                                           owl:FunctionalProperty ;
+                                                  rdfs:domain <https://w3id.org/IproK/cost#CostItem> ;
+                                                  rdfs:range xsd:decimal ;
+                                                  rdfs:label "remainingCostAmount"@en .
+
+
+###  https://w3id.org/IproK/cost#vendorName
+<https://w3id.org/IproK/cost#vendorName> rdf:type owl:DatatypeProperty ;
+                                         rdfs:domain <https://w3id.org/IproK/cost#CostItem> ;
+                                         rdfs:range xsd:string ;
+                                         rdfs:label "vendorName"@en .
+
+
+###  https://w3id.org/IproK/integrated#allocatedUnits
+<https://w3id.org/IproK/integrated#allocatedUnits> rdf:type owl:DatatypeProperty ,
+                                                            owl:FunctionalProperty ;
+                                                   rdfs:domain <https://w3id.org/IproK/integrated#ResourceAllocation> ;
+                                                   rdfs:range xsd:decimal ;
+                                                   rdfs:comment "" ;
+                                                   rdfs:label "allocatedUnits"@en .
+
+
+###  https://w3id.org/IproK/integrated#allocationPlannedFinishDate
+<https://w3id.org/IproK/integrated#allocationPlannedFinishDate> rdf:type owl:DatatypeProperty ,
+                                                                         owl:FunctionalProperty ;
+                                                                rdfs:domain <https://w3id.org/IproK/integrated#ResourceAllocation> ;
+                                                                rdfs:range xsd:dateTime ;
+                                                                rdfs:label "allocationPlannedFinishDate"@en .
+
+
+###  https://w3id.org/IproK/integrated#allocationPlannedStartDate
+<https://w3id.org/IproK/integrated#allocationPlannedStartDate> rdf:type owl:DatatypeProperty ,
+                                                                        owl:FunctionalProperty ;
+                                                               rdfs:domain <https://w3id.org/IproK/integrated#ResourceAllocation> ;
+                                                               rdfs:range xsd:dateTime ;
+                                                               rdfs:label "allocationPlannedStartDate"@en .
+
+
+###  https://w3id.org/IproK/resource#actualUnits
+<https://w3id.org/IproK/resource#actualUnits> rdf:type owl:DatatypeProperty ;
+                                              rdfs:domain <https://w3id.org/IproK/resource#Resource> ;
+                                              rdfs:range xsd:decimal ;
+                                              rdfs:comment "" ;
+                                              rdfs:label "actualUnits"@en .
+
+
+###  https://w3id.org/IproK/resource#atCompleteUnits
+<https://w3id.org/IproK/resource#atCompleteUnits> rdf:type owl:DatatypeProperty ;
+                                                  rdfs:domain <https://w3id.org/IproK/resource#Resource> ;
+                                                  rdfs:range xsd:decimal ;
+                                                  rdfs:label "atCompleteUnits"@en .
+
+
+###  https://w3id.org/IproK/resource#baseRate
+<https://w3id.org/IproK/resource#baseRate> rdf:type owl:DatatypeProperty ;
+                                           rdfs:domain <https://w3id.org/IproK/resource#Resource> ;
+                                           rdfs:range xsd:decimal ;
+                                           rdfs:label "baseRate"@en .
+
+
+###  https://w3id.org/IproK/resource#budgetedUnits
+<https://w3id.org/IproK/resource#budgetedUnits> rdf:type owl:DatatypeProperty ;
+                                                rdfs:domain <https://w3id.org/IproK/resource#Resource> ;
+                                                rdfs:range xsd:decimal ;
+                                                rdfs:label "budgetedUnits"@en .
+
+
+###  https://w3id.org/IproK/resource#currency
+<https://w3id.org/IproK/resource#currency> rdf:type owl:DatatypeProperty ,
+                                                    owl:FunctionalProperty ;
+                                           rdfs:domain <https://w3id.org/IproK/resource#Resource> ;
+                                           rdfs:range xsd:string ;
+                                           rdfs:label "currency"@en .
+
+
+###  https://w3id.org/IproK/resource#effectiveDateForRate
+<https://w3id.org/IproK/resource#effectiveDateForRate> rdf:type owl:DatatypeProperty ,
+                                                                owl:FunctionalProperty ;
+                                                       rdfs:domain <https://w3id.org/IproK/resource#Resource> ;
+                                                       rdfs:range xsd:dateTime ;
+                                                       rdfs:label "effectiveDateForRate"@en .
+
+
+###  https://w3id.org/IproK/resource#isPrimaryResource
+<https://w3id.org/IproK/resource#isPrimaryResource> rdf:type owl:DatatypeProperty ,
+                                                             owl:FunctionalProperty ;
+                                                    rdfs:domain <https://w3id.org/IproK/resource#Resource> ;
+                                                    rdfs:range xsd:boolean ;
+                                                    rdfs:label "isPrimaryResource"@en .
+
+
+###  https://w3id.org/IproK/resource#maxUnits
+<https://w3id.org/IproK/resource#maxUnits> rdf:type owl:DatatypeProperty ,
+                                                    owl:FunctionalProperty ;
+                                           rdfs:domain <https://w3id.org/IproK/resource#Resource> ;
+                                           rdfs:range xsd:decimal ;
+                                           rdfs:label "maxUnits"@en .
+
+
+###  https://w3id.org/IproK/resource#remainingUnits
+<https://w3id.org/IproK/resource#remainingUnits> rdf:type owl:DatatypeProperty ;
+                                                 rdfs:domain <https://w3id.org/IproK/resource#Resource> ;
+                                                 rdfs:range xsd:decimal ;
+                                                 rdfs:label "remainingUnits"@en .
+
+
+###  https://w3id.org/IproK/schedule#actualDuration
+<https://w3id.org/IproK/schedule#actualDuration> rdf:type owl:DatatypeProperty ,
+                                                          owl:FunctionalProperty ;
+                                                 rdfs:domain <https://w3id.org/IproK/schedule#TaskTime> ;
+                                                 rdfs:range xsd:decimal ;
+                                                 rdfs:label "actualDuration"@en .
+
+
+###  https://w3id.org/IproK/schedule#actualFinishDate
+<https://w3id.org/IproK/schedule#actualFinishDate> rdf:type owl:DatatypeProperty ,
+                                                            owl:FunctionalProperty ;
+                                                   rdfs:domain <https://w3id.org/IproK/schedule#TaskTime> ;
+                                                   rdfs:range xsd:dateTime ;
+                                                   rdfs:label "actualFinishDate"@en .
+
+
+###  https://w3id.org/IproK/schedule#actualStartDate
+<https://w3id.org/IproK/schedule#actualStartDate> rdf:type owl:DatatypeProperty ,
+                                                           owl:FunctionalProperty ;
+                                                  rdfs:domain <https://w3id.org/IproK/schedule#TaskTime> ;
+                                                  rdfs:range xsd:dateTime ;
+                                                  rdfs:label "actualStartDate"@en .
+
+
+###  https://w3id.org/IproK/schedule#atCompleteDuration
+<https://w3id.org/IproK/schedule#atCompleteDuration> rdf:type owl:DatatypeProperty ,
+                                                              owl:FunctionalProperty ;
+                                                     rdfs:domain <https://w3id.org/IproK/schedule#TaskTime> ;
+                                                     rdfs:range xsd:decimal ;
+                                                     rdfs:label "atCompleteDuration"@en .
+
+
+###  https://w3id.org/IproK/schedule#constraintDate
+<https://w3id.org/IproK/schedule#constraintDate> rdf:type owl:DatatypeProperty ,
+                                                          owl:FunctionalProperty ;
+                                                 rdfs:domain :Constraint ;
+                                                 rdfs:range xsd:dateTime ;
+                                                 rdfs:label "constraintDate"@en .
+
+
+###  https://w3id.org/IproK/schedule#constraintType
+<https://w3id.org/IproK/schedule#constraintType> rdf:type owl:DatatypeProperty ,
+                                                          owl:FunctionalProperty ;
+                                                 rdfs:domain :Constraint ;
+                                                 rdfs:range xsd:string ;
+                                                 rdfs:label "constraintType"@en .
+
+
+###  https://w3id.org/IproK/schedule#isCriticalTask
+<https://w3id.org/IproK/schedule#isCriticalTask> rdf:type owl:DatatypeProperty ,
+                                                          owl:FunctionalProperty ;
+                                                 rdfs:domain <https://w3id.org/IproK/schedule#Task> ;
+                                                 rdfs:range xsd:boolean ;
+                                                 rdfs:label "isCriticalTask"@en .
+
+
+###  https://w3id.org/IproK/schedule#isMilestone
+<https://w3id.org/IproK/schedule#isMilestone> rdf:type owl:DatatypeProperty ,
+                                                       owl:FunctionalProperty ;
+                                              rdfs:domain <https://w3id.org/IproK/schedule#Task> ;
+                                              rdfs:range xsd:boolean ;
+                                              rdfs:label "isMilestone"@en .
+
+
+###  https://w3id.org/IproK/schedule#lagTime
+<https://w3id.org/IproK/schedule#lagTime> rdf:type owl:DatatypeProperty ,
+                                                   owl:FunctionalProperty ;
+                                          rdfs:domain <https://w3id.org/IproK/schedule#TaskDependency> ;
+                                          rdfs:range xsd:decimal ;
+                                          rdfs:label "lagTime"@en .
+
+
+###  https://w3id.org/IproK/schedule#plannedFinishDate
+<https://w3id.org/IproK/schedule#plannedFinishDate> rdf:type owl:DatatypeProperty ,
+                                                             owl:FunctionalProperty ;
+                                                    rdfs:domain <https://w3id.org/IproK/schedule#TaskTime> ;
+                                                    rdfs:range xsd:dateTime ;
+                                                    rdfs:label "plannedFinishDate"@en .
+
+
+###  https://w3id.org/IproK/schedule#plannedStartDate
+<https://w3id.org/IproK/schedule#plannedStartDate> rdf:type owl:DatatypeProperty ,
+                                                            owl:FunctionalProperty ;
+                                                   rdfs:domain <https://w3id.org/IproK/schedule#TaskTime> ;
+                                                   rdfs:range xsd:dateTime ;
+                                                   rdfs:label "plannedFinishDate"@en .
+
+
+###  https://w3id.org/IproK/schedule#projectAddress
+<https://w3id.org/IproK/schedule#projectAddress> rdf:type owl:DatatypeProperty ;
+                                                 rdfs:domain <https://w3id.org/IproK/schedule#Project> ;
+                                                 rdfs:range xsd:string ;
+                                                 rdfs:label "projectAddress"@en .
+
+
+###  https://w3id.org/IproK/schedule#projectCategory
+<https://w3id.org/IproK/schedule#projectCategory> rdf:type owl:DatatypeProperty ;
+                                                  rdfs:domain <https://w3id.org/IproK/schedule#Project> ;
+                                                  rdfs:range xsd:string ;
+                                                  rdfs:label "projectCategory"@en .
+
+
+###  https://w3id.org/IproK/schedule#projectOwner
+<https://w3id.org/IproK/schedule#projectOwner> rdf:type owl:DatatypeProperty ;
+                                               rdfs:domain <https://w3id.org/IproK/schedule#Project> ;
+                                               rdfs:range xsd:string ;
+                                               rdfs:label "projectOwner"@en .
+
+
+###  https://w3id.org/IproK/schedule#remainingDuration
+<https://w3id.org/IproK/schedule#remainingDuration> rdf:type owl:DatatypeProperty ,
+                                                             owl:FunctionalProperty ;
+                                                    rdfs:domain <https://w3id.org/IproK/schedule#TaskTime> ;
+                                                    rdfs:range xsd:decimal ;
+                                                    rdfs:label "remainingDuration"@en .
+
+
+###  https://w3id.org/IproK/schedule#scheduleDuration
+<https://w3id.org/IproK/schedule#scheduleDuration> rdf:type owl:DatatypeProperty ,
+                                                            owl:FunctionalProperty ;
+                                                   rdfs:domain <https://w3id.org/IproK/schedule#TaskTime> ;
+                                                   rdfs:range xsd:decimal ;
+                                                   rdfs:label "scheduleDuration"@en .
+
+
+###  https://w3id.org/IproK/schedule#taskPriority
+<https://w3id.org/IproK/schedule#taskPriority> rdf:type owl:DatatypeProperty ,
+                                                        owl:FunctionalProperty ;
+                                               rdfs:domain <https://w3id.org/IproK/schedule#Task> ;
+                                               rdfs:range xsd:integer ;
+                                               rdfs:label "taskPriority"@en .
+
+
+###  https://w3id.org/IproK/schedule#taskRelationshipType
+<https://w3id.org/IproK/schedule#taskRelationshipType> rdf:type owl:DatatypeProperty ,
+                                                                owl:FunctionalProperty ;
+                                                       rdfs:domain <https://w3id.org/IproK/schedule#TaskDependency> ;
+                                                       rdfs:range xsd:string ;
+                                                       rdfs:label "taskRelationshipType"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  https://w3id.org/IproK#Actor
+:Actor rdf:type owl:Class ;
+       rdfs:subClassOf :IproKThing ;
+       rdfs:label "Actor" .
+
+
+###  https://w3id.org/IproK#Calendar
+:Calendar rdf:type owl:Class ;
+          rdfs:subClassOf :IproKThing ;
+          rdfs:label "Calendar" .
+
+
+###  https://w3id.org/IproK#Constraint
+:Constraint rdf:type owl:Class ;
+            rdfs:subClassOf :IproKThing ;
+            rdfs:label "Constraint" .
+
+
+###  https://w3id.org/IproK#IproKThing
+:IproKThing rdf:type owl:Class ;
+            rdfs:subClassOf owl:Thing ;
+            rdfs:label "IproKThing" .
+
+
+###  https://w3id.org/IproK/cost#CostCategory
+<https://w3id.org/IproK/cost#CostCategory> rdf:type owl:Class ;
+                                           rdfs:subClassOf :IproKThing ;
+                                           rdfs:label "CostCategory" .
+
+
+###  https://w3id.org/IproK/cost#CostItem
+<https://w3id.org/IproK/cost#CostItem> rdf:type owl:Class ;
+                                       rdfs:subClassOf :IproKThing ;
+                                       rdfs:label "CostItem" .
+
+
+###  https://w3id.org/IproK/cost#CostType
+<https://w3id.org/IproK/cost#CostType> rdf:type owl:Class ;
+                                       rdfs:subClassOf :IproKThing ;
+                                       rdfs:label "CostType" .
+
+
+###  https://w3id.org/IproK/cost#EquipmentCost
+<https://w3id.org/IproK/cost#EquipmentCost> rdf:type owl:Class ;
+                                            rdfs:subClassOf <https://w3id.org/IproK/cost#CostType> ;
+                                            rdfs:label "EquipmentCost" .
+
+
+###  https://w3id.org/IproK/cost#ExpenseItem
+<https://w3id.org/IproK/cost#ExpenseItem> rdf:type owl:Class ;
+                                          rdfs:subClassOf <https://w3id.org/IproK/cost#CostType> ;
+                                          rdfs:label "ExpenseItem" .
+
+
+###  https://w3id.org/IproK/cost#LaborCost
+<https://w3id.org/IproK/cost#LaborCost> rdf:type owl:Class ;
+                                        rdfs:subClassOf <https://w3id.org/IproK/cost#CostType> ;
+                                        rdfs:label "LaborCost" .
+
+
+###  https://w3id.org/IproK/cost#MaterialCost
+<https://w3id.org/IproK/cost#MaterialCost> rdf:type owl:Class ;
+                                           rdfs:subClassOf <https://w3id.org/IproK/cost#CostType> ;
+                                           rdfs:label "MaterialCost" .
+
+
+###  https://w3id.org/IproK/integrated#ResourceAllocation
+<https://w3id.org/IproK/integrated#ResourceAllocation> rdf:type owl:Class ;
+                                                       rdfs:subClassOf :IproKThing ;
+                                                       rdfs:label "ResourceAllocation" .
+
+
+###  https://w3id.org/IproK/resource#EquipmentResource
+<https://w3id.org/IproK/resource#EquipmentResource> rdf:type owl:Class ;
+                                                    rdfs:subClassOf <https://w3id.org/IproK/resource#ResourceType> ;
+                                                    rdfs:label "EquipmentResource" .
+
+
+###  https://w3id.org/IproK/resource#LaborResource
+<https://w3id.org/IproK/resource#LaborResource> rdf:type owl:Class ;
+                                                rdfs:subClassOf <https://w3id.org/IproK/resource#ResourceType> ;
+                                                rdfs:label "LaborResource" .
+
+
+###  https://w3id.org/IproK/resource#MaterialResource
+<https://w3id.org/IproK/resource#MaterialResource> rdf:type owl:Class ;
+                                                   rdfs:subClassOf <https://w3id.org/IproK/resource#ResourceType> ;
+                                                   rdfs:label "MaterialResource" .
+
+
+###  https://w3id.org/IproK/resource#Resource
+<https://w3id.org/IproK/resource#Resource> rdf:type owl:Class ;
+                                           rdfs:subClassOf :IproKThing ;
+                                           rdfs:label "Resource" .
+
+
+###  https://w3id.org/IproK/resource#ResourceConstraint
+<https://w3id.org/IproK/resource#ResourceConstraint> rdf:type owl:Class ;
+                                                     rdfs:subClassOf :Constraint ;
+                                                     rdfs:label "ResourceConstraint" .
+
+
+###  https://w3id.org/IproK/resource#ResourceType
+<https://w3id.org/IproK/resource#ResourceType> rdf:type owl:Class ;
+                                               rdfs:subClassOf :IproKThing ;
+                                               rdfs:label "ResourceType" .
+
+
+###  https://w3id.org/IproK/resource#TrackingTag
+<https://w3id.org/IproK/resource#TrackingTag> rdf:type owl:Class ;
+                                              rdfs:subClassOf :IproKThing ;
+                                              rdfs:label "TrackingTag" .
+
+
+###  https://w3id.org/IproK/resource#Units
+<https://w3id.org/IproK/resource#Units> rdf:type owl:Class ;
+                                        rdfs:subClassOf :IproKThing ;
+                                        rdfs:label "Units" .
+
+
+###  https://w3id.org/IproK/resource#UserDefinedResource
+<https://w3id.org/IproK/resource#UserDefinedResource> rdf:type owl:Class ;
+                                                      rdfs:subClassOf <https://w3id.org/IproK/resource#ResourceType> ;
+                                                      rdfs:label "UserDefinedResource" .
+
+
+###  https://w3id.org/IproK/schedule#Milestone
+<https://w3id.org/IproK/schedule#Milestone> rdf:type owl:Class ;
+                                            rdfs:subClassOf <https://w3id.org/IproK/schedule#Task> ;
+                                            rdfs:label "Milestone" .
+
+
+###  https://w3id.org/IproK/schedule#Project
+<https://w3id.org/IproK/schedule#Project> rdf:type owl:Class ;
+                                          rdfs:subClassOf :IproKThing ;
+                                          rdfs:label "Project" .
+
+
+###  https://w3id.org/IproK/schedule#Task
+<https://w3id.org/IproK/schedule#Task> rdf:type owl:Class ;
+                                       rdfs:subClassOf <https://w3id.org/IproK/schedule#WBS_Element> ;
+                                       rdfs:label "Task" .
+
+
+###  https://w3id.org/IproK/schedule#TaskDependency
+<https://w3id.org/IproK/schedule#TaskDependency> rdf:type owl:Class ;
+                                                 rdfs:subClassOf :IproKThing ;
+                                                 rdfs:label "TaskDependency" .
+
+
+###  https://w3id.org/IproK/schedule#TaskTime
+<https://w3id.org/IproK/schedule#TaskTime> rdf:type owl:Class ;
+                                           rdfs:subClassOf :IproKThing ;
+                                           rdfs:label "TaskTime" .
+
+
+###  https://w3id.org/IproK/schedule#WBS_Element
+<https://w3id.org/IproK/schedule#WBS_Element> rdf:type owl:Class ;
+                                              rdfs:subClassOf <https://w3id.org/IproK/schedule#Project> ;
+                                              rdfs:label "WBS_Element" .
+
+
+###  https://w3id.org/IproK/schedule#WorkPackage
+<https://w3id.org/IproK/schedule#WorkPackage> rdf:type owl:Class ;
+                                              rdfs:subClassOf <https://w3id.org/IproK/schedule#WBS_Element> ;
+                                              rdfs:label "WorkPackage" .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <https://w3id.org/IproK/cost#EquipmentCost>
+                <https://w3id.org/IproK/cost#ExpenseItem>
+                <https://w3id.org/IproK/cost#LaborCost>
+                <https://w3id.org/IproK/cost#MaterialCost>
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <https://w3id.org/IproK/resource#EquipmentResource>
+                <https://w3id.org/IproK/resource#LaborResource>
+                <https://w3id.org/IproK/resource#MaterialResource>
+                <https://w3id.org/IproK/resource#UserDefinedResource>
+              )
+] .
+
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

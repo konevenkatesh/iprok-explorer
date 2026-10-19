@@ -1,0 +1,685 @@
+<https://w3id.org/IproK> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://w3id.org/IproK> <http://purl.org/dc/terms/contributor> "Prof. Gangadhar Mahesh" .
+<https://w3id.org/IproK> <http://purl.org/dc/terms/creator> "" .
+<https://w3id.org/IproK> <http://purl.org/dc/terms/creator> "Venkatesh Kone" .
+<https://w3id.org/IproK> <http://purl.org/dc/terms/creator> "https://orcid.org/0000-0002-6398-5850" .
+<https://w3id.org/IproK> <http://purl.org/dc/terms/description> "The Integrated Project Knowledge (IproK) ontology is a specialized, formal model designed to standardize and integrate construction project management data. It focuses on structuring information related to project schedules, costs, and resources, and their complex interdependencies. The core aim of IproK is to create a unified, machine-interpretable knowledge base. This enables robust AI integration, particularly with Large Language Models (LLMs), to facilitate advanced data analytics, support complex querying via natural language, and improve decision-making in construction projects. Key design principles include deep integration of the core project management domains, AI-readiness, PMBOK-aligned modularity for scalability and extensibility, and pragmatic reuse of established industry standards and concepts."@en .
+<https://w3id.org/IproK> <http://purl.org/dc/terms/description> "" .
+<https://w3id.org/IproK> <http://purl.org/dc/terms/issued> "25-05-2025" .
+<https://w3id.org/IproK> <http://purl.org/dc/terms/license> "https://creativecommons.org/licenses/by/4.0/" .
+<https://w3id.org/IproK> <http://purl.org/dc/terms/title> "" .
+<https://w3id.org/IproK> <http://purl.org/dc/terms/title> "Integrated Project Knowledge (IproK) Ontology" .
+<https://w3id.org/IproK> <http://purl.org/vocab/vann/preferredNamespacePrefix> "" .
+<https://w3id.org/IproK> <http://purl.org/vocab/vann/preferredNamespacePrefix> "iprok" .
+<https://w3id.org/IproK> <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/IproK#" .
+<https://w3id.org/IproK> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "https://iprok-web.streamlit.app/" .
+<https://w3id.org/IproK> <http://www.w3.org/2002/07/owl#versionInfo> "0.1.0" .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/terms/contributor
+<http://purl.org/dc/terms/contributor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/issued
+<http://purl.org/dc/terms/issued> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/modified
+<http://purl.org/dc/terms/modified> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Datatypes
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/2001/XMLSchema#date
+<http://www.w3.org/2001/XMLSchema#date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+# 
+# http://www.w3.org/2001/XMLSchema#duration
+<http://www.w3.org/2001/XMLSchema#duration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/IproK/cost#hasCostCategory
+<https://w3id.org/IproK/cost#hasCostCategory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/IproK/cost#hasCostCategory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/IproK/cost#hasCostCategory> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/IproK/cost#CostItem> .
+<https://w3id.org/IproK/cost#hasCostCategory> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/IproK/cost#CostCategory> .
+<https://w3id.org/IproK/cost#hasCostCategory> <http://www.w3.org/2000/01/rdf-schema#label> "hasCostCategory" .
+# 
+# https://w3id.org/IproK/cost#hasCostType
+<https://w3id.org/IproK/cost#hasCostType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/IproK/cost#hasCostType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/IproK/cost#hasCostType> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/IproK/cost#CostItem> .
+<https://w3id.org/IproK/cost#hasCostType> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/IproK/cost#CostType> .
+<https://w3id.org/IproK/cost#hasCostType> <http://www.w3.org/2000/01/rdf-schema#label> "hasCostType" .
+# 
+# https://w3id.org/IproK/integrated#allocationAssignsResource
+<https://w3id.org/IproK/integrated#allocationAssignsResource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/IproK/integrated#allocationAssignsResource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/IproK/integrated#allocationAssignsResource> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/IproK/integrated#ResourceAllocation> .
+<https://w3id.org/IproK/integrated#allocationAssignsResource> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/IproK/resource#Resource> .
+<https://w3id.org/IproK/integrated#allocationAssignsResource> <http://www.w3.org/2000/01/rdf-schema#label> "allocationAssignsResource" .
+# 
+# https://w3id.org/IproK/integrated#allocationForTask
+<https://w3id.org/IproK/integrated#allocationForTask> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/IproK/integrated#allocationForTask> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/IproK/integrated#allocationForTask> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/IproK/integrated#ResourceAllocation> .
+<https://w3id.org/IproK/integrated#allocationForTask> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/IproK/schedule#Task> .
+<https://w3id.org/IproK/integrated#allocationForTask> <http://www.w3.org/2000/01/rdf-schema#label> "allocationForTask" .
+# 
+# https://w3id.org/IproK/integrated#resourceAllocationIncursCostItem
+<https://w3id.org/IproK/integrated#resourceAllocationIncursCostItem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/IproK/integrated#resourceAllocationIncursCostItem> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/IproK/integrated#ResourceAllocation> .
+<https://w3id.org/IproK/integrated#resourceAllocationIncursCostItem> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/IproK/cost#CostItem> .
+<https://w3id.org/IproK/integrated#resourceAllocationIncursCostItem> <http://www.w3.org/2000/01/rdf-schema#label> "resourceAllocationIncursCostItem" .
+# 
+# https://w3id.org/IproK/integrated#taskGeneratesCostItem
+<https://w3id.org/IproK/integrated#taskGeneratesCostItem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/IproK/integrated#taskGeneratesCostItem> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/IproK/schedule#Task> .
+<https://w3id.org/IproK/integrated#taskGeneratesCostItem> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/IproK/cost#CostItem> .
+<https://w3id.org/IproK/integrated#taskGeneratesCostItem> <http://www.w3.org/2000/01/rdf-schema#label> "taskGeneratesCostItem" .
+# 
+# https://w3id.org/IproK/integrated#taskHasResourceAllocation
+<https://w3id.org/IproK/integrated#taskHasResourceAllocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/IproK/integrated#taskHasResourceAllocation> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/IproK/schedule#Task> .
+<https://w3id.org/IproK/integrated#taskHasResourceAllocation> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/IproK/integrated#ResourceAllocation> .
+<https://w3id.org/IproK/integrated#taskHasResourceAllocation> <http://www.w3.org/2000/01/rdf-schema#label> "taskHasResourceAllocation" .
+# 
+# https://w3id.org/IproK/resource#hasResourceConstraints
+<https://w3id.org/IproK/resource#hasResourceConstraints> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/IproK/resource#hasResourceConstraints> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/IproK/resource#Resource> .
+<https://w3id.org/IproK/resource#hasResourceConstraints> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/IproK/resource#ResourceConstraint> .
+<https://w3id.org/IproK/resource#hasResourceConstraints> <http://www.w3.org/2000/01/rdf-schema#label> "hasResourceConstraints" .
+# 
+# https://w3id.org/IproK/resource#hasResourceType
+<https://w3id.org/IproK/resource#hasResourceType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/IproK/resource#hasResourceType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/IproK/resource#hasResourceType> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/IproK/resource#Resource> .
+<https://w3id.org/IproK/resource#hasResourceType> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/IproK/resource#ResourceType> .
+<https://w3id.org/IproK/resource#hasResourceType> <http://www.w3.org/2000/01/rdf-schema#label> "hasResourceType" .
+# 
+# https://w3id.org/IproK/resource#hasTrackingTag
+<https://w3id.org/IproK/resource#hasTrackingTag> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/IproK/resource#hasTrackingTag> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/IproK/resource#Resource> .
+<https://w3id.org/IproK/resource#hasTrackingTag> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/IproK/resource#TrackingTag> .
+<https://w3id.org/IproK/resource#hasTrackingTag> <http://www.w3.org/2000/01/rdf-schema#label> "hasTrackingTag" .
+# 
+# https://w3id.org/IproK/resource#measuredIn
+<https://w3id.org/IproK/resource#measuredIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/IproK/resource#measuredIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/IproK/resource#measuredIn> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/IproK/resource#Resource> .
+<https://w3id.org/IproK/resource#measuredIn> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/IproK/resource#Units> .
+<https://w3id.org/IproK/resource#measuredIn> <http://www.w3.org/2000/01/rdf-schema#label> "measuredIn" .
+# 
+# https://w3id.org/IproK/schedule#assignedTo
+<https://w3id.org/IproK/schedule#assignedTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/IproK/schedule#assignedTo> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/IproK/schedule#Task> .
+<https://w3id.org/IproK/schedule#assignedTo> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/IproK#Actor> .
+<https://w3id.org/IproK/schedule#assignedTo> <http://www.w3.org/2000/01/rdf-schema#label> "assignedTo" .
+# 
+# https://w3id.org/IproK/schedule#hasConstraint
+<https://w3id.org/IproK/schedule#hasConstraint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/IproK/schedule#hasConstraint> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/IproK/schedule#Task> .
+<https://w3id.org/IproK/schedule#hasConstraint> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/IproK#Constraint> .
+<https://w3id.org/IproK/schedule#hasConstraint> <http://www.w3.org/2000/01/rdf-schema#label> "hasConstraint" .
+# 
+# https://w3id.org/IproK/schedule#hasPredecessorDependency
+<https://w3id.org/IproK/schedule#hasPredecessorDependency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/IproK/schedule#hasPredecessorDependency> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/IproK/schedule#Task> .
+<https://w3id.org/IproK/schedule#hasPredecessorDependency> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/IproK/schedule#TaskDependency> .
+<https://w3id.org/IproK/schedule#hasPredecessorDependency> <http://www.w3.org/2000/01/rdf-schema#label> "hasPredecessorDependency" .
+# 
+# https://w3id.org/IproK/schedule#hasSubTask
+<https://w3id.org/IproK/schedule#hasSubTask> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/IproK/schedule#hasSubTask> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/IproK/schedule#Task> .
+<https://w3id.org/IproK/schedule#hasSubTask> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/IproK/schedule#Task> .
+<https://w3id.org/IproK/schedule#hasSubTask> <http://www.w3.org/2000/01/rdf-schema#label> "hasSubTask" .
+# 
+# https://w3id.org/IproK/schedule#hasSuccessorDependency
+<https://w3id.org/IproK/schedule#hasSuccessorDependency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/IproK/schedule#hasSuccessorDependency> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/IproK/schedule#Task> .
+<https://w3id.org/IproK/schedule#hasSuccessorDependency> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/IproK/schedule#TaskDependency> .
+<https://w3id.org/IproK/schedule#hasSuccessorDependency> <http://www.w3.org/2000/01/rdf-schema#label> "hasSuccessorDependency" .
+# 
+# https://w3id.org/IproK/schedule#hasTask
+<https://w3id.org/IproK/schedule#hasTask> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/IproK/schedule#hasTask> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/IproK/schedule#WBS_Element> .
+<https://w3id.org/IproK/schedule#hasTask> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/IproK/schedule#Task> .
+<https://w3id.org/IproK/schedule#hasTask> <http://www.w3.org/2000/01/rdf-schema#label> "hasTask" .
+# 
+# https://w3id.org/IproK/schedule#hasTaskTime
+<https://w3id.org/IproK/schedule#hasTaskTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/IproK/schedule#hasTaskTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/IproK/schedule#hasTaskTime> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/IproK/schedule#Task> .
+<https://w3id.org/IproK/schedule#hasTaskTime> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/IproK/schedule#TaskTime> .
+<https://w3id.org/IproK/schedule#hasTaskTime> <http://www.w3.org/2000/01/rdf-schema#label> "hasTaskTime" .
+# 
+# https://w3id.org/IproK/schedule#hasWBS
+<https://w3id.org/IproK/schedule#hasWBS> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/IproK/schedule#hasWBS> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/IproK/schedule#WorkPackage> .
+<https://w3id.org/IproK/schedule#hasWBS> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/IproK/schedule#WBS_Element> .
+<https://w3id.org/IproK/schedule#hasWBS> <http://www.w3.org/2000/01/rdf-schema#label> "hasWBS" .
+# 
+# https://w3id.org/IproK/schedule#hasWorkPackage
+<https://w3id.org/IproK/schedule#hasWorkPackage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/IproK/schedule#hasWorkPackage> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/IproK/schedule#Project> .
+<https://w3id.org/IproK/schedule#hasWorkPackage> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/IproK/schedule#WorkPackage> .
+<https://w3id.org/IproK/schedule#hasWorkPackage> <http://www.w3.org/2000/01/rdf-schema#label> "hasWorkPackage" .
+# 
+# https://w3id.org/IproK/schedule#linksToPredecessorTask
+<https://w3id.org/IproK/schedule#linksToPredecessorTask> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/IproK/schedule#linksToPredecessorTask> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/IproK/schedule#linksToPredecessorTask> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/IproK/schedule#TaskDependency> .
+<https://w3id.org/IproK/schedule#linksToPredecessorTask> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/IproK/schedule#Task> .
+<https://w3id.org/IproK/schedule#linksToPredecessorTask> <http://www.w3.org/2000/01/rdf-schema#label> "linksToPredecessorTask" .
+# 
+# https://w3id.org/IproK/schedule#linksToSuccessorTask
+<https://w3id.org/IproK/schedule#linksToSuccessorTask> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/IproK/schedule#linksToSuccessorTask> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/IproK/schedule#linksToSuccessorTask> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/IproK/schedule#TaskDependency> .
+<https://w3id.org/IproK/schedule#linksToSuccessorTask> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/IproK/schedule#Task> .
+<https://w3id.org/IproK/schedule#linksToSuccessorTask> <http://www.w3.org/2000/01/rdf-schema#label> "linksToSuccessorTask" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/IproK#hasDescription
+<https://w3id.org/IproK#hasDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/IproK#hasDescription> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/IproK#IproKThing> .
+<https://w3id.org/IproK#hasDescription> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/IproK#hasDescription> <http://www.w3.org/2000/01/rdf-schema#comment> "A textual description of the entity." .
+<https://w3id.org/IproK#hasDescription> <http://www.w3.org/2000/01/rdf-schema#label> "hasDescription"@en .
+# 
+# https://w3id.org/IproK#hasGlobalId
+<https://w3id.org/IproK#hasGlobalId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/IproK#hasGlobalId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/IproK#hasGlobalId> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/IproK#IproKThing> .
+<https://w3id.org/IproK#hasGlobalId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/IproK#hasGlobalId> <http://www.w3.org/2000/01/rdf-schema#comment> "A globally unique identifier." .
+<https://w3id.org/IproK#hasGlobalId> <http://www.w3.org/2000/01/rdf-schema#label> "hasGlobalId"@en .
+# 
+# https://w3id.org/IproK#hasId
+<https://w3id.org/IproK#hasId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/IproK#hasId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/IproK#hasId> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/IproK#IproKThing> .
+<https://w3id.org/IproK#hasId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/IproK#hasId> <http://www.w3.org/2000/01/rdf-schema#comment> "A local or project-specific identifier." .
+<https://w3id.org/IproK#hasId> <http://www.w3.org/2000/01/rdf-schema#label> "hasId"@en .
+# 
+# https://w3id.org/IproK#hasName
+<https://w3id.org/IproK#hasName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/IproK#hasName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/IproK#hasName> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/IproK#IproKThing> .
+<https://w3id.org/IproK#hasName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/IproK#hasName> <http://www.w3.org/2000/01/rdf-schema#comment> "The common name of the entity." .
+<https://w3id.org/IproK#hasName> <http://www.w3.org/2000/01/rdf-schema#label> "hasName"@en .
+# 
+# https://w3id.org/IproK/cost#actualCostAmount
+<https://w3id.org/IproK/cost#actualCostAmount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/IproK/cost#actualCostAmount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/IproK/cost#actualCostAmount> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/IproK/cost#CostItem> .
+<https://w3id.org/IproK/cost#actualCostAmount> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/IproK/cost#actualCostAmount> <http://www.w3.org/2000/01/rdf-schema#comment> "this is actual cost amount" .
+<https://w3id.org/IproK/cost#actualCostAmount> <http://www.w3.org/2000/01/rdf-schema#label> "actualCostAmount"@en .
+# 
+# https://w3id.org/IproK/cost#atCompleteCostAmount
+<https://w3id.org/IproK/cost#atCompleteCostAmount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/IproK/cost#atCompleteCostAmount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/IproK/cost#atCompleteCostAmount> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/IproK/cost#CostItem> .
+<https://w3id.org/IproK/cost#atCompleteCostAmount> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/IproK/cost#atCompleteCostAmount> <http://www.w3.org/2000/01/rdf-schema#label> "atCompleteCostAmount"@en .
+# 
+# https://w3id.org/IproK/cost#budgetedCostAmount
+<https://w3id.org/IproK/cost#budgetedCostAmount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/IproK/cost#budgetedCostAmount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/IproK/cost#budgetedCostAmount> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/IproK/cost#CostItem> .
+<https://w3id.org/IproK/cost#budgetedCostAmount> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/IproK/cost#budgetedCostAmount> <http://www.w3.org/2000/01/rdf-schema#label> "budgetedCostAmount"@en .
+# 
+# https://w3id.org/IproK/cost#remainingCostAmount
+<https://w3id.org/IproK/cost#remainingCostAmount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/IproK/cost#remainingCostAmount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/IproK/cost#remainingCostAmount> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/IproK/cost#CostItem> .
+<https://w3id.org/IproK/cost#remainingCostAmount> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/IproK/cost#remainingCostAmount> <http://www.w3.org/2000/01/rdf-schema#label> "remainingCostAmount"@en .
+# 
+# https://w3id.org/IproK/cost#vendorName
+<https://w3id.org/IproK/cost#vendorName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/IproK/cost#vendorName> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/IproK/cost#CostItem> .
+<https://w3id.org/IproK/cost#vendorName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/IproK/cost#vendorName> <http://www.w3.org/2000/01/rdf-schema#label> "vendorName"@en .
+# 
+# https://w3id.org/IproK/integrated#allocatedUnits
+<https://w3id.org/IproK/integrated#allocatedUnits> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/IproK/integrated#allocatedUnits> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/IproK/integrated#allocatedUnits> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/IproK/integrated#ResourceAllocation> .
+<https://w3id.org/IproK/integrated#allocatedUnits> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/IproK/integrated#allocatedUnits> <http://www.w3.org/2000/01/rdf-schema#comment> "" .
+<https://w3id.org/IproK/integrated#allocatedUnits> <http://www.w3.org/2000/01/rdf-schema#label> "allocatedUnits"@en .
+# 
+# https://w3id.org/IproK/integrated#allocationPlannedFinishDate
+<https://w3id.org/IproK/integrated#allocationPlannedFinishDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/IproK/integrated#allocationPlannedFinishDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/IproK/integrated#allocationPlannedFinishDate> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/IproK/integrated#ResourceAllocation> .
+<https://w3id.org/IproK/integrated#allocationPlannedFinishDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://w3id.org/IproK/integrated#allocationPlannedFinishDate> <http://www.w3.org/2000/01/rdf-schema#label> "allocationPlannedFinishDate"@en .
+# 
+# https://w3id.org/IproK/integrated#allocationPlannedStartDate
+<https://w3id.org/IproK/integrated#allocationPlannedStartDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/IproK/integrated#allocationPlannedStartDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/IproK/integrated#allocationPlannedStartDate> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/IproK/integrated#ResourceAllocation> .
+<https://w3id.org/IproK/integrated#allocationPlannedStartDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://w3id.org/IproK/integrated#allocationPlannedStartDate> <http://www.w3.org/2000/01/rdf-schema#label> "allocationPlannedStartDate"@en .
+# 
+# https://w3id.org/IproK/resource#actualUnits
+<https://w3id.org/IproK/resource#actualUnits> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/IproK/resource#actualUnits> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/IproK/resource#Resource> .
+<https://w3id.org/IproK/resource#actualUnits> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/IproK/resource#actualUnits> <http://www.w3.org/2000/01/rdf-schema#comment> "" .
+<https://w3id.org/IproK/resource#actualUnits> <http://www.w3.org/2000/01/rdf-schema#label> "actualUnits"@en .
+# 
+# https://w3id.org/IproK/resource#atCompleteUnits
+<https://w3id.org/IproK/resource#atCompleteUnits> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/IproK/resource#atCompleteUnits> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/IproK/resource#Resource> .
+<https://w3id.org/IproK/resource#atCompleteUnits> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/IproK/resource#atCompleteUnits> <http://www.w3.org/2000/01/rdf-schema#label> "atCompleteUnits"@en .
+# 
+# https://w3id.org/IproK/resource#baseRate
+<https://w3id.org/IproK/resource#baseRate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/IproK/resource#baseRate> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/IproK/resource#Resource> .
+<https://w3id.org/IproK/resource#baseRate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/IproK/resource#baseRate> <http://www.w3.org/2000/01/rdf-schema#label> "baseRate"@en .
+# 
+# https://w3id.org/IproK/resource#budgetedUnits
+<https://w3id.org/IproK/resource#budgetedUnits> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/IproK/resource#budgetedUnits> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/IproK/resource#Resource> .
+<https://w3id.org/IproK/resource#budgetedUnits> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/IproK/resource#budgetedUnits> <http://www.w3.org/2000/01/rdf-schema#label> "budgetedUnits"@en .
+# 
+# https://w3id.org/IproK/resource#currency
+<https://w3id.org/IproK/resource#currency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/IproK/resource#currency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/IproK/resource#currency> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/IproK/resource#Resource> .
+<https://w3id.org/IproK/resource#currency> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/IproK/resource#currency> <http://www.w3.org/2000/01/rdf-schema#label> "currency"@en .
+# 
+# https://w3id.org/IproK/resource#effectiveDateForRate
+<https://w3id.org/IproK/resource#effectiveDateForRate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/IproK/resource#effectiveDateForRate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/IproK/resource#effectiveDateForRate> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/IproK/resource#Resource> .
+<https://w3id.org/IproK/resource#effectiveDateForRate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://w3id.org/IproK/resource#effectiveDateForRate> <http://www.w3.org/2000/01/rdf-schema#label> "effectiveDateForRate"@en .
+# 
+# https://w3id.org/IproK/resource#isPrimaryResource
+<https://w3id.org/IproK/resource#isPrimaryResource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/IproK/resource#isPrimaryResource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/IproK/resource#isPrimaryResource> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/IproK/resource#Resource> .
+<https://w3id.org/IproK/resource#isPrimaryResource> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<https://w3id.org/IproK/resource#isPrimaryResource> <http://www.w3.org/2000/01/rdf-schema#label> "isPrimaryResource"@en .
+# 
+# https://w3id.org/IproK/resource#maxUnits
+<https://w3id.org/IproK/resource#maxUnits> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/IproK/resource#maxUnits> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/IproK/resource#maxUnits> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/IproK/resource#Resource> .
+<https://w3id.org/IproK/resource#maxUnits> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/IproK/resource#maxUnits> <http://www.w3.org/2000/01/rdf-schema#label> "maxUnits"@en .
+# 
+# https://w3id.org/IproK/resource#remainingUnits
+<https://w3id.org/IproK/resource#remainingUnits> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/IproK/resource#remainingUnits> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/IproK/resource#Resource> .
+<https://w3id.org/IproK/resource#remainingUnits> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/IproK/resource#remainingUnits> <http://www.w3.org/2000/01/rdf-schema#label> "remainingUnits"@en .
+# 
+# https://w3id.org/IproK/schedule#actualDuration
+<https://w3id.org/IproK/schedule#actualDuration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/IproK/schedule#actualDuration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/IproK/schedule#actualDuration> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/IproK/schedule#TaskTime> .
+<https://w3id.org/IproK/schedule#actualDuration> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/IproK/schedule#actualDuration> <http://www.w3.org/2000/01/rdf-schema#label> "actualDuration"@en .
+# 
+# https://w3id.org/IproK/schedule#actualFinishDate
+<https://w3id.org/IproK/schedule#actualFinishDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/IproK/schedule#actualFinishDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/IproK/schedule#actualFinishDate> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/IproK/schedule#TaskTime> .
+<https://w3id.org/IproK/schedule#actualFinishDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://w3id.org/IproK/schedule#actualFinishDate> <http://www.w3.org/2000/01/rdf-schema#label> "actualFinishDate"@en .
+# 
+# https://w3id.org/IproK/schedule#actualStartDate
+<https://w3id.org/IproK/schedule#actualStartDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/IproK/schedule#actualStartDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/IproK/schedule#actualStartDate> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/IproK/schedule#TaskTime> .
+<https://w3id.org/IproK/schedule#actualStartDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://w3id.org/IproK/schedule#actualStartDate> <http://www.w3.org/2000/01/rdf-schema#label> "actualStartDate"@en .
+# 
+# https://w3id.org/IproK/schedule#atCompleteDuration
+<https://w3id.org/IproK/schedule#atCompleteDuration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/IproK/schedule#atCompleteDuration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/IproK/schedule#atCompleteDuration> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/IproK/schedule#TaskTime> .
+<https://w3id.org/IproK/schedule#atCompleteDuration> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/IproK/schedule#atCompleteDuration> <http://www.w3.org/2000/01/rdf-schema#label> "atCompleteDuration"@en .
+# 
+# https://w3id.org/IproK/schedule#constraintDate
+<https://w3id.org/IproK/schedule#constraintDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/IproK/schedule#constraintDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/IproK/schedule#constraintDate> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/IproK#Constraint> .
+<https://w3id.org/IproK/schedule#constraintDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://w3id.org/IproK/schedule#constraintDate> <http://www.w3.org/2000/01/rdf-schema#label> "constraintDate"@en .
+# 
+# https://w3id.org/IproK/schedule#constraintType
+<https://w3id.org/IproK/schedule#constraintType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/IproK/schedule#constraintType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/IproK/schedule#constraintType> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/IproK#Constraint> .
+<https://w3id.org/IproK/schedule#constraintType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/IproK/schedule#constraintType> <http://www.w3.org/2000/01/rdf-schema#label> "constraintType"@en .
+# 
+# https://w3id.org/IproK/schedule#isCriticalTask
+<https://w3id.org/IproK/schedule#isCriticalTask> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/IproK/schedule#isCriticalTask> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/IproK/schedule#isCriticalTask> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/IproK/schedule#Task> .
+<https://w3id.org/IproK/schedule#isCriticalTask> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<https://w3id.org/IproK/schedule#isCriticalTask> <http://www.w3.org/2000/01/rdf-schema#label> "isCriticalTask"@en .
+# 
+# https://w3id.org/IproK/schedule#isMilestone
+<https://w3id.org/IproK/schedule#isMilestone> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/IproK/schedule#isMilestone> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/IproK/schedule#isMilestone> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/IproK/schedule#Task> .
+<https://w3id.org/IproK/schedule#isMilestone> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<https://w3id.org/IproK/schedule#isMilestone> <http://www.w3.org/2000/01/rdf-schema#label> "isMilestone"@en .
+# 
+# https://w3id.org/IproK/schedule#lagTime
+<https://w3id.org/IproK/schedule#lagTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/IproK/schedule#lagTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/IproK/schedule#lagTime> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/IproK/schedule#TaskDependency> .
+<https://w3id.org/IproK/schedule#lagTime> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/IproK/schedule#lagTime> <http://www.w3.org/2000/01/rdf-schema#label> "lagTime"@en .
+# 
+# https://w3id.org/IproK/schedule#plannedFinishDate
+<https://w3id.org/IproK/schedule#plannedFinishDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/IproK/schedule#plannedFinishDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/IproK/schedule#plannedFinishDate> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/IproK/schedule#TaskTime> .
+<https://w3id.org/IproK/schedule#plannedFinishDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://w3id.org/IproK/schedule#plannedFinishDate> <http://www.w3.org/2000/01/rdf-schema#label> "plannedFinishDate"@en .
+# 
+# https://w3id.org/IproK/schedule#plannedStartDate
+<https://w3id.org/IproK/schedule#plannedStartDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/IproK/schedule#plannedStartDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/IproK/schedule#plannedStartDate> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/IproK/schedule#TaskTime> .
+<https://w3id.org/IproK/schedule#plannedStartDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://w3id.org/IproK/schedule#plannedStartDate> <http://www.w3.org/2000/01/rdf-schema#label> "plannedFinishDate"@en .
+# 
+# https://w3id.org/IproK/schedule#projectAddress
+<https://w3id.org/IproK/schedule#projectAddress> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/IproK/schedule#projectAddress> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/IproK/schedule#Project> .
+<https://w3id.org/IproK/schedule#projectAddress> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/IproK/schedule#projectAddress> <http://www.w3.org/2000/01/rdf-schema#label> "projectAddress"@en .
+# 
+# https://w3id.org/IproK/schedule#projectCategory
+<https://w3id.org/IproK/schedule#projectCategory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/IproK/schedule#projectCategory> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/IproK/schedule#Project> .
+<https://w3id.org/IproK/schedule#projectCategory> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/IproK/schedule#projectCategory> <http://www.w3.org/2000/01/rdf-schema#label> "projectCategory"@en .
+# 
+# https://w3id.org/IproK/schedule#projectOwner
+<https://w3id.org/IproK/schedule#projectOwner> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/IproK/schedule#projectOwner> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/IproK/schedule#Project> .
+<https://w3id.org/IproK/schedule#projectOwner> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/IproK/schedule#projectOwner> <http://www.w3.org/2000/01/rdf-schema#label> "projectOwner"@en .
+# 
+# https://w3id.org/IproK/schedule#remainingDuration
+<https://w3id.org/IproK/schedule#remainingDuration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/IproK/schedule#remainingDuration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/IproK/schedule#remainingDuration> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/IproK/schedule#TaskTime> .
+<https://w3id.org/IproK/schedule#remainingDuration> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/IproK/schedule#remainingDuration> <http://www.w3.org/2000/01/rdf-schema#label> "remainingDuration"@en .
+# 
+# https://w3id.org/IproK/schedule#scheduleDuration
+<https://w3id.org/IproK/schedule#scheduleDuration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/IproK/schedule#scheduleDuration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/IproK/schedule#scheduleDuration> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/IproK/schedule#TaskTime> .
+<https://w3id.org/IproK/schedule#scheduleDuration> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/IproK/schedule#scheduleDuration> <http://www.w3.org/2000/01/rdf-schema#label> "scheduleDuration"@en .
+# 
+# https://w3id.org/IproK/schedule#taskPriority
+<https://w3id.org/IproK/schedule#taskPriority> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/IproK/schedule#taskPriority> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/IproK/schedule#taskPriority> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/IproK/schedule#Task> .
+<https://w3id.org/IproK/schedule#taskPriority> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<https://w3id.org/IproK/schedule#taskPriority> <http://www.w3.org/2000/01/rdf-schema#label> "taskPriority"@en .
+# 
+# https://w3id.org/IproK/schedule#taskRelationshipType
+<https://w3id.org/IproK/schedule#taskRelationshipType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/IproK/schedule#taskRelationshipType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/IproK/schedule#taskRelationshipType> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/IproK/schedule#TaskDependency> .
+<https://w3id.org/IproK/schedule#taskRelationshipType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/IproK/schedule#taskRelationshipType> <http://www.w3.org/2000/01/rdf-schema#label> "taskRelationshipType"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/IproK#Actor
+<https://w3id.org/IproK#Actor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/IproK#Actor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/IproK#IproKThing> .
+<https://w3id.org/IproK#Actor> <http://www.w3.org/2000/01/rdf-schema#label> "Actor" .
+# 
+# https://w3id.org/IproK#Calendar
+<https://w3id.org/IproK#Calendar> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/IproK#Calendar> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/IproK#IproKThing> .
+<https://w3id.org/IproK#Calendar> <http://www.w3.org/2000/01/rdf-schema#label> "Calendar" .
+# 
+# https://w3id.org/IproK#Constraint
+<https://w3id.org/IproK#Constraint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/IproK#Constraint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/IproK#IproKThing> .
+<https://w3id.org/IproK#Constraint> <http://www.w3.org/2000/01/rdf-schema#label> "Constraint" .
+# 
+# https://w3id.org/IproK#IproKThing
+<https://w3id.org/IproK#IproKThing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/IproK#IproKThing> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2002/07/owl#Thing> .
+<https://w3id.org/IproK#IproKThing> <http://www.w3.org/2000/01/rdf-schema#label> "IproKThing" .
+# 
+# https://w3id.org/IproK/cost#CostCategory
+<https://w3id.org/IproK/cost#CostCategory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/IproK/cost#CostCategory> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/IproK#IproKThing> .
+<https://w3id.org/IproK/cost#CostCategory> <http://www.w3.org/2000/01/rdf-schema#label> "CostCategory" .
+# 
+# https://w3id.org/IproK/cost#CostItem
+<https://w3id.org/IproK/cost#CostItem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/IproK/cost#CostItem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/IproK#IproKThing> .
+<https://w3id.org/IproK/cost#CostItem> <http://www.w3.org/2000/01/rdf-schema#label> "CostItem" .
+# 
+# https://w3id.org/IproK/cost#CostType
+<https://w3id.org/IproK/cost#CostType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/IproK/cost#CostType> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/IproK#IproKThing> .
+<https://w3id.org/IproK/cost#CostType> <http://www.w3.org/2000/01/rdf-schema#label> "CostType" .
+# 
+# https://w3id.org/IproK/cost#EquipmentCost
+<https://w3id.org/IproK/cost#EquipmentCost> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/IproK/cost#EquipmentCost> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/IproK/cost#CostType> .
+<https://w3id.org/IproK/cost#EquipmentCost> <http://www.w3.org/2000/01/rdf-schema#label> "EquipmentCost" .
+# 
+# https://w3id.org/IproK/cost#ExpenseItem
+<https://w3id.org/IproK/cost#ExpenseItem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/IproK/cost#ExpenseItem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/IproK/cost#CostType> .
+<https://w3id.org/IproK/cost#ExpenseItem> <http://www.w3.org/2000/01/rdf-schema#label> "ExpenseItem" .
+# 
+# https://w3id.org/IproK/cost#LaborCost
+<https://w3id.org/IproK/cost#LaborCost> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/IproK/cost#LaborCost> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/IproK/cost#CostType> .
+<https://w3id.org/IproK/cost#LaborCost> <http://www.w3.org/2000/01/rdf-schema#label> "LaborCost" .
+# 
+# https://w3id.org/IproK/cost#MaterialCost
+<https://w3id.org/IproK/cost#MaterialCost> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/IproK/cost#MaterialCost> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/IproK/cost#CostType> .
+<https://w3id.org/IproK/cost#MaterialCost> <http://www.w3.org/2000/01/rdf-schema#label> "MaterialCost" .
+# 
+# https://w3id.org/IproK/integrated#ResourceAllocation
+<https://w3id.org/IproK/integrated#ResourceAllocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/IproK/integrated#ResourceAllocation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/IproK#IproKThing> .
+<https://w3id.org/IproK/integrated#ResourceAllocation> <http://www.w3.org/2000/01/rdf-schema#label> "ResourceAllocation" .
+# 
+# https://w3id.org/IproK/resource#EquipmentResource
+<https://w3id.org/IproK/resource#EquipmentResource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/IproK/resource#EquipmentResource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/IproK/resource#ResourceType> .
+<https://w3id.org/IproK/resource#EquipmentResource> <http://www.w3.org/2000/01/rdf-schema#label> "EquipmentResource" .
+# 
+# https://w3id.org/IproK/resource#LaborResource
+<https://w3id.org/IproK/resource#LaborResource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/IproK/resource#LaborResource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/IproK/resource#ResourceType> .
+<https://w3id.org/IproK/resource#LaborResource> <http://www.w3.org/2000/01/rdf-schema#label> "LaborResource" .
+# 
+# https://w3id.org/IproK/resource#MaterialResource
+<https://w3id.org/IproK/resource#MaterialResource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/IproK/resource#MaterialResource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/IproK/resource#ResourceType> .
+<https://w3id.org/IproK/resource#MaterialResource> <http://www.w3.org/2000/01/rdf-schema#label> "MaterialResource" .
+# 
+# https://w3id.org/IproK/resource#Resource
+<https://w3id.org/IproK/resource#Resource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/IproK/resource#Resource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/IproK#IproKThing> .
+<https://w3id.org/IproK/resource#Resource> <http://www.w3.org/2000/01/rdf-schema#label> "Resource" .
+# 
+# https://w3id.org/IproK/resource#ResourceConstraint
+<https://w3id.org/IproK/resource#ResourceConstraint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/IproK/resource#ResourceConstraint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/IproK#Constraint> .
+<https://w3id.org/IproK/resource#ResourceConstraint> <http://www.w3.org/2000/01/rdf-schema#label> "ResourceConstraint" .
+# 
+# https://w3id.org/IproK/resource#ResourceType
+<https://w3id.org/IproK/resource#ResourceType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/IproK/resource#ResourceType> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/IproK#IproKThing> .
+<https://w3id.org/IproK/resource#ResourceType> <http://www.w3.org/2000/01/rdf-schema#label> "ResourceType" .
+# 
+# https://w3id.org/IproK/resource#TrackingTag
+<https://w3id.org/IproK/resource#TrackingTag> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/IproK/resource#TrackingTag> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/IproK#IproKThing> .
+<https://w3id.org/IproK/resource#TrackingTag> <http://www.w3.org/2000/01/rdf-schema#label> "TrackingTag" .
+# 
+# https://w3id.org/IproK/resource#Units
+<https://w3id.org/IproK/resource#Units> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/IproK/resource#Units> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/IproK#IproKThing> .
+<https://w3id.org/IproK/resource#Units> <http://www.w3.org/2000/01/rdf-schema#label> "Units" .
+# 
+# https://w3id.org/IproK/resource#UserDefinedResource
+<https://w3id.org/IproK/resource#UserDefinedResource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/IproK/resource#UserDefinedResource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/IproK/resource#ResourceType> .
+<https://w3id.org/IproK/resource#UserDefinedResource> <http://www.w3.org/2000/01/rdf-schema#label> "UserDefinedResource" .
+# 
+# https://w3id.org/IproK/schedule#Milestone
+<https://w3id.org/IproK/schedule#Milestone> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/IproK/schedule#Milestone> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/IproK/schedule#Task> .
+<https://w3id.org/IproK/schedule#Milestone> <http://www.w3.org/2000/01/rdf-schema#label> "Milestone" .
+# 
+# https://w3id.org/IproK/schedule#Project
+<https://w3id.org/IproK/schedule#Project> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/IproK/schedule#Project> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/IproK#IproKThing> .
+<https://w3id.org/IproK/schedule#Project> <http://www.w3.org/2000/01/rdf-schema#label> "Project" .
+# 
+# https://w3id.org/IproK/schedule#Task
+<https://w3id.org/IproK/schedule#Task> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/IproK/schedule#Task> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/IproK/schedule#WBS_Element> .
+<https://w3id.org/IproK/schedule#Task> <http://www.w3.org/2000/01/rdf-schema#label> "Task" .
+# 
+# https://w3id.org/IproK/schedule#TaskDependency
+<https://w3id.org/IproK/schedule#TaskDependency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/IproK/schedule#TaskDependency> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/IproK#IproKThing> .
+<https://w3id.org/IproK/schedule#TaskDependency> <http://www.w3.org/2000/01/rdf-schema#label> "TaskDependency" .
+# 
+# https://w3id.org/IproK/schedule#TaskTime
+<https://w3id.org/IproK/schedule#TaskTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/IproK/schedule#TaskTime> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/IproK#IproKThing> .
+<https://w3id.org/IproK/schedule#TaskTime> <http://www.w3.org/2000/01/rdf-schema#label> "TaskTime" .
+# 
+# https://w3id.org/IproK/schedule#WBS_Element
+<https://w3id.org/IproK/schedule#WBS_Element> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/IproK/schedule#WBS_Element> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/IproK/schedule#Project> .
+<https://w3id.org/IproK/schedule#WBS_Element> <http://www.w3.org/2000/01/rdf-schema#label> "WBS_Element" .
+# 
+# https://w3id.org/IproK/schedule#WorkPackage
+<https://w3id.org/IproK/schedule#WorkPackage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/IproK/schedule#WorkPackage> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/IproK/schedule#WBS_Element> .
+<https://w3id.org/IproK/schedule#WorkPackage> <http://www.w3.org/2000/01/rdf-schema#label> "WorkPackage" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    General axioms
+# #
+# #################################################################
+# 
+# 
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid1 <http://www.w3.org/2002/07/owl#members> _:genid5 .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid4 .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid3 .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/IproK/cost#MaterialCost> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/IproK/cost#LaborCost> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/IproK/cost#ExpenseItem> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/IproK/cost#EquipmentCost> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+# 
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid6 <http://www.w3.org/2002/07/owl#members> _:genid10 .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid9 .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid8 .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid7 .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/IproK/resource#UserDefinedResource> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/IproK/resource#MaterialResource> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/IproK/resource#LaborResource> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/IproK/resource#EquipmentResource> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

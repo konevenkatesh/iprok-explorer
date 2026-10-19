@@ -1,0 +1,5088 @@
+{
+  "id": "iprok",
+  "name": "IproK · published 0.1.0",
+  "note": "Retained published ontology. Namespace case is significant: https://w3id.org/IproK#. Module IRIs are preserved.",
+  "files": [
+    {
+      "path": "ontology.ttl",
+      "sha256": "c1a3c411171e104ec49c563769543ad88348d7928510f8d5934210bdabc748a8"
+    }
+  ],
+  "terms": [
+    {
+      "id": "https://w3id.org/IproK#Actor",
+      "local": "Actor",
+      "label": "Actor",
+      "declaredLabel": true,
+      "kind": "Class",
+      "module": "IproK",
+      "description": "",
+      "domain": [],
+      "range": [],
+      "parents": [
+        "https://w3id.org/IproK#IproKThing"
+      ],
+      "statements": [
+        {
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "value": "http://www.w3.org/2002/07/owl#Class",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+          "value": "Actor",
+          "type": "literal",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+          "value": "https://w3id.org/IproK#IproKThing",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        }
+      ],
+      "sourceFiles": [
+        "ontology.ttl"
+      ]
+    },
+    {
+      "id": "https://w3id.org/IproK#Calendar",
+      "local": "Calendar",
+      "label": "Calendar",
+      "declaredLabel": true,
+      "kind": "Class",
+      "module": "IproK",
+      "description": "",
+      "domain": [],
+      "range": [],
+      "parents": [
+        "https://w3id.org/IproK#IproKThing"
+      ],
+      "statements": [
+        {
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "value": "http://www.w3.org/2002/07/owl#Class",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+          "value": "Calendar",
+          "type": "literal",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+          "value": "https://w3id.org/IproK#IproKThing",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        }
+      ],
+      "sourceFiles": [
+        "ontology.ttl"
+      ]
+    },
+    {
+      "id": "https://w3id.org/IproK#Constraint",
+      "local": "Constraint",
+      "label": "Constraint",
+      "declaredLabel": true,
+      "kind": "Class",
+      "module": "IproK",
+      "description": "",
+      "domain": [],
+      "range": [],
+      "parents": [
+        "https://w3id.org/IproK#IproKThing"
+      ],
+      "statements": [
+        {
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "value": "http://www.w3.org/2002/07/owl#Class",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+          "value": "Constraint",
+          "type": "literal",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+          "value": "https://w3id.org/IproK#IproKThing",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        }
+      ],
+      "sourceFiles": [
+        "ontology.ttl"
+      ]
+    },
+    {
+      "id": "https://w3id.org/IproK#IproKThing",
+      "local": "IproKThing",
+      "label": "IproKThing",
+      "declaredLabel": true,
+      "kind": "Class",
+      "module": "IproK",
+      "description": "",
+      "domain": [],
+      "range": [],
+      "parents": [
+        "http://www.w3.org/2002/07/owl#Thing"
+      ],
+      "statements": [
+        {
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "value": "http://www.w3.org/2002/07/owl#Class",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+          "value": "IproKThing",
+          "type": "literal",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+          "value": "http://www.w3.org/2002/07/owl#Thing",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        }
+      ],
+      "sourceFiles": [
+        "ontology.ttl"
+      ]
+    },
+    {
+      "id": "https://w3id.org/IproK/cost#CostCategory",
+      "local": "CostCategory",
+      "label": "CostCategory",
+      "declaredLabel": true,
+      "kind": "Class",
+      "module": "cost",
+      "description": "",
+      "domain": [],
+      "range": [],
+      "parents": [
+        "https://w3id.org/IproK#IproKThing"
+      ],
+      "statements": [
+        {
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "value": "http://www.w3.org/2002/07/owl#Class",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+          "value": "CostCategory",
+          "type": "literal",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+          "value": "https://w3id.org/IproK#IproKThing",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        }
+      ],
+      "sourceFiles": [
+        "ontology.ttl"
+      ]
+    },
+    {
+      "id": "https://w3id.org/IproK/cost#CostItem",
+      "local": "CostItem",
+      "label": "CostItem",
+      "declaredLabel": true,
+      "kind": "Class",
+      "module": "cost",
+      "description": "",
+      "domain": [],
+      "range": [],
+      "parents": [
+        "https://w3id.org/IproK#IproKThing"
+      ],
+      "statements": [
+        {
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "value": "http://www.w3.org/2002/07/owl#Class",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+          "value": "CostItem",
+          "type": "literal",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+          "value": "https://w3id.org/IproK#IproKThing",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        }
+      ],
+      "sourceFiles": [
+        "ontology.ttl"
+      ]
+    },
+    {
+      "id": "https://w3id.org/IproK/cost#CostType",
+      "local": "CostType",
+      "label": "CostType",
+      "declaredLabel": true,
+      "kind": "Class",
+      "module": "cost",
+      "description": "",
+      "domain": [],
+      "range": [],
+      "parents": [
+        "https://w3id.org/IproK#IproKThing"
+      ],
+      "statements": [
+        {
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "value": "http://www.w3.org/2002/07/owl#Class",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+          "value": "CostType",
+          "type": "literal",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+          "value": "https://w3id.org/IproK#IproKThing",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        }
+      ],
+      "sourceFiles": [
+        "ontology.ttl"
+      ]
+    },
+    {
+      "id": "https://w3id.org/IproK/cost#EquipmentCost",
+      "local": "EquipmentCost",
+      "label": "EquipmentCost",
+      "declaredLabel": true,
+      "kind": "Class",
+      "module": "cost",
+      "description": "",
+      "domain": [],
+      "range": [],
+      "parents": [
+        "https://w3id.org/IproK/cost#CostType"
+      ],
+      "statements": [
+        {
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "value": "http://www.w3.org/2002/07/owl#Class",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+          "value": "EquipmentCost",
+          "type": "literal",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+          "value": "https://w3id.org/IproK/cost#CostType",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        }
+      ],
+      "sourceFiles": [
+        "ontology.ttl"
+      ]
+    },
+    {
+      "id": "https://w3id.org/IproK/cost#ExpenseItem",
+      "local": "ExpenseItem",
+      "label": "ExpenseItem",
+      "declaredLabel": true,
+      "kind": "Class",
+      "module": "cost",
+      "description": "",
+      "domain": [],
+      "range": [],
+      "parents": [
+        "https://w3id.org/IproK/cost#CostType"
+      ],
+      "statements": [
+        {
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "value": "http://www.w3.org/2002/07/owl#Class",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+          "value": "ExpenseItem",
+          "type": "literal",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+          "value": "https://w3id.org/IproK/cost#CostType",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        }
+      ],
+      "sourceFiles": [
+        "ontology.ttl"
+      ]
+    },
+    {
+      "id": "https://w3id.org/IproK/cost#LaborCost",
+      "local": "LaborCost",
+      "label": "LaborCost",
+      "declaredLabel": true,
+      "kind": "Class",
+      "module": "cost",
+      "description": "",
+      "domain": [],
+      "range": [],
+      "parents": [
+        "https://w3id.org/IproK/cost#CostType"
+      ],
+      "statements": [
+        {
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "value": "http://www.w3.org/2002/07/owl#Class",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+          "value": "LaborCost",
+          "type": "literal",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+          "value": "https://w3id.org/IproK/cost#CostType",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        }
+      ],
+      "sourceFiles": [
+        "ontology.ttl"
+      ]
+    },
+    {
+      "id": "https://w3id.org/IproK/cost#MaterialCost",
+      "local": "MaterialCost",
+      "label": "MaterialCost",
+      "declaredLabel": true,
+      "kind": "Class",
+      "module": "cost",
+      "description": "",
+      "domain": [],
+      "range": [],
+      "parents": [
+        "https://w3id.org/IproK/cost#CostType"
+      ],
+      "statements": [
+        {
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "value": "http://www.w3.org/2002/07/owl#Class",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+          "value": "MaterialCost",
+          "type": "literal",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+          "value": "https://w3id.org/IproK/cost#CostType",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        }
+      ],
+      "sourceFiles": [
+        "ontology.ttl"
+      ]
+    },
+    {
+      "id": "https://w3id.org/IproK/integrated#ResourceAllocation",
+      "local": "ResourceAllocation",
+      "label": "ResourceAllocation",
+      "declaredLabel": true,
+      "kind": "Class",
+      "module": "integrated",
+      "description": "",
+      "domain": [],
+      "range": [],
+      "parents": [
+        "https://w3id.org/IproK#IproKThing"
+      ],
+      "statements": [
+        {
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "value": "http://www.w3.org/2002/07/owl#Class",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+          "value": "ResourceAllocation",
+          "type": "literal",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+          "value": "https://w3id.org/IproK#IproKThing",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        }
+      ],
+      "sourceFiles": [
+        "ontology.ttl"
+      ]
+    },
+    {
+      "id": "https://w3id.org/IproK/resource#EquipmentResource",
+      "local": "EquipmentResource",
+      "label": "EquipmentResource",
+      "declaredLabel": true,
+      "kind": "Class",
+      "module": "resource",
+      "description": "",
+      "domain": [],
+      "range": [],
+      "parents": [
+        "https://w3id.org/IproK/resource#ResourceType"
+      ],
+      "statements": [
+        {
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "value": "http://www.w3.org/2002/07/owl#Class",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+          "value": "EquipmentResource",
+          "type": "literal",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+          "value": "https://w3id.org/IproK/resource#ResourceType",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        }
+      ],
+      "sourceFiles": [
+        "ontology.ttl"
+      ]
+    },
+    {
+      "id": "https://w3id.org/IproK/resource#LaborResource",
+      "local": "LaborResource",
+      "label": "LaborResource",
+      "declaredLabel": true,
+      "kind": "Class",
+      "module": "resource",
+      "description": "",
+      "domain": [],
+      "range": [],
+      "parents": [
+        "https://w3id.org/IproK/resource#ResourceType"
+      ],
+      "statements": [
+        {
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "value": "http://www.w3.org/2002/07/owl#Class",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+          "value": "LaborResource",
+          "type": "literal",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+          "value": "https://w3id.org/IproK/resource#ResourceType",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        }
+      ],
+      "sourceFiles": [
+        "ontology.ttl"
+      ]
+    },
+    {
+      "id": "https://w3id.org/IproK/resource#MaterialResource",
+      "local": "MaterialResource",
+      "label": "MaterialResource",
+      "declaredLabel": true,
+      "kind": "Class",
+      "module": "resource",
+      "description": "",
+      "domain": [],
+      "range": [],
+      "parents": [
+        "https://w3id.org/IproK/resource#ResourceType"
+      ],
+      "statements": [
+        {
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "value": "http://www.w3.org/2002/07/owl#Class",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+          "value": "MaterialResource",
+          "type": "literal",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+          "value": "https://w3id.org/IproK/resource#ResourceType",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        }
+      ],
+      "sourceFiles": [
+        "ontology.ttl"
+      ]
+    },
+    {
+      "id": "https://w3id.org/IproK/resource#Resource",
+      "local": "Resource",
+      "label": "Resource",
+      "declaredLabel": true,
+      "kind": "Class",
+      "module": "resource",
+      "description": "",
+      "domain": [],
+      "range": [],
+      "parents": [
+        "https://w3id.org/IproK#IproKThing"
+      ],
+      "statements": [
+        {
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "value": "http://www.w3.org/2002/07/owl#Class",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+          "value": "Resource",
+          "type": "literal",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+          "value": "https://w3id.org/IproK#IproKThing",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        }
+      ],
+      "sourceFiles": [
+        "ontology.ttl"
+      ]
+    },
+    {
+      "id": "https://w3id.org/IproK/resource#ResourceConstraint",
+      "local": "ResourceConstraint",
+      "label": "ResourceConstraint",
+      "declaredLabel": true,
+      "kind": "Class",
+      "module": "resource",
+      "description": "",
+      "domain": [],
+      "range": [],
+      "parents": [
+        "https://w3id.org/IproK#Constraint"
+      ],
+      "statements": [
+        {
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "value": "http://www.w3.org/2002/07/owl#Class",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+          "value": "ResourceConstraint",
+          "type": "literal",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+          "value": "https://w3id.org/IproK#Constraint",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        }
+      ],
+      "sourceFiles": [
+        "ontology.ttl"
+      ]
+    },
+    {
+      "id": "https://w3id.org/IproK/resource#ResourceType",
+      "local": "ResourceType",
+      "label": "ResourceType",
+      "declaredLabel": true,
+      "kind": "Class",
+      "module": "resource",
+      "description": "",
+      "domain": [],
+      "range": [],
+      "parents": [
+        "https://w3id.org/IproK#IproKThing"
+      ],
+      "statements": [
+        {
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "value": "http://www.w3.org/2002/07/owl#Class",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+          "value": "ResourceType",
+          "type": "literal",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+          "value": "https://w3id.org/IproK#IproKThing",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        }
+      ],
+      "sourceFiles": [
+        "ontology.ttl"
+      ]
+    },
+    {
+      "id": "https://w3id.org/IproK/resource#TrackingTag",
+      "local": "TrackingTag",
+      "label": "TrackingTag",
+      "declaredLabel": true,
+      "kind": "Class",
+      "module": "resource",
+      "description": "",
+      "domain": [],
+      "range": [],
+      "parents": [
+        "https://w3id.org/IproK#IproKThing"
+      ],
+      "statements": [
+        {
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "value": "http://www.w3.org/2002/07/owl#Class",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+          "value": "TrackingTag",
+          "type": "literal",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+          "value": "https://w3id.org/IproK#IproKThing",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        }
+      ],
+      "sourceFiles": [
+        "ontology.ttl"
+      ]
+    },
+    {
+      "id": "https://w3id.org/IproK/resource#Units",
+      "local": "Units",
+      "label": "Units",
+      "declaredLabel": true,
+      "kind": "Class",
+      "module": "resource",
+      "description": "",
+      "domain": [],
+      "range": [],
+      "parents": [
+        "https://w3id.org/IproK#IproKThing"
+      ],
+      "statements": [
+        {
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "value": "http://www.w3.org/2002/07/owl#Class",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+          "value": "Units",
+          "type": "literal",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+          "value": "https://w3id.org/IproK#IproKThing",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        }
+      ],
+      "sourceFiles": [
+        "ontology.ttl"
+      ]
+    },
+    {
+      "id": "https://w3id.org/IproK/resource#UserDefinedResource",
+      "local": "UserDefinedResource",
+      "label": "UserDefinedResource",
+      "declaredLabel": true,
+      "kind": "Class",
+      "module": "resource",
+      "description": "",
+      "domain": [],
+      "range": [],
+      "parents": [
+        "https://w3id.org/IproK/resource#ResourceType"
+      ],
+      "statements": [
+        {
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "value": "http://www.w3.org/2002/07/owl#Class",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+          "value": "UserDefinedResource",
+          "type": "literal",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+          "value": "https://w3id.org/IproK/resource#ResourceType",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        }
+      ],
+      "sourceFiles": [
+        "ontology.ttl"
+      ]
+    },
+    {
+      "id": "https://w3id.org/IproK/schedule#Milestone",
+      "local": "Milestone",
+      "label": "Milestone",
+      "declaredLabel": true,
+      "kind": "Class",
+      "module": "schedule",
+      "description": "",
+      "domain": [],
+      "range": [],
+      "parents": [
+        "https://w3id.org/IproK/schedule#Task"
+      ],
+      "statements": [
+        {
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "value": "http://www.w3.org/2002/07/owl#Class",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+          "value": "Milestone",
+          "type": "literal",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+          "value": "https://w3id.org/IproK/schedule#Task",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        }
+      ],
+      "sourceFiles": [
+        "ontology.ttl"
+      ]
+    },
+    {
+      "id": "https://w3id.org/IproK/schedule#Project",
+      "local": "Project",
+      "label": "Project",
+      "declaredLabel": true,
+      "kind": "Class",
+      "module": "schedule",
+      "description": "",
+      "domain": [],
+      "range": [],
+      "parents": [
+        "https://w3id.org/IproK#IproKThing"
+      ],
+      "statements": [
+        {
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "value": "http://www.w3.org/2002/07/owl#Class",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+          "value": "Project",
+          "type": "literal",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+          "value": "https://w3id.org/IproK#IproKThing",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        }
+      ],
+      "sourceFiles": [
+        "ontology.ttl"
+      ]
+    },
+    {
+      "id": "https://w3id.org/IproK/schedule#Task",
+      "local": "Task",
+      "label": "Task",
+      "declaredLabel": true,
+      "kind": "Class",
+      "module": "schedule",
+      "description": "",
+      "domain": [],
+      "range": [],
+      "parents": [
+        "https://w3id.org/IproK/schedule#WBS_Element"
+      ],
+      "statements": [
+        {
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "value": "http://www.w3.org/2002/07/owl#Class",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+          "value": "Task",
+          "type": "literal",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+          "value": "https://w3id.org/IproK/schedule#WBS_Element",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        }
+      ],
+      "sourceFiles": [
+        "ontology.ttl"
+      ]
+    },
+    {
+      "id": "https://w3id.org/IproK/schedule#TaskDependency",
+      "local": "TaskDependency",
+      "label": "TaskDependency",
+      "declaredLabel": true,
+      "kind": "Class",
+      "module": "schedule",
+      "description": "",
+      "domain": [],
+      "range": [],
+      "parents": [
+        "https://w3id.org/IproK#IproKThing"
+      ],
+      "statements": [
+        {
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "value": "http://www.w3.org/2002/07/owl#Class",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+          "value": "TaskDependency",
+          "type": "literal",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+          "value": "https://w3id.org/IproK#IproKThing",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        }
+      ],
+      "sourceFiles": [
+        "ontology.ttl"
+      ]
+    },
+    {
+      "id": "https://w3id.org/IproK/schedule#TaskTime",
+      "local": "TaskTime",
+      "label": "TaskTime",
+      "declaredLabel": true,
+      "kind": "Class",
+      "module": "schedule",
+      "description": "",
+      "domain": [],
+      "range": [],
+      "parents": [
+        "https://w3id.org/IproK#IproKThing"
+      ],
+      "statements": [
+        {
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "value": "http://www.w3.org/2002/07/owl#Class",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+          "value": "TaskTime",
+          "type": "literal",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+          "value": "https://w3id.org/IproK#IproKThing",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        }
+      ],
+      "sourceFiles": [
+        "ontology.ttl"
+      ]
+    },
+    {
+      "id": "https://w3id.org/IproK/schedule#WBS_Element",
+      "local": "WBS_Element",
+      "label": "WBS_Element",
+      "declaredLabel": true,
+      "kind": "Class",
+      "module": "schedule",
+      "description": "",
+      "domain": [],
+      "range": [],
+      "parents": [
+        "https://w3id.org/IproK/schedule#Project"
+      ],
+      "statements": [
+        {
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "value": "http://www.w3.org/2002/07/owl#Class",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+          "value": "WBS_Element",
+          "type": "literal",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+          "value": "https://w3id.org/IproK/schedule#Project",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        }
+      ],
+      "sourceFiles": [
+        "ontology.ttl"
+      ]
+    },
+    {
+      "id": "https://w3id.org/IproK/schedule#WorkPackage",
+      "local": "WorkPackage",
+      "label": "WorkPackage",
+      "declaredLabel": true,
+      "kind": "Class",
+      "module": "schedule",
+      "description": "",
+      "domain": [],
+      "range": [],
+      "parents": [
+        "https://w3id.org/IproK/schedule#WBS_Element"
+      ],
+      "statements": [
+        {
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "value": "http://www.w3.org/2002/07/owl#Class",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+          "value": "WorkPackage",
+          "type": "literal",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+          "value": "https://w3id.org/IproK/schedule#WBS_Element",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        }
+      ],
+      "sourceFiles": [
+        "ontology.ttl"
+      ]
+    },
+    {
+      "id": "https://w3id.org/IproK/cost#hasCostCategory",
+      "local": "hasCostCategory",
+      "label": "hasCostCategory",
+      "declaredLabel": true,
+      "kind": "Object property",
+      "module": "cost",
+      "description": "",
+      "domain": [
+        "https://w3id.org/IproK/cost#CostItem"
+      ],
+      "range": [
+        "https://w3id.org/IproK/cost#CostCategory"
+      ],
+      "parents": [],
+      "statements": [
+        {
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "value": "http://www.w3.org/2002/07/owl#FunctionalProperty",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "value": "http://www.w3.org/2002/07/owl#ObjectProperty",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#domain",
+          "value": "https://w3id.org/IproK/cost#CostItem",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+          "value": "hasCostCategory",
+          "type": "literal",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#range",
+          "value": "https://w3id.org/IproK/cost#CostCategory",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        }
+      ],
+      "sourceFiles": [
+        "ontology.ttl"
+      ]
+    },
+    {
+      "id": "https://w3id.org/IproK/cost#hasCostType",
+      "local": "hasCostType",
+      "label": "hasCostType",
+      "declaredLabel": true,
+      "kind": "Object property",
+      "module": "cost",
+      "description": "",
+      "domain": [
+        "https://w3id.org/IproK/cost#CostItem"
+      ],
+      "range": [
+        "https://w3id.org/IproK/cost#CostType"
+      ],
+      "parents": [],
+      "statements": [
+        {
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "value": "http://www.w3.org/2002/07/owl#FunctionalProperty",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "value": "http://www.w3.org/2002/07/owl#ObjectProperty",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#domain",
+          "value": "https://w3id.org/IproK/cost#CostItem",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+          "value": "hasCostType",
+          "type": "literal",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#range",
+          "value": "https://w3id.org/IproK/cost#CostType",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        }
+      ],
+      "sourceFiles": [
+        "ontology.ttl"
+      ]
+    },
+    {
+      "id": "https://w3id.org/IproK/integrated#allocationAssignsResource",
+      "local": "allocationAssignsResource",
+      "label": "allocationAssignsResource",
+      "declaredLabel": true,
+      "kind": "Object property",
+      "module": "integrated",
+      "description": "",
+      "domain": [
+        "https://w3id.org/IproK/integrated#ResourceAllocation"
+      ],
+      "range": [
+        "https://w3id.org/IproK/resource#Resource"
+      ],
+      "parents": [],
+      "statements": [
+        {
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "value": "http://www.w3.org/2002/07/owl#FunctionalProperty",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "value": "http://www.w3.org/2002/07/owl#ObjectProperty",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#domain",
+          "value": "https://w3id.org/IproK/integrated#ResourceAllocation",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+          "value": "allocationAssignsResource",
+          "type": "literal",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#range",
+          "value": "https://w3id.org/IproK/resource#Resource",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        }
+      ],
+      "sourceFiles": [
+        "ontology.ttl"
+      ]
+    },
+    {
+      "id": "https://w3id.org/IproK/integrated#allocationForTask",
+      "local": "allocationForTask",
+      "label": "allocationForTask",
+      "declaredLabel": true,
+      "kind": "Object property",
+      "module": "integrated",
+      "description": "",
+      "domain": [
+        "https://w3id.org/IproK/integrated#ResourceAllocation"
+      ],
+      "range": [
+        "https://w3id.org/IproK/schedule#Task"
+      ],
+      "parents": [],
+      "statements": [
+        {
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "value": "http://www.w3.org/2002/07/owl#FunctionalProperty",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "value": "http://www.w3.org/2002/07/owl#ObjectProperty",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#domain",
+          "value": "https://w3id.org/IproK/integrated#ResourceAllocation",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+          "value": "allocationForTask",
+          "type": "literal",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#range",
+          "value": "https://w3id.org/IproK/schedule#Task",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        }
+      ],
+      "sourceFiles": [
+        "ontology.ttl"
+      ]
+    },
+    {
+      "id": "https://w3id.org/IproK/integrated#resourceAllocationIncursCostItem",
+      "local": "resourceAllocationIncursCostItem",
+      "label": "resourceAllocationIncursCostItem",
+      "declaredLabel": true,
+      "kind": "Object property",
+      "module": "integrated",
+      "description": "",
+      "domain": [
+        "https://w3id.org/IproK/integrated#ResourceAllocation"
+      ],
+      "range": [
+        "https://w3id.org/IproK/cost#CostItem"
+      ],
+      "parents": [],
+      "statements": [
+        {
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "value": "http://www.w3.org/2002/07/owl#ObjectProperty",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#domain",
+          "value": "https://w3id.org/IproK/integrated#ResourceAllocation",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+          "value": "resourceAllocationIncursCostItem",
+          "type": "literal",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#range",
+          "value": "https://w3id.org/IproK/cost#CostItem",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        }
+      ],
+      "sourceFiles": [
+        "ontology.ttl"
+      ]
+    },
+    {
+      "id": "https://w3id.org/IproK/integrated#taskGeneratesCostItem",
+      "local": "taskGeneratesCostItem",
+      "label": "taskGeneratesCostItem",
+      "declaredLabel": true,
+      "kind": "Object property",
+      "module": "integrated",
+      "description": "",
+      "domain": [
+        "https://w3id.org/IproK/schedule#Task"
+      ],
+      "range": [
+        "https://w3id.org/IproK/cost#CostItem"
+      ],
+      "parents": [],
+      "statements": [
+        {
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "value": "http://www.w3.org/2002/07/owl#ObjectProperty",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#domain",
+          "value": "https://w3id.org/IproK/schedule#Task",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+          "value": "taskGeneratesCostItem",
+          "type": "literal",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#range",
+          "value": "https://w3id.org/IproK/cost#CostItem",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        }
+      ],
+      "sourceFiles": [
+        "ontology.ttl"
+      ]
+    },
+    {
+      "id": "https://w3id.org/IproK/integrated#taskHasResourceAllocation",
+      "local": "taskHasResourceAllocation",
+      "label": "taskHasResourceAllocation",
+      "declaredLabel": true,
+      "kind": "Object property",
+      "module": "integrated",
+      "description": "",
+      "domain": [
+        "https://w3id.org/IproK/schedule#Task"
+      ],
+      "range": [
+        "https://w3id.org/IproK/integrated#ResourceAllocation"
+      ],
+      "parents": [],
+      "statements": [
+        {
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "value": "http://www.w3.org/2002/07/owl#ObjectProperty",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#domain",
+          "value": "https://w3id.org/IproK/schedule#Task",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+          "value": "taskHasResourceAllocation",
+          "type": "literal",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#range",
+          "value": "https://w3id.org/IproK/integrated#ResourceAllocation",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        }
+      ],
+      "sourceFiles": [
+        "ontology.ttl"
+      ]
+    },
+    {
+      "id": "https://w3id.org/IproK/resource#hasResourceConstraints",
+      "local": "hasResourceConstraints",
+      "label": "hasResourceConstraints",
+      "declaredLabel": true,
+      "kind": "Object property",
+      "module": "resource",
+      "description": "",
+      "domain": [
+        "https://w3id.org/IproK/resource#Resource"
+      ],
+      "range": [
+        "https://w3id.org/IproK/resource#ResourceConstraint"
+      ],
+      "parents": [],
+      "statements": [
+        {
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "value": "http://www.w3.org/2002/07/owl#ObjectProperty",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#domain",
+          "value": "https://w3id.org/IproK/resource#Resource",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+          "value": "hasResourceConstraints",
+          "type": "literal",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#range",
+          "value": "https://w3id.org/IproK/resource#ResourceConstraint",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        }
+      ],
+      "sourceFiles": [
+        "ontology.ttl"
+      ]
+    },
+    {
+      "id": "https://w3id.org/IproK/resource#hasResourceType",
+      "local": "hasResourceType",
+      "label": "hasResourceType",
+      "declaredLabel": true,
+      "kind": "Object property",
+      "module": "resource",
+      "description": "",
+      "domain": [
+        "https://w3id.org/IproK/resource#Resource"
+      ],
+      "range": [
+        "https://w3id.org/IproK/resource#ResourceType"
+      ],
+      "parents": [],
+      "statements": [
+        {
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "value": "http://www.w3.org/2002/07/owl#FunctionalProperty",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "value": "http://www.w3.org/2002/07/owl#ObjectProperty",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#domain",
+          "value": "https://w3id.org/IproK/resource#Resource",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+          "value": "hasResourceType",
+          "type": "literal",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#range",
+          "value": "https://w3id.org/IproK/resource#ResourceType",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        }
+      ],
+      "sourceFiles": [
+        "ontology.ttl"
+      ]
+    },
+    {
+      "id": "https://w3id.org/IproK/resource#hasTrackingTag",
+      "local": "hasTrackingTag",
+      "label": "hasTrackingTag",
+      "declaredLabel": true,
+      "kind": "Object property",
+      "module": "resource",
+      "description": "",
+      "domain": [
+        "https://w3id.org/IproK/resource#Resource"
+      ],
+      "range": [
+        "https://w3id.org/IproK/resource#TrackingTag"
+      ],
+      "parents": [],
+      "statements": [
+        {
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "value": "http://www.w3.org/2002/07/owl#ObjectProperty",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#domain",
+          "value": "https://w3id.org/IproK/resource#Resource",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+          "value": "hasTrackingTag",
+          "type": "literal",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#range",
+          "value": "https://w3id.org/IproK/resource#TrackingTag",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        }
+      ],
+      "sourceFiles": [
+        "ontology.ttl"
+      ]
+    },
+    {
+      "id": "https://w3id.org/IproK/resource#measuredIn",
+      "local": "measuredIn",
+      "label": "measuredIn",
+      "declaredLabel": true,
+      "kind": "Object property",
+      "module": "resource",
+      "description": "",
+      "domain": [
+        "https://w3id.org/IproK/resource#Resource"
+      ],
+      "range": [
+        "https://w3id.org/IproK/resource#Units"
+      ],
+      "parents": [],
+      "statements": [
+        {
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "value": "http://www.w3.org/2002/07/owl#FunctionalProperty",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "value": "http://www.w3.org/2002/07/owl#ObjectProperty",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#domain",
+          "value": "https://w3id.org/IproK/resource#Resource",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+          "value": "measuredIn",
+          "type": "literal",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#range",
+          "value": "https://w3id.org/IproK/resource#Units",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        }
+      ],
+      "sourceFiles": [
+        "ontology.ttl"
+      ]
+    },
+    {
+      "id": "https://w3id.org/IproK/schedule#assignedTo",
+      "local": "assignedTo",
+      "label": "assignedTo",
+      "declaredLabel": true,
+      "kind": "Object property",
+      "module": "schedule",
+      "description": "",
+      "domain": [
+        "https://w3id.org/IproK/schedule#Task"
+      ],
+      "range": [
+        "https://w3id.org/IproK#Actor"
+      ],
+      "parents": [],
+      "statements": [
+        {
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "value": "http://www.w3.org/2002/07/owl#ObjectProperty",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#domain",
+          "value": "https://w3id.org/IproK/schedule#Task",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+          "value": "assignedTo",
+          "type": "literal",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#range",
+          "value": "https://w3id.org/IproK#Actor",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        }
+      ],
+      "sourceFiles": [
+        "ontology.ttl"
+      ]
+    },
+    {
+      "id": "https://w3id.org/IproK/schedule#hasConstraint",
+      "local": "hasConstraint",
+      "label": "hasConstraint",
+      "declaredLabel": true,
+      "kind": "Object property",
+      "module": "schedule",
+      "description": "",
+      "domain": [
+        "https://w3id.org/IproK/schedule#Task"
+      ],
+      "range": [
+        "https://w3id.org/IproK#Constraint"
+      ],
+      "parents": [],
+      "statements": [
+        {
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "value": "http://www.w3.org/2002/07/owl#ObjectProperty",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#domain",
+          "value": "https://w3id.org/IproK/schedule#Task",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+          "value": "hasConstraint",
+          "type": "literal",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#range",
+          "value": "https://w3id.org/IproK#Constraint",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        }
+      ],
+      "sourceFiles": [
+        "ontology.ttl"
+      ]
+    },
+    {
+      "id": "https://w3id.org/IproK/schedule#hasPredecessorDependency",
+      "local": "hasPredecessorDependency",
+      "label": "hasPredecessorDependency",
+      "declaredLabel": true,
+      "kind": "Object property",
+      "module": "schedule",
+      "description": "",
+      "domain": [
+        "https://w3id.org/IproK/schedule#Task"
+      ],
+      "range": [
+        "https://w3id.org/IproK/schedule#TaskDependency"
+      ],
+      "parents": [],
+      "statements": [
+        {
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "value": "http://www.w3.org/2002/07/owl#ObjectProperty",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#domain",
+          "value": "https://w3id.org/IproK/schedule#Task",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+          "value": "hasPredecessorDependency",
+          "type": "literal",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#range",
+          "value": "https://w3id.org/IproK/schedule#TaskDependency",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        }
+      ],
+      "sourceFiles": [
+        "ontology.ttl"
+      ]
+    },
+    {
+      "id": "https://w3id.org/IproK/schedule#hasSubTask",
+      "local": "hasSubTask",
+      "label": "hasSubTask",
+      "declaredLabel": true,
+      "kind": "Object property",
+      "module": "schedule",
+      "description": "",
+      "domain": [
+        "https://w3id.org/IproK/schedule#Task"
+      ],
+      "range": [
+        "https://w3id.org/IproK/schedule#Task"
+      ],
+      "parents": [],
+      "statements": [
+        {
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "value": "http://www.w3.org/2002/07/owl#ObjectProperty",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#domain",
+          "value": "https://w3id.org/IproK/schedule#Task",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+          "value": "hasSubTask",
+          "type": "literal",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#range",
+          "value": "https://w3id.org/IproK/schedule#Task",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        }
+      ],
+      "sourceFiles": [
+        "ontology.ttl"
+      ]
+    },
+    {
+      "id": "https://w3id.org/IproK/schedule#hasSuccessorDependency",
+      "local": "hasSuccessorDependency",
+      "label": "hasSuccessorDependency",
+      "declaredLabel": true,
+      "kind": "Object property",
+      "module": "schedule",
+      "description": "",
+      "domain": [
+        "https://w3id.org/IproK/schedule#Task"
+      ],
+      "range": [
+        "https://w3id.org/IproK/schedule#TaskDependency"
+      ],
+      "parents": [],
+      "statements": [
+        {
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "value": "http://www.w3.org/2002/07/owl#ObjectProperty",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#domain",
+          "value": "https://w3id.org/IproK/schedule#Task",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+          "value": "hasSuccessorDependency",
+          "type": "literal",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#range",
+          "value": "https://w3id.org/IproK/schedule#TaskDependency",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        }
+      ],
+      "sourceFiles": [
+        "ontology.ttl"
+      ]
+    },
+    {
+      "id": "https://w3id.org/IproK/schedule#hasTask",
+      "local": "hasTask",
+      "label": "hasTask",
+      "declaredLabel": true,
+      "kind": "Object property",
+      "module": "schedule",
+      "description": "",
+      "domain": [
+        "https://w3id.org/IproK/schedule#WBS_Element"
+      ],
+      "range": [
+        "https://w3id.org/IproK/schedule#Task"
+      ],
+      "parents": [],
+      "statements": [
+        {
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "value": "http://www.w3.org/2002/07/owl#ObjectProperty",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#domain",
+          "value": "https://w3id.org/IproK/schedule#WBS_Element",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+          "value": "hasTask",
+          "type": "literal",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#range",
+          "value": "https://w3id.org/IproK/schedule#Task",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        }
+      ],
+      "sourceFiles": [
+        "ontology.ttl"
+      ]
+    },
+    {
+      "id": "https://w3id.org/IproK/schedule#hasTaskTime",
+      "local": "hasTaskTime",
+      "label": "hasTaskTime",
+      "declaredLabel": true,
+      "kind": "Object property",
+      "module": "schedule",
+      "description": "",
+      "domain": [
+        "https://w3id.org/IproK/schedule#Task"
+      ],
+      "range": [
+        "https://w3id.org/IproK/schedule#TaskTime"
+      ],
+      "parents": [],
+      "statements": [
+        {
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "value": "http://www.w3.org/2002/07/owl#FunctionalProperty",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "value": "http://www.w3.org/2002/07/owl#ObjectProperty",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#domain",
+          "value": "https://w3id.org/IproK/schedule#Task",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+          "value": "hasTaskTime",
+          "type": "literal",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#range",
+          "value": "https://w3id.org/IproK/schedule#TaskTime",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        }
+      ],
+      "sourceFiles": [
+        "ontology.ttl"
+      ]
+    },
+    {
+      "id": "https://w3id.org/IproK/schedule#hasWBS",
+      "local": "hasWBS",
+      "label": "hasWBS",
+      "declaredLabel": true,
+      "kind": "Object property",
+      "module": "schedule",
+      "description": "",
+      "domain": [
+        "https://w3id.org/IproK/schedule#WorkPackage"
+      ],
+      "range": [
+        "https://w3id.org/IproK/schedule#WBS_Element"
+      ],
+      "parents": [],
+      "statements": [
+        {
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "value": "http://www.w3.org/2002/07/owl#ObjectProperty",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#domain",
+          "value": "https://w3id.org/IproK/schedule#WorkPackage",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+          "value": "hasWBS",
+          "type": "literal",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#range",
+          "value": "https://w3id.org/IproK/schedule#WBS_Element",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        }
+      ],
+      "sourceFiles": [
+        "ontology.ttl"
+      ]
+    },
+    {
+      "id": "https://w3id.org/IproK/schedule#hasWorkPackage",
+      "local": "hasWorkPackage",
+      "label": "hasWorkPackage",
+      "declaredLabel": true,
+      "kind": "Object property",
+      "module": "schedule",
+      "description": "",
+      "domain": [
+        "https://w3id.org/IproK/schedule#Project"
+      ],
+      "range": [
+        "https://w3id.org/IproK/schedule#WorkPackage"
+      ],
+      "parents": [],
+      "statements": [
+        {
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "value": "http://www.w3.org/2002/07/owl#ObjectProperty",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#domain",
+          "value": "https://w3id.org/IproK/schedule#Project",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+          "value": "hasWorkPackage",
+          "type": "literal",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#range",
+          "value": "https://w3id.org/IproK/schedule#WorkPackage",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        }
+      ],
+      "sourceFiles": [
+        "ontology.ttl"
+      ]
+    },
+    {
+      "id": "https://w3id.org/IproK/schedule#linksToPredecessorTask",
+      "local": "linksToPredecessorTask",
+      "label": "linksToPredecessorTask",
+      "declaredLabel": true,
+      "kind": "Object property",
+      "module": "schedule",
+      "description": "",
+      "domain": [
+        "https://w3id.org/IproK/schedule#TaskDependency"
+      ],
+      "range": [
+        "https://w3id.org/IproK/schedule#Task"
+      ],
+      "parents": [],
+      "statements": [
+        {
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "value": "http://www.w3.org/2002/07/owl#FunctionalProperty",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "value": "http://www.w3.org/2002/07/owl#ObjectProperty",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#domain",
+          "value": "https://w3id.org/IproK/schedule#TaskDependency",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+          "value": "linksToPredecessorTask",
+          "type": "literal",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#range",
+          "value": "https://w3id.org/IproK/schedule#Task",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        }
+      ],
+      "sourceFiles": [
+        "ontology.ttl"
+      ]
+    },
+    {
+      "id": "https://w3id.org/IproK/schedule#linksToSuccessorTask",
+      "local": "linksToSuccessorTask",
+      "label": "linksToSuccessorTask",
+      "declaredLabel": true,
+      "kind": "Object property",
+      "module": "schedule",
+      "description": "",
+      "domain": [
+        "https://w3id.org/IproK/schedule#TaskDependency"
+      ],
+      "range": [
+        "https://w3id.org/IproK/schedule#Task"
+      ],
+      "parents": [],
+      "statements": [
+        {
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "value": "http://www.w3.org/2002/07/owl#FunctionalProperty",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "value": "http://www.w3.org/2002/07/owl#ObjectProperty",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#domain",
+          "value": "https://w3id.org/IproK/schedule#TaskDependency",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+          "value": "linksToSuccessorTask",
+          "type": "literal",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#range",
+          "value": "https://w3id.org/IproK/schedule#Task",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        }
+      ],
+      "sourceFiles": [
+        "ontology.ttl"
+      ]
+    },
+    {
+      "id": "https://w3id.org/IproK#hasDescription",
+      "local": "hasDescription",
+      "label": "hasDescription",
+      "declaredLabel": true,
+      "kind": "Data property",
+      "module": "IproK",
+      "description": "A textual description of the entity.",
+      "domain": [
+        "https://w3id.org/IproK#IproKThing"
+      ],
+      "range": [
+        "http://www.w3.org/2001/XMLSchema#string"
+      ],
+      "parents": [],
+      "statements": [
+        {
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "value": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#comment",
+          "value": "A textual description of the entity.",
+          "type": "literal",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#domain",
+          "value": "https://w3id.org/IproK#IproKThing",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+          "value": "hasDescription",
+          "type": "literal",
+          "language": "en",
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#range",
+          "value": "http://www.w3.org/2001/XMLSchema#string",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        }
+      ],
+      "sourceFiles": [
+        "ontology.ttl"
+      ]
+    },
+    {
+      "id": "https://w3id.org/IproK#hasGlobalId",
+      "local": "hasGlobalId",
+      "label": "hasGlobalId",
+      "declaredLabel": true,
+      "kind": "Data property",
+      "module": "IproK",
+      "description": "A globally unique identifier.",
+      "domain": [
+        "https://w3id.org/IproK#IproKThing"
+      ],
+      "range": [
+        "http://www.w3.org/2001/XMLSchema#string"
+      ],
+      "parents": [],
+      "statements": [
+        {
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "value": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "value": "http://www.w3.org/2002/07/owl#FunctionalProperty",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#comment",
+          "value": "A globally unique identifier.",
+          "type": "literal",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#domain",
+          "value": "https://w3id.org/IproK#IproKThing",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+          "value": "hasGlobalId",
+          "type": "literal",
+          "language": "en",
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#range",
+          "value": "http://www.w3.org/2001/XMLSchema#string",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        }
+      ],
+      "sourceFiles": [
+        "ontology.ttl"
+      ]
+    },
+    {
+      "id": "https://w3id.org/IproK#hasId",
+      "local": "hasId",
+      "label": "hasId",
+      "declaredLabel": true,
+      "kind": "Data property",
+      "module": "IproK",
+      "description": "A local or project-specific identifier.",
+      "domain": [
+        "https://w3id.org/IproK#IproKThing"
+      ],
+      "range": [
+        "http://www.w3.org/2001/XMLSchema#string"
+      ],
+      "parents": [],
+      "statements": [
+        {
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "value": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "value": "http://www.w3.org/2002/07/owl#FunctionalProperty",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#comment",
+          "value": "A local or project-specific identifier.",
+          "type": "literal",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#domain",
+          "value": "https://w3id.org/IproK#IproKThing",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+          "value": "hasId",
+          "type": "literal",
+          "language": "en",
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#range",
+          "value": "http://www.w3.org/2001/XMLSchema#string",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        }
+      ],
+      "sourceFiles": [
+        "ontology.ttl"
+      ]
+    },
+    {
+      "id": "https://w3id.org/IproK#hasName",
+      "local": "hasName",
+      "label": "hasName",
+      "declaredLabel": true,
+      "kind": "Data property",
+      "module": "IproK",
+      "description": "The common name of the entity.",
+      "domain": [
+        "https://w3id.org/IproK#IproKThing"
+      ],
+      "range": [
+        "http://www.w3.org/2001/XMLSchema#string"
+      ],
+      "parents": [],
+      "statements": [
+        {
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "value": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "value": "http://www.w3.org/2002/07/owl#FunctionalProperty",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#comment",
+          "value": "The common name of the entity.",
+          "type": "literal",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#domain",
+          "value": "https://w3id.org/IproK#IproKThing",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+          "value": "hasName",
+          "type": "literal",
+          "language": "en",
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#range",
+          "value": "http://www.w3.org/2001/XMLSchema#string",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        }
+      ],
+      "sourceFiles": [
+        "ontology.ttl"
+      ]
+    },
+    {
+      "id": "https://w3id.org/IproK/cost#actualCostAmount",
+      "local": "actualCostAmount",
+      "label": "actualCostAmount",
+      "declaredLabel": true,
+      "kind": "Data property",
+      "module": "cost",
+      "description": "this is actual cost amount",
+      "domain": [
+        "https://w3id.org/IproK/cost#CostItem"
+      ],
+      "range": [
+        "http://www.w3.org/2001/XMLSchema#decimal"
+      ],
+      "parents": [],
+      "statements": [
+        {
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "value": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "value": "http://www.w3.org/2002/07/owl#FunctionalProperty",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#comment",
+          "value": "this is actual cost amount",
+          "type": "literal",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#domain",
+          "value": "https://w3id.org/IproK/cost#CostItem",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+          "value": "actualCostAmount",
+          "type": "literal",
+          "language": "en",
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#range",
+          "value": "http://www.w3.org/2001/XMLSchema#decimal",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        }
+      ],
+      "sourceFiles": [
+        "ontology.ttl"
+      ]
+    },
+    {
+      "id": "https://w3id.org/IproK/cost#atCompleteCostAmount",
+      "local": "atCompleteCostAmount",
+      "label": "atCompleteCostAmount",
+      "declaredLabel": true,
+      "kind": "Data property",
+      "module": "cost",
+      "description": "",
+      "domain": [
+        "https://w3id.org/IproK/cost#CostItem"
+      ],
+      "range": [
+        "http://www.w3.org/2001/XMLSchema#decimal"
+      ],
+      "parents": [],
+      "statements": [
+        {
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "value": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "value": "http://www.w3.org/2002/07/owl#FunctionalProperty",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#domain",
+          "value": "https://w3id.org/IproK/cost#CostItem",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+          "value": "atCompleteCostAmount",
+          "type": "literal",
+          "language": "en",
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#range",
+          "value": "http://www.w3.org/2001/XMLSchema#decimal",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        }
+      ],
+      "sourceFiles": [
+        "ontology.ttl"
+      ]
+    },
+    {
+      "id": "https://w3id.org/IproK/cost#budgetedCostAmount",
+      "local": "budgetedCostAmount",
+      "label": "budgetedCostAmount",
+      "declaredLabel": true,
+      "kind": "Data property",
+      "module": "cost",
+      "description": "",
+      "domain": [
+        "https://w3id.org/IproK/cost#CostItem"
+      ],
+      "range": [
+        "http://www.w3.org/2001/XMLSchema#decimal"
+      ],
+      "parents": [],
+      "statements": [
+        {
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "value": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "value": "http://www.w3.org/2002/07/owl#FunctionalProperty",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#domain",
+          "value": "https://w3id.org/IproK/cost#CostItem",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+          "value": "budgetedCostAmount",
+          "type": "literal",
+          "language": "en",
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#range",
+          "value": "http://www.w3.org/2001/XMLSchema#decimal",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        }
+      ],
+      "sourceFiles": [
+        "ontology.ttl"
+      ]
+    },
+    {
+      "id": "https://w3id.org/IproK/cost#remainingCostAmount",
+      "local": "remainingCostAmount",
+      "label": "remainingCostAmount",
+      "declaredLabel": true,
+      "kind": "Data property",
+      "module": "cost",
+      "description": "",
+      "domain": [
+        "https://w3id.org/IproK/cost#CostItem"
+      ],
+      "range": [
+        "http://www.w3.org/2001/XMLSchema#decimal"
+      ],
+      "parents": [],
+      "statements": [
+        {
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "value": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "value": "http://www.w3.org/2002/07/owl#FunctionalProperty",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#domain",
+          "value": "https://w3id.org/IproK/cost#CostItem",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+          "value": "remainingCostAmount",
+          "type": "literal",
+          "language": "en",
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#range",
+          "value": "http://www.w3.org/2001/XMLSchema#decimal",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        }
+      ],
+      "sourceFiles": [
+        "ontology.ttl"
+      ]
+    },
+    {
+      "id": "https://w3id.org/IproK/cost#vendorName",
+      "local": "vendorName",
+      "label": "vendorName",
+      "declaredLabel": true,
+      "kind": "Data property",
+      "module": "cost",
+      "description": "",
+      "domain": [
+        "https://w3id.org/IproK/cost#CostItem"
+      ],
+      "range": [
+        "http://www.w3.org/2001/XMLSchema#string"
+      ],
+      "parents": [],
+      "statements": [
+        {
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "value": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#domain",
+          "value": "https://w3id.org/IproK/cost#CostItem",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+          "value": "vendorName",
+          "type": "literal",
+          "language": "en",
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#range",
+          "value": "http://www.w3.org/2001/XMLSchema#string",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        }
+      ],
+      "sourceFiles": [
+        "ontology.ttl"
+      ]
+    },
+    {
+      "id": "https://w3id.org/IproK/integrated#allocatedUnits",
+      "local": "allocatedUnits",
+      "label": "allocatedUnits",
+      "declaredLabel": true,
+      "kind": "Data property",
+      "module": "integrated",
+      "description": "",
+      "domain": [
+        "https://w3id.org/IproK/integrated#ResourceAllocation"
+      ],
+      "range": [
+        "http://www.w3.org/2001/XMLSchema#decimal"
+      ],
+      "parents": [],
+      "statements": [
+        {
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "value": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "value": "http://www.w3.org/2002/07/owl#FunctionalProperty",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#comment",
+          "value": "",
+          "type": "literal",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#domain",
+          "value": "https://w3id.org/IproK/integrated#ResourceAllocation",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+          "value": "allocatedUnits",
+          "type": "literal",
+          "language": "en",
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#range",
+          "value": "http://www.w3.org/2001/XMLSchema#decimal",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        }
+      ],
+      "sourceFiles": [
+        "ontology.ttl"
+      ]
+    },
+    {
+      "id": "https://w3id.org/IproK/integrated#allocationPlannedFinishDate",
+      "local": "allocationPlannedFinishDate",
+      "label": "allocationPlannedFinishDate",
+      "declaredLabel": true,
+      "kind": "Data property",
+      "module": "integrated",
+      "description": "",
+      "domain": [
+        "https://w3id.org/IproK/integrated#ResourceAllocation"
+      ],
+      "range": [
+        "http://www.w3.org/2001/XMLSchema#dateTime"
+      ],
+      "parents": [],
+      "statements": [
+        {
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "value": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "value": "http://www.w3.org/2002/07/owl#FunctionalProperty",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#domain",
+          "value": "https://w3id.org/IproK/integrated#ResourceAllocation",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+          "value": "allocationPlannedFinishDate",
+          "type": "literal",
+          "language": "en",
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#range",
+          "value": "http://www.w3.org/2001/XMLSchema#dateTime",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        }
+      ],
+      "sourceFiles": [
+        "ontology.ttl"
+      ]
+    },
+    {
+      "id": "https://w3id.org/IproK/integrated#allocationPlannedStartDate",
+      "local": "allocationPlannedStartDate",
+      "label": "allocationPlannedStartDate",
+      "declaredLabel": true,
+      "kind": "Data property",
+      "module": "integrated",
+      "description": "",
+      "domain": [
+        "https://w3id.org/IproK/integrated#ResourceAllocation"
+      ],
+      "range": [
+        "http://www.w3.org/2001/XMLSchema#dateTime"
+      ],
+      "parents": [],
+      "statements": [
+        {
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "value": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "value": "http://www.w3.org/2002/07/owl#FunctionalProperty",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#domain",
+          "value": "https://w3id.org/IproK/integrated#ResourceAllocation",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+          "value": "allocationPlannedStartDate",
+          "type": "literal",
+          "language": "en",
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#range",
+          "value": "http://www.w3.org/2001/XMLSchema#dateTime",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        }
+      ],
+      "sourceFiles": [
+        "ontology.ttl"
+      ]
+    },
+    {
+      "id": "https://w3id.org/IproK/resource#actualUnits",
+      "local": "actualUnits",
+      "label": "actualUnits",
+      "declaredLabel": true,
+      "kind": "Data property",
+      "module": "resource",
+      "description": "",
+      "domain": [
+        "https://w3id.org/IproK/resource#Resource"
+      ],
+      "range": [
+        "http://www.w3.org/2001/XMLSchema#decimal"
+      ],
+      "parents": [],
+      "statements": [
+        {
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "value": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#comment",
+          "value": "",
+          "type": "literal",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#domain",
+          "value": "https://w3id.org/IproK/resource#Resource",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+          "value": "actualUnits",
+          "type": "literal",
+          "language": "en",
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#range",
+          "value": "http://www.w3.org/2001/XMLSchema#decimal",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        }
+      ],
+      "sourceFiles": [
+        "ontology.ttl"
+      ]
+    },
+    {
+      "id": "https://w3id.org/IproK/resource#atCompleteUnits",
+      "local": "atCompleteUnits",
+      "label": "atCompleteUnits",
+      "declaredLabel": true,
+      "kind": "Data property",
+      "module": "resource",
+      "description": "",
+      "domain": [
+        "https://w3id.org/IproK/resource#Resource"
+      ],
+      "range": [
+        "http://www.w3.org/2001/XMLSchema#decimal"
+      ],
+      "parents": [],
+      "statements": [
+        {
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "value": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#domain",
+          "value": "https://w3id.org/IproK/resource#Resource",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+          "value": "atCompleteUnits",
+          "type": "literal",
+          "language": "en",
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#range",
+          "value": "http://www.w3.org/2001/XMLSchema#decimal",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        }
+      ],
+      "sourceFiles": [
+        "ontology.ttl"
+      ]
+    },
+    {
+      "id": "https://w3id.org/IproK/resource#baseRate",
+      "local": "baseRate",
+      "label": "baseRate",
+      "declaredLabel": true,
+      "kind": "Data property",
+      "module": "resource",
+      "description": "",
+      "domain": [
+        "https://w3id.org/IproK/resource#Resource"
+      ],
+      "range": [
+        "http://www.w3.org/2001/XMLSchema#decimal"
+      ],
+      "parents": [],
+      "statements": [
+        {
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "value": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#domain",
+          "value": "https://w3id.org/IproK/resource#Resource",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+          "value": "baseRate",
+          "type": "literal",
+          "language": "en",
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#range",
+          "value": "http://www.w3.org/2001/XMLSchema#decimal",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        }
+      ],
+      "sourceFiles": [
+        "ontology.ttl"
+      ]
+    },
+    {
+      "id": "https://w3id.org/IproK/resource#budgetedUnits",
+      "local": "budgetedUnits",
+      "label": "budgetedUnits",
+      "declaredLabel": true,
+      "kind": "Data property",
+      "module": "resource",
+      "description": "",
+      "domain": [
+        "https://w3id.org/IproK/resource#Resource"
+      ],
+      "range": [
+        "http://www.w3.org/2001/XMLSchema#decimal"
+      ],
+      "parents": [],
+      "statements": [
+        {
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "value": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#domain",
+          "value": "https://w3id.org/IproK/resource#Resource",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+          "value": "budgetedUnits",
+          "type": "literal",
+          "language": "en",
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#range",
+          "value": "http://www.w3.org/2001/XMLSchema#decimal",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        }
+      ],
+      "sourceFiles": [
+        "ontology.ttl"
+      ]
+    },
+    {
+      "id": "https://w3id.org/IproK/resource#currency",
+      "local": "currency",
+      "label": "currency",
+      "declaredLabel": true,
+      "kind": "Data property",
+      "module": "resource",
+      "description": "",
+      "domain": [
+        "https://w3id.org/IproK/resource#Resource"
+      ],
+      "range": [
+        "http://www.w3.org/2001/XMLSchema#string"
+      ],
+      "parents": [],
+      "statements": [
+        {
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "value": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "value": "http://www.w3.org/2002/07/owl#FunctionalProperty",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#domain",
+          "value": "https://w3id.org/IproK/resource#Resource",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+          "value": "currency",
+          "type": "literal",
+          "language": "en",
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#range",
+          "value": "http://www.w3.org/2001/XMLSchema#string",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        }
+      ],
+      "sourceFiles": [
+        "ontology.ttl"
+      ]
+    },
+    {
+      "id": "https://w3id.org/IproK/resource#effectiveDateForRate",
+      "local": "effectiveDateForRate",
+      "label": "effectiveDateForRate",
+      "declaredLabel": true,
+      "kind": "Data property",
+      "module": "resource",
+      "description": "",
+      "domain": [
+        "https://w3id.org/IproK/resource#Resource"
+      ],
+      "range": [
+        "http://www.w3.org/2001/XMLSchema#dateTime"
+      ],
+      "parents": [],
+      "statements": [
+        {
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "value": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "value": "http://www.w3.org/2002/07/owl#FunctionalProperty",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#domain",
+          "value": "https://w3id.org/IproK/resource#Resource",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+          "value": "effectiveDateForRate",
+          "type": "literal",
+          "language": "en",
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#range",
+          "value": "http://www.w3.org/2001/XMLSchema#dateTime",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        }
+      ],
+      "sourceFiles": [
+        "ontology.ttl"
+      ]
+    },
+    {
+      "id": "https://w3id.org/IproK/resource#isPrimaryResource",
+      "local": "isPrimaryResource",
+      "label": "isPrimaryResource",
+      "declaredLabel": true,
+      "kind": "Data property",
+      "module": "resource",
+      "description": "",
+      "domain": [
+        "https://w3id.org/IproK/resource#Resource"
+      ],
+      "range": [
+        "http://www.w3.org/2001/XMLSchema#boolean"
+      ],
+      "parents": [],
+      "statements": [
+        {
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "value": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "value": "http://www.w3.org/2002/07/owl#FunctionalProperty",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#domain",
+          "value": "https://w3id.org/IproK/resource#Resource",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+          "value": "isPrimaryResource",
+          "type": "literal",
+          "language": "en",
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#range",
+          "value": "http://www.w3.org/2001/XMLSchema#boolean",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        }
+      ],
+      "sourceFiles": [
+        "ontology.ttl"
+      ]
+    },
+    {
+      "id": "https://w3id.org/IproK/resource#maxUnits",
+      "local": "maxUnits",
+      "label": "maxUnits",
+      "declaredLabel": true,
+      "kind": "Data property",
+      "module": "resource",
+      "description": "",
+      "domain": [
+        "https://w3id.org/IproK/resource#Resource"
+      ],
+      "range": [
+        "http://www.w3.org/2001/XMLSchema#decimal"
+      ],
+      "parents": [],
+      "statements": [
+        {
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "value": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "value": "http://www.w3.org/2002/07/owl#FunctionalProperty",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#domain",
+          "value": "https://w3id.org/IproK/resource#Resource",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+          "value": "maxUnits",
+          "type": "literal",
+          "language": "en",
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#range",
+          "value": "http://www.w3.org/2001/XMLSchema#decimal",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        }
+      ],
+      "sourceFiles": [
+        "ontology.ttl"
+      ]
+    },
+    {
+      "id": "https://w3id.org/IproK/resource#remainingUnits",
+      "local": "remainingUnits",
+      "label": "remainingUnits",
+      "declaredLabel": true,
+      "kind": "Data property",
+      "module": "resource",
+      "description": "",
+      "domain": [
+        "https://w3id.org/IproK/resource#Resource"
+      ],
+      "range": [
+        "http://www.w3.org/2001/XMLSchema#decimal"
+      ],
+      "parents": [],
+      "statements": [
+        {
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "value": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#domain",
+          "value": "https://w3id.org/IproK/resource#Resource",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+          "value": "remainingUnits",
+          "type": "literal",
+          "language": "en",
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#range",
+          "value": "http://www.w3.org/2001/XMLSchema#decimal",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        }
+      ],
+      "sourceFiles": [
+        "ontology.ttl"
+      ]
+    },
+    {
+      "id": "https://w3id.org/IproK/schedule#actualDuration",
+      "local": "actualDuration",
+      "label": "actualDuration",
+      "declaredLabel": true,
+      "kind": "Data property",
+      "module": "schedule",
+      "description": "",
+      "domain": [
+        "https://w3id.org/IproK/schedule#TaskTime"
+      ],
+      "range": [
+        "http://www.w3.org/2001/XMLSchema#decimal"
+      ],
+      "parents": [],
+      "statements": [
+        {
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "value": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "value": "http://www.w3.org/2002/07/owl#FunctionalProperty",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#domain",
+          "value": "https://w3id.org/IproK/schedule#TaskTime",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+          "value": "actualDuration",
+          "type": "literal",
+          "language": "en",
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#range",
+          "value": "http://www.w3.org/2001/XMLSchema#decimal",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        }
+      ],
+      "sourceFiles": [
+        "ontology.ttl"
+      ]
+    },
+    {
+      "id": "https://w3id.org/IproK/schedule#actualFinishDate",
+      "local": "actualFinishDate",
+      "label": "actualFinishDate",
+      "declaredLabel": true,
+      "kind": "Data property",
+      "module": "schedule",
+      "description": "",
+      "domain": [
+        "https://w3id.org/IproK/schedule#TaskTime"
+      ],
+      "range": [
+        "http://www.w3.org/2001/XMLSchema#dateTime"
+      ],
+      "parents": [],
+      "statements": [
+        {
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "value": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "value": "http://www.w3.org/2002/07/owl#FunctionalProperty",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#domain",
+          "value": "https://w3id.org/IproK/schedule#TaskTime",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+          "value": "actualFinishDate",
+          "type": "literal",
+          "language": "en",
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#range",
+          "value": "http://www.w3.org/2001/XMLSchema#dateTime",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        }
+      ],
+      "sourceFiles": [
+        "ontology.ttl"
+      ]
+    },
+    {
+      "id": "https://w3id.org/IproK/schedule#actualStartDate",
+      "local": "actualStartDate",
+      "label": "actualStartDate",
+      "declaredLabel": true,
+      "kind": "Data property",
+      "module": "schedule",
+      "description": "",
+      "domain": [
+        "https://w3id.org/IproK/schedule#TaskTime"
+      ],
+      "range": [
+        "http://www.w3.org/2001/XMLSchema#dateTime"
+      ],
+      "parents": [],
+      "statements": [
+        {
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "value": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "value": "http://www.w3.org/2002/07/owl#FunctionalProperty",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#domain",
+          "value": "https://w3id.org/IproK/schedule#TaskTime",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+          "value": "actualStartDate",
+          "type": "literal",
+          "language": "en",
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#range",
+          "value": "http://www.w3.org/2001/XMLSchema#dateTime",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        }
+      ],
+      "sourceFiles": [
+        "ontology.ttl"
+      ]
+    },
+    {
+      "id": "https://w3id.org/IproK/schedule#atCompleteDuration",
+      "local": "atCompleteDuration",
+      "label": "atCompleteDuration",
+      "declaredLabel": true,
+      "kind": "Data property",
+      "module": "schedule",
+      "description": "",
+      "domain": [
+        "https://w3id.org/IproK/schedule#TaskTime"
+      ],
+      "range": [
+        "http://www.w3.org/2001/XMLSchema#decimal"
+      ],
+      "parents": [],
+      "statements": [
+        {
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "value": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "value": "http://www.w3.org/2002/07/owl#FunctionalProperty",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#domain",
+          "value": "https://w3id.org/IproK/schedule#TaskTime",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+          "value": "atCompleteDuration",
+          "type": "literal",
+          "language": "en",
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#range",
+          "value": "http://www.w3.org/2001/XMLSchema#decimal",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        }
+      ],
+      "sourceFiles": [
+        "ontology.ttl"
+      ]
+    },
+    {
+      "id": "https://w3id.org/IproK/schedule#constraintDate",
+      "local": "constraintDate",
+      "label": "constraintDate",
+      "declaredLabel": true,
+      "kind": "Data property",
+      "module": "schedule",
+      "description": "",
+      "domain": [
+        "https://w3id.org/IproK#Constraint"
+      ],
+      "range": [
+        "http://www.w3.org/2001/XMLSchema#dateTime"
+      ],
+      "parents": [],
+      "statements": [
+        {
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "value": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "value": "http://www.w3.org/2002/07/owl#FunctionalProperty",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#domain",
+          "value": "https://w3id.org/IproK#Constraint",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+          "value": "constraintDate",
+          "type": "literal",
+          "language": "en",
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#range",
+          "value": "http://www.w3.org/2001/XMLSchema#dateTime",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        }
+      ],
+      "sourceFiles": [
+        "ontology.ttl"
+      ]
+    },
+    {
+      "id": "https://w3id.org/IproK/schedule#constraintType",
+      "local": "constraintType",
+      "label": "constraintType",
+      "declaredLabel": true,
+      "kind": "Data property",
+      "module": "schedule",
+      "description": "",
+      "domain": [
+        "https://w3id.org/IproK#Constraint"
+      ],
+      "range": [
+        "http://www.w3.org/2001/XMLSchema#string"
+      ],
+      "parents": [],
+      "statements": [
+        {
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "value": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "value": "http://www.w3.org/2002/07/owl#FunctionalProperty",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#domain",
+          "value": "https://w3id.org/IproK#Constraint",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+          "value": "constraintType",
+          "type": "literal",
+          "language": "en",
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#range",
+          "value": "http://www.w3.org/2001/XMLSchema#string",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        }
+      ],
+      "sourceFiles": [
+        "ontology.ttl"
+      ]
+    },
+    {
+      "id": "https://w3id.org/IproK/schedule#isCriticalTask",
+      "local": "isCriticalTask",
+      "label": "isCriticalTask",
+      "declaredLabel": true,
+      "kind": "Data property",
+      "module": "schedule",
+      "description": "",
+      "domain": [
+        "https://w3id.org/IproK/schedule#Task"
+      ],
+      "range": [
+        "http://www.w3.org/2001/XMLSchema#boolean"
+      ],
+      "parents": [],
+      "statements": [
+        {
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "value": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "value": "http://www.w3.org/2002/07/owl#FunctionalProperty",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#domain",
+          "value": "https://w3id.org/IproK/schedule#Task",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+          "value": "isCriticalTask",
+          "type": "literal",
+          "language": "en",
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#range",
+          "value": "http://www.w3.org/2001/XMLSchema#boolean",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        }
+      ],
+      "sourceFiles": [
+        "ontology.ttl"
+      ]
+    },
+    {
+      "id": "https://w3id.org/IproK/schedule#isMilestone",
+      "local": "isMilestone",
+      "label": "isMilestone",
+      "declaredLabel": true,
+      "kind": "Data property",
+      "module": "schedule",
+      "description": "",
+      "domain": [
+        "https://w3id.org/IproK/schedule#Task"
+      ],
+      "range": [
+        "http://www.w3.org/2001/XMLSchema#boolean"
+      ],
+      "parents": [],
+      "statements": [
+        {
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "value": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "value": "http://www.w3.org/2002/07/owl#FunctionalProperty",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#domain",
+          "value": "https://w3id.org/IproK/schedule#Task",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+          "value": "isMilestone",
+          "type": "literal",
+          "language": "en",
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#range",
+          "value": "http://www.w3.org/2001/XMLSchema#boolean",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        }
+      ],
+      "sourceFiles": [
+        "ontology.ttl"
+      ]
+    },
+    {
+      "id": "https://w3id.org/IproK/schedule#lagTime",
+      "local": "lagTime",
+      "label": "lagTime",
+      "declaredLabel": true,
+      "kind": "Data property",
+      "module": "schedule",
+      "description": "",
+      "domain": [
+        "https://w3id.org/IproK/schedule#TaskDependency"
+      ],
+      "range": [
+        "http://www.w3.org/2001/XMLSchema#decimal"
+      ],
+      "parents": [],
+      "statements": [
+        {
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "value": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "value": "http://www.w3.org/2002/07/owl#FunctionalProperty",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#domain",
+          "value": "https://w3id.org/IproK/schedule#TaskDependency",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+          "value": "lagTime",
+          "type": "literal",
+          "language": "en",
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#range",
+          "value": "http://www.w3.org/2001/XMLSchema#decimal",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        }
+      ],
+      "sourceFiles": [
+        "ontology.ttl"
+      ]
+    },
+    {
+      "id": "https://w3id.org/IproK/schedule#plannedFinishDate",
+      "local": "plannedFinishDate",
+      "label": "plannedFinishDate",
+      "declaredLabel": true,
+      "kind": "Data property",
+      "module": "schedule",
+      "description": "",
+      "domain": [
+        "https://w3id.org/IproK/schedule#TaskTime"
+      ],
+      "range": [
+        "http://www.w3.org/2001/XMLSchema#dateTime"
+      ],
+      "parents": [],
+      "statements": [
+        {
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "value": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "value": "http://www.w3.org/2002/07/owl#FunctionalProperty",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#domain",
+          "value": "https://w3id.org/IproK/schedule#TaskTime",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+          "value": "plannedFinishDate",
+          "type": "literal",
+          "language": "en",
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#range",
+          "value": "http://www.w3.org/2001/XMLSchema#dateTime",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        }
+      ],
+      "sourceFiles": [
+        "ontology.ttl"
+      ]
+    },
+    {
+      "id": "https://w3id.org/IproK/schedule#plannedStartDate",
+      "local": "plannedStartDate",
+      "label": "plannedFinishDate",
+      "declaredLabel": true,
+      "kind": "Data property",
+      "module": "schedule",
+      "description": "",
+      "domain": [
+        "https://w3id.org/IproK/schedule#TaskTime"
+      ],
+      "range": [
+        "http://www.w3.org/2001/XMLSchema#dateTime"
+      ],
+      "parents": [],
+      "statements": [
+        {
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "value": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "value": "http://www.w3.org/2002/07/owl#FunctionalProperty",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#domain",
+          "value": "https://w3id.org/IproK/schedule#TaskTime",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+          "value": "plannedFinishDate",
+          "type": "literal",
+          "language": "en",
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#range",
+          "value": "http://www.w3.org/2001/XMLSchema#dateTime",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        }
+      ],
+      "sourceFiles": [
+        "ontology.ttl"
+      ]
+    },
+    {
+      "id": "https://w3id.org/IproK/schedule#projectAddress",
+      "local": "projectAddress",
+      "label": "projectAddress",
+      "declaredLabel": true,
+      "kind": "Data property",
+      "module": "schedule",
+      "description": "",
+      "domain": [
+        "https://w3id.org/IproK/schedule#Project"
+      ],
+      "range": [
+        "http://www.w3.org/2001/XMLSchema#string"
+      ],
+      "parents": [],
+      "statements": [
+        {
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "value": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#domain",
+          "value": "https://w3id.org/IproK/schedule#Project",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+          "value": "projectAddress",
+          "type": "literal",
+          "language": "en",
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#range",
+          "value": "http://www.w3.org/2001/XMLSchema#string",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        }
+      ],
+      "sourceFiles": [
+        "ontology.ttl"
+      ]
+    },
+    {
+      "id": "https://w3id.org/IproK/schedule#projectCategory",
+      "local": "projectCategory",
+      "label": "projectCategory",
+      "declaredLabel": true,
+      "kind": "Data property",
+      "module": "schedule",
+      "description": "",
+      "domain": [
+        "https://w3id.org/IproK/schedule#Project"
+      ],
+      "range": [
+        "http://www.w3.org/2001/XMLSchema#string"
+      ],
+      "parents": [],
+      "statements": [
+        {
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "value": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#domain",
+          "value": "https://w3id.org/IproK/schedule#Project",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+          "value": "projectCategory",
+          "type": "literal",
+          "language": "en",
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#range",
+          "value": "http://www.w3.org/2001/XMLSchema#string",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        }
+      ],
+      "sourceFiles": [
+        "ontology.ttl"
+      ]
+    },
+    {
+      "id": "https://w3id.org/IproK/schedule#projectOwner",
+      "local": "projectOwner",
+      "label": "projectOwner",
+      "declaredLabel": true,
+      "kind": "Data property",
+      "module": "schedule",
+      "description": "",
+      "domain": [
+        "https://w3id.org/IproK/schedule#Project"
+      ],
+      "range": [
+        "http://www.w3.org/2001/XMLSchema#string"
+      ],
+      "parents": [],
+      "statements": [
+        {
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "value": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#domain",
+          "value": "https://w3id.org/IproK/schedule#Project",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+          "value": "projectOwner",
+          "type": "literal",
+          "language": "en",
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#range",
+          "value": "http://www.w3.org/2001/XMLSchema#string",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        }
+      ],
+      "sourceFiles": [
+        "ontology.ttl"
+      ]
+    },
+    {
+      "id": "https://w3id.org/IproK/schedule#remainingDuration",
+      "local": "remainingDuration",
+      "label": "remainingDuration",
+      "declaredLabel": true,
+      "kind": "Data property",
+      "module": "schedule",
+      "description": "",
+      "domain": [
+        "https://w3id.org/IproK/schedule#TaskTime"
+      ],
+      "range": [
+        "http://www.w3.org/2001/XMLSchema#decimal"
+      ],
+      "parents": [],
+      "statements": [
+        {
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "value": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "value": "http://www.w3.org/2002/07/owl#FunctionalProperty",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#domain",
+          "value": "https://w3id.org/IproK/schedule#TaskTime",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+          "value": "remainingDuration",
+          "type": "literal",
+          "language": "en",
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#range",
+          "value": "http://www.w3.org/2001/XMLSchema#decimal",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        }
+      ],
+      "sourceFiles": [
+        "ontology.ttl"
+      ]
+    },
+    {
+      "id": "https://w3id.org/IproK/schedule#scheduleDuration",
+      "local": "scheduleDuration",
+      "label": "scheduleDuration",
+      "declaredLabel": true,
+      "kind": "Data property",
+      "module": "schedule",
+      "description": "",
+      "domain": [
+        "https://w3id.org/IproK/schedule#TaskTime"
+      ],
+      "range": [
+        "http://www.w3.org/2001/XMLSchema#decimal"
+      ],
+      "parents": [],
+      "statements": [
+        {
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "value": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "value": "http://www.w3.org/2002/07/owl#FunctionalProperty",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#domain",
+          "value": "https://w3id.org/IproK/schedule#TaskTime",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+          "value": "scheduleDuration",
+          "type": "literal",
+          "language": "en",
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#range",
+          "value": "http://www.w3.org/2001/XMLSchema#decimal",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        }
+      ],
+      "sourceFiles": [
+        "ontology.ttl"
+      ]
+    },
+    {
+      "id": "https://w3id.org/IproK/schedule#taskPriority",
+      "local": "taskPriority",
+      "label": "taskPriority",
+      "declaredLabel": true,
+      "kind": "Data property",
+      "module": "schedule",
+      "description": "",
+      "domain": [
+        "https://w3id.org/IproK/schedule#Task"
+      ],
+      "range": [
+        "http://www.w3.org/2001/XMLSchema#integer"
+      ],
+      "parents": [],
+      "statements": [
+        {
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "value": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "value": "http://www.w3.org/2002/07/owl#FunctionalProperty",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#domain",
+          "value": "https://w3id.org/IproK/schedule#Task",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+          "value": "taskPriority",
+          "type": "literal",
+          "language": "en",
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#range",
+          "value": "http://www.w3.org/2001/XMLSchema#integer",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        }
+      ],
+      "sourceFiles": [
+        "ontology.ttl"
+      ]
+    },
+    {
+      "id": "https://w3id.org/IproK/schedule#taskRelationshipType",
+      "local": "taskRelationshipType",
+      "label": "taskRelationshipType",
+      "declaredLabel": true,
+      "kind": "Data property",
+      "module": "schedule",
+      "description": "",
+      "domain": [
+        "https://w3id.org/IproK/schedule#TaskDependency"
+      ],
+      "range": [
+        "http://www.w3.org/2001/XMLSchema#string"
+      ],
+      "parents": [],
+      "statements": [
+        {
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "value": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "value": "http://www.w3.org/2002/07/owl#FunctionalProperty",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#domain",
+          "value": "https://w3id.org/IproK/schedule#TaskDependency",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+          "value": "taskRelationshipType",
+          "type": "literal",
+          "language": "en",
+          "datatype": null
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#range",
+          "value": "http://www.w3.org/2001/XMLSchema#string",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        }
+      ],
+      "sourceFiles": [
+        "ontology.ttl"
+      ]
+    },
+    {
+      "id": "http://purl.org/dc/terms/contributor",
+      "local": "contributor",
+      "label": "contributor",
+      "declaredLabel": false,
+      "kind": "Annotation property",
+      "module": "External metadata",
+      "description": "",
+      "domain": [],
+      "range": [],
+      "parents": [],
+      "statements": [
+        {
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "value": "http://www.w3.org/2002/07/owl#AnnotationProperty",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        }
+      ],
+      "sourceFiles": [
+        "ontology.ttl"
+      ]
+    },
+    {
+      "id": "http://purl.org/dc/terms/creator",
+      "local": "creator",
+      "label": "creator",
+      "declaredLabel": false,
+      "kind": "Annotation property",
+      "module": "External metadata",
+      "description": "",
+      "domain": [],
+      "range": [],
+      "parents": [],
+      "statements": [
+        {
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "value": "http://www.w3.org/2002/07/owl#AnnotationProperty",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        }
+      ],
+      "sourceFiles": [
+        "ontology.ttl"
+      ]
+    },
+    {
+      "id": "http://purl.org/dc/terms/description",
+      "local": "description",
+      "label": "description",
+      "declaredLabel": false,
+      "kind": "Annotation property",
+      "module": "External metadata",
+      "description": "",
+      "domain": [],
+      "range": [],
+      "parents": [],
+      "statements": [
+        {
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "value": "http://www.w3.org/2002/07/owl#AnnotationProperty",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        }
+      ],
+      "sourceFiles": [
+        "ontology.ttl"
+      ]
+    },
+    {
+      "id": "http://purl.org/dc/terms/issued",
+      "local": "issued",
+      "label": "issued",
+      "declaredLabel": false,
+      "kind": "Annotation property",
+      "module": "External metadata",
+      "description": "",
+      "domain": [],
+      "range": [],
+      "parents": [],
+      "statements": [
+        {
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "value": "http://www.w3.org/2002/07/owl#AnnotationProperty",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        }
+      ],
+      "sourceFiles": [
+        "ontology.ttl"
+      ]
+    },
+    {
+      "id": "http://purl.org/dc/terms/license",
+      "local": "license",
+      "label": "license",
+      "declaredLabel": false,
+      "kind": "Annotation property",
+      "module": "External metadata",
+      "description": "",
+      "domain": [],
+      "range": [],
+      "parents": [],
+      "statements": [
+        {
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "value": "http://www.w3.org/2002/07/owl#AnnotationProperty",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        }
+      ],
+      "sourceFiles": [
+        "ontology.ttl"
+      ]
+    },
+    {
+      "id": "http://purl.org/dc/terms/modified",
+      "local": "modified",
+      "label": "modified",
+      "declaredLabel": false,
+      "kind": "Annotation property",
+      "module": "External metadata",
+      "description": "",
+      "domain": [],
+      "range": [],
+      "parents": [],
+      "statements": [
+        {
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "value": "http://www.w3.org/2002/07/owl#AnnotationProperty",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        }
+      ],
+      "sourceFiles": [
+        "ontology.ttl"
+      ]
+    },
+    {
+      "id": "http://purl.org/vocab/vann/preferredNamespacePrefix",
+      "local": "preferredNamespacePrefix",
+      "label": "preferred Namespace Prefix",
+      "declaredLabel": false,
+      "kind": "Annotation property",
+      "module": "External metadata",
+      "description": "",
+      "domain": [],
+      "range": [],
+      "parents": [],
+      "statements": [
+        {
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "value": "http://www.w3.org/2002/07/owl#AnnotationProperty",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        }
+      ],
+      "sourceFiles": [
+        "ontology.ttl"
+      ]
+    },
+    {
+      "id": "http://purl.org/vocab/vann/preferredNamespaceUri",
+      "local": "preferredNamespaceUri",
+      "label": "preferred Namespace Uri",
+      "declaredLabel": false,
+      "kind": "Annotation property",
+      "module": "External metadata",
+      "description": "",
+      "domain": [],
+      "range": [],
+      "parents": [],
+      "statements": [
+        {
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "value": "http://www.w3.org/2002/07/owl#AnnotationProperty",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        }
+      ],
+      "sourceFiles": [
+        "ontology.ttl"
+      ]
+    },
+    {
+      "id": "http://purl.org/dc/terms/title",
+      "local": "title",
+      "label": "title",
+      "declaredLabel": false,
+      "kind": "Annotation property",
+      "module": "External metadata",
+      "description": "",
+      "domain": [],
+      "range": [],
+      "parents": [],
+      "statements": [
+        {
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "value": "http://www.w3.org/2002/07/owl#AnnotationProperty",
+          "type": "iri",
+          "language": null,
+          "datatype": null
+        }
+      ],
+      "sourceFiles": [
+        "ontology.ttl"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "https://w3id.org/IproK#Actor",
+      "target": "https://w3id.org/IproK#IproKThing",
+      "label": "subclass of",
+      "property": null
+    },
+    {
+      "source": "https://w3id.org/IproK#Calendar",
+      "target": "https://w3id.org/IproK#IproKThing",
+      "label": "subclass of",
+      "property": null
+    },
+    {
+      "source": "https://w3id.org/IproK#Constraint",
+      "target": "https://w3id.org/IproK#IproKThing",
+      "label": "subclass of",
+      "property": null
+    },
+    {
+      "source": "https://w3id.org/IproK/cost#CostCategory",
+      "target": "https://w3id.org/IproK#IproKThing",
+      "label": "subclass of",
+      "property": null
+    },
+    {
+      "source": "https://w3id.org/IproK/cost#CostItem",
+      "target": "https://w3id.org/IproK#IproKThing",
+      "label": "subclass of",
+      "property": null
+    },
+    {
+      "source": "https://w3id.org/IproK/cost#CostType",
+      "target": "https://w3id.org/IproK#IproKThing",
+      "label": "subclass of",
+      "property": null
+    },
+    {
+      "source": "https://w3id.org/IproK/cost#EquipmentCost",
+      "target": "https://w3id.org/IproK/cost#CostType",
+      "label": "subclass of",
+      "property": null
+    },
+    {
+      "source": "https://w3id.org/IproK/cost#ExpenseItem",
+      "target": "https://w3id.org/IproK/cost#CostType",
+      "label": "subclass of",
+      "property": null
+    },
+    {
+      "source": "https://w3id.org/IproK/cost#LaborCost",
+      "target": "https://w3id.org/IproK/cost#CostType",
+      "label": "subclass of",
+      "property": null
+    },
+    {
+      "source": "https://w3id.org/IproK/cost#MaterialCost",
+      "target": "https://w3id.org/IproK/cost#CostType",
+      "label": "subclass of",
+      "property": null
+    },
+    {
+      "source": "https://w3id.org/IproK/integrated#ResourceAllocation",
+      "target": "https://w3id.org/IproK#IproKThing",
+      "label": "subclass of",
+      "property": null
+    },
+    {
+      "source": "https://w3id.org/IproK/resource#EquipmentResource",
+      "target": "https://w3id.org/IproK/resource#ResourceType",
+      "label": "subclass of",
+      "property": null
+    },
+    {
+      "source": "https://w3id.org/IproK/resource#LaborResource",
+      "target": "https://w3id.org/IproK/resource#ResourceType",
+      "label": "subclass of",
+      "property": null
+    },
+    {
+      "source": "https://w3id.org/IproK/resource#MaterialResource",
+      "target": "https://w3id.org/IproK/resource#ResourceType",
+      "label": "subclass of",
+      "property": null
+    },
+    {
+      "source": "https://w3id.org/IproK/resource#Resource",
+      "target": "https://w3id.org/IproK#IproKThing",
+      "label": "subclass of",
+      "property": null
+    },
+    {
+      "source": "https://w3id.org/IproK/resource#ResourceConstraint",
+      "target": "https://w3id.org/IproK#Constraint",
+      "label": "subclass of",
+      "property": null
+    },
+    {
+      "source": "https://w3id.org/IproK/resource#ResourceType",
+      "target": "https://w3id.org/IproK#IproKThing",
+      "label": "subclass of",
+      "property": null
+    },
+    {
+      "source": "https://w3id.org/IproK/resource#TrackingTag",
+      "target": "https://w3id.org/IproK#IproKThing",
+      "label": "subclass of",
+      "property": null
+    },
+    {
+      "source": "https://w3id.org/IproK/resource#Units",
+      "target": "https://w3id.org/IproK#IproKThing",
+      "label": "subclass of",
+      "property": null
+    },
+    {
+      "source": "https://w3id.org/IproK/resource#UserDefinedResource",
+      "target": "https://w3id.org/IproK/resource#ResourceType",
+      "label": "subclass of",
+      "property": null
+    },
+    {
+      "source": "https://w3id.org/IproK/schedule#Milestone",
+      "target": "https://w3id.org/IproK/schedule#Task",
+      "label": "subclass of",
+      "property": null
+    },
+    {
+      "source": "https://w3id.org/IproK/schedule#Project",
+      "target": "https://w3id.org/IproK#IproKThing",
+      "label": "subclass of",
+      "property": null
+    },
+    {
+      "source": "https://w3id.org/IproK/schedule#Task",
+      "target": "https://w3id.org/IproK/schedule#WBS_Element",
+      "label": "subclass of",
+      "property": null
+    },
+    {
+      "source": "https://w3id.org/IproK/schedule#TaskDependency",
+      "target": "https://w3id.org/IproK#IproKThing",
+      "label": "subclass of",
+      "property": null
+    },
+    {
+      "source": "https://w3id.org/IproK/schedule#TaskTime",
+      "target": "https://w3id.org/IproK#IproKThing",
+      "label": "subclass of",
+      "property": null
+    },
+    {
+      "source": "https://w3id.org/IproK/schedule#WBS_Element",
+      "target": "https://w3id.org/IproK/schedule#Project",
+      "label": "subclass of",
+      "property": null
+    },
+    {
+      "source": "https://w3id.org/IproK/schedule#WorkPackage",
+      "target": "https://w3id.org/IproK/schedule#WBS_Element",
+      "label": "subclass of",
+      "property": null
+    },
+    {
+      "source": "https://w3id.org/IproK/cost#CostItem",
+      "target": "https://w3id.org/IproK/cost#CostCategory",
+      "label": "hasCostCategory",
+      "property": "https://w3id.org/IproK/cost#hasCostCategory"
+    },
+    {
+      "source": "https://w3id.org/IproK/cost#CostItem",
+      "target": "https://w3id.org/IproK/cost#CostType",
+      "label": "hasCostType",
+      "property": "https://w3id.org/IproK/cost#hasCostType"
+    },
+    {
+      "source": "https://w3id.org/IproK/integrated#ResourceAllocation",
+      "target": "https://w3id.org/IproK/resource#Resource",
+      "label": "allocationAssignsResource",
+      "property": "https://w3id.org/IproK/integrated#allocationAssignsResource"
+    },
+    {
+      "source": "https://w3id.org/IproK/integrated#ResourceAllocation",
+      "target": "https://w3id.org/IproK/schedule#Task",
+      "label": "allocationForTask",
+      "property": "https://w3id.org/IproK/integrated#allocationForTask"
+    },
+    {
+      "source": "https://w3id.org/IproK/integrated#ResourceAllocation",
+      "target": "https://w3id.org/IproK/cost#CostItem",
+      "label": "resourceAllocationIncursCostItem",
+      "property": "https://w3id.org/IproK/integrated#resourceAllocationIncursCostItem"
+    },
+    {
+      "source": "https://w3id.org/IproK/schedule#Task",
+      "target": "https://w3id.org/IproK/cost#CostItem",
+      "label": "taskGeneratesCostItem",
+      "property": "https://w3id.org/IproK/integrated#taskGeneratesCostItem"
+    },
+    {
+      "source": "https://w3id.org/IproK/schedule#Task",
+      "target": "https://w3id.org/IproK/integrated#ResourceAllocation",
+      "label": "taskHasResourceAllocation",
+      "property": "https://w3id.org/IproK/integrated#taskHasResourceAllocation"
+    },
+    {
+      "source": "https://w3id.org/IproK/resource#Resource",
+      "target": "https://w3id.org/IproK/resource#ResourceConstraint",
+      "label": "hasResourceConstraints",
+      "property": "https://w3id.org/IproK/resource#hasResourceConstraints"
+    },
+    {
+      "source": "https://w3id.org/IproK/resource#Resource",
+      "target": "https://w3id.org/IproK/resource#ResourceType",
+      "label": "hasResourceType",
+      "property": "https://w3id.org/IproK/resource#hasResourceType"
+    },
+    {
+      "source": "https://w3id.org/IproK/resource#Resource",
+      "target": "https://w3id.org/IproK/resource#TrackingTag",
+      "label": "hasTrackingTag",
+      "property": "https://w3id.org/IproK/resource#hasTrackingTag"
+    },
+    {
+      "source": "https://w3id.org/IproK/resource#Resource",
+      "target": "https://w3id.org/IproK/resource#Units",
+      "label": "measuredIn",
+      "property": "https://w3id.org/IproK/resource#measuredIn"
+    },
+    {
+      "source": "https://w3id.org/IproK/schedule#Task",
+      "target": "https://w3id.org/IproK#Actor",
+      "label": "assignedTo",
+      "property": "https://w3id.org/IproK/schedule#assignedTo"
+    },
+    {
+      "source": "https://w3id.org/IproK/schedule#Task",
+      "target": "https://w3id.org/IproK#Constraint",
+      "label": "hasConstraint",
+      "property": "https://w3id.org/IproK/schedule#hasConstraint"
+    },
+    {
+      "source": "https://w3id.org/IproK/schedule#Task",
+      "target": "https://w3id.org/IproK/schedule#TaskDependency",
+      "label": "hasPredecessorDependency",
+      "property": "https://w3id.org/IproK/schedule#hasPredecessorDependency"
+    },
+    {
+      "source": "https://w3id.org/IproK/schedule#Task",
+      "target": "https://w3id.org/IproK/schedule#Task",
+      "label": "hasSubTask",
+      "property": "https://w3id.org/IproK/schedule#hasSubTask"
+    },
+    {
+      "source": "https://w3id.org/IproK/schedule#Task",
+      "target": "https://w3id.org/IproK/schedule#TaskDependency",
+      "label": "hasSuccessorDependency",
+      "property": "https://w3id.org/IproK/schedule#hasSuccessorDependency"
+    },
+    {
+      "source": "https://w3id.org/IproK/schedule#WBS_Element",
+      "target": "https://w3id.org/IproK/schedule#Task",
+      "label": "hasTask",
+      "property": "https://w3id.org/IproK/schedule#hasTask"
+    },
+    {
+      "source": "https://w3id.org/IproK/schedule#Task",
+      "target": "https://w3id.org/IproK/schedule#TaskTime",
+      "label": "hasTaskTime",
+      "property": "https://w3id.org/IproK/schedule#hasTaskTime"
+    },
+    {
+      "source": "https://w3id.org/IproK/schedule#WorkPackage",
+      "target": "https://w3id.org/IproK/schedule#WBS_Element",
+      "label": "hasWBS",
+      "property": "https://w3id.org/IproK/schedule#hasWBS"
+    },
+    {
+      "source": "https://w3id.org/IproK/schedule#Project",
+      "target": "https://w3id.org/IproK/schedule#WorkPackage",
+      "label": "hasWorkPackage",
+      "property": "https://w3id.org/IproK/schedule#hasWorkPackage"
+    },
+    {
+      "source": "https://w3id.org/IproK/schedule#TaskDependency",
+      "target": "https://w3id.org/IproK/schedule#Task",
+      "label": "linksToPredecessorTask",
+      "property": "https://w3id.org/IproK/schedule#linksToPredecessorTask"
+    },
+    {
+      "source": "https://w3id.org/IproK/schedule#TaskDependency",
+      "target": "https://w3id.org/IproK/schedule#Task",
+      "label": "linksToSuccessorTask",
+      "property": "https://w3id.org/IproK/schedule#linksToSuccessorTask"
+    }
+  ],
+  "audit": {
+    "triples": 420,
+    "declaredTerms": 98,
+    "counts": {
+      "Annotation property": 9,
+      "Data property": 39,
+      "Object property": 22,
+      "Class": 28
+    },
+    "missingLabels": [
+      "http://purl.org/dc/terms/contributor",
+      "http://purl.org/dc/terms/creator",
+      "http://purl.org/dc/terms/description",
+      "http://purl.org/dc/terms/issued",
+      "http://purl.org/dc/terms/license",
+      "http://purl.org/dc/terms/modified",
+      "http://purl.org/vocab/vann/preferredNamespacePrefix",
+      "http://purl.org/vocab/vann/preferredNamespaceUri",
+      "http://purl.org/dc/terms/title"
+    ],
+    "missingComments": [
+      "https://w3id.org/IproK#Actor",
+      "https://w3id.org/IproK#Calendar",
+      "https://w3id.org/IproK#Constraint",
+      "https://w3id.org/IproK#IproKThing",
+      "https://w3id.org/IproK/cost#CostCategory",
+      "https://w3id.org/IproK/cost#CostItem",
+      "https://w3id.org/IproK/cost#CostType",
+      "https://w3id.org/IproK/cost#EquipmentCost",
+      "https://w3id.org/IproK/cost#ExpenseItem",
+      "https://w3id.org/IproK/cost#LaborCost",
+      "https://w3id.org/IproK/cost#MaterialCost",
+      "https://w3id.org/IproK/integrated#ResourceAllocation",
+      "https://w3id.org/IproK/resource#EquipmentResource",
+      "https://w3id.org/IproK/resource#LaborResource",
+      "https://w3id.org/IproK/resource#MaterialResource",
+      "https://w3id.org/IproK/resource#Resource",
+      "https://w3id.org/IproK/resource#ResourceConstraint",
+      "https://w3id.org/IproK/resource#ResourceType",
+      "https://w3id.org/IproK/resource#TrackingTag",
+      "https://w3id.org/IproK/resource#Units",
+      "https://w3id.org/IproK/resource#UserDefinedResource",
+      "https://w3id.org/IproK/schedule#Milestone",
+      "https://w3id.org/IproK/schedule#Project",
+      "https://w3id.org/IproK/schedule#Task",
+      "https://w3id.org/IproK/schedule#TaskDependency",
+      "https://w3id.org/IproK/schedule#TaskTime",
+      "https://w3id.org/IproK/schedule#WBS_Element",
+      "https://w3id.org/IproK/schedule#WorkPackage",
+      "https://w3id.org/IproK/cost#hasCostCategory",
+      "https://w3id.org/IproK/cost#hasCostType",
+      "https://w3id.org/IproK/integrated#allocationAssignsResource",
+      "https://w3id.org/IproK/integrated#allocationForTask",
+      "https://w3id.org/IproK/integrated#resourceAllocationIncursCostItem",
+      "https://w3id.org/IproK/integrated#taskGeneratesCostItem",
+      "https://w3id.org/IproK/integrated#taskHasResourceAllocation",
+      "https://w3id.org/IproK/resource#hasResourceConstraints",
+      "https://w3id.org/IproK/resource#hasResourceType",
+      "https://w3id.org/IproK/resource#hasTrackingTag",
+      "https://w3id.org/IproK/resource#measuredIn",
+      "https://w3id.org/IproK/schedule#assignedTo",
+      "https://w3id.org/IproK/schedule#hasConstraint",
+      "https://w3id.org/IproK/schedule#hasPredecessorDependency",
+      "https://w3id.org/IproK/schedule#hasSubTask",
+      "https://w3id.org/IproK/schedule#hasSuccessorDependency",
+      "https://w3id.org/IproK/schedule#hasTask",
+      "https://w3id.org/IproK/schedule#hasTaskTime",
+      "https://w3id.org/IproK/schedule#hasWBS",
+      "https://w3id.org/IproK/schedule#hasWorkPackage",
+      "https://w3id.org/IproK/schedule#linksToPredecessorTask",
+      "https://w3id.org/IproK/schedule#linksToSuccessorTask",
+      "https://w3id.org/IproK/cost#atCompleteCostAmount",
+      "https://w3id.org/IproK/cost#budgetedCostAmount",
+      "https://w3id.org/IproK/cost#remainingCostAmount",
+      "https://w3id.org/IproK/cost#vendorName",
+      "https://w3id.org/IproK/integrated#allocatedUnits",
+      "https://w3id.org/IproK/integrated#allocationPlannedFinishDate",
+      "https://w3id.org/IproK/integrated#allocationPlannedStartDate",
+      "https://w3id.org/IproK/resource#actualUnits",
+      "https://w3id.org/IproK/resource#atCompleteUnits",
+      "https://w3id.org/IproK/resource#baseRate",
+      "https://w3id.org/IproK/resource#budgetedUnits",
+      "https://w3id.org/IproK/resource#currency",
+      "https://w3id.org/IproK/resource#effectiveDateForRate",
+      "https://w3id.org/IproK/resource#isPrimaryResource",
+      "https://w3id.org/IproK/resource#maxUnits",
+      "https://w3id.org/IproK/resource#remainingUnits",
+      "https://w3id.org/IproK/schedule#actualDuration",
+      "https://w3id.org/IproK/schedule#actualFinishDate",
+      "https://w3id.org/IproK/schedule#actualStartDate",
+      "https://w3id.org/IproK/schedule#atCompleteDuration",
+      "https://w3id.org/IproK/schedule#constraintDate",
+      "https://w3id.org/IproK/schedule#constraintType",
+      "https://w3id.org/IproK/schedule#isCriticalTask",
+      "https://w3id.org/IproK/schedule#isMilestone",
+      "https://w3id.org/IproK/schedule#lagTime",
+      "https://w3id.org/IproK/schedule#plannedFinishDate",
+      "https://w3id.org/IproK/schedule#plannedStartDate",
+      "https://w3id.org/IproK/schedule#projectAddress",
+      "https://w3id.org/IproK/schedule#projectCategory",
+      "https://w3id.org/IproK/schedule#projectOwner",
+      "https://w3id.org/IproK/schedule#remainingDuration",
+      "https://w3id.org/IproK/schedule#scheduleDuration",
+      "https://w3id.org/IproK/schedule#taskPriority",
+      "https://w3id.org/IproK/schedule#taskRelationshipType",
+      "http://purl.org/dc/terms/contributor",
+      "http://purl.org/dc/terms/creator",
+      "http://purl.org/dc/terms/description",
+      "http://purl.org/dc/terms/issued",
+      "http://purl.org/dc/terms/license",
+      "http://purl.org/dc/terms/modified",
+      "http://purl.org/vocab/vann/preferredNamespacePrefix",
+      "http://purl.org/vocab/vann/preferredNamespaceUri",
+      "http://purl.org/dc/terms/title"
+    ],
+    "propertiesWithoutDomain": [
+      "http://purl.org/dc/terms/contributor",
+      "http://purl.org/dc/terms/creator",
+      "http://purl.org/dc/terms/description",
+      "http://purl.org/dc/terms/issued",
+      "http://purl.org/dc/terms/license",
+      "http://purl.org/dc/terms/modified",
+      "http://purl.org/vocab/vann/preferredNamespacePrefix",
+      "http://purl.org/vocab/vann/preferredNamespaceUri",
+      "http://purl.org/dc/terms/title"
+    ],
+    "propertiesWithoutRange": [
+      "http://purl.org/dc/terms/contributor",
+      "http://purl.org/dc/terms/creator",
+      "http://purl.org/dc/terms/description",
+      "http://purl.org/dc/terms/issued",
+      "http://purl.org/dc/terms/license",
+      "http://purl.org/dc/terms/modified",
+      "http://purl.org/vocab/vann/preferredNamespacePrefix",
+      "http://purl.org/vocab/vann/preferredNamespaceUri",
+      "http://purl.org/dc/terms/title"
+    ],
+    "scope": "Static declaration audit. Missing domains may be intentional for polymorphic predicates. No OWL reasoner, import closure or historical study validation is claimed."
+  }
+}

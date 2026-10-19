@@ -1,0 +1,256 @@
+{
+  "basis": "Editorial navigation groups based on class declarations and source comments. Not separate OWL namespaces, not an assertion of a complete planned architecture. Cross-group links are aggregated only from declared object-property domains and ranges.",
+  "groups": [
+    {
+      "id": "governance",
+      "name": "Project & governance",
+      "classes": [
+        "Organisation",
+        "OrganisationMasters",
+        "MastersAdoption",
+        "Project",
+        "ProjectMembership",
+        "User",
+        "PilotStatus",
+        "IdSequence",
+        "Decision",
+        "Constraint",
+        "SignatureEvent"
+      ],
+      "colour": "#54776b"
+    },
+    {
+      "id": "planning",
+      "name": "Planning & control",
+      "classes": [
+        "Activity",
+        "ActivityDurationEstimate",
+        "WBSNode",
+        "ScheduleLink",
+        "ScheduleBaseline",
+        "BaselineEntry",
+        "EVMSnapshot"
+      ],
+      "colour": "#37785e"
+    },
+    {
+      "id": "resources",
+      "name": "Resources & productivity",
+      "classes": [
+        "Worker",
+        "SkillCertification",
+        "CrewComposition",
+        "CrewType",
+        "ProductivityContribution",
+        "ProductivityNorm",
+        "ProductivityObservation",
+        "ProductivityRecompute"
+      ],
+      "colour": "#6c63a0"
+    },
+    {
+      "id": "estimating",
+      "name": "Cost & rate analysis",
+      "classes": [
+        "CostResource",
+        "ProjectResourcePrice",
+        "RateAnalysis",
+        "AnalysisLine",
+        "AnalysisAddition",
+        "DesignOption",
+        "ResourceMapping"
+      ],
+      "colour": "#b17b36"
+    },
+    {
+      "id": "billing",
+      "name": "Measurement & billing",
+      "classes": [
+        "BOQItem",
+        "Measurement",
+        "JointMeasurement",
+        "JMStatus",
+        "RABill",
+        "BillState",
+        "Recovery",
+        "Payment",
+        "Deviation"
+      ],
+      "colour": "#a46e42"
+    },
+    {
+      "id": "procurement",
+      "name": "Procurement & stores",
+      "classes": [
+        "PurchaseOrder",
+        "GoodsReceipt",
+        "MaterialIssue",
+        "Vendor",
+        "ProductOffer"
+      ],
+      "colour": "#7e8e41"
+    },
+    {
+      "id": "documents",
+      "name": "Documents & RFIs",
+      "classes": [
+        "Document",
+        "Drawing",
+        "DrawingState",
+        "Annotation",
+        "DrawingChange",
+        "Transmittal",
+        "RFI",
+        "RFIState"
+      ],
+      "colour": "#4a799c"
+    },
+    {
+      "id": "models",
+      "name": "Building models",
+      "classes": [
+        "Element",
+        "IfcModel",
+        "ModelComment",
+        "ModelHealthCheck",
+        "MemberIdentity",
+        "ElementCopiesRecorded",
+        "ElementDuplicatesRetired"
+      ],
+      "colour": "#347f8b"
+    },
+    {
+      "id": "coordination",
+      "name": "Coordination & risk",
+      "classes": [
+        "Event",
+        "Issue",
+        "ClashBatch",
+        "Risk"
+      ],
+      "colour": "#9c687d"
+    },
+    {
+      "id": "quality",
+      "name": "Quality & hold points",
+      "classes": [
+        "Inspection",
+        "ChecklistItem",
+        "NCR",
+        "NCRStatus",
+        "RecurrenceAlert",
+        "HoldPoint"
+      ],
+      "colour": "#5a8c79"
+    },
+    {
+      "id": "safety",
+      "name": "Safety",
+      "classes": [
+        "Incident",
+        "IncidentType"
+      ],
+      "colour": "#bd704f"
+    },
+    {
+      "id": "tenders",
+      "name": "Tender intelligence",
+      "classes": [
+        "Tender",
+        "TenderBOQItem",
+        "ExtractionStatus",
+        "ComparableProject",
+        "BidRecommendation",
+        "SORLibrary",
+        "SORItem"
+      ],
+      "colour": "#887445"
+    },
+    {
+      "id": "signals",
+      "name": "External signals",
+      "classes": [
+        "ExternalSignal",
+        "WeatherSignal",
+        "MaterialPriceSignal",
+        "LabourSignal",
+        "HistoricalWeatherProfile",
+        "HistoricalWeatherWeek"
+      ],
+      "colour": "#718e9d"
+    },
+    {
+      "id": "site",
+      "name": "Site intelligence",
+      "classes": [
+        "SiteIntelligence",
+        "SiteClimate",
+        "SiteHydrology",
+        "SiteLabour",
+        "SiteLogistics",
+        "SiteUtilities",
+        "SiteWorkerSafety"
+      ],
+      "colour": "#4e9582"
+    },
+    {
+      "id": "approvals",
+      "name": "Statutory approvals",
+      "classes": [
+        "Approval"
+      ],
+      "colour": "#8b7caa"
+    },
+    {
+      "id": "inventory",
+      "name": "Property inventory",
+      "classes": [
+        "Tower",
+        "Unit",
+        "UnitType"
+      ],
+      "colour": "#847ba7"
+    },
+    {
+      "id": "collections",
+      "name": "Collections & escrow",
+      "classes": [
+        "DemandNote",
+        "PaymentMilestone",
+        "CollectionReceipt",
+        "EscrowAccount",
+        "EscrowWithdrawal"
+      ],
+      "colour": "#a58b42"
+    },
+    {
+      "id": "handover",
+      "name": "Handover & defects",
+      "classes": [
+        "HandoverPackage",
+        "DLPDefect",
+        "SnagItem",
+        "WarrantyRecord"
+      ],
+      "colour": "#7f9063"
+    },
+    {
+      "id": "reporting",
+      "name": "Field reporting & queries",
+      "classes": [
+        "Photo",
+        "DPREntry",
+        "SavedQuery"
+      ],
+      "colour": "#718aa0"
+    },
+    {
+      "id": "prediction",
+      "name": "Activity prediction",
+      "classes": [
+        "ActivityPrediction"
+      ],
+      "colour": "#8a688e"
+    }
+  ]
+}

@@ -1,0 +1,1197 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/IproK#"
+     xml:base="https://w3id.org/IproK"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:terms="http://purl.org/dc/terms/">
+    <owl:Ontology rdf:about="https://w3id.org/IproK">
+        <terms:contributor>Prof. Gangadhar Mahesh</terms:contributor>
+        <terms:creator></terms:creator>
+        <terms:creator>Venkatesh Kone</terms:creator>
+        <terms:creator>https://orcid.org/0000-0002-6398-5850</terms:creator>
+        <terms:description xml:lang="en">The Integrated Project Knowledge (IproK) ontology is a specialized, formal model designed to standardize and integrate construction project management data. It focuses on structuring information related to project schedules, costs, and resources, and their complex interdependencies. The core aim of IproK is to create a unified, machine-interpretable knowledge base. This enables robust AI integration, particularly with Large Language Models (LLMs), to facilitate advanced data analytics, support complex querying via natural language, and improve decision-making in construction projects. Key design principles include deep integration of the core project management domains, AI-readiness, PMBOK-aligned modularity for scalability and extensibility, and pragmatic reuse of established industry standards and concepts.</terms:description>
+        <terms:description></terms:description>
+        <terms:issued>25-05-2025</terms:issued>
+        <terms:license>https://creativecommons.org/licenses/by/4.0/</terms:license>
+        <terms:title></terms:title>
+        <terms:title>Integrated Project Knowledge (IproK) Ontology</terms:title>
+        <vann:preferredNamespacePrefix></vann:preferredNamespacePrefix>
+        <vann:preferredNamespacePrefix>iprok</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceUri>https://w3id.org/IproK#</vann:preferredNamespaceUri>
+        <rdfs:seeAlso>https://iprok-web.streamlit.app/</rdfs:seeAlso>
+        <owl:versionInfo>0.1.0</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/dc/terms/contributor -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/contributor"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/issued -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/issued"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/modified -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/modified"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespacePrefix -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespaceUri -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#date -->
+
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#duration -->
+
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#duration"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://w3id.org/IproK/cost#hasCostCategory -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/IproK/cost#hasCostCategory">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/IproK/cost#CostItem"/>
+        <rdfs:range rdf:resource="https://w3id.org/IproK/cost#CostCategory"/>
+        <rdfs:label>hasCostCategory</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/IproK/cost#hasCostType -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/IproK/cost#hasCostType">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/IproK/cost#CostItem"/>
+        <rdfs:range rdf:resource="https://w3id.org/IproK/cost#CostType"/>
+        <rdfs:label>hasCostType</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/IproK/integrated#allocationAssignsResource -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/IproK/integrated#allocationAssignsResource">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/IproK/integrated#ResourceAllocation"/>
+        <rdfs:range rdf:resource="https://w3id.org/IproK/resource#Resource"/>
+        <rdfs:label>allocationAssignsResource</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/IproK/integrated#allocationForTask -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/IproK/integrated#allocationForTask">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/IproK/integrated#ResourceAllocation"/>
+        <rdfs:range rdf:resource="https://w3id.org/IproK/schedule#Task"/>
+        <rdfs:label>allocationForTask</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/IproK/integrated#resourceAllocationIncursCostItem -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/IproK/integrated#resourceAllocationIncursCostItem">
+        <rdfs:domain rdf:resource="https://w3id.org/IproK/integrated#ResourceAllocation"/>
+        <rdfs:range rdf:resource="https://w3id.org/IproK/cost#CostItem"/>
+        <rdfs:label>resourceAllocationIncursCostItem</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/IproK/integrated#taskGeneratesCostItem -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/IproK/integrated#taskGeneratesCostItem">
+        <rdfs:domain rdf:resource="https://w3id.org/IproK/schedule#Task"/>
+        <rdfs:range rdf:resource="https://w3id.org/IproK/cost#CostItem"/>
+        <rdfs:label>taskGeneratesCostItem</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/IproK/integrated#taskHasResourceAllocation -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/IproK/integrated#taskHasResourceAllocation">
+        <rdfs:domain rdf:resource="https://w3id.org/IproK/schedule#Task"/>
+        <rdfs:range rdf:resource="https://w3id.org/IproK/integrated#ResourceAllocation"/>
+        <rdfs:label>taskHasResourceAllocation</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/IproK/resource#hasResourceConstraints -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/IproK/resource#hasResourceConstraints">
+        <rdfs:domain rdf:resource="https://w3id.org/IproK/resource#Resource"/>
+        <rdfs:range rdf:resource="https://w3id.org/IproK/resource#ResourceConstraint"/>
+        <rdfs:label>hasResourceConstraints</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/IproK/resource#hasResourceType -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/IproK/resource#hasResourceType">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/IproK/resource#Resource"/>
+        <rdfs:range rdf:resource="https://w3id.org/IproK/resource#ResourceType"/>
+        <rdfs:label>hasResourceType</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/IproK/resource#hasTrackingTag -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/IproK/resource#hasTrackingTag">
+        <rdfs:domain rdf:resource="https://w3id.org/IproK/resource#Resource"/>
+        <rdfs:range rdf:resource="https://w3id.org/IproK/resource#TrackingTag"/>
+        <rdfs:label>hasTrackingTag</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/IproK/resource#measuredIn -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/IproK/resource#measuredIn">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/IproK/resource#Resource"/>
+        <rdfs:range rdf:resource="https://w3id.org/IproK/resource#Units"/>
+        <rdfs:label>measuredIn</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/IproK/schedule#assignedTo -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/IproK/schedule#assignedTo">
+        <rdfs:domain rdf:resource="https://w3id.org/IproK/schedule#Task"/>
+        <rdfs:range rdf:resource="https://w3id.org/IproK#Actor"/>
+        <rdfs:label>assignedTo</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/IproK/schedule#hasConstraint -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/IproK/schedule#hasConstraint">
+        <rdfs:domain rdf:resource="https://w3id.org/IproK/schedule#Task"/>
+        <rdfs:range rdf:resource="https://w3id.org/IproK#Constraint"/>
+        <rdfs:label>hasConstraint</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/IproK/schedule#hasPredecessorDependency -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/IproK/schedule#hasPredecessorDependency">
+        <rdfs:domain rdf:resource="https://w3id.org/IproK/schedule#Task"/>
+        <rdfs:range rdf:resource="https://w3id.org/IproK/schedule#TaskDependency"/>
+        <rdfs:label>hasPredecessorDependency</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/IproK/schedule#hasSubTask -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/IproK/schedule#hasSubTask">
+        <rdfs:domain rdf:resource="https://w3id.org/IproK/schedule#Task"/>
+        <rdfs:range rdf:resource="https://w3id.org/IproK/schedule#Task"/>
+        <rdfs:label>hasSubTask</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/IproK/schedule#hasSuccessorDependency -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/IproK/schedule#hasSuccessorDependency">
+        <rdfs:domain rdf:resource="https://w3id.org/IproK/schedule#Task"/>
+        <rdfs:range rdf:resource="https://w3id.org/IproK/schedule#TaskDependency"/>
+        <rdfs:label>hasSuccessorDependency</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/IproK/schedule#hasTask -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/IproK/schedule#hasTask">
+        <rdfs:domain rdf:resource="https://w3id.org/IproK/schedule#WBS_Element"/>
+        <rdfs:range rdf:resource="https://w3id.org/IproK/schedule#Task"/>
+        <rdfs:label>hasTask</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/IproK/schedule#hasTaskTime -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/IproK/schedule#hasTaskTime">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/IproK/schedule#Task"/>
+        <rdfs:range rdf:resource="https://w3id.org/IproK/schedule#TaskTime"/>
+        <rdfs:label>hasTaskTime</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/IproK/schedule#hasWBS -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/IproK/schedule#hasWBS">
+        <rdfs:domain rdf:resource="https://w3id.org/IproK/schedule#WorkPackage"/>
+        <rdfs:range rdf:resource="https://w3id.org/IproK/schedule#WBS_Element"/>
+        <rdfs:label>hasWBS</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/IproK/schedule#hasWorkPackage -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/IproK/schedule#hasWorkPackage">
+        <rdfs:domain rdf:resource="https://w3id.org/IproK/schedule#Project"/>
+        <rdfs:range rdf:resource="https://w3id.org/IproK/schedule#WorkPackage"/>
+        <rdfs:label>hasWorkPackage</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/IproK/schedule#linksToPredecessorTask -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/IproK/schedule#linksToPredecessorTask">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/IproK/schedule#TaskDependency"/>
+        <rdfs:range rdf:resource="https://w3id.org/IproK/schedule#Task"/>
+        <rdfs:label>linksToPredecessorTask</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/IproK/schedule#linksToSuccessorTask -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/IproK/schedule#linksToSuccessorTask">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/IproK/schedule#TaskDependency"/>
+        <rdfs:range rdf:resource="https://w3id.org/IproK/schedule#Task"/>
+        <rdfs:label>linksToSuccessorTask</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://w3id.org/IproK#hasDescription -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/IproK#hasDescription">
+        <rdfs:domain rdf:resource="https://w3id.org/IproK#IproKThing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>A textual description of the entity.</rdfs:comment>
+        <rdfs:label xml:lang="en">hasDescription</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/IproK#hasGlobalId -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/IproK#hasGlobalId">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/IproK#IproKThing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>A globally unique identifier.</rdfs:comment>
+        <rdfs:label xml:lang="en">hasGlobalId</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/IproK#hasId -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/IproK#hasId">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/IproK#IproKThing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>A local or project-specific identifier.</rdfs:comment>
+        <rdfs:label xml:lang="en">hasId</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/IproK#hasName -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/IproK#hasName">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/IproK#IproKThing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>The common name of the entity.</rdfs:comment>
+        <rdfs:label xml:lang="en">hasName</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/IproK/cost#actualCostAmount -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/IproK/cost#actualCostAmount">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/IproK/cost#CostItem"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment>this is actual cost amount</rdfs:comment>
+        <rdfs:label xml:lang="en">actualCostAmount</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/IproK/cost#atCompleteCostAmount -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/IproK/cost#atCompleteCostAmount">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/IproK/cost#CostItem"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:label xml:lang="en">atCompleteCostAmount</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/IproK/cost#budgetedCostAmount -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/IproK/cost#budgetedCostAmount">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/IproK/cost#CostItem"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:label xml:lang="en">budgetedCostAmount</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/IproK/cost#remainingCostAmount -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/IproK/cost#remainingCostAmount">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/IproK/cost#CostItem"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:label xml:lang="en">remainingCostAmount</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/IproK/cost#vendorName -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/IproK/cost#vendorName">
+        <rdfs:domain rdf:resource="https://w3id.org/IproK/cost#CostItem"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">vendorName</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/IproK/integrated#allocatedUnits -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/IproK/integrated#allocatedUnits">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/IproK/integrated#ResourceAllocation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label xml:lang="en">allocatedUnits</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/IproK/integrated#allocationPlannedFinishDate -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/IproK/integrated#allocationPlannedFinishDate">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/IproK/integrated#ResourceAllocation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:label xml:lang="en">allocationPlannedFinishDate</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/IproK/integrated#allocationPlannedStartDate -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/IproK/integrated#allocationPlannedStartDate">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/IproK/integrated#ResourceAllocation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:label xml:lang="en">allocationPlannedStartDate</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/IproK/resource#actualUnits -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/IproK/resource#actualUnits">
+        <rdfs:domain rdf:resource="https://w3id.org/IproK/resource#Resource"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label xml:lang="en">actualUnits</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/IproK/resource#atCompleteUnits -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/IproK/resource#atCompleteUnits">
+        <rdfs:domain rdf:resource="https://w3id.org/IproK/resource#Resource"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:label xml:lang="en">atCompleteUnits</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/IproK/resource#baseRate -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/IproK/resource#baseRate">
+        <rdfs:domain rdf:resource="https://w3id.org/IproK/resource#Resource"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:label xml:lang="en">baseRate</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/IproK/resource#budgetedUnits -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/IproK/resource#budgetedUnits">
+        <rdfs:domain rdf:resource="https://w3id.org/IproK/resource#Resource"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:label xml:lang="en">budgetedUnits</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/IproK/resource#currency -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/IproK/resource#currency">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/IproK/resource#Resource"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">currency</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/IproK/resource#effectiveDateForRate -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/IproK/resource#effectiveDateForRate">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/IproK/resource#Resource"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:label xml:lang="en">effectiveDateForRate</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/IproK/resource#isPrimaryResource -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/IproK/resource#isPrimaryResource">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/IproK/resource#Resource"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:label xml:lang="en">isPrimaryResource</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/IproK/resource#maxUnits -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/IproK/resource#maxUnits">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/IproK/resource#Resource"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:label xml:lang="en">maxUnits</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/IproK/resource#remainingUnits -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/IproK/resource#remainingUnits">
+        <rdfs:domain rdf:resource="https://w3id.org/IproK/resource#Resource"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:label xml:lang="en">remainingUnits</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/IproK/schedule#actualDuration -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/IproK/schedule#actualDuration">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/IproK/schedule#TaskTime"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:label xml:lang="en">actualDuration</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/IproK/schedule#actualFinishDate -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/IproK/schedule#actualFinishDate">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/IproK/schedule#TaskTime"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:label xml:lang="en">actualFinishDate</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/IproK/schedule#actualStartDate -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/IproK/schedule#actualStartDate">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/IproK/schedule#TaskTime"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:label xml:lang="en">actualStartDate</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/IproK/schedule#atCompleteDuration -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/IproK/schedule#atCompleteDuration">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/IproK/schedule#TaskTime"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:label xml:lang="en">atCompleteDuration</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/IproK/schedule#constraintDate -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/IproK/schedule#constraintDate">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/IproK#Constraint"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:label xml:lang="en">constraintDate</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/IproK/schedule#constraintType -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/IproK/schedule#constraintType">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/IproK#Constraint"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">constraintType</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/IproK/schedule#isCriticalTask -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/IproK/schedule#isCriticalTask">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/IproK/schedule#Task"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:label xml:lang="en">isCriticalTask</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/IproK/schedule#isMilestone -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/IproK/schedule#isMilestone">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/IproK/schedule#Task"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:label xml:lang="en">isMilestone</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/IproK/schedule#lagTime -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/IproK/schedule#lagTime">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/IproK/schedule#TaskDependency"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:label xml:lang="en">lagTime</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/IproK/schedule#plannedFinishDate -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/IproK/schedule#plannedFinishDate">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/IproK/schedule#TaskTime"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:label xml:lang="en">plannedFinishDate</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/IproK/schedule#plannedStartDate -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/IproK/schedule#plannedStartDate">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/IproK/schedule#TaskTime"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:label xml:lang="en">plannedFinishDate</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/IproK/schedule#projectAddress -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/IproK/schedule#projectAddress">
+        <rdfs:domain rdf:resource="https://w3id.org/IproK/schedule#Project"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">projectAddress</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/IproK/schedule#projectCategory -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/IproK/schedule#projectCategory">
+        <rdfs:domain rdf:resource="https://w3id.org/IproK/schedule#Project"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">projectCategory</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/IproK/schedule#projectOwner -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/IproK/schedule#projectOwner">
+        <rdfs:domain rdf:resource="https://w3id.org/IproK/schedule#Project"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">projectOwner</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/IproK/schedule#remainingDuration -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/IproK/schedule#remainingDuration">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/IproK/schedule#TaskTime"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:label xml:lang="en">remainingDuration</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/IproK/schedule#scheduleDuration -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/IproK/schedule#scheduleDuration">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/IproK/schedule#TaskTime"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:label xml:lang="en">scheduleDuration</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/IproK/schedule#taskPriority -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/IproK/schedule#taskPriority">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/IproK/schedule#Task"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:label xml:lang="en">taskPriority</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/IproK/schedule#taskRelationshipType -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/IproK/schedule#taskRelationshipType">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/IproK/schedule#TaskDependency"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">taskRelationshipType</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://w3id.org/IproK#Actor -->
+
+
+    <owl:Class rdf:about="https://w3id.org/IproK#Actor">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/IproK#IproKThing"/>
+        <rdfs:label>Actor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/IproK#Calendar -->
+
+
+    <owl:Class rdf:about="https://w3id.org/IproK#Calendar">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/IproK#IproKThing"/>
+        <rdfs:label>Calendar</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/IproK#Constraint -->
+
+
+    <owl:Class rdf:about="https://w3id.org/IproK#Constraint">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/IproK#IproKThing"/>
+        <rdfs:label>Constraint</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/IproK#IproKThing -->
+
+
+    <owl:Class rdf:about="https://w3id.org/IproK#IproKThing">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:label>IproKThing</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/IproK/cost#CostCategory -->
+
+
+    <owl:Class rdf:about="https://w3id.org/IproK/cost#CostCategory">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/IproK#IproKThing"/>
+        <rdfs:label>CostCategory</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/IproK/cost#CostItem -->
+
+
+    <owl:Class rdf:about="https://w3id.org/IproK/cost#CostItem">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/IproK#IproKThing"/>
+        <rdfs:label>CostItem</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/IproK/cost#CostType -->
+
+
+    <owl:Class rdf:about="https://w3id.org/IproK/cost#CostType">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/IproK#IproKThing"/>
+        <rdfs:label>CostType</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/IproK/cost#EquipmentCost -->
+
+
+    <owl:Class rdf:about="https://w3id.org/IproK/cost#EquipmentCost">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/IproK/cost#CostType"/>
+        <rdfs:label>EquipmentCost</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/IproK/cost#ExpenseItem -->
+
+
+    <owl:Class rdf:about="https://w3id.org/IproK/cost#ExpenseItem">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/IproK/cost#CostType"/>
+        <rdfs:label>ExpenseItem</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/IproK/cost#LaborCost -->
+
+
+    <owl:Class rdf:about="https://w3id.org/IproK/cost#LaborCost">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/IproK/cost#CostType"/>
+        <rdfs:label>LaborCost</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/IproK/cost#MaterialCost -->
+
+
+    <owl:Class rdf:about="https://w3id.org/IproK/cost#MaterialCost">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/IproK/cost#CostType"/>
+        <rdfs:label>MaterialCost</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/IproK/integrated#ResourceAllocation -->
+
+
+    <owl:Class rdf:about="https://w3id.org/IproK/integrated#ResourceAllocation">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/IproK#IproKThing"/>
+        <rdfs:label>ResourceAllocation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/IproK/resource#EquipmentResource -->
+
+
+    <owl:Class rdf:about="https://w3id.org/IproK/resource#EquipmentResource">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/IproK/resource#ResourceType"/>
+        <rdfs:label>EquipmentResource</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/IproK/resource#LaborResource -->
+
+
+    <owl:Class rdf:about="https://w3id.org/IproK/resource#LaborResource">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/IproK/resource#ResourceType"/>
+        <rdfs:label>LaborResource</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/IproK/resource#MaterialResource -->
+
+
+    <owl:Class rdf:about="https://w3id.org/IproK/resource#MaterialResource">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/IproK/resource#ResourceType"/>
+        <rdfs:label>MaterialResource</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/IproK/resource#Resource -->
+
+
+    <owl:Class rdf:about="https://w3id.org/IproK/resource#Resource">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/IproK#IproKThing"/>
+        <rdfs:label>Resource</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/IproK/resource#ResourceConstraint -->
+
+
+    <owl:Class rdf:about="https://w3id.org/IproK/resource#ResourceConstraint">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/IproK#Constraint"/>
+        <rdfs:label>ResourceConstraint</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/IproK/resource#ResourceType -->
+
+
+    <owl:Class rdf:about="https://w3id.org/IproK/resource#ResourceType">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/IproK#IproKThing"/>
+        <rdfs:label>ResourceType</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/IproK/resource#TrackingTag -->
+
+
+    <owl:Class rdf:about="https://w3id.org/IproK/resource#TrackingTag">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/IproK#IproKThing"/>
+        <rdfs:label>TrackingTag</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/IproK/resource#Units -->
+
+
+    <owl:Class rdf:about="https://w3id.org/IproK/resource#Units">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/IproK#IproKThing"/>
+        <rdfs:label>Units</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/IproK/resource#UserDefinedResource -->
+
+
+    <owl:Class rdf:about="https://w3id.org/IproK/resource#UserDefinedResource">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/IproK/resource#ResourceType"/>
+        <rdfs:label>UserDefinedResource</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/IproK/schedule#Milestone -->
+
+
+    <owl:Class rdf:about="https://w3id.org/IproK/schedule#Milestone">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/IproK/schedule#Task"/>
+        <rdfs:label>Milestone</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/IproK/schedule#Project -->
+
+
+    <owl:Class rdf:about="https://w3id.org/IproK/schedule#Project">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/IproK#IproKThing"/>
+        <rdfs:label>Project</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/IproK/schedule#Task -->
+
+
+    <owl:Class rdf:about="https://w3id.org/IproK/schedule#Task">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/IproK/schedule#WBS_Element"/>
+        <rdfs:label>Task</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/IproK/schedule#TaskDependency -->
+
+
+    <owl:Class rdf:about="https://w3id.org/IproK/schedule#TaskDependency">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/IproK#IproKThing"/>
+        <rdfs:label>TaskDependency</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/IproK/schedule#TaskTime -->
+
+
+    <owl:Class rdf:about="https://w3id.org/IproK/schedule#TaskTime">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/IproK#IproKThing"/>
+        <rdfs:label>TaskTime</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/IproK/schedule#WBS_Element -->
+
+
+    <owl:Class rdf:about="https://w3id.org/IproK/schedule#WBS_Element">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/IproK/schedule#Project"/>
+        <rdfs:label>WBS_Element</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/IproK/schedule#WorkPackage -->
+
+
+    <owl:Class rdf:about="https://w3id.org/IproK/schedule#WorkPackage">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/IproK/schedule#WBS_Element"/>
+        <rdfs:label>WorkPackage</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/IproK/cost#EquipmentCost"/>
+            <rdf:Description rdf:about="https://w3id.org/IproK/cost#ExpenseItem"/>
+            <rdf:Description rdf:about="https://w3id.org/IproK/cost#LaborCost"/>
+            <rdf:Description rdf:about="https://w3id.org/IproK/cost#MaterialCost"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/IproK/resource#EquipmentResource"/>
+            <rdf:Description rdf:about="https://w3id.org/IproK/resource#LaborResource"/>
+            <rdf:Description rdf:about="https://w3id.org/IproK/resource#MaterialResource"/>
+            <rdf:Description rdf:about="https://w3id.org/IproK/resource#UserDefinedResource"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/ -->
+
+
