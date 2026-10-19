@@ -9,3 +9,5 @@
 .author-credit a:focus-visible{outline:2px solid var(--accent,#326b55);outline-offset:4px;border-radius:2px}
 @media(prefers-color-scheme:dark){.head .author-credit{color:#e0e9e4}.head .author-credit-role{color:#acbbb3}.head .author-credit-links{border-color:#50635a}.head .author-credit-links a{color:#a8d7bf}}
 @media(max-width:480px){.author-credit{gap:10px 18px}.author-credit .author-credit-links{padding-left:15px;gap:12px}.author-credit .author-credit-links a{display:inline-flex!important}}
+
+@media(max-width:600px){.author-credit{align-items:flex-start}.author-credit .author-credit-links{border-left:0;padding-left:0;width:100%;gap:18px}.author-credit .author-credit-links a{display:inline-flex!important}}
