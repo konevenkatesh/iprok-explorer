@@ -4,7 +4,7 @@ An independent, static website for understanding the Integrated Project Knowledg
 
 ## Expanded IproK draft
 
-The default view is the proposed **IproK 0.2.0** extension: **21 namespace modules, 138 classes, 127 object properties and 679 data properties**. It rewrites the platform schema into IproK module identifiers while preserving the published release separately. A full mapping, migrated SHACL constraints, four RDF formats and module partitions are available in `schema/iprok-0.2.0/`. Three containment-as-subclass errors are explicitly corrected in the draft. See its [specification](schema/iprok-0.2.0/README.md).
+The default view is the proposed **IproK 0.2.0** extension: **21 namespace modules, 138 classes, 271 object properties and 679 data properties**. It rewrites the platform schema into IproK module identifiers while preserving the published release separately. A full mapping, migrated SHACL constraints, four RDF formats and module partitions are available in `schema/iprok-0.2.0/`. Three containment-as-subclass errors are explicitly corrected in the draft. See its [specification](schema/iprok-0.2.0/README.md).
 
 ## Explore
 

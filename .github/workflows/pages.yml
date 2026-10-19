@@ -24,6 +24,7 @@ jobs:
       - run: node --check assets/explorer.js
       - run: python scripts/verify_schema.py
       - run: python scripts/verify_extended.py
+      - run: python scripts/validate_relationships.py
   deploy:
     if: github.event_name != 'pull_request'
     needs: verify

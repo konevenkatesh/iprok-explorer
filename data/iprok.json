@@ -4817,133 +4817,177 @@
       "source": "https://w3id.org/IproK/cost#CostItem",
       "target": "https://w3id.org/IproK/cost#CostCategory",
       "label": "hasCostCategory",
-      "property": "https://w3id.org/IproK/cost#hasCostCategory"
+      "property": "https://w3id.org/IproK/cost#hasCostCategory",
+      "proposed": false,
+      "definition": ""
     },
     {
       "source": "https://w3id.org/IproK/cost#CostItem",
       "target": "https://w3id.org/IproK/cost#CostType",
       "label": "hasCostType",
-      "property": "https://w3id.org/IproK/cost#hasCostType"
+      "property": "https://w3id.org/IproK/cost#hasCostType",
+      "proposed": false,
+      "definition": ""
     },
     {
       "source": "https://w3id.org/IproK/integrated#ResourceAllocation",
       "target": "https://w3id.org/IproK/resource#Resource",
       "label": "allocationAssignsResource",
-      "property": "https://w3id.org/IproK/integrated#allocationAssignsResource"
+      "property": "https://w3id.org/IproK/integrated#allocationAssignsResource",
+      "proposed": false,
+      "definition": ""
     },
     {
       "source": "https://w3id.org/IproK/integrated#ResourceAllocation",
       "target": "https://w3id.org/IproK/schedule#Task",
       "label": "allocationForTask",
-      "property": "https://w3id.org/IproK/integrated#allocationForTask"
+      "property": "https://w3id.org/IproK/integrated#allocationForTask",
+      "proposed": false,
+      "definition": ""
     },
     {
       "source": "https://w3id.org/IproK/integrated#ResourceAllocation",
       "target": "https://w3id.org/IproK/cost#CostItem",
       "label": "resourceAllocationIncursCostItem",
-      "property": "https://w3id.org/IproK/integrated#resourceAllocationIncursCostItem"
+      "property": "https://w3id.org/IproK/integrated#resourceAllocationIncursCostItem",
+      "proposed": false,
+      "definition": ""
     },
     {
       "source": "https://w3id.org/IproK/schedule#Task",
       "target": "https://w3id.org/IproK/cost#CostItem",
       "label": "taskGeneratesCostItem",
-      "property": "https://w3id.org/IproK/integrated#taskGeneratesCostItem"
+      "property": "https://w3id.org/IproK/integrated#taskGeneratesCostItem",
+      "proposed": false,
+      "definition": ""
     },
     {
       "source": "https://w3id.org/IproK/schedule#Task",
       "target": "https://w3id.org/IproK/integrated#ResourceAllocation",
       "label": "taskHasResourceAllocation",
-      "property": "https://w3id.org/IproK/integrated#taskHasResourceAllocation"
+      "property": "https://w3id.org/IproK/integrated#taskHasResourceAllocation",
+      "proposed": false,
+      "definition": ""
     },
     {
       "source": "https://w3id.org/IproK/resource#Resource",
       "target": "https://w3id.org/IproK/resource#ResourceConstraint",
       "label": "hasResourceConstraints",
-      "property": "https://w3id.org/IproK/resource#hasResourceConstraints"
+      "property": "https://w3id.org/IproK/resource#hasResourceConstraints",
+      "proposed": false,
+      "definition": ""
     },
     {
       "source": "https://w3id.org/IproK/resource#Resource",
       "target": "https://w3id.org/IproK/resource#ResourceType",
       "label": "hasResourceType",
-      "property": "https://w3id.org/IproK/resource#hasResourceType"
+      "property": "https://w3id.org/IproK/resource#hasResourceType",
+      "proposed": false,
+      "definition": ""
     },
     {
       "source": "https://w3id.org/IproK/resource#Resource",
       "target": "https://w3id.org/IproK/resource#TrackingTag",
       "label": "hasTrackingTag",
-      "property": "https://w3id.org/IproK/resource#hasTrackingTag"
+      "property": "https://w3id.org/IproK/resource#hasTrackingTag",
+      "proposed": false,
+      "definition": ""
     },
     {
       "source": "https://w3id.org/IproK/resource#Resource",
       "target": "https://w3id.org/IproK/resource#Units",
       "label": "measuredIn",
-      "property": "https://w3id.org/IproK/resource#measuredIn"
+      "property": "https://w3id.org/IproK/resource#measuredIn",
+      "proposed": false,
+      "definition": ""
     },
     {
       "source": "https://w3id.org/IproK/schedule#Task",
       "target": "https://w3id.org/IproK#Actor",
       "label": "assignedTo",
-      "property": "https://w3id.org/IproK/schedule#assignedTo"
+      "property": "https://w3id.org/IproK/schedule#assignedTo",
+      "proposed": false,
+      "definition": ""
     },
     {
       "source": "https://w3id.org/IproK/schedule#Task",
       "target": "https://w3id.org/IproK#Constraint",
       "label": "hasConstraint",
-      "property": "https://w3id.org/IproK/schedule#hasConstraint"
+      "property": "https://w3id.org/IproK/schedule#hasConstraint",
+      "proposed": false,
+      "definition": ""
     },
     {
       "source": "https://w3id.org/IproK/schedule#Task",
       "target": "https://w3id.org/IproK/schedule#TaskDependency",
       "label": "hasPredecessorDependency",
-      "property": "https://w3id.org/IproK/schedule#hasPredecessorDependency"
+      "property": "https://w3id.org/IproK/schedule#hasPredecessorDependency",
+      "proposed": false,
+      "definition": ""
     },
     {
       "source": "https://w3id.org/IproK/schedule#Task",
       "target": "https://w3id.org/IproK/schedule#Task",
       "label": "hasSubTask",
-      "property": "https://w3id.org/IproK/schedule#hasSubTask"
+      "property": "https://w3id.org/IproK/schedule#hasSubTask",
+      "proposed": false,
+      "definition": ""
     },
     {
       "source": "https://w3id.org/IproK/schedule#Task",
       "target": "https://w3id.org/IproK/schedule#TaskDependency",
       "label": "hasSuccessorDependency",
-      "property": "https://w3id.org/IproK/schedule#hasSuccessorDependency"
+      "property": "https://w3id.org/IproK/schedule#hasSuccessorDependency",
+      "proposed": false,
+      "definition": ""
     },
     {
       "source": "https://w3id.org/IproK/schedule#WBS_Element",
       "target": "https://w3id.org/IproK/schedule#Task",
       "label": "hasTask",
-      "property": "https://w3id.org/IproK/schedule#hasTask"
+      "property": "https://w3id.org/IproK/schedule#hasTask",
+      "proposed": false,
+      "definition": ""
     },
     {
       "source": "https://w3id.org/IproK/schedule#Task",
       "target": "https://w3id.org/IproK/schedule#TaskTime",
       "label": "hasTaskTime",
-      "property": "https://w3id.org/IproK/schedule#hasTaskTime"
+      "property": "https://w3id.org/IproK/schedule#hasTaskTime",
+      "proposed": false,
+      "definition": ""
     },
     {
       "source": "https://w3id.org/IproK/schedule#WorkPackage",
       "target": "https://w3id.org/IproK/schedule#WBS_Element",
       "label": "hasWBS",
-      "property": "https://w3id.org/IproK/schedule#hasWBS"
+      "property": "https://w3id.org/IproK/schedule#hasWBS",
+      "proposed": false,
+      "definition": ""
     },
     {
       "source": "https://w3id.org/IproK/schedule#Project",
       "target": "https://w3id.org/IproK/schedule#WorkPackage",
       "label": "hasWorkPackage",
-      "property": "https://w3id.org/IproK/schedule#hasWorkPackage"
+      "property": "https://w3id.org/IproK/schedule#hasWorkPackage",
+      "proposed": false,
+      "definition": ""
     },
     {
       "source": "https://w3id.org/IproK/schedule#TaskDependency",
       "target": "https://w3id.org/IproK/schedule#Task",
       "label": "linksToPredecessorTask",
-      "property": "https://w3id.org/IproK/schedule#linksToPredecessorTask"
+      "property": "https://w3id.org/IproK/schedule#linksToPredecessorTask",
+      "proposed": false,
+      "definition": ""
     },
     {
       "source": "https://w3id.org/IproK/schedule#TaskDependency",
       "target": "https://w3id.org/IproK/schedule#Task",
       "label": "linksToSuccessorTask",
-      "property": "https://w3id.org/IproK/schedule#linksToSuccessorTask"
+      "property": "https://w3id.org/IproK/schedule#linksToSuccessorTask",
+      "proposed": false,
+      "definition": ""
     }
   ],
   "audit": {

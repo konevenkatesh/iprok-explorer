@@ -15,25 +15,25 @@
     rdfs:label "Crew Type"@en ;
     dcterms:isPartOf <https://w3id.org/IproK/resource> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/CrewType> ;
-    rdfs:comment "A named gang the organisation deploys — 'Mason gang (6)', 'Bar bender gang (4)'. Org-level catalogue." ;
+    rdfs:comment "A named gang the organisation deploys; 'Mason gang (6)', 'Bar bender gang (4)'. Org-level catalogue." ;
     rdfs:subClassOf prov:Entity .
 
 <https://w3id.org/IproK/resource#EquipmentResource> a owl:Class ;
     rdfs:label "EquipmentResource" ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
-    rdfs:comment "The equipment resource class in the integrated project information model."@en ;
+    rdfs:comment "A resource-type classification for equipment."@en ;
     rdfs:subClassOf <https://w3id.org/IproK/resource#ResourceType> .
 
 <https://w3id.org/IproK/resource#LaborResource> a owl:Class ;
     rdfs:label "LaborResource" ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
-    rdfs:comment "The labor resource class in the integrated project information model."@en ;
+    rdfs:comment "A resource-type classification for labour."@en ;
     rdfs:subClassOf <https://w3id.org/IproK/resource#ResourceType> .
 
 <https://w3id.org/IproK/resource#MaterialResource> a owl:Class ;
     rdfs:label "MaterialResource" ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
-    rdfs:comment "The material resource class in the integrated project information model."@en ;
+    rdfs:comment "A resource-type classification for materials."@en ;
     rdfs:subClassOf <https://w3id.org/IproK/resource#ResourceType> .
 
 <https://w3id.org/IproK/resource#ProductivityContribution> a owl:Class ;
@@ -73,14 +73,14 @@
 <https://w3id.org/IproK/resource#UserDefinedResource> a owl:Class ;
     rdfs:label "UserDefinedResource" ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
-    rdfs:comment "The user defined resource class in the integrated project information model."@en ;
+    rdfs:comment "A resource-type classification defined for a project-specific need."@en ;
     rdfs:subClassOf <https://w3id.org/IproK/resource#ResourceType> .
 
 <https://w3id.org/IproK/resource#Worker> a owl:Class ;
     rdfs:label "Worker"@en ;
     dcterms:isPartOf <https://w3id.org/IproK/resource> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/Worker> ;
-    rdfs:comment "A person performing site labour. NOT a <https://w3id.org/IproK#User> — most site labour never logs in. Org-level catalogue." ;
+    rdfs:comment "A person performing site labour. NOT a <https://w3id.org/IproK#User>; most site labour never logs in. Org-level catalogue." ;
     rdfs:subClassOf prov:Agent .
 
 <https://w3id.org/IproK/resource#actualUnits> a owl:DatatypeProperty ;
@@ -424,30 +424,30 @@
 <https://w3id.org/IproK/resource#ResourceConstraint> a owl:Class ;
     rdfs:label "ResourceConstraint" ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
-    rdfs:comment "The resource constraint class in the integrated project information model."@en ;
+    rdfs:comment "A condition restricting the availability or use of a resource."@en ;
     rdfs:subClassOf <https://w3id.org/IproK#Constraint> .
 
 <https://w3id.org/IproK/resource#TrackingTag> a owl:Class ;
     rdfs:label "TrackingTag" ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
-    rdfs:comment "The tracking tag class in the integrated project information model."@en ;
+    rdfs:comment "An identifier concept used to track a resource."@en ;
     rdfs:subClassOf <https://w3id.org/IproK#IproKThing> .
 
 <https://w3id.org/IproK/resource#Units> a owl:Class ;
     rdfs:label "Units" ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
-    rdfs:comment "The units class in the integrated project information model."@en ;
+    rdfs:comment "A unit of measure used to express a resource quantity."@en ;
     rdfs:subClassOf <https://w3id.org/IproK#IproKThing> .
 
 <https://w3id.org/IproK/resource#ResourceType> a owl:Class ;
     rdfs:label "ResourceType" ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
-    rdfs:comment "The resource type class in the integrated project information model."@en ;
+    rdfs:comment "A classification describing the kind of a resource."@en ;
     rdfs:subClassOf <https://w3id.org/IproK#IproKThing> .
 
 <https://w3id.org/IproK/resource#Resource> a owl:Class ;
     rdfs:label "Resource" ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
-    rdfs:comment "The resource class in the integrated project information model."@en ;
+    rdfs:comment "A resource available for allocation to a task or activity."@en ;
     rdfs:subClassOf <https://w3id.org/IproK#IproKThing> .
 

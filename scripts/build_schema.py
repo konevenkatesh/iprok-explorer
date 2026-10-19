@@ -43,7 +43,7 @@ def build(key, files, name, note):
   if t['kind']=='Object property':
    for d in t['domain']:
     for r in t['range']:
-     if d in kinds and r in kinds:edges.append({'source':d,'target':r,'label':t['local'],'property':t['id']})
+     if d in kinds and r in kinds:edges.append({'source':d,'target':r,'label':t['local'],'property':t['id'],'proposed':any('Newly proposed IproK integration relationship' in x['value'] for x in t['statements']),'definition':t['description']})
  counts=Counter(kinds.values())
  audit={'triples':len(g),'declaredTerms':len(terms),'counts':dict(counts),'missingLabels':[t['id'] for t in terms if not t['declaredLabel']], 'missingComments':[t['id'] for t in terms if not t['description']], 'propertiesWithoutDomain':[t['id'] for t in terms if 'property' in t['kind'].lower() and not t['domain']], 'propertiesWithoutRange':[t['id'] for t in terms if 'property' in t['kind'].lower() and not t['range']], 'scope':'Static declaration audit. Missing domains may be intentional for polymorphic predicates. No OWL reasoner, import closure or historical study validation is claimed.'}
  out={'id':key,'name':name,'note':note,'files':[{'path':f,'sha256':digest(ROOT/f)} for f in files],'terms':terms,'edges':edges,'audit':audit}

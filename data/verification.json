@@ -31,7 +31,8 @@
     "Schema cards, table and graph",
     "Desktop and narrow-screen rendering; no whole-page horizontal overflow",
     "JavaScript console checked without errors during tested interactions",
-    "Expanded IproK 21-module default view and source comparison selectors"
+    "Expanded IproK 21-module default view and source comparison selectors",
+    "Keyboard-accessible module connection hit areas open property meanings, proposed status and source assertions"
   ],
   "limitations": [
     "No OWL reasoner consistency check or import closure validation",
@@ -47,14 +48,16 @@
     "niyojSourceCommit": "59bb8c2ae61228cd21778cc6beae523331f4529a",
     "schema": {
       "classes": 138,
-      "objectProperties": 127,
+      "objectProperties": 271,
       "dataProperties": 679,
       "namespaceModules": 21,
       "mappedIdentifiers": 1000,
       "originalNonHeaderAssertionsRetained": 401,
       "originalHierarchyAssertionsCorrected": 3,
       "fourSerialisationsIsomorphic": true,
-      "originalVersionFilesPreserved": true
+      "originalVersionFilesPreserved": true,
+      "newTypedRelationships": 144,
+      "typedIntegrationShapes": 75
     },
     "conformance": {
       "expectedOutcomesMatched": 193,
@@ -62,7 +65,7 @@
       "fixtureOrigin": "Retained platform valid/invalid corpus at the source commit; all schema identifiers migrated with mapping.json",
       "runner": "Retained official shacl_conformance.py with RDFS inference and advanced=True",
       "pyshacl": "0.31.0",
-      "scope": "Migrated core ontology and SHACL regression fixtures; no project dataset or historical research result"
+      "scope": "Complete final connected ontology and SHACL against all 193 consistently migrated retained fixtures"
     },
     "correctionReview": {
       "initialMigrationRegressions": 8,
@@ -77,12 +80,27 @@
       "New IproK module IRIs have not been registered in the persistent redirect service"
     ],
     "filesChecked": {
-      "ontology.ttl": "a06c2f73b84b1f710d066e404c29415746b18cafed00a5af3d1fbd376f042bcc",
-      "ontology.owl": "fe3c9816af031f8d651c7898be4f66588bec320f50133d03d8e004731ff86648",
-      "ontology.nt": "d0ee102f9a690ba104eda3860d46b06cdb1796087f6c09d1b0ba8ef915570c98",
-      "ontology.jsonld": "dfbfb5451aceb4f9a787b48824ea2987c368a2b94cd51d9b2ffe4a1907d14efc",
-      "shapes.ttl": "6b2d01cb4139cde36e31cf754eff2f6475ab51b14709949b859eb7c61fab4491",
+      "ontology.ttl": "0756c2d943952ca329e235f05aeebdb5fb153cafe18ededb77de23d56f75b19e",
+      "ontology.owl": "7ff5773d60b1932e11634e509ad1a6474aeb055f3a0be66ec89f283b411cfae4",
+      "ontology.nt": "29a0f861bd9a36601844c7bf549b4451b0891381bffb2e3af8e118eae4ae11c7",
+      "ontology.jsonld": "1fe64687749798922cbcb580fed0df53c0bb1ea06e7e9915d4c3e112cfbd6e8e",
+      "shapes.ttl": "09b8c3b5942ed47fb0bca87f4b2c777ba8afda494007624d3f20e818767aad1c",
       "mapping.json": "62ce3561930da51755f99db0d9018e905d5cb22c3e2728715b40275edbdfcf28"
-    }
+    },
+    "relationshipDiagnostics": {
+      "checkedOn": "2026-10-19",
+      "type": "New constructed relationship diagnostics; not historical research evidence",
+      "relations": 144,
+      "validTypedExamplesAccepted": 144,
+      "literalTargetsRejected": 144,
+      "wrongClassTargetsRejected": 144,
+      "validationInference": "none, to check explicit record roles without RDFS range inference manufacturing target types",
+      "moduleNodes": 21,
+      "moduleConnectedComponents": 1,
+      "crossModulePairs": 40,
+      "crossModuleQueryExamples": 4,
+      "scope": "Integration shapes only for constructed examples; the separate retained-corpus run checks the combined schema and shapes"
+    },
+    "annotationReview": "Removed promotional implementation wording and improved class reading guides after the conformance run. Non-comment ontology triples are isomorphic and the full SHACL graph is unchanged; conformance result inherited for this annotation-only correction."
   }
 }

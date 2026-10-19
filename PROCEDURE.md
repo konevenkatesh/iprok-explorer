@@ -2,9 +2,9 @@
 
 ## Proposed IproK extension
 
-The user requested rewriting and extending IproK on 19 October 2026. The new `schema/iprok-0.2.0/` distribution includes 138 classes across 21 namespaces, 127 object properties and 679 datatype properties. The atlas defaults to this draft. Original IproK and the unchanged Niyoj source snapshot remain selectable. `mapping.json` records the 1,000-identifier migration; `release.json` records counts, hashes, three hierarchy corrections and compatibility choices. See the extension README for the full contract.
+The user requested rewriting and extending IproK on 19 October 2026. The new `schema/iprok-0.2.0/` distribution includes 138 classes across 21 namespaces, 271 object properties and 679 datatype properties. The atlas defaults to this draft. Original IproK and the unchanged Niyoj source snapshot remain selectable. `mapping.json` records the 1,000-identifier migration; `release.json` records counts, hashes, three hierarchy corrections and compatibility choices. See the extension README for the full contract.
 
-Run `python scripts/extend_iprok.py` before rebuilding the explorer, and `python scripts/verify_extended.py` after generation. Run the retained SHACL corpus against consistently migrated fixtures before reporting conformance. Do not change ontology, shapes or fixtures while that validation is running.
+Run `python scripts/extend_iprok.py` before rebuilding the explorer, and `python scripts/verify_extended.py` after generation. Run `python scripts/validate_relationships.py` for the new optional integration layer, then run the retained SHACL corpus against consistently migrated fixtures before reporting conformance. Do not change ontology, shapes or fixtures while that validation is running.
 
 ## Keep the schema and its explanation separate
 

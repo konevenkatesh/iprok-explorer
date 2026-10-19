@@ -19,7 +19,8 @@ for t in preserved:
 for t in g:
  if any(isinstance(x,BNode) for x in t):bb.add(t)
 assert isomorphic(ba,bb)
-for typ,count in [(OWL.Class,138),(OWL.ObjectProperty,127),(OWL.DatatypeProperty,679)]:assert len(set(g.subjects(RDF.type,typ)))==count
+contract=json.loads((p/'relationship-contract.json').read_text())['relations']
+for typ,count in [(OWL.Class,138),(OWL.ObjectProperty,127+len(contract)),(OWL.DatatypeProperty,679)]:assert len(set(g.subjects(RDF.type,typ)))==count
 # Domain/range transformation is exact, not inferred from property usage.
 for predicate in [RDFS.domain,RDFS.range]:
  for a,_,b in source.triples((None,predicate,None)):
@@ -35,5 +36,24 @@ assert (URIRef(IP+'/schedule#Activity'),RDFS.subClassOf,URIRef(IP+'/schedule#Tas
 assert (URIRef(IP+'/schedule#WorkConstraint'),RDFS.subClassOf,URIRef(IP+'#Constraint')) in g
 assert not list(g.triples((None,OWL.equivalentClass,None))) and not list(g.triples((None,OWL.equivalentProperty,None)))
 assert len(list((p/'modules').glob('*.ttl')))==21
+# Every authored relation has its intended single domain/range and an optional typed shape.
+for relation in contract:
+ prop=URIRef(relation['property']);assert set(g.objects(prop,RDFS.domain))=={URIRef(relation['source'])};assert set(g.objects(prop,RDFS.range))=={URIRef(relation['target'])}
+ assert any(s.value(shape,SH.path)==prop and s.value(shape,SH['class'])==URIRef(relation['target']) for shape in s.subjects(SH.path,prop))
+# All classes form one connected component when explicit inheritance is included.
+from collections import defaultdict
+adj=defaultdict(set);classes=set(g.subjects(RDF.type,OWL.Class))
+for prop in g.subjects(RDF.type,OWL.ObjectProperty):
+ for a in g.objects(prop,RDFS.domain):
+  for b in g.objects(prop,RDFS.range):
+   if a in classes and b in classes:adj[a].add(b);adj[b].add(a)
+for a,b in g.subject_objects(RDFS.subClassOf):
+ if a in classes and b in classes:adj[a].add(b);adj[b].add(a)
+seen=set();pending=[URIRef(IP+'/schedule#Project')]
+while pending:
+ node=pending.pop()
+ if node in seen:continue
+ seen.add(node);pending.extend(adj[node]-seen)
+assert seen==classes,classes-seen
 for f in (p/'modules').glob('*.ttl'):Graph().parse(f)
 print('PASS: proposed IproK extension counts, 21 partitions, 1,000-identifier injective mapping, 401 preserved assertions and 3 explicit hierarchy corrections, exact domain/range migration, constraint query IRIs and four equivalent RDF distributions.')

@@ -8,7 +8,7 @@
     rdfs:label "DLPDefect"@en ;
     dcterms:isPartOf <https://w3id.org/IproK/handover> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/DLPDefect> ;
-    rdfs:comment "A post-handover defect inside the liability period — RERA S.14(3): rectify within 30 days." ;
+    rdfs:comment "A post-handover defect inside the liability period; RERA S.14(3): rectify within 30 days." ;
     rdfs:subClassOf prov:Entity .
 
 <https://w3id.org/IproK/handover#HandoverPackage> a owl:Class ;

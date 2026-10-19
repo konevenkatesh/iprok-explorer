@@ -8,7 +8,7 @@
     rdfs:label "Analysis Addition"@en ;
     dcterms:isPartOf <https://w3id.org/IproK/cost> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/AnalysisAddition> ;
-    rdfs:comment "A percentage added to an analysis in order, on a stated base — water charges on cost, contractor's profit and overheads on the running total." ;
+    rdfs:comment "A percentage added to an analysis in order, on a stated base; water charges on cost, contractor's profit and overheads on the running total." ;
     rdfs:subClassOf prov:Entity .
 
 <https://w3id.org/IproK/cost#AnalysisLine> a owl:Class ;
@@ -35,25 +35,25 @@
 <https://w3id.org/IproK/cost#EquipmentCost> a owl:Class ;
     rdfs:label "EquipmentCost" ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
-    rdfs:comment "The equipment cost class in the integrated project information model."@en ;
+    rdfs:comment "A cost-type classification for equipment-related expenditure."@en ;
     rdfs:subClassOf <https://w3id.org/IproK/cost#CostType> .
 
 <https://w3id.org/IproK/cost#ExpenseItem> a owl:Class ;
     rdfs:label "ExpenseItem" ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
-    rdfs:comment "The expense item class in the integrated project information model."@en ;
+    rdfs:comment "A cost-type classification for other project expenses."@en ;
     rdfs:subClassOf <https://w3id.org/IproK/cost#CostType> .
 
 <https://w3id.org/IproK/cost#LaborCost> a owl:Class ;
     rdfs:label "LaborCost" ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
-    rdfs:comment "The labor cost class in the integrated project information model."@en ;
+    rdfs:comment "A cost-type classification for labour-related expenditure."@en ;
     rdfs:subClassOf <https://w3id.org/IproK/cost#CostType> .
 
 <https://w3id.org/IproK/cost#MaterialCost> a owl:Class ;
     rdfs:label "MaterialCost" ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
-    rdfs:comment "The material cost class in the integrated project information model."@en ;
+    rdfs:comment "A cost-type classification for material-related expenditure."@en ;
     rdfs:subClassOf <https://w3id.org/IproK/cost#CostType> .
 
 <https://w3id.org/IproK/cost#ProjectResourcePrice> a owl:Class ;
@@ -485,18 +485,18 @@
 <https://w3id.org/IproK/cost#CostCategory> a owl:Class ;
     rdfs:label "CostCategory" ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
-    rdfs:comment "The cost category class in the integrated project information model."@en ;
+    rdfs:comment "A classification grouping cost items by their purpose or accounting category."@en ;
     rdfs:subClassOf <https://w3id.org/IproK#IproKThing> .
 
 <https://w3id.org/IproK/cost#CostType> a owl:Class ;
     rdfs:label "CostType" ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
-    rdfs:comment "The cost type class in the integrated project information model."@en ;
+    rdfs:comment "A classification of expenditure by the kind of resource or expense involved."@en ;
     rdfs:subClassOf <https://w3id.org/IproK#IproKThing> .
 
 <https://w3id.org/IproK/cost#CostItem> a owl:Class ;
     rdfs:label "CostItem" ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
-    rdfs:comment "The cost item class in the integrated project information model."@en ;
+    rdfs:comment "A cost record associated with scheduled work or a resource allocation."@en ;
     rdfs:subClassOf <https://w3id.org/IproK#IproKThing> .
 

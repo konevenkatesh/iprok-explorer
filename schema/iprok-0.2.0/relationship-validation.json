@@ -1,0 +1,14 @@
+{
+  "checkedOn": "2026-10-19",
+  "type": "New constructed relationship diagnostics; not historical research evidence",
+  "relations": 144,
+  "validTypedExamplesAccepted": 144,
+  "literalTargetsRejected": 144,
+  "wrongClassTargetsRejected": 144,
+  "validationInference": "none, to check explicit record roles without RDFS range inference manufacturing target types",
+  "moduleNodes": 21,
+  "moduleConnectedComponents": 1,
+  "crossModulePairs": 40,
+  "crossModuleQueryExamples": 4,
+  "scope": "Integration shapes only for constructed examples; the separate retained-corpus run checks the combined schema and shapes"
+}

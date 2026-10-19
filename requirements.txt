@@ -1,1 +1,2 @@
 rdflib==7.2.1
+pyshacl==0.31.0

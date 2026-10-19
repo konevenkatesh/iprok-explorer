@@ -1433,6 +1433,807 @@
             sh:path <https://w3id.org/IproK/quality#inspectionCategory> ] ;
     sh:targetClass <https://w3id.org/IproK/quality#Inspection> .
 
+<https://w3id.org/IproK/shapes#IntegrationActivityDurationEstimateShape> a sh:NodeShape ;
+    sh:property [ sh:class resource:CrewType ;
+            sh:message "Proposed integration link must reference an IRI typed as CrewType."@en ;
+            sh:nodeKind sh:IRI ;
+            sh:path integrated:durationEstimateUsesCrew ] ;
+    sh:targetClass schedule:ActivityDurationEstimate .
+
+<https://w3id.org/IproK/shapes#IntegrationActivityPredictionShape> a sh:NodeShape ;
+    sh:property [ sh:class <https://w3id.org/IproK/signal#HistoricalWeatherProfile> ;
+            sh:message "Proposed integration link must reference an IRI typed as HistoricalWeatherProfile."@en ;
+            sh:nodeKind sh:IRI ;
+            sh:path integrated:predictionUsesWeatherProfile ],
+        [ sh:class schedule:ScheduleBaseline ;
+            sh:message "Proposed integration link must reference an IRI typed as ScheduleBaseline."@en ;
+            sh:nodeKind sh:IRI ;
+            sh:path integrated:predictionUsesBaseline ],
+        [ sh:class schedule:Activity ;
+            sh:message "Proposed integration link must reference an IRI typed as Activity."@en ;
+            sh:nodeKind sh:IRI ;
+            sh:path integrated:predictionForActivity ] ;
+    sh:targetClass <https://w3id.org/IproK/prediction#ActivityPrediction> .
+
+<https://w3id.org/IproK/shapes#IntegrationActivityShape> a sh:NodeShape ;
+    sh:property [ sh:class resource:ProductivityObservation ;
+            sh:message "Proposed integration link must reference an IRI typed as ProductivityObservation."@en ;
+            sh:nodeKind sh:IRI ;
+            sh:path integrated:activityHasProductivityObservation ],
+        [ sh:class <https://w3id.org/IproK/billing#BOQItem> ;
+            sh:message "Proposed integration link must reference an IRI typed as BOQItem."@en ;
+            sh:nodeKind sh:IRI ;
+            sh:path integrated:activityHasBOQItem ],
+        [ sh:class schedule:ActivityDurationEstimate ;
+            sh:message "Proposed integration link must reference an IRI typed as ActivityDurationEstimate."@en ;
+            sh:nodeKind sh:IRI ;
+            sh:path integrated:activityHasDurationEstimate ],
+        [ sh:class iprok:Actor ;
+            sh:message "Proposed integration link must reference an IRI typed as Actor."@en ;
+            sh:nodeKind sh:IRI ;
+            sh:path integrated:activityAssignedActor ],
+        [ sh:class cost:CostItem ;
+            sh:message "Proposed integration link must reference an IRI typed as CostItem."@en ;
+            sh:nodeKind sh:IRI ;
+            sh:path integrated:activityGeneratesCostItem ],
+        [ sh:class iprok:Calendar ;
+            sh:message "Proposed integration link must reference an IRI typed as Calendar."@en ;
+            sh:nodeKind sh:IRI ;
+            sh:path integrated:activityUsesCalendar ],
+        [ sh:class schedule:WorkConstraint ;
+            sh:message "Proposed integration link must reference an IRI typed as WorkConstraint."@en ;
+            sh:nodeKind sh:IRI ;
+            sh:path integrated:activityHasWorkConstraint ],
+        [ sh:class schedule:ScheduleLink ;
+            sh:message "Proposed integration link must reference an IRI typed as ScheduleLink."@en ;
+            sh:nodeKind sh:IRI ;
+            sh:path integrated:activityHasScheduleLink ],
+        [ sh:class <https://w3id.org/IproK/building#Element> ;
+            sh:message "Proposed integration link must reference an IRI typed as Element."@en ;
+            sh:nodeKind sh:IRI ;
+            sh:path integrated:activityLinkedElement ] ;
+    sh:targetClass schedule:Activity .
+
+<https://w3id.org/IproK/shapes#IntegrationAnalysisLineShape> a sh:NodeShape ;
+    sh:property [ sh:class cost:CostResource ;
+            sh:message "Proposed integration link must reference an IRI typed as CostResource."@en ;
+            sh:nodeKind sh:IRI ;
+            sh:path integrated:analysisLineUsesCostResource ] ;
+    sh:targetClass cost:AnalysisLine .
+
+<https://w3id.org/IproK/shapes#IntegrationApprovalShape> a sh:NodeShape ;
+    sh:property [ sh:class <https://w3id.org/IproK/document#Document> ;
+            sh:message "Proposed integration link must reference an IRI typed as Document."@en ;
+            sh:nodeKind sh:IRI ;
+            sh:path integrated:approvalHasDocument ] ;
+    sh:targetClass <https://w3id.org/IproK/approval#Approval> .
+
+<https://w3id.org/IproK/shapes#IntegrationBOQItemShape> a sh:NodeShape ;
+    sh:property [ sh:class cost:RateAnalysis ;
+            sh:message "Proposed integration link must reference an IRI typed as RateAnalysis."@en ;
+            sh:nodeKind sh:IRI ;
+            sh:path integrated:boqHasRateAnalysis ] ;
+    sh:targetClass <https://w3id.org/IproK/billing#BOQItem> .
+
+<https://w3id.org/IproK/shapes#IntegrationBaselineEntryShape> a sh:NodeShape ;
+    sh:property [ sh:class schedule:Activity ;
+            sh:message "Proposed integration link must reference an IRI typed as Activity."@en ;
+            sh:nodeKind sh:IRI ;
+            sh:path integrated:baselineEntryForActivity ] ;
+    sh:targetClass schedule:BaselineEntry .
+
+<https://w3id.org/IproK/shapes#IntegrationCollectionReceiptShape> a sh:NodeShape ;
+    sh:property [ sh:class <https://w3id.org/IproK/property#Unit> ;
+            sh:message "Proposed integration link must reference an IRI typed as Unit."@en ;
+            sh:nodeKind sh:IRI ;
+            sh:path integrated:collectionForUnit ],
+        [ sh:class <https://w3id.org/IproK/finance#EscrowAccount> ;
+            sh:message "Proposed integration link must reference an IRI typed as EscrowAccount."@en ;
+            sh:nodeKind sh:IRI ;
+            sh:path integrated:collectionToEscrow ] ;
+    sh:targetClass <https://w3id.org/IproK/finance#CollectionReceipt> .
+
+<https://w3id.org/IproK/shapes#IntegrationComparableProjectShape> a sh:NodeShape ;
+    sh:property [ sh:class <https://w3id.org/IproK/tender#Tender> ;
+            sh:message "Proposed integration link must reference an IRI typed as Tender."@en ;
+            sh:nodeKind sh:IRI ;
+            sh:path integrated:comparisonForTender ],
+        [ sh:class schedule:Project ;
+            sh:message "Proposed integration link must reference an IRI typed as Project."@en ;
+            sh:nodeKind sh:IRI ;
+            sh:path integrated:comparableReferenceProject ] ;
+    sh:targetClass <https://w3id.org/IproK/tender#ComparableProject> .
+
+<https://w3id.org/IproK/shapes#IntegrationCostResourceShape> a sh:NodeShape ;
+    sh:property [ sh:class resource:Resource ;
+            sh:message "Proposed integration link must reference an IRI typed as Resource."@en ;
+            sh:nodeKind sh:IRI ;
+            sh:path integrated:costResourceRepresentsResource ] ;
+    sh:targetClass cost:CostResource .
+
+<https://w3id.org/IproK/shapes#IntegrationCrewCompositionShape> a sh:NodeShape ;
+    sh:property [ sh:class resource:Resource ;
+            sh:message "Proposed integration link must reference an IRI typed as Resource."@en ;
+            sh:nodeKind sh:IRI ;
+            sh:path integrated:crewCompositionUsesResource ] ;
+    sh:targetClass resource:CrewComposition .
+
+<https://w3id.org/IproK/shapes#IntegrationCrewTypeShape> a sh:NodeShape ;
+    sh:property [ sh:class resource:CrewComposition ;
+            sh:message "Proposed integration link must reference an IRI typed as CrewComposition."@en ;
+            sh:nodeKind sh:IRI ;
+            sh:path integrated:crewHasComposition ] ;
+    sh:targetClass resource:CrewType .
+
+<https://w3id.org/IproK/shapes#IntegrationDLPDefectShape> a sh:NodeShape ;
+    sh:property [ sh:class <https://w3id.org/IproK/handover#HandoverPackage> ;
+            sh:message "Proposed integration link must reference an IRI typed as HandoverPackage."@en ;
+            sh:nodeKind sh:IRI ;
+            sh:path integrated:defectForHandover ] ;
+    sh:targetClass <https://w3id.org/IproK/handover#DLPDefect> .
+
+<https://w3id.org/IproK/shapes#IntegrationDPREntryShape> a sh:NodeShape ;
+    sh:property [ sh:class schedule:Activity ;
+            sh:message "Proposed integration link must reference an IRI typed as Activity."@en ;
+            sh:nodeKind sh:IRI ;
+            sh:path integrated:progressReportForActivity ],
+        [ sh:class <https://w3id.org/IproK/reporting#Photo> ;
+            sh:message "Proposed integration link must reference an IRI typed as Photo."@en ;
+            sh:nodeKind sh:IRI ;
+            sh:path integrated:progressReportHasPhoto ] ;
+    sh:targetClass <https://w3id.org/IproK/reporting#DPREntry> .
+
+<https://w3id.org/IproK/shapes#IntegrationDecisionShape> a sh:NodeShape ;
+    sh:property [ sh:class iprok:User ;
+            sh:message "Proposed integration link must reference an IRI typed as User."@en ;
+            sh:nodeKind sh:IRI ;
+            sh:path integrated:decisionMadeByUser ] ;
+    sh:targetClass iprok:Decision .
+
+<https://w3id.org/IproK/shapes#IntegrationDemandNoteShape> a sh:NodeShape ;
+    sh:property [ sh:class <https://w3id.org/IproK/finance#PaymentMilestone> ;
+            sh:message "Proposed integration link must reference an IRI typed as PaymentMilestone."@en ;
+            sh:nodeKind sh:IRI ;
+            sh:path integrated:demandAtMilestone ],
+        [ sh:class <https://w3id.org/IproK/property#Unit> ;
+            sh:message "Proposed integration link must reference an IRI typed as Unit."@en ;
+            sh:nodeKind sh:IRI ;
+            sh:path integrated:demandForUnit ] ;
+    sh:targetClass <https://w3id.org/IproK/finance#DemandNote> .
+
+<https://w3id.org/IproK/shapes#IntegrationDesignOptionShape> a sh:NodeShape ;
+    sh:property [ sh:class <https://w3id.org/IproK/building#Element> ;
+            sh:message "Proposed integration link must reference an IRI typed as Element."@en ;
+            sh:nodeKind sh:IRI ;
+            sh:path integrated:designOptionAffectsElement ] ;
+    sh:targetClass cost:DesignOption .
+
+<https://w3id.org/IproK/shapes#IntegrationDeviationShape> a sh:NodeShape ;
+    sh:property [ sh:class <https://w3id.org/IproK/billing#BOQItem> ;
+            sh:message "Proposed integration link must reference an IRI typed as BOQItem."@en ;
+            sh:nodeKind sh:IRI ;
+            sh:path integrated:deviationForBOQItem ] ;
+    sh:targetClass <https://w3id.org/IproK/billing#Deviation> .
+
+<https://w3id.org/IproK/shapes#IntegrationDrawingChangeShape> a sh:NodeShape ;
+    sh:property [ sh:class <https://w3id.org/IproK/document#Drawing> ;
+            sh:message "Proposed integration link must reference an IRI typed as Drawing."@en ;
+            sh:nodeKind sh:IRI ;
+            sh:path integrated:drawingChangeOnDrawing ] ;
+    sh:targetClass <https://w3id.org/IproK/document#DrawingChange> .
+
+<https://w3id.org/IproK/shapes#IntegrationDrawingShape> a sh:NodeShape ;
+    sh:property [ sh:class <https://w3id.org/IproK/document#DrawingState> ;
+            sh:message "Proposed integration link must reference an IRI typed as DrawingState."@en ;
+            sh:nodeKind sh:IRI ;
+            sh:path integrated:drawingHasState ],
+        [ sh:class <https://w3id.org/IproK/document#Annotation> ;
+            sh:message "Proposed integration link must reference an IRI typed as Annotation."@en ;
+            sh:nodeKind sh:IRI ;
+            sh:path integrated:drawingHasAnnotation ],
+        [ sh:class schedule:Activity ;
+            sh:message "Proposed integration link must reference an IRI typed as Activity."@en ;
+            sh:nodeKind sh:IRI ;
+            sh:path integrated:drawingForActivity ] ;
+    sh:targetClass <https://w3id.org/IproK/document#Drawing> .
+
+<https://w3id.org/IproK/shapes#IntegrationElementCopiesRecordedShape> a sh:NodeShape ;
+    sh:property [ sh:class <https://w3id.org/IproK/building#IfcModel> ;
+            sh:message "Proposed integration link must reference an IRI typed as IfcModel."@en ;
+            sh:nodeKind sh:IRI ;
+            sh:path integrated:copyRecordingForModel ] ;
+    sh:targetClass <https://w3id.org/IproK/building#ElementCopiesRecorded> .
+
+<https://w3id.org/IproK/shapes#IntegrationElementDuplicatesRetiredShape> a sh:NodeShape ;
+    sh:property [ sh:class schedule:Project ;
+            sh:message "Proposed integration link must reference an IRI typed as Project."@en ;
+            sh:nodeKind sh:IRI ;
+            sh:path integrated:duplicateRetirementForProject ] ;
+    sh:targetClass <https://w3id.org/IproK/building#ElementDuplicatesRetired> .
+
+<https://w3id.org/IproK/shapes#IntegrationElementShape> a sh:NodeShape ;
+    sh:property [ sh:class <https://w3id.org/IproK/building#MemberIdentity> ;
+            sh:message "Proposed integration link must reference an IRI typed as MemberIdentity."@en ;
+            sh:nodeKind sh:IRI ;
+            sh:path integrated:elementHasMemberIdentity ] ;
+    sh:targetClass <https://w3id.org/IproK/building#Element> .
+
+<https://w3id.org/IproK/shapes#IntegrationEscrowAccountShape> a sh:NodeShape ;
+    sh:property [ sh:class schedule:Project ;
+            sh:message "Proposed integration link must reference an IRI typed as Project."@en ;
+            sh:nodeKind sh:IRI ;
+            sh:path integrated:escrowForProject ] ;
+    sh:targetClass <https://w3id.org/IproK/finance#EscrowAccount> .
+
+<https://w3id.org/IproK/shapes#IntegrationEscrowWithdrawalShape> a sh:NodeShape ;
+    sh:property [ sh:class <https://w3id.org/IproK/document#Document> ;
+            sh:message "Proposed integration link must reference an IRI typed as Document."@en ;
+            sh:nodeKind sh:IRI ;
+            sh:path integrated:withdrawalSupportedByDocument ],
+        [ sh:class <https://w3id.org/IproK/finance#EscrowAccount> ;
+            sh:message "Proposed integration link must reference an IRI typed as EscrowAccount."@en ;
+            sh:nodeKind sh:IRI ;
+            sh:path integrated:withdrawalFromEscrow ] ;
+    sh:targetClass <https://w3id.org/IproK/finance#EscrowWithdrawal> .
+
+<https://w3id.org/IproK/shapes#IntegrationExternalSignalShape> a sh:NodeShape ;
+    sh:property [ sh:class schedule:Project ;
+            sh:message "Proposed integration link must reference an IRI typed as Project."@en ;
+            sh:nodeKind sh:IRI ;
+            sh:path integrated:signalForProject ] ;
+    sh:targetClass <https://w3id.org/IproK/signal#ExternalSignal> .
+
+<https://w3id.org/IproK/shapes#IntegrationGoodsReceiptShape> a sh:NodeShape ;
+    sh:property [ sh:class <https://w3id.org/IproK/procurement#PurchaseOrder> ;
+            sh:message "Proposed integration link must reference an IRI typed as PurchaseOrder."@en ;
+            sh:nodeKind sh:IRI ;
+            sh:path integrated:goodsReceiptAgainstOrder ] ;
+    sh:targetClass <https://w3id.org/IproK/procurement#GoodsReceipt> .
+
+<https://w3id.org/IproK/shapes#IntegrationHandoverPackageShape> a sh:NodeShape ;
+    sh:property [ sh:class schedule:Project ;
+            sh:message "Proposed integration link must reference an IRI typed as Project."@en ;
+            sh:nodeKind sh:IRI ;
+            sh:path integrated:handoverForProject ],
+        [ sh:class <https://w3id.org/IproK/handover#SnagItem> ;
+            sh:message "Proposed integration link must reference an IRI typed as SnagItem."@en ;
+            sh:nodeKind sh:IRI ;
+            sh:path integrated:handoverHasSnag ],
+        [ sh:class <https://w3id.org/IproK/handover#WarrantyRecord> ;
+            sh:message "Proposed integration link must reference an IRI typed as WarrantyRecord."@en ;
+            sh:nodeKind sh:IRI ;
+            sh:path integrated:handoverIncludesWarranty ],
+        [ sh:class <https://w3id.org/IproK/document#Document> ;
+            sh:message "Proposed integration link must reference an IRI typed as Document."@en ;
+            sh:nodeKind sh:IRI ;
+            sh:path integrated:handoverIncludesDocument ] ;
+    sh:targetClass <https://w3id.org/IproK/handover#HandoverPackage> .
+
+<https://w3id.org/IproK/shapes#IntegrationHistoricalWeatherProfileShape> a sh:NodeShape ;
+    sh:property [ sh:class schedule:Project ;
+            sh:message "Proposed integration link must reference an IRI typed as Project."@en ;
+            sh:nodeKind sh:IRI ;
+            sh:path integrated:weatherProfileForProject ],
+        [ sh:class <https://w3id.org/IproK/signal#HistoricalWeatherWeek> ;
+            sh:message "Proposed integration link must reference an IRI typed as HistoricalWeatherWeek."@en ;
+            sh:nodeKind sh:IRI ;
+            sh:path integrated:weatherProfileHasWeek ] ;
+    sh:targetClass <https://w3id.org/IproK/signal#HistoricalWeatherProfile> .
+
+<https://w3id.org/IproK/shapes#IntegrationHoldPointShape> a sh:NodeShape ;
+    sh:property [ sh:class schedule:Activity ;
+            sh:message "Proposed integration link must reference an IRI typed as Activity."@en ;
+            sh:nodeKind sh:IRI ;
+            sh:path integrated:holdPointForActivity ] ;
+    sh:targetClass <https://w3id.org/IproK/quality#HoldPoint> .
+
+<https://w3id.org/IproK/shapes#IntegrationIfcModelShape> a sh:NodeShape ;
+    sh:property [ sh:class <https://w3id.org/IproK/building#Element> ;
+            sh:message "Proposed integration link must reference an IRI typed as Element."@en ;
+            sh:nodeKind sh:IRI ;
+            sh:path integrated:modelContainsElement ],
+        [ sh:class schedule:Project ;
+            sh:message "Proposed integration link must reference an IRI typed as Project."@en ;
+            sh:nodeKind sh:IRI ;
+            sh:path integrated:modelForProject ] ;
+    sh:targetClass <https://w3id.org/IproK/building#IfcModel> .
+
+<https://w3id.org/IproK/shapes#IntegrationIncidentShape> a sh:NodeShape ;
+    sh:property [ sh:class <https://w3id.org/IproK/safety#IncidentType> ;
+            sh:message "Proposed integration link must reference an IRI typed as IncidentType."@en ;
+            sh:nodeKind sh:IRI ;
+            sh:path integrated:incidentHasType ],
+        [ sh:class schedule:Activity ;
+            sh:message "Proposed integration link must reference an IRI typed as Activity."@en ;
+            sh:nodeKind sh:IRI ;
+            sh:path integrated:incidentForActivity ],
+        [ sh:class schedule:Project ;
+            sh:message "Proposed integration link must reference an IRI typed as Project."@en ;
+            sh:nodeKind sh:IRI ;
+            sh:path integrated:incidentForProject ] ;
+    sh:targetClass <https://w3id.org/IproK/safety#Incident> .
+
+<https://w3id.org/IproK/shapes#IntegrationInspectionShape> a sh:NodeShape ;
+    sh:property [ sh:class schedule:Activity ;
+            sh:message "Proposed integration link must reference an IRI typed as Activity."@en ;
+            sh:nodeKind sh:IRI ;
+            sh:path integrated:inspectionForActivity ],
+        [ sh:class <https://w3id.org/IproK/quality#ChecklistItem> ;
+            sh:message "Proposed integration link must reference an IRI typed as ChecklistItem."@en ;
+            sh:nodeKind sh:IRI ;
+            sh:path integrated:inspectionHasChecklistItem ] ;
+    sh:targetClass <https://w3id.org/IproK/quality#Inspection> .
+
+<https://w3id.org/IproK/shapes#IntegrationIssueShape> a sh:NodeShape ;
+    sh:property [ sh:class schedule:Activity ;
+            sh:message "Proposed integration link must reference an IRI typed as Activity."@en ;
+            sh:nodeKind sh:IRI ;
+            sh:path integrated:issueForActivity ],
+        [ sh:class <https://w3id.org/IproK/coordination#ClashBatch> ;
+            sh:message "Proposed integration link must reference an IRI typed as ClashBatch."@en ;
+            sh:nodeKind sh:IRI ;
+            sh:path integrated:issueInClashBatch ],
+        [ sh:class <https://w3id.org/IproK/building#Element> ;
+            sh:message "Proposed integration link must reference an IRI typed as Element."@en ;
+            sh:nodeKind sh:IRI ;
+            sh:path integrated:issueForElement ] ;
+    sh:targetClass <https://w3id.org/IproK/coordination#Issue> .
+
+<https://w3id.org/IproK/shapes#IntegrationJointMeasurementShape> a sh:NodeShape ;
+    sh:property [ sh:class <https://w3id.org/IproK/billing#JMStatus> ;
+            sh:message "Proposed integration link must reference an IRI typed as JMStatus."@en ;
+            sh:nodeKind sh:IRI ;
+            sh:path integrated:jointMeasurementHasState ],
+        [ sh:class <https://w3id.org/IproK/billing#Measurement> ;
+            sh:message "Proposed integration link must reference an IRI typed as Measurement."@en ;
+            sh:nodeKind sh:IRI ;
+            sh:path integrated:jointMeasurementIncludesMeasurement ],
+        [ sh:class iprok:SignatureEvent ;
+            sh:message "Proposed integration link must reference an IRI typed as SignatureEvent."@en ;
+            sh:nodeKind sh:IRI ;
+            sh:path integrated:jointMeasurementHasSignature ] ;
+    sh:targetClass <https://w3id.org/IproK/billing#JointMeasurement> .
+
+<https://w3id.org/IproK/shapes#IntegrationMastersAdoptionShape> a sh:NodeShape ;
+    sh:property [ sh:class iprok:OrganisationMasters ;
+            sh:message "Proposed integration link must reference an IRI typed as OrganisationMasters."@en ;
+            sh:nodeKind sh:IRI ;
+            sh:path integrated:adoptionUsesMasters ] ;
+    sh:targetClass iprok:MastersAdoption .
+
+<https://w3id.org/IproK/shapes#IntegrationMaterialIssueShape> a sh:NodeShape ;
+    sh:property [ sh:class <https://w3id.org/IproK/procurement#GoodsReceipt> ;
+            sh:message "Proposed integration link must reference an IRI typed as GoodsReceipt."@en ;
+            sh:nodeKind sh:IRI ;
+            sh:path integrated:materialIssueFromReceipt ],
+        [ sh:class schedule:Activity ;
+            sh:message "Proposed integration link must reference an IRI typed as Activity."@en ;
+            sh:nodeKind sh:IRI ;
+            sh:path integrated:materialIssueForActivity ] ;
+    sh:targetClass <https://w3id.org/IproK/procurement#MaterialIssue> .
+
+<https://w3id.org/IproK/shapes#IntegrationMeasurementShape> a sh:NodeShape ;
+    sh:property [ sh:class <https://w3id.org/IproK/building#Element> ;
+            sh:message "Proposed integration link must reference an IRI typed as Element."@en ;
+            sh:nodeKind sh:IRI ;
+            sh:path integrated:measurementForElement ],
+        [ sh:class <https://w3id.org/IproK/billing#BOQItem> ;
+            sh:message "Proposed integration link must reference an IRI typed as BOQItem."@en ;
+            sh:nodeKind sh:IRI ;
+            sh:path integrated:measurementForBOQItem ],
+        [ sh:class schedule:Activity ;
+            sh:message "Proposed integration link must reference an IRI typed as Activity."@en ;
+            sh:nodeKind sh:IRI ;
+            sh:path integrated:measurementForActivity ] ;
+    sh:targetClass <https://w3id.org/IproK/billing#Measurement> .
+
+<https://w3id.org/IproK/shapes#IntegrationModelCommentShape> a sh:NodeShape ;
+    sh:property [ sh:class <https://w3id.org/IproK/building#IfcModel> ;
+            sh:message "Proposed integration link must reference an IRI typed as IfcModel."@en ;
+            sh:nodeKind sh:IRI ;
+            sh:path integrated:modelCommentOnModel ] ;
+    sh:targetClass <https://w3id.org/IproK/building#ModelComment> .
+
+<https://w3id.org/IproK/shapes#IntegrationModelHealthCheckShape> a sh:NodeShape ;
+    sh:property [ sh:class <https://w3id.org/IproK/building#IfcModel> ;
+            sh:message "Proposed integration link must reference an IRI typed as IfcModel."@en ;
+            sh:nodeKind sh:IRI ;
+            sh:path integrated:healthCheckForModel ] ;
+    sh:targetClass <https://w3id.org/IproK/building#ModelHealthCheck> .
+
+<https://w3id.org/IproK/shapes#IntegrationNCRShape> a sh:NodeShape ;
+    sh:property [ sh:class <https://w3id.org/IproK/quality#Inspection> ;
+            sh:message "Proposed integration link must reference an IRI typed as Inspection."@en ;
+            sh:nodeKind sh:IRI ;
+            sh:path integrated:ncrFromInspection ],
+        [ sh:class <https://w3id.org/IproK/quality#NCRStatus> ;
+            sh:message "Proposed integration link must reference an IRI typed as NCRStatus."@en ;
+            sh:nodeKind sh:IRI ;
+            sh:path integrated:ncrHasStatus ] ;
+    sh:targetClass <https://w3id.org/IproK/quality#NCR> .
+
+<https://w3id.org/IproK/shapes#IntegrationOrganisationShape> a sh:NodeShape ;
+    sh:property [ sh:class resource:ProductivityNorm ;
+            sh:message "Proposed integration link must reference an IRI typed as ProductivityNorm."@en ;
+            sh:nodeKind sh:IRI ;
+            sh:path integrated:organisationHasProductivityNorm ],
+        [ sh:class iprok:PilotStatus ;
+            sh:message "Proposed integration link must reference an IRI typed as PilotStatus."@en ;
+            sh:nodeKind sh:IRI ;
+            sh:path integrated:organisationHasPilotStatus ],
+        [ sh:class iprok:OrganisationMasters ;
+            sh:message "Proposed integration link must reference an IRI typed as OrganisationMasters."@en ;
+            sh:nodeKind sh:IRI ;
+            sh:path integrated:organisationHasMasters ] ;
+    sh:targetClass iprok:Organisation .
+
+<https://w3id.org/IproK/shapes#IntegrationPaymentMilestoneShape> a sh:NodeShape ;
+    sh:property [ sh:class schedule:Activity ;
+            sh:message "Proposed integration link must reference an IRI typed as Activity."@en ;
+            sh:nodeKind sh:IRI ;
+            sh:path integrated:paymentMilestoneForActivity ] ;
+    sh:targetClass <https://w3id.org/IproK/finance#PaymentMilestone> .
+
+<https://w3id.org/IproK/shapes#IntegrationPaymentShape> a sh:NodeShape ;
+    sh:property [ sh:class <https://w3id.org/IproK/billing#RABill> ;
+            sh:message "Proposed integration link must reference an IRI typed as RABill."@en ;
+            sh:nodeKind sh:IRI ;
+            sh:path integrated:paymentAgainstBill ] ;
+    sh:targetClass <https://w3id.org/IproK/billing#Payment> .
+
+<https://w3id.org/IproK/shapes#IntegrationProductOfferShape> a sh:NodeShape ;
+    sh:property [ sh:class cost:CostResource ;
+            sh:message "Proposed integration link must reference an IRI typed as CostResource."@en ;
+            sh:nodeKind sh:IRI ;
+            sh:path integrated:productOfferForCostResource ],
+        [ sh:class <https://w3id.org/IproK/procurement#Vendor> ;
+            sh:message "Proposed integration link must reference an IRI typed as Vendor."@en ;
+            sh:nodeKind sh:IRI ;
+            sh:path integrated:productOfferByVendor ] ;
+    sh:targetClass <https://w3id.org/IproK/procurement#ProductOffer> .
+
+<https://w3id.org/IproK/shapes#IntegrationProductivityContributionShape> a sh:NodeShape ;
+    sh:property [ sh:class resource:ProductivityObservation ;
+            sh:message "Proposed integration link must reference an IRI typed as ProductivityObservation."@en ;
+            sh:nodeKind sh:IRI ;
+            sh:path integrated:contributionIncludesObservation ],
+        [ sh:class schedule:Project ;
+            sh:message "Proposed integration link must reference an IRI typed as Project."@en ;
+            sh:nodeKind sh:IRI ;
+            sh:path integrated:contributionFromProject ] ;
+    sh:targetClass resource:ProductivityContribution .
+
+<https://w3id.org/IproK/shapes#IntegrationProductivityNormShape> a sh:NodeShape ;
+    sh:property [ sh:class resource:CrewType ;
+            sh:message "Proposed integration link must reference an IRI typed as CrewType."@en ;
+            sh:nodeKind sh:IRI ;
+            sh:path integrated:normForCrew ] ;
+    sh:targetClass resource:ProductivityNorm .
+
+<https://w3id.org/IproK/shapes#IntegrationProductivityObservationShape> a sh:NodeShape ;
+    sh:property [ sh:class resource:CrewType ;
+            sh:message "Proposed integration link must reference an IRI typed as CrewType."@en ;
+            sh:nodeKind sh:IRI ;
+            sh:path integrated:observationUsesCrew ] ;
+    sh:targetClass resource:ProductivityObservation .
+
+<https://w3id.org/IproK/shapes#IntegrationProductivityRecomputeShape> a sh:NodeShape ;
+    sh:property [ sh:class iprok:Organisation ;
+            sh:message "Proposed integration link must reference an IRI typed as Organisation."@en ;
+            sh:nodeKind sh:IRI ;
+            sh:path integrated:recomputeForOrganisation ] ;
+    sh:targetClass resource:ProductivityRecompute .
+
+<https://w3id.org/IproK/shapes#IntegrationProjectMembershipShape> a sh:NodeShape ;
+    sh:property [ sh:class iprok:User ;
+            sh:message "Proposed integration link must reference an IRI typed as User."@en ;
+            sh:nodeKind sh:IRI ;
+            sh:path integrated:membershipForUser ] ;
+    sh:targetClass iprok:ProjectMembership .
+
+<https://w3id.org/IproK/shapes#IntegrationProjectResourcePriceShape> a sh:NodeShape ;
+    sh:property [ sh:class schedule:Project ;
+            sh:message "Proposed integration link must reference an IRI typed as Project."@en ;
+            sh:nodeKind sh:IRI ;
+            sh:path integrated:projectPriceForProject ],
+        [ sh:class cost:CostResource ;
+            sh:message "Proposed integration link must reference an IRI typed as CostResource."@en ;
+            sh:nodeKind sh:IRI ;
+            sh:path integrated:projectPriceForCostResource ] ;
+    sh:targetClass cost:ProjectResourcePrice .
+
+<https://w3id.org/IproK/shapes#IntegrationProjectShape> a sh:NodeShape ;
+    sh:property [ sh:class schedule:ScheduleBaseline ;
+            sh:message "Proposed integration link must reference an IRI typed as ScheduleBaseline."@en ;
+            sh:nodeKind sh:IRI ;
+            sh:path integrated:projectHasScheduleBaseline ],
+        [ sh:class iprok:IdSequence ;
+            sh:message "Proposed integration link must reference an IRI typed as IdSequence."@en ;
+            sh:nodeKind sh:IRI ;
+            sh:path integrated:projectHasIdSequence ],
+        [ sh:class schedule:Activity ;
+            sh:message "Proposed integration link must reference an IRI typed as Activity."@en ;
+            sh:nodeKind sh:IRI ;
+            sh:path integrated:projectHasActivity ],
+        [ sh:class <https://w3id.org/IproK/approval#Approval> ;
+            sh:message "Proposed integration link must reference an IRI typed as Approval."@en ;
+            sh:nodeKind sh:IRI ;
+            sh:path integrated:projectRequiresApproval ],
+        [ sh:class iprok:Organisation ;
+            sh:message "Proposed integration link must reference an IRI typed as Organisation."@en ;
+            sh:nodeKind sh:IRI ;
+            sh:path integrated:projectOfOrganisation ],
+        [ sh:class schedule:WBSNode ;
+            sh:message "Proposed integration link must reference an IRI typed as WBSNode."@en ;
+            sh:nodeKind sh:IRI ;
+            sh:path integrated:projectHasWBSNode ],
+        [ sh:class <https://w3id.org/IproK/coordination#Event> ;
+            sh:message "Proposed integration link must reference an IRI typed as Event."@en ;
+            sh:nodeKind sh:IRI ;
+            sh:path integrated:projectHasEvent ],
+        [ sh:class iprok:Decision ;
+            sh:message "Proposed integration link must reference an IRI typed as Decision."@en ;
+            sh:nodeKind sh:IRI ;
+            sh:path integrated:projectHasDecision ],
+        [ sh:class iprok:ProjectMembership ;
+            sh:message "Proposed integration link must reference an IRI typed as ProjectMembership."@en ;
+            sh:nodeKind sh:IRI ;
+            sh:path integrated:projectHasMembership ],
+        [ sh:class schedule:EVMSnapshot ;
+            sh:message "Proposed integration link must reference an IRI typed as EVMSnapshot."@en ;
+            sh:nodeKind sh:IRI ;
+            sh:path integrated:projectHasEVMSnapshot ],
+        [ sh:class iprok:MastersAdoption ;
+            sh:message "Proposed integration link must reference an IRI typed as MastersAdoption."@en ;
+            sh:nodeKind sh:IRI ;
+            sh:path integrated:projectAdoptsMasters ],
+        [ sh:class <https://w3id.org/IproK/property#Tower> ;
+            sh:message "Proposed integration link must reference an IRI typed as Tower."@en ;
+            sh:nodeKind sh:IRI ;
+            sh:path integrated:projectHasTower ],
+        [ sh:class cost:DesignOption ;
+            sh:message "Proposed integration link must reference an IRI typed as DesignOption."@en ;
+            sh:nodeKind sh:IRI ;
+            sh:path integrated:projectHasDesignOption ],
+        [ sh:class <https://w3id.org/IproK/document#Document> ;
+            sh:message "Proposed integration link must reference an IRI typed as Document."@en ;
+            sh:nodeKind sh:IRI ;
+            sh:path integrated:projectHasDocument ] ;
+    sh:targetClass schedule:Project .
+
+<https://w3id.org/IproK/shapes#IntegrationPurchaseOrderShape> a sh:NodeShape ;
+    sh:property [ sh:class <https://w3id.org/IproK/billing#BOQItem> ;
+            sh:message "Proposed integration link must reference an IRI typed as BOQItem."@en ;
+            sh:nodeKind sh:IRI ;
+            sh:path integrated:purchaseOrderForBOQItem ],
+        [ sh:class <https://w3id.org/IproK/procurement#Vendor> ;
+            sh:message "Proposed integration link must reference an IRI typed as Vendor."@en ;
+            sh:nodeKind sh:IRI ;
+            sh:path integrated:purchaseOrderToVendor ] ;
+    sh:targetClass <https://w3id.org/IproK/procurement#PurchaseOrder> .
+
+<https://w3id.org/IproK/shapes#IntegrationRABillShape> a sh:NodeShape ;
+    sh:property [ sh:class <https://w3id.org/IproK/billing#BillState> ;
+            sh:message "Proposed integration link must reference an IRI typed as BillState."@en ;
+            sh:nodeKind sh:IRI ;
+            sh:path integrated:billHasState ],
+        [ sh:class <https://w3id.org/IproK/billing#Recovery> ;
+            sh:message "Proposed integration link must reference an IRI typed as Recovery."@en ;
+            sh:nodeKind sh:IRI ;
+            sh:path integrated:billHasRecovery ],
+        [ sh:class <https://w3id.org/IproK/billing#Measurement> ;
+            sh:message "Proposed integration link must reference an IRI typed as Measurement."@en ;
+            sh:nodeKind sh:IRI ;
+            sh:path integrated:billIncludesMeasurement ] ;
+    sh:targetClass <https://w3id.org/IproK/billing#RABill> .
+
+<https://w3id.org/IproK/shapes#IntegrationRFIShape> a sh:NodeShape ;
+    sh:property [ sh:class <https://w3id.org/IproK/document#Drawing> ;
+            sh:message "Proposed integration link must reference an IRI typed as Drawing."@en ;
+            sh:nodeKind sh:IRI ;
+            sh:path integrated:rfiAboutDrawing ],
+        [ sh:class schedule:Activity ;
+            sh:message "Proposed integration link must reference an IRI typed as Activity."@en ;
+            sh:nodeKind sh:IRI ;
+            sh:path integrated:rfiForActivity ],
+        [ sh:class <https://w3id.org/IproK/document#RFIState> ;
+            sh:message "Proposed integration link must reference an IRI typed as RFIState."@en ;
+            sh:nodeKind sh:IRI ;
+            sh:path integrated:rfiHasState ] ;
+    sh:targetClass <https://w3id.org/IproK/document#RFI> .
+
+<https://w3id.org/IproK/shapes#IntegrationRateAnalysisShape> a sh:NodeShape ;
+    sh:property [ sh:class cost:AnalysisLine ;
+            sh:message "Proposed integration link must reference an IRI typed as AnalysisLine."@en ;
+            sh:nodeKind sh:IRI ;
+            sh:path integrated:rateAnalysisHasLine ],
+        [ sh:class cost:AnalysisAddition ;
+            sh:message "Proposed integration link must reference an IRI typed as AnalysisAddition."@en ;
+            sh:nodeKind sh:IRI ;
+            sh:path integrated:rateAnalysisHasAddition ] ;
+    sh:targetClass cost:RateAnalysis .
+
+<https://w3id.org/IproK/shapes#IntegrationRecurrenceAlertShape> a sh:NodeShape ;
+    sh:property [ sh:class schedule:Activity ;
+            sh:message "Proposed integration link must reference an IRI typed as Activity."@en ;
+            sh:nodeKind sh:IRI ;
+            sh:path integrated:recurrenceForActivity ] ;
+    sh:targetClass <https://w3id.org/IproK/quality#RecurrenceAlert> .
+
+<https://w3id.org/IproK/shapes#IntegrationResourceAllocationShape> a sh:NodeShape ;
+    sh:property [ sh:class schedule:Activity ;
+            sh:message "Proposed integration link must reference an IRI typed as Activity."@en ;
+            sh:nodeKind sh:IRI ;
+            sh:path integrated:allocationForActivity ] ;
+    sh:targetClass integrated:ResourceAllocation .
+
+<https://w3id.org/IproK/shapes#IntegrationResourceMappingShape> a sh:NodeShape ;
+    sh:property [ sh:class cost:CostResource ;
+            sh:message "Proposed integration link must reference an IRI typed as CostResource."@en ;
+            sh:nodeKind sh:IRI ;
+            sh:path integrated:resourceMappingToCostResource ] ;
+    sh:targetClass cost:ResourceMapping .
+
+<https://w3id.org/IproK/shapes#IntegrationRiskShape> a sh:NodeShape ;
+    sh:property [ sh:class schedule:Activity ;
+            sh:message "Proposed integration link must reference an IRI typed as Activity."@en ;
+            sh:nodeKind sh:IRI ;
+            sh:path integrated:riskForActivity ] ;
+    sh:targetClass <https://w3id.org/IproK/coordination#Risk> .
+
+<https://w3id.org/IproK/shapes#IntegrationSORItemShape> a sh:NodeShape ;
+    sh:property [ sh:class <https://w3id.org/IproK/billing#BOQItem> ;
+            sh:message "Proposed integration link must reference an IRI typed as BOQItem."@en ;
+            sh:nodeKind sh:IRI ;
+            sh:path integrated:sorItemSupportsBOQItem ] ;
+    sh:targetClass <https://w3id.org/IproK/tender#SORItem> .
+
+<https://w3id.org/IproK/shapes#IntegrationSORLibraryShape> a sh:NodeShape ;
+    sh:property [ sh:class <https://w3id.org/IproK/tender#SORItem> ;
+            sh:message "Proposed integration link must reference an IRI typed as SORItem."@en ;
+            sh:nodeKind sh:IRI ;
+            sh:path integrated:sorLibraryHasItem ] ;
+    sh:targetClass <https://w3id.org/IproK/tender#SORLibrary> .
+
+<https://w3id.org/IproK/shapes#IntegrationSavedQueryShape> a sh:NodeShape ;
+    sh:property [ sh:class schedule:Project ;
+            sh:message "Proposed integration link must reference an IRI typed as Project."@en ;
+            sh:nodeKind sh:IRI ;
+            sh:path integrated:savedQueryForProject ] ;
+    sh:targetClass <https://w3id.org/IproK/reporting#SavedQuery> .
+
+<https://w3id.org/IproK/shapes#IntegrationScheduleBaselineShape> a sh:NodeShape ;
+    sh:property [ sh:class schedule:BaselineEntry ;
+            sh:message "Proposed integration link must reference an IRI typed as BaselineEntry."@en ;
+            sh:nodeKind sh:IRI ;
+            sh:path integrated:baselineHasEntry ] ;
+    sh:targetClass schedule:ScheduleBaseline .
+
+<https://w3id.org/IproK/shapes#IntegrationScheduleLinkShape> a sh:NodeShape ;
+    sh:property [ sh:class schedule:Activity ;
+            sh:message "Proposed integration link must reference an IRI typed as Activity."@en ;
+            sh:nodeKind sh:IRI ;
+            sh:path integrated:scheduleLinkPredecessor ],
+        [ sh:class schedule:Activity ;
+            sh:message "Proposed integration link must reference an IRI typed as Activity."@en ;
+            sh:nodeKind sh:IRI ;
+            sh:path integrated:scheduleLinkSuccessor ] ;
+    sh:targetClass schedule:ScheduleLink .
+
+<https://w3id.org/IproK/shapes#IntegrationSiteIntelligenceShape> a sh:NodeShape ;
+    sh:property [ sh:class <https://w3id.org/IproK/site#SiteWorkerSafety> ;
+            sh:message "Proposed integration link must reference an IRI typed as SiteWorkerSafety."@en ;
+            sh:nodeKind sh:IRI ;
+            sh:path integrated:siteHasWorkerSafety ],
+        [ sh:class <https://w3id.org/IproK/site#SiteLabour> ;
+            sh:message "Proposed integration link must reference an IRI typed as SiteLabour."@en ;
+            sh:nodeKind sh:IRI ;
+            sh:path integrated:siteHasLabour ],
+        [ sh:class <https://w3id.org/IproK/site#SiteLogistics> ;
+            sh:message "Proposed integration link must reference an IRI typed as SiteLogistics."@en ;
+            sh:nodeKind sh:IRI ;
+            sh:path integrated:siteHasLogistics ],
+        [ sh:class <https://w3id.org/IproK/site#SiteHydrology> ;
+            sh:message "Proposed integration link must reference an IRI typed as SiteHydrology."@en ;
+            sh:nodeKind sh:IRI ;
+            sh:path integrated:siteHasHydrology ],
+        [ sh:class <https://w3id.org/IproK/site#SiteClimate> ;
+            sh:message "Proposed integration link must reference an IRI typed as SiteClimate."@en ;
+            sh:nodeKind sh:IRI ;
+            sh:path integrated:siteHasClimate ],
+        [ sh:class <https://w3id.org/IproK/site#SiteUtilities> ;
+            sh:message "Proposed integration link must reference an IRI typed as SiteUtilities."@en ;
+            sh:nodeKind sh:IRI ;
+            sh:path integrated:siteHasUtilities ],
+        [ sh:class schedule:Project ;
+            sh:message "Proposed integration link must reference an IRI typed as Project."@en ;
+            sh:nodeKind sh:IRI ;
+            sh:path integrated:siteIntelligenceForProject ] ;
+    sh:targetClass <https://w3id.org/IproK/site#SiteIntelligence> .
+
+<https://w3id.org/IproK/shapes#IntegrationSnagItemShape> a sh:NodeShape ;
+    sh:property [ sh:class <https://w3id.org/IproK/building#Element> ;
+            sh:message "Proposed integration link must reference an IRI typed as Element."@en ;
+            sh:nodeKind sh:IRI ;
+            sh:path integrated:snagForElement ] ;
+    sh:targetClass <https://w3id.org/IproK/handover#SnagItem> .
+
+<https://w3id.org/IproK/shapes#IntegrationTenderShape> a sh:NodeShape ;
+    sh:property [ sh:class <https://w3id.org/IproK/tender#ExtractionStatus> ;
+            sh:message "Proposed integration link must reference an IRI typed as ExtractionStatus."@en ;
+            sh:nodeKind sh:IRI ;
+            sh:path integrated:tenderHasExtractionStatus ],
+        [ sh:class schedule:Project ;
+            sh:message "Proposed integration link must reference an IRI typed as Project."@en ;
+            sh:nodeKind sh:IRI ;
+            sh:path integrated:tenderAwardedAsProject ],
+        [ sh:class iprok:Organisation ;
+            sh:message "Proposed integration link must reference an IRI typed as Organisation."@en ;
+            sh:nodeKind sh:IRI ;
+            sh:path integrated:tenderForOrganisation ],
+        [ sh:class <https://w3id.org/IproK/tender#TenderBOQItem> ;
+            sh:message "Proposed integration link must reference an IRI typed as TenderBOQItem."@en ;
+            sh:nodeKind sh:IRI ;
+            sh:path integrated:tenderHasBOQItem ],
+        [ sh:class <https://w3id.org/IproK/tender#BidRecommendation> ;
+            sh:message "Proposed integration link must reference an IRI typed as BidRecommendation."@en ;
+            sh:nodeKind sh:IRI ;
+            sh:path integrated:tenderHasRecommendation ] ;
+    sh:targetClass <https://w3id.org/IproK/tender#Tender> .
+
+<https://w3id.org/IproK/shapes#IntegrationTowerShape> a sh:NodeShape ;
+    sh:property [ sh:class <https://w3id.org/IproK/property#Unit> ;
+            sh:message "Proposed integration link must reference an IRI typed as Unit."@en ;
+            sh:nodeKind sh:IRI ;
+            sh:path integrated:towerContainsUnit ] ;
+    sh:targetClass <https://w3id.org/IproK/property#Tower> .
+
+<https://w3id.org/IproK/shapes#IntegrationTransmittalShape> a sh:NodeShape ;
+    sh:property [ sh:class <https://w3id.org/IproK/document#Document> ;
+            sh:message "Proposed integration link must reference an IRI typed as Document."@en ;
+            sh:nodeKind sh:IRI ;
+            sh:path integrated:transmittalIncludesDocument ] ;
+    sh:targetClass <https://w3id.org/IproK/document#Transmittal> .
+
+<https://w3id.org/IproK/shapes#IntegrationUnitShape> a sh:NodeShape ;
+    sh:property [ sh:class <https://w3id.org/IproK/property#UnitType> ;
+            sh:message "Proposed integration link must reference an IRI typed as UnitType."@en ;
+            sh:nodeKind sh:IRI ;
+            sh:path integrated:unitHasType ] ;
+    sh:targetClass <https://w3id.org/IproK/property#Unit> .
+
+<https://w3id.org/IproK/shapes#IntegrationWBSNodeShape> a sh:NodeShape ;
+    sh:property [ sh:class schedule:Activity ;
+            sh:message "Proposed integration link must reference an IRI typed as Activity."@en ;
+            sh:nodeKind sh:IRI ;
+            sh:path integrated:wbsNodeContainsActivity ] ;
+    sh:targetClass schedule:WBSNode .
+
+<https://w3id.org/IproK/shapes#IntegrationWarrantyRecordShape> a sh:NodeShape ;
+    sh:property [ sh:class <https://w3id.org/IproK/building#Element> ;
+            sh:message "Proposed integration link must reference an IRI typed as Element."@en ;
+            sh:nodeKind sh:IRI ;
+            sh:path integrated:warrantyForElement ] ;
+    sh:targetClass <https://w3id.org/IproK/handover#WarrantyRecord> .
+
+<https://w3id.org/IproK/shapes#IntegrationWorkConstraintShape> a sh:NodeShape ;
+    sh:property [ sh:class iprok:User ;
+            sh:message "Proposed integration link must reference an IRI typed as User."@en ;
+            sh:nodeKind sh:IRI ;
+            sh:path integrated:workConstraintAssignedUser ] ;
+    sh:targetClass schedule:WorkConstraint .
+
+<https://w3id.org/IproK/shapes#IntegrationWorkerShape> a sh:NodeShape ;
+    sh:property [ sh:class resource:SkillCertification ;
+            sh:message "Proposed integration link must reference an IRI typed as SkillCertification."@en ;
+            sh:nodeKind sh:IRI ;
+            sh:path integrated:workerHasCertification ],
+        [ sh:class schedule:Activity ;
+            sh:message "Proposed integration link must reference an IRI typed as Activity."@en ;
+            sh:nodeKind sh:IRI ;
+            sh:path integrated:workerPerformsActivity ] ;
+    sh:targetClass resource:Worker .
+
 <https://w3id.org/IproK/shapes#IssueShape> a sh:NodeShape ;
     sh:property [ sh:datatype xsd:string ;
             sh:maxCount 1 ;

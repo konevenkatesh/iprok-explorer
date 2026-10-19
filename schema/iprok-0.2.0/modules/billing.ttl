@@ -27,7 +27,7 @@
     rdfs:label "Joint Measurement" ;
     dcterms:isPartOf <https://w3id.org/IproK/billing> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/JointMeasurement> ;
-    rdfs:comment "A legally-binding dual-signed measurement record. The contractor signatory and departmental JE/AE each authenticate via OTP before the JM reaches JMComplete status. This is the first software implementation of the Indian PWD joint measurement requirement as a native knowledge-graph workflow. Defined in S3.5." ;
+    rdfs:comment "A joint measurement record supporting separate contractor and departmental sign-off roles." ;
     rdfs:subClassOf prov:Activity .
 
 <https://w3id.org/IproK/billing#Payment> a owl:Class ;
@@ -41,7 +41,7 @@
     rdfs:label "Running Account Bill" ;
     dcterms:isPartOf <https://w3id.org/IproK/billing> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/RABill> ;
-    rdfs:comment "A Running Account Bill (RA Bill) — the payment instrument in Indian government and PSU construction contracts. Aggregates all approved measurements for a billing period, applies BOQ rates, deducts previous payments and recoveries, and produces the net payable amount. This is the first software implementation of the RA Bill as a native knowledge-graph workflow — the numbers are always live and traceable to source measurements. Defined in S3.6." ;
+    rdfs:comment "A Running Account Bill (RA Bill); the payment instrument in Indian government and PSU construction contracts. Aggregates all approved measurements for a billing period, applies BOQ rates, deducts previous payments and recoveries, and produces the net payable amount." ;
     rdfs:subClassOf prov:Entity,
         <https://w3id.org/IproK/document#Document> .
 
@@ -396,12 +396,12 @@
     rdfs:label "BOQ item" ;
     dcterms:isPartOf <https://w3id.org/IproK/billing> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/BOQItem> ;
-    rdfs:comment "One line in the project's Bill of Quantities. Catalogue node — measurements reference it via <https://w3id.org/IproK/billing#measuredItem>." .
+    rdfs:comment "One line in the project's Bill of Quantities. Catalogue node; measurements reference it via <https://w3id.org/IproK/billing#measuredItem>." .
 
 <https://w3id.org/IproK/billing#Measurement> a owl:Class ;
     rdfs:label "Measurement" ;
     dcterms:isPartOf <https://w3id.org/IproK/billing> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/Measurement> ;
-    rdfs:comment "One MB entry: dimensions or direct quantity for one BOQ item, captured by a Site Engineer / QC. Joint OTP signature is M3 — V0.29 just records the measurement." ;
+    rdfs:comment "One MB entry: dimensions or direct quantity for one BOQ item, captured by a Site Engineer / QC. Joint OTP signature is M3; V0.29 just records the measurement." ;
     rdfs:subClassOf prov:Activity .
 

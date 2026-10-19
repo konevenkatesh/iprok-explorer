@@ -159,17 +159,17 @@
       "files": [
         {
           "path": "schema/iprok-0.2.0/ontology.ttl",
-          "sha256": "a06c2f73b84b1f710d066e404c29415746b18cafed00a5af3d1fbd376f042bcc"
+          "sha256": "0756c2d943952ca329e235f05aeebdb5fb153cafe18ededb77de23d56f75b19e"
         }
       ],
       "audit": {
-        "triples": 6072,
-        "declaredTerms": 955,
+        "triples": 7368,
+        "declaredTerms": 1099,
         "counts": {
           "Property": 2,
           "Annotation property": 9,
           "Data property": 679,
-          "Object property": 127,
+          "Object property": 271,
           "Class": 138
         },
         "missingLabels": [
@@ -931,8 +931,8 @@
           "http://purl.org/dc/terms/title"
         ],
         "scope": "Static declaration audit. Missing domains may be intentional for polymorphic predicates. No OWL reasoner, import closure or historical study validation is claimed.",
-        "shaclTriples": 4769,
-        "nodeShapes": 104
+        "shaclTriples": 5639,
+        "nodeShapes": 179
       }
     },
     {

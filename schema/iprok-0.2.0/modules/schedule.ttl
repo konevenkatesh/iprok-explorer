@@ -28,7 +28,7 @@
 <https://w3id.org/IproK/schedule#Milestone> a owl:Class ;
     rdfs:label "Milestone" ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
-    rdfs:comment "The milestone class in the integrated project information model."@en ;
+    rdfs:comment "A task representing a significant scheduled event or control point."@en ;
     rdfs:subClassOf <https://w3id.org/IproK/schedule#Task> .
 
 <https://w3id.org/IproK/schedule#ScheduleBaseline> a owl:Class ;
@@ -755,37 +755,37 @@
 <https://w3id.org/IproK/schedule#WBS_Element> a owl:Class ;
     rdfs:label "WBS_Element" ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
-    rdfs:comment "The wbs_element class in the integrated project information model."@en ;
+    rdfs:comment "An element of the work breakdown structure used to organise tasks."@en ;
     rdfs:subClassOf <https://w3id.org/IproK#IproKThing> .
 
 <https://w3id.org/IproK/schedule#WorkPackage> a owl:Class ;
     rdfs:label "WorkPackage" ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
-    rdfs:comment "The work package class in the integrated project information model."@en ;
+    rdfs:comment "A grouping of project work represented in the work breakdown structure."@en ;
     rdfs:subClassOf <https://w3id.org/IproK#IproKThing> .
 
 <https://w3id.org/IproK/schedule#Project> a owl:Class ;
     rdfs:label "Project" ;
     dcterms:isPartOf <https://w3id.org/IproK> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/Project> ;
-    rdfs:comment "A construction project. Each project lives in its own named graph." ;
+    rdfs:comment "The construction-project context in which work, records and control decisions are organised."@en ;
     rdfs:subClassOf <https://w3id.org/IproK#IproKThing> .
 
 <https://w3id.org/IproK/schedule#TaskDependency> a owl:Class ;
     rdfs:label "TaskDependency" ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
-    rdfs:comment "The task dependency class in the integrated project information model."@en ;
+    rdfs:comment "A relationship record describing precedence between scheduled tasks."@en ;
     rdfs:subClassOf <https://w3id.org/IproK#IproKThing> .
 
 <https://w3id.org/IproK/schedule#TaskTime> a owl:Class ;
     rdfs:label "TaskTime" ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
-    rdfs:comment "The task time class in the integrated project information model."@en ;
+    rdfs:comment "A time record associated with a scheduled task."@en ;
     rdfs:subClassOf <https://w3id.org/IproK#IproKThing> .
 
 <https://w3id.org/IproK/schedule#Task> a owl:Class ;
     rdfs:label "Task" ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
-    rdfs:comment "The task class in the integrated project information model."@en ;
+    rdfs:comment "A unit of scheduled work within a project."@en ;
     rdfs:subClassOf <https://w3id.org/IproK#IproKThing> .
 

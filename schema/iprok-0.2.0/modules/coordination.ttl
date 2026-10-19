@@ -15,7 +15,7 @@
     rdfs:label "Issue" ;
     dcterms:isPartOf <https://w3id.org/IproK/coordination> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/Issue> ;
-    rdfs:comment "A BCF-imported clash / coordination / design / safety / construction issue, or a manually-raised graph-native one. Linked to an IFC element GUID + optionally to an RFI / Drawing / Activity — the cross-domain closure chain (Clash → RFI → Drawing → Activity) that no point solution can answer natively." ;
+    rdfs:comment "A BCF-imported clash / coordination / design / safety / construction issue, or a manually-raised graph-native one. Linked to an IFC element GUID + optionally to an RFI / Drawing / Activity; the cross-domain closure chain (Clash → RFI → Drawing → Activity) that no point solution can answer natively." ;
     rdfs:subClassOf prov:Entity,
         <https://w3id.org/IproK/coordination#Event> .
 
@@ -165,5 +165,5 @@
     rdfs:label "Event" ;
     dcterms:isPartOf <https://w3id.org/IproK/coordination> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/Event> ;
-    rdfs:comment "Superclass for issue-like nodes (BCF issues, future inspection events). No shape — concrete subclasses carry the constraints." .
+    rdfs:comment "Superclass for issue-like nodes (BCF issues, future inspection events). No shape; concrete subclasses carry the constraints." .
 

@@ -8,21 +8,21 @@
     rdfs:label "IFC Element" ;
     dcterms:isPartOf <https://w3id.org/IproK/building> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/Element> ;
-    rdfs:comment "One parseable IFC entity (wall / column / beam / slab / door / MEP fixture) extracted from an uploaded IFC model and persisted as triples for cross-domain joins. The single most important predicate is <https://w3id.org/IproK/building#ifcGuid> — every Issue / Annotation / future cost+schedule attribution that already carries an ifcGuid lights up automatically." ;
+    rdfs:comment "One parseable IFC entity (wall / column / beam / slab / door / MEP fixture) extracted from an uploaded IFC model and persisted as triples for cross-domain joins. The single most important predicate is <https://w3id.org/IproK/building#ifcGuid>; every Issue / Annotation / future cost+schedule attribution that already carries an ifcGuid lights up automatically." ;
     rdfs:subClassOf prov:Entity .
 
 <https://w3id.org/IproK/building#ElementCopiesRecorded> a owl:Class ;
     rdfs:label "element copies recorded" ;
     dcterms:isPartOf <https://w3id.org/IproK/building> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/ElementCopiesRecorded> ;
-    rdfs:comment "N41.1 — the act of keeping, on each copy, which model's element the take-off counted it as. Carries the person, the time, the take-off it came from (rdfs:comment) and how many elements changed; each changed element points back at it (prov:wasInfluencedBy)." ;
+    rdfs:comment "N41.1; the act of keeping, on each copy, which model's element the take-off counted it as. Carries the person, the time, the take-off it came from (rdfs:comment) and how many elements changed; each changed element points back at it (prov:wasInfluencedBy)." ;
     rdfs:subClassOf prov:Activity .
 
 <https://w3id.org/IproK/building#ElementDuplicatesRetired> a owl:Class ;
     rdfs:label "element duplicates retired" ;
     dcterms:isPartOf <https://w3id.org/IproK/building> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/ElementDuplicatesRetired> ;
-    rdfs:comment "N41.2 — the startup migration retiring, in one project graph, the extra element nodes the pre-N41.2 parser wrote. Carries when it started and ended, how many nodes it retired, and (<https://w3id.org/IproK/integrated#hadChange>) each model element count it corrected from the duplicated count to the number of distinct elements." ;
+    rdfs:comment "N41.2; the startup migration retiring, in one project graph, the extra element nodes the pre-N41.2 parser wrote. Carries when it started and ended, how many nodes it retired, and (<https://w3id.org/IproK/integrated#hadChange>) each model element count it corrected from the duplicated count to the number of distinct elements." ;
     rdfs:subClassOf prov:Activity .
 
 <https://w3id.org/IproK/building#IfcModel> a owl:Class ;
@@ -43,7 +43,7 @@
     rdfs:label "Model Comment"@en ;
     dcterms:isPartOf <https://w3id.org/IproK/building> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/ModelComment> ;
-    rdfs:comment "One recorded design-review comment on an IFC model view — the graph-native markup that Bluebeam/BIMcollab keep in opaque files." ;
+    rdfs:comment "One recorded design-review comment on an IFC model view; the graph-native markup that Bluebeam/BIMcollab keep in opaque files." ;
     rdfs:subClassOf prov:Entity .
 
 <https://w3id.org/IproK/building#ModelHealthCheck> a owl:Class ;

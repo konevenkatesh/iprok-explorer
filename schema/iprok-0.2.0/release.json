@@ -1,10 +1,12 @@
 {
   "status": "0.2.0-draft; proposed expansion created 19 October 2026",
-  "triples": 6072,
+  "triples": 7368,
   "classes": 138,
-  "objectProperties": 127,
+  "objectProperties": 271,
   "dataProperties": 679,
-  "shapeTriples": 4769,
+  "proposedTypedLinks": 144,
+  "integrationShapes": 75,
+  "shapeTriples": 5639,
   "mappedIdentifiers": 1000,
   "modules": [
     {
@@ -64,7 +66,7 @@
     {
       "module": "integrated",
       "namespace": "https://w3id.org/IproK/integrated#",
-      "triples": 1162,
+      "triples": 2458,
       "classes": 1
     },
     {
@@ -154,13 +156,18 @@
     "schedule:WorkConstraint rdfs:subClassOf iprok:Constraint"
   ],
   "files": {
-    "ontology.jsonld": "dfbfb5451aceb4f9a787b48824ea2987c368a2b94cd51d9b2ffe4a1907d14efc",
-    "shapes.ttl": "6b2d01cb4139cde36e31cf754eff2f6475ab51b14709949b859eb7c61fab4491",
-    "ontology.nt": "d0ee102f9a690ba104eda3860d46b06cdb1796087f6c09d1b0ba8ef915570c98",
-    "README.md": "13d6dc1b8c3d2d6f1f4861935d8944b50bbbc10cb3dfc14fd56a8e62144cff6c",
+    "ontology.jsonld": "1fe64687749798922cbcb580fed0df53c0bb1ea06e7e9915d4c3e112cfbd6e8e",
+    "shapes.ttl": "09b8c3b5942ed47fb0bca87f4b2c777ba8afda494007624d3f20e818767aad1c",
+    "relationship-contract.json": "8707cb8aacc3beb1c0f7469cf1c6532f8d5cf41cfca376c74aae31f29ce306db",
+    "relationship-validation.json": "b62d88c999e12bcaf5c0a7103527146ec6778cca4420dcdd5ea41e487efa74c4",
+    "ontology.nt": "29a0f861bd9a36601844c7bf549b4451b0891381bffb2e3af8e118eae4ae11c7",
+    "README.md": "4aad4b7f7528171cf976bc0b374f933cc76f9df50bafaa19e16b6bbded404603",
     "mapping.json": "62ce3561930da51755f99db0d9018e905d5cb22c3e2728715b40275edbdfcf28",
-    "ontology.owl": "fe3c9816af031f8d651c7898be4f66588bec320f50133d03d8e004731ff86648",
-    "ontology.ttl": "a06c2f73b84b1f710d066e404c29415746b18cafed00a5af3d1fbd376f042bcc",
-    "validation.json": "4190a14d0ee10d570035bd7a4a849c2f99897cc5ddba3b8ee9f7c94ddd1f98ed"
-  }
+    "ontology.owl": "7ff5773d60b1932e11634e509ad1a6474aeb055f3a0be66ec89f283b411cfae4",
+    "validation.json": "9c7eb72ea74f7b6fe16d0d37a8799038a809cb3df4ffe993496f23654e361457",
+    "ontology.ttl": "0756c2d943952ca329e235f05aeebdb5fb153cafe18ededb77de23d56f75b19e"
+  },
+  "moduleConnectedComponents": 1,
+  "crossModulePairs": 40,
+  "classConnectedComponentsIncludingInheritance": 1
 }

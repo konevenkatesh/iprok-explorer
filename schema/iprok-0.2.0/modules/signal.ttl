@@ -7,7 +7,7 @@
     rdfs:label "historical weather profile" ;
     dcterms:isPartOf <https://w3id.org/IproK/signal> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/HistoricalWeatherProfile> ;
-    rdfs:comment "10-year climatology snapshot at a project's GPS — 52 weekly buckets, each with avg rainfall + rain probability + extreme-heat probability. Source: NASA POWER (power.larc.nasa.gov), free climatology API, no auth required. Fetched once at project geocoding; treated as static climate context (re-fetch only if site GPS changes)." ;
+    rdfs:comment "10-year climatology snapshot at a project's GPS; 52 weekly buckets, each with avg rainfall + rain probability + extreme-heat probability. Source: NASA POWER (power.larc.nasa.gov), free climatology API, no auth required. Fetched once at project geocoding; treated as static climate context (re-fetch only if site GPS changes)." ;
     rdfs:subClassOf <https://w3id.org/IproK/signal#ExternalSignal> .
 
 <https://w3id.org/IproK/signal#HistoricalWeatherWeek> a owl:Class ;
@@ -34,7 +34,7 @@
     rdfs:label "weather signal" ;
     dcterms:isPartOf <https://w3id.org/IproK/signal> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/WeatherSignal> ;
-    rdfs:comment "Daily weather snapshot at a project's GPS — rainfall, max temp, working-day-loss-risk. Source: IMD via indianapi.in (free tier) with OpenWeatherMap fallback." ;
+    rdfs:comment "Daily weather snapshot at a project's GPS; rainfall, max temp, working-day-loss-risk. Source: IMD via indianapi.in (free tier) with OpenWeatherMap fallback." ;
     rdfs:subClassOf <https://w3id.org/IproK/signal#ExternalSignal> .
 
 <https://w3id.org/IproK/signal#availabilityScore> a owl:DatatypeProperty ;
@@ -188,5 +188,5 @@
     rdfs:label "external signal" ;
     dcterms:isPartOf <https://w3id.org/IproK/signal> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/ExternalSignal> ;
-    rdfs:comment "Abstract parent — concrete subclasses (WeatherSignal, MaterialPriceSignal, LabourSignal) carry the data. Domain-free; signal triples are written to data/external/signals/{type}." .
+    rdfs:comment "Abstract parent; concrete subclasses (WeatherSignal, MaterialPriceSignal, LabourSignal) carry the data. Domain-free; signal triples are written to data/external/signals/{type}." .
 

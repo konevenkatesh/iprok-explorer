@@ -66,6 +66,6 @@
     rdfs:label "Safety incident" ;
     dcterms:isPartOf <https://w3id.org/IproK/safety> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/Incident> ;
-    rdfs:comment "A site safety event. Logged by SE/QC/Safety/PM; LTI and Fatality additionally trigger the V0.21 WhatsApp escalation (stubbed as a console ALERT log in V0.26)." ;
+    rdfs:comment "A recorded site safety event with its severity, activity context and follow-up information." ;
     rdfs:subClassOf prov:Activity .
 

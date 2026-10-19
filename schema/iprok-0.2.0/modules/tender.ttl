@@ -8,7 +8,7 @@
     rdfs:label "Bid Recommendation" ;
     dcterms:isPartOf <https://w3id.org/IproK/tender> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/BidRecommendation> ;
-    rdfs:comment "The final bid-output document for a tender: total quoted, contingency, recommended bid, item-count + high-risk-count breakdown. The line-item detail is NOT stored on this node — it is re-derivable from the underlying S5.2 + S5.3 graph state, and persisting it would create stale-data risk on a SOR-rate or comparable-project update. The PDF lives in MinIO via <https://w3id.org/IproK/document#fileRef>." ;
+    rdfs:comment "The final bid-output document for a tender: total quoted, contingency, recommended bid, item-count + high-risk-count breakdown. The line-item detail is NOT stored on this node; it is re-derivable from the underlying S5.2 + S5.3 graph state, and persisting it would create stale-data risk on a SOR-rate or comparable-project update. The PDF lives in MinIO via <https://w3id.org/IproK/document#fileRef>." ;
     rdfs:subClassOf prov:Entity .
 
 <https://w3id.org/IproK/tender#ComparableProject> a owl:Class ;

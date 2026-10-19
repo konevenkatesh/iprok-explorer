@@ -1950,8 +1950,8 @@
       "domain": [],
       "range": [],
       "parents": [
-        "https://bimsaarthi.com/ontology/v0/Event",
-        "http://www.w3.org/ns/prov#Entity"
+        "http://www.w3.org/ns/prov#Entity",
+        "https://bimsaarthi.com/ontology/v0/Event"
       ],
       "statements": [
         {
@@ -3304,8 +3304,8 @@
       "domain": [],
       "range": [],
       "parents": [
-        "https://bimsaarthi.com/ontology/v0/Document",
-        "http://www.w3.org/ns/prov#Entity"
+        "http://www.w3.org/ns/prov#Entity",
+        "https://bimsaarthi.com/ontology/v0/Document"
       ],
       "statements": [
         {
@@ -5839,7 +5839,7 @@
       "declaredLabel": true,
       "kind": "Object property",
       "module": "BIMSaarthi v0",
-      "description": "Link from a prediction to its bs:Activity. Domain unspecified (antipattern #8). The bs:Activity this point gates. Range undeclared (antipattern #8).",
+      "description": "The bs:Activity this point gates. Range undeclared (antipattern #8). Link from a prediction to its bs:Activity. Domain unspecified (antipattern #8).",
       "domain": [],
       "range": [],
       "parents": [],
@@ -21215,7 +21215,7 @@
       "declaredLabel": true,
       "kind": "Data property",
       "module": "BIMSaarthi v0",
-      "description": "Count of bs:TenderBOQItem rows in the recommendation (matched items only — unmatched are excluded since no rate can be recommended). Denormalised count of SOR items in a library. Polymorphic — domain unspecified.",
+      "description": "Denormalised count of SOR items in a library. Polymorphic — domain unspecified. Count of bs:TenderBOQItem rows in the recommendation (matched items only — unmatched are excluded since no rate can be recommended).",
       "domain": [],
       "range": [
         "http://www.w3.org/2001/XMLSchema#integer"
@@ -22992,7 +22992,7 @@
       "declaredLabel": true,
       "kind": "Data property",
       "module": "BIMSaarthi v0",
-      "description": "Material type: Cement, Steel, Bitumen, Sand, Aggregate, Brick, Other. Mandatory. Domain unspecified. Material identifier: 'Steel-TMT' | 'Cement' | 'Bitumen' | 'Aggregate' | 'Sand' | 'Brick'. Polymorphic; matches the bs:MaterialIssue.material vocabulary.",
+      "description": "Material identifier: 'Steel-TMT' | 'Cement' | 'Bitumen' | 'Aggregate' | 'Sand' | 'Brick'. Polymorphic; matches the bs:MaterialIssue.material vocabulary. Material type: Cement, Steel, Bitumen, Sand, Aggregate, Brick, Other. Mandatory. Domain unspecified.",
       "domain": [],
       "range": [
         "http://www.w3.org/2001/XMLSchema#string"
@@ -36482,79 +36482,105 @@
       "source": "https://bimsaarthi.com/ontology/v0/RecurrenceAlert",
       "target": "https://bimsaarthi.com/ontology/v0/Activity",
       "label": "alertedActivity",
-      "property": "https://bimsaarthi.com/ontology/v0/alertedActivity"
+      "property": "https://bimsaarthi.com/ontology/v0/alertedActivity",
+      "proposed": false,
+      "definition": ""
     },
     {
       "source": "https://bimsaarthi.com/ontology/v0/NCR",
       "target": "https://bimsaarthi.com/ontology/v0/User",
       "label": "closedBy",
-      "property": "https://bimsaarthi.com/ontology/v0/closedBy"
+      "property": "https://bimsaarthi.com/ontology/v0/closedBy",
+      "proposed": false,
+      "definition": ""
     },
     {
       "source": "https://bimsaarthi.com/ontology/v0/Inspection",
       "target": "https://bimsaarthi.com/ontology/v0/ChecklistItem",
       "label": "hasItem",
-      "property": "https://bimsaarthi.com/ontology/v0/hasItem"
+      "property": "https://bimsaarthi.com/ontology/v0/hasItem",
+      "proposed": false,
+      "definition": ""
     },
     {
       "source": "https://bimsaarthi.com/ontology/v0/Project",
       "target": "https://bimsaarthi.com/ontology/v0/ProjectMembership",
       "label": "hasMember",
-      "property": "https://bimsaarthi.com/ontology/v0/hasMember"
+      "property": "https://bimsaarthi.com/ontology/v0/hasMember",
+      "proposed": false,
+      "definition": ""
     },
     {
       "source": "https://bimsaarthi.com/ontology/v0/Incident",
       "target": "https://bimsaarthi.com/ontology/v0/IncidentType",
       "label": "incidentType",
-      "property": "https://bimsaarthi.com/ontology/v0/incidentType"
+      "property": "https://bimsaarthi.com/ontology/v0/incidentType",
+      "proposed": false,
+      "definition": ""
     },
     {
       "source": "https://bimsaarthi.com/ontology/v0/Inspection",
       "target": "https://bimsaarthi.com/ontology/v0/Activity",
       "label": "inspectedActivity",
-      "property": "https://bimsaarthi.com/ontology/v0/inspectedActivity"
+      "property": "https://bimsaarthi.com/ontology/v0/inspectedActivity",
+      "proposed": false,
+      "definition": ""
     },
     {
       "source": "https://bimsaarthi.com/ontology/v0/Incident",
       "target": "https://bimsaarthi.com/ontology/v0/Activity",
       "label": "linkedActivity",
-      "property": "https://bimsaarthi.com/ontology/v0/linkedActivity"
+      "property": "https://bimsaarthi.com/ontology/v0/linkedActivity",
+      "proposed": false,
+      "definition": ""
     },
     {
       "source": "https://bimsaarthi.com/ontology/v0/ProjectMembership",
       "target": "https://bimsaarthi.com/ontology/v0/User",
       "label": "ofUser",
-      "property": "https://bimsaarthi.com/ontology/v0/ofUser"
+      "property": "https://bimsaarthi.com/ontology/v0/ofUser",
+      "proposed": false,
+      "definition": ""
     },
     {
       "source": "https://bimsaarthi.com/ontology/v0/Activity",
       "target": "https://bimsaarthi.com/ontology/v0/Project",
       "label": "partOfProject",
-      "property": "https://bimsaarthi.com/ontology/v0/partOfProject"
+      "property": "https://bimsaarthi.com/ontology/v0/partOfProject",
+      "proposed": false,
+      "definition": ""
     },
     {
       "source": "https://bimsaarthi.com/ontology/v0/NCR",
       "target": "https://bimsaarthi.com/ontology/v0/Activity",
       "label": "relatedActivity",
-      "property": "https://bimsaarthi.com/ontology/v0/relatedActivity"
+      "property": "https://bimsaarthi.com/ontology/v0/relatedActivity",
+      "proposed": false,
+      "definition": ""
     },
     {
       "source": "https://bimsaarthi.com/ontology/v0/NCR",
       "target": "https://bimsaarthi.com/ontology/v0/ChecklistItem",
       "label": "relatedItem",
-      "property": "https://bimsaarthi.com/ontology/v0/relatedItem"
+      "property": "https://bimsaarthi.com/ontology/v0/relatedItem",
+      "proposed": false,
+      "definition": ""
     },
     {
       "source": "https://bimsaarthi.com/ontology/v0/NCR",
       "target": "https://bimsaarthi.com/ontology/v0/Inspection",
       "label": "relatedInspection",
-      "property": "https://bimsaarthi.com/ontology/v0/relatedInspection"
+      "property": "https://bimsaarthi.com/ontology/v0/relatedInspection",
+      "proposed": false,
+      "definition": ""
     },
     {
       "source": "https://bimsaarthi.com/ontology/v0/DPREntry",
       "target": "https://bimsaarthi.com/ontology/v0/Activity",
       "label": "reportedAgainst",
-      "property": "https://bimsaarthi.com/ontology/v0/reportedAgainst"
+      "property": "https://bimsaarthi.com/ontology/v0/reportedAgainst",
+      "proposed": false,
+      "definition": ""
     }
   ],
   "audit": {
@@ -38187,7 +38213,7 @@
             },
             {
               "predicate": "http://www.w3.org/ns/shacl#in",
-              "value": "n074fce2c3c1f4ff5bc1336ac1a438c42b902"
+              "value": "ncfb28add2c3948f9bf0fb8ee0a2edec5b902"
             }
           ]
         },
@@ -38867,7 +38893,7 @@
             },
             {
               "predicate": "http://www.w3.org/ns/shacl#in",
-              "value": "n074fce2c3c1f4ff5bc1336ac1a438c42b1097"
+              "value": "ncfb28add2c3948f9bf0fb8ee0a2edec5b1097"
             }
           ]
         },
@@ -38976,7 +39002,7 @@
             },
             {
               "predicate": "http://www.w3.org/ns/shacl#in",
-              "value": "n074fce2c3c1f4ff5bc1336ac1a438c42b1087"
+              "value": "ncfb28add2c3948f9bf0fb8ee0a2edec5b1087"
             }
           ]
         },
@@ -39060,7 +39086,7 @@
             },
             {
               "predicate": "http://www.w3.org/ns/shacl#in",
-              "value": "n074fce2c3c1f4ff5bc1336ac1a438c42b167"
+              "value": "ncfb28add2c3948f9bf0fb8ee0a2edec5b167"
             },
             {
               "predicate": "http://www.w3.org/ns/shacl#minCount",
@@ -39306,7 +39332,7 @@
             },
             {
               "predicate": "http://www.w3.org/ns/shacl#in",
-              "value": "n074fce2c3c1f4ff5bc1336ac1a438c42b564"
+              "value": "ncfb28add2c3948f9bf0fb8ee0a2edec5b564"
             },
             {
               "predicate": "http://www.w3.org/ns/shacl#message",
@@ -39331,7 +39357,7 @@
             },
             {
               "predicate": "http://www.w3.org/ns/shacl#in",
-              "value": "n074fce2c3c1f4ff5bc1336ac1a438c42b581"
+              "value": "ncfb28add2c3948f9bf0fb8ee0a2edec5b581"
             },
             {
               "predicate": "http://www.w3.org/ns/shacl#message",
@@ -40057,7 +40083,7 @@
             },
             {
               "predicate": "http://www.w3.org/ns/shacl#in",
-              "value": "n074fce2c3c1f4ff5bc1336ac1a438c42b54"
+              "value": "ncfb28add2c3948f9bf0fb8ee0a2edec5b54"
             },
             {
               "predicate": "http://www.w3.org/ns/shacl#minCount",
@@ -40338,7 +40364,7 @@
             },
             {
               "predicate": "http://www.w3.org/ns/shacl#in",
-              "value": "n074fce2c3c1f4ff5bc1336ac1a438c42b638"
+              "value": "ncfb28add2c3948f9bf0fb8ee0a2edec5b638"
             }
           ]
         },
@@ -40665,7 +40691,7 @@
             },
             {
               "predicate": "http://www.w3.org/ns/shacl#in",
-              "value": "n074fce2c3c1f4ff5bc1336ac1a438c42b967"
+              "value": "ncfb28add2c3948f9bf0fb8ee0a2edec5b967"
             }
           ]
         },
@@ -40686,7 +40712,7 @@
             },
             {
               "predicate": "http://www.w3.org/ns/shacl#in",
-              "value": "n074fce2c3c1f4ff5bc1336ac1a438c42b975"
+              "value": "ncfb28add2c3948f9bf0fb8ee0a2edec5b975"
             }
           ]
         },
@@ -40926,7 +40952,7 @@
             },
             {
               "predicate": "http://www.w3.org/ns/shacl#in",
-              "value": "n074fce2c3c1f4ff5bc1336ac1a438c42b1005"
+              "value": "ncfb28add2c3948f9bf0fb8ee0a2edec5b1005"
             }
           ]
         },
@@ -41069,7 +41095,7 @@
             },
             {
               "predicate": "http://www.w3.org/ns/shacl#in",
-              "value": "n074fce2c3c1f4ff5bc1336ac1a438c42b820"
+              "value": "ncfb28add2c3948f9bf0fb8ee0a2edec5b820"
             }
           ]
         }
@@ -41132,7 +41158,7 @@
             },
             {
               "predicate": "http://www.w3.org/ns/shacl#in",
-              "value": "n074fce2c3c1f4ff5bc1336ac1a438c42b807"
+              "value": "ncfb28add2c3948f9bf0fb8ee0a2edec5b807"
             }
           ]
         },
@@ -41241,7 +41267,7 @@
             },
             {
               "predicate": "http://www.w3.org/ns/shacl#in",
-              "value": "n074fce2c3c1f4ff5bc1336ac1a438c42b710"
+              "value": "ncfb28add2c3948f9bf0fb8ee0a2edec5b710"
             }
           ]
         },
@@ -41421,7 +41447,7 @@
             },
             {
               "predicate": "http://www.w3.org/ns/shacl#in",
-              "value": "n074fce2c3c1f4ff5bc1336ac1a438c42b7"
+              "value": "ncfb28add2c3948f9bf0fb8ee0a2edec5b7"
             },
             {
               "predicate": "http://www.w3.org/ns/shacl#message",
@@ -41539,7 +41565,7 @@
             },
             {
               "predicate": "http://www.w3.org/ns/shacl#in",
-              "value": "n074fce2c3c1f4ff5bc1336ac1a438c42b930"
+              "value": "ncfb28add2c3948f9bf0fb8ee0a2edec5b930"
             }
           ]
         },
@@ -41891,7 +41917,7 @@
             },
             {
               "predicate": "http://www.w3.org/ns/shacl#in",
-              "value": "n074fce2c3c1f4ff5bc1336ac1a438c42b767"
+              "value": "ncfb28add2c3948f9bf0fb8ee0a2edec5b767"
             }
           ]
         },
@@ -41991,7 +42017,7 @@
             },
             {
               "predicate": "http://www.w3.org/ns/shacl#in",
-              "value": "n074fce2c3c1f4ff5bc1336ac1a438c42b611"
+              "value": "ncfb28add2c3948f9bf0fb8ee0a2edec5b611"
             },
             {
               "predicate": "http://www.w3.org/ns/shacl#message",
@@ -42016,7 +42042,7 @@
             },
             {
               "predicate": "http://www.w3.org/ns/shacl#in",
-              "value": "n074fce2c3c1f4ff5bc1336ac1a438c42b616"
+              "value": "ncfb28add2c3948f9bf0fb8ee0a2edec5b616"
             },
             {
               "predicate": "http://www.w3.org/ns/shacl#message",
@@ -42305,7 +42331,7 @@
             },
             {
               "predicate": "http://www.w3.org/ns/shacl#in",
-              "value": "n074fce2c3c1f4ff5bc1336ac1a438c42b311"
+              "value": "ncfb28add2c3948f9bf0fb8ee0a2edec5b311"
             },
             {
               "predicate": "http://www.w3.org/ns/shacl#minCount",
@@ -42367,7 +42393,7 @@
             },
             {
               "predicate": "http://www.w3.org/ns/shacl#in",
-              "value": "n074fce2c3c1f4ff5bc1336ac1a438c42b157"
+              "value": "ncfb28add2c3948f9bf0fb8ee0a2edec5b157"
             },
             {
               "predicate": "http://www.w3.org/ns/shacl#minCount",
@@ -42604,7 +42630,7 @@
             },
             {
               "predicate": "http://www.w3.org/ns/shacl#in",
-              "value": "n074fce2c3c1f4ff5bc1336ac1a438c42b148"
+              "value": "ncfb28add2c3948f9bf0fb8ee0a2edec5b148"
             },
             {
               "predicate": "http://www.w3.org/ns/shacl#minCount",
@@ -43556,7 +43582,7 @@
             },
             {
               "predicate": "http://www.w3.org/ns/shacl#in",
-              "value": "n074fce2c3c1f4ff5bc1336ac1a438c42b651"
+              "value": "ncfb28add2c3948f9bf0fb8ee0a2edec5b651"
             }
           ]
         },
@@ -43761,7 +43787,7 @@
             },
             {
               "predicate": "http://www.w3.org/ns/shacl#in",
-              "value": "n074fce2c3c1f4ff5bc1336ac1a438c42b681"
+              "value": "ncfb28add2c3948f9bf0fb8ee0a2edec5b681"
             }
           ]
         },
@@ -44123,7 +44149,7 @@
             },
             {
               "predicate": "http://www.w3.org/ns/shacl#in",
-              "value": "n074fce2c3c1f4ff5bc1336ac1a438c42b661"
+              "value": "ncfb28add2c3948f9bf0fb8ee0a2edec5b661"
             }
           ]
         },
@@ -44182,7 +44208,7 @@
             },
             {
               "predicate": "http://www.w3.org/ns/shacl#in",
-              "value": "n074fce2c3c1f4ff5bc1336ac1a438c42b666"
+              "value": "ncfb28add2c3948f9bf0fb8ee0a2edec5b666"
             }
           ]
         },
@@ -44228,7 +44254,7 @@
             },
             {
               "predicate": "http://www.w3.org/ns/shacl#in",
-              "value": "n074fce2c3c1f4ff5bc1336ac1a438c42b83"
+              "value": "ncfb28add2c3948f9bf0fb8ee0a2edec5b83"
             },
             {
               "predicate": "http://www.w3.org/ns/shacl#minCount",
@@ -44419,7 +44445,7 @@
             },
             {
               "predicate": "http://www.w3.org/ns/shacl#in",
-              "value": "n074fce2c3c1f4ff5bc1336ac1a438c42b47"
+              "value": "ncfb28add2c3948f9bf0fb8ee0a2edec5b47"
             },
             {
               "predicate": "http://www.w3.org/ns/shacl#minCount",
@@ -44448,7 +44474,7 @@
             },
             {
               "predicate": "http://www.w3.org/ns/shacl#in",
-              "value": "n074fce2c3c1f4ff5bc1336ac1a438c42b50"
+              "value": "ncfb28add2c3948f9bf0fb8ee0a2edec5b50"
             },
             {
               "predicate": "http://www.w3.org/ns/shacl#minCount",
@@ -44539,7 +44565,7 @@
             },
             {
               "predicate": "http://www.w3.org/ns/shacl#in",
-              "value": "n074fce2c3c1f4ff5bc1336ac1a438c42b217"
+              "value": "ncfb28add2c3948f9bf0fb8ee0a2edec5b217"
             },
             {
               "predicate": "http://www.w3.org/ns/shacl#minCount",
@@ -44568,7 +44594,7 @@
             },
             {
               "predicate": "http://www.w3.org/ns/shacl#in",
-              "value": "n074fce2c3c1f4ff5bc1336ac1a438c42b224"
+              "value": "ncfb28add2c3948f9bf0fb8ee0a2edec5b224"
             },
             {
               "predicate": "http://www.w3.org/ns/shacl#minCount",
@@ -44684,7 +44710,7 @@
             },
             {
               "predicate": "http://www.w3.org/ns/shacl#in",
-              "value": "n074fce2c3c1f4ff5bc1336ac1a438c42b261"
+              "value": "ncfb28add2c3948f9bf0fb8ee0a2edec5b261"
             },
             {
               "predicate": "http://www.w3.org/ns/shacl#minCount",
@@ -44967,7 +44993,7 @@
             },
             {
               "predicate": "http://www.w3.org/ns/shacl#in",
-              "value": "n074fce2c3c1f4ff5bc1336ac1a438c42b322"
+              "value": "ncfb28add2c3948f9bf0fb8ee0a2edec5b322"
             },
             {
               "predicate": "http://www.w3.org/ns/shacl#minCount",
@@ -45042,7 +45068,7 @@
             },
             {
               "predicate": "http://www.w3.org/ns/shacl#in",
-              "value": "n074fce2c3c1f4ff5bc1336ac1a438c42b332"
+              "value": "ncfb28add2c3948f9bf0fb8ee0a2edec5b332"
             },
             {
               "predicate": "http://www.w3.org/ns/shacl#minCount",
@@ -45112,7 +45138,7 @@
             },
             {
               "predicate": "http://www.w3.org/ns/shacl#in",
-              "value": "n074fce2c3c1f4ff5bc1336ac1a438c42b501"
+              "value": "ncfb28add2c3948f9bf0fb8ee0a2edec5b501"
             }
           ]
         },
@@ -45521,7 +45547,7 @@
             },
             {
               "predicate": "http://www.w3.org/ns/shacl#in",
-              "value": "n074fce2c3c1f4ff5bc1336ac1a438c42b1178"
+              "value": "ncfb28add2c3948f9bf0fb8ee0a2edec5b1178"
             }
           ]
         },
@@ -45605,7 +45631,7 @@
             },
             {
               "predicate": "http://www.w3.org/ns/shacl#in",
-              "value": "n074fce2c3c1f4ff5bc1336ac1a438c42b1183"
+              "value": "ncfb28add2c3948f9bf0fb8ee0a2edec5b1183"
             }
           ]
         },
@@ -45639,7 +45665,7 @@
             },
             {
               "predicate": "http://www.w3.org/ns/shacl#in",
-              "value": "n074fce2c3c1f4ff5bc1336ac1a438c42b1187"
+              "value": "ncfb28add2c3948f9bf0fb8ee0a2edec5b1187"
             }
           ]
         },
@@ -45669,7 +45695,7 @@
             },
             {
               "predicate": "http://www.w3.org/ns/shacl#in",
-              "value": "n074fce2c3c1f4ff5bc1336ac1a438c42b1196"
+              "value": "ncfb28add2c3948f9bf0fb8ee0a2edec5b1196"
             }
           ]
         },
@@ -45787,7 +45813,7 @@
             },
             {
               "predicate": "http://www.w3.org/ns/shacl#in",
-              "value": "n074fce2c3c1f4ff5bc1336ac1a438c42b774"
+              "value": "ncfb28add2c3948f9bf0fb8ee0a2edec5b774"
             }
           ]
         },
@@ -46218,7 +46244,7 @@
             },
             {
               "predicate": "http://www.w3.org/ns/shacl#in",
-              "value": "n074fce2c3c1f4ff5bc1336ac1a438c42b65"
+              "value": "ncfb28add2c3948f9bf0fb8ee0a2edec5b65"
             },
             {
               "predicate": "http://www.w3.org/ns/shacl#minCount",
@@ -46384,7 +46410,7 @@
             },
             {
               "predicate": "http://www.w3.org/ns/shacl#in",
-              "value": "n074fce2c3c1f4ff5bc1336ac1a438c42b122"
+              "value": "ncfb28add2c3948f9bf0fb8ee0a2edec5b122"
             },
             {
               "predicate": "http://www.w3.org/ns/shacl#maxCount",
@@ -46405,7 +46431,7 @@
             },
             {
               "predicate": "http://www.w3.org/ns/shacl#in",
-              "value": "n074fce2c3c1f4ff5bc1336ac1a438c42b127"
+              "value": "ncfb28add2c3948f9bf0fb8ee0a2edec5b127"
             },
             {
               "predicate": "http://www.w3.org/ns/shacl#maxCount",
@@ -46932,7 +46958,7 @@
             },
             {
               "predicate": "http://www.w3.org/ns/shacl#in",
-              "value": "n074fce2c3c1f4ff5bc1336ac1a438c42b750"
+              "value": "ncfb28add2c3948f9bf0fb8ee0a2edec5b750"
             }
           ]
         },
@@ -47534,7 +47560,7 @@
             },
             {
               "predicate": "http://www.w3.org/ns/shacl#in",
-              "value": "n074fce2c3c1f4ff5bc1336ac1a438c42b849"
+              "value": "ncfb28add2c3948f9bf0fb8ee0a2edec5b849"
             }
           ]
         },
@@ -48174,7 +48200,7 @@
             },
             {
               "predicate": "http://www.w3.org/ns/shacl#in",
-              "value": "n074fce2c3c1f4ff5bc1336ac1a438c42b411"
+              "value": "ncfb28add2c3948f9bf0fb8ee0a2edec5b411"
             },
             {
               "predicate": "http://www.w3.org/ns/shacl#message",
@@ -48453,7 +48479,7 @@
             },
             {
               "predicate": "http://www.w3.org/ns/shacl#in",
-              "value": "n074fce2c3c1f4ff5bc1336ac1a438c42b294"
+              "value": "ncfb28add2c3948f9bf0fb8ee0a2edec5b294"
             },
             {
               "predicate": "http://www.w3.org/ns/shacl#minCount",
@@ -48644,7 +48670,7 @@
             },
             {
               "predicate": "http://www.w3.org/ns/shacl#in",
-              "value": "n074fce2c3c1f4ff5bc1336ac1a438c42b185"
+              "value": "ncfb28add2c3948f9bf0fb8ee0a2edec5b185"
             },
             {
               "predicate": "http://www.w3.org/ns/shacl#minCount",
@@ -48802,7 +48828,7 @@
             },
             {
               "predicate": "http://www.w3.org/ns/shacl#in",
-              "value": "n074fce2c3c1f4ff5bc1336ac1a438c42b1035"
+              "value": "ncfb28add2c3948f9bf0fb8ee0a2edec5b1035"
             }
           ]
         },
@@ -48886,7 +48912,7 @@
             },
             {
               "predicate": "http://www.w3.org/ns/shacl#in",
-              "value": "n074fce2c3c1f4ff5bc1336ac1a438c42b1041"
+              "value": "ncfb28add2c3948f9bf0fb8ee0a2edec5b1041"
             }
           ]
         },
@@ -49325,7 +49351,7 @@
             },
             {
               "predicate": "http://www.w3.org/ns/shacl#in",
-              "value": "n074fce2c3c1f4ff5bc1336ac1a438c42b98"
+              "value": "ncfb28add2c3948f9bf0fb8ee0a2edec5b98"
             },
             {
               "predicate": "http://www.w3.org/ns/shacl#minCount",
@@ -49366,7 +49392,7 @@
             },
             {
               "predicate": "http://www.w3.org/ns/shacl#in",
-              "value": "n074fce2c3c1f4ff5bc1336ac1a438c42b1112"
+              "value": "ncfb28add2c3948f9bf0fb8ee0a2edec5b1112"
             }
           ]
         },
@@ -49487,7 +49513,7 @@
             },
             {
               "predicate": "http://www.w3.org/ns/shacl#in",
-              "value": "n074fce2c3c1f4ff5bc1336ac1a438c42b355"
+              "value": "ncfb28add2c3948f9bf0fb8ee0a2edec5b355"
             },
             {
               "predicate": "http://www.w3.org/ns/shacl#message",
@@ -49512,7 +49538,7 @@
             },
             {
               "predicate": "http://www.w3.org/ns/shacl#in",
-              "value": "n074fce2c3c1f4ff5bc1336ac1a438c42b364"
+              "value": "ncfb28add2c3948f9bf0fb8ee0a2edec5b364"
             },
             {
               "predicate": "http://www.w3.org/ns/shacl#message",
@@ -49537,7 +49563,7 @@
             },
             {
               "predicate": "http://www.w3.org/ns/shacl#in",
-              "value": "n074fce2c3c1f4ff5bc1336ac1a438c42b369"
+              "value": "ncfb28add2c3948f9bf0fb8ee0a2edec5b369"
             },
             {
               "predicate": "http://www.w3.org/ns/shacl#message",
@@ -49562,7 +49588,7 @@
             },
             {
               "predicate": "http://www.w3.org/ns/shacl#in",
-              "value": "n074fce2c3c1f4ff5bc1336ac1a438c42b374"
+              "value": "ncfb28add2c3948f9bf0fb8ee0a2edec5b374"
             },
             {
               "predicate": "http://www.w3.org/ns/shacl#message",
@@ -49978,7 +50004,7 @@
             },
             {
               "predicate": "http://www.w3.org/ns/shacl#in",
-              "value": "n074fce2c3c1f4ff5bc1336ac1a438c42b384"
+              "value": "ncfb28add2c3948f9bf0fb8ee0a2edec5b384"
             },
             {
               "predicate": "http://www.w3.org/ns/shacl#message",
@@ -50003,7 +50029,7 @@
             },
             {
               "predicate": "http://www.w3.org/ns/shacl#in",
-              "value": "n074fce2c3c1f4ff5bc1336ac1a438c42b389"
+              "value": "ncfb28add2c3948f9bf0fb8ee0a2edec5b389"
             },
             {
               "predicate": "http://www.w3.org/ns/shacl#message",
@@ -50162,7 +50188,7 @@
             },
             {
               "predicate": "http://www.w3.org/ns/shacl#in",
-              "value": "n074fce2c3c1f4ff5bc1336ac1a438c42b1124"
+              "value": "ncfb28add2c3948f9bf0fb8ee0a2edec5b1124"
             }
           ]
         },
@@ -50351,7 +50377,7 @@
             },
             {
               "predicate": "http://www.w3.org/ns/shacl#in",
-              "value": "n074fce2c3c1f4ff5bc1336ac1a438c42b1136"
+              "value": "ncfb28add2c3948f9bf0fb8ee0a2edec5b1136"
             }
           ]
         },
@@ -50422,7 +50448,7 @@
             },
             {
               "predicate": "http://www.w3.org/ns/shacl#in",
-              "value": "n074fce2c3c1f4ff5bc1336ac1a438c42b140"
+              "value": "ncfb28add2c3948f9bf0fb8ee0a2edec5b140"
             },
             {
               "predicate": "http://www.w3.org/ns/shacl#minCount",
@@ -50555,7 +50581,7 @@
             },
             {
               "predicate": "http://www.w3.org/ns/shacl#in",
-              "value": "n074fce2c3c1f4ff5bc1336ac1a438c42b239"
+              "value": "ncfb28add2c3948f9bf0fb8ee0a2edec5b239"
             },
             {
               "predicate": "http://www.w3.org/ns/shacl#minCount",
@@ -50584,7 +50610,7 @@
             },
             {
               "predicate": "http://www.w3.org/ns/shacl#in",
-              "value": "n074fce2c3c1f4ff5bc1336ac1a438c42b243"
+              "value": "ncfb28add2c3948f9bf0fb8ee0a2edec5b243"
             },
             {
               "predicate": "http://www.w3.org/ns/shacl#minCount",
@@ -50788,7 +50814,7 @@
             },
             {
               "predicate": "http://www.w3.org/ns/shacl#in",
-              "value": "n074fce2c3c1f4ff5bc1336ac1a438c42b530"
+              "value": "ncfb28add2c3948f9bf0fb8ee0a2edec5b530"
             },
             {
               "predicate": "http://www.w3.org/ns/shacl#message",
@@ -50963,7 +50989,7 @@
             },
             {
               "predicate": "http://www.w3.org/ns/shacl#in",
-              "value": "n074fce2c3c1f4ff5bc1336ac1a438c42b546"
+              "value": "ncfb28add2c3948f9bf0fb8ee0a2edec5b546"
             },
             {
               "predicate": "http://www.w3.org/ns/shacl#message",
@@ -51055,7 +51081,7 @@
             },
             {
               "predicate": "http://www.w3.org/ns/shacl#in",
-              "value": "n074fce2c3c1f4ff5bc1336ac1a438c42b539"
+              "value": "ncfb28add2c3948f9bf0fb8ee0a2edec5b539"
             },
             {
               "predicate": "http://www.w3.org/ns/shacl#message",
@@ -51198,7 +51224,7 @@
             },
             {
               "predicate": "http://www.w3.org/ns/shacl#in",
-              "value": "n074fce2c3c1f4ff5bc1336ac1a438c42b697"
+              "value": "ncfb28add2c3948f9bf0fb8ee0a2edec5b697"
             }
           ]
         },
@@ -51219,7 +51245,7 @@
             },
             {
               "predicate": "http://www.w3.org/ns/shacl#in",
-              "value": "n074fce2c3c1f4ff5bc1336ac1a438c42b701"
+              "value": "ncfb28add2c3948f9bf0fb8ee0a2edec5b701"
             }
           ]
         },
@@ -51542,7 +51568,7 @@
             },
             {
               "predicate": "http://www.w3.org/ns/shacl#in",
-              "value": "n074fce2c3c1f4ff5bc1336ac1a438c42b471"
+              "value": "ncfb28add2c3948f9bf0fb8ee0a2edec5b471"
             }
           ]
         },
@@ -51701,7 +51727,7 @@
             },
             {
               "predicate": "http://www.w3.org/ns/shacl#in",
-              "value": "n074fce2c3c1f4ff5bc1336ac1a438c42b435"
+              "value": "ncfb28add2c3948f9bf0fb8ee0a2edec5b435"
             }
           ]
         },
@@ -51718,7 +51744,7 @@
             },
             {
               "predicate": "http://www.w3.org/ns/shacl#in",
-              "value": "n074fce2c3c1f4ff5bc1336ac1a438c42b441"
+              "value": "ncfb28add2c3948f9bf0fb8ee0a2edec5b441"
             }
           ]
         },
@@ -51735,7 +51761,7 @@
             },
             {
               "predicate": "http://www.w3.org/ns/shacl#in",
-              "value": "n074fce2c3c1f4ff5bc1336ac1a438c42b445"
+              "value": "ncfb28add2c3948f9bf0fb8ee0a2edec5b445"
             }
           ]
         },
@@ -51752,7 +51778,7 @@
             },
             {
               "predicate": "http://www.w3.org/ns/shacl#in",
-              "value": "n074fce2c3c1f4ff5bc1336ac1a438c42b451"
+              "value": "ncfb28add2c3948f9bf0fb8ee0a2edec5b451"
             }
           ]
         },
@@ -52006,7 +52032,7 @@
             },
             {
               "predicate": "http://www.w3.org/ns/shacl#in",
-              "value": "n074fce2c3c1f4ff5bc1336ac1a438c42b206"
+              "value": "ncfb28add2c3948f9bf0fb8ee0a2edec5b206"
             },
             {
               "predicate": "http://www.w3.org/ns/shacl#minCount",
@@ -52118,7 +52144,7 @@
             },
             {
               "predicate": "http://www.w3.org/ns/shacl#in",
-              "value": "n074fce2c3c1f4ff5bc1336ac1a438c42b598"
+              "value": "ncfb28add2c3948f9bf0fb8ee0a2edec5b598"
             },
             {
               "predicate": "http://www.w3.org/ns/shacl#message",
@@ -52364,7 +52390,7 @@
             },
             {
               "predicate": "http://www.w3.org/ns/shacl#in",
-              "value": "n074fce2c3c1f4ff5bc1336ac1a438c42b30"
+              "value": "ncfb28add2c3948f9bf0fb8ee0a2edec5b30"
             },
             {
               "predicate": "http://www.w3.org/ns/shacl#minCount",
@@ -52435,7 +52461,7 @@
             },
             {
               "predicate": "http://www.w3.org/ns/shacl#in",
-              "value": "n074fce2c3c1f4ff5bc1336ac1a438c42b732"
+              "value": "ncfb28add2c3948f9bf0fb8ee0a2edec5b732"
             }
           ]
         }
@@ -52938,7 +52964,7 @@
             },
             {
               "predicate": "http://www.w3.org/ns/shacl#in",
-              "value": "n074fce2c3c1f4ff5bc1336ac1a438c42b827"
+              "value": "ncfb28add2c3948f9bf0fb8ee0a2edec5b827"
             }
           ]
         },

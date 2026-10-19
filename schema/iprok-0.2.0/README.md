@@ -4,7 +4,7 @@ Created 19 October 2026. **Proposed extension**, not a replacement for the prese
 
 ## Scope
 
-This draft contains 138 classes, 127 object properties, 679 datatype properties, 9 annotation properties and 2 generic RDF properties. It includes 21 namespace modules:
+This draft contains 138 classes, 271 object properties, 679 datatype properties, 9 annotation properties and 2 generic RDF properties. It includes 21 namespace modules:
 
 | Module | Namespace suffix | Purpose |
 |---|---|---|
@@ -31,6 +31,14 @@ This draft contains 138 classes, 127 object properties, 679 datatype properties,
 | Activity prediction | `IproK/prediction#` | Activity prediction records; no trained model or performance claim |
 
 All prefixes above are under `https://w3id.org/`. These are draft IRIs; persistent resolution for the new paths has not been registered. Download the schema from this project directly. The module files in `modules/` are subject-based partitions with their blank-node expressions, intended to be used with the integrated distribution rather than independently closed import graphs.
+
+## Connected integration layer
+
+The draft adds **144 newly authored typed object properties** in the integration namespace. They join all **21 modules into one connected module graph**, spanning **40 distinct cross-module pairs**. The complete class graph is connected when explicit inheritance is included. These additions express new proposed schema design, not retained runtime implementation or historical results.
+
+`relationship-contract.json` defines each property, its domain, range, intended meaning and proposal status. Generic migrated predicates retain their semantics. **75 optional integration shapes** check that newly used links refer to IRIs of the intended class; they do not require historical records to acquire new fields. Constraints on explicit record roles are tested without RDFS inference to avoid letting range inference manufacture a valid target type.
+
+Constructed diagnostics verify 144 valid links, 144 rejected literal targets, 144 rejected wrong-class targets and four cross-module SPARQL paths. The retained-corpus check separately tests the complete combined schema. Select a network line to inspect its properties and distinguish proposed integration links from source declarations.
 
 ## Compatibility decisions
 

@@ -7,19 +7,19 @@
 <https://w3id.org/IproK#Actor> a owl:Class ;
     rdfs:label "Actor" ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
-    rdfs:comment "The actor class in the integrated project information model."@en ;
+    rdfs:comment "A person or organisational actor to whom scheduled work can be assigned."@en ;
     rdfs:subClassOf <https://w3id.org/IproK#IproKThing> .
 
 <https://w3id.org/IproK#Calendar> a owl:Class ;
     rdfs:label "Calendar" ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
-    rdfs:comment "The calendar class in the integrated project information model."@en ;
+    rdfs:comment "A definition of working and non-working periods used to interpret scheduled work."@en ;
     rdfs:subClassOf <https://w3id.org/IproK#IproKThing> .
 
 <https://w3id.org/IproK#Constraint> a owl:Class ;
     rdfs:label "Constraint" ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
-    rdfs:comment "The constraint class in the integrated project information model."@en ;
+    rdfs:comment "A condition restricting the execution or organisation of project work."@en ;
     rdfs:subClassOf <https://w3id.org/IproK#IproKThing> .
 
 <https://w3id.org/IproK#Decision> a owl:Class ;
@@ -39,7 +39,7 @@
     rdfs:label "Masters adoption" ;
     dcterms:isPartOf <https://w3id.org/IproK> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/MastersAdoption> ;
-    rdfs:comment "A project taking a version of its organisation's masters — at creation or when its PM adopts a newer one." ;
+    rdfs:comment "A project taking a version of its organisation's masters; at creation or when its PM adopts a newer one." ;
     rdfs:subClassOf prov:Entity .
 
 <https://w3id.org/IproK#OrganisationMasters> a owl:Class ;
@@ -495,7 +495,7 @@
     rdfs:label "Organisation" ;
     dcterms:isPartOf <https://w3id.org/IproK> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/Organisation> ;
-    rdfs:comment "A tenant. One organisation owns many <https://w3id.org/IproK/schedule#Project> nodes. Per V0.30, every Project must declare its parent Organisation via <https://w3id.org/IproK/integrated#ofOrganisation>; the API enforces same-org access on every project-scoped route." .
+    rdfs:comment "An organisation owning project records and defining a tenant boundary." .
 
 <https://w3id.org/IproK#ProjectMembership> a owl:Class ;
     rdfs:label "Project membership" ;
@@ -507,12 +507,12 @@
     rdfs:label "User" ;
     dcterms:isPartOf <https://w3id.org/IproK> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/User> ;
-    rdfs:comment "A platform user — site engineer, QC, PM, etc." ;
+    rdfs:comment "An authenticated platform user, such as a site engineer, quality controller or project manager." ;
     rdfs:subClassOf prov:Agent .
 
 <https://w3id.org/IproK#IproKThing> a owl:Class ;
     rdfs:label "IproKThing" ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
-    rdfs:comment "The ipro kthing class in the integrated project information model."@en ;
+    rdfs:comment "The common parent class for the published IproK project-information concepts."@en ;
     rdfs:subClassOf owl:Thing .
 

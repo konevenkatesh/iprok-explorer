@@ -117,6 +117,96 @@
 <https://w3id.org/IproK/integrated#WIP> a <https://w3id.org/IproK/document#DrawingState> ;
     rdfs:label "Work in progress" .
 
+<https://w3id.org/IproK/integrated#activityAssignedActor> a owl:ObjectProperty ;
+    rdfs:label "activity Assigned Actor"@en ;
+    dcterms:created "2026-10-19"^^xsd:date ;
+    dcterms:description "Newly proposed IproK integration relationship. Authored schema design based on the declared meanings of the connected source classes; not a claim that the retained runtime already writes this predicate."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
+    rdfs:comment "The actor assigned responsibility for the activity."@en ;
+    rdfs:domain <https://w3id.org/IproK/schedule#Activity> ;
+    rdfs:isDefinedBy <https://w3id.org/IproK/0.2.0> ;
+    rdfs:range <https://w3id.org/IproK#Actor> .
+
+<https://w3id.org/IproK/integrated#activityGeneratesCostItem> a owl:ObjectProperty ;
+    rdfs:label "activity Generates Cost Item"@en ;
+    dcterms:created "2026-10-19"^^xsd:date ;
+    dcterms:description "Newly proposed IproK integration relationship. Authored schema design based on the declared meanings of the connected source classes; not a claim that the retained runtime already writes this predicate."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
+    rdfs:comment "A cost item associated with performing the activity."@en ;
+    rdfs:domain <https://w3id.org/IproK/schedule#Activity> ;
+    rdfs:isDefinedBy <https://w3id.org/IproK/0.2.0> ;
+    rdfs:range <https://w3id.org/IproK/cost#CostItem> .
+
+<https://w3id.org/IproK/integrated#activityHasBOQItem> a owl:ObjectProperty ;
+    rdfs:label "activity Has BOQItem"@en ;
+    dcterms:created "2026-10-19"^^xsd:date ;
+    dcterms:description "Newly proposed IproK integration relationship. Authored schema design based on the declared meanings of the connected source classes; not a claim that the retained runtime already writes this predicate."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
+    rdfs:comment "A contract BOQ item related to the activity's measured work."@en ;
+    rdfs:domain <https://w3id.org/IproK/schedule#Activity> ;
+    rdfs:isDefinedBy <https://w3id.org/IproK/0.2.0> ;
+    rdfs:range <https://w3id.org/IproK/billing#BOQItem> .
+
+<https://w3id.org/IproK/integrated#activityHasDurationEstimate> a owl:ObjectProperty ;
+    rdfs:label "activity Has Duration Estimate"@en ;
+    dcterms:created "2026-10-19"^^xsd:date ;
+    dcterms:description "Newly proposed IproK integration relationship. Authored schema design based on the declared meanings of the connected source classes; not a claim that the retained runtime already writes this predicate."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
+    rdfs:comment "A versioned estimate explaining the activity duration."@en ;
+    rdfs:domain <https://w3id.org/IproK/schedule#Activity> ;
+    rdfs:isDefinedBy <https://w3id.org/IproK/0.2.0> ;
+    rdfs:range <https://w3id.org/IproK/schedule#ActivityDurationEstimate> .
+
+<https://w3id.org/IproK/integrated#activityHasProductivityObservation> a owl:ObjectProperty ;
+    rdfs:label "activity Has Productivity Observation"@en ;
+    dcterms:created "2026-10-19"^^xsd:date ;
+    dcterms:description "Newly proposed IproK integration relationship. Authored schema design based on the declared meanings of the connected source classes; not a claim that the retained runtime already writes this predicate."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
+    rdfs:comment "A measured quantity, crew and time observation associated with the activity."@en ;
+    rdfs:domain <https://w3id.org/IproK/schedule#Activity> ;
+    rdfs:isDefinedBy <https://w3id.org/IproK/0.2.0> ;
+    rdfs:range <https://w3id.org/IproK/resource#ProductivityObservation> .
+
+<https://w3id.org/IproK/integrated#activityHasScheduleLink> a owl:ObjectProperty ;
+    rdfs:label "activity Has Schedule Link"@en ;
+    dcterms:created "2026-10-19"^^xsd:date ;
+    dcterms:description "Newly proposed IproK integration relationship. Authored schema design based on the declared meanings of the connected source classes; not a claim that the retained runtime already writes this predicate."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
+    rdfs:comment "A reified precedence relationship involving the activity."@en ;
+    rdfs:domain <https://w3id.org/IproK/schedule#Activity> ;
+    rdfs:isDefinedBy <https://w3id.org/IproK/0.2.0> ;
+    rdfs:range <https://w3id.org/IproK/schedule#ScheduleLink> .
+
+<https://w3id.org/IproK/integrated#activityHasWorkConstraint> a owl:ObjectProperty ;
+    rdfs:label "activity Has Work Constraint"@en ;
+    dcterms:created "2026-10-19"^^xsd:date ;
+    dcterms:description "Newly proposed IproK integration relationship. Authored schema design based on the declared meanings of the connected source classes; not a claim that the retained runtime already writes this predicate."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
+    rdfs:comment "A work-readiness constraint that must be managed for the activity."@en ;
+    rdfs:domain <https://w3id.org/IproK/schedule#Activity> ;
+    rdfs:isDefinedBy <https://w3id.org/IproK/0.2.0> ;
+    rdfs:range <https://w3id.org/IproK/schedule#WorkConstraint> .
+
+<https://w3id.org/IproK/integrated#activityLinkedElement> a owl:ObjectProperty ;
+    rdfs:label "activity Linked Element"@en ;
+    dcterms:created "2026-10-19"^^xsd:date ;
+    dcterms:description "Newly proposed IproK integration relationship. Authored schema design based on the declared meanings of the connected source classes; not a claim that the retained runtime already writes this predicate."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
+    rdfs:comment "A building-model element associated with the scheduled activity."@en ;
+    rdfs:domain <https://w3id.org/IproK/schedule#Activity> ;
+    rdfs:isDefinedBy <https://w3id.org/IproK/0.2.0> ;
+    rdfs:range <https://w3id.org/IproK/building#Element> .
+
+<https://w3id.org/IproK/integrated#activityUsesCalendar> a owl:ObjectProperty ;
+    rdfs:label "activity Uses Calendar"@en ;
+    dcterms:created "2026-10-19"^^xsd:date ;
+    dcterms:description "Newly proposed IproK integration relationship. Authored schema design based on the declared meanings of the connected source classes; not a claim that the retained runtime already writes this predicate."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
+    rdfs:comment "The calendar used to interpret working periods for the activity."@en ;
+    rdfs:domain <https://w3id.org/IproK/schedule#Activity> ;
+    rdfs:isDefinedBy <https://w3id.org/IproK/0.2.0> ;
+    rdfs:range <https://w3id.org/IproK#Calendar> .
+
 <https://w3id.org/IproK/integrated#actualFinish> a owl:DatatypeProperty ;
     rdfs:label "actual finish" ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
@@ -132,6 +222,16 @@
     dcterms:source <https://bimsaarthi.com/ontology/v0/actualStart> ;
     rdfs:comment "The actual start property in the integrated project information model."@en ;
     rdfs:range xsd:dateTime .
+
+<https://w3id.org/IproK/integrated#adoptionUsesMasters> a owl:ObjectProperty ;
+    rdfs:label "adoption Uses Masters"@en ;
+    dcterms:created "2026-10-19"^^xsd:date ;
+    dcterms:description "Newly proposed IproK integration relationship. Authored schema design based on the declared meanings of the connected source classes; not a claim that the retained runtime already writes this predicate."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
+    rdfs:comment "The masters version adopted by a project."@en ;
+    rdfs:domain <https://w3id.org/IproK#MastersAdoption> ;
+    rdfs:isDefinedBy <https://w3id.org/IproK/0.2.0> ;
+    rdfs:range <https://w3id.org/IproK#OrganisationMasters> .
 
 <https://w3id.org/IproK/integrated#affectsSoldUnits> a owl:DatatypeProperty ;
     rdfs:label "affects Sold Units"@en ;
@@ -154,6 +254,16 @@
     rdfs:comment "The allocation assigns resource property in the integrated project information model. Its declared domain is ResourceAllocation and its declared range is Resource."@en ;
     rdfs:domain <https://w3id.org/IproK/integrated#ResourceAllocation> ;
     rdfs:range <https://w3id.org/IproK/resource#Resource> .
+
+<https://w3id.org/IproK/integrated#allocationForActivity> a owl:ObjectProperty ;
+    rdfs:label "allocation For Activity"@en ;
+    dcterms:created "2026-10-19"^^xsd:date ;
+    dcterms:description "Newly proposed IproK integration relationship. Authored schema design based on the declared meanings of the connected source classes; not a claim that the retained runtime already writes this predicate."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
+    rdfs:comment "The platform activity represented by a resource allocation, refining the published task allocation connection."@en ;
+    rdfs:domain <https://w3id.org/IproK/integrated#ResourceAllocation> ;
+    rdfs:isDefinedBy <https://w3id.org/IproK/0.2.0> ;
+    rdfs:range <https://w3id.org/IproK/schedule#Activity> .
 
 <https://w3id.org/IproK/integrated#allocationForTask> a owl:FunctionalProperty,
         owl:ObjectProperty ;
@@ -178,6 +288,16 @@
     rdfs:comment "The allocation planned start date property in the integrated project information model. Its declared domain is ResourceAllocation and its declared range is dateTime."@en ;
     rdfs:domain <https://w3id.org/IproK/integrated#ResourceAllocation> ;
     rdfs:range xsd:dateTime .
+
+<https://w3id.org/IproK/integrated#analysisLineUsesCostResource> a owl:ObjectProperty ;
+    rdfs:label "analysis Line Uses Cost Resource"@en ;
+    dcterms:created "2026-10-19"^^xsd:date ;
+    dcterms:description "Newly proposed IproK integration relationship. Authored schema design based on the declared meanings of the connected source classes; not a claim that the retained runtime already writes this predicate."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
+    rdfs:comment "The basic-rate resource priced by the analysis line."@en ;
+    rdfs:domain <https://w3id.org/IproK/cost#AnalysisLine> ;
+    rdfs:isDefinedBy <https://w3id.org/IproK/0.2.0> ;
+    rdfs:range <https://w3id.org/IproK/cost#CostResource> .
 
 <https://w3id.org/IproK/integrated#answeredAt> a owl:DatatypeProperty ;
     rdfs:label "answered at" ;
@@ -208,6 +328,16 @@
     dcterms:source <https://bimsaarthi.com/ontology/v0/approvalDecidedAt> ;
     rdfs:comment "The approval decided at property in the integrated project information model."@en ;
     rdfs:range xsd:dateTime .
+
+<https://w3id.org/IproK/integrated#approvalHasDocument> a owl:ObjectProperty ;
+    rdfs:label "approval Has Document"@en ;
+    dcterms:created "2026-10-19"^^xsd:date ;
+    dcterms:description "Newly proposed IproK integration relationship. Authored schema design based on the declared meanings of the connected source classes; not a claim that the retained runtime already writes this predicate."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
+    rdfs:comment "A controlled document supporting the approval record."@en ;
+    rdfs:domain <https://w3id.org/IproK/approval#Approval> ;
+    rdfs:isDefinedBy <https://w3id.org/IproK/0.2.0> ;
+    rdfs:range <https://w3id.org/IproK/document#Document> .
 
 <https://w3id.org/IproK/integrated#approvalNote> a owl:DatatypeProperty ;
     rdfs:label "approval note" ;
@@ -253,6 +383,26 @@
     rdfs:comment "Base price per sqft SBA for this unit type. Domain unspecified (antipattern #8)." ;
     rdfs:range xsd:decimal .
 
+<https://w3id.org/IproK/integrated#baselineEntryForActivity> a owl:ObjectProperty ;
+    rdfs:label "baseline Entry For Activity"@en ;
+    dcterms:created "2026-10-19"^^xsd:date ;
+    dcterms:description "Newly proposed IproK integration relationship. Authored schema design based on the declared meanings of the connected source classes; not a claim that the retained runtime already writes this predicate."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
+    rdfs:comment "The activity represented by the frozen baseline entry."@en ;
+    rdfs:domain <https://w3id.org/IproK/schedule#BaselineEntry> ;
+    rdfs:isDefinedBy <https://w3id.org/IproK/0.2.0> ;
+    rdfs:range <https://w3id.org/IproK/schedule#Activity> .
+
+<https://w3id.org/IproK/integrated#baselineHasEntry> a owl:ObjectProperty ;
+    rdfs:label "baseline Has Entry"@en ;
+    dcterms:created "2026-10-19"^^xsd:date ;
+    dcterms:description "Newly proposed IproK integration relationship. Authored schema design based on the declared meanings of the connected source classes; not a claim that the retained runtime already writes this predicate."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
+    rdfs:comment "An activity entry frozen in a schedule baseline."@en ;
+    rdfs:domain <https://w3id.org/IproK/schedule#ScheduleBaseline> ;
+    rdfs:isDefinedBy <https://w3id.org/IproK/0.2.0> ;
+    rdfs:range <https://w3id.org/IproK/schedule#BaselineEntry> .
+
 <https://w3id.org/IproK/integrated#baselineWriteToken> a owl:DatatypeProperty ;
     rdfs:label "baseline Write Token"@en ;
     dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
@@ -282,6 +432,46 @@
     dcterms:source <https://bimsaarthi.com/ontology/v0/bidValidityDays> ;
     rdfs:comment "The bid validity days property in the integrated project information model."@en ;
     rdfs:range xsd:integer .
+
+<https://w3id.org/IproK/integrated#billHasRecovery> a owl:ObjectProperty ;
+    rdfs:label "bill Has Recovery"@en ;
+    dcterms:created "2026-10-19"^^xsd:date ;
+    dcterms:description "Newly proposed IproK integration relationship. Authored schema design based on the declared meanings of the connected source classes; not a claim that the retained runtime already writes this predicate."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
+    rdfs:comment "A recovery or deduction recorded against the bill."@en ;
+    rdfs:domain <https://w3id.org/IproK/billing#RABill> ;
+    rdfs:isDefinedBy <https://w3id.org/IproK/0.2.0> ;
+    rdfs:range <https://w3id.org/IproK/billing#Recovery> .
+
+<https://w3id.org/IproK/integrated#billHasState> a owl:ObjectProperty ;
+    rdfs:label "bill Has State"@en ;
+    dcterms:created "2026-10-19"^^xsd:date ;
+    dcterms:description "Newly proposed IproK integration relationship. Authored schema design based on the declared meanings of the connected source classes; not a claim that the retained runtime already writes this predicate."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
+    rdfs:comment "The running-account bill lifecycle classification."@en ;
+    rdfs:domain <https://w3id.org/IproK/billing#RABill> ;
+    rdfs:isDefinedBy <https://w3id.org/IproK/0.2.0> ;
+    rdfs:range <https://w3id.org/IproK/billing#BillState> .
+
+<https://w3id.org/IproK/integrated#billIncludesMeasurement> a owl:ObjectProperty ;
+    rdfs:label "bill Includes Measurement"@en ;
+    dcterms:created "2026-10-19"^^xsd:date ;
+    dcterms:description "Newly proposed IproK integration relationship. Authored schema design based on the declared meanings of the connected source classes; not a claim that the retained runtime already writes this predicate."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
+    rdfs:comment "A measurement included in the running-account bill."@en ;
+    rdfs:domain <https://w3id.org/IproK/billing#RABill> ;
+    rdfs:isDefinedBy <https://w3id.org/IproK/0.2.0> ;
+    rdfs:range <https://w3id.org/IproK/billing#Measurement> .
+
+<https://w3id.org/IproK/integrated#boqHasRateAnalysis> a owl:ObjectProperty ;
+    rdfs:label "boq Has Rate Analysis"@en ;
+    dcterms:created "2026-10-19"^^xsd:date ;
+    dcterms:description "Newly proposed IproK integration relationship. Authored schema design based on the declared meanings of the connected source classes; not a claim that the retained runtime already writes this predicate."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
+    rdfs:comment "The analysis explaining the rate of the BOQ item."@en ;
+    rdfs:domain <https://w3id.org/IproK/billing#BOQItem> ;
+    rdfs:isDefinedBy <https://w3id.org/IproK/0.2.0> ;
+    rdfs:range <https://w3id.org/IproK/cost#RateAnalysis> .
 
 <https://w3id.org/IproK/integrated#builtUpAreaSqft> a owl:DatatypeProperty ;
     rdfs:label "built Up Area Sqft"@en ;
@@ -326,6 +516,46 @@
     rdfs:comment "The closure note property in the integrated project information model."@en ;
     rdfs:range xsd:string .
 
+<https://w3id.org/IproK/integrated#collectionForUnit> a owl:ObjectProperty ;
+    rdfs:label "collection For Unit"@en ;
+    dcterms:created "2026-10-19"^^xsd:date ;
+    dcterms:description "Newly proposed IproK integration relationship. Authored schema design based on the declared meanings of the connected source classes; not a claim that the retained runtime already writes this predicate."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
+    rdfs:comment "The unit whose buyer payment is recorded by the receipt."@en ;
+    rdfs:domain <https://w3id.org/IproK/finance#CollectionReceipt> ;
+    rdfs:isDefinedBy <https://w3id.org/IproK/0.2.0> ;
+    rdfs:range <https://w3id.org/IproK/property#Unit> .
+
+<https://w3id.org/IproK/integrated#collectionToEscrow> a owl:ObjectProperty ;
+    rdfs:label "collection To Escrow"@en ;
+    dcterms:created "2026-10-19"^^xsd:date ;
+    dcterms:description "Newly proposed IproK integration relationship. Authored schema design based on the declared meanings of the connected source classes; not a claim that the retained runtime already writes this predicate."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
+    rdfs:comment "The designated escrow account receiving the escrow portion of the collection."@en ;
+    rdfs:domain <https://w3id.org/IproK/finance#CollectionReceipt> ;
+    rdfs:isDefinedBy <https://w3id.org/IproK/0.2.0> ;
+    rdfs:range <https://w3id.org/IproK/finance#EscrowAccount> .
+
+<https://w3id.org/IproK/integrated#comparableReferenceProject> a owl:ObjectProperty ;
+    rdfs:label "comparable Reference Project"@en ;
+    dcterms:created "2026-10-19"^^xsd:date ;
+    dcterms:description "Newly proposed IproK integration relationship. Authored schema design based on the declared meanings of the connected source classes; not a claim that the retained runtime already writes this predicate."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
+    rdfs:comment "The historical project referenced in a tender-comparison record."@en ;
+    rdfs:domain <https://w3id.org/IproK/tender#ComparableProject> ;
+    rdfs:isDefinedBy <https://w3id.org/IproK/0.2.0> ;
+    rdfs:range <https://w3id.org/IproK/schedule#Project> .
+
+<https://w3id.org/IproK/integrated#comparisonForTender> a owl:ObjectProperty ;
+    rdfs:label "comparison For Tender"@en ;
+    dcterms:created "2026-10-19"^^xsd:date ;
+    dcterms:description "Newly proposed IproK integration relationship. Authored schema design based on the declared meanings of the connected source classes; not a claim that the retained runtime already writes this predicate."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
+    rdfs:comment "The tender for which the comparison was prepared."@en ;
+    rdfs:domain <https://w3id.org/IproK/tender#ComparableProject> ;
+    rdfs:isDefinedBy <https://w3id.org/IproK/0.2.0> ;
+    rdfs:range <https://w3id.org/IproK/tender#Tender> .
+
 <https://w3id.org/IproK/integrated#computedAt> a owl:DatatypeProperty ;
     rdfs:label "computed at",
         "snapshot computed at" ;
@@ -357,6 +587,36 @@
     rdfs:comment "Optional OTP transaction reference from the SMS provider (MSG91). Domain unspecified." ;
     rdfs:range xsd:string .
 
+<https://w3id.org/IproK/integrated#contributionFromProject> a owl:ObjectProperty ;
+    rdfs:label "contribution From Project"@en ;
+    dcterms:created "2026-10-19"^^xsd:date ;
+    dcterms:description "Newly proposed IproK integration relationship. Authored schema design based on the declared meanings of the connected source classes; not a claim that the retained runtime already writes this predicate."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
+    rdfs:comment "The project contributing measured observations to an organisation norm."@en ;
+    rdfs:domain <https://w3id.org/IproK/resource#ProductivityContribution> ;
+    rdfs:isDefinedBy <https://w3id.org/IproK/0.2.0> ;
+    rdfs:range <https://w3id.org/IproK/schedule#Project> .
+
+<https://w3id.org/IproK/integrated#contributionIncludesObservation> a owl:ObjectProperty ;
+    rdfs:label "contribution Includes Observation"@en ;
+    dcterms:created "2026-10-19"^^xsd:date ;
+    dcterms:description "Newly proposed IproK integration relationship. Authored schema design based on the declared meanings of the connected source classes; not a claim that the retained runtime already writes this predicate."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
+    rdfs:comment "An observation included in a productivity contribution."@en ;
+    rdfs:domain <https://w3id.org/IproK/resource#ProductivityContribution> ;
+    rdfs:isDefinedBy <https://w3id.org/IproK/0.2.0> ;
+    rdfs:range <https://w3id.org/IproK/resource#ProductivityObservation> .
+
+<https://w3id.org/IproK/integrated#copyRecordingForModel> a owl:ObjectProperty ;
+    rdfs:label "copy Recording For Model"@en ;
+    dcterms:created "2026-10-19"^^xsd:date ;
+    dcterms:description "Newly proposed IproK integration relationship. Authored schema design based on the declared meanings of the connected source classes; not a claim that the retained runtime already writes this predicate."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
+    rdfs:comment "The model revision covered by an element-copy recording event."@en ;
+    rdfs:domain <https://w3id.org/IproK/building#ElementCopiesRecorded> ;
+    rdfs:isDefinedBy <https://w3id.org/IproK/0.2.0> ;
+    rdfs:range <https://w3id.org/IproK/building#IfcModel> .
+
 <https://w3id.org/IproK/integrated#costBaselineAmount> a owl:DatatypeProperty ;
     rdfs:label "cost Baseline Amount"@en ;
     dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
@@ -371,6 +631,16 @@
     dcterms:source <https://bimsaarthi.com/ontology/v0/costImpact> ;
     rdfs:comment "The cost impact property in the integrated project information model."@en ;
     rdfs:range xsd:decimal .
+
+<https://w3id.org/IproK/integrated#costResourceRepresentsResource> a owl:ObjectProperty ;
+    rdfs:label "cost Resource Represents Resource"@en ;
+    dcterms:created "2026-10-19"^^xsd:date ;
+    dcterms:description "Newly proposed IproK integration relationship. Authored schema design based on the declared meanings of the connected source classes; not a claim that the retained runtime already writes this predicate."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
+    rdfs:comment "The resource concept represented by a basic-rate entry."@en ;
+    rdfs:domain <https://w3id.org/IproK/cost#CostResource> ;
+    rdfs:isDefinedBy <https://w3id.org/IproK/0.2.0> ;
+    rdfs:range <https://w3id.org/IproK/resource#Resource> .
 
 <https://w3id.org/IproK/integrated#countedAsElement> a owl:DatatypeProperty ;
     rdfs:label "counted as element" ;
@@ -405,6 +675,26 @@
     rdfs:comment "Server commit timestamp on Issue / future Event subclasses. Polymorphic — domain unspecified (antipattern #8)." ;
     rdfs:range xsd:dateTime .
 
+<https://w3id.org/IproK/integrated#crewCompositionUsesResource> a owl:ObjectProperty ;
+    rdfs:label "crew Composition Uses Resource"@en ;
+    dcterms:created "2026-10-19"^^xsd:date ;
+    dcterms:description "Newly proposed IproK integration relationship. Authored schema design based on the declared meanings of the connected source classes; not a claim that the retained runtime already writes this predicate."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
+    rdfs:comment "The resource category represented by a crew composition line."@en ;
+    rdfs:domain <https://w3id.org/IproK/resource#CrewComposition> ;
+    rdfs:isDefinedBy <https://w3id.org/IproK/0.2.0> ;
+    rdfs:range <https://w3id.org/IproK/resource#Resource> .
+
+<https://w3id.org/IproK/integrated#crewHasComposition> a owl:ObjectProperty ;
+    rdfs:label "crew Has Composition"@en ;
+    dcterms:created "2026-10-19"^^xsd:date ;
+    dcterms:description "Newly proposed IproK integration relationship. Authored schema design based on the declared meanings of the connected source classes; not a claim that the retained runtime already writes this predicate."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
+    rdfs:comment "A trade and skill composition line within a crew type."@en ;
+    rdfs:domain <https://w3id.org/IproK/resource#CrewType> ;
+    rdfs:isDefinedBy <https://w3id.org/IproK/0.2.0> ;
+    rdfs:range <https://w3id.org/IproK/resource#CrewComposition> .
+
 <https://w3id.org/IproK/integrated#crewHeadcount> a owl:DatatypeProperty ;
     rdfs:label "crew Headcount"@en ;
     dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
@@ -425,6 +715,16 @@
     dcterms:source <https://bimsaarthi.com/ontology/v0/crewTypeAssigned> ;
     rdfs:comment "The <https://w3id.org/IproK/resource#CrewType> that did the work in this DPR entry." .
 
+<https://w3id.org/IproK/integrated#decisionMadeByUser> a owl:ObjectProperty ;
+    rdfs:label "decision Made By User"@en ;
+    dcterms:created "2026-10-19"^^xsd:date ;
+    dcterms:description "Newly proposed IproK integration relationship. Authored schema design based on the declared meanings of the connected source classes; not a claim that the retained runtime already writes this predicate."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
+    rdfs:comment "The user responsible for the recorded decision."@en ;
+    rdfs:domain <https://w3id.org/IproK#Decision> ;
+    rdfs:isDefinedBy <https://w3id.org/IproK/0.2.0> ;
+    rdfs:range <https://w3id.org/IproK#User> .
+
 <https://w3id.org/IproK/integrated#decisionNote> a owl:DatatypeProperty ;
     rdfs:label "decision Note"@en ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
@@ -440,6 +740,36 @@
     rdfs:comment "Lowercase-normalised, whitespace-collapsed copy of the repeated <https://w3id.org/IproK/quality#failureNote>. Normalisation lives in the Celery task and is the join key — keep it stable. Also reused by <https://w3id.org/IproK/handover#DLPDefect> (N8)." ;
     rdfs:range xsd:string .
 
+<https://w3id.org/IproK/integrated#defectForHandover> a owl:ObjectProperty ;
+    rdfs:label "defect For Handover"@en ;
+    dcterms:created "2026-10-19"^^xsd:date ;
+    dcterms:description "Newly proposed IproK integration relationship. Authored schema design based on the declared meanings of the connected source classes; not a claim that the retained runtime already writes this predicate."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
+    rdfs:comment "The handover package under whose liability window the defect is tracked."@en ;
+    rdfs:domain <https://w3id.org/IproK/handover#DLPDefect> ;
+    rdfs:isDefinedBy <https://w3id.org/IproK/0.2.0> ;
+    rdfs:range <https://w3id.org/IproK/handover#HandoverPackage> .
+
+<https://w3id.org/IproK/integrated#demandAtMilestone> a owl:ObjectProperty ;
+    rdfs:label "demand At Milestone"@en ;
+    dcterms:created "2026-10-19"^^xsd:date ;
+    dcterms:description "Newly proposed IproK integration relationship. Authored schema design based on the declared meanings of the connected source classes; not a claim that the retained runtime already writes this predicate."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
+    rdfs:comment "The payment milestone triggering the demand."@en ;
+    rdfs:domain <https://w3id.org/IproK/finance#DemandNote> ;
+    rdfs:isDefinedBy <https://w3id.org/IproK/0.2.0> ;
+    rdfs:range <https://w3id.org/IproK/finance#PaymentMilestone> .
+
+<https://w3id.org/IproK/integrated#demandForUnit> a owl:ObjectProperty ;
+    rdfs:label "demand For Unit"@en ;
+    dcterms:created "2026-10-19"^^xsd:date ;
+    dcterms:description "Newly proposed IproK integration relationship. Authored schema design based on the declared meanings of the connected source classes; not a claim that the retained runtime already writes this predicate."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
+    rdfs:comment "The unit against which a payment demand is raised."@en ;
+    rdfs:domain <https://w3id.org/IproK/finance#DemandNote> ;
+    rdfs:isDefinedBy <https://w3id.org/IproK/0.2.0> ;
+    rdfs:range <https://w3id.org/IproK/property#Unit> .
+
 <https://w3id.org/IproK/integrated#departmentalOTPRef> a owl:DatatypeProperty ;
     rdfs:label "departmental OTP reference" ;
     dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
@@ -454,12 +784,72 @@
     rdfs:comment "Chain edge: this approval is normally taken up after the referenced one (e.g. CC depends on PlanSanction). Advisory ordering, not a hard gate. Domain unspecified (antipattern #8)." ;
     rdfs:range <https://w3id.org/IproK/approval#Approval> .
 
+<https://w3id.org/IproK/integrated#designOptionAffectsElement> a owl:ObjectProperty ;
+    rdfs:label "design Option Affects Element"@en ;
+    dcterms:created "2026-10-19"^^xsd:date ;
+    dcterms:description "Newly proposed IproK integration relationship. Authored schema design based on the declared meanings of the connected source classes; not a claim that the retained runtime already writes this predicate."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
+    rdfs:comment "A building-model element affected by a priced design alternative."@en ;
+    rdfs:domain <https://w3id.org/IproK/cost#DesignOption> ;
+    rdfs:isDefinedBy <https://w3id.org/IproK/0.2.0> ;
+    rdfs:range <https://w3id.org/IproK/building#Element> .
+
 <https://w3id.org/IproK/integrated#deviationAmount> a owl:DatatypeProperty ;
     rdfs:label "deviation amount" ;
     dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/deviationAmount> ;
     rdfs:comment "Excess amount in INR at the BOQ rate: (measured - tendered) × rate. Mandatory. Domain unspecified." ;
     rdfs:range xsd:decimal .
+
+<https://w3id.org/IproK/integrated#deviationForBOQItem> a owl:ObjectProperty ;
+    rdfs:label "deviation For BOQItem"@en ;
+    dcterms:created "2026-10-19"^^xsd:date ;
+    dcterms:description "Newly proposed IproK integration relationship. Authored schema design based on the declared meanings of the connected source classes; not a claim that the retained runtime already writes this predicate."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
+    rdfs:comment "The contract BOQ item subject to a quantity-deviation record."@en ;
+    rdfs:domain <https://w3id.org/IproK/billing#Deviation> ;
+    rdfs:isDefinedBy <https://w3id.org/IproK/0.2.0> ;
+    rdfs:range <https://w3id.org/IproK/billing#BOQItem> .
+
+<https://w3id.org/IproK/integrated#drawingChangeOnDrawing> a owl:ObjectProperty ;
+    rdfs:label "drawing Change On Drawing"@en ;
+    dcterms:created "2026-10-19"^^xsd:date ;
+    dcterms:description "Newly proposed IproK integration relationship. Authored schema design based on the declared meanings of the connected source classes; not a claim that the retained runtime already writes this predicate."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
+    rdfs:comment "The drawing revision to which the recorded change belongs."@en ;
+    rdfs:domain <https://w3id.org/IproK/document#DrawingChange> ;
+    rdfs:isDefinedBy <https://w3id.org/IproK/0.2.0> ;
+    rdfs:range <https://w3id.org/IproK/document#Drawing> .
+
+<https://w3id.org/IproK/integrated#drawingForActivity> a owl:ObjectProperty ;
+    rdfs:label "drawing For Activity"@en ;
+    dcterms:created "2026-10-19"^^xsd:date ;
+    dcterms:description "Newly proposed IproK integration relationship. Authored schema design based on the declared meanings of the connected source classes; not a claim that the retained runtime already writes this predicate."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
+    rdfs:comment "An activity for which the drawing supplies design information."@en ;
+    rdfs:domain <https://w3id.org/IproK/document#Drawing> ;
+    rdfs:isDefinedBy <https://w3id.org/IproK/0.2.0> ;
+    rdfs:range <https://w3id.org/IproK/schedule#Activity> .
+
+<https://w3id.org/IproK/integrated#drawingHasAnnotation> a owl:ObjectProperty ;
+    rdfs:label "drawing Has Annotation"@en ;
+    dcterms:created "2026-10-19"^^xsd:date ;
+    dcterms:description "Newly proposed IproK integration relationship. Authored schema design based on the declared meanings of the connected source classes; not a claim that the retained runtime already writes this predicate."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
+    rdfs:comment "A markup recorded against the drawing."@en ;
+    rdfs:domain <https://w3id.org/IproK/document#Drawing> ;
+    rdfs:isDefinedBy <https://w3id.org/IproK/0.2.0> ;
+    rdfs:range <https://w3id.org/IproK/document#Annotation> .
+
+<https://w3id.org/IproK/integrated#drawingHasState> a owl:ObjectProperty ;
+    rdfs:label "drawing Has State"@en ;
+    dcterms:created "2026-10-19"^^xsd:date ;
+    dcterms:description "Newly proposed IproK integration relationship. Authored schema design based on the declared meanings of the connected source classes; not a claim that the retained runtime already writes this predicate."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
+    rdfs:comment "The information-container state of the drawing revision."@en ;
+    rdfs:domain <https://w3id.org/IproK/document#Drawing> ;
+    rdfs:isDefinedBy <https://w3id.org/IproK/0.2.0> ;
+    rdfs:range <https://w3id.org/IproK/document#DrawingState> .
 
 <https://w3id.org/IproK/integrated#drawingType> a owl:DatatypeProperty ;
     rdfs:label "drawing type" ;
@@ -473,6 +863,26 @@
     dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/duplicateOf> ;
     rdfs:comment "On a retired <https://w3id.org/IproK/building#Element>: the node that carries the same element (same GlobalId, same model revision) now. The retired node keeps only its identity and generation triples. No rdfs:domain." .
+
+<https://w3id.org/IproK/integrated#duplicateRetirementForProject> a owl:ObjectProperty ;
+    rdfs:label "duplicate Retirement For Project"@en ;
+    dcterms:created "2026-10-19"^^xsd:date ;
+    dcterms:description "Newly proposed IproK integration relationship. Authored schema design based on the declared meanings of the connected source classes; not a claim that the retained runtime already writes this predicate."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
+    rdfs:comment "The project scope of an element-duplicate retirement event."@en ;
+    rdfs:domain <https://w3id.org/IproK/building#ElementDuplicatesRetired> ;
+    rdfs:isDefinedBy <https://w3id.org/IproK/0.2.0> ;
+    rdfs:range <https://w3id.org/IproK/schedule#Project> .
+
+<https://w3id.org/IproK/integrated#durationEstimateUsesCrew> a owl:ObjectProperty ;
+    rdfs:label "duration Estimate Uses Crew"@en ;
+    dcterms:created "2026-10-19"^^xsd:date ;
+    dcterms:description "Newly proposed IproK integration relationship. Authored schema design based on the declared meanings of the connected source classes; not a claim that the retained runtime already writes this predicate."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
+    rdfs:comment "The planned crew type used in a duration estimate."@en ;
+    rdfs:domain <https://w3id.org/IproK/schedule#ActivityDurationEstimate> ;
+    rdfs:isDefinedBy <https://w3id.org/IproK/0.2.0> ;
+    rdfs:range <https://w3id.org/IproK/resource#CrewType> .
 
 <https://w3id.org/IproK/integrated#eProcurementFlag> a owl:DatatypeProperty ;
     rdfs:label "e-procurement flag" ;
@@ -512,6 +922,16 @@
     rdfs:comment "Number of <https://w3id.org/IproK/building#Element> triples extracted from a model upload. Polymorphic — domain unspecified (antipattern #8)." ;
     rdfs:range xsd:integer .
 
+<https://w3id.org/IproK/integrated#elementHasMemberIdentity> a owl:ObjectProperty ;
+    rdfs:label "element Has Member Identity"@en ;
+    dcterms:created "2026-10-19"^^xsd:date ;
+    dcterms:description "Newly proposed IproK integration relationship. Authored schema design based on the declared meanings of the connected source classes; not a claim that the retained runtime already writes this predicate."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
+    rdfs:comment "The structural-member identity associated with the model element."@en ;
+    rdfs:domain <https://w3id.org/IproK/building#Element> ;
+    rdfs:isDefinedBy <https://w3id.org/IproK/0.2.0> ;
+    rdfs:range <https://w3id.org/IproK/building#MemberIdentity> .
+
 <https://w3id.org/IproK/integrated#elementName> a owl:DatatypeProperty ;
     rdfs:label "element name" ;
     dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
@@ -540,6 +960,16 @@
     dcterms:source <https://bimsaarthi.com/ontology/v0/employedBy> ;
     rdfs:comment "Subcontractor or labour supplier name; the org itself when direct." ;
     rdfs:range xsd:string .
+
+<https://w3id.org/IproK/integrated#escrowForProject> a owl:ObjectProperty ;
+    rdfs:label "escrow For Project"@en ;
+    dcterms:created "2026-10-19"^^xsd:date ;
+    dcterms:description "Newly proposed IproK integration relationship. Authored schema design based on the declared meanings of the connected source classes; not a claim that the retained runtime already writes this predicate."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
+    rdfs:comment "The project to which the designated escrow account belongs."@en ;
+    rdfs:domain <https://w3id.org/IproK/finance#EscrowAccount> ;
+    rdfs:isDefinedBy <https://w3id.org/IproK/0.2.0> ;
+    rdfs:range <https://w3id.org/IproK/schedule#Project> .
 
 <https://w3id.org/IproK/integrated#experienceRequired> a owl:DatatypeProperty ;
     rdfs:label "experience required (yrs)" ;
@@ -636,6 +1066,16 @@
     rdfs:comment "Timestamp the recurrence-detection task wrote (or last refreshed) this alert. Polymorphic — also reused by S6.2 <https://w3id.org/IproK/site#SiteIntelligence> (auto-generated site-context report). Domain-free per antipattern #8 so RDFS inference doesn't cross-contaminate the two classes." ;
     rdfs:range xsd:dateTime .
 
+<https://w3id.org/IproK/integrated#goodsReceiptAgainstOrder> a owl:ObjectProperty ;
+    rdfs:label "goods Receipt Against Order"@en ;
+    dcterms:created "2026-10-19"^^xsd:date ;
+    dcterms:description "Newly proposed IproK integration relationship. Authored schema design based on the declared meanings of the connected source classes; not a claim that the retained runtime already writes this predicate."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
+    rdfs:comment "The purchase order against which goods are received."@en ;
+    rdfs:domain <https://w3id.org/IproK/procurement#GoodsReceipt> ;
+    rdfs:isDefinedBy <https://w3id.org/IproK/0.2.0> ;
+    rdfs:range <https://w3id.org/IproK/procurement#PurchaseOrder> .
+
 <https://w3id.org/IproK/integrated#governedBy> a owl:ObjectProperty ;
     rdfs:label "governed by" ;
     dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
@@ -660,6 +1100,46 @@
     dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/hadChange> ;
     rdfs:comment "A property this activity changed on the node it used. No rdfs:domain." .
+
+<https://w3id.org/IproK/integrated#handoverForProject> a owl:ObjectProperty ;
+    rdfs:label "handover For Project"@en ;
+    dcterms:created "2026-10-19"^^xsd:date ;
+    dcterms:description "Newly proposed IproK integration relationship. Authored schema design based on the declared meanings of the connected source classes; not a claim that the retained runtime already writes this predicate."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
+    rdfs:comment "The project whose handover readiness and transfer are recorded."@en ;
+    rdfs:domain <https://w3id.org/IproK/handover#HandoverPackage> ;
+    rdfs:isDefinedBy <https://w3id.org/IproK/0.2.0> ;
+    rdfs:range <https://w3id.org/IproK/schedule#Project> .
+
+<https://w3id.org/IproK/integrated#handoverHasSnag> a owl:ObjectProperty ;
+    rdfs:label "handover Has Snag"@en ;
+    dcterms:created "2026-10-19"^^xsd:date ;
+    dcterms:description "Newly proposed IproK integration relationship. Authored schema design based on the declared meanings of the connected source classes; not a claim that the retained runtime already writes this predicate."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
+    rdfs:comment "A punch-list item tracked within the handover package."@en ;
+    rdfs:domain <https://w3id.org/IproK/handover#HandoverPackage> ;
+    rdfs:isDefinedBy <https://w3id.org/IproK/0.2.0> ;
+    rdfs:range <https://w3id.org/IproK/handover#SnagItem> .
+
+<https://w3id.org/IproK/integrated#handoverIncludesDocument> a owl:ObjectProperty ;
+    rdfs:label "handover Includes Document"@en ;
+    dcterms:created "2026-10-19"^^xsd:date ;
+    dcterms:description "Newly proposed IproK integration relationship. Authored schema design based on the declared meanings of the connected source classes; not a claim that the retained runtime already writes this predicate."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
+    rdfs:comment "An operations or completion document included in the handover package."@en ;
+    rdfs:domain <https://w3id.org/IproK/handover#HandoverPackage> ;
+    rdfs:isDefinedBy <https://w3id.org/IproK/0.2.0> ;
+    rdfs:range <https://w3id.org/IproK/document#Document> .
+
+<https://w3id.org/IproK/integrated#handoverIncludesWarranty> a owl:ObjectProperty ;
+    rdfs:label "handover Includes Warranty"@en ;
+    dcterms:created "2026-10-19"^^xsd:date ;
+    dcterms:description "Newly proposed IproK integration relationship. Authored schema design based on the declared meanings of the connected source classes; not a claim that the retained runtime already writes this predicate."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
+    rdfs:comment "A warranty delivered in the handover package."@en ;
+    rdfs:domain <https://w3id.org/IproK/handover#HandoverPackage> ;
+    rdfs:isDefinedBy <https://w3id.org/IproK/0.2.0> ;
+    rdfs:range <https://w3id.org/IproK/handover#WarrantyRecord> .
 
 <https://w3id.org/IproK/integrated#hasComposition> a owl:ObjectProperty ;
     rdfs:label "has Composition"@en ;
@@ -690,6 +1170,26 @@
     rdfs:comment "The has predecessor property in the integrated project information model."@en ;
     rdfs:range <https://w3id.org/IproK/schedule#ScheduleLink> .
 
+<https://w3id.org/IproK/integrated#healthCheckForModel> a owl:ObjectProperty ;
+    rdfs:label "health Check For Model"@en ;
+    dcterms:created "2026-10-19"^^xsd:date ;
+    dcterms:description "Newly proposed IproK integration relationship. Authored schema design based on the declared meanings of the connected source classes; not a claim that the retained runtime already writes this predicate."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
+    rdfs:comment "The model revision assessed by the health check."@en ;
+    rdfs:domain <https://w3id.org/IproK/building#ModelHealthCheck> ;
+    rdfs:isDefinedBy <https://w3id.org/IproK/0.2.0> ;
+    rdfs:range <https://w3id.org/IproK/building#IfcModel> .
+
+<https://w3id.org/IproK/integrated#holdPointForActivity> a owl:ObjectProperty ;
+    rdfs:label "hold Point For Activity"@en ;
+    dcterms:created "2026-10-19"^^xsd:date ;
+    dcterms:description "Newly proposed IproK integration relationship. Authored schema design based on the declared meanings of the connected source classes; not a claim that the retained runtime already writes this predicate."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
+    rdfs:comment "The activity bound to an inspection or witness hold point."@en ;
+    rdfs:domain <https://w3id.org/IproK/quality#HoldPoint> ;
+    rdfs:isDefinedBy <https://w3id.org/IproK/0.2.0> ;
+    rdfs:range <https://w3id.org/IproK/schedule#Activity> .
+
 <https://w3id.org/IproK/integrated#importedDescription> a owl:DatatypeProperty ;
     rdfs:label "imported Description"@en ;
     dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
@@ -703,12 +1203,62 @@
     dcterms:source <https://bimsaarthi.com/ontology/v0/inBatch> ;
     rdfs:comment "Link from a <https://w3id.org/IproK/coordination#Issue> back to its <https://w3id.org/IproK/coordination#ClashBatch> import. Domain unspecified (antipattern #8) — re-usable on future batch-style imports." .
 
+<https://w3id.org/IproK/integrated#incidentForActivity> a owl:ObjectProperty ;
+    rdfs:label "incident For Activity"@en ;
+    dcterms:created "2026-10-19"^^xsd:date ;
+    dcterms:description "Newly proposed IproK integration relationship. Authored schema design based on the declared meanings of the connected source classes; not a claim that the retained runtime already writes this predicate."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
+    rdfs:comment "The activity associated with the safety incident where known."@en ;
+    rdfs:domain <https://w3id.org/IproK/safety#Incident> ;
+    rdfs:isDefinedBy <https://w3id.org/IproK/0.2.0> ;
+    rdfs:range <https://w3id.org/IproK/schedule#Activity> .
+
+<https://w3id.org/IproK/integrated#incidentForProject> a owl:ObjectProperty ;
+    rdfs:label "incident For Project"@en ;
+    dcterms:created "2026-10-19"^^xsd:date ;
+    dcterms:description "Newly proposed IproK integration relationship. Authored schema design based on the declared meanings of the connected source classes; not a claim that the retained runtime already writes this predicate."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
+    rdfs:comment "The project in which the safety incident is recorded."@en ;
+    rdfs:domain <https://w3id.org/IproK/safety#Incident> ;
+    rdfs:isDefinedBy <https://w3id.org/IproK/0.2.0> ;
+    rdfs:range <https://w3id.org/IproK/schedule#Project> .
+
+<https://w3id.org/IproK/integrated#incidentHasType> a owl:ObjectProperty ;
+    rdfs:label "incident Has Type"@en ;
+    dcterms:created "2026-10-19"^^xsd:date ;
+    dcterms:description "Newly proposed IproK integration relationship. Authored schema design based on the declared meanings of the connected source classes; not a claim that the retained runtime already writes this predicate."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
+    rdfs:comment "The safety severity classification assigned to the incident."@en ;
+    rdfs:domain <https://w3id.org/IproK/safety#Incident> ;
+    rdfs:isDefinedBy <https://w3id.org/IproK/0.2.0> ;
+    rdfs:range <https://w3id.org/IproK/safety#IncidentType> .
+
 <https://w3id.org/IproK/integrated#includesDocuments> a owl:ObjectProperty ;
     rdfs:label "includes documents" ;
     dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/includesDocuments> ;
     rdfs:comment "Repeatable. Optional — non-drawing <https://w3id.org/IproK/document#Document> references (specs, calc notes, etc.). Domain unspecified (antipattern #8)." ;
     rdfs:range <https://w3id.org/IproK/document#Document> .
+
+<https://w3id.org/IproK/integrated#inspectionForActivity> a owl:ObjectProperty ;
+    rdfs:label "inspection For Activity"@en ;
+    dcterms:created "2026-10-19"^^xsd:date ;
+    dcterms:description "Newly proposed IproK integration relationship. Authored schema design based on the declared meanings of the connected source classes; not a claim that the retained runtime already writes this predicate."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
+    rdfs:comment "The activity assessed by the quality inspection."@en ;
+    rdfs:domain <https://w3id.org/IproK/quality#Inspection> ;
+    rdfs:isDefinedBy <https://w3id.org/IproK/0.2.0> ;
+    rdfs:range <https://w3id.org/IproK/schedule#Activity> .
+
+<https://w3id.org/IproK/integrated#inspectionHasChecklistItem> a owl:ObjectProperty ;
+    rdfs:label "inspection Has Checklist Item"@en ;
+    dcterms:created "2026-10-19"^^xsd:date ;
+    dcterms:description "Newly proposed IproK integration relationship. Authored schema design based on the declared meanings of the connected source classes; not a claim that the retained runtime already writes this predicate."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
+    rdfs:comment "An outcome row recorded during the inspection."@en ;
+    rdfs:domain <https://w3id.org/IproK/quality#Inspection> ;
+    rdfs:isDefinedBy <https://w3id.org/IproK/0.2.0> ;
+    rdfs:range <https://w3id.org/IproK/quality#ChecklistItem> .
 
 <https://w3id.org/IproK/integrated#integrityPactFlag> a owl:DatatypeProperty ;
     rdfs:label "integrity pact flag" ;
@@ -725,6 +1275,36 @@
     dcterms:source <https://bimsaarthi.com/ontology/v0/issueDescription> ;
     rdfs:comment "The issue description property in the integrated project information model."@en ;
     rdfs:range xsd:string .
+
+<https://w3id.org/IproK/integrated#issueForActivity> a owl:ObjectProperty ;
+    rdfs:label "issue For Activity"@en ;
+    dcterms:created "2026-10-19"^^xsd:date ;
+    dcterms:description "Newly proposed IproK integration relationship. Authored schema design based on the declared meanings of the connected source classes; not a claim that the retained runtime already writes this predicate."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
+    rdfs:comment "The scheduled activity affected by the coordination issue."@en ;
+    rdfs:domain <https://w3id.org/IproK/coordination#Issue> ;
+    rdfs:isDefinedBy <https://w3id.org/IproK/0.2.0> ;
+    rdfs:range <https://w3id.org/IproK/schedule#Activity> .
+
+<https://w3id.org/IproK/integrated#issueForElement> a owl:ObjectProperty ;
+    rdfs:label "issue For Element"@en ;
+    dcterms:created "2026-10-19"^^xsd:date ;
+    dcterms:description "Newly proposed IproK integration relationship. Authored schema design based on the declared meanings of the connected source classes; not a claim that the retained runtime already writes this predicate."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
+    rdfs:comment "The model element referred to by a coordination issue."@en ;
+    rdfs:domain <https://w3id.org/IproK/coordination#Issue> ;
+    rdfs:isDefinedBy <https://w3id.org/IproK/0.2.0> ;
+    rdfs:range <https://w3id.org/IproK/building#Element> .
+
+<https://w3id.org/IproK/integrated#issueInClashBatch> a owl:ObjectProperty ;
+    rdfs:label "issue In Clash Batch"@en ;
+    dcterms:created "2026-10-19"^^xsd:date ;
+    dcterms:description "Newly proposed IproK integration relationship. Authored schema design based on the declared meanings of the connected source classes; not a claim that the retained runtime already writes this predicate."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
+    rdfs:comment "The imported clash batch containing the coordination issue."@en ;
+    rdfs:domain <https://w3id.org/IproK/coordination#Issue> ;
+    rdfs:isDefinedBy <https://w3id.org/IproK/0.2.0> ;
+    rdfs:range <https://w3id.org/IproK/coordination#ClashBatch> .
 
 <https://w3id.org/IproK/integrated#issuePriority> a owl:DatatypeProperty ;
     rdfs:label "issue priority" ;
@@ -753,6 +1333,36 @@
     dcterms:source <https://bimsaarthi.com/ontology/v0/itemCode> ;
     rdfs:comment "Stable identifier for a checklist row (V0.17 — e.g. 'IS-456-7.4.1') or for a BOQ line (V0.29 — e.g. 'B-01'). Domain intentionally left unspecified — adding `rdfs:domain <https://w3id.org/IproK/quality#ChecklistItem>` would make every BOQItem carrying <https://w3id.org/IproK/integrated#itemCode> get RDFS-inferred as a ChecklistItem and trip ChecklistItemShape (antipattern #8)." ;
     rdfs:range xsd:string .
+
+<https://w3id.org/IproK/integrated#jointMeasurementHasSignature> a owl:ObjectProperty ;
+    rdfs:label "joint Measurement Has Signature"@en ;
+    dcterms:created "2026-10-19"^^xsd:date ;
+    dcterms:description "Newly proposed IproK integration relationship. Authored schema design based on the declared meanings of the connected source classes; not a claim that the retained runtime already writes this predicate."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
+    rdfs:comment "A recorded signature attesting to the joint measurement."@en ;
+    rdfs:domain <https://w3id.org/IproK/billing#JointMeasurement> ;
+    rdfs:isDefinedBy <https://w3id.org/IproK/0.2.0> ;
+    rdfs:range <https://w3id.org/IproK#SignatureEvent> .
+
+<https://w3id.org/IproK/integrated#jointMeasurementHasState> a owl:ObjectProperty ;
+    rdfs:label "joint Measurement Has State"@en ;
+    dcterms:created "2026-10-19"^^xsd:date ;
+    dcterms:description "Newly proposed IproK integration relationship. Authored schema design based on the declared meanings of the connected source classes; not a claim that the retained runtime already writes this predicate."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
+    rdfs:comment "The joint measurement lifecycle classification."@en ;
+    rdfs:domain <https://w3id.org/IproK/billing#JointMeasurement> ;
+    rdfs:isDefinedBy <https://w3id.org/IproK/0.2.0> ;
+    rdfs:range <https://w3id.org/IproK/billing#JMStatus> .
+
+<https://w3id.org/IproK/integrated#jointMeasurementIncludesMeasurement> a owl:ObjectProperty ;
+    rdfs:label "joint Measurement Includes Measurement"@en ;
+    dcterms:created "2026-10-19"^^xsd:date ;
+    dcterms:description "Newly proposed IproK integration relationship. Authored schema design based on the declared meanings of the connected source classes; not a claim that the retained runtime already writes this predicate."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
+    rdfs:comment "A measurement included in a joint-signature record."@en ;
+    rdfs:domain <https://w3id.org/IproK/billing#JointMeasurement> ;
+    rdfs:isDefinedBy <https://w3id.org/IproK/0.2.0> ;
+    rdfs:range <https://w3id.org/IproK/billing#Measurement> .
 
 <https://w3id.org/IproK/integrated#lastClaim> a owl:DatatypeProperty ;
     rdfs:label "last Claim"@en ;
@@ -819,6 +1429,66 @@
         "Material type: Cement, Steel, Bitumen, Sand, Aggregate, Brick, Other. Mandatory. Domain unspecified." ;
     rdfs:range xsd:string .
 
+<https://w3id.org/IproK/integrated#materialIssueForActivity> a owl:ObjectProperty ;
+    rdfs:label "material Issue For Activity"@en ;
+    dcterms:created "2026-10-19"^^xsd:date ;
+    dcterms:description "Newly proposed IproK integration relationship. Authored schema design based on the declared meanings of the connected source classes; not a claim that the retained runtime already writes this predicate."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
+    rdfs:comment "The activity consuming the issued site material."@en ;
+    rdfs:domain <https://w3id.org/IproK/procurement#MaterialIssue> ;
+    rdfs:isDefinedBy <https://w3id.org/IproK/0.2.0> ;
+    rdfs:range <https://w3id.org/IproK/schedule#Activity> .
+
+<https://w3id.org/IproK/integrated#materialIssueFromReceipt> a owl:ObjectProperty ;
+    rdfs:label "material Issue From Receipt"@en ;
+    dcterms:created "2026-10-19"^^xsd:date ;
+    dcterms:description "Newly proposed IproK integration relationship. Authored schema design based on the declared meanings of the connected source classes; not a claim that the retained runtime already writes this predicate."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
+    rdfs:comment "The receipt record supporting the site-store material issue."@en ;
+    rdfs:domain <https://w3id.org/IproK/procurement#MaterialIssue> ;
+    rdfs:isDefinedBy <https://w3id.org/IproK/0.2.0> ;
+    rdfs:range <https://w3id.org/IproK/procurement#GoodsReceipt> .
+
+<https://w3id.org/IproK/integrated#measurementForActivity> a owl:ObjectProperty ;
+    rdfs:label "measurement For Activity"@en ;
+    dcterms:created "2026-10-19"^^xsd:date ;
+    dcterms:description "Newly proposed IproK integration relationship. Authored schema design based on the declared meanings of the connected source classes; not a claim that the retained runtime already writes this predicate."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
+    rdfs:comment "The activity associated with the measured work."@en ;
+    rdfs:domain <https://w3id.org/IproK/billing#Measurement> ;
+    rdfs:isDefinedBy <https://w3id.org/IproK/0.2.0> ;
+    rdfs:range <https://w3id.org/IproK/schedule#Activity> .
+
+<https://w3id.org/IproK/integrated#measurementForBOQItem> a owl:ObjectProperty ;
+    rdfs:label "measurement For BOQItem"@en ;
+    dcterms:created "2026-10-19"^^xsd:date ;
+    dcterms:description "Newly proposed IproK integration relationship. Authored schema design based on the declared meanings of the connected source classes; not a claim that the retained runtime already writes this predicate."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
+    rdfs:comment "The BOQ item whose quantity is recorded by the measurement."@en ;
+    rdfs:domain <https://w3id.org/IproK/billing#Measurement> ;
+    rdfs:isDefinedBy <https://w3id.org/IproK/0.2.0> ;
+    rdfs:range <https://w3id.org/IproK/billing#BOQItem> .
+
+<https://w3id.org/IproK/integrated#measurementForElement> a owl:ObjectProperty ;
+    rdfs:label "measurement For Element"@en ;
+    dcterms:created "2026-10-19"^^xsd:date ;
+    dcterms:description "Newly proposed IproK integration relationship. Authored schema design based on the declared meanings of the connected source classes; not a claim that the retained runtime already writes this predicate."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
+    rdfs:comment "A building-model element supporting the quantity measurement."@en ;
+    rdfs:domain <https://w3id.org/IproK/billing#Measurement> ;
+    rdfs:isDefinedBy <https://w3id.org/IproK/0.2.0> ;
+    rdfs:range <https://w3id.org/IproK/building#Element> .
+
+<https://w3id.org/IproK/integrated#membershipForUser> a owl:ObjectProperty ;
+    rdfs:label "membership For User"@en ;
+    dcterms:created "2026-10-19"^^xsd:date ;
+    dcterms:description "Newly proposed IproK integration relationship. Authored schema design based on the declared meanings of the connected source classes; not a claim that the retained runtime already writes this predicate."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
+    rdfs:comment "The authenticated platform user represented by the membership."@en ;
+    rdfs:domain <https://w3id.org/IproK#ProjectMembership> ;
+    rdfs:isDefinedBy <https://w3id.org/IproK/0.2.0> ;
+    rdfs:range <https://w3id.org/IproK#User> .
+
 <https://w3id.org/IproK/integrated#mitigationPlan> a owl:DatatypeProperty ;
     rdfs:label "mitigation plan" ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
@@ -834,12 +1504,72 @@
     rdfs:comment "Optional IS 1200 reference, e.g. 'IS 1200 Part-1'." ;
     rdfs:range xsd:string .
 
+<https://w3id.org/IproK/integrated#modelCommentOnModel> a owl:ObjectProperty ;
+    rdfs:label "model Comment On Model"@en ;
+    dcterms:created "2026-10-19"^^xsd:date ;
+    dcterms:description "Newly proposed IproK integration relationship. Authored schema design based on the declared meanings of the connected source classes; not a claim that the retained runtime already writes this predicate."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
+    rdfs:comment "The model revision on which a review comment was recorded."@en ;
+    rdfs:domain <https://w3id.org/IproK/building#ModelComment> ;
+    rdfs:isDefinedBy <https://w3id.org/IproK/0.2.0> ;
+    rdfs:range <https://w3id.org/IproK/building#IfcModel> .
+
+<https://w3id.org/IproK/integrated#modelContainsElement> a owl:ObjectProperty ;
+    rdfs:label "model Contains Element"@en ;
+    dcterms:created "2026-10-19"^^xsd:date ;
+    dcterms:description "Newly proposed IproK integration relationship. Authored schema design based on the declared meanings of the connected source classes; not a claim that the retained runtime already writes this predicate."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
+    rdfs:comment "An element extracted from the building-model revision."@en ;
+    rdfs:domain <https://w3id.org/IproK/building#IfcModel> ;
+    rdfs:isDefinedBy <https://w3id.org/IproK/0.2.0> ;
+    rdfs:range <https://w3id.org/IproK/building#Element> .
+
+<https://w3id.org/IproK/integrated#modelForProject> a owl:ObjectProperty ;
+    rdfs:label "model For Project"@en ;
+    dcterms:created "2026-10-19"^^xsd:date ;
+    dcterms:description "Newly proposed IproK integration relationship. Authored schema design based on the declared meanings of the connected source classes; not a claim that the retained runtime already writes this predicate."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
+    rdfs:comment "The project to which an uploaded building-model revision belongs."@en ;
+    rdfs:domain <https://w3id.org/IproK/building#IfcModel> ;
+    rdfs:isDefinedBy <https://w3id.org/IproK/0.2.0> ;
+    rdfs:range <https://w3id.org/IproK/schedule#Project> .
+
 <https://w3id.org/IproK/integrated#modelRevision> a owl:DatatypeProperty ;
     rdfs:label "model revision" ;
     dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/modelRevision> ;
     rdfs:comment "Project-unique identifier of the IFC upload that produced this element. Plain string — typically a short id minted server-side. Lets a later revision supersede prior elements without losing the audit chain (PROV-O carries the activity). Polymorphic — carried on <https://w3id.org/IproK/building#Element> and <https://w3id.org/IproK/building#IfcModel>." ;
     rdfs:range xsd:string .
+
+<https://w3id.org/IproK/integrated#ncrFromInspection> a owl:ObjectProperty ;
+    rdfs:label "ncr From Inspection"@en ;
+    dcterms:created "2026-10-19"^^xsd:date ;
+    dcterms:description "Newly proposed IproK integration relationship. Authored schema design based on the declared meanings of the connected source classes; not a claim that the retained runtime already writes this predicate."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
+    rdfs:comment "The inspection from which the non-conformance record originates."@en ;
+    rdfs:domain <https://w3id.org/IproK/quality#NCR> ;
+    rdfs:isDefinedBy <https://w3id.org/IproK/0.2.0> ;
+    rdfs:range <https://w3id.org/IproK/quality#Inspection> .
+
+<https://w3id.org/IproK/integrated#ncrHasStatus> a owl:ObjectProperty ;
+    rdfs:label "ncr Has Status"@en ;
+    dcterms:created "2026-10-19"^^xsd:date ;
+    dcterms:description "Newly proposed IproK integration relationship. Authored schema design based on the declared meanings of the connected source classes; not a claim that the retained runtime already writes this predicate."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
+    rdfs:comment "The non-conformance lifecycle classification."@en ;
+    rdfs:domain <https://w3id.org/IproK/quality#NCR> ;
+    rdfs:isDefinedBy <https://w3id.org/IproK/0.2.0> ;
+    rdfs:range <https://w3id.org/IproK/quality#NCRStatus> .
+
+<https://w3id.org/IproK/integrated#normForCrew> a owl:ObjectProperty ;
+    rdfs:label "norm For Crew"@en ;
+    dcterms:created "2026-10-19"^^xsd:date ;
+    dcterms:description "Newly proposed IproK integration relationship. Authored schema design based on the declared meanings of the connected source classes; not a claim that the retained runtime already writes this predicate."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
+    rdfs:comment "The crew type to which a productivity norm applies."@en ;
+    rdfs:domain <https://w3id.org/IproK/resource#ProductivityNorm> ;
+    rdfs:isDefinedBy <https://w3id.org/IproK/0.2.0> ;
+    rdfs:range <https://w3id.org/IproK/resource#CrewType> .
 
 <https://w3id.org/IproK/integrated#normSource> a owl:DatatypeProperty ;
     rdfs:label "norm Source"@en ;
@@ -862,6 +1592,16 @@
     dcterms:source <https://bimsaarthi.com/ontology/v0/observationCount> ;
     rdfs:comment "How many observations this norm averages. Below MIN_OBSERVATIONS the norm stays 'seeded'." ;
     rdfs:range xsd:integer .
+
+<https://w3id.org/IproK/integrated#observationUsesCrew> a owl:ObjectProperty ;
+    rdfs:label "observation Uses Crew"@en ;
+    dcterms:created "2026-10-19"^^xsd:date ;
+    dcterms:description "Newly proposed IproK integration relationship. Authored schema design based on the declared meanings of the connected source classes; not a claim that the retained runtime already writes this predicate."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
+    rdfs:comment "The crew type used in the productivity observation."@en ;
+    rdfs:domain <https://w3id.org/IproK/resource#ProductivityObservation> ;
+    rdfs:isDefinedBy <https://w3id.org/IproK/0.2.0> ;
+    rdfs:range <https://w3id.org/IproK/resource#CrewType> .
 
 <https://w3id.org/IproK/integrated#observedActivity> a owl:ObjectProperty ;
     rdfs:label "observed Activity"@en ;
@@ -922,6 +1662,36 @@
     rdfs:comment "The option description property in the integrated project information model."@en ;
     rdfs:range xsd:string .
 
+<https://w3id.org/IproK/integrated#organisationHasMasters> a owl:ObjectProperty ;
+    rdfs:label "organisation Has Masters"@en ;
+    dcterms:created "2026-10-19"^^xsd:date ;
+    dcterms:description "Newly proposed IproK integration relationship. Authored schema design based on the declared meanings of the connected source classes; not a claim that the retained runtime already writes this predicate."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
+    rdfs:comment "A version of the organisation defaults and reference data."@en ;
+    rdfs:domain <https://w3id.org/IproK#Organisation> ;
+    rdfs:isDefinedBy <https://w3id.org/IproK/0.2.0> ;
+    rdfs:range <https://w3id.org/IproK#OrganisationMasters> .
+
+<https://w3id.org/IproK/integrated#organisationHasPilotStatus> a owl:ObjectProperty ;
+    rdfs:label "organisation Has Pilot Status"@en ;
+    dcterms:created "2026-10-19"^^xsd:date ;
+    dcterms:description "Newly proposed IproK integration relationship. Authored schema design based on the declared meanings of the connected source classes; not a claim that the retained runtime already writes this predicate."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
+    rdfs:comment "The declared pilot lifecycle classification of an organisation."@en ;
+    rdfs:domain <https://w3id.org/IproK#Organisation> ;
+    rdfs:isDefinedBy <https://w3id.org/IproK/0.2.0> ;
+    rdfs:range <https://w3id.org/IproK#PilotStatus> .
+
+<https://w3id.org/IproK/integrated#organisationHasProductivityNorm> a owl:ObjectProperty ;
+    rdfs:label "organisation Has Productivity Norm"@en ;
+    dcterms:created "2026-10-19"^^xsd:date ;
+    dcterms:description "Newly proposed IproK integration relationship. Authored schema design based on the declared meanings of the connected source classes; not a claim that the retained runtime already writes this predicate."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
+    rdfs:comment "A measured or reference productivity norm maintained by the organisation."@en ;
+    rdfs:domain <https://w3id.org/IproK#Organisation> ;
+    rdfs:isDefinedBy <https://w3id.org/IproK/0.2.0> ;
+    rdfs:range <https://w3id.org/IproK/resource#ProductivityNorm> .
+
 <https://w3id.org/IproK/integrated#pageCount> a owl:DatatypeProperty ;
     rdfs:label "page count" ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
@@ -929,6 +1699,26 @@
     dcterms:source <https://bimsaarthi.com/ontology/v0/pageCount> ;
     rdfs:comment "The page count property in the integrated project information model."@en ;
     rdfs:range xsd:integer .
+
+<https://w3id.org/IproK/integrated#paymentAgainstBill> a owl:ObjectProperty ;
+    rdfs:label "payment Against Bill"@en ;
+    dcterms:created "2026-10-19"^^xsd:date ;
+    dcterms:description "Newly proposed IproK integration relationship. Authored schema design based on the declared meanings of the connected source classes; not a claim that the retained runtime already writes this predicate."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
+    rdfs:comment "The certified bill settled in whole or part by the payment."@en ;
+    rdfs:domain <https://w3id.org/IproK/billing#Payment> ;
+    rdfs:isDefinedBy <https://w3id.org/IproK/0.2.0> ;
+    rdfs:range <https://w3id.org/IproK/billing#RABill> .
+
+<https://w3id.org/IproK/integrated#paymentMilestoneForActivity> a owl:ObjectProperty ;
+    rdfs:label "payment Milestone For Activity"@en ;
+    dcterms:created "2026-10-19"^^xsd:date ;
+    dcterms:description "Newly proposed IproK integration relationship. Authored schema design based on the declared meanings of the connected source classes; not a claim that the retained runtime already writes this predicate."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
+    rdfs:comment "The activity whose achieved state supports a payment milestone."@en ;
+    rdfs:domain <https://w3id.org/IproK/finance#PaymentMilestone> ;
+    rdfs:isDefinedBy <https://w3id.org/IproK/0.2.0> ;
+    rdfs:range <https://w3id.org/IproK/schedule#Activity> .
 
 <https://w3id.org/IproK/integrated#paymentMode> a owl:DatatypeProperty ;
     rdfs:label "payment mode" ;
@@ -943,6 +1733,36 @@
     dcterms:source <https://bimsaarthi.com/ontology/v0/paymentReference> ;
     rdfs:comment "Bank transaction reference or cheque number. Extracted from Tally narration. Optional. Domain unspecified." ;
     rdfs:range xsd:string .
+
+<https://w3id.org/IproK/integrated#predictionForActivity> a owl:ObjectProperty ;
+    rdfs:label "prediction For Activity"@en ;
+    dcterms:created "2026-10-19"^^xsd:date ;
+    dcterms:description "Newly proposed IproK integration relationship. Authored schema design based on the declared meanings of the connected source classes; not a claim that the retained runtime already writes this predicate."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
+    rdfs:comment "The activity whose outcome is described by the prediction record."@en ;
+    rdfs:domain <https://w3id.org/IproK/prediction#ActivityPrediction> ;
+    rdfs:isDefinedBy <https://w3id.org/IproK/0.2.0> ;
+    rdfs:range <https://w3id.org/IproK/schedule#Activity> .
+
+<https://w3id.org/IproK/integrated#predictionUsesBaseline> a owl:ObjectProperty ;
+    rdfs:label "prediction Uses Baseline"@en ;
+    dcterms:created "2026-10-19"^^xsd:date ;
+    dcterms:description "Newly proposed IproK integration relationship. Authored schema design based on the declared meanings of the connected source classes; not a claim that the retained runtime already writes this predicate."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
+    rdfs:comment "The schedule baseline against which the activity outcome is defined."@en ;
+    rdfs:domain <https://w3id.org/IproK/prediction#ActivityPrediction> ;
+    rdfs:isDefinedBy <https://w3id.org/IproK/0.2.0> ;
+    rdfs:range <https://w3id.org/IproK/schedule#ScheduleBaseline> .
+
+<https://w3id.org/IproK/integrated#predictionUsesWeatherProfile> a owl:ObjectProperty ;
+    rdfs:label "prediction Uses Weather Profile"@en ;
+    dcterms:created "2026-10-19"^^xsd:date ;
+    dcterms:description "Newly proposed IproK integration relationship. Authored schema design based on the declared meanings of the connected source classes; not a claim that the retained runtime already writes this predicate."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
+    rdfs:comment "The retained climatology profile referenced as an input source for the prediction record."@en ;
+    rdfs:domain <https://w3id.org/IproK/prediction#ActivityPrediction> ;
+    rdfs:isDefinedBy <https://w3id.org/IproK/0.2.0> ;
+    rdfs:range <https://w3id.org/IproK/signal#HistoricalWeatherProfile> .
 
 <https://w3id.org/IproK/integrated#priceOverride> a owl:DatatypeProperty ;
     rdfs:label "price Override"@en ;
@@ -965,12 +1785,232 @@
     rdfs:comment "Initiation | Planning | Execution | Monitoring | Closing. Polymorphic — domain-free per antipattern #8 (every PG-affiliated entity carries this predicate)." ;
     rdfs:range xsd:string .
 
+<https://w3id.org/IproK/integrated#productOfferByVendor> a owl:ObjectProperty ;
+    rdfs:label "product Offer By Vendor"@en ;
+    dcterms:created "2026-10-19"^^xsd:date ;
+    dcterms:description "Newly proposed IproK integration relationship. Authored schema design based on the declared meanings of the connected source classes; not a claim that the retained runtime already writes this predicate."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
+    rdfs:comment "The vendor responsible for a product offer."@en ;
+    rdfs:domain <https://w3id.org/IproK/procurement#ProductOffer> ;
+    rdfs:isDefinedBy <https://w3id.org/IproK/0.2.0> ;
+    rdfs:range <https://w3id.org/IproK/procurement#Vendor> .
+
+<https://w3id.org/IproK/integrated#productOfferForCostResource> a owl:ObjectProperty ;
+    rdfs:label "product Offer For Cost Resource"@en ;
+    dcterms:created "2026-10-19"^^xsd:date ;
+    dcterms:description "Newly proposed IproK integration relationship. Authored schema design based on the declared meanings of the connected source classes; not a claim that the retained runtime already writes this predicate."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
+    rdfs:comment "The cost-resource specification priced by the vendor offer."@en ;
+    rdfs:domain <https://w3id.org/IproK/procurement#ProductOffer> ;
+    rdfs:isDefinedBy <https://w3id.org/IproK/0.2.0> ;
+    rdfs:range <https://w3id.org/IproK/cost#CostResource> .
+
+<https://w3id.org/IproK/integrated#progressReportForActivity> a owl:ObjectProperty ;
+    rdfs:label "progress Report For Activity"@en ;
+    dcterms:created "2026-10-19"^^xsd:date ;
+    dcterms:description "Newly proposed IproK integration relationship. Authored schema design based on the declared meanings of the connected source classes; not a claim that the retained runtime already writes this predicate."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
+    rdfs:comment "The activity for which daily progress was reported."@en ;
+    rdfs:domain <https://w3id.org/IproK/reporting#DPREntry> ;
+    rdfs:isDefinedBy <https://w3id.org/IproK/0.2.0> ;
+    rdfs:range <https://w3id.org/IproK/schedule#Activity> .
+
+<https://w3id.org/IproK/integrated#progressReportHasPhoto> a owl:ObjectProperty ;
+    rdfs:label "progress Report Has Photo"@en ;
+    dcterms:created "2026-10-19"^^xsd:date ;
+    dcterms:description "Newly proposed IproK integration relationship. Authored schema design based on the declared meanings of the connected source classes; not a claim that the retained runtime already writes this predicate."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
+    rdfs:comment "A photo metadata record evidencing the progress report."@en ;
+    rdfs:domain <https://w3id.org/IproK/reporting#DPREntry> ;
+    rdfs:isDefinedBy <https://w3id.org/IproK/0.2.0> ;
+    rdfs:range <https://w3id.org/IproK/reporting#Photo> .
+
+<https://w3id.org/IproK/integrated#projectAdoptsMasters> a owl:ObjectProperty ;
+    rdfs:label "project Adopts Masters"@en ;
+    dcterms:created "2026-10-19"^^xsd:date ;
+    dcterms:description "Newly proposed IproK integration relationship. Authored schema design based on the declared meanings of the connected source classes; not a claim that the retained runtime already writes this predicate."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
+    rdfs:comment "The recorded adoption of a particular organisation masters version."@en ;
+    rdfs:domain <https://w3id.org/IproK/schedule#Project> ;
+    rdfs:isDefinedBy <https://w3id.org/IproK/0.2.0> ;
+    rdfs:range <https://w3id.org/IproK#MastersAdoption> .
+
+<https://w3id.org/IproK/integrated#projectHasActivity> a owl:ObjectProperty ;
+    rdfs:label "project Has Activity"@en ;
+    dcterms:created "2026-10-19"^^xsd:date ;
+    dcterms:description "Newly proposed IproK integration relationship. Authored schema design based on the declared meanings of the connected source classes; not a claim that the retained runtime already writes this predicate."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
+    rdfs:comment "An activity included in the project programme."@en ;
+    rdfs:domain <https://w3id.org/IproK/schedule#Project> ;
+    rdfs:isDefinedBy <https://w3id.org/IproK/0.2.0> ;
+    rdfs:range <https://w3id.org/IproK/schedule#Activity> .
+
+<https://w3id.org/IproK/integrated#projectHasDecision> a owl:ObjectProperty ;
+    rdfs:label "project Has Decision"@en ;
+    dcterms:created "2026-10-19"^^xsd:date ;
+    dcterms:description "Newly proposed IproK integration relationship. Authored schema design based on the declared meanings of the connected source classes; not a claim that the retained runtime already writes this predicate."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
+    rdfs:comment "A recorded project question and its accountable decision."@en ;
+    rdfs:domain <https://w3id.org/IproK/schedule#Project> ;
+    rdfs:isDefinedBy <https://w3id.org/IproK/0.2.0> ;
+    rdfs:range <https://w3id.org/IproK#Decision> .
+
+<https://w3id.org/IproK/integrated#projectHasDesignOption> a owl:ObjectProperty ;
+    rdfs:label "project Has Design Option"@en ;
+    dcterms:created "2026-10-19"^^xsd:date ;
+    dcterms:description "Newly proposed IproK integration relationship. Authored schema design based on the declared meanings of the connected source classes; not a claim that the retained runtime already writes this predicate."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
+    rdfs:comment "A priced design alternative considered by the project."@en ;
+    rdfs:domain <https://w3id.org/IproK/schedule#Project> ;
+    rdfs:isDefinedBy <https://w3id.org/IproK/0.2.0> ;
+    rdfs:range <https://w3id.org/IproK/cost#DesignOption> .
+
+<https://w3id.org/IproK/integrated#projectHasDocument> a owl:ObjectProperty ;
+    rdfs:label "project Has Document"@en ;
+    dcterms:created "2026-10-19"^^xsd:date ;
+    dcterms:description "Newly proposed IproK integration relationship. Authored schema design based on the declared meanings of the connected source classes; not a claim that the retained runtime already writes this predicate."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
+    rdfs:comment "A controlled document belonging to the project."@en ;
+    rdfs:domain <https://w3id.org/IproK/schedule#Project> ;
+    rdfs:isDefinedBy <https://w3id.org/IproK/0.2.0> ;
+    rdfs:range <https://w3id.org/IproK/document#Document> .
+
+<https://w3id.org/IproK/integrated#projectHasEVMSnapshot> a owl:ObjectProperty ;
+    rdfs:label "project Has EVMSnapshot"@en ;
+    dcterms:created "2026-10-19"^^xsd:date ;
+    dcterms:description "Newly proposed IproK integration relationship. Authored schema design based on the declared meanings of the connected source classes; not a claim that the retained runtime already writes this predicate."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
+    rdfs:comment "An earned-value snapshot at a project reporting date."@en ;
+    rdfs:domain <https://w3id.org/IproK/schedule#Project> ;
+    rdfs:isDefinedBy <https://w3id.org/IproK/0.2.0> ;
+    rdfs:range <https://w3id.org/IproK/schedule#EVMSnapshot> .
+
+<https://w3id.org/IproK/integrated#projectHasEvent> a owl:ObjectProperty ;
+    rdfs:label "project Has Event"@en ;
+    dcterms:created "2026-10-19"^^xsd:date ;
+    dcterms:description "Newly proposed IproK integration relationship. Authored schema design based on the declared meanings of the connected source classes; not a claim that the retained runtime already writes this predicate."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
+    rdfs:comment "An issue-like event recorded in the project context."@en ;
+    rdfs:domain <https://w3id.org/IproK/schedule#Project> ;
+    rdfs:isDefinedBy <https://w3id.org/IproK/0.2.0> ;
+    rdfs:range <https://w3id.org/IproK/coordination#Event> .
+
+<https://w3id.org/IproK/integrated#projectHasIdSequence> a owl:ObjectProperty ;
+    rdfs:label "project Has Id Sequence"@en ;
+    dcterms:created "2026-10-19"^^xsd:date ;
+    dcterms:description "Newly proposed IproK integration relationship. Authored schema design based on the declared meanings of the connected source classes; not a claim that the retained runtime already writes this predicate."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
+    rdfs:comment "The register numbering sequence owned by a project."@en ;
+    rdfs:domain <https://w3id.org/IproK/schedule#Project> ;
+    rdfs:isDefinedBy <https://w3id.org/IproK/0.2.0> ;
+    rdfs:range <https://w3id.org/IproK#IdSequence> .
+
+<https://w3id.org/IproK/integrated#projectHasMembership> a owl:ObjectProperty ;
+    rdfs:label "project Has Membership"@en ;
+    dcterms:created "2026-10-19"^^xsd:date ;
+    dcterms:description "Newly proposed IproK integration relationship. Authored schema design based on the declared meanings of the connected source classes; not a claim that the retained runtime already writes this predicate."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
+    rdfs:comment "A membership record assigning a user and role to a project."@en ;
+    rdfs:domain <https://w3id.org/IproK/schedule#Project> ;
+    rdfs:isDefinedBy <https://w3id.org/IproK/0.2.0> ;
+    rdfs:range <https://w3id.org/IproK#ProjectMembership> .
+
+<https://w3id.org/IproK/integrated#projectHasScheduleBaseline> a owl:ObjectProperty ;
+    rdfs:label "project Has Schedule Baseline"@en ;
+    dcterms:created "2026-10-19"^^xsd:date ;
+    dcterms:description "Newly proposed IproK integration relationship. Authored schema design based on the declared meanings of the connected source classes; not a claim that the retained runtime already writes this predicate."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
+    rdfs:comment "A frozen programme version belonging to the project."@en ;
+    rdfs:domain <https://w3id.org/IproK/schedule#Project> ;
+    rdfs:isDefinedBy <https://w3id.org/IproK/0.2.0> ;
+    rdfs:range <https://w3id.org/IproK/schedule#ScheduleBaseline> .
+
+<https://w3id.org/IproK/integrated#projectHasTower> a owl:ObjectProperty ;
+    rdfs:label "project Has Tower"@en ;
+    dcterms:created "2026-10-19"^^xsd:date ;
+    dcterms:description "Newly proposed IproK integration relationship. Authored schema design based on the declared meanings of the connected source classes; not a claim that the retained runtime already writes this predicate."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
+    rdfs:comment "A tower, block or wing within the project inventory."@en ;
+    rdfs:domain <https://w3id.org/IproK/schedule#Project> ;
+    rdfs:isDefinedBy <https://w3id.org/IproK/0.2.0> ;
+    rdfs:range <https://w3id.org/IproK/property#Tower> .
+
+<https://w3id.org/IproK/integrated#projectHasWBSNode> a owl:ObjectProperty ;
+    rdfs:label "project Has WBSNode"@en ;
+    dcterms:created "2026-10-19"^^xsd:date ;
+    dcterms:description "Newly proposed IproK integration relationship. Authored schema design based on the declared meanings of the connected source classes; not a claim that the retained runtime already writes this predicate."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
+    rdfs:comment "A node in the project's working breakdown structure."@en ;
+    rdfs:domain <https://w3id.org/IproK/schedule#Project> ;
+    rdfs:isDefinedBy <https://w3id.org/IproK/0.2.0> ;
+    rdfs:range <https://w3id.org/IproK/schedule#WBSNode> .
+
+<https://w3id.org/IproK/integrated#projectOfOrganisation> a owl:ObjectProperty ;
+    rdfs:label "project Of Organisation"@en ;
+    dcterms:created "2026-10-19"^^xsd:date ;
+    dcterms:description "Newly proposed IproK integration relationship. Authored schema design based on the declared meanings of the connected source classes; not a claim that the retained runtime already writes this predicate."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
+    rdfs:comment "The organisation responsible for the project."@en ;
+    rdfs:domain <https://w3id.org/IproK/schedule#Project> ;
+    rdfs:isDefinedBy <https://w3id.org/IproK/0.2.0> ;
+    rdfs:range <https://w3id.org/IproK#Organisation> .
+
+<https://w3id.org/IproK/integrated#projectPriceForCostResource> a owl:ObjectProperty ;
+    rdfs:label "project Price For Cost Resource"@en ;
+    dcterms:created "2026-10-19"^^xsd:date ;
+    dcterms:description "Newly proposed IproK integration relationship. Authored schema design based on the declared meanings of the connected source classes; not a claim that the retained runtime already writes this predicate."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
+    rdfs:comment "The basic-rate resource to which the project-specific price applies."@en ;
+    rdfs:domain <https://w3id.org/IproK/cost#ProjectResourcePrice> ;
+    rdfs:isDefinedBy <https://w3id.org/IproK/0.2.0> ;
+    rdfs:range <https://w3id.org/IproK/cost#CostResource> .
+
+<https://w3id.org/IproK/integrated#projectPriceForProject> a owl:ObjectProperty ;
+    rdfs:label "project Price For Project"@en ;
+    dcterms:created "2026-10-19"^^xsd:date ;
+    dcterms:description "Newly proposed IproK integration relationship. Authored schema design based on the declared meanings of the connected source classes; not a claim that the retained runtime already writes this predicate."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
+    rdfs:comment "The project owning the adopted resource price."@en ;
+    rdfs:domain <https://w3id.org/IproK/cost#ProjectResourcePrice> ;
+    rdfs:isDefinedBy <https://w3id.org/IproK/0.2.0> ;
+    rdfs:range <https://w3id.org/IproK/schedule#Project> .
+
+<https://w3id.org/IproK/integrated#projectRequiresApproval> a owl:ObjectProperty ;
+    rdfs:label "project Requires Approval"@en ;
+    dcterms:created "2026-10-19"^^xsd:date ;
+    dcterms:description "Newly proposed IproK integration relationship. Authored schema design based on the declared meanings of the connected source classes; not a claim that the retained runtime already writes this predicate."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
+    rdfs:comment "A statutory approval required or tracked by the project."@en ;
+    rdfs:domain <https://w3id.org/IproK/schedule#Project> ;
+    rdfs:isDefinedBy <https://w3id.org/IproK/0.2.0> ;
+    rdfs:range <https://w3id.org/IproK/approval#Approval> .
+
 <https://w3id.org/IproK/integrated#provisional> a owl:DatatypeProperty ;
     rdfs:label "provisional" ;
     dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/provisional> ;
     rdfs:comment "Boolean — true for an AI-suggested markup awaiting a human Accept (the Review-with-AI flow). Cleared (or the node deleted) on Accept/Dismiss. Polymorphic; domain unspecified (antipattern #8)." ;
     rdfs:range xsd:boolean .
+
+<https://w3id.org/IproK/integrated#purchaseOrderForBOQItem> a owl:ObjectProperty ;
+    rdfs:label "purchase Order For BOQItem"@en ;
+    dcterms:created "2026-10-19"^^xsd:date ;
+    dcterms:description "Newly proposed IproK integration relationship. Authored schema design based on the declared meanings of the connected source classes; not a claim that the retained runtime already writes this predicate."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
+    rdfs:comment "A BOQ item to which the procurement commitment relates."@en ;
+    rdfs:domain <https://w3id.org/IproK/procurement#PurchaseOrder> ;
+    rdfs:isDefinedBy <https://w3id.org/IproK/0.2.0> ;
+    rdfs:range <https://w3id.org/IproK/billing#BOQItem> .
+
+<https://w3id.org/IproK/integrated#purchaseOrderToVendor> a owl:ObjectProperty ;
+    rdfs:label "purchase Order To Vendor"@en ;
+    dcterms:created "2026-10-19"^^xsd:date ;
+    dcterms:description "Newly proposed IproK integration relationship. Authored schema design based on the declared meanings of the connected source classes; not a claim that the retained runtime already writes this predicate."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
+    rdfs:comment "The supplier to which the purchase order is issued."@en ;
+    rdfs:domain <https://w3id.org/IproK/procurement#PurchaseOrder> ;
+    rdfs:isDefinedBy <https://w3id.org/IproK/0.2.0> ;
+    rdfs:range <https://w3id.org/IproK/procurement#Vendor> .
 
 <https://w3id.org/IproK/integrated#queryDescription> a owl:DatatypeProperty ;
     rdfs:label "query description" ;
@@ -1002,6 +2042,36 @@
     rdfs:comment "The <https://w3id.org/IproK#User> who raised the RFI. Domain unspecified (antipattern #8)." ;
     rdfs:range prov:Agent .
 
+<https://w3id.org/IproK/integrated#rateAnalysisHasAddition> a owl:ObjectProperty ;
+    rdfs:label "rate Analysis Has Addition"@en ;
+    dcterms:created "2026-10-19"^^xsd:date ;
+    dcterms:description "Newly proposed IproK integration relationship. Authored schema design based on the declared meanings of the connected source classes; not a claim that the retained runtime already writes this predicate."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
+    rdfs:comment "An ordered percentage addition in the analysis of rates."@en ;
+    rdfs:domain <https://w3id.org/IproK/cost#RateAnalysis> ;
+    rdfs:isDefinedBy <https://w3id.org/IproK/0.2.0> ;
+    rdfs:range <https://w3id.org/IproK/cost#AnalysisAddition> .
+
+<https://w3id.org/IproK/integrated#rateAnalysisHasLine> a owl:ObjectProperty ;
+    rdfs:label "rate Analysis Has Line"@en ;
+    dcterms:created "2026-10-19"^^xsd:date ;
+    dcterms:description "Newly proposed IproK integration relationship. Authored schema design based on the declared meanings of the connected source classes; not a claim that the retained runtime already writes this predicate."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
+    rdfs:comment "A resource line in the versioned analysis of rates."@en ;
+    rdfs:domain <https://w3id.org/IproK/cost#RateAnalysis> ;
+    rdfs:isDefinedBy <https://w3id.org/IproK/0.2.0> ;
+    rdfs:range <https://w3id.org/IproK/cost#AnalysisLine> .
+
+<https://w3id.org/IproK/integrated#recomputeForOrganisation> a owl:ObjectProperty ;
+    rdfs:label "recompute For Organisation"@en ;
+    dcterms:created "2026-10-19"^^xsd:date ;
+    dcterms:description "Newly proposed IproK integration relationship. Authored schema design based on the declared meanings of the connected source classes; not a claim that the retained runtime already writes this predicate."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
+    rdfs:comment "The organisation whose measured norms are recomputed."@en ;
+    rdfs:domain <https://w3id.org/IproK/resource#ProductivityRecompute> ;
+    rdfs:isDefinedBy <https://w3id.org/IproK/0.2.0> ;
+    rdfs:range <https://w3id.org/IproK#Organisation> .
+
 <https://w3id.org/IproK/integrated#recomputeToken> a owl:DatatypeProperty ;
     rdfs:label "recompute Token"@en ;
     dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
@@ -1015,6 +2085,16 @@
     dcterms:source <https://bimsaarthi.com/ontology/v0/recomputedAt> ;
     rdfs:comment "When the rates were last written. Polymorphic — antipattern #8." ;
     rdfs:range xsd:dateTime .
+
+<https://w3id.org/IproK/integrated#recurrenceForActivity> a owl:ObjectProperty ;
+    rdfs:label "recurrence For Activity"@en ;
+    dcterms:created "2026-10-19"^^xsd:date ;
+    dcterms:description "Newly proposed IproK integration relationship. Authored schema design based on the declared meanings of the connected source classes; not a claim that the retained runtime already writes this predicate."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
+    rdfs:comment "The activity on which repeated quality findings were identified."@en ;
+    rdfs:domain <https://w3id.org/IproK/quality#RecurrenceAlert> ;
+    rdfs:isDefinedBy <https://w3id.org/IproK/0.2.0> ;
+    rdfs:range <https://w3id.org/IproK/schedule#Activity> .
 
 <https://w3id.org/IproK/integrated#releaseNote> a owl:DatatypeProperty ;
     rdfs:label "release Note"@en ;
@@ -1058,6 +2138,16 @@
     rdfs:domain <https://w3id.org/IproK/integrated#ResourceAllocation> ;
     rdfs:range <https://w3id.org/IproK/cost#CostItem> .
 
+<https://w3id.org/IproK/integrated#resourceMappingToCostResource> a owl:ObjectProperty ;
+    rdfs:label "resource Mapping To Cost Resource"@en ;
+    dcterms:created "2026-10-19"^^xsd:date ;
+    dcterms:description "Newly proposed IproK integration relationship. Authored schema design based on the declared meanings of the connected source classes; not a claim that the retained runtime already writes this predicate."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
+    rdfs:comment "The organisation cost resource represented by an external resource mapping."@en ;
+    rdfs:domain <https://w3id.org/IproK/cost#ResourceMapping> ;
+    rdfs:isDefinedBy <https://w3id.org/IproK/0.2.0> ;
+    rdfs:range <https://w3id.org/IproK/cost#CostResource> .
+
 <https://w3id.org/IproK/integrated#reverseTenderFlag> a owl:DatatypeProperty ;
     rdfs:label "reverse tender flag" ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
@@ -1073,6 +2163,36 @@
     rdfs:comment "Revision tag, e.g. \"Rev A\", \"P1\", \"C3\". Domain unspecified (antipattern #8)." ;
     rdfs:range xsd:string .
 
+<https://w3id.org/IproK/integrated#rfiAboutDrawing> a owl:ObjectProperty ;
+    rdfs:label "rfi About Drawing"@en ;
+    dcterms:created "2026-10-19"^^xsd:date ;
+    dcterms:description "Newly proposed IproK integration relationship. Authored schema design based on the declared meanings of the connected source classes; not a claim that the retained runtime already writes this predicate."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
+    rdfs:comment "The drawing to which a request for information refers."@en ;
+    rdfs:domain <https://w3id.org/IproK/document#RFI> ;
+    rdfs:isDefinedBy <https://w3id.org/IproK/0.2.0> ;
+    rdfs:range <https://w3id.org/IproK/document#Drawing> .
+
+<https://w3id.org/IproK/integrated#rfiForActivity> a owl:ObjectProperty ;
+    rdfs:label "rfi For Activity"@en ;
+    dcterms:created "2026-10-19"^^xsd:date ;
+    dcterms:description "Newly proposed IproK integration relationship. Authored schema design based on the declared meanings of the connected source classes; not a claim that the retained runtime already writes this predicate."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
+    rdfs:comment "The activity affected by the request for information."@en ;
+    rdfs:domain <https://w3id.org/IproK/document#RFI> ;
+    rdfs:isDefinedBy <https://w3id.org/IproK/0.2.0> ;
+    rdfs:range <https://w3id.org/IproK/schedule#Activity> .
+
+<https://w3id.org/IproK/integrated#rfiHasState> a owl:ObjectProperty ;
+    rdfs:label "rfi Has State"@en ;
+    dcterms:created "2026-10-19"^^xsd:date ;
+    dcterms:description "Newly proposed IproK integration relationship. Authored schema design based on the declared meanings of the connected source classes; not a claim that the retained runtime already writes this predicate."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
+    rdfs:comment "The lifecycle classification of the request for information."@en ;
+    rdfs:domain <https://w3id.org/IproK/document#RFI> ;
+    rdfs:isDefinedBy <https://w3id.org/IproK/0.2.0> ;
+    rdfs:range <https://w3id.org/IproK/document#RFIState> .
+
 <https://w3id.org/IproK/integrated#riskDescription> a owl:DatatypeProperty ;
     rdfs:label "risk description" ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
@@ -1080,6 +2200,26 @@
     dcterms:source <https://bimsaarthi.com/ontology/v0/riskDescription> ;
     rdfs:comment "The risk description property in the integrated project information model."@en ;
     rdfs:range xsd:string .
+
+<https://w3id.org/IproK/integrated#riskForActivity> a owl:ObjectProperty ;
+    rdfs:label "risk For Activity"@en ;
+    dcterms:created "2026-10-19"^^xsd:date ;
+    dcterms:description "Newly proposed IproK integration relationship. Authored schema design based on the declared meanings of the connected source classes; not a claim that the retained runtime already writes this predicate."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
+    rdfs:comment "The activity exposed to the recorded prospective risk."@en ;
+    rdfs:domain <https://w3id.org/IproK/coordination#Risk> ;
+    rdfs:isDefinedBy <https://w3id.org/IproK/0.2.0> ;
+    rdfs:range <https://w3id.org/IproK/schedule#Activity> .
+
+<https://w3id.org/IproK/integrated#savedQueryForProject> a owl:ObjectProperty ;
+    rdfs:label "saved Query For Project"@en ;
+    dcterms:created "2026-10-19"^^xsd:date ;
+    dcterms:description "Newly proposed IproK integration relationship. Authored schema design based on the declared meanings of the connected source classes; not a claim that the retained runtime already writes this predicate."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
+    rdfs:comment "The project context for a saved query definition."@en ;
+    rdfs:domain <https://w3id.org/IproK/reporting#SavedQuery> ;
+    rdfs:isDefinedBy <https://w3id.org/IproK/0.2.0> ;
+    rdfs:range <https://w3id.org/IproK/schedule#Project> .
 
 <https://w3id.org/IproK/integrated#scheduleImpact> a owl:DatatypeProperty ;
     rdfs:label "estimated schedule impact (days)" ;
@@ -1089,11 +2229,41 @@
     rdfs:comment "The schedule impact property in the integrated project information model."@en ;
     rdfs:range xsd:integer .
 
+<https://w3id.org/IproK/integrated#scheduleLinkPredecessor> a owl:ObjectProperty ;
+    rdfs:label "schedule Link Predecessor"@en ;
+    dcterms:created "2026-10-19"^^xsd:date ;
+    dcterms:description "Newly proposed IproK integration relationship. Authored schema design based on the declared meanings of the connected source classes; not a claim that the retained runtime already writes this predicate."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
+    rdfs:comment "The predecessor activity of the reified schedule relationship."@en ;
+    rdfs:domain <https://w3id.org/IproK/schedule#ScheduleLink> ;
+    rdfs:isDefinedBy <https://w3id.org/IproK/0.2.0> ;
+    rdfs:range <https://w3id.org/IproK/schedule#Activity> .
+
+<https://w3id.org/IproK/integrated#scheduleLinkSuccessor> a owl:ObjectProperty ;
+    rdfs:label "schedule Link Successor"@en ;
+    dcterms:created "2026-10-19"^^xsd:date ;
+    dcterms:description "Newly proposed IproK integration relationship. Authored schema design based on the declared meanings of the connected source classes; not a claim that the retained runtime already writes this predicate."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
+    rdfs:comment "The successor activity of the reified schedule relationship."@en ;
+    rdfs:domain <https://w3id.org/IproK/schedule#ScheduleLink> ;
+    rdfs:isDefinedBy <https://w3id.org/IproK/0.2.0> ;
+    rdfs:range <https://w3id.org/IproK/schedule#Activity> .
+
 <https://w3id.org/IproK/integrated#selectedOffer> a owl:ObjectProperty ;
     rdfs:label "selected Offer"@en ;
     dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/selectedOffer> ;
     rdfs:comment "The <https://w3id.org/IproK/procurement#ProductOffer> a project picked for a <https://w3id.org/IproK/billing#BOQItem> — written with a ProcurementDecision PROV activity; optionally re-rates the BOQ line (5D impact)." .
+
+<https://w3id.org/IproK/integrated#signalForProject> a owl:ObjectProperty ;
+    rdfs:label "signal For Project"@en ;
+    dcterms:created "2026-10-19"^^xsd:date ;
+    dcterms:description "Newly proposed IproK integration relationship. Authored schema design based on the declared meanings of the connected source classes; not a claim that the retained runtime already writes this predicate."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
+    rdfs:comment "The project context to which an external signal is applied."@en ;
+    rdfs:domain <https://w3id.org/IproK/signal#ExternalSignal> ;
+    rdfs:isDefinedBy <https://w3id.org/IproK/0.2.0> ;
+    rdfs:range <https://w3id.org/IproK/schedule#Project> .
 
 <https://w3id.org/IproK/integrated#signatureCertificate> a owl:DatatypeProperty ;
     rdfs:label "signature certificate" ;
@@ -1102,12 +2272,92 @@
     rdfs:comment "Optional PEM/base64 certificate provided by the signature provider." ;
     rdfs:range xsd:string .
 
+<https://w3id.org/IproK/integrated#siteHasClimate> a owl:ObjectProperty ;
+    rdfs:label "site Has Climate"@en ;
+    dcterms:created "2026-10-19"^^xsd:date ;
+    dcterms:description "Newly proposed IproK integration relationship. Authored schema design based on the declared meanings of the connected source classes; not a claim that the retained runtime already writes this predicate."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
+    rdfs:comment "The climate component of the site-context report."@en ;
+    rdfs:domain <https://w3id.org/IproK/site#SiteIntelligence> ;
+    rdfs:isDefinedBy <https://w3id.org/IproK/0.2.0> ;
+    rdfs:range <https://w3id.org/IproK/site#SiteClimate> .
+
+<https://w3id.org/IproK/integrated#siteHasHydrology> a owl:ObjectProperty ;
+    rdfs:label "site Has Hydrology"@en ;
+    dcterms:created "2026-10-19"^^xsd:date ;
+    dcterms:description "Newly proposed IproK integration relationship. Authored schema design based on the declared meanings of the connected source classes; not a claim that the retained runtime already writes this predicate."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
+    rdfs:comment "The hydrology component of the site-context report."@en ;
+    rdfs:domain <https://w3id.org/IproK/site#SiteIntelligence> ;
+    rdfs:isDefinedBy <https://w3id.org/IproK/0.2.0> ;
+    rdfs:range <https://w3id.org/IproK/site#SiteHydrology> .
+
+<https://w3id.org/IproK/integrated#siteHasLabour> a owl:ObjectProperty ;
+    rdfs:label "site Has Labour"@en ;
+    dcterms:created "2026-10-19"^^xsd:date ;
+    dcterms:description "Newly proposed IproK integration relationship. Authored schema design based on the declared meanings of the connected source classes; not a claim that the retained runtime already writes this predicate."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
+    rdfs:comment "The labour-access component of the site-context report."@en ;
+    rdfs:domain <https://w3id.org/IproK/site#SiteIntelligence> ;
+    rdfs:isDefinedBy <https://w3id.org/IproK/0.2.0> ;
+    rdfs:range <https://w3id.org/IproK/site#SiteLabour> .
+
+<https://w3id.org/IproK/integrated#siteHasLogistics> a owl:ObjectProperty ;
+    rdfs:label "site Has Logistics"@en ;
+    dcterms:created "2026-10-19"^^xsd:date ;
+    dcterms:description "Newly proposed IproK integration relationship. Authored schema design based on the declared meanings of the connected source classes; not a claim that the retained runtime already writes this predicate."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
+    rdfs:comment "The logistics component of the site-context report."@en ;
+    rdfs:domain <https://w3id.org/IproK/site#SiteIntelligence> ;
+    rdfs:isDefinedBy <https://w3id.org/IproK/0.2.0> ;
+    rdfs:range <https://w3id.org/IproK/site#SiteLogistics> .
+
+<https://w3id.org/IproK/integrated#siteHasUtilities> a owl:ObjectProperty ;
+    rdfs:label "site Has Utilities"@en ;
+    dcterms:created "2026-10-19"^^xsd:date ;
+    dcterms:description "Newly proposed IproK integration relationship. Authored schema design based on the declared meanings of the connected source classes; not a claim that the retained runtime already writes this predicate."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
+    rdfs:comment "The utility-services component of the site-context report."@en ;
+    rdfs:domain <https://w3id.org/IproK/site#SiteIntelligence> ;
+    rdfs:isDefinedBy <https://w3id.org/IproK/0.2.0> ;
+    rdfs:range <https://w3id.org/IproK/site#SiteUtilities> .
+
+<https://w3id.org/IproK/integrated#siteHasWorkerSafety> a owl:ObjectProperty ;
+    rdfs:label "site Has Worker Safety"@en ;
+    dcterms:created "2026-10-19"^^xsd:date ;
+    dcterms:description "Newly proposed IproK integration relationship. Authored schema design based on the declared meanings of the connected source classes; not a claim that the retained runtime already writes this predicate."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
+    rdfs:comment "The worker-safety context component of the site report."@en ;
+    rdfs:domain <https://w3id.org/IproK/site#SiteIntelligence> ;
+    rdfs:isDefinedBy <https://w3id.org/IproK/0.2.0> ;
+    rdfs:range <https://w3id.org/IproK/site#SiteWorkerSafety> .
+
+<https://w3id.org/IproK/integrated#siteIntelligenceForProject> a owl:ObjectProperty ;
+    rdfs:label "site Intelligence For Project"@en ;
+    dcterms:created "2026-10-19"^^xsd:date ;
+    dcterms:description "Newly proposed IproK integration relationship. Authored schema design based on the declared meanings of the connected source classes; not a claim that the retained runtime already writes this predicate."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
+    rdfs:comment "The project described by the site-context report."@en ;
+    rdfs:domain <https://w3id.org/IproK/site#SiteIntelligence> ;
+    rdfs:isDefinedBy <https://w3id.org/IproK/0.2.0> ;
+    rdfs:range <https://w3id.org/IproK/schedule#Project> .
+
 <https://w3id.org/IproK/integrated#slaBreached> a owl:DatatypeProperty ;
     rdfs:label "SLA breached" ;
     dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/slaBreached> ;
     rdfs:comment "Computed boolean — true when dueDate < now and state not in {Answered, Closed, Cancelled}. Set by the daily rfi_sla Celery task and on the Answered transition. Domain unspecified (antipattern #8)." ;
     rdfs:range xsd:boolean .
+
+<https://w3id.org/IproK/integrated#snagForElement> a owl:ObjectProperty ;
+    rdfs:label "snag For Element"@en ;
+    dcterms:created "2026-10-19"^^xsd:date ;
+    dcterms:description "Newly proposed IproK integration relationship. Authored schema design based on the declared meanings of the connected source classes; not a claim that the retained runtime already writes this predicate."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
+    rdfs:comment "The building-model element affected by a handover snag."@en ;
+    rdfs:domain <https://w3id.org/IproK/handover#SnagItem> ;
+    rdfs:isDefinedBy <https://w3id.org/IproK/0.2.0> ;
+    rdfs:range <https://w3id.org/IproK/building#Element> .
 
 <https://w3id.org/IproK/integrated#snagLocation> a owl:DatatypeProperty ;
     rdfs:label "snag Location"@en ;
@@ -1116,6 +2366,26 @@
     dcterms:source <https://bimsaarthi.com/ontology/v0/snagLocation> ;
     rdfs:comment "The snag location property in the integrated project information model."@en ;
     rdfs:range xsd:string .
+
+<https://w3id.org/IproK/integrated#sorItemSupportsBOQItem> a owl:ObjectProperty ;
+    rdfs:label "sor Item Supports BOQItem"@en ;
+    dcterms:created "2026-10-19"^^xsd:date ;
+    dcterms:description "Newly proposed IproK integration relationship. Authored schema design based on the declared meanings of the connected source classes; not a claim that the retained runtime already writes this predicate."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
+    rdfs:comment "A reference-rate item supporting a project BOQ item."@en ;
+    rdfs:domain <https://w3id.org/IproK/tender#SORItem> ;
+    rdfs:isDefinedBy <https://w3id.org/IproK/0.2.0> ;
+    rdfs:range <https://w3id.org/IproK/billing#BOQItem> .
+
+<https://w3id.org/IproK/integrated#sorLibraryHasItem> a owl:ObjectProperty ;
+    rdfs:label "sor Library Has Item"@en ;
+    dcterms:created "2026-10-19"^^xsd:date ;
+    dcterms:description "Newly proposed IproK integration relationship. Authored schema design based on the declared meanings of the connected source classes; not a claim that the retained runtime already writes this predicate."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
+    rdfs:comment "A rate item contained in a schedule-of-rates publication."@en ;
+    rdfs:domain <https://w3id.org/IproK/tender#SORLibrary> ;
+    rdfs:isDefinedBy <https://w3id.org/IproK/0.2.0> ;
+    rdfs:range <https://w3id.org/IproK/tender#SORItem> .
 
 <https://w3id.org/IproK/integrated#sorState> a owl:DatatypeProperty ;
     rdfs:label "SOR state" ;
@@ -1189,6 +2459,16 @@
     rdfs:domain <https://w3id.org/IproK/schedule#Task> ;
     rdfs:range <https://w3id.org/IproK/integrated#ResourceAllocation> .
 
+<https://w3id.org/IproK/integrated#tenderAwardedAsProject> a owl:ObjectProperty ;
+    rdfs:label "tender Awarded As Project"@en ;
+    dcterms:created "2026-10-19"^^xsd:date ;
+    dcterms:description "Newly proposed IproK integration relationship. Authored schema design based on the declared meanings of the connected source classes; not a claim that the retained runtime already writes this predicate."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
+    rdfs:comment "The post-award project created from the tender when an award is recorded."@en ;
+    rdfs:domain <https://w3id.org/IproK/tender#Tender> ;
+    rdfs:isDefinedBy <https://w3id.org/IproK/0.2.0> ;
+    rdfs:range <https://w3id.org/IproK/schedule#Project> .
+
 <https://w3id.org/IproK/integrated#tenderCitation> a owl:DatatypeProperty ;
     rdfs:label "tender citation" ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
@@ -1204,6 +2484,46 @@
     dcterms:source <https://bimsaarthi.com/ontology/v0/tenderDiscipline> ;
     rdfs:comment "The tender discipline property in the integrated project information model."@en ;
     rdfs:range xsd:string .
+
+<https://w3id.org/IproK/integrated#tenderForOrganisation> a owl:ObjectProperty ;
+    rdfs:label "tender For Organisation"@en ;
+    dcterms:created "2026-10-19"^^xsd:date ;
+    dcterms:description "Newly proposed IproK integration relationship. Authored schema design based on the declared meanings of the connected source classes; not a claim that the retained runtime already writes this predicate."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
+    rdfs:comment "The organisation considering the tender before award."@en ;
+    rdfs:domain <https://w3id.org/IproK/tender#Tender> ;
+    rdfs:isDefinedBy <https://w3id.org/IproK/0.2.0> ;
+    rdfs:range <https://w3id.org/IproK#Organisation> .
+
+<https://w3id.org/IproK/integrated#tenderHasBOQItem> a owl:ObjectProperty ;
+    rdfs:label "tender Has BOQItem"@en ;
+    dcterms:created "2026-10-19"^^xsd:date ;
+    dcterms:description "Newly proposed IproK integration relationship. Authored schema design based on the declared meanings of the connected source classes; not a claim that the retained runtime already writes this predicate."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
+    rdfs:comment "A pre-award BOQ row extracted from the tender."@en ;
+    rdfs:domain <https://w3id.org/IproK/tender#Tender> ;
+    rdfs:isDefinedBy <https://w3id.org/IproK/0.2.0> ;
+    rdfs:range <https://w3id.org/IproK/tender#TenderBOQItem> .
+
+<https://w3id.org/IproK/integrated#tenderHasExtractionStatus> a owl:ObjectProperty ;
+    rdfs:label "tender Has Extraction Status"@en ;
+    dcterms:created "2026-10-19"^^xsd:date ;
+    dcterms:description "Newly proposed IproK integration relationship. Authored schema design based on the declared meanings of the connected source classes; not a claim that the retained runtime already writes this predicate."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
+    rdfs:comment "The lifecycle classification of the tender extraction process."@en ;
+    rdfs:domain <https://w3id.org/IproK/tender#Tender> ;
+    rdfs:isDefinedBy <https://w3id.org/IproK/0.2.0> ;
+    rdfs:range <https://w3id.org/IproK/tender#ExtractionStatus> .
+
+<https://w3id.org/IproK/integrated#tenderHasRecommendation> a owl:ObjectProperty ;
+    rdfs:label "tender Has Recommendation"@en ;
+    dcterms:created "2026-10-19"^^xsd:date ;
+    dcterms:description "Newly proposed IproK integration relationship. Authored schema design based on the declared meanings of the connected source classes; not a claim that the retained runtime already writes this predicate."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
+    rdfs:comment "A bid recommendation prepared for the tender."@en ;
+    rdfs:domain <https://w3id.org/IproK/tender#Tender> ;
+    rdfs:isDefinedBy <https://w3id.org/IproK/0.2.0> ;
+    rdfs:range <https://w3id.org/IproK/tender#BidRecommendation> .
 
 <https://w3id.org/IproK/integrated#tenderSorCodeHint> a owl:DatatypeProperty ;
     rdfs:label "tender SOR code hint" ;
@@ -1257,6 +2577,16 @@
     rdfs:comment "The raw AI extraction as a JSON string: {field: {value, confidence}} for drawing_number / drawing_title / revision / discipline / scale / drawn_by / checked_by / approved_by / date / project_name. The GET .../title-block endpoint returns this verbatim. Kept as one literal so the ontology stays lean (the spec mandates only titleBlockExtracted + needsReview as new predicates)." ;
     rdfs:range xsd:string .
 
+<https://w3id.org/IproK/integrated#towerContainsUnit> a owl:ObjectProperty ;
+    rdfs:label "tower Contains Unit"@en ;
+    dcterms:created "2026-10-19"^^xsd:date ;
+    dcterms:description "Newly proposed IproK integration relationship. Authored schema design based on the declared meanings of the connected source classes; not a claim that the retained runtime already writes this predicate."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
+    rdfs:comment "A sellable unit within the tower, block or wing."@en ;
+    rdfs:domain <https://w3id.org/IproK/property#Tower> ;
+    rdfs:isDefinedBy <https://w3id.org/IproK/0.2.0> ;
+    rdfs:range <https://w3id.org/IproK/property#Unit> .
+
 <https://w3id.org/IproK/integrated#towerName> a owl:DatatypeProperty ;
     rdfs:label "tower Name"@en ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
@@ -1264,6 +2594,16 @@
     dcterms:source <https://bimsaarthi.com/ontology/v0/towerName> ;
     rdfs:comment "The tower name property in the integrated project information model."@en ;
     rdfs:range xsd:string .
+
+<https://w3id.org/IproK/integrated#transmittalIncludesDocument> a owl:ObjectProperty ;
+    rdfs:label "transmittal Includes Document"@en ;
+    dcterms:created "2026-10-19"^^xsd:date ;
+    dcterms:description "Newly proposed IproK integration relationship. Authored schema design based on the declared meanings of the connected source classes; not a claim that the retained runtime already writes this predicate."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
+    rdfs:comment "A controlled document included in a transmittal."@en ;
+    rdfs:domain <https://w3id.org/IproK/document#Transmittal> ;
+    rdfs:isDefinedBy <https://w3id.org/IproK/0.2.0> ;
+    rdfs:range <https://w3id.org/IproK/document#Document> .
 
 <https://w3id.org/IproK/integrated#transmittalNote> a owl:DatatypeProperty ;
     rdfs:label "transmittal note" ;
@@ -1295,6 +2635,16 @@
     dcterms:source <https://bimsaarthi.com/ontology/v0/unit> ;
     rdfs:comment "The unit property in the integrated project information model."@en ;
     rdfs:range xsd:string .
+
+<https://w3id.org/IproK/integrated#unitHasType> a owl:ObjectProperty ;
+    rdfs:label "unit Has Type"@en ;
+    dcterms:created "2026-10-19"^^xsd:date ;
+    dcterms:description "Newly proposed IproK integration relationship. Authored schema design based on the declared meanings of the connected source classes; not a claim that the retained runtime already writes this predicate."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
+    rdfs:comment "The unit archetype used to classify the sellable unit."@en ;
+    rdfs:domain <https://w3id.org/IproK/property#Unit> ;
+    rdfs:isDefinedBy <https://w3id.org/IproK/0.2.0> ;
+    rdfs:range <https://w3id.org/IproK/property#UnitType> .
 
 <https://w3id.org/IproK/integrated#uploadedAt> a owl:DatatypeProperty ;
     rdfs:label "uploaded at" ;
@@ -1352,11 +2702,81 @@
     rdfs:comment "The warranty doc ref property in the integrated project information model."@en ;
     rdfs:range xsd:string .
 
+<https://w3id.org/IproK/integrated#warrantyForElement> a owl:ObjectProperty ;
+    rdfs:label "warranty For Element"@en ;
+    dcterms:created "2026-10-19"^^xsd:date ;
+    dcterms:description "Newly proposed IproK integration relationship. Authored schema design based on the declared meanings of the connected source classes; not a claim that the retained runtime already writes this predicate."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
+    rdfs:comment "The building-model element or represented system covered by the warranty."@en ;
+    rdfs:domain <https://w3id.org/IproK/handover#WarrantyRecord> ;
+    rdfs:isDefinedBy <https://w3id.org/IproK/0.2.0> ;
+    rdfs:range <https://w3id.org/IproK/building#Element> .
+
+<https://w3id.org/IproK/integrated#wbsNodeContainsActivity> a owl:ObjectProperty ;
+    rdfs:label "wbs Node Contains Activity"@en ;
+    dcterms:created "2026-10-19"^^xsd:date ;
+    dcterms:description "Newly proposed IproK integration relationship. Authored schema design based on the declared meanings of the connected source classes; not a claim that the retained runtime already writes this predicate."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
+    rdfs:comment "An activity organised under a working WBS node."@en ;
+    rdfs:domain <https://w3id.org/IproK/schedule#WBSNode> ;
+    rdfs:isDefinedBy <https://w3id.org/IproK/0.2.0> ;
+    rdfs:range <https://w3id.org/IproK/schedule#Activity> .
+
+<https://w3id.org/IproK/integrated#weatherProfileForProject> a owl:ObjectProperty ;
+    rdfs:label "weather Profile For Project"@en ;
+    dcterms:created "2026-10-19"^^xsd:date ;
+    dcterms:description "Newly proposed IproK integration relationship. Authored schema design based on the declared meanings of the connected source classes; not a claim that the retained runtime already writes this predicate."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
+    rdfs:comment "The project location described by the climatology profile."@en ;
+    rdfs:domain <https://w3id.org/IproK/signal#HistoricalWeatherProfile> ;
+    rdfs:isDefinedBy <https://w3id.org/IproK/0.2.0> ;
+    rdfs:range <https://w3id.org/IproK/schedule#Project> .
+
+<https://w3id.org/IproK/integrated#weatherProfileHasWeek> a owl:ObjectProperty ;
+    rdfs:label "weather Profile Has Week"@en ;
+    dcterms:created "2026-10-19"^^xsd:date ;
+    dcterms:description "Newly proposed IproK integration relationship. Authored schema design based on the declared meanings of the connected source classes; not a claim that the retained runtime already writes this predicate."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
+    rdfs:comment "A weekly climatology bucket within the weather profile."@en ;
+    rdfs:domain <https://w3id.org/IproK/signal#HistoricalWeatherProfile> ;
+    rdfs:isDefinedBy <https://w3id.org/IproK/0.2.0> ;
+    rdfs:range <https://w3id.org/IproK/signal#HistoricalWeatherWeek> .
+
 <https://w3id.org/IproK/integrated#weeklyStats> a owl:ObjectProperty ;
     rdfs:label "weekly stats" ;
     dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
     dcterms:source <https://bimsaarthi.com/ontology/v0/weeklyStats> ;
     rdfs:comment "Link from a HistoricalWeatherProfile to its 52 HistoricalWeatherWeek buckets. Domain-free." .
+
+<https://w3id.org/IproK/integrated#withdrawalFromEscrow> a owl:ObjectProperty ;
+    rdfs:label "withdrawal From Escrow"@en ;
+    dcterms:created "2026-10-19"^^xsd:date ;
+    dcterms:description "Newly proposed IproK integration relationship. Authored schema design based on the declared meanings of the connected source classes; not a claim that the retained runtime already writes this predicate."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
+    rdfs:comment "The designated account from which certified funds are withdrawn."@en ;
+    rdfs:domain <https://w3id.org/IproK/finance#EscrowWithdrawal> ;
+    rdfs:isDefinedBy <https://w3id.org/IproK/0.2.0> ;
+    rdfs:range <https://w3id.org/IproK/finance#EscrowAccount> .
+
+<https://w3id.org/IproK/integrated#withdrawalSupportedByDocument> a owl:ObjectProperty ;
+    rdfs:label "withdrawal Supported By Document"@en ;
+    dcterms:created "2026-10-19"^^xsd:date ;
+    dcterms:description "Newly proposed IproK integration relationship. Authored schema design based on the declared meanings of the connected source classes; not a claim that the retained runtime already writes this predicate."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
+    rdfs:comment "A controlled certificate or document supporting the escrow withdrawal."@en ;
+    rdfs:domain <https://w3id.org/IproK/finance#EscrowWithdrawal> ;
+    rdfs:isDefinedBy <https://w3id.org/IproK/0.2.0> ;
+    rdfs:range <https://w3id.org/IproK/document#Document> .
+
+<https://w3id.org/IproK/integrated#workConstraintAssignedUser> a owl:ObjectProperty ;
+    rdfs:label "work Constraint Assigned User"@en ;
+    dcterms:created "2026-10-19"^^xsd:date ;
+    dcterms:description "Newly proposed IproK integration relationship. Authored schema design based on the declared meanings of the connected source classes; not a claim that the retained runtime already writes this predicate."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
+    rdfs:comment "The user responsible for clearing the work-readiness constraint."@en ;
+    rdfs:domain <https://w3id.org/IproK/schedule#WorkConstraint> ;
+    rdfs:isDefinedBy <https://w3id.org/IproK/0.2.0> ;
+    rdfs:range <https://w3id.org/IproK#User> .
 
 <https://w3id.org/IproK/integrated#workType> a owl:DatatypeProperty ;
     rdfs:label "work type" ;
@@ -1365,6 +2785,26 @@
     rdfs:comment "Optional category inferred from the SOR discipline, e.g. 'Civil', 'Electrical', 'MEP'. Domain unspecified.",
         "The work-type bucket a norm applies to, matching the P2B phase vocabulary." ;
     rdfs:range xsd:string .
+
+<https://w3id.org/IproK/integrated#workerHasCertification> a owl:ObjectProperty ;
+    rdfs:label "worker Has Certification"@en ;
+    dcterms:created "2026-10-19"^^xsd:date ;
+    dcterms:description "Newly proposed IproK integration relationship. Authored schema design based on the declared meanings of the connected source classes; not a claim that the retained runtime already writes this predicate."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
+    rdfs:comment "A skill certification held by the worker."@en ;
+    rdfs:domain <https://w3id.org/IproK/resource#Worker> ;
+    rdfs:isDefinedBy <https://w3id.org/IproK/0.2.0> ;
+    rdfs:range <https://w3id.org/IproK/resource#SkillCertification> .
+
+<https://w3id.org/IproK/integrated#workerPerformsActivity> a owl:ObjectProperty ;
+    rdfs:label "worker Performs Activity"@en ;
+    dcterms:created "2026-10-19"^^xsd:date ;
+    dcterms:description "Newly proposed IproK integration relationship. Authored schema design based on the declared meanings of Worker and Activity; not a claim that the retained runtime already writes this predicate."@en ;
+    dcterms:isPartOf <https://w3id.org/IproK/integrated> ;
+    rdfs:comment "The scheduled activity to which the worker is assigned to perform site work."@en ;
+    rdfs:domain <https://w3id.org/IproK/resource#Worker> ;
+    rdfs:isDefinedBy <https://w3id.org/IproK/0.2.0> ;
+    rdfs:range <https://w3id.org/IproK/schedule#Activity> .
 
 <https://w3id.org/IproK/integrated#zone> a owl:DatatypeProperty ;
     rdfs:label "zone" ;
@@ -1376,6 +2816,6 @@
 <https://w3id.org/IproK/integrated#ResourceAllocation> a owl:Class ;
     rdfs:label "ResourceAllocation" ;
     dcterms:description "Editorial definition added for proposed IproK 0.2.0; inspect the retained source and mapping record."@en ;
-    rdfs:comment "The resource allocation class in the integrated project information model."@en ;
+    rdfs:comment "An assignment record connecting scheduled work, an allocated resource and an associated cost item."@en ;
     rdfs:subClassOf <https://w3id.org/IproK#IproKThing> .
 
